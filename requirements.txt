@@ -2,6 +2,5 @@ ipfshttpclient
 iroha
 pycryptodome
 requests
-ipykernel
 bash_kernel
 icecream
