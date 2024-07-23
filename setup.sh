@@ -1,5 +1,5 @@
 #!/bin/bash
-cd OpenScience/
+
 conda create -n venv
 conda activate venv
 conda install --file requirements.txt
