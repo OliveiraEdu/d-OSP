@@ -3,7 +3,6 @@ git clone https://github.com/OliveiraEdu/OpenScience
 cd OpenScience/
 conda create -n venv
 conda activate venv
-pip install ipykernel
+conda install --file requirements.txt
 ipython kernel install --user --name=venv
-pip install bash_kernel
 python -m bash_kernel.install
