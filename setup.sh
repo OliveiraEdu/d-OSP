@@ -1,5 +1,4 @@
 #!/bin/bash
-git clone https://github.com/OliveiraEdu/OpenScience
 cd OpenScience/
 conda create -n venv
 conda activate venv
