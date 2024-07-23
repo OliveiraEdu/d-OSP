@@ -1,5 +1,4 @@
 #!/bin/bash
-git clone https://github.com/OliveiraEdu/OpenScience
 cd OpenScience/
 python -m venv venv
 source venv/bin/activate
