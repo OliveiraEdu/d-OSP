@@ -11,8 +11,12 @@ This is the repository for the project Open Science, on its final form the proje
 ---
 ## 1 -  Requirements
 
-docker image my_jupyter_lab
+docker images:
+my_jupyter_lab
+iroha
 
+* All container shold be attached to the iroha network
+  
 ## 2 - Setup
 
 2.1 - Github repo cloning
