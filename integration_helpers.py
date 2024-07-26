@@ -9,7 +9,7 @@ if sys.version_info[0] < 3:
     raise Exception("Python 3 or a more recent version is required.")
 
 # Here is the information about the environment and admin account information:
-IROHA_HOST_ADDR = os.getenv("IROHA_HOST_ADDR", "127.0.0.1")
+IROHA_HOST_ADDR = os.getenv("IROHA_HOST_ADDR", "10.0.0.100")
 IROHA_PORT = os.getenv("IROHA_PORT", "50051")
 ADMIN_ACCOUNT_ID = os.getenv("ADMIN_ACCOUNT_ID", "admin@test")
 ADMIN_PRIVATE_KEY = os.getenv(
