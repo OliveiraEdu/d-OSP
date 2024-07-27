@@ -15,6 +15,8 @@ docker images:
 my_jupyter_lab
 iroha
 
+* Use Python Virtual Environment venv as the kernel for running Jupyter notebooks. 
+
 * All container shold be attached to the iroha network
   
 ## 2 - Setup
