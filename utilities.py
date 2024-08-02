@@ -17,13 +17,13 @@ def print_random_from_second_column(file_path):
         random_value = random.choice(second_column_values)
     return random_value
 
-def dump_to_csv(account_id, user_account_full_name, user_account_email, user_account_institution, user_account_orcid, private_key, public_key, filename="datasets/accounts.csv"):
+def dump_to_csv(account_id, user_account_full_name, user_account_email, user_account_institution, user_account_orcid, user_private_key, user_public_key, filename="datasets/accounts.csv"):
     file_exists = os.path.isfile(filename)
     with open(filename, mode='a', newline='') as file:
         writer = csv.writer(file)
         if not file_exists:
             writer.writerow(["Account ID", "Full Name", "Email", "Institution", "orcid", "Private Key", "Public Key"])
-        writer.writerow([account_id, user_account_full_name, user_account_email, user_account_institution, user_account_orcid, private_key, public_key])
+        writer.writerow([account_id, user_account_full_name, user_account_email, user_account_institution, user_account_orcid, user_private_key, user_public_key])
 
 
 
