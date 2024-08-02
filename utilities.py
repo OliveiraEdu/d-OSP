@@ -22,7 +22,7 @@ def dump_to_csv(account_id, user_account_full_name, user_account_email, user_acc
     with open(filename, mode='a', newline='') as file:
         writer = csv.writer(file)
         if not file_exists:
-            writer.writerow(["Account ID", "Full Name", "Email", "Institution", "orcid", "Private Key", "Public Key"])
+            writer.writerow(["account_id", "user_account_full_name", "user_account_email", "user_account_institution", "user_account_orcid", "user_private_key", "user_public_key"])
         writer.writerow([account_id, user_account_full_name, user_account_email, user_account_institution, user_account_orcid, user_private_key, user_public_key])
 
 
