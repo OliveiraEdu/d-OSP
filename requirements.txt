@@ -5,3 +5,6 @@ requests
 bash_kernel
 icecream
 jupyterlab
+pandas
+csv
+random
