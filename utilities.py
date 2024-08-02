@@ -2,7 +2,8 @@
 
 import random
 import string
-
+import csv
+import os
 
 def generate_orcid():
     # Generate the first part of the ORCID ID (16 digits, separated by hyphens)
@@ -10,12 +11,11 @@ def generate_orcid():
     return '-'.join(parts)
 
 def print_random_from_second_column(file_path):
-    with open(csv_file_path, mode='r', newline='') as file:
+    with open(file_path, mode='r', newline='') as file:
         reader = csv.reader(file)
         second_column_values = [row[1] for row in reader]
         random_value = random.choice(second_column_values)
     return random_value
-
 
 def dump_to_csv(account_id, user_account_full_name, user_account_email, user_account_institution, user_account_orcid, private_key, public_key, filename="datasets/accounts.csv"):
     file_exists = os.path.isfile(filename)
