@@ -15,7 +15,12 @@ def download_file_from_ipfs(cid, output_path):
     with open(output_path, 'wb') as f:
         f.write(file_data)
 
-def upload_json(metadata)
-    cid = client.add_json(metadata)
-    print (cid)
-    client.get_json(cid)
+def upload_json_to_ipfs(json):
+    metadata_cid = client.add_json(json)
+    return metadata_cid
+
+def download_json_from_ipfs(json):
+    client.get_json(metadata_cid)
+    return metadata_cid
+
+
