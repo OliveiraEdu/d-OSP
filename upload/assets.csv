@@ -1,5 +1,4 @@
-file_name, metadata_json
-hello_word.py, {
+{
     "language": "Python",
     "name": "Hello World",
     "description": "A simple Python program that prints 'Hello, World!' to the console.",
