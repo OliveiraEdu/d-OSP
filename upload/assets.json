@@ -1,0 +1,96 @@
+[
+    {
+        "file_name": "hello_world.py",
+        "file_type": "code",
+        "language": "Python",
+        "name": "Hello World",
+        "description": "A simple Python program that prints 'Hello, World!' to the console.",
+        "author": "Guido van Rossum",
+        "dependencies": [],
+        "version": "Python 3.x",
+        "execution_result": {
+            "stdout": "Hello, World!\n",
+            "stderr": "",
+            "return_code": 0
+        }
+    },
+    {
+        "file_name": "World_Energy_By_Country_And_Region_1965_to_2023.csv",
+        "url": "https://www.kaggle.com/datasets/patricklford/world-energy-consumption",
+        "author": "Patrickl Ford"
+    },
+    {
+        "file_name": "bitcoin.pdf",
+        "file_type": "article",
+        "title": "Bitcoin: A Peer-to-Peer Electronic Cash System",
+        "author": "Satoshi Nakamoto",
+        "journal": "Decentralized Systems Workshop",
+        "year": "2008",
+        "url": "https://www.bitcoin.org/bitcoin.pdf",
+        "abstract": "A peer-to-peer electronic cash system based on cryptographic proof-of-work (PoW) is presented.",
+        "keywords": [
+            "Bitcoin",
+            "cryptography",
+            "peer-to-peer"
+        ],
+        "doi": null,
+        "citation_count": 1000
+    },
+    {
+        "file_name": "Jean-Baptiste_Perronneau_-_Magdaleine_Pinceloup_de_la_Grange,_née_de_Parseval.jpg",
+        "file_type": "graphic",
+        "artist": {
+            "name": "Jean-Baptiste Perronneau",
+            "wikidata_id": "Q2518370"
+        },
+        "title": "Magdaleine Pinceloup de la Grange, née de Parseval",
+        "object_type": "painting",
+        "date": "1747",
+        "medium": "oil on canvas",
+        "dimensions": {
+            "height": "64.9 cm (25.5 in)",
+            "width": "52.5 cm (20.6 in)"
+        },
+        "collection": {
+            "name": "Getty Center",
+            "wikidata_id": "Q29247"
+        },
+        "current_location": {
+            "room": "S202 (Museum South Pavilion)"
+        },
+        "accession_number": "84.PA.665 (J. Paul Getty Museum)",
+        "object_history": [
+            {
+                "year": 1984,
+                "event": "purchased by Getty Museum from The Matthiesen Gallery (London, England)"
+            }
+        ],
+        "credit_line": "Digital image courtesy of the Getty's Open Content Program.",
+        "inscriptions": {
+            "signature": "1747/ Perroneau",
+            "location": "recto center right"
+        },
+        "notes": [
+            {
+                "text": "This is a retouched picture, which means that it has been digitally altered from its original version. Modifications: A bit lighter and less green.."
+            }
+        ],
+        "references": [
+            {
+                "url": "http://www.getty.edu/art/collection/objects/747/jean-baptiste-perronneau-magdaleine-pinceloup-de-la-grange-nee-de-parseval-french-1747/",
+                "wikidata_id": null
+            },
+            {
+                "type": "Google Arts & Culture asset ID",
+                "value": "ggHWgLzxcKrz9w"
+            },
+            {
+                "type": "J. Paul Getty Museum object ID",
+                "value": "103RGB"
+            }
+        ],
+        "source": {
+            "url": "http://www.getty.edu/art/collection/objects/747/"
+        }
+    }
+]
