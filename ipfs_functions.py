@@ -8,7 +8,8 @@ def upload_file_to_ipfs(file_path):
     result = client.add(file_path)
     print (result)
     print(result['Name'], result['Hash'])
-    return result['Hash']
+    value = result['Hash']
+    return value
 
 def download_file_from_ipfs(cid, output_path):
     # Retrieve the file from IPFS
@@ -19,9 +20,9 @@ def download_file_from_ipfs(cid, output_path):
 
 def upload_json_to_ipfs(json):
     # Add the JSON to IPFS
-    result = client.add_json(json)
-    print ("JSON_metadata_CID : ", result)
-    return result
+    key = client.add_json(json)
+    print ("JSON_metadata_CID : ", key)
+    return key
 
 def download_json_from_ipfs(json):
     metadata_cid = client.get_json(metadata_cid)
