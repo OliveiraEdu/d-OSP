@@ -1,5 +1,9 @@
 #!/bin/bash
-ssh-keygen -t ed25519 -C "eduardocostaoliveira@gmail.com"
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
-cat ~/.ssh/id_ed25519.pub
+
+echo "Generating SSH key..."
+
+ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa
+
+# Get the public key and write it to a file
+PUBLIC_KEY=$(cat ~/.ssh/id_rsa.pub)
+echo "$PUBLIC_KEY" > id_rsa.pub

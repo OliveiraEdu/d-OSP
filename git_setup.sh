@@ -1,8 +1,12 @@
-#!/bin/bash
+#!/bin/sh
 
-ssh -T git@github.com
+echo "Configuring Git..."
 
-git config --global user.name "OliveiraEdu"
-git config --global user.email "eduardocostaoliveira@gmail.com"
-
-git remote set-url origin git@github.com:OliveiraEdu/OpenScience.git
+expect -c "
+    spawn git config --global user.name 'OliveiraEdu'
+    expect \"No username configured.\"
+    send \"\r\"
+    spawn git config --global user.email 'eduardocostaoliveira@gmail.com'
+    expect \"No email configured.\"
+    send \"\r\"
+"
