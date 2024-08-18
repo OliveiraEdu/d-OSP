@@ -6,5 +6,4 @@ iroha
 jupyterlab
 pandas
 pycryptodome
-random
 requests
