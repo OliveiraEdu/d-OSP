@@ -1,6 +1,7 @@
 csv
 icecream
 ipfshttpclient
+ipykernel
 iroha
 jupyterlab
 pandas
