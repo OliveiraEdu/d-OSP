@@ -1,4 +1,3 @@
-csv
 icecream
 ipfshttpclient
 ipykernel
