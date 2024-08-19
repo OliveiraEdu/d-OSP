@@ -13,7 +13,7 @@ This is the repository for the project Open Science, on its final form the proje
 
 Docker images:
 
-new_jupyter_lab
+new_jupyter_lab (see Dockerfile)
 iroha
 IPFS Kubo
 
