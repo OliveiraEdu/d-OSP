@@ -6,7 +6,6 @@ This is the repository for the project Open Science, on its final form the proje
 - Hyperledger Burrow
 - Smart contracts
 - IPFS
-- Flask.
 
 ---
 ## 1 -  Requirements
