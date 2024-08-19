@@ -1,7 +1,5 @@
 #!/bin/bash
 
-ssh -T git@github.com
-
 git config --global user.name "OliveiraEdu"
 git config --global user.email "eduardocostaoliveira@gmail.com"
 
