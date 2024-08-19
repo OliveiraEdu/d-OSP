@@ -17,7 +17,7 @@ Docker images:
 
 - iroha
 
--IPFS Kubo
+- IPFS Kubo
 
 * All container must be attached to the iroha network
   
