@@ -17,7 +17,7 @@ new_jupyter_lab
 iroha
 IPFS Kubo
 
-* All container shold be attached to the iroha network
+* All container must be attached to the iroha network
   
 ## 2 - Setup
 
@@ -39,4 +39,3 @@ Iroha Network
 ```bash
 docker run --name iroha -d -p 50051:50051 -p 7001:7001 -v $(pwd)/iroha/example:/opt/iroha_data -v blockstore:/tmp/block_store --network=iroha-network --restart always -e KEY='node0' hyperledger/iroha-burrow:pr-3960
 ```
-
