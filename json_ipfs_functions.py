@@ -22,28 +22,23 @@ def process_json_data(data):
         data (dict or list): JSON data to process
 
     Returns:
-        dict: Dictionary with file CIDs and JSON metadata CIDs.
+        dict: Dictionary with file CIDs, JSON metadata CIDs.
     """
-    file_names = []
-    json_cids = {}
+    result = []
     for obj in data:
         if isinstance(obj, dict) and 'file_name' in obj:
-            file_names.append(obj['file_name'])
-
-    for i, obj in enumerate(data):
-        if isinstance(obj, dict):
-            # logger.info(f"Processing object {i+1}")
-            cid_file = upload_file_to_ipfs("upload/" + file_names[i])
-            # ic(cid_file)
+            cid_file = upload_file_to_ipfs("upload/" + obj['file_name'])
             key_json = upload_json_to_ipfs(obj)
-            # ic(key_json)
-            json_cids[f"{obj['file_name']}_json_cid"] = key_json
-            # logger.info("JSON object:")
-            # logger.info(json.dumps(obj, indent=4))
+            json_cid = f"{obj['file_name']}_json_cid"
+            result.append({
+                "cid": cid_file,
+                "json_cid_value": key_json
+            })
 
-    # Return a dictionary with the file CIDs and JSON metadata CIDs.
-    return {"file_cids": {fn: cid for fn, cid in zip(file_names, [upload_file_to_ipfs(f"upload/{fn}") for fn in file_names])},
-            "json_cids": json_cids}
+    return {
+        'file_cids': result,
+        'json_cids': {}
+    }
 
 def upload_file_to_ipfs(file_path):
     # Add the file to IPFS
