@@ -1,0 +1,33 @@
+def process_json_data(data):
+    """
+    Process JSON data by uploading files and JSON to IPFS.
+
+    Args:
+        client (ipfshttpclient): IPFS client connection
+        data (dict or list): JSON data to process
+
+    Returns:
+        dict: Dictionary with file CIDs and JSON metadata CIDs.
+    """
+    result = {}
+
+    def recursive_process(data, parent_key=''):
+        if isinstance(data, dict):
+            for key, value in data.items():
+                new_key = f"{parent_key}{key}_"
+                recursive_process(value, new_key)
+        elif isinstance(data, list):
+            for i, item in enumerate(data):
+                new_key = f"{parent_key}file_{i+1}_"
+                recursive_process(item, new_key)
+
+    def process_file(file_path):
+        cid = upload_file_to_ipfs(file_path)
+        return {'cid': cid}
+
+    def process_json(obj):
+        key_json = upload_json_to_ipfs(obj)
+        return {'json_cid': key_json}
+
+    for i, obj in enumerate(data):
+        if isinstance(obj, dict) and 'file_name' in obj:
