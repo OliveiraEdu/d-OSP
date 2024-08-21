@@ -34,20 +34,21 @@ def process_json_data(data):
         if isinstance(obj, dict):
             # logger.info(f"Processing object {i+1}")
             cid_file = upload_file_to_ipfs("upload/" + file_names[i])
+            # ic(cid_file)
             key_json = upload_json_to_ipfs(obj)
+            # ic(key_json)
             json_cids[f"{obj['file_name']}_json_cid"] = key_json
             # logger.info("JSON object:")
             # logger.info(json.dumps(obj, indent=4))
 
     # Return a dictionary with the file CIDs and JSON metadata CIDs.
-    return {"file_cids": {fn: cid for fn, cid in zip(file_names, [cid_file]*len(file_names))},
+    return {"file_cids": {fn: cid for fn, cid in zip(file_names, [upload_file_to_ipfs(f"upload/{fn}") for fn in file_names])},
             "json_cids": json_cids}
 
 def upload_file_to_ipfs(file_path):
     # Add the file to IPFS
     result = client.add(file_path)
     key = result['Hash']
-    ic(key)
     return key
 
 def download_file_from_ipfs(cid, output_path):
@@ -60,7 +61,6 @@ def download_file_from_ipfs(cid, output_path):
 def upload_json_to_ipfs(json):
     # Add the JSON to IPFS
     value = client.add_json(json)
-    ic(value)
     return value
 
 def download_json_from_ipfs(json):
