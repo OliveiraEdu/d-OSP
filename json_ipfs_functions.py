@@ -46,21 +46,26 @@ def upload_file_to_ipfs(file_path):
     key = result['Hash']
     return key
 
+# def download_file_from_ipfs(cid, output_path):
+#     # Retrieve the file from IPFS
+#     file_data = client.cat(cid)
+#     # Save the file locally
+#     with open(output_path, 'wb') as f:
+#         f.write(file_data)
+
 def download_file_from_ipfs(cid, output_path):
-    # Retrieve the file from IPFS
-    file_data = client.cat(cid)
-    # Save the file locally
-    with open(output_path, 'wb') as f:
-        f.write(file_data)
+    try:
+        # Retrieve the file from IPFS
+        file_data = client.cat(cid)
+        # Save the file locally
+        with open(output_path, 'wb') as f:
+            f.write(file_data)
+        return True  # File downloaded successfully
+    except Exception as e:
+        logging.error(f"Error downloading file: {e}")
+        return False  # File download failed
 
-def upload_json_to_ipfs(json):
-    # Add the JSON to IPFS
-    value = client.add_json(json)
-    return value
 
-def download_json_from_ipfs(json):
-    metadata_cid = client.get_json(metadata_cid)
+def download_json_from_ipfs(cid):
+    metadata_cid = client.get_json(cid)
     return metadata_cid
-
-def download_json(cid)
-    metadata_json = client.get_json(cid)
