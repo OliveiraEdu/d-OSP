@@ -46,6 +46,12 @@ def upload_file_to_ipfs(file_path):
     key = result['Hash']
     return key
 
+def upload_json_to_ipfs(file_path):
+    # Add the file to IPFS
+    result = client.add_json(file_path)
+    return result
+
+
 def download_file_from_ipfs(cid, output_path):
     try:
         # Retrieve the file from IPFS
