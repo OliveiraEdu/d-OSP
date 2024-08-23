@@ -39,7 +39,7 @@ def main():
     ic("file_1_cid: ", file_1_cid)
     
     # 5 - Download the file calling function download_file_from_ipfs with the name obtained in step 3
-    downloaded_file = download_file_from_ipfs(file_1_cid, "download/" + file_name)
+    downloaded_file = download_file_from_ipfs(file_1_cid, "download/" + file_name_value)
     ic("Download success: ", downloaded_file)
 
 if __name__ == '__main__':
