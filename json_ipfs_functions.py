@@ -61,3 +61,6 @@ def upload_json_to_ipfs(json):
 def download_json_from_ipfs(json):
     metadata_cid = client.get_json(metadata_cid)
     return metadata_cid
+
+def download_json(cid)
+    metadata_json = client.get_json(cid)

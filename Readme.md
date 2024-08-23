@@ -55,6 +55,8 @@ Iroha Network
 docker run --name iroha -d -p 50051:50051 -p 7001:7001 -v $(pwd)/iroha/example:/opt/iroha_data -v blockstore:/tmp/block_store --network=iroha-network --restart always -e KEY='node0' hyperledger/iroha-burrow:pr-3960
 ```
 
-## 3 - Monitoring
+## 3 - Monitoring #WIP
 
 Use Prometheus for monitoring basic metrics.
+
+### 4 - Document functions and generate documentation #WIP
