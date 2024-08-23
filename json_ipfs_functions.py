@@ -46,13 +46,6 @@ def upload_file_to_ipfs(file_path):
     key = result['Hash']
     return key
 
-# def download_file_from_ipfs(cid, output_path):
-#     # Retrieve the file from IPFS
-#     file_data = client.cat(cid)
-#     # Save the file locally
-#     with open(output_path, 'wb') as f:
-#         f.write(file_data)
-
 def download_file_from_ipfs(cid, output_path):
     try:
         # Retrieve the file from IPFS
