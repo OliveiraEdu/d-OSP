@@ -55,10 +55,10 @@ def upload_json_to_ipfs(file_path):
 def download_file_from_ipfs(cid, output_path):
     try:
         # Retrieve the file from IPFS
-        file_data = client.cat(cid)
-        # Save the file locally
         with open(output_path, 'wb') as f:
-            f.write(file_data)
+            ic(f"Saving file: {cid}")
+            for block in client.get(cid):
+                f.write(block.data)
         return True  # File downloaded successfully
     except Exception as e:
         logging.error(f"Error downloading file: {e}")
