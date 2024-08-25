@@ -1,0 +1,121 @@
+analyze the following code and output, will note that the original_file_name is repeated, correct this and provide a new full version with the revision.
+
+```python
+#Working version 24AUG2024
+from json_ipfs_functions import *
+import json
+from concurrent.futures import ThreadPoolExecutor
+
+# # Define the base directory for downloading files
+# BASE_DOWNLOAD_DIR = "download"
+
+# def get_output_path(file_name):
+#     """Returns the output path for downloading a file to the 'download' directory."""
+#     return f"{BASE_DOWNLOAD_DIR}/{original_file_name}"
+
+# def download_file_from_ipfs(cid):
+#     try:
+#         # Download the file from IPFS using the provided CID
+#         downloaded_file = ipfs.get(cid)
+#         return downloaded_file.path
+#     except Exception as e:
+#         ic(f"Failed to download file: {str(e)}")
+#         return None
+
+def main():
+    # 1 - Parse Script #1 Output and retrieve all files metadata
+    accounts = json.loads(data.detail)  # Since 'admin@test' is the top-level key, we'll consider it as an account
+
+    for account in accounts.values():
+        # ic(account)
+        
+        # Extract file metadata from the JSON data
+        files_metadata = {}
+        for key, value in account.items():
+            if '_CID' in key:
+                cid_key = key.replace('_CID', '')
+                if f'{cid_key}_metadata_CID' in account.keys():
+                    cid_value = value
+                    metadata_cid_value = account[f'{cid_key}_metadata_CID']
+                    files_metadata[cid_key] = {'cid': cid_value, 'metadata_cid': metadata_cid_value}
+
+        # ic("Files metadata:")
+        for file_name, file_data in files_metadata.items():
+            ic(f"  - {file_name}:")
+            # ic(f"    CID: {file_data['cid']}")
+            # ic(f"    Metadata CID: {file_data['metadata_cid']}")
+
+            # Call `download_json_from_ipfs` function and retrieves the actual json metadata
+            try:
+                file_metadata_json = download_json_from_ipfs(file_data['metadata_cid'])
+                # ic("File metadata:")
+                # ic(json.dumps(file_metadata_json, indent=4))
+
+                # From the json key for file_name extracts its value
+                original_file_name = file_metadata_json.get('file_name', 'Unknown')
+                # output_path = get_output_path(original_file_name)
+            except Exception as e:
+                ic(f"Failed to download metadata JSON for file '{file_name}': {str(e)}")
+
+        # Download files from IPFS using their CID
+        with ThreadPoolExecutor() as executor:
+            tasks = []
+            for file_name, file_data in files_metadata.items():
+                cid = file_data['cid']
+                ic(file_name)
+                ic(cid)
+                output_path = "download/" + original_file_name
+                ic(output_path)
+                task = executor.submit(download_file_from_ipfs, cid, output_path)
+                tasks.append((file_name, task))
+
+if __name__ == '__main__':
+    main()
+```
+
+
+```output
+ic| f"  - {file_name}:": '  - file_1:'
+ic| 'first :', original_file_name: 'hello_world.py'
+ic| f"  - {file_name}:": '  - file_2:'
+ic| "first :": 'first :'
+    original_file_name: 'World_Energy_By_Country_And_Region_1965_to_2023.csv'
+ic| f"  - {file_name}:": '  - file_3:'
+ic| 'first :', original_file_name: 'bitcoin.pdf'
+ic| f"  - {file_name}:": '  - file_4:'
+ic| "first :": 'first :'
+    original_file_name: 'Jean-Baptiste_Perronneau_-_Magdaleine_Pinceloup_de_la_Grange,_née_de_Parseval.jpg'
+ic| f"  - {file_name}:": '  - file_5:'
+ic| "first :": 'first :'
+    original_file_name: 'Munafò et al. - 2022 - The reproducibility debate is an opportunity, not .pdf'
+ic| file_name: 'file_1'
+ic| cid: 'QmeBTz4ZwyqPkPigpASZ3wJodBXzJRpeXQMwNcsWRqU5Jv'
+ic| "second": 'second'
+    original_file_name: 'Munafò et al. - 2022 - The reproducibility debate is an opportunity, not .pdf'
+ic| output_path: ('download/Munafò et al. - 2022 - The reproducibility debate is an '
+                  'opportunity, not .pdf')
+ic| file_name: 'file_2'
+ic| cid: 'QmSSY49SnmbCZ3oSaTki7CYZe1ZaWZfE1CsWHpt8Ge7acJ'
+ic| "second": 'second'
+    original_file_name: 'Munafò et al. - 2022 - The reproducibility debate is an opportunity, not .pdf'
+ic| output_path: ('download/Munafò et al. - 2022 - The reproducibility debate is an '
+                  'opportunity, not .pdf')
+ic| file_name: 'file_3'
+ic| cid: 'QmRA3NWM82ZGynMbYzAgYTSXCVM14Wx1RZ8fKP42G6gjgj'
+ic| "second": 'second'
+    original_file_name: 'Munafò et al. - 2022 - The reproducibility debate is an opportunity, not .pdf'
+ic| output_path: ('download/Munafò et al. - 2022 - The reproducibility debate is an '
+                  'opportunity, not .pdf')
+ic| file_name: 'file_4'
+ic| cid: 'QmVTTcqbGvYRn7n7uPYwk4vi8NdbeYvnZkX9MVT3byrAx2'
+ic| "second": 'second'
+    original_file_name: 'Munafò et al. - 2022 - The reproducibility debate is an opportunity, not .pdf'
+ic| output_path: ('download/Munafò et al. - 2022 - The reproducibility debate is an '
+                  'opportunity, not .pdf')
+ic| file_name: 'file_5'
+ic| cid: 'QmdiRawzVNUiB28ENKQ7WefeFLEJ1xMjsJjwtHL2jnJ9xW'
+ic| "second": 'second'
+    original_file_name: 'Munafò et al. - 2022 - The reproducibility debate is an opportunity, not .pdf'
+ic| output_path: ('download/Munafò et al. - 2022 - The reproducibility debate is an '
+                  'opportunity, not .pdf')
+```
