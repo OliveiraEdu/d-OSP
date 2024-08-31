@@ -14,28 +14,14 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 def process_json_data(data):
-    """
-    Process JSON data by uploading files and JSON to IPFS.
-
-    Args:
-        client (ipfshttpclient): IPFS client connection
-        data (dict or list): JSON data to process
-
-    Returns:
-        dict: Dictionary with file CIDs, JSON metadata CIDs.
-    """
     result = {'file_cids': [], 'json_cids': {}}
-    for obj in data:
-        if isinstance(obj, dict) and 'file_name' in obj:
-            cid_file = upload_file_to_ipfs("upload/" + obj['file_name'])
-            key_json = upload_json_to_ipfs(obj)
-            json_cid_value = f"{obj['file_name']}_json_cid"
-            result['file_cids'].append({
-                "cid": cid_file,
-                "json_cid_value": json_cid_value
-            })
-            result['json_cids'][json_cid_value] = key_json
-
+    for key, value in data.items():
+        if isinstance(value, dict):  # handle nested dictionaries
+            processed_value = process_json_data(value)
+            result['file_cids'].extend(processed_value['file_cids'])
+            result['json_cids'].update(processed_value['json_cids'])
+        else:
+            result['file_cids'].append({'cid': value, 'json_cid_value': key})
     return result
 
 def upload_file_to_ipfs(file_path):
