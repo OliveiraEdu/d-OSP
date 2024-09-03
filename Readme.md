@@ -68,3 +68,5 @@ Use Prometheus for monitoring basic metrics.
 
 ## 5 - Document functions and generate documentation
 
+5.1 - Check functions and maybe breakdown them further for[better maintainability](https://www.linkedin.com/posts/khuyen-tran-1401_productionreadydatascience-datascience-cleancode-activity-7236085519871307776-WLDK/?utm_source=share&utm_medium=member_android)
+
