@@ -13,22 +13,22 @@ client = ipfshttpclient.connect('/dns/10.0.0.100/tcp/5001/http')  # Replace with
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-def process_json_data(data):
-    result = {'file_cids': [], 'json_cids': {}}
-    for key, value in data.items():
-        if isinstance(value, dict):  # handle nested dictionaries
-            processed_value = process_json_data(value)
-            result['file_cids'].extend(processed_value['file_cids'])
-            result['json_cids'].update(processed_value['json_cids'])
-        else:
-            result['file_cids'].append({'cid': value, 'json_cid_value': key})
-    return result
+# def process_json_data(data):
+#     result = {'file_cids': [], 'json_cids': {}}
+#     for key, value in data.items():
+#         if isinstance(value, dict):  # handle nested dictionaries
+#             processed_value = process_json_data(value)
+#             result['file_cids'].extend(processed_value['file_cids'])
+#             result['json_cids'].update(processed_value['json_cids'])
+#         else:
+#             result['file_cids'].append({'cid': value, 'json_cid_value': key})
+#     return result
 
-def upload_file_to_ipfs(file_path):
-    # Add the file to IPFS
-    result = client.add(file_path)
-    key = result['Hash']
-    return key
+# def upload_file_to_ipfs(file_path):
+#     # Add the file to IPFS
+#     result = client.add(file_path)
+#     key = result['Hash']
+#     return key
 
 def upload_json_to_ipfs(obj):
     # Convert the object into a JSON string and add it to IPFS
