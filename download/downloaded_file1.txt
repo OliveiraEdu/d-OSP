@@ -1,7 +1,0 @@
-ipfshttpclient
-iroha
-pycryptodome
-requests
-bash_kernel
-icecream
-jupyterlab
