@@ -8,8 +8,7 @@ client = ipfshttpclient.connect('/dns/10.0.0.100/tcp/5001/http')  # Replace with
 def upload_file_to_ipfs(file_path):
     # Add the file to IPFS
     result = client.add(file_path)
-    print (result)
-    print(result['Name'], result['Hash'])
+    ic(result['Name'], result['Hash'])
     value = result['Hash']
     return value
 
@@ -22,9 +21,9 @@ def download_file_from_ipfs(cid, output_path):
 
 def upload_json_to_ipfs(json):
     # Add the JSON to IPFS
-    key = client.add_json(json)
-    print ("JSON_metadata_CID : ", key)
-    return key
+    file_metadata_CID = client.add_json(json)
+    ic(file_metadata_CID)
+    return file_metadata_CID
 
 def download_json_from_ipfs(cid):
     try:
