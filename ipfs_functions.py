@@ -1,4 +1,6 @@
 import ipfshttpclient
+from icecream import ic
+
 
 # Connect to the IPFS node at a specific IP address
 client = ipfshttpclient.connect('/dns/10.0.0.100/tcp/5001/http')  # Replace with your IP address and port
@@ -24,8 +26,11 @@ def upload_json_to_ipfs(json):
     print ("JSON_metadata_CID : ", key)
     return key
 
-def download_json_from_ipfs(json):
-    metadata_cid = client.get_json(metadata_cid)
-    return metadata_cid
-
+def download_json_from_ipfs(cid):
+    try:
+        metadata_cid = client.get_json(cid)
+        return metadata_cid
+    except Exception as e:
+        logging.error(f"Error retrieving JSON from IPFS: {e}")
+        return None
 
