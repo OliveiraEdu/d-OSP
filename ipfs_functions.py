@@ -1,9 +1,18 @@
 import ipfshttpclient
+import json
 from icecream import ic
 
 
-# Connect to the IPFS node at a specific IP address
-client = ipfshttpclient.connect('/dns/10.0.0.100/tcp/5001/http')  # Replace with your IP address and port
+# Load configuration from config.json file
+config_path = "config.json"  # Update this path as needed
+with open(config_path, "r") as f:
+    config = json.load(f)
+
+IPFS_ADDRESS = config["IPFS_ADDRESS"]
+
+# Connect to the IPFS node at a specific IP address and port
+ipfs_address = f"/dns/{config['IPFS_ADDRESS']}/tcp/{config['IPFS_PORT']}/http"
+client = ipfshttpclient.connect(ipfs_address)
 
 def upload_file_to_ipfs(file_path):
     # Add the file to IPFS
