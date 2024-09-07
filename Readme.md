@@ -8,6 +8,21 @@ This is the repository for the project Open Science, on its final form the proje
 - IPFS
 
 ---
+
+General Overview
+
+Iroha 1 Python SDK
+
+This notebook uses [Iroha 1 Python Library ](https://pypi.org/project/iroha/)
+
+
+Smart Contracts
+
+The integration of smart contracts into Iroha 1 is executed by Hyperledger Burrow. For additional information refer to [Iroha Smart Contracts Integration](https://iroha.readthedocs.io/en/develop/integrations/burrow.html?highlight=contract). Use this docker image `hyperledger/iroha-burrow:pr-3960`, see below.
+
+
+
+---
 ## 1 -  Requirements
 
 Docker images:
@@ -58,6 +73,36 @@ docker run --name iroha -d -p 50051:50051 -p 7001:7001 -v $(pwd)/iroha/example:/
 2.4 - IP Address and related connections parameters
 
 For iroha and IPFS, check and edit `config.json` according to the networking settings for your environment.
+
+
+2.5 - Caveats and Workarounds
+
+2.5.1  - Genesis Block
+
+The default Genesis block for Iroha 1 docker image `admin@test` does not have the proper permission to creat smart contracts, therefore it is necessary to add the permission for the `admin@test` account editing the `genesis.block`file as instructed below.
+
+
+### How to run a specific genesis-block, to add/change permissions
+
+- The genesis block file is read from the local iroha/example/genesis_block file. 
+
+- This is the modified block, with the admin role permission set root.
+
+- After that you only need to execute docker run with the proper parameters of the iroha container.
+
+```genesis_block
+                       {
+                          "createRole":{
+                             "roleName":"admin",
+                             "permissions":[
+                                "root"                             
+                             ]
+                          }
+                       },
+
+```
+
+
 
 
 # WIP List
