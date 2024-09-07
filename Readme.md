@@ -21,6 +21,11 @@ Smart Contracts
 The integration of smart contracts into Iroha 1 is executed by Hyperledger Burrow. For additional information refer to [Iroha Smart Contracts Integration](https://iroha.readthedocs.io/en/develop/integrations/burrow.html?highlight=contract). Use this docker image `hyperledger/iroha-burrow:pr-3960`, see below.
 
 
+IPFS
+
+This project uses [Python IPFS HTTP Client](https://github.com/ipfs-shipyard/py-ipfs-http-client)
+
+
 
 ---
 ## 1 -  Requirements
@@ -31,7 +36,7 @@ Docker images:
 
 - Iroha 1
 
-- IPFS Kubo
+- [IPFS Kubo](https://blog.ipfs.tech/1-run-ipfs-on-docker/) 
 
 * All containers must be attached to the iroha network.
 
