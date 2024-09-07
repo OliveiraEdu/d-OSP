@@ -2,8 +2,6 @@
 
 ## Index
 
-[Queries](link)
 
-Improvements:
-
-A single config.json (or yaml) for general settings like IP Address.
+# 1 - Artifact - Account Creation
+# 2 - Artifact - Account Detail Batch Setting 
