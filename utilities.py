@@ -1,4 +1,5 @@
-# Utilities to support user account data 
+# Utilities to generate random user account name and details 
+
 
 import random
 import string
