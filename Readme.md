@@ -32,7 +32,7 @@ This project uses [Python IPFS HTTP Client](https://github.com/ipfs-shipyard/py-
 
 Docker images:
 
-- new_jupyter_lab (see Dockerfile)
+- new_jupyter_lab (see docker/Dockerfile)
 
 - Iroha 1
 
