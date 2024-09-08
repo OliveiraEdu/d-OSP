@@ -27,6 +27,15 @@ def dump_to_csv(account_id, user_account_full_name, user_account_email, user_acc
         writer.writerow([account_id, user_account_full_name, user_account_email, user_account_institution, user_account_orcid, user_private_key, user_public_key])
 
 
+def dump_project_to_csv(project_id, project_private_key, project_public_key, project_filename="datasets/projects.csv"):
+    file_exists = os.path.isfile(project_filename)
+    with open(project_filename, mode='a', newline='') as file:
+        writer = csv.writer(file)
+        if not file_exists:
+            writer.writerow(["project_id", "project_private_key", "project_public_key"])
+        writer.writerow([project_id, project_private_key, project_public_key])
+
+
 
 left = [
         "admiring", "adoring", "affectionate", "agitated", "amazing", "angry", "awesome", "beautiful", "blissful", "bold",
