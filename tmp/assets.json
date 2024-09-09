@@ -1,0 +1,17 @@
+{
+    "X-TIKA:Parsed-By": [
+        "org.apache.tika.parser.DefaultParser",
+        "org.apache.tika.parser.csv.TextAndCSVParser"
+    ],
+    "X-TIKA:Parsed-By-Full-Set": [
+        "org.apache.tika.parser.DefaultParser",
+        "org.apache.tika.parser.csv.TextAndCSVParser"
+    ],
+    "X-TIKA:content_handler": "ToTextContentHandler",
+    "Content-Encoding": "UTF-8",
+    "X-TIKA:parse_time_millis": "4",
+    "X-TIKA:embedded_depth": "0",
+    "resourceName": "b'assets.csv'",
+    "Content-Length": "2483",
+    "Content-Type": "text/plain; charset=UTF-8"
+}

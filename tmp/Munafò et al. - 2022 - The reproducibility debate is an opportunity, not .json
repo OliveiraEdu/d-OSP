@@ -1,0 +1,111 @@
+{
+    "pdf:PDFVersion": "1.6",
+    "xmp:CreatorTool": "Springer",
+    "pdf:docinfo:title": "The reproducibility debate is an opportunity, not a crisis",
+    "pdf:hasXFA": "false",
+    "access_permission:can_print_degraded": "true",
+    "pdfa:PDFVersion": "A-2b",
+    "X-TIKA:Parsed-By-Full-Set": [
+        "org.apache.tika.parser.DefaultParser",
+        "org.apache.tika.parser.pdf.PDFParser"
+    ],
+    "X-TIKA:content_handler": "ToTextContentHandler",
+    "pdf:num3DAnnotations": "0",
+    "xmpMM:History:Action": [
+        "converted",
+        "converted"
+    ],
+    "dc:format": "application/pdf; version=1.6",
+    "pdf:docinfo:custom:robots": "noindex",
+    "pdf:docinfo:creator_tool": "Springer",
+    "access_permission:fill_in_form": "true",
+    "xmpMM:History:When": [
+        "2022-02-04T12:24:18Z",
+        "2022-02-04T12:24:46Z"
+    ],
+    "pdf:hasCollection": "false",
+    "pdf:encrypted": "false",
+    "dc:title": "The reproducibility debate is an opportunity, not a crisis",
+    "pdf:containsNonEmbeddedFont": "false",
+    "xmp:CreateDate": "2022-02-04T12:22:19Z",
+    "xmpMM:History:SoftwareAgent": [
+        "pdfToolbox",
+        "pdfToolbox"
+    ],
+    "pdf:docinfo:custom:CrossMarkDomains[1]": "springer.com",
+    "robots": "noindex",
+    "pdf:docinfo:subject": "BMC Research Notes, https://doi.org/10.1186/s13104-022-05942-3",
+    "pdf:hasMarkedContent": "false",
+    "xmpMM:History:InstanceID": [
+        "uuid:42b1466b-ce3d-4831-b6fd-ec595177b7a2",
+        "uuid:46d1ef82-99a4-426b-ba14-311817d6f6f1"
+    ],
+    "xmp:ModifyDate": "2022-02-10T13:46:46Z",
+    "pdf:docinfo:creator": "Marcus R. Munaf\u00f2 ",
+    "pdf:docinfo:custom:CrossmarkMajorVersionDate": "2010-04-23",
+    "access_permission:extract_for_accessibility": "true",
+    "resourceName": "b'Munaf\\xc3\\xb2 et al. - 2022 - The reproducibility debate is an opportunity, not .pdf'",
+    "pdfaid:part": "2",
+    "pdf:docinfo:custom:CrossMarkDomains[2]": "springerlink.com",
+    "X-TIKA:Parsed-By": [
+        "org.apache.tika.parser.DefaultParser",
+        "org.apache.tika.parser.pdf.PDFParser"
+    ],
+    "pdf:docinfo:custom:doi": "10.1186/s13104-022-05942-3",
+    "pdf:docinfo:custom:CrossmarkDomainExclusive": "true",
+    "X-TIKA:embedded_depth": "0",
+    "CrossmarkDomainExclusive": "true",
+    "pdf:annotationTypes": "null",
+    "pdf:docinfo:producer": "Acrobat Distiller 10.1.8 (Windows); modified using iText\u00ae 5.3.5 \u00a92000-2012 1T3XT BVBA (SPRINGER SBM; licensed version)",
+    "pdf:annotationSubtypes": "Link",
+    "doi": "10.1186/s13104-022-05942-3",
+    "pdf:containsDamagedFont": "false",
+    "pdf:unmappedUnicodeCharsPerPage": [
+        "0",
+        "0",
+        "0"
+    ],
+    "dc:description": "BMC Research Notes, https://doi.org/10.1186/s13104-022-05942-3",
+    "access_permission:modify_annotations": "true",
+    "dc:creator": [
+        "Marcus R. Munaf\u00f2 ",
+        "Chris Chambers ",
+        "Alexandra Collins ",
+        "Laura Fortunato ",
+        "Malcolm Macleod "
+    ],
+    "dcterms:created": "2022-02-04T06:52:19Z",
+    "dcterms:modified": "2022-02-10T12:46:46Z",
+    "xmpMM:DocumentID": "uuid:ba33d111-0f78-432f-94c0-9d4831112079",
+    "CrossMarkDomains[1]": "springer.com",
+    "pdf:overallPercentageUnmappedUnicodeChars": "0.0",
+    "pdf:docinfo:keywords": "UK Reproducibility Network,Reproducibility,Replicability,Research Integrity",
+    "pdf:docinfo:modified": "2022-02-10T12:46:46Z",
+    "Content-Length": "694525",
+    "Content-Type": "application/pdf",
+    "xmp:MetadataDate": "2022-02-10T13:46:46Z",
+    "pdfaid:conformance": "B",
+    "dc:language": "EN",
+    "pdf:producer": "Acrobat Distiller 10.1.8 (Windows); modified using iText\u00ae 5.3.5 \u00a92000-2012 1T3XT BVBA (SPRINGER SBM; licensed version)",
+    "dc:subject": [
+        "UK Reproducibility Network,Reproducibility,Replicability,Research Integrity",
+        "BMC Research Notes, https://doi.org/10.1186/s13104-022-05942-3"
+    ],
+    "pdf:totalUnmappedUnicodeChars": "0",
+    "access_permission:assemble_document": "true",
+    "xmpTPg:NPages": "3",
+    "pdf:hasXMP": "true",
+    "pdf:charsPerPage": [
+        "4801",
+        "5534",
+        "5242"
+    ],
+    "access_permission:extract_content": "true",
+    "access_permission:can_print": "true",
+    "CrossMarkDomains[2]": "springerlink.com",
+    "meta:keyword": "UK Reproducibility Network,Reproducibility,Replicability,Research Integrity",
+    "X-TIKA:parse_time_millis": "105",
+    "access_permission:can_modify": "true",
+    "pdf:docinfo:created": "2022-02-04T06:52:19Z",
+    "CrossmarkMajorVersionDate": "2010-04-23"
+}
