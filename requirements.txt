@@ -6,3 +6,4 @@ jupyterlab
 pandas
 pycryptodome
 requests
+tika

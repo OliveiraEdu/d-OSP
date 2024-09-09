@@ -2,7 +2,7 @@
 FROM python:3.9-slim
 
 # Add packages
-RUN apt-get update && apt-get install -y adduser git nano
+RUN apt-get update && apt-get install -y adduser git nano default-jre
 
 # Create a new user
 RUN useradd -m -s /bin/bash user1
