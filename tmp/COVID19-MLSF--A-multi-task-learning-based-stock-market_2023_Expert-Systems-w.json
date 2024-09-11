@@ -115,7 +115,7 @@
     "access_permission:can_print": "true",
     "CrossMarkDomains[2]": "sciencedirect.com",
     "meta:keyword": "Stock market forecasting,COVID-19 pandemic,Multi-task learning,Feature fusion,K-nearest neighbor classifier",
-    "X-TIKA:parse_time_millis": "252",
+    "X-TIKA:parse_time_millis": "365",
     "access_permission:can_modify": "true",
     "pdf:docinfo:created": "2023-02-04T09:40:15Z",
     "CrossmarkMajorVersionDate": "2010-04-23"
