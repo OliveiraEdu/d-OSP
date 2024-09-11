@@ -9,7 +9,7 @@
     ],
     "X-TIKA:content_handler": "ToTextContentHandler",
     "Content-Encoding": "windows-1252",
-    "X-TIKA:parse_time_millis": "42",
+    "X-TIKA:parse_time_millis": "30",
     "X-TIKA:embedded_depth": "0",
     "resourceName": "b'World_Energy_By_Country_And_Region_1965_to_2023.csv'",
     "csv:delimiter": "comma",
