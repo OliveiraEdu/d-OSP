@@ -57,7 +57,7 @@
         "org.apache.tika.parser.DefaultParser",
         "org.apache.tika.parser.pdf.PDFParser"
     ],
-    "X-TIKA:parse_time_millis": "72",
+    "X-TIKA:parse_time_millis": "250",
     "X-TIKA:embedded_depth": "0",
     "access_permission:can_modify": "true",
     "pdf:docinfo:producer": "OpenOffice.org 2.4",
