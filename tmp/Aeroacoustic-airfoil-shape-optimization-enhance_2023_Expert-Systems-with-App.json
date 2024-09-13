@@ -100,7 +100,7 @@
     "access_permission:extract_content": "true",
     "access_permission:can_print": "true",
     "CrossMarkDomains[2]": "sciencedirect.com",
-    "X-TIKA:parse_time_millis": "349",
+    "X-TIKA:parse_time_millis": "334",
     "access_permission:can_modify": "true",
     "pdf:docinfo:created": "2023-02-04T09:40:15Z",
     "CrossmarkMajorVersionDate": "2010-04-23"

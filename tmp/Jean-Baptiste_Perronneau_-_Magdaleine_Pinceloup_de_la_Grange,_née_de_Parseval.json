@@ -1,6 +1,6 @@
 {
     "Number of Tables": "4 Huffman tables",
-    "File Modified Date": "Wed Sep 11 02:49:55 +00:00 2024",
+    "File Modified Date": "Fri Sep 13 02:58:53 +00:00 2024",
     "Compression Type": "Baseline",
     "Data Precision": "8 bits",
     "X-TIKA:Parsed-By-Full-Set": [
@@ -20,9 +20,9 @@
         "org.apache.tika.parser.DefaultParser",
         "org.apache.tika.parser.image.JpegParser"
     ],
-    "X-TIKA:parse_time_millis": "12",
+    "X-TIKA:parse_time_millis": "15",
     "X-TIKA:embedded_depth": "0",
-    "File Name": "apache-tika-4377634623877409598.jpg'",
+    "File Name": "apache-tika-18253703329054497019.jpg'",
     "Content-Length": "72495",
     "tiff:BitsPerSample": "8",
     "tiff:ImageWidth": "500",
