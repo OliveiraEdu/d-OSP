@@ -17,7 +17,7 @@ client = ipfshttpclient.connect(ipfs_address)
 def upload_file_to_ipfs(file_path):
     # Add the file to IPFS
     result = client.add(file_path)
-    ic(result['Name'], result['Hash'])
+    # ic(result['Name'], result['Hash'])
     value = result['Hash']
     return value
 
