@@ -31,7 +31,7 @@ def download_file_from_ipfs(cid, output_path):
 def upload_json_to_ipfs(json):
     # Add the JSON to IPFS
     file_metadata_CID = client.add_json(json)
-    ic(file_metadata_CID)
+    # ic(file_metadata_CID)
     return file_metadata_CID
 
 def download_json_from_ipfs(cid):
