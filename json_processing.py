@@ -8,7 +8,6 @@ def process_json_data(data):
     Process JSON data by uploading files and JSON to IPFS.
 
     Args:
-        client (ipfshttpclient): IPFS client connection
         data (dict or list): JSON data to process
 
     Returns:
