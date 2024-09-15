@@ -20,8 +20,3 @@ def clean_file_name(raw_original_file_name):
 
     return clean_original_file_name.strip('"')  # Remove any remaining quotes
 
-# Example usage:
-# raw_original_file_name = ("b'Munaf\\xc3\\xb2 et al. - 2022 - The reproducibility debate is an "
-#                              "opportunity, not .pdf'")
-# clean_filename = clean_filename(raw_original_file_name)
-# print(f"clean_original_file_name: '{clean_filename}'")
