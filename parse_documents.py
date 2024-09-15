@@ -9,4 +9,4 @@ def parse_document(filepath):
     print(parsed_document['metadata'])  
     print(type(parsed_document['metadata']))
     print(parsed_document['status'],type(parsed_document['status'] ))
-    
+    return parsed_document 
