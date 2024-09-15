@@ -98,72 +98,49 @@
       "funding_agency": "National Science Foundation (NSF)",
       "location": "Boston, Massachusetts, USA"
     },
-
-{ “project_id”: “PROJ-23456”,
-
-"researcher_name": "John D. Thompson",
-
-"researcher_institution": "University of Michigan",
-
-"title": "Investigating the Effects of Noise Pollution on Marine Mammals",
-
-"abstract": "This study aims to investigate the impacts of noise pollution on marine mammal behavior and physiology.",
-
-"keywords": ["noise pollution", "marine mammals", "conservation biology"],
-
-"start_date": "2018-01-01",
-
-"end_date": "2021-12-31",
-
-"funding_agency": "National Oceanic and Atmospheric Administration (NOAA)",
-
-"location": "Ann Arbor, Michigan, USA"
-
-},
-
-{ “project_id”: “PROJ-34567”,
-
-"researcher_name": "Sarah J. Lee",
-
-"researcher_institution": "Stanford University",
-
-"title": "Developing Novel Biomarkers for Cancer Diagnosis and Treatment",
-
-"abstract": "This study aims to identify novel biomarkers for cancer diagnosis and treatment using advanced genomics and bioinformatics approaches.",
-
-"keywords": ["cancer research", "biomarkers", "genomics"],
-
-"start_date": "2020-03-01",
-
-"end_date": "2023-02-28",
-
-"funding_agency": "National Institutes of Health (NIH)",
-
-"location": "Palo Alto, California, USA"
-
-},
-
-–prompt truncated for brevity–
-
-“project_id”: “PROJ-99999”,
-
-"researcher_name": "Maria C. Rodriguez",
-
-"researcher_institution": "University of Texas at Austin",
-
-"title": "Investigating the Role of Gut Microbiota in Human Health and Disease",
-
-"abstract": "This study aims to elucidate the functional significance of gut microbiota in human health and disease.",
-
-"keywords": ["gut microbiology", "human health", "disease prevention"],
-
-"start_date": "2018-09-01",
-
-"end_date": "2022-08-31",
-
-"funding_agency": "National Institutes of Health (NIH)",
-
-"location": "Austin, Texas, USA"
-
-}
+    { 
+      "title": "Investigating the Effects of Noise Pollution on Marine Mammals",
+      "abstract": "This study aims to investigate the impacts of noise pollution on marine mammal behavior and physiology.",
+      "keywords": ["noise pollution", "marine mammals", "conservation biology"],
+      "start_date": "2018-01-01",
+      "end_date": "2021-12-31",
+      "funding_agency": "National Oceanic and Atmospheric Administration (NOAA)",
+      "location": "Ann Arbor, Michigan, USA"
+    },
+    {
+      "title": "Developing Novel Biomarkers for Cancer Diagnosis and Treatment",
+      "abstract": "This study aims to identify novel biomarkers for cancer diagnosis and treatment using advanced genomics and bioinformatics approaches.",
+      "keywords": ["cancer research", "biomarkers", "genomics"],
+      "start_date": "2020-03-01",
+      "end_date": "2023-02-28",
+      "funding_agency": "National Institutes of Health (NIH)",
+      "location": "Palo Alto, California, USA"
+    },
+    {
+      "title": "Investigating the Role of Gut Microbiota in Human Health and Disease",
+      "abstract": "This study aims to elucidate the functional significance of gut microbiota in human health and disease.",
+      "keywords": ["gut microbiology", "human health", "disease prevention"],
+      "start_date": "2018-09-01",
+      "end_date": "2022-08-31",
+      "funding_agency": "National Institutes of Health (NIH)",
+      "location": "Austin, Texas, USA"
+    },
+  {
+    "title": "Examining the Impact of Microplastics on Freshwater Ecosystems",
+    "abstract": "This study aims to investigate the effects of microplastics on freshwater ecosystems and identify potential mitigation strategies.",
+    "keywords": ["microplastics", "freshwater ecosystems", "conservation"],
+    "start_date": "2020-03-01",
+    "end_date": "2023-02-28",
+    "funding_agency": "Environmental Protection Agency (EPA)",
+    "location": "Ann Arbor, Michigan, USA"
+  },
+  {
+    "title": "Investigating the Role of Nanoparticles in Plant Growth and Development",
+    "abstract": "This study aims to elucidate the effects of nanoparticles on plant growth and development, with implications for agriculture and environmental sustainability.",
+    "keywords": ["nanotechnology", "plant biology", "sustainable agriculture"],
+    "start_date": "2019-06-01",
+    "end_date": "2022-05-31",
+    "funding_agency": "National Science Foundation (NSF)",
+    "location": "Stanford, California, USA"
+  }
 ]
