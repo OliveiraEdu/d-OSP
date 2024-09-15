@@ -30,11 +30,9 @@ def process_json_data(data):
     }
 
 
-import json
-
 def display_json_data(file_path):
     """
-    Opens a JSON file and displays its keys and values.
+    Opens a JSON file, displays its contents as JSON-formatted dictionaries.
     
     Args:
         file_path (str): The path to the JSON file.
@@ -50,15 +48,18 @@ def display_json_data(file_path):
             # Check if data is a list or a dictionary
             if isinstance(data, list):
                 print("List of dictionaries:")
-                for item in data:
-                    if isinstance(item, dict):  # Ensure the item is a dictionary before trying to access its items()
-                        for key, value in item.items():
-                            print(f"  {key}: {value}")
-                    
+                for i, item in enumerate(data, start=1):  
+                    if isinstance(item, dict):  
+                        print(f"Dictionary {i}:")
+                        # print(json.dumps(item, indent=4))  # Display each dictionary as formatted JSON
+                        project_metadata = json.dumps(item)
+                        print(project_metadata)
+                        project_metadata_cid = upload_json_to_ipfs(project_metadata)
+                        print(project_metadata_cid)
+                        
             elif isinstance(data, dict):
                 print("Dictionary:")
-                for key, value in data.items():
-                    print(f"{key}: {value}")
+                print(json.dumps(data, indent=4))  # Display the single dictionary as formatted JSON
                 
     except FileNotFoundError:
         print("File not found.")
