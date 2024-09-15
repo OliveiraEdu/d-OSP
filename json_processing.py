@@ -28,3 +28,40 @@ def process_json_data(data):
         'file_cids': result,
         'json_cids': {}
     }
+
+
+import json
+
+def display_json_data(file_path):
+    """
+    Opens a JSON file and displays its keys and values.
+    
+    Args:
+        file_path (str): The path to the JSON file.
+        
+    Returns:
+        None
+    """
+
+    try:
+        with open(file_path, 'r') as f:
+            data = json.load(f)
+            
+            # Check if data is a list or a dictionary
+            if isinstance(data, list):
+                print("List of dictionaries:")
+                for item in data:
+                    if isinstance(item, dict):  # Ensure the item is a dictionary before trying to access its items()
+                        for key, value in item.items():
+                            print(f"  {key}: {value}")
+                    
+            elif isinstance(data, dict):
+                print("Dictionary:")
+                for key, value in data.items():
+                    print(f"{key}: {value}")
+                
+    except FileNotFoundError:
+        print("File not found.")
+        
+    except json.JSONDecodeError:
+        print("Invalid JSON format.")
