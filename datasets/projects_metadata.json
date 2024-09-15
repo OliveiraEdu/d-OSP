@@ -1,142 +1,169 @@
 [
   {
-    "project_id": "PROJ-42139",
-    "researcher_name": "Emily J. Miller",
-    "researcher_institution": "University of California, Berkeley",
     "title": "Assessing the Impact of Urbanization on Avian Migration Patterns",
     "abstract": "This study aims to investigate the effects of urbanization on avian migration patterns and identify potential conservation strategies.",
     "keywords": ["urbanization", "avian migration", "conservation"],
     "start_date": "2020-01-01",
     "end_date": "2022-12-31",
     "funding_agency": "National Science Foundation",
-    "location": "San Francisco Bay Area, California, USA",
-    "latitude": 37.7749,
-    "longitude": -122.4194
+    "location": "San Francisco Bay Area, California, USA"
   },
   {
-    "project_id": "PROJ-82345",
-    "researcher_name": "David L. Chen",
-    "researcher_institution": "Massachusetts Institute of Technology",
     "title": "Investigating the Effects of Climate Change on Coral Reef Ecosystems",
     "abstract": "This study aims to investigate the impacts of climate change on coral reef ecosystems and identify potential mitigation strategies.",
     "keywords": ["climate change", "coral reefs", "ecosystem resilience"],
     "start_date": "2019-06-01",
     "end_date": "2021-05-31",
     "funding_agency": "National Oceanic and Atmospheric Administration",
-    "location": "Great Barrier Reef, Australia",
-    "latitude": -18.2133,
-    "longitude": 147.4167
+    "location": "Great Barrier Reef, Australia"
   },
   {
-    "project_id": "PROJ-91234",
-    "researcher_name": "Maria G. Rodriguez",
-    "researcher_institution": "University of Texas at Austin",
     "title": "Understanding the Role of Microplastics in Marine Food Webs",
     "abstract": "This study aims to investigate the impacts of microplastics on marine food webs and identify potential strategies for reducing plastic pollution.",
     "keywords": ["microplastics", "marine food webs", "plastic pollution"],
     "start_date": "2018-03-01",
     "end_date": "2020-02-28",
     "funding_agency": "Environmental Protection Agency",
-    "location": "Gulf of Mexico, USA",
-    "latitude": 29.2133,
-    "longitude": -88.4167
+    "location": "Gulf of Mexico, USA"
   },
   {
-    "project_id": "PROJ-65432",
-    "researcher_name": "John D. Lee",
-    "researcher_institution": "Stanford University",
     "title": "Developing Sustainable Agriculture Practices for Small-Scale Farmers",
     "abstract": "This study aims to develop and evaluate sustainable agriculture practices for small-scale farmers in developing countries.",
     "keywords": ["sustainable agriculture", "small-scale farming", "developing countries"],
     "start_date": "2017-09-01",
     "end_date": "2019-08-31",
     "funding_agency": "Bill and Melinda Gates Foundation",
-    "location": "Rwanda, Africa",
-    "latitude": -1.9167,
-    "longitude": 30.1667
+    "location": "Rwanda, Africa"
   },
   {
-    "project_id": "PROJ-82193",
-    "researcher_name": "David H. Kim",
-    "researcher_institution": "Stanford University",
     "title": "Investigating the Effects of Climate Change on Coral Reef Ecosystems",
     "abstract": "This study aims to investigate the impacts of climate change on coral reef ecosystems and identify potential management strategies.",
     "keywords": ["climate change", "coral reefs", "ecosystem management"],
     "start_date": "2019-06-01",
     "end_date": "2021-05-31",
     "funding_agency": "National Oceanic and Atmospheric Administration (NOAA)",
-    "location": "Hawaii, USA",
-    "latitude": 19.8967,
-    "longitude": -155.5673
+    "location": "Hawaii, USA"
   },
   {
-    "project_id": "PROJ-12345",
-    "researcher_name": "Sarah K. Taylor",
-    "researcher_institution": "University of Michigan",
     "title": "Examining the Relationship Between Microplastics and Marine Life",
     "abstract": "This study aims to investigate the effects of microplastics on marine life and identify potential strategies for reducing plastic pollution.",
     "keywords": ["microplastics", "marine life", "plastic pollution"],
     "start_date": "2018-01-01",
     "end_date": "2020-12-31",
     "funding_agency": "Environmental Protection Agency (EPA)",
-    "location": "Great Lakes, USA",
-    "latitude": 44.9761,
-    "longitude": -87.6164
+    "location": "Great Lakes, USA"
   },
     {
-      "project_id": "PROJ-42140",
-      "researcher_name": "David K. Lee",
-      "researcher_institution": "Massachusetts Institute of Technology",
       "title": "Developing a Novel Materials Platform for Energy Harvesting Applications",
       "abstract": "This project aims to design and synthesize a new class of materials with enhanced energy harvesting capabilities.",
       "keywords": ["materials science", "energy harvesting", "nanotechnology"],
       "start_date": "2018-06-01",
       "end_date": "2021-05-31",
       "funding_agency": "Department of Energy",
-      "location": "Cambridge, Massachusetts, USA",
-      "latitude": 42.3584,
-      "longitude": -71.0949
+      "location": "Cambridge, Massachusetts, USA"
     },
     {
-      "project_id": "PROJ-42141",
-      "researcher_name": "Rajesh K. Goyal",
-      "researcher_institution": "Indian Institute of Technology, Delhi",
       "title": "Investigating the Role of MicroRNAs in Cancer Progression and Metastasis",
       "abstract": "This study aims to elucidate the functional significance of microRNAs in cancer progression and metastasis.",
       "keywords": ["cancer biology", "microRNA", "epigenetics"],
       "start_date": "2016-01-01",
       "end_date": "2019-12-31",
       "funding_agency": "Wellcome Trust",
-      "location": "New Delhi, India",
-      "latitude": 28.7041,
-      "longitude": 77.1025
+      "location": "New Delhi, India"
     },
     {
-      "project_id": "PROJ-42140",
-      "researcher_name": "Ramesh V. Patel",
-      "researcher_institution": "Massachusetts Institute of Technology (MIT)",
       "title": "Development of Novel Antimicrobial Materials for Wound Healing",
       "abstract": "This study aims to design and synthesize new antimicrobial materials that can accelerate wound healing and prevent infection.",
       "keywords": ["antimicrobial", "materials science", "wound healing"],
       "start_date": "2019-06-01",
       "end_date": "2022-05-31",
       "funding_agency": "National Institutes of Health (NIH)",
-      "location": "Cambridge, Massachusetts, USA",
-      "latitude": 42.3601,
-      "longitude": -71.0942
+      "location": "Cambridge, Massachusetts, USA"
     },
     {
-      "project_id": "PROJ-42141",
-      "researcher_name": "Maria G. Rodriguez",
-      "researcher_institution": "University of Texas at Austin",
       "title": "Investigating the Effects of Climate Change on Coral Reef Ecosystems",
       "abstract": "This study aims to investigate the impacts of climate change on coral reef ecosystems and identify potential adaptation strategies.",
       "keywords": ["climate change", "coral reefs", "ecosystem resilience"],
       "start_date": "2018-01-01",
       "end_date": "2021-12-31",
       "funding_agency": "National Oceanic and Atmospheric Administration (NOAA)",
-      "location": "Austin, Texas, USA",
-      "latitude": 30.2672,
-      "longitude": -97.7431
-    }
+      "location": "Austin, Texas, USA"
+    },
+    { 
+      "title": "Understanding the Role of Soil Microorganisms in Plant Growth",
+      "abstract": "This study aims to investigate the effects of soil microorganisms on plant growth and development.",
+      "keywords": ["soil microbiology", "plant biology", "ecosystem services"],
+      "start_date": "2019-09-01",
+      "end_date": "2022-08-31",
+      "funding_agency": "National Science Foundation (NSF)",
+      "location": "Boston, Massachusetts, USA"
+    },
+
+{ “project_id”: “PROJ-23456”,
+
+"researcher_name": "John D. Thompson",
+
+"researcher_institution": "University of Michigan",
+
+"title": "Investigating the Effects of Noise Pollution on Marine Mammals",
+
+"abstract": "This study aims to investigate the impacts of noise pollution on marine mammal behavior and physiology.",
+
+"keywords": ["noise pollution", "marine mammals", "conservation biology"],
+
+"start_date": "2018-01-01",
+
+"end_date": "2021-12-31",
+
+"funding_agency": "National Oceanic and Atmospheric Administration (NOAA)",
+
+"location": "Ann Arbor, Michigan, USA"
+
+},
+
+{ “project_id”: “PROJ-34567”,
+
+"researcher_name": "Sarah J. Lee",
+
+"researcher_institution": "Stanford University",
+
+"title": "Developing Novel Biomarkers for Cancer Diagnosis and Treatment",
+
+"abstract": "This study aims to identify novel biomarkers for cancer diagnosis and treatment using advanced genomics and bioinformatics approaches.",
+
+"keywords": ["cancer research", "biomarkers", "genomics"],
+
+"start_date": "2020-03-01",
+
+"end_date": "2023-02-28",
+
+"funding_agency": "National Institutes of Health (NIH)",
+
+"location": "Palo Alto, California, USA"
+
+},
+
+–prompt truncated for brevity–
+
+“project_id”: “PROJ-99999”,
+
+"researcher_name": "Maria C. Rodriguez",
+
+"researcher_institution": "University of Texas at Austin",
+
+"title": "Investigating the Role of Gut Microbiota in Human Health and Disease",
+
+"abstract": "This study aims to elucidate the functional significance of gut microbiota in human health and disease.",
+
+"keywords": ["gut microbiology", "human health", "disease prevention"],
+
+"start_date": "2018-09-01",
+
+"end_date": "2022-08-31",
+
+"funding_agency": "National Institutes of Health (NIH)",
+
+"location": "Austin, Texas, USA"
+
+}
 ]
