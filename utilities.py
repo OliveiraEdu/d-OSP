@@ -18,25 +18,25 @@ def print_random_from_second_column(file_path):
         random_value = random.choice(second_column_values)
     return random_value
 
-def dump_to_csv(account_id, user_account_full_name, user_account_email, user_account_institution, user_account_orcid, user_private_key, user_public_key, filename="datasets/accounts.csv"):
-    try:
-        with open(filename, mode='r', newline='', encoding='utf-8') as file:
-            reader = csv.reader(file)
-            header = next(reader, None)  # Get the first row to check for a header
-            if not header or len(header) != 7:  # Check that it's a CSV with 7 columns
-                raise ValueError(f"Invalid CSV header in '{filename}'")
+# def dump_to_csv(account_id, user_account_full_name, user_account_email, user_account_institution, user_account_orcid, user_private_key, user_public_key, filename="datasets/accounts.csv"):
+#     try:
+#         with open(filename, mode='r', newline='', encoding='utf-8') as file:
+#             reader = csv.reader(file)
+#             header = next(reader, None)  # Get the first row to check for a header
+#             if not header or len(header) != 7:  # Check that it's a CSV with 7 columns
+#                 raise ValueError(f"Invalid CSV header in '{filename}'")
 
-        current_line_number = sum(1 for _ in open(filename, encoding='utf-8')) - 1
+#         current_line_number = sum(1 for _ in open(filename, encoding='utf-8')) - 1
 
-        print(f"Appended row to line {current_line_number + 2} of file '{filename}'")  # We increment twice: once for the header and once for this new row
-    except Exception as e:
-        print(f"Error appending row to CSV: {str(e)}")
-    finally:
-        with open(filename, mode='a', newline='', encoding='utf-8') as file:
-            writer = csv.writer(file)
-            if not header:
-                writer.writerow(["account_id", "user_account_full_name", "user_account_email", "user_account_institution", "user_account_orcid", "user_private_key", "user_public_key"])
-            writer.writerow([account_id, user_account_full_name, user_account_email, user_account_institution, user_account_orcid, user_private_key, user_public_key])
+#         print(f"Appended row to line {current_line_number + 2} of file '{filename}'")  # We increment twice: once for the header and once for this new row
+#     except Exception as e:
+#         print(f"Error appending row to CSV: {str(e)}")
+#     finally:
+#         with open(filename, mode='a', newline='', encoding='utf-8') as file:
+#             writer = csv.writer(file)
+#             if not header:
+#                 writer.writerow(["account_id", "user_account_full_name", "user_account_email", "user_account_institution", "user_account_orcid", "user_private_key", "user_public_key"])
+#             writer.writerow([account_id, user_account_full_name, user_account_email, user_account_institution, user_account_orcid, user_private_key, user_public_key])
 
 
 class ProjectTracker:
@@ -86,6 +86,23 @@ def dump_project_to_csv(project_id, project_private_key, project_public_key, fil
                 writer.writerow([project_id, project_private_key, project_public_key])
         tracker.update_line_number()
         
+
+def dump_to_csv(account_id, user_account_full_name, user_account_email, user_account_institution, user_account_orcid, user_private_key, user_public_key, filename="datasets/accounts.csv"):
+    tracker = ProjectTrackerStorage.get_tracker(filename)
+    try:
+        print(f"Appended row to line {tracker.get_last_line_number()} of file '{filename}'")
+    except Exception as e:
+        print(f"Error appending row to CSV: {str(e)}")
+    finally:
+        with open(filename, mode='a', newline='', encoding='utf-8') as file:
+            writer = csv.writer(file)
+            if tracker.get_last_line_number() == 1:  # If it's a new CSV, write the header row
+                writer.writerow(["account_id", "user_account_full_name", "user_account_email", "user_account_institution", "user_account_orcid", "user_private_key", "user_public_key"])
+            else:
+                writer.writerow([account_id, user_account_full_name, user_account_email, user_account_institution, user_account_orcid, user_private_key, user_public_key])
+        tracker.update_line_number()
+
+
 # def dump_project_to_csv(project_id, project_private_key, project_public_key, project_filename="datasets/projects.csv"):
 #     file_exists = os.path.isfile(project_filename)
 #     with open(project_filename, mode='a', newline='') as file:
