@@ -1,6 +1,4 @@
 # Utilities to generate random user account name and details 
-
-
 import random
 import string
 import csv
@@ -31,14 +29,14 @@ def dump_to_csv(account_id, user_account_full_name, user_account_email, user_acc
         print(f"Appended row to line {current_line_number} of file '{filename}'")  # We increment twice: once for the header and once for this new row
     except Exception as e:
         print(f"Error appending row to CSV: {str(e)}")
+        return None  # Return None on error
     finally:
         with open(filename, mode='a', newline='', encoding='utf-8') as file:
             writer = csv.writer(file)
             if not header:
                 writer.writerow(["account_id", "user_account_full_name", "user_account_email", "user_account_institution", "user_account_orcid", "user_private_key", "user_public_key"])
             writer.writerow([account_id, user_account_full_name, user_account_email, user_account_institution, user_account_orcid, user_private_key, user_public_key])
-
-
+        return current_line_number
 
 
 def dump_project_to_csv(project_id, project_private_key, project_public_key, project_filename="datasets/projects.csv"):
@@ -54,13 +52,14 @@ def dump_project_to_csv(project_id, project_private_key, project_public_key, pro
         print(f"Appended row to line {current_line_number} of file '{project_filename}'")  # We increment twice: once for the header and once for this new row
     except Exception as e:
         print(f"Error appending row to CSV: {str(e)}")
+        return None  # Return None on error
     finally:
         with open(project_filename, mode='a', newline='', encoding='utf-8') as file:
             writer = csv.writer(file)
             if not header:
                 writer.writerow(["project_id", "project_private_key", "project_public_key"])
             writer.writerow([project_id, project_private_key, project_public_key])
-
+        return current_line_number
 
 
 left = [
