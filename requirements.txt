@@ -8,3 +8,4 @@ pycryptodome
 requests
 tika
 faker
+chardet
