@@ -38,7 +38,7 @@ Docker images:
 
 - new_jupyter_lab (see `docker/Dockerfile`)
 
-- Iroha 1
+- [Iroha 1](https://iroha.readthedocs.io/en/develop/overview.html)
 
 - [IPFS Kubo](https://blog.ipfs.tech/1-run-ipfs-on-docker/) 
 
