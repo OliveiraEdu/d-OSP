@@ -142,5 +142,374 @@
     "end_date": "2022-05-31",
     "funding_agency": "National Science Foundation (NSF)",
     "location": "Stanford, California, USA"
+  },
+  {
+    "title": "Exploring the Effects of Deforestation on Global Carbon Emissions",
+    "abstract": "This study aims to explore deforestation and its effects on global warming.",
+    "keywords": ["deforestation", "carbon emissions", "global warming"],
+    "start_date": "2020-01-05",
+    "end_date": "2023-12-20",
+    "funding_agency": "Department of Energy",
+    "location": "Amazon Rainforest, Brazil"
+  },
+  {
+    "title": "Studying the Impact of Ocean Acidification on Marine Biodiversity",
+    "abstract": "This study aims to explore ocean acidification and its effects on climate change.",
+    "keywords": ["ocean acidification", "marine biodiversity", "climate change"],
+    "start_date": "2020-06-23",
+    "end_date": "2024-02-18",
+    "funding_agency": "Environmental Protection Agency",
+    "location": "Great Barrier Reef, Australia"
+  },
+  {
+    "title": "Investigating the Role of AI in Personalized Medicine",
+    "abstract": "This study aims to explore AI and its effects on healthcare.",
+    "keywords": ["AI", "personalized medicine", "healthcare"],
+    "start_date": "2022-05-11",
+    "end_date": "2022-10-12",
+    "funding_agency": "National Science Foundation",
+    "location": "San Francisco, California, USA"
+  },
+  {
+    "title": "Exploring Renewable Energy Solutions for Developing Countries",
+    "abstract": "This study aims to explore renewable energy and its effects on developing countries.",
+    "keywords": ["renewable energy", "sustainable development", "developing countries"],
+    "start_date": "2021-12-05",
+    "end_date": "2023-04-16",
+    "funding_agency": "Environmental Protection Agency",
+    "location": "Nairobi, Kenya"
+  },
+  {
+    "title": "Analyzing the Effects of Air Pollution on Urban Health",
+    "abstract": "This study aims to explore air pollution and its effects on public health.",
+    "keywords": ["air pollution", "urban health", "public health"],
+    "start_date": "2020-04-21",
+    "end_date": "2024-04-12",
+    "funding_agency": "Bill and Melinda Gates Foundation",
+    "location": "Beijing, China"
+  },
+  {
+    "title": "Assessing the Risks of Antibiotic Resistance in Livestock",
+    "abstract": "This study aims to investigate antibiotic resistance in livestock and its impact on food safety.",
+    "keywords": ["antibiotic resistance", "livestock", "food safety"],
+    "start_date": "2019-08-05",
+    "end_date": "2022-11-30",
+    "funding_agency": "National Institutes of Health",
+    "location": "Iowa, USA"
+  },
+  {
+    "title": "Evaluating the Effectiveness of Green Infrastructure in Flood Mitigation",
+    "abstract": "This study explores green infrastructure's role in mitigating flood risks.",
+    "keywords": ["green infrastructure", "flood mitigation", "climate adaptation"],
+    "start_date": "2020-05-17",
+    "end_date": "2023-06-29",
+    "funding_agency": "Department of Energy",
+    "location": "Rotterdam, Netherlands"
+  },
+  {
+    "title": "Studying the Relationship Between Soil Fertility and Crop Yields",
+    "abstract": "This study investigates soil fertility's effect on agricultural crop yields.",
+    "keywords": ["soil fertility", "agriculture", "crop yields"],
+    "start_date": "2021-07-08",
+    "end_date": "2023-05-19",
+    "funding_agency": "National Science Foundation",
+    "location": "Punjab, India"
+  },
+  {
+    "title": "Investigating the Impact of Telemedicine on Healthcare Access",
+    "abstract": "This study aims to explore telemedicine and its impact on healthcare access.",
+    "keywords": ["telemedicine", "healthcare access", "digital health"],
+    "start_date": "2019-03-19",
+    "end_date": "2022-09-23",
+    "funding_agency": "National Institutes of Health",
+    "location": "Austin, Texas, USA"
+  },
+  {
+    "title": "Understanding the Role of Social Media in Political Polarization",
+    "abstract": "This study explores social media's role in amplifying political polarization.",
+    "keywords": ["social media", "political polarization", "digital communication"],
+    "start_date": "2020-09-03",
+    "end_date": "2023-07-10",
+    "funding_agency": "Bill and Melinda Gates Foundation",
+    "location": "Berlin, Germany"
+  },
+  {
+    "title": "Exploring the Effects of Climate Change on Arctic Wildlife",
+    "abstract": "This study aims to investigate the effects of climate change on wildlife in the Arctic region and propose conservation strategies.",
+    "keywords": ["climate change", "Arctic wildlife", "conservation"],
+    "start_date": "2021-01-15",
+    "end_date": "2024-12-31",
+    "funding_agency": "World Wildlife Fund",
+    "location": "Svalbard, Norway"
+  },
+  {
+    "title": "Investigating the Role of Urban Green Spaces in Mitigating Heat Islands",
+    "abstract": "This study explores how urban green spaces help reduce heat island effects in cities.",
+    "keywords": ["urban green spaces", "heat islands", "sustainable cities"],
+    "start_date": "2019-04-01",
+    "end_date": "2022-03-31",
+    "funding_agency": "National Science Foundation",
+    "location": "Los Angeles, California, USA"
+  },
+  {
+    "title": "Evaluating the Impact of E-Waste on Soil and Water Contamination",
+    "abstract": "This study aims to explore the environmental impacts of electronic waste on soil and water contamination.",
+    "keywords": ["e-waste", "soil contamination", "water pollution"],
+    "start_date": "2020-06-01",
+    "end_date": "2023-05-31",
+    "funding_agency": "United Nations Environment Programme",
+    "location": "Accra, Ghana"
+  },
+  {
+    "title": "Studying the Influence of Ocean Currents on Marine Plastic Debris",
+    "abstract": "This study investigates how ocean currents affect the distribution of marine plastic debris.",
+    "keywords": ["ocean currents", "marine plastic debris", "pollution"],
+    "start_date": "2018-11-01",
+    "end_date": "2022-10-31",
+    "funding_agency": "National Oceanic and Atmospheric Administration",
+    "location": "Pacific Ocean, USA"
+  },
+  {
+    "title": "Exploring the Use of AI for Monitoring Wildlife in National Parks",
+    "abstract": "This study investigates how AI can be used to monitor wildlife in national parks and improve conservation efforts.",
+    "keywords": ["AI", "wildlife monitoring", "conservation technology"],
+    "start_date": "2021-09-01",
+    "end_date": "2024-08-31",
+    "funding_agency": "National Geographic Society",
+    "location": "Yellowstone National Park, USA"
+  },
+  {
+    "title": "Understanding the Socioeconomic Impact of Microfinance in Rural Africa",
+    "abstract": "This study explores the effects of microfinance on socioeconomic development in rural African communities.",
+    "keywords": ["microfinance", "rural development", "economic empowerment"],
+    "start_date": "2020-02-01",
+    "end_date": "2023-01-31",
+    "funding_agency": "Bill and Melinda Gates Foundation",
+    "location": "Kigali, Rwanda"
+  },
+  {
+    "title": "Assessing Renewable Energy Adoption in European Cities",
+    "abstract": "This study examines the factors driving renewable energy adoption in European urban areas.",
+    "keywords": ["renewable energy", "urban sustainability", "European cities"],
+    "start_date": "2021-05-01",
+    "end_date": "2024-04-30",
+    "funding_agency": "European Union Horizon 2020",
+    "location": "Berlin, Germany"
+  },
+  {
+    "title": "Investigating the Role of Coral Reefs in Coastal Protection",
+    "abstract": "This study explores the role coral reefs play in protecting coastal communities from erosion and storms.",
+    "keywords": ["coral reefs", "coastal protection", "ecosystem services"],
+    "start_date": "2019-08-15",
+    "end_date": "2022-08-14",
+    "funding_agency": "National Oceanic and Atmospheric Administration",
+    "location": "Fiji Islands"
+  },
+  {
+    "title": "Analyzing the Effectiveness of Carbon Sequestration in Forest Ecosystems",
+    "abstract": "This study investigates the capacity of forest ecosystems to sequester carbon and mitigate climate change.",
+    "keywords": ["carbon sequestration", "forest ecosystems", "climate mitigation"],
+    "start_date": "2020-10-01",
+    "end_date": "2023-09-30",
+    "funding_agency": "National Science Foundation",
+    "location": "Amazon Rainforest, Brazil"
+  },
+  {
+    "title": "Studying the Impact of Tourism on Marine Ecosystems in Southeast Asia",
+    "abstract": "This study examines how tourism affects marine ecosystems in Southeast Asia, focusing on sustainable tourism practices.",
+    "keywords": ["tourism", "marine ecosystems", "sustainable tourism"],
+    "start_date": "2021-03-01",
+    "end_date": "2024-02-29",
+    "funding_agency": "United Nations Environment Programme",
+    "location": "Phuket, Thailand"
+  },
+  {
+    "title": "Investigating the Role of Drones in Precision Agriculture",
+    "abstract": "This study explores the use of drones in precision agriculture to optimize crop yields and resource management.",
+    "keywords": ["drones", "precision agriculture", "crop management"],
+    "start_date": "2021-06-01",
+    "end_date": "2024-05-31",
+    "funding_agency": "Food and Agriculture Organization",
+    "location": "Iowa, USA"
+  },
+  {
+    "title": "Assessing the Impact of Renewable Energy on Grid Stability",
+    "abstract": "This study investigates how integrating renewable energy sources affects the stability and reliability of electrical grids.",
+    "keywords": ["renewable energy", "grid stability", "energy infrastructure"],
+    "start_date": "2020-01-01",
+    "end_date": "2023-12-31",
+    "funding_agency": "Department of Energy",
+    "location": "Copenhagen, Denmark"
+  },
+  {
+    "title": "Studying the Impact of Urban Sprawl on Biodiversity in South America",
+    "abstract": "This study examines the effects of urban sprawl on biodiversity in South American ecosystems.",
+    "keywords": ["urban sprawl", "biodiversity", "South America"],
+    "start_date": "2020-07-01",
+    "end_date": "2023-06-30",
+    "funding_agency": "World Wildlife Fund",
+    "location": "São Paulo, Brazil"
+  },
+  {
+    "title": "Exploring the Use of Blockchain Technology in Food Supply Chains",
+    "abstract": "This study investigates how blockchain technology can be applied to enhance transparency and efficiency in food supply chains.",
+    "keywords": ["blockchain", "food supply chain", "technology"],
+    "start_date": "2019-11-01",
+    "end_date": "2022-10-31",
+    "funding_agency": "World Bank",
+    "location": "Rotterdam, Netherlands"
+  },
+  {
+    "title": "Investigating the Effects of Climate Change on Glacier Retreat in the Himalayas",
+    "abstract": "This study examines the impact of climate change on the retreat of glaciers in the Himalayan region.",
+    "keywords": ["climate change", "glacier retreat", "Himalayas"],
+    "start_date": "2021-04-01",
+    "end_date": "2024-03-31",
+    "funding_agency": "National Geographic Society",
+    "location": "Ladakh, India"
+  },
+  {
+    "title": "Studying the Impact of Climate Change on Wine Production in Europe",
+    "abstract": "This study explores how climate change is affecting grape cultivation and wine production in European vineyards.",
+    "keywords": ["climate change", "wine production", "agriculture"],
+    "start_date": "2019-09-01",
+    "end_date": "2022-08-31",
+    "funding_agency": "European Union Horizon 2020",
+    "location": "Bordeaux, France"
+  },
+  {
+    "title": "Analyzing the Effects of Deforestation on Water Resources in the Amazon Basin",
+    "abstract": "This study investigates how deforestation impacts water availability and quality in the Amazon Basin.",
+    "keywords": ["deforestation", "water resources", "Amazon Basin"],
+    "start_date": "2020-08-01",
+    "end_date": "2023-07-31",
+    "funding_agency": "World Wildlife Fund",
+    "location": "Manaus, Brazil"
+  },
+  {
+    "title": "Exploring the Use of AI for Enhancing Disaster Response in Earthquake-Prone Areas",
+    "abstract": "This study investigates how AI can be leveraged to improve disaster response in earthquake-prone regions.",
+    "keywords": ["AI", "disaster response", "earthquake"],
+    "start_date": "2021-05-01",
+    "end_date": "2024-04-30",
+    "funding_agency": "National Science Foundation",
+    "location": "Tokyo, Japan"
+  },
+  {
+    "title": "Investigating the Socioeconomic Impact of Renewable Energy Projects in Africa",
+    "abstract": "This study explores the socioeconomic benefits of renewable energy projects in African rural communities.",
+    "keywords": ["renewable energy", "socioeconomic impact", "Africa"],
+    "start_date": "2020-03-01",
+    "end_date": "2023-02-28",
+    "funding_agency": "World Bank",
+    "location": "Cape Town, South Africa"
+  },
+  {
+    "title": "Analyzing the Effects of Overfishing on Marine Biodiversity in the Atlantic Ocean",
+    "abstract": "This study investigates the consequences of overfishing on marine biodiversity in the Atlantic Ocean.",
+    "keywords": ["overfishing", "marine biodiversity", "Atlantic Ocean"],
+    "start_date": "2018-10-01",
+    "end_date": "2022-09-30",
+    "funding_agency": "Environmental Protection Agency",
+    "location": "Azores, Portugal"
+  },
+  {
+    "title": "Exploring the Impact of Urban Agriculture on Food Security in Developing Cities",
+    "abstract": "This study examines the role of urban agriculture in enhancing food security in rapidly developing cities.",
+    "keywords": ["urban agriculture", "food security", "developing cities"],
+    "start_date": "2020-09-01",
+    "end_date": "2023-08-31",
+    "funding_agency": "United Nations Food Programme",
+    "location": "Lagos, Nigeria"
+  },
+  {
+    "title": "Assessing the Impact of Clean Water Initiatives in Rural India",
+    "abstract": "This study evaluates the effectiveness of clean water initiatives in improving public health in rural India.",
+    "keywords": ["clean water", "public health", "rural development"],
+    "start_date": "2021-02-01",
+    "end_date": "2024-01-31",
+    "funding_agency": "World Health Organization",
+    "location": "Rajasthan, India"
+  },
+  {
+    "title": "Investigating the Role of Public Transport in Reducing Urban Air Pollution",
+    "abstract": "This study explores the potential of public transport systems to reduce urban air pollution and traffic congestion.",
+    "keywords": ["public transport", "air pollution", "urban development"],
+    "start_date": "2019-12-01",
+    "end_date": "2022-11-30",
+    "funding_agency": "European Union Horizon 2020",
+    "location": "Paris, France"
+  },
+  {
+    "title": "Evaluating the Impact of Organic Farming on Soil Health in Europe",
+    "abstract": "This study investigates the impact of organic farming practices on soil health and crop productivity in European farmlands.",
+    "keywords": ["organic farming", "soil health", "sustainable agriculture"],
+    "start_date": "2020-05-01",
+    "end_date": "2023-04-30",
+    "funding_agency": "European Union Horizon 2020",
+    "location": "Tuscany, Italy"
+  },
+  {
+    "title": "Exploring the Use of AI for Predictive Healthcare Analytics",
+    "abstract": "This study investigates the use of AI in predictive healthcare analytics to improve patient outcomes.",
+    "keywords": ["AI", "predictive analytics", "healthcare"],
+    "start_date": "2021-08-01",
+    "end_date": "2024-07-31",
+    "funding_agency": "National Institutes of Health",
+    "location": "Boston, Massachusetts, USA"
+  },
+  {
+    "title": "Analyzing the Role of Renewable Energy in Achieving Carbon Neutrality by 2050",
+    "abstract": "This study explores the potential of renewable energy sources to help achieve global carbon neutrality by 2050.",
+    "keywords": ["renewable energy", "carbon neutrality", "global climate policy"],
+    "start_date": "2021-07-01",
+    "end_date": "2024-06-30",
+    "funding_agency": "United Nations Climate Change Secretariat",
+    "location": "Brussels, Belgium"
+  },
+  {
+    "title": "Investigating the Effects of Urbanization on River Ecosystems in Asia",
+    "abstract": "This study examines the impact of rapid urbanization on river ecosystems in Asia, focusing on water quality and biodiversity.",
+    "keywords": ["urbanization", "river ecosystems", "Asia"],
+    "start_date": "2020-02-01",
+    "end_date": "2023-01-31",
+    "funding_agency": "United Nations Environment Programme",
+    "location": "Bangkok, Thailand"
+  },
+  {
+    "title": "Evaluating the Impact of Telehealth on Rural Healthcare Access",
+    "abstract": "This study explores how telehealth services are improving access to healthcare in rural communities.",
+    "keywords": ["telehealth", "rural healthcare", "digital health"],
+    "start_date": "2021-03-01",
+    "end_date": "2024-02-29",
+    "funding_agency": "National Institutes of Health",
+    "location": "Wyoming, USA"
+  },
+  {
+    "title": "Studying the Impact of Rising Sea Levels on Coastal Cities in Asia",
+    "abstract": "This study investigates the risks posed by rising sea levels to coastal cities in Asia and potential mitigation strategies.",
+    "keywords": ["sea level rise", "coastal cities", "climate adaptation"],
+    "start_date": "2020-06-01",
+    "end_date": "2023-05-31",
+    "funding_agency": "Asian Development Bank",
+    "location": "Manila, Philippines"
+  },
+  {
+    "title": "Exploring the Role of Big Data in Smart City Planning",
+    "abstract": "This study explores how big data analytics can be used to optimize planning and development in smart cities.",
+    "keywords": ["big data", "smart cities", "urban planning"],
+    "start_date": "2021-09-01",
+    "end_date": "2024-08-31",
+    "funding_agency": "National Science Foundation",
+    "location": "Singapore"
+  },
+  {
+    "title": "Analyzing the Effectiveness of Coastal Restoration Projects in Europe",
+    "abstract": "This study investigates the success of coastal restoration projects in enhancing ecosystem services in European coastlines.",
+    "keywords": ["coastal restoration", "ecosystem services", "Europe"],
+    "start_date": "2019-10-01",
+    "end_date": "2022-09-30",
+    "funding_agency": "European Union Horizon 2020",
+    "location": "Lisbon, Portugal"
   }
 ]
