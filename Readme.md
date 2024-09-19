@@ -131,24 +131,22 @@ The default Genesis block for Iroha 1 docker image `admin@test` does not have th
 
 ```
 
-----
-
 ---
 
 
 ## Future Improvements
 
-3 - New features
+### New features
 
-3.1 - Improve function `upload_file_to_ipfs` to get the original file name and store it on `file_n_metadata` JSON automatically - Done
+- Improve function `upload_file_to_ipfs` to get the original file name and store it on `file_n_metadata` JSON automatically - Done
 
-4 - Monitoring
+### Monitoring
 
 Use Prometheus for monitoring basic metrics.
 
-5 - Document functions and generate documentation
+### Document functions and generate documentation
 
-5.1 - Check functions and maybe breakdown them further for [better maintainability](https://www.linkedin.com/posts/khuyen-tran-1401_productionreadydatascience-datascience-cleancode-activity-7236085519871307776-WLDK/?utm_source=share&utm_medium=member_android)
+- Check functions and maybe breakdown them further for [better maintainability](https://www.linkedin.com/posts/khuyen-tran-1401_productionreadydatascience-datascience-cleancode-activity-7236085519871307776-WLDK/?utm_source=share&utm_medium=member_android)
 
-6 - Use a standard Jupyter Notebook docker image from [Jupyter Stacks](https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html)
+- Use a standard Jupyter Notebook docker image from [Jupyter Stacks](https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html)
 
