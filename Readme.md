@@ -153,3 +153,7 @@ Use Prometheus for monitoring basic metrics.
 ### Smart Contracts
 
 - Publish smart contracts in IPFS
+
+### CSV versus JSON
+
+Replace CSV usage by JSON and store them in IPFS
