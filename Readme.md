@@ -150,3 +150,6 @@ Use Prometheus for monitoring basic metrics.
 
 - Use a standard Jupyter Notebook docker image from [Jupyter Stacks](https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html)
 
+### Smart Contracts
+
+- Publish smart contracts in IPFS
