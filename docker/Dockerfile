@@ -14,7 +14,8 @@ USER user1
 WORKDIR /home/user1
 
 # Clone your GitHub repository
-RUN git clone https://github.com/OliveiraEdu/OpenScience
+# RUN git clone https://github.com/OliveiraEdu/OpenScience
+#git clone https://github.com/OliveiraEdu/OpenScience.git
 
 # Change into the repository directory
 WORKDIR /home/user1/OpenScience
