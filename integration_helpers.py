@@ -4,19 +4,22 @@ from iroha import IrohaCrypto
 from iroha import Iroha, IrohaGrpc
 import sys
 from Crypto.Hash import keccak
+import json
 
 if sys.version_info[0] < 3:
     raise Exception("Python 3 or a more recent version is required.")
 
-# Here is the information about the environment and admin account information:
-IROHA_HOST_ADDR = os.getenv("IROHA_HOST_ADDR", "10.0.0.100")
-IROHA_PORT = os.getenv("IROHA_PORT", "50051")
-ADMIN_ACCOUNT_ID = os.getenv("ADMIN_ACCOUNT_ID", "admin@test")
-ADMIN_PRIVATE_KEY = os.getenv(
-    "ADMIN_PRIVATE_KEY",
-    "f101537e319568c765b2cc89698325604991dca57b9716b58016b253506cab70",
-)
+# Load configuration from config.json file
+config_path = "config.json"  # Update this path as needed
+with open(config_path, "r") as f:
+    config = json.load(f)
 
+IROHA_HOST_ADDR = config["IROHA_HOST_ADDR"]
+IROHA_PORT = config["IROHA_PORT"]
+ADMIN_ACCOUNT_ID = config["ADMIN_ACCOUNT_ID"]
+ADMIN_PRIVATE_KEY = config["ADMIN_PRIVATE_KEY"]
+iroha = Iroha(ADMIN_ACCOUNT_ID)
+net = IrohaGrpc("{}:{}".format(IROHA_HOST_ADDR, IROHA_PORT))
 iroha = Iroha(ADMIN_ACCOUNT_ID)
 net = IrohaGrpc("{}:{}".format(IROHA_HOST_ADDR, IROHA_PORT))
 
