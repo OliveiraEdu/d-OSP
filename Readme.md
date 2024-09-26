@@ -48,6 +48,29 @@ Docker images:
 
 ```bash
 git clone https://github.com/iroha
+
+cd iroha
+
+docker network create iroha-network
+
+docker volume create blockstore
+
+git checkout 0d22d117863560c5330299bea592360fd8252941
+
+```
+
+
+* Running Postgress
+
+```bash
+docker run --name some-postgres \
+-e POSTGRES_USER=postgres \
+-e POSTGRES_PASSWORD=mysecretpassword \
+-p 5432:5432 \
+--network=iroha-network \
+-d postgres:9.5 \
+-c 'max_prepared_transactions=100' \
+-- restart always
 ```
 
 
