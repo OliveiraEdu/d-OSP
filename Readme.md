@@ -60,6 +60,59 @@ git checkout 0d22d117863560c5330299bea592360fd8252941
 ```
 
 
+### Genesis Block
+
+The default Genesis block for Iroha 1 docker image `admin@test` does not have the proper permission to creat smart contracts, therefore it is necessary to add the permission for the `admin@test` account editing the `genesis.block`file as instructed below.
+
+
+#### How to run a specific genesis-block, to add/change permissions for the admin
+
+- Open iroha/example/genesis_block file and locate the following block:
+
+```genesis_block
+"createRole":{
+                             "roleName":"admin",
+                             "permissions":[
+                                "can_add_peer",
+                                "can_add_signatory",
+                                "can_create_account",
+                                "can_create_domain",
+                                "can_get_all_acc_ast",
+                                "can_get_all_acc_ast_txs",
+                                "can_get_all_acc_detail",
+                                "can_get_all_acc_txs",
+                                "can_get_all_accounts",
+                                "can_get_all_signatories",
+                                "can_get_all_txs",
+                                "can_get_blocks",
+                                "can_get_roles",
+                                "can_read_assets",
+                                "can_remove_signatory",
+                                "can_set_quorum"
+                             ]
+                          }
+```
+
+- Edit it with the admin role permission set root like this:
+
+
+```genesis_block
+                       
+                       {
+                          "createRole":{
+                             "roleName":"admin",
+                             "permissions":[
+                                "root",
+                             ]
+                          }
+                       
+```
+
+---
+
+
+
+
 * Running Postgress
 
 ```bash
