@@ -59,7 +59,6 @@ git checkout 0d22d117863560c5330299bea592360fd8252941
 
 ```
 
-
 ### Genesis Block
 
 The default Genesis block for Iroha 1 docker image `admin@test` does not have the proper permission to creat smart contracts, therefore it is necessary to add the permission for the `admin@test` account editing the `genesis.block`file as instructed below.
@@ -111,9 +110,7 @@ The default Genesis block for Iroha 1 docker image `admin@test` does not have th
 ---
 
 
-
-
-* Running Postgress
+* Running Postgress (Database for Iroha 1)
 
 ```bash
 docker run --name some-postgres \
@@ -157,7 +154,7 @@ docker run --name iroha -d -p 50051:50051 -p 7001:7001 -v $(pwd)/iroha/example:/
 
 2.4 - IP Address and related connections parameters
 
-For iroha and IPFS, check and edit `config.json` according to the networking settings for your environment.
+For iroha and IPFS, go to the Jupyter, check and edit `config.json` according to the networking settings for your environment.
 
 
 ----
