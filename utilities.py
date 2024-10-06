@@ -66,12 +66,12 @@ right = [
 
 
 
-def dump_to_csv(account_id, user_account_full_name, user_account_email, user_account_institution, user_account_orcid, user_private_key, user_public_key, filename="datasets/accounts.csv"):
+def dump_to_csv(account_id, user_account_full_name, user_account_email, user_account_institution, user_account_orcid, user_role, user_private_key, user_public_key, filename="datasets/accounts.csv"):
     try:
         with open(filename, mode='r', newline='', encoding='utf-8') as file:
             reader = csv.reader(file)
             header = next(reader, None)  # Get the first row to check for a header
-            if not header or len(header) != 7:  # Check that it's a CSV with 7 columns
+            if not header or len(header) != 8:  # Check that it's a CSV with 8 columns
                 raise ValueError(f"Invalid CSV header in '{filename}'")
 
         current_line_number = sum(1 for _ in open(filename, encoding='utf-8'))
@@ -84,8 +84,8 @@ def dump_to_csv(account_id, user_account_full_name, user_account_email, user_acc
         with open(filename, mode='a', newline='', encoding='utf-8') as file:
             writer = csv.writer(file)
             if not header:
-                writer.writerow(["account_id", "user_account_full_name", "user_account_email", "user_account_institution", "user_account_orcid", "user_private_key", "user_public_key"])
-            writer.writerow([account_id, user_account_full_name, user_account_email, user_account_institution, user_account_orcid, user_private_key, user_public_key])
+                writer.writerow(["account_id", "user_account_full_name", "user_account_email", "user_account_institution", "user_account_orcid", "user_role", "user_private_key", "user_public_key"])
+            writer.writerow([account_id, user_account_full_name, user_account_email, user_account_institution, user_account_orcid, user_role, user_private_key, user_public_key])
         return current_line_number
 
 
@@ -110,3 +110,8 @@ def dump_project_to_csv(project_id, project_private_key, project_public_key, pro
                 writer.writerow(["project_id", "project_private_key", "project_public_key"])
             writer.writerow([project_id, project_private_key, project_public_key])
         return current_line_number
+
+def set_random_role():
+    roles = ['author', 'publisher', 'reviewer']
+    return str(random.choice(roles) or 'default')
+
