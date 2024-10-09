@@ -1,22 +1,32 @@
-import chardet  # For detecting the encoding of the bytes object
-
-# Assuming raw_original_file_name is a string like "b'bitcoin.pdf'"
 def clean_file_name(raw_original_file_name):
     """
-    Clean and decode the original file name from bytes to string.
-    
+    Clean and decode the original file name from bytes to string if necessary.
+
     Parameters:
-    raw_original_file_name (str): The original file name as a string enclosed in quotes.
+    raw_original_file_name (str): The original file name, either as a string or byte-like string.
 
     Returns:
     str: The decoded and cleaned file name as a string.
     """
 
-    # Remove the enclosing quotes
-    raw_bytes = eval(raw_original_file_name)  # This is a safe way to convert from string to bytes
+    # Check if the string starts with "b'" and ends with a quote, indicating a byte string
+    if raw_original_file_name.startswith("b'") and raw_original_file_name.endswith("'"):
+        # Remove the "b'" prefix and the trailing single quote
+        byte_str = raw_original_file_name[2:-1]
 
-    # Detect the encoding of the bytes object using chardet (but in this case, we can assume it's UTF-8)
-    clean_original_file_name = raw_bytes.decode('utf-8')
+        # Convert the remaining content (hexadecimal string) into bytes
+        try:
+            raw_bytes = byte_str.encode('latin1')  # Encoding back to bytes
+        except Exception as e:
+            raise ValueError(f"Error encoding the string to bytes: {e}")
 
-    return clean_original_file_name.strip('"')  # Remove any remaining quotes
-
+        # Decode the bytes to a string, assuming UTF-8
+        try:
+            clean_original_file_name = raw_bytes.decode('utf-8')
+        except UnicodeDecodeError:
+            raise ValueError("Failed to decode byte string using UTF-8.")
+        
+        return clean_original_file_name.strip('"')
+    
+    # If it's not a byte string, assume it's a regular string and return it as is
+    return raw_original_file_name
