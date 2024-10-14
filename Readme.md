@@ -230,3 +230,7 @@ Use Prometheus for monitoring basic metrics.
 ### CSV versus JSON
 
 Replace CSV usage by JSON and store them in IPFS
+
+### RBAC (Role Based Access Control)
+
+The project owner can designate the role of the other collaborators in RBAC
