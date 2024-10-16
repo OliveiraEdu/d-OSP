@@ -1,0 +1,32 @@
+@startuml
+!include <C4/C4_Container>
+
+    title Open Science Platform - System Context Diagram
+
+    Enterprise_Boundary(b0, "Front End"){
+    Person(researcher, "Researcher", "Uses platform")
+    System(open_science_platform, "Platform", "Facilitates storage and <br/>collaboration")
+}
+    
+
+    Enterprise_Boundary(b1, "Data Handling"){
+    System(json_extractor, "Metadata Extractor", "Parses files to <br/>extract metadata")
+    System(indexer, "Search Indexer", "Indexes project files")
+ }
+
+
+    Enterprise_Boundary(b2, "Persistence"){
+
+    System(blockchain, "Blockchain", "Ensures secure ownership")
+    System(IPFS, "IPFS Storage", "Decentralized storage for <br/>files and metadata")
+}
+
+      Rel(researcher, open_science_platform, "Uses")
+      Rel(open_science_platform, blockchain, "Uses")
+      Rel(json_extractor, indexer, "Uses")
+      Rel(open_science_platform, json_extractor, "Uses")
+      Rel(json_extractor, IPFS, "Uses")
+      Rel(blockchain, IPFS, "Uses")
+      Rel(json_extractor, blockchain, "Uses")
+
+@enduml
