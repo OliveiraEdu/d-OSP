@@ -1,0 +1,18 @@
+
+@startuml
+!include <C4/C4_Container>
+LAYOUT_LEFT_RIGHT()
+
+Person(user, "user")
+System_Boundary(c1, "Open Science Platform") {
+    Container(web_app, "Web Application", "Python, Jupyter Notebook", "Allow users to store and collaborate on research projects")
+}
+System(iroha, "Iroha 1")
+System(ipfs, "IPFS")
+
+Rel(user, web_app, "Uses", "HTTPS")
+Rel(web_app, ipfs, "Keep data available", "HTTPS")
+Rel(web_app, iroha, "Keep immutable records", "HTTPS")
+
+SHOW_LEGEND()
+@enduml
