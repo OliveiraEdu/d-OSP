@@ -14,67 +14,70 @@ skinparam {
 hide stereotype
 
 skinparam rectangle<<OpenSciencePlatform.Indexer>> {
-  BackgroundColor #438dd5
-  FontColor #ffffff
-  BorderColor #2e6295
+  BackgroundColor #F0F0F0
+  FontColor #000000
+  BorderColor #000000
   shadowing false
 }
 skinparam database<<OpenSciencePlatform.IPFS>> {
-  BackgroundColor #438dd5
-  FontColor #ffffff
-  BorderColor #2e6295
+  BackgroundColor #F0F0F0
+  FontColor #000000
+  BorderColor #000000
   shadowing false
 }
 skinparam rectangle<<OpenSciencePlatform.Blockchain>> {
-  BackgroundColor #999999
-  FontColor #ffffff
-  BorderColor #6b6b6b
+  BackgroundColor #F0F0F0
+  FontColor #000000
+  BorderColor #000000
   shadowing false
 }
 
-skinparam person<<Researcher>> {
-  BackgroundColor #08427b
-  FontColor #ffffff
-  BorderColor #052e56
+skinparam person<<User>> {
+  BackgroundColor #F0F0F0
+  FontColor #000000
+  BorderColor #000000
   shadowing false
 }
 skinparam rectangle<<OpenSciencePlatform.MetadataExtractor>> {
-  BackgroundColor #438dd5
-  FontColor #ffffff
-  BorderColor #2e6295
+  BackgroundColor #F0F0F0
+  FontColor #000000
+  BorderColor #000000
   shadowing false
 }
 skinparam rectangle<<OpenSciencePlatform.FrontEnd>> {
-  BackgroundColor #438dd5
-  FontColor #ffffff
-  BorderColor #2e6295
+  BackgroundColor #F0F0F0
+  FontColor #000000
+  BorderColor #000000
   shadowing false
 }
 skinparam rectangle<<OpenSciencePlatform>> {
-  BorderColor #0b4884
-  FontColor #0b4884
+  BorderColor #000000
+  FontColor #000000
   shadowing false
 }
 
-person "==Researcher\n<size:10>[Person]</size>\n\nA researcher storing and collaborating on research data." <<Researcher>> as Researcher
+person "==User\n<size:10>[Person]</size>\n\nA researcher storing and collaborating on research data." <<User>> as User
 
 rectangle "Open Science Platform\n<size:10>[Software System]</size>" <<OpenSciencePlatform>> {
-  rectangle "==Front End\n<size:10>[Python and Jupyter Notebooks]</size>\n\nUser self enrolls, authenticates, register projects and upload research data " <<OpenSciencePlatform.FrontEnd>> as OpenSciencePlatform.FrontEnd
-  rectangle "==Indexer\n<size:10>[Python]</size>\n\nIndexes file metadata for lookup" <<OpenSciencePlatform.Indexer>> as OpenSciencePlatform.Indexer
-  database "==IPFS\n<size:10>[Interplanetary File System]</size>\n\nStores project files and metadata" <<OpenSciencePlatform.IPFS>> as OpenSciencePlatform.IPFS
-  rectangle "==Metadata Extractor\n<size:10>[Apache Tika]</size>\n\nExtracts metadata from files" <<OpenSciencePlatform.MetadataExtractor>> as OpenSciencePlatform.MetadataExtractor
-  database "==Blockchain\n<size:10>[Hyperledger Iroha 1]</size>\n\nImmutably keep research records" <<OpenSciencePlatform.Blockchain>> as OpenSciencePlatform.Blockchain
+  rectangle "==Front End\n<size:10>[Container: Jupyter Notebooks and Python]</size>\n\nUser self enrolls, authenticates, register projects and upload research data " <<OpenSciencePlatform.FrontEnd>> as OpenSciencePlatform.FrontEnd
+  rectangle "==Indexer\n<size:10>[Container: Python]</size>\n\nIndexes file metadata for lookup" <<OpenSciencePlatform.Indexer>> as OpenSciencePlatform.Indexer
+  database "==IPFS\n<size:10>[Container: Interplanetary File System]</size>\n\nStores project files and metadata" <<OpenSciencePlatform.IPFS>> as OpenSciencePlatform.IPFS
+  rectangle "==Metadata Extractor\n<size:10>[Container: Apache Tika and Python]</size>\n\nExtracts metadata from files" <<OpenSciencePlatform.MetadataExtractor>> as OpenSciencePlatform.MetadataExtractor
+  database "==Blockchain\n<size:10>[Container: Hyperledger Iroha 1]</size>\n\nImmutably keep research records" <<OpenSciencePlatform.Blockchain>> as OpenSciencePlatform.Blockchain
   
   
 }
 
 
-Researcher .[#707070,thickness=2].> OpenSciencePlatform.FrontEnd : "<color:#707070>Visits bigbank.com/ib using\n<color:#707070><size:8>[HTTPS]</size>"
-OpenSciencePlatform.FrontEnd .[#707070,thickness=2].> OpenSciencePlatform.MetadataExtractor : "<color:#707070>Delivers to the customer's web browser"
-OpenSciencePlatform.FrontEnd .[#707070,thickness=2].> OpenSciencePlatform.Blockchain : "<color:#707070>Delivers to the customer's web browser"
-OpenSciencePlatform.MetadataExtractor .[#707070,thickness=2].> OpenSciencePlatform.Indexer : "<color:#707070>Makes API calls to\n<color:#707070><size:8>[JSON/HTTPS]</size>"
-OpenSciencePlatform.MetadataExtractor .[#707070,thickness=2].> OpenSciencePlatform.IPFS : "<color:#707070>Makes API calls to\n<color:#707070><size:8>[JSON/HTTPS]</size>"
-OpenSciencePlatform.IPFS .[#707070,thickness=2].> OpenSciencePlatform.Blockchain : "<color:#707070>Makes API calls to\n<color:#707070><size:8>[JSON/HTTPS]</size>"
+User .[#707070,thickness=2].> OpenSciencePlatform.FrontEnd : "<color:#707070>Access Jupyter Notebook Server\n<color:#707070><size:8>[HTTPS]</size>"
+OpenSciencePlatform.FrontEnd .[#707070,thickness=2].> OpenSciencePlatform.MetadataExtractor : "<color:#707070>Uploads research data"
+OpenSciencePlatform.FrontEnd .[#707070,thickness=2].> OpenSciencePlatform.Blockchain : "<color:#707070>Instantiate user and project accounts"
+OpenSciencePlatform.FrontEnd .[#707070,thickness=2].> OpenSciencePlatform.IPFS : "<color:#707070>Sends files for storage"
+OpenSciencePlatform.MetadataExtractor .[#707070,thickness=2].> OpenSciencePlatform.Indexer : "<color:#707070>Sends JSON for indexing\n<color:#707070><size:8>[JSON/HTTPS]</size>"
+OpenSciencePlatform.MetadataExtractor .[#707070,thickness=2].> OpenSciencePlatform.IPFS : "<color:#707070>Sends JSON for storage\n<color:#707070><size:8>[JSON/HTTPS]</size>"
+OpenSciencePlatform.IPFS .[#707070,thickness=2].> OpenSciencePlatform.Blockchain : "<color:#707070>Store Metadata CIDs\n<color:#707070><size:8>[JSON/HTTPS]</size>"
+
+
 
 @enduml
 

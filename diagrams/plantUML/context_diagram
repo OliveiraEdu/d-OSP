@@ -29,4 +29,7 @@
       Rel(blockchain, IPFS, "Uses")
       Rel(json_extractor, blockchain, "Uses")
 
+SHOW_LEGEND()
+
+
 @enduml
