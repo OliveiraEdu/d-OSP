@@ -13,81 +13,68 @@ skinparam {
 
 hide stereotype
 
-skinparam rectangle<<InternetBankingSystem.APIApplication>> {
+skinparam rectangle<<OpenSciencePlatform.Indexer>> {
   BackgroundColor #438dd5
   FontColor #ffffff
   BorderColor #2e6295
   shadowing false
 }
-skinparam database<<InternetBankingSystem.Database>> {
+skinparam database<<OpenSciencePlatform.IPFS>> {
   BackgroundColor #438dd5
   FontColor #ffffff
   BorderColor #2e6295
   shadowing false
 }
-skinparam rectangle<<EmailSystem>> {
+skinparam rectangle<<OpenSciencePlatform.Blockchain>> {
   BackgroundColor #999999
   FontColor #ffffff
   BorderColor #6b6b6b
   shadowing false
 }
-skinparam rectangle<<MainframeBankingSystem>> {
-  BackgroundColor #999999
-  FontColor #ffffff
-  BorderColor #6b6b6b
-  shadowing false
-}
-skinparam rectangle<<InternetBankingSystem.MobileApp>> {
-  BackgroundColor #438dd5
-  FontColor #ffffff
-  BorderColor #2e6295
-  shadowing false
-}
-skinparam person<<PersonalBankingCustomer>> {
+
+skinparam person<<Researcher>> {
   BackgroundColor #08427b
   FontColor #ffffff
   BorderColor #052e56
   shadowing false
 }
-skinparam rectangle<<InternetBankingSystem.SinglePageApplication>> {
+skinparam rectangle<<OpenSciencePlatform.MetadataExtractor>> {
   BackgroundColor #438dd5
   FontColor #ffffff
   BorderColor #2e6295
   shadowing false
 }
-skinparam rectangle<<InternetBankingSystem.WebApplication>> {
+skinparam rectangle<<OpenSciencePlatform.FrontEnd>> {
   BackgroundColor #438dd5
   FontColor #ffffff
   BorderColor #2e6295
   shadowing false
 }
-skinparam rectangle<<InternetBankingSystem>> {
+skinparam rectangle<<OpenSciencePlatform>> {
   BorderColor #0b4884
   FontColor #0b4884
   shadowing false
 }
 
-person "==Researcher\n<size:10>[Person]</size>\n\nA researcher storing and collaborating on research data." <<PersonalBankingCustomer>> as PersonalBankingCustomer
-rectangle "==Mainframe Banking System\n<size:10>[Software System]</size>\n\nStores all of the core banking information about customers, accounts, transactions, etc." <<MainframeBankingSystem>> as MainframeBankingSystem
-rectangle "==E-mail System\n<size:10>[Software System]</size>\n\nThe internal Microsoft Exchange e-mail system." <<EmailSystem>> as EmailSystem
+person "==Researcher\n<size:10>[Person]</size>\n\nA researcher storing and collaborating on research data." <<Researcher>> as Researcher
 
-rectangle "Internet Banking System\n<size:10>[Software System]</size>" <<InternetBankingSystem>> {
-  rectangle "==Web Application\n<size:10>[Container: Java and Spring MVC]</size>\n\nDelivers the static content and the Internet banking single page application." <<InternetBankingSystem.WebApplication>> as InternetBankingSystem.WebApplication
-  rectangle "==API Application\n<size:10>[Container: Java and Spring MVC]</size>\n\nProvides Internet banking functionality via a JSON/HTTPS API." <<InternetBankingSystem.APIApplication>> as InternetBankingSystem.APIApplication
-  database "==Database\n<size:10>[Container: Oracle Database Schema]</size>\n\nStores user registration information, hashed authentication credentials, access logs, etc." <<InternetBankingSystem.Database>> as InternetBankingSystem.Database
-  rectangle "==Single-Page Application\n<size:10>[Container: JavaScript and Angular]</size>\n\nProvides all of the Internet banking functionality to customers via their web browser." <<InternetBankingSystem.SinglePageApplication>> as InternetBankingSystem.SinglePageApplication
-  rectangle "==Mobile App\n<size:10>[Container: Xamarin]</size>\n\nProvides a limited subset of the Internet banking functionality to customers via their mobile device." <<InternetBankingSystem.MobileApp>> as InternetBankingSystem.MobileApp
+rectangle "Open Science Platform\n<size:10>[Software System]</size>" <<OpenSciencePlatform>> {
+  rectangle "==Front End\n<size:10>[Python and Jupyter Notebooks]</size>\n\nUser self enrolls, authenticates, register projects and upload research data " <<OpenSciencePlatform.FrontEnd>> as OpenSciencePlatform.FrontEnd
+  rectangle "==Indexer\n<size:10>[Python]</size>\n\nIndexes file metadata for lookup" <<OpenSciencePlatform.Indexer>> as OpenSciencePlatform.Indexer
+  database "==IPFS\n<size:10>[Interplanetary File System]</size>\n\nStores project files and metadata" <<OpenSciencePlatform.IPFS>> as OpenSciencePlatform.IPFS
+  rectangle "==Metadata Extractor\n<size:10>[Apache Tika]</size>\n\nExtracts metadata from files" <<OpenSciencePlatform.MetadataExtractor>> as OpenSciencePlatform.MetadataExtractor
+  database "==Blockchain\n<size:10>[Hyperledger Iroha 1]</size>\n\nImmutably keep research records" <<OpenSciencePlatform.Blockchain>> as OpenSciencePlatform.Blockchain
+  
+  
 }
 
-EmailSystem .[#707070,thickness=2].> PersonalBankingCustomer : "<color:#707070>Sends e-mails to"
-PersonalBankingCustomer .[#707070,thickness=2].> InternetBankingSystem.WebApplication : "<color:#707070>Visits bigbank.com/ib using\n<color:#707070><size:8>[HTTPS]</size>"
-PersonalBankingCustomer .[#707070,thickness=2].> InternetBankingSystem.SinglePageApplication : "<color:#707070>Views account balances, and makes payments using"
-PersonalBankingCustomer .[#707070,thickness=2].> InternetBankingSystem.MobileApp : "<color:#707070>Views account balances, and makes payments using"
-InternetBankingSystem.WebApplication .[#707070,thickness=2].> InternetBankingSystem.SinglePageApplication : "<color:#707070>Delivers to the customer's web browser"
-InternetBankingSystem.SinglePageApplication .[#707070,thickness=2].> InternetBankingSystem.APIApplication : "<color:#707070>Makes API calls to\n<color:#707070><size:8>[JSON/HTTPS]</size>"
-InternetBankingSystem.MobileApp .[#707070,thickness=2].> InternetBankingSystem.APIApplication : "<color:#707070>Makes API calls to\n<color:#707070><size:8>[JSON/HTTPS]</size>"
-InternetBankingSystem.APIApplication .[#707070,thickness=2].> InternetBankingSystem.Database : "<color:#707070>Reads from and writes to\n<color:#707070><size:8>[SQL/TCP]</size>"
-InternetBankingSystem.APIApplication .[#707070,thickness=2].> MainframeBankingSystem : "<color:#707070>Makes API calls to\n<color:#707070><size:8>[XML/HTTPS]</size>"
-InternetBankingSystem.APIApplication .[#707070,thickness=2].> EmailSystem : "<color:#707070>Sends e-mail using"
+
+Researcher .[#707070,thickness=2].> OpenSciencePlatform.FrontEnd : "<color:#707070>Visits bigbank.com/ib using\n<color:#707070><size:8>[HTTPS]</size>"
+OpenSciencePlatform.FrontEnd .[#707070,thickness=2].> OpenSciencePlatform.MetadataExtractor : "<color:#707070>Delivers to the customer's web browser"
+OpenSciencePlatform.FrontEnd .[#707070,thickness=2].> OpenSciencePlatform.Blockchain : "<color:#707070>Delivers to the customer's web browser"
+OpenSciencePlatform.MetadataExtractor .[#707070,thickness=2].> OpenSciencePlatform.Indexer : "<color:#707070>Makes API calls to\n<color:#707070><size:8>[JSON/HTTPS]</size>"
+OpenSciencePlatform.MetadataExtractor .[#707070,thickness=2].> OpenSciencePlatform.IPFS : "<color:#707070>Makes API calls to\n<color:#707070><size:8>[JSON/HTTPS]</size>"
+OpenSciencePlatform.IPFS .[#707070,thickness=2].> OpenSciencePlatform.Blockchain : "<color:#707070>Makes API calls to\n<color:#707070><size:8>[JSON/HTTPS]</size>"
+
 @enduml
 
