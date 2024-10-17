@@ -10,3 +10,5 @@ tika
 faker
 chardet
 whoosh
+matplotlib
+networkx

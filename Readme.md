@@ -236,4 +236,5 @@ Replace CSV usage by JSON and store them in IPFS
 The project owner can designate the role of the other collaborators in RBAC
 
 ### Search Engine
-Search for projects metadata
+Include projects metadata for indexing
+Consider a knowledge graph for search results (Consider Ontologies like FOAF and Dublin Core)
