@@ -44,6 +44,21 @@ skinparam rectangle<<OpenSciencePlatform.MetadataExtractor>> {
   BorderColor #000000
   shadowing false
 }
+
+skinparam rectangle<<OpenSciencePlatform.IPFSClient>> {
+  BackgroundColor #F0F0F0
+  FontColor #000000
+  BorderColor #000000
+  shadowing false
+}
+
+skinparam rectangle<<OpenSciencePlatform.IrohaClient>> {
+  BackgroundColor #F0F0F0
+  FontColor #000000
+  BorderColor #000000
+  shadowing false
+}
+
 skinparam rectangle<<OpenSciencePlatform.FrontEnd>> {
   BackgroundColor #F0F0F0
   FontColor #000000
@@ -61,13 +76,16 @@ person "==User\n<size:10>[Person]</size>\n\nA researcher storing and collaborati
 rectangle "Open Science Platform\n<size:10>[Software System]</size>" <<OpenSciencePlatform>> {
   rectangle "==Front End\n<size:10>[Container: Jupyter Notebooks and Python]</size>\n\nUser self enrolls, authenticates, register projects and upload research data " <<OpenSciencePlatform.FrontEnd>> as OpenSciencePlatform.FrontEnd
   rectangle "==Indexer\n<size:10>[Container: Python]</size>\n\nIndexes file metadata for lookup" <<OpenSciencePlatform.Indexer>> as OpenSciencePlatform.Indexer
-  database "==IPFS\n<size:10>[Container: Interplanetary File System]</size>\n\nStores project files and metadata" <<OpenSciencePlatform.IPFS>> as OpenSciencePlatform.IPFS
   rectangle "==Metadata Extractor\n<size:10>[Container: Apache Tika and Python]</size>\n\nExtracts metadata from files" <<OpenSciencePlatform.MetadataExtractor>> as OpenSciencePlatform.MetadataExtractor
-  database "==Blockchain\n<size:10>[Container: Hyperledger Iroha 1]</size>\n\nImmutably keep research records" <<OpenSciencePlatform.Blockchain>> as OpenSciencePlatform.Blockchain
-  
-  
+  rectangle "==Iroha Client\n<size:10>[Container: Python]</size>\n\nIndexes file metadata for lookup" <<OpenSciencePlatform.IrohaClient>> as OpenSciencePlatform.IrohaClient
+  rectangle "==IPFS Client\n<size:10>[Container: Apache Tika and Python]</size>\n\nExtracts metadata from files" <<OpenSciencePlatform.IPFSClient>> as OpenSciencePlatform.IPFSClient
 }
+  
+rectangle "Persistency and Availaibility\n<size:10>[Software System]</size>" <<OpenSciencePlatform>> {
+  database "==IPFS\n<size:10>[Container: Interplanetary File System]</size>\n\nStores project files and metadata" <<OpenSciencePlatform.IPFS>> as OpenSciencePlatform.IPFS
+  database "==Blockchain\n<size:10>[Container: Hyperledger Iroha 1]</size>\n\nImmutably keep research records" <<OpenSciencePlatform.Blockchain>> as OpenSciencePlatform.Blockchain
 
+}
 
 User .[#707070,thickness=2].> OpenSciencePlatform.FrontEnd : "<color:#707070>Access Jupyter Notebook Server\n<color:#707070><size:8>[HTTPS]</size>"
 OpenSciencePlatform.FrontEnd .[#707070,thickness=2].> OpenSciencePlatform.MetadataExtractor : "<color:#707070>Uploads research data"
@@ -76,6 +94,8 @@ OpenSciencePlatform.FrontEnd .[#707070,thickness=2].> OpenSciencePlatform.IPFS :
 OpenSciencePlatform.MetadataExtractor .[#707070,thickness=2].> OpenSciencePlatform.Indexer : "<color:#707070>Sends JSON for indexing\n<color:#707070><size:8>[JSON/HTTPS]</size>"
 OpenSciencePlatform.MetadataExtractor .[#707070,thickness=2].> OpenSciencePlatform.IPFS : "<color:#707070>Sends JSON for storage\n<color:#707070><size:8>[JSON/HTTPS]</size>"
 OpenSciencePlatform.IPFS .[#707070,thickness=2].> OpenSciencePlatform.Blockchain : "<color:#707070>Store Metadata CIDs\n<color:#707070><size:8>[JSON/HTTPS]</size>"
+OpenSciencePlatform.IPFSClient .[#707070,thickness=2].> OpenSciencePlatform.IPFS : "<color:#707070>Store Metadata CIDs\n<color:#707070><size:8>[JSON/HTTPS]</size>"
+
 
 
 
