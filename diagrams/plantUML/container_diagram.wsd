@@ -32,6 +32,13 @@ skinparam rectangle<<OpenSciencePlatform.Blockchain>> {
   shadowing false
 }
 
+skinparam rectangle<<OpenSciencePlatform.SearchEngine>> {
+  BackgroundColor #F0F0F0
+  FontColor #000000
+  BorderColor #000000
+  shadowing false
+}
+
 skinparam person<<User>> {
   BackgroundColor #F0F0F0
   FontColor #000000
@@ -65,6 +72,13 @@ skinparam rectangle<<OpenSciencePlatform.FrontEnd>> {
   BorderColor #000000
   shadowing false
 }
+
+skinparam rectangle<<OpenSciencePlatform.SmartContract>> {
+  BackgroundColor #F0F0F0
+  FontColor #000000
+  BorderColor #000000
+  shadowing false
+}
 skinparam rectangle<<OpenSciencePlatform>> {
   BorderColor #000000
   FontColor #000000
@@ -79,22 +93,30 @@ rectangle "Open Science Platform\n<size:10>[Software System]</size>" <<OpenScien
   rectangle "==Metadata Extractor\n<size:10>[Container: Apache Tika and Python]</size>\n\nExtracts metadata from files" <<OpenSciencePlatform.MetadataExtractor>> as OpenSciencePlatform.MetadataExtractor
   rectangle "==Iroha Client\n<size:10>[Container: Python]</size>\n\nIndexes file metadata for lookup" <<OpenSciencePlatform.IrohaClient>> as OpenSciencePlatform.IrohaClient
   rectangle "==IPFS Client\n<size:10>[Container: Apache Tika and Python]</size>\n\nExtracts metadata from files" <<OpenSciencePlatform.IPFSClient>> as OpenSciencePlatform.IPFSClient
+  rectangle "==Search Engine\n<size:10>[Container: Apache Tika and Python]</size>\n\nExtracts metadata from files" <<OpenSciencePlatform.SearchEngine>> as OpenSciencePlatform.SearchEngine
+  database "==Local File System\n<size:10>[Container: Hyperledger Iroha 1]</size>\n\nImmutably keep research records" <<OpenSciencePlatform.LocalFileSystem>> as OpenSciencePlatform.LocalFileSystem
+
 }
+
   
 rectangle "Persistency and Availaibility\n<size:10>[Software System]</size>" <<OpenSciencePlatform>> {
   database "==IPFS\n<size:10>[Container: Interplanetary File System]</size>\n\nStores project files and metadata" <<OpenSciencePlatform.IPFS>> as OpenSciencePlatform.IPFS
   database "==Blockchain\n<size:10>[Container: Hyperledger Iroha 1]</size>\n\nImmutably keep research records" <<OpenSciencePlatform.Blockchain>> as OpenSciencePlatform.Blockchain
+  rectangle "==Smart Contract\n<size:10>[Container: Apache Tika and Python]</size>\n\nExtracts metadata from files" <<OpenSciencePlatform.SearchEngine>> as OpenSciencePlatform.SmartContract
 
 }
 
 User .[#707070,thickness=2].> OpenSciencePlatform.FrontEnd : "<color:#707070>Access Jupyter Notebook Server\n<color:#707070><size:8>[HTTPS]</size>"
-OpenSciencePlatform.FrontEnd .[#707070,thickness=2].> OpenSciencePlatform.MetadataExtractor : "<color:#707070>Uploads research data"
-OpenSciencePlatform.FrontEnd .[#707070,thickness=2].> OpenSciencePlatform.Blockchain : "<color:#707070>Instantiate user and project accounts"
-OpenSciencePlatform.FrontEnd .[#707070,thickness=2].> OpenSciencePlatform.IPFS : "<color:#707070>Sends files for storage"
+OpenSciencePlatform.LocalFileSystem .[#707070,thickness=2].> OpenSciencePlatform.MetadataExtractor : "<color:#707070>Uploads research data"
+OpenSciencePlatform.FrontEnd .[#707070,thickness=2].> OpenSciencePlatform.IrohaClient : "<color:#707070>Uploads research data"
+OpenSciencePlatform.LocalFileSystem .[#707070,thickness=2].> OpenSciencePlatform.IPFSClient : "<color:#707070>Sends files for storage"
 OpenSciencePlatform.MetadataExtractor .[#707070,thickness=2].> OpenSciencePlatform.Indexer : "<color:#707070>Sends JSON for indexing\n<color:#707070><size:8>[JSON/HTTPS]</size>"
-OpenSciencePlatform.MetadataExtractor .[#707070,thickness=2].> OpenSciencePlatform.IPFS : "<color:#707070>Sends JSON for storage\n<color:#707070><size:8>[JSON/HTTPS]</size>"
-OpenSciencePlatform.IPFS .[#707070,thickness=2].> OpenSciencePlatform.Blockchain : "<color:#707070>Store Metadata CIDs\n<color:#707070><size:8>[JSON/HTTPS]</size>"
+OpenSciencePlatform.MetadataExtractor .[#707070,thickness=2].> OpenSciencePlatform.IPFSClient : "<color:#707070>Sends JSON for storage\n<color:#707070><size:8>[JSON/HTTPS]</size>"
+OpenSciencePlatform.SmartContract .[#707070,thickness=2].> OpenSciencePlatform.Blockchain : "<color:#707070>Store Metadata CIDs\n<color:#707070><size:8>[JSON/HTTPS]</size>"
 OpenSciencePlatform.IPFSClient .[#707070,thickness=2].> OpenSciencePlatform.IPFS : "<color:#707070>Store Metadata CIDs\n<color:#707070><size:8>[JSON/HTTPS]</size>"
+OpenSciencePlatform.Indexer .[#707070,thickness=2].> OpenSciencePlatform.SearchEngine : "<color:#707070>Store Metadata CIDs\n<color:#707070><size:8>[JSON/HTTPS]</size>"
+OpenSciencePlatform.FrontEnd .[#707070,thickness=2].> OpenSciencePlatform.LocalFileSystem : "<color:#707070>Store Metadata CIDs\n<color:#707070><size:8>[JSON/HTTPS]</size>"
+OpenSciencePlatform.IrohaClient .[#707070,thickness=2].> OpenSciencePlatform.SmartContract : "<color:#707070>Store Metadata CIDs\n<color:#707070><size:8>[JSON/HTTPS]</size>"
 
 
 
