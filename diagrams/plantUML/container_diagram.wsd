@@ -88,13 +88,13 @@ skinparam rectangle<<OpenSciencePlatform>> {
 person "==User\n<size:10>[Person]</size>\n\nA researcher storing and collaborating on research data." <<User>> as User
 
 rectangle "Open Science Platform\n<size:10>[Software System]</size>" <<OpenSciencePlatform>> {
-  rectangle "==Front End\n<size:10>[Container: Jupyter Notebooks and Python]</size>\n\nUser self enrolls, authenticates, register projects and upload research data " <<OpenSciencePlatform.FrontEnd>> as OpenSciencePlatform.FrontEnd
+  rectangle "==Front End\n<size:10>[Container: Jupyter Notebooks and Python]</size>\n\nUser self enrolls, authenticates, register projects and manages research data " <<OpenSciencePlatform.FrontEnd>> as OpenSciencePlatform.FrontEnd
   rectangle "==Indexer\n<size:10>[Container: Python]</size>\n\nIndexes file metadata for lookup" <<OpenSciencePlatform.Indexer>> as OpenSciencePlatform.Indexer
   rectangle "==Metadata Extractor\n<size:10>[Container: Apache Tika and Python]</size>\n\nExtracts metadata from files" <<OpenSciencePlatform.MetadataExtractor>> as OpenSciencePlatform.MetadataExtractor
-  rectangle "==Iroha Client\n<size:10>[Container: Python]</size>\n\nIndexes file metadata for lookup" <<OpenSciencePlatform.IrohaClient>> as OpenSciencePlatform.IrohaClient
-  rectangle "==IPFS Client\n<size:10>[Container: Apache Tika and Python]</size>\n\nExtracts metadata from files" <<OpenSciencePlatform.IPFSClient>> as OpenSciencePlatform.IPFSClient
+  rectangle "==Iroha Client\n<size:10>[Container: Python]</size>\n\nInteracts with the Iroha 1 API for Smart Contracts deployment and execution" <<OpenSciencePlatform.IrohaClient>> as OpenSciencePlatform.IrohaClient
+  rectangle "==IPFS Client\n<size:10>[Container: Apache Tika and Python]</size>\n\nInteracts with the IPFS API for file and metadata operations" <<OpenSciencePlatform.IPFSClient>> as OpenSciencePlatform.IPFSClient
   rectangle "==Search Engine\n<size:10>[Container: Apache Tika and Python]</size>\n\nExtracts metadata from files" <<OpenSciencePlatform.SearchEngine>> as OpenSciencePlatform.SearchEngine
-  database "==Local File System\n<size:10>[Container: Hyperledger Iroha 1]</size>\n\nImmutably keep research records" <<OpenSciencePlatform.LocalFileSystem>> as OpenSciencePlatform.LocalFileSystem
+  database "==Local File System\n<size:10>[Container: Hyperledger Iroha 1]</size>\n\nUploads local files" <<OpenSciencePlatform.LocalFileSystem>> as OpenSciencePlatform.LocalFileSystem
 
 }
 
@@ -102,7 +102,7 @@ rectangle "Open Science Platform\n<size:10>[Software System]</size>" <<OpenScien
 rectangle "Persistency and Availaibility\n<size:10>[Software System]</size>" <<OpenSciencePlatform>> {
   database "==IPFS\n<size:10>[Container: Interplanetary File System]</size>\n\nStores project files and metadata" <<OpenSciencePlatform.IPFS>> as OpenSciencePlatform.IPFS
   database "==Blockchain\n<size:10>[Container: Hyperledger Iroha 1]</size>\n\nImmutably keep research records" <<OpenSciencePlatform.Blockchain>> as OpenSciencePlatform.Blockchain
-  rectangle "==Smart Contract\n<size:10>[Container: Apache Tika and Python]</size>\n\nExtracts metadata from files" <<OpenSciencePlatform.SearchEngine>> as OpenSciencePlatform.SmartContract
+  rectangle "==Smart Contract\n<size:10>[Container: ABI and Solidity]</size>\n\nInterfaces with the Iroha 1 blockchain for transactions and queries" <<OpenSciencePlatform.SearchEngine>> as OpenSciencePlatform.SmartContract
 
 }
 
