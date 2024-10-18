@@ -7,7 +7,7 @@ def bytes_to_hex_string(byte_value):
         return byte_value.hex()
     return byte_value
 
-def dump_to_json_ld(account_id, user_account_full_name, user_account_email, user_account_institution, user_account_orcid, user_role, user_public_key, filename="datasets/accounts.jsonld"):
+def dump_to_json_ld(account_id, user_account_full_name, user_account_email, user_account_institution, user_account_orcid, user_role, user_public_key, filename="datasets/accounts.json"):
     
     try:
         # Ensure that the 'datasets' directory exists
