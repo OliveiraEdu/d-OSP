@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "schema": "http://schema.org/",
+        "dc": "http://purl.org/dc/terms/"
+    },
+    "@graph": [
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Busy Rhodes",
+            "foaf:mbox": "mailto:busy_rhodes@email.com",
+            "foaf:organization": {
+                "@type": "schema:Organization",
+                "schema:name": "University College of Saint-Boniface"
+            },
+            "schema:identifier": {
+                "@type": "schema:PropertyValue",
+                "schema:propertyID": "ORCID",
+                "schema:value": "6636-6297-8906-X"
+            },
+            "userPrivateKey": "reviewer",
+            "userPublicKey": 

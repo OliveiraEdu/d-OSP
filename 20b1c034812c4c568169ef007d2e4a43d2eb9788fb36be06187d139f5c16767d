@@ -1,0 +1,23 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "foaf": "http://xmlns.com/foaf/0.1/"
+    },
+    "@graph": [
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Keen Moore",
+            "foaf:mbox": "keen_moore@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Ecole Nationale Sup\u00e9rieure d'Ingenieurs Electriciens de Grenoble"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "7963-4972-1653-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "keen_moore@test",
+                "schema:roleName": "author",
+                "schema:publicKey": 

@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "schema": "http://schema.org/",
+        "dc": "http://purl.org/dc/terms/"
+    },
+    "@graph": [
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Friendly Kirch",
+            "foaf:mbox": "mailto:friendly_kirch@email.com",
+            "foaf:organization": {
+                "@type": "schema:Organization",
+                "schema:name": "Tianjin Academy of Fine Art"
+            },
+            "schema:identifier": {
+                "@type": "schema:PropertyValue",
+                "schema:propertyID": "ORCID",
+                "schema:value": "4804-4658-3589-X"
+            },
+            "userPrivateKey": "author",
+            "userPublicKey": 
