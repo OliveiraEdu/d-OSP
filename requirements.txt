@@ -12,3 +12,4 @@ chardet
 whoosh
 matplotlib
 networkx
+pyld
