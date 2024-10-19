@@ -6,59 +6,135 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Charming Haibt",
-            "foaf:mbox": "charming_haibt@email.com",
+            "foaf:name": "Jolly Morse",
+            "foaf:mbox": "jolly_morse@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Western New England College"
+                "foaf:name": "University of South Carolina - Lancaster"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "8586-7727-2109-X"
+                "value": "3192-5514-6597-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "charming_haibt@test",
+                "schema:identifier": "jolly_morse@test",
                 "schema:roleName": "publisher",
-                "schema:publicKey": "35c03563d853bb9686234f650d62ec03ec1c0080c008a4f85fccf35957674c9f"
+                "schema:publicKey": "d62ffd727a5d5411da5a2973c2d6e6eb0e76b20e4e9873ad013e9c4ccedff8ac"
             }
         },
         {
             "@type": "foaf:Person",
-            "foaf:name": "Hungry Poincare",
-            "foaf:mbox": "hungry_poincare@email.com",
+            "foaf:name": "Happy Moser",
+            "foaf:mbox": "happy_moser@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Southwest State University"
+                "foaf:name": "California Western School of Law"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "8344-2164-6221-X"
+                "value": "1384-7878-2354-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "hungry_poincare@test",
+                "schema:identifier": "happy_moser@test",
                 "schema:roleName": "reviewer",
-                "schema:publicKey": "3977718d292d40bede7447f53d5a2c66b073ec5cae53d1508f88db2c0517caae"
+                "schema:publicKey": "5d81c99929c6adbf17b9d8c330850493cadc4f56501120ae156418021b8e401d"
             }
         },
         {
             "@type": "foaf:Person",
-            "foaf:name": "Eloquent Bell",
-            "foaf:mbox": "eloquent_bell@email.com",
+            "foaf:name": "Gracious Agnesi",
+            "foaf:mbox": "gracious_agnesi@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Pepperdine University"
+                "foaf:name": "Comenius University in Bratislava"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "0363-9532-1518-X"
+                "value": "0120-5733-6355-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "eloquent_bell@test",
+                "schema:identifier": "gracious_agnesi@test",
                 "schema:roleName": "publisher",
-                "schema:publicKey": "47b10233b18536dfc9a2eea81dcb57da8b508f30b25a85cba5865287ce24f4ec"
+                "schema:publicKey": "3237c8b2eb6acfd21506162db8e5c71df57575b9216509271d5b5f6f6fa35a66"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Nice Keldysh",
+            "foaf:mbox": "nice_keldysh@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Kumaun University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "2178-1679-2972-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "nice_keldysh@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "f368180fadd59710ba9b64832230cea61d0528566499d4849f5c5a5d18c38e2b"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Angry Dijkstra",
+            "foaf:mbox": "angry_dijkstra@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "University of South Carolina - Spartanburg"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "6101-4894-0517-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "angry_dijkstra@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "c10e6b474df6fb2c76306da476d6b9e606628fe6440e3c6c7f30825f1db32aa4"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Quizzical Dirac",
+            "foaf:mbox": "quizzical_dirac@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Chittagong Independent University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "1776-5019-7511-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "quizzical_dirac@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "94d52f76a2eba170cc42abe1cc225726b3fc44cef8431c8fad62ab89c53a4da8"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Interesting Mayer",
+            "foaf:mbox": "interesting_mayer@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Vietnam Maritime University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "9653-4430-4804-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "interesting_mayer@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "caf2809d0f7a99dee001aad2c0d3a3d9f555a649b61f5f85860071599d056bce"
             }
         }
     ]
