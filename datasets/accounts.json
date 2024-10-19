@@ -6,97 +6,78 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Ecstatic Nash",
-            "foaf:mbox": "ecstatic_nash@email.com",
+            "foaf:name": "Amazing Montalcini",
+            "foaf:mbox": "amazing_montalcini@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Palawan State University"
+                "foaf:name": "Ecole des Hautes Etudes Commerciales"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "6779-7202-3732-X"
+                "value": "4072-9988-9744-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "ecstatic_nash@test",
+                "schema:identifier": "amazing_montalcini@test",
                 "schema:roleName": "author",
-                "schema:publicKey": "25f9f43e2be3ec3acc929cbdacd43363a6d147746c6247f84eeab9994f775d25"
+                "schema:publicKey": "7e2e6a3f926ee7cf4b8091001ddc478ca8284f923542c0431d955277a5a41115"
             }
         },
         {
             "@type": "foaf:Person",
-            "foaf:name": "Optimistic Panini",
-            "foaf:mbox": "optimistic_panini@email.com",
+            "foaf:name": "Reverent Montalcini",
+            "foaf:mbox": "reverent_montalcini@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "School of Slavonic and East European Studies, University of London"
+                "foaf:name": "Russian Academy of Arts"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "5296-8366-0732-X"
+                "value": "8476-2480-4112-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "optimistic_panini@test",
-                "schema:roleName": "publisher",
-                "schema:publicKey": "09df10ed3ab4478a55e61470e72be4b12e27195349525af40f5e61a5a5551853"
-            }
-        },
-        {
-            "@type": "foaf:Person",
-            "foaf:name": "Tender Nobel",
-            "foaf:mbox": "tender_nobel@email.com",
-            "foaf:organization": {
-                "@type": "foaf:Organization",
-                "foaf:name": "Escuela de Arquitectura y Dise\u00f1o"
-            },
-            "schema:identifier": {
-                "@type": "PropertyValue",
-                "propertyID": "ORCID",
-                "value": "6550-4531-5474-X"
-            },
-            "foaf:holdsAccount": {
-                "schema:identifier": "tender_nobel@test",
-                "schema:roleName": "publisher",
-                "schema:publicKey": "210191fce9fc1a874515e720885ddb8d715a4cc6f68efb3d5a61a39057617d93"
-            }
-        },
-        {
-            "@type": "foaf:Person",
-            "foaf:name": "Wizardly Pasteur",
-            "foaf:mbox": "wizardly_pasteur@email.com",
-            "foaf:organization": {
-                "@type": "foaf:Organization",
-                "foaf:name": "Ashland University"
-            },
-            "schema:identifier": {
-                "@type": "PropertyValue",
-                "propertyID": "ORCID",
-                "value": "9036-4598-2973-X"
-            },
-            "foaf:holdsAccount": {
-                "schema:identifier": "wizardly_pasteur@test",
+                "schema:identifier": "reverent_montalcini@test",
                 "schema:roleName": "reviewer",
-                "schema:publicKey": "bed09805380efc63f0d0766d61c8da35d3f8eb46cc337965a6c2a04a5a4e1991"
+                "schema:publicKey": "571834d3854aaf8ff71ecc33fbea7e158128597936afc7189f12312780c8a062"
             }
         },
         {
             "@type": "foaf:Person",
-            "foaf:name": "Gifted Noether",
-            "foaf:mbox": "gifted_noether@email.com",
+            "foaf:name": "Quizzical Hopper",
+            "foaf:mbox": "quizzical_hopper@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Iraq University College"
+                "foaf:name": "Ittihad University"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "8788-8811-5156-X"
+                "value": "4449-5299-6900-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "gifted_noether@test",
-                "schema:roleName": "reviewer",
-                "schema:publicKey": "8572baf5a21f7928c1d4c33841099a8a11988b752632aa712eba6263ec1a80e5"
+                "schema:identifier": "quizzical_hopper@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "736feadcf6386e3307bf97fc8b6a53d1642f36252131ef5100b349a751fc0c4b"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Interesting Pare",
+            "foaf:mbox": "interesting_pare@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Baker College of Port Huron"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "2145-0038-0800-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "interesting_pare@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "fda9f14e3dd6fab7523b86936276a956f1174b07b54fe2ee146ee9a45990b7b4"
             }
         }
     ]
