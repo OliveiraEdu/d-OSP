@@ -212,6 +212,63 @@
                 "schema:roleName": "author",
                 "schema:publicKey": "1ff04b1959b63194b26263c6d3df730c6811b17c19923c9ba1c407d77750d488"
             }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Unruffled Hermann",
+            "foaf:mbox": "unruffled_hermann@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Carlow Institute of Technology"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "5088-6993-3262-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "unruffled_hermann@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "e27baf5e2e9b34005caaeffd86d7140361170447d7383742274ed9f38be8e4e7"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Goofy Moore",
+            "foaf:mbox": "goofy_moore@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Bloomsburg University of Pennsylvania"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "5563-0224-5966-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "goofy_moore@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "98b82aed3350c699fb1709d826ae167225efefb14db03c7b94492bd09f32db31"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Zen Bose",
+            "foaf:mbox": "zen_bose@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Norway's Information Technology University College"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "8977-8458-1739-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "zen_bose@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "380c4117d2609d30276db81ec7268277217ccc4b3a94793a74d6c332c1fbce56"
+            }
         }
     ]
 }
