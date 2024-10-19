@@ -174,6 +174,25 @@
                 "schema:roleName": "publisher",
                 "schema:publicKey": "88465db0fe4526a2aa35374692be880f25f3aea7ae3e5a8fd9c9ad981ec8dafc"
             }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Magical Austin",
+            "foaf:mbox": "magical_austin@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Royal Danish Academy of Music"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "8493-4054-1091-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "magical_austin@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "e4b2eccee5365b078f2180539e617eb98b2e9222744298c71f51fad0849316e6"
+            }
         }
     ]
 }
