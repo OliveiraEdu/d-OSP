@@ -155,6 +155,25 @@
                 "schema:roleName": "reviewer",
                 "schema:publicKey": "41f653e0ba1fde9393530cf603d23eb2afe9ecfdcf7008dd7819ab8344161b2b"
             }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Vigorous Murdock",
+            "foaf:mbox": "vigorous_murdock@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Unity College"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "6623-2199-9366-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "vigorous_murdock@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "88465db0fe4526a2aa35374692be880f25f3aea7ae3e5a8fd9c9ad981ec8dafc"
+            }
         }
     ]
 }
