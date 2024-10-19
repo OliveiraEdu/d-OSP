@@ -215,7 +215,7 @@ The default Genesis block for Iroha 1 docker image `admin@test` does not have th
 
 ### Monitoring
 
-Use Prometheus for monitoring basic metrics.
+- Use Prometheus for monitoring basic metrics.
 
 ### Document functions and generate documentation
 
@@ -229,12 +229,18 @@ Use Prometheus for monitoring basic metrics.
 
 ### CSV versus JSON
 
-Replace CSV usage by JSON and store them in IPFS
+- Replace CSV usage by JSON and store them in IPFS - In progress
 
 ### RBAC (Role Based Access Control)
 
-The project owner can designate the role of the other collaborators in RBAC
+- The project owner can designate the role of the other collaborators in RBAC
 
 ### Search Engine
-Include projects metadata for indexing
-Consider a knowledge graph for search results (Consider Ontologies like FOAF and Dublin Core)
+- Include projects metadata for indexing
+- Consider a knowledge graph for search results (Consider Ontologies like FOAF and Dublin Core)
+
+### Outputs
+- Standardize on IC (icecream) whenever is possible - In progress
+
+### Entity Relationships Model
+- A user should be able to own n projects
