@@ -1,0 +1,53 @@
+import json
+
+# Function to read user accounts from JSON-LD
+def read_user_accounts_from_jsonld(file_path):
+    with open(file_path, mode='r', encoding='utf-8') as file:
+        data = json.load(file)
+        user_accounts = []
+        for entry in data["@graph"]:
+            if entry["@type"] == "foaf:Person":
+                account_id = entry.get("foaf:holdsAccount", {}).get("schema:identifier")
+                if account_id:
+                    user_accounts.append({
+                        'account_id': account_id
+                    })
+        return user_accounts
+
+# Function to read project accounts from JSON-LD
+def read_project_accounts_from_jsonld(file_path):
+    with open(file_path, mode='r', encoding='utf-8') as file:
+        data = json.load(file)
+        project_accounts = []
+        for entry in data["@graph"]:
+            if entry["@type"] == "schema:ResearchProject":
+                project_id = entry.get("schema:identifier")
+                if project_id:
+                    project_accounts.append({
+                        'account_id': project_id
+                    })
+        return project_accounts
+
+
+# Path to the JSON-LD files
+user_accounts_jsonld_file_path = 'datasets/accounts.json'
+project_accounts_jsonld_file_path = 'datasets/projects.json'
+
+# Read accounts from JSON-LD
+user_accounts = read_user_accounts_from_jsonld(user_accounts_jsonld_file_path)
+project_accounts = read_project_accounts_from_jsonld(project_accounts_jsonld_file_path)
+
+# Example to use the [n] row from the JSON-LD for the operation
+user_account = user_accounts[csv_index]
+project_account = project_accounts[csv_index]
+
+print(f"User Account ID: {user_account['account_id']}")
+print(f"Project Account ID: {project_account['account_id']}")
+
+# Set account detail linking user and project accounts
+hash = set_account_detail(
+    address, 
+    user_account['account_id'], 
+    "linked_project", 
+    project_account['account_id']
+)

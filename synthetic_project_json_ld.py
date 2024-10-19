@@ -61,6 +61,11 @@ def generate_synthetic_entry_ld():
     start_date = random_date()
     end_date = start_date + timedelta(days=random.randint(365, 1460))  # Project length between 1-4 years
     
+    # Ensure end_date is always ahead of the current date
+    current_date = datetime.now()
+    if end_date < current_date:
+        end_date = current_date + timedelta(days=random.randint(365, 1460))
+    
     # JSON-LD formatted entry
     entry = {
         "@context": {
@@ -84,4 +89,3 @@ def generate_synthetic_entry_ld():
     }
     
     return entry
-
