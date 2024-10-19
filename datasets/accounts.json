@@ -136,6 +136,25 @@
                 "schema:roleName": "publisher",
                 "schema:publicKey": "caf2809d0f7a99dee001aad2c0d3a3d9f555a649b61f5f85860071599d056bce"
             }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Tender Moser",
+            "foaf:mbox": "tender_moser@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Rockhurst College"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "1373-6232-2172-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "tender_moser@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "41f653e0ba1fde9393530cf603d23eb2afe9ecfdcf7008dd7819ab8344161b2b"
+            }
         }
     ]
 }
