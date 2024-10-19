@@ -1,0 +1,23 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "dc": "http://purl.org/dc/terms/"
+    },
+    "@graph": [
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "55935@test",
+            "schema:publicKey": "be3228450ae8c5254d7942c7239b3c5848ac54447604e7c39b4ff489add38394"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "31412@test",
+            "schema:publicKey": "81b3dcd7dd599973c1215db05703bf9e4d880a83eb624dcf171e677a1da044ef"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "17311@test",
+            "schema:publicKey": "89fe57b8e51b009122fd53224b4c94a2de1dce952c4b41fa855e63b480e0b3ca"
+        }
+    ]
+}

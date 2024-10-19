@@ -193,6 +193,25 @@
                 "schema:roleName": "publisher",
                 "schema:publicKey": "e4b2eccee5365b078f2180539e617eb98b2e9222744298c71f51fad0849316e6"
             }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Great Pasteur",
+            "foaf:mbox": "great_pasteur@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Sultan Ismail Petra International Islamic College"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "4841-8775-0659-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "great_pasteur@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "1ff04b1959b63194b26263c6d3df730c6811b17c19923c9ba1c407d77750d488"
+            }
         }
     ]
 }

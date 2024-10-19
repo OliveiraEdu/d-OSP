@@ -68,32 +68,35 @@ def dump_to_json_ld(account_id, user_account_full_name, user_account_email, user
 
 
 
-
-
-def dump_project_to_json_ld(project_id, project_private_key, project_public_key, project_filename="datasets/projects.jsonld"):
+def dump_project_to_json_ld(project_id, project_public_key, project_filename="datasets/projects.json"):
     try:
+        # Ensure that the 'datasets' directory exists
+        directory = os.path.dirname(project_filename)
+        if directory and not os.path.exists(directory):
+            os.makedirs(directory)  # Create directory if it doesn't exist
+
         # Check if the file exists and read existing data
         if os.path.exists(project_filename):
             with open(project_filename, mode='r', encoding='utf-8') as file:
                 data = json.load(file)
         else:
+            # If the file doesn't exist, initialize with a JSON-LD context
             data = {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
-                "@graph": []
-            }  # Initialize as a JSON-LD structure with @context
+                "@graph": []  # Empty graph to store project entries
+            }
 
         # Create a new project entry in JSON-LD format
         new_entry = {
             "@type": "schema:ResearchProject",
             "schema:identifier": project_id,
-            "schema:privateKey": project_private_key,
-            "schema:publicKey": project_public_key
+            "schema:publicKey": project_public_key  # Assuming publicKey is passed as a string
         }
 
-        # Append new entry to the @graph array
+        # Append new entry to the graph
         data["@graph"].append(new_entry)
 
         # Write back to the JSON-LD file
@@ -101,7 +104,7 @@ def dump_project_to_json_ld(project_id, project_private_key, project_public_key,
             json.dump(data, file, indent=4)
 
         current_entry_number = len(data["@graph"])
-        print(f"Appended new entry to file '{project_filename}', current total entries: {current_entry_number}")
+        print(f"Appended new project entry to file '{project_filename}', current total entries: {current_entry_number}")
         return current_entry_number
 
     except Exception as e:
