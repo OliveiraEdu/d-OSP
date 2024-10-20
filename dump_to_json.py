@@ -110,3 +110,111 @@ def dump_project_to_json_ld(project_id, project_public_key, project_filename="da
     except Exception as e:
         print(f"Error appending entry to JSON-LD: {str(e)}")
         return None  # Return None on error
+
+
+
+
+def append_project_metadata_to_json_ld(project_id, project_metadata_json, project_metadata_cid, project_filename="datasets/projects.json"):
+    try:
+        # Ensure that the 'datasets' directory exists
+        directory = os.path.dirname(project_filename)
+        if directory and not os.path.exists(directory):
+            os.makedirs(directory)  # Create directory if it doesn't exist
+
+        # Check if the file exists and read existing data
+        if os.path.exists(project_filename):
+            with open(project_filename, mode='r', encoding='utf-8') as file:
+                data = json.load(file)
+        else:
+            print(f"File '{project_filename}' does not exist. No metadata appended.")
+            return None
+
+        # Find the project entry by project_id
+        project_found = False
+        for entry in data["@graph"]:
+            if entry.get("schema:identifier") == project_id+'@test':
+                # Append new fields for project_metadata_json and project_metadata_cid
+                entry["schema:description"] = project_metadata_json  # Assuming this is the correct representation
+                entry["schema:metadataCID"] = project_metadata_cid  # Using a new key for the CID
+                project_found = True
+                break
+
+        if not project_found:
+            print(f"Project with ID '{project_id}' not found in '{project_filename}'.")
+            return None
+
+        # Write back to the JSON-LD file
+        with open(project_filename, mode='w', encoding='utf-8') as file:
+            json.dump(data, file, indent=4)
+
+        print(f"Appended metadata for project ID '{project_id}' to '{project_filename}'.")
+        return True
+
+    except Exception as e:
+        print(f"Error appending entry to JSON-LD: {str(e)}")
+        return None  # Return None on error
+
+
+import json
+import os
+
+def update_or_append_project_metadata(project_id_base, project_metadata_json, project_metadata_cid, domain="test", project_filename="datasets/projects.json"):
+    # Create the dynamic project_id
+    project_id = f"{project_id_base}@{domain}"  # Format: project_id@test
+
+    try:
+        # Ensure that the 'datasets' directory exists
+        directory = os.path.dirname(project_filename)
+        if directory and not os.path.exists(directory):
+            os.makedirs(directory)  # Create directory if it doesn't exist
+
+        # Check if the file exists and read existing data
+        if os.path.exists(project_filename):
+            with open(project_filename, mode='r', encoding='utf-8') as file:
+                data = json.load(file)
+        else:
+            # If the file doesn't exist, initialize with a JSON-LD context
+            data = {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@graph": []  # Empty graph to store project entries
+            }
+
+        # Flag to check if project entry was found
+        project_found = False
+        
+        # Look for the existing project entry by identifier
+        for entry in data["@graph"]:
+            if entry.get("schema:identifier") == project_id:
+                # Update the existing project entry
+                entry["schema:description"] = project_metadata_json
+                entry["schema:metadataCID"] = project_metadata_cid
+                project_found = True
+                print(f"Updated existing project entry for project ID: {project_id}")
+                break
+
+        # If project entry was not found, create a new one
+        if not project_found:
+            new_entry = {
+                "@type": "schema:ResearchProject",
+                "schema:identifier": project_id,
+                "schema:description": project_metadata_json,
+                "schema:metadataCID": project_metadata_cid
+            }
+            data["@graph"].append(new_entry)
+            print(f"Appended new project entry for project ID: {project_id}")
+
+        # Write back to the JSON-LD file
+        with open(project_filename, mode='w', encoding='utf-8') as file:
+            json.dump(data, file, indent=4)
+
+        current_entry_number = len(data["@graph"])
+        print(f"Current total entries in '{project_filename}': {current_entry_number}")
+        return current_entry_number
+
+    except Exception as e:
+        print(f"Error updating or appending entry in JSON-LD: {str(e)}")
+        return None  # Return None on error
+
