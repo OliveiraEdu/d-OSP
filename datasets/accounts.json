@@ -41,7 +41,8 @@
                 "schema:identifier": "gracious_black@test",
                 "schema:roleName": "publisher",
                 "schema:publicKey": "86f0ffcb5a9827f00af3d78d06395315215d39b81716afa78d5e8cbf19f00c7c"
-            }
+            },
+            "schema:linked_project": "60395@test"
         }
     ]
 }

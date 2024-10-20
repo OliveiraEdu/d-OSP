@@ -219,44 +219,64 @@ def update_or_append_project_metadata(project_id_base, project_metadata_json, pr
         return None  # Return None on error
 
 
+import json
+
 def update_project_entry_with_file_data(project_id, file_index, file_cid, metadata_cid, metadata):
-    # Load the projects.json file
-    project_filename = "datasets/projects.json"
-    
+    # Path to your projects.json file
+    file_path = 'datasets/projects.json'
+
+    # Open the JSON file
     try:
-        with open(project_filename, 'r', encoding='utf-8') as file:
-            data = json.load(file)
-        
-        # Find the project by project_id
-        project_found = False
-        for entry in data["@graph"]:
-            if entry.get("schema:identifier") == project_id + '@test':
-                # Append the file CID and metadata CID
-                entry[f"file_{file_index}_CID"] = file_cid
-                entry[f"file_{file_index}_metadata_CID"] = metadata_cid
-                
-                # Append extracted metadata
-                entry[f"file_{file_index}_metadata"] = {
-                    "title": metadata.get("title", "Unknown"),
-                    "author": metadata.get("Author", "Unknown"),
-                    "keywords": metadata.get("Keywords", "")
-                }
-                
-                project_found = True
-                break
-        
-        if project_found:
-            # Write updated data back to projects.json
-            with open(project_filename, 'w', encoding='utf-8') as file:
-                json.dump(data, file, indent=4)
-            print(f"Updated project entry for {project_id}@test with file {file_index}.")
-        else:
-            print(f"Project with ID {project_id}@test not found.")
-    
+        with open(file_path, 'r') as file:
+            project_data = json.load(file)
+            print(f"Loaded project data successfully.")
+    except FileNotFoundError:
+        print(f"File {file_path} not found.")
+        return
+    except json.JSONDecodeError as e:
+        print(f"Error decoding JSON: {e}")
+        return
+
+    # Print project data structure for better understanding
+    print(f"Current project_data: {json.dumps(project_data, indent=4)}")
+
+    # Search for the project in the @graph
+    project_found = False
+    for project in project_data.get('@graph', []):
+        current_id = project.get('schema:identifier')
+        print(f"Checking project with ID: '{current_id}' against '{project_id}'")  # Ensure no hidden spaces or format differences
+
+        # Compare the current project's identifier with the target project_id
+        if current_id.strip() == project_id.strip():  # Using .strip() to eliminate any trailing/leading whitespace issues
+            project_found = True
+            print(f"Match found for project ID: {project_id}")
+            
+            # Prepare new file entry data to be added
+            file_entry = {
+                "file_index": file_index,
+                "file_cid": file_cid,
+                "metadata_cid": metadata_cid,
+                "metadata": metadata
+            }
+
+            # Check if "schema:files" key exists, if not, create it
+            if 'schema:files' not in project:
+                project['schema:files'] = []
+
+            # Append the file entry to the project
+            project['schema:files'].append(file_entry)
+
+            print(f"Updated project {project_id} with new file entry: {file_entry}")
+            break
+
+    if not project_found:
+        print(f"Project {project_id} not found in datasets/projects.json")
+        return
+
+    # Write the updated data back to the JSON file
+    try:
+        with open(file_path, 'w') as file:
+            json.dump(project_data, file, indent=4)
+            print(f"Successfully wrote updated data to {file_path}")
     except Exception as e:
-        print(f"Error updating project entry: {str(e)}")
-
-
-
-
-
+        print(f"Error writing to file {file_path}: {e}")

@@ -63,7 +63,8 @@
                     "schema:name": "Tokyo, Japan"
                 }
             },
-            "schema:metadataCID": "QmQYkpH5xor6CU9Qmsi7FBRwrd3Certbu9RL6DSncRGXvG"
+            "schema:metadataCID": "QmQYkpH5xor6CU9Qmsi7FBRwrd3Certbu9RL6DSncRGXvG",
+            "schema:linked_user": "gracious_black@test"
         }
     ]
 }
