@@ -219,9 +219,11 @@ def update_or_append_project_metadata(project_id_base, project_metadata_json, pr
         return None  # Return None on error
 
 
-import json
-
-def update_project_entry_with_file_data(project_id, file_index, file_cid, metadata_cid, metadata):
+def update_project_entry_with_file_data(project_id, file_cid, metadata_cid, metadata):
+    # Extract the account_id if the project_id is a dictionary
+    if isinstance(project_id, dict):
+        project_id = project_id.get('account_id', '').strip()  # Ensure project_id is correctly extracted as a string
+    
     # Path to your projects.json file
     file_path = 'datasets/projects.json'
 
@@ -252,11 +254,14 @@ def update_project_entry_with_file_data(project_id, file_index, file_cid, metada
             print(f"Match found for project ID: {project_id}")
             
             # Prepare new file entry data to be added
+            # Retrieve the current file count (or set it to 0 if this is the first file)
+            file_count = len(project.get('schema:files', [])) + 1  # Incremental file index
+            
             file_entry = {
-                "file_index": file_index,
-                "file_cid": file_cid,
-                "metadata_cid": metadata_cid,
-                "metadata": metadata
+                "file_index": file_count,  # Automatically incremented file index
+                "file_cid": file_cid,  # File CID from IPFS
+                "metadata_cid": metadata_cid,  # Metadata CID from IPFS
+                "metadata": metadata  # Actual extracted metadata content
             }
 
             # Check if "schema:files" key exists, if not, create it

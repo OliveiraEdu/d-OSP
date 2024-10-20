@@ -6,43 +6,43 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Hardcore Northcutt",
-            "foaf:mbox": "hardcore_northcutt@email.com",
+            "foaf:name": "Exciting Borg",
+            "foaf:mbox": "exciting_borg@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "University of Medicine and Dentistry of New Jersey"
+                "foaf:name": "Coventry University"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "0671-7929-8141-X"
+                "value": "3540-4855-6567-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "hardcore_northcutt@test",
-                "schema:roleName": "author",
-                "schema:publicKey": "473cbfe1bee8cc2a6b1c87fb2827aaee40eaab71b627d84f791a9f7d3e1db308"
+                "schema:identifier": "exciting_borg@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "933877d1d93e8fc165aef66c4b37b0b9ca8608404e5eab61bed4335fd1214dad"
             },
-            "schema:linked_project": "33829@test"
+            "schema:linked_project": "77548@test"
         },
         {
             "@type": "foaf:Person",
-            "foaf:name": "Gracious Black",
-            "foaf:mbox": "gracious_black@email.com",
+            "foaf:name": "Affectionate Greider",
+            "foaf:mbox": "affectionate_greider@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "National Hispanic University"
+                "foaf:name": "Pukyong National University"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "8411-5854-0006-X"
+                "value": "3127-0750-0684-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "gracious_black@test",
-                "schema:roleName": "publisher",
-                "schema:publicKey": "86f0ffcb5a9827f00af3d78d06395315215d39b81716afa78d5e8cbf19f00c7c"
+                "schema:identifier": "affectionate_greider@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "055e711227a4b43d8254bb280a7850095c2b447e60fd04054f6bc84e8cb17d0e"
             },
-            "schema:linked_project": "60395@test"
+            "schema:linked_project": "38640@test"
         }
     ]
 }
