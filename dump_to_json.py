@@ -218,3 +218,45 @@ def update_or_append_project_metadata(project_id_base, project_metadata_json, pr
         print(f"Error updating or appending entry in JSON-LD: {str(e)}")
         return None  # Return None on error
 
+
+def update_project_entry_with_file_data(project_id, file_index, file_cid, metadata_cid, metadata):
+    # Load the projects.json file
+    project_filename = "datasets/projects.json"
+    
+    try:
+        with open(project_filename, 'r', encoding='utf-8') as file:
+            data = json.load(file)
+        
+        # Find the project by project_id
+        project_found = False
+        for entry in data["@graph"]:
+            if entry.get("schema:identifier") == project_id + '@test':
+                # Append the file CID and metadata CID
+                entry[f"file_{file_index}_CID"] = file_cid
+                entry[f"file_{file_index}_metadata_CID"] = metadata_cid
+                
+                # Append extracted metadata
+                entry[f"file_{file_index}_metadata"] = {
+                    "title": metadata.get("title", "Unknown"),
+                    "author": metadata.get("Author", "Unknown"),
+                    "keywords": metadata.get("Keywords", "")
+                }
+                
+                project_found = True
+                break
+        
+        if project_found:
+            # Write updated data back to projects.json
+            with open(project_filename, 'w', encoding='utf-8') as file:
+                json.dump(data, file, indent=4)
+            print(f"Updated project entry for {project_id}@test with file {file_index}.")
+        else:
+            print(f"Project with ID {project_id}@test not found.")
+    
+    except Exception as e:
+        print(f"Error updating project entry: {str(e)}")
+
+
+
+
+
