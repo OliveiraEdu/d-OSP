@@ -32,7 +32,8 @@
                     "schema:name": "Phuket, Thailand"
                 }
             },
-            "schema:metadataCID": "QmW8fa17i54v8wKLJwYZ7REqZPpMvphHPYnYKqj2jSEPrh"
+            "schema:metadataCID": "QmW8fa17i54v8wKLJwYZ7REqZPpMvphHPYnYKqj2jSEPrh",
+            "schema:linked_user": "hardcore_northcutt@test"
         },
         {
             "@type": "schema:ResearchProject",

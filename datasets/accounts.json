@@ -21,7 +21,8 @@
                 "schema:identifier": "hardcore_northcutt@test",
                 "schema:roleName": "author",
                 "schema:publicKey": "473cbfe1bee8cc2a6b1c87fb2827aaee40eaab71b627d84f791a9f7d3e1db308"
-            }
+            },
+            "schema:linked_project": "33829@test"
         },
         {
             "@type": "foaf:Person",
