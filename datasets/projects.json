@@ -6,68 +6,41 @@
     "@graph": [
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "19045@test",
-            "schema:publicKey": "ca993ea6a7cf47abeb51903d1e72cfa25375beecc510037c1b3a40c437b10dba",
+            "schema:identifier": "40870@test",
+            "schema:publicKey": "b1cb4799eeb98639232f250084a2ec94bfe1b49a4fc4b55319b25e12b84f27f2",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Exploring the Effects of wildlife monitoring on public safety",
-                "dc:abstract": "This study aims to investigate the effects of wildlife monitoring on public safety and propose strategies for improvement.",
+                "schema:name": "Investigating the Role of blockchain in disaster response",
+                "dc:abstract": "This study explores the impact of blockchain in disaster response, focusing on biodiversity.",
                 "schema:keywords": [
-                    "wildlife monitoring",
-                    "public safety",
-                    "health outcomes"
+                    "blockchain",
+                    "disaster response",
+                    "biodiversity"
                 ],
-                "schema:startDate": "2023-09-21",
-                "schema:endDate": "2025-08-10",
+                "schema:startDate": "2022-08-14",
+                "schema:endDate": "2026-07-20",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "World Wildlife Fund"
+                    "schema:name": "National Science Foundation"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
                     "schema:name": "Tokyo, Japan"
                 }
             },
-            "schema:metadataCID": "QmZvCfMwaNAZcRWFSZ3q5GaTnxhLkswC1jxMTX6ng8H5Bn",
-            "schema:linked_user": "mystifying_raman@test",
+            "schema:metadataCID": "QmP19ZwP1HRdTAwmPZEhNnqGNk9T7Y3aMLghBkbRoyV5MR",
+            "schema:linked_user": "vigilant_moser@test",
             "schema:files": [
                 {
                     "file_index": 1,
                     "file_cid": "QmRA3NWM82ZGynMbYzAgYTSXCVM14Wx1RZ8fKP42G6gjgj",
-                    "metadata_cid": "QmS4iCh3iHCH2ZJVND6CFnUD4u8DjRJFsxN2ptB7f2ffEK",
+                    "metadata_cid": "QmRghebibieoeYe3GhHcuhongBmbdPLb9o9zec5CEARBgG",
                     "metadata": {
-                        "dcterms:created": "2009-03-24T17:33:15Z",
-                        "dc:format": "application/pdf; version=1.4",
-                        "dc:language": "en-GB"
-                    }
-                },
-                {
-                    "file_index": 2,
-                    "file_cid": "QmXh37WXcrLXkJX2cAPjbPdKZ2cxJXD58XX6eU1Zc41ka4",
-                    "metadata_cid": "QmQtJ2Q1NQvetV7Rmpy6sDan9yTpw2DJBYAudZM1DcvYsZ",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Aeroacoustic airfoil shape optimization enhanced by autoencoders",
-                        "dc:creator": "Jiaqing Kou",
-                        "dcterms:created": "2023-02-04T09:40:15Z",
-                        "dcterms:modified": "2023-02-07T16:56:45Z",
-                        "dc:language": "en-US",
-                        "dc:subject": [
-                            "Aeroacoustics,Optimization design,Amiet theory,Machine learning,Autoencoder",
-                            "Expert Systems With Applications, 217 (2023) 119513. doi:10.1016/j.eswa.2023.119513"
-                        ]
-                    }
-                },
-                {
-                    "file_index": 3,
-                    "file_cid": "QmRA3NWM82ZGynMbYzAgYTSXCVM14Wx1RZ8fKP42G6gjgj",
-                    "metadata_cid": "QmdA2up7VEgNBcogoGKZKF2r5gbLHy3YQhgaYUaieQdWJC",
-                    "metadata": {
-                        "cid": "QmdA2up7VEgNBcogoGKZKF2r5gbLHy3YQhgaYUaieQdWJC",
+                        "cid": "QmRghebibieoeYe3GhHcuhongBmbdPLb9o9zec5CEARBgG",
                         "name": "bitcoin.pdf",
                         "size": 184292,
                         "filetype": "application/pdf",
@@ -78,11 +51,11 @@
                     }
                 },
                 {
-                    "file_index": 4,
+                    "file_index": 2,
                     "file_cid": "QmXh37WXcrLXkJX2cAPjbPdKZ2cxJXD58XX6eU1Zc41ka4",
-                    "metadata_cid": "QmRG2dxK1NoCKNbakFqGn9W2YPoBNK7yM2TgLS2ybCRwPj",
+                    "metadata_cid": "QmdCGzfYfvaY2uCSXSxLvCJy6nzoToGnQ1M8wQWXDn3EDN",
                     "metadata": {
-                        "cid": "QmRG2dxK1NoCKNbakFqGn9W2YPoBNK7yM2TgLS2ybCRwPj",
+                        "cid": "QmdCGzfYfvaY2uCSXSxLvCJy6nzoToGnQ1M8wQWXDn3EDN",
                         "name": "Aeroacoustic-airfoil-shape-optimization-enhance_2023_Expert-Systems-with-App.pdf",
                         "size": 1324070,
                         "filetype": "application/pdf",
@@ -90,6 +63,189 @@
                         "creator": "jiaqing kou",
                         "language": "en-us",
                         "subject": "aeroacoustics,optimization design,amiet theory,machine learning,autoencoder, expert systems with applications, 217 (2023) 119513. doi:10.1016/j.eswa.2023.119513"
+                    }
+                },
+                {
+                    "file_index": 3,
+                    "file_cid": "QmRA3NWM82ZGynMbYzAgYTSXCVM14Wx1RZ8fKP42G6gjgj",
+                    "metadata_cid": "Qma4mFNNzsYeT6XZhFvNymK6vZPhKRwASLA3C51f1AQVgo",
+                    "metadata": {
+                        "pdf:unmappedUnicodeCharsPerPage": [
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0"
+                        ],
+                        "pdf:PDFVersion": "1.4",
+                        "xmp:CreatorTool": "Writer",
+                        "pdf:hasXFA": "false",
+                        "access_permission:modify_annotations": "true",
+                        "access_permission:can_print_degraded": "true",
+                        "X-TIKA:Parsed-By-Full-Set": [
+                            "org.apache.tika.parser.DefaultParser",
+                            "org.apache.tika.parser.pdf.PDFParser"
+                        ],
+                        "X-TIKA:content_handler": "ToTextContentHandler",
+                        "pdf:num3DAnnotations": "0",
+                        "dcterms:created": "2009-03-24T17:33:15Z",
+                        "dc:format": "application/pdf; version=1.4",
+                        "pdf:docinfo:creator_tool": "Writer",
+                        "pdf:overallPercentageUnmappedUnicodeChars": "0.0",
+                        "access_permission:fill_in_form": "true",
+                        "pdf:hasCollection": "false",
+                        "pdf:encrypted": "false",
+                        "pdf:containsNonEmbeddedFont": "false",
+                        "Content-Length": "184292",
+                        "pdf:hasMarkedContent": "false",
+                        "Content-Type": "application/pdf",
+                        "dc:language": "en-GB",
+                        "pdf:producer": "OpenOffice.org 2.4",
+                        "pdf:totalUnmappedUnicodeChars": "0",
+                        "access_permission:extract_for_accessibility": "true",
+                        "access_permission:assemble_document": "true",
+                        "xmpTPg:NPages": "9",
+                        "resourceName": "b'bitcoin.pdf'",
+                        "pdf:hasXMP": "false",
+                        "pdf:charsPerPage": [
+                            "3050",
+                            "2387",
+                            "3060",
+                            "2736",
+                            "2260",
+                            "2592",
+                            "2192",
+                            "1763",
+                            "1106"
+                        ],
+                        "access_permission:extract_content": "true",
+                        "access_permission:can_print": "true",
+                        "X-TIKA:Parsed-By": [
+                            "org.apache.tika.parser.DefaultParser",
+                            "org.apache.tika.parser.pdf.PDFParser"
+                        ],
+                        "X-TIKA:parse_time_millis": "959",
+                        "X-TIKA:embedded_depth": "0",
+                        "access_permission:can_modify": "true",
+                        "pdf:docinfo:producer": "OpenOffice.org 2.4",
+                        "pdf:docinfo:created": "2009-03-24T17:33:15Z",
+                        "pdf:containsDamagedFont": "false"
+                    }
+                },
+                {
+                    "file_index": 4,
+                    "file_cid": "QmXh37WXcrLXkJX2cAPjbPdKZ2cxJXD58XX6eU1Zc41ka4",
+                    "metadata_cid": "QmPeSpwRWA5Gj9SRaCiMhK7bojTZz4jJ1B8Liztos3q5f4",
+                    "metadata": {
+                        "pdf:PDFVersion": "1.7",
+                        "pdf:docinfo:title": "Aeroacoustic airfoil shape optimization enhanced by autoencoders",
+                        "xmp:CreatorTool": "Elsevier",
+                        "pdf:hasXFA": "false",
+                        "access_permission:can_print_degraded": "true",
+                        "X-TIKA:Parsed-By-Full-Set": [
+                            "org.apache.tika.parser.DefaultParser",
+                            "org.apache.tika.parser.pdf.PDFParser"
+                        ],
+                        "X-TIKA:content_handler": "ToTextContentHandler",
+                        "pdf:num3DAnnotations": "0",
+                        "dc:format": "application/pdf; version=1.7",
+                        "pdf:docinfo:custom:robots": "noindex",
+                        "pdf:docinfo:creator_tool": "Elsevier",
+                        "access_permission:fill_in_form": "true",
+                        "pdf:docinfo:custom:CreationDate--Text": "7th February 2023",
+                        "pdf:hasCollection": "false",
+                        "pdf:encrypted": "false",
+                        "dc:title": "Aeroacoustic airfoil shape optimization enhanced by autoencoders",
+                        "pdf:containsNonEmbeddedFont": "false",
+                        "pdf:docinfo:custom:CrossMarkDomains[1]": "elsevier.com",
+                        "robots": "noindex",
+                        "pdf:docinfo:subject": "Expert Systems With Applications, 217 (2023) 119513. doi:10.1016/j.eswa.2023.119513",
+                        "pdf:hasMarkedContent": "false",
+                        "pdf:docinfo:creator": "Jiaqing Kou",
+                        "pdf:docinfo:custom:CrossmarkMajorVersionDate": "2010-04-23",
+                        "access_permission:extract_for_accessibility": "true",
+                        "resourceName": "b'Aeroacoustic-airfoil-shape-optimization-enhance_2023_Expert-Systems-with-App.pdf'",
+                        "pdf:docinfo:custom:CrossMarkDomains[2]": "sciencedirect.com",
+                        "X-TIKA:Parsed-By": [
+                            "org.apache.tika.parser.DefaultParser",
+                            "org.apache.tika.parser.pdf.PDFParser"
+                        ],
+                        "ElsevierWebPDFSpecifications": "7.0",
+                        "pdf:docinfo:custom:doi": "10.1016/j.eswa.2023.119513",
+                        "pdf:docinfo:custom:CrossmarkDomainExclusive": "true",
+                        "X-TIKA:embedded_depth": "0",
+                        "CrossmarkDomainExclusive": "true",
+                        "pdf:annotationTypes": "null",
+                        "pdf:docinfo:producer": "Acrobat Distiller 8.1.0 (Windows)",
+                        "pdf:annotationSubtypes": "Link",
+                        "CreationDate--Text": "7th February 2023",
+                        "doi": "10.1016/j.eswa.2023.119513",
+                        "pdf:containsDamagedFont": "false",
+                        "pdf:unmappedUnicodeCharsPerPage": [
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0",
+                            "0"
+                        ],
+                        "access_permission:modify_annotations": "true",
+                        "dc:creator": "Jiaqing Kou",
+                        "dcterms:created": "2023-02-04T09:40:15Z",
+                        "dcterms:modified": "2023-02-07T16:56:45Z",
+                        "CrossMarkDomains[1]": "elsevier.com",
+                        "pdf:overallPercentageUnmappedUnicodeChars": "0.0",
+                        "pdf:docinfo:keywords": "Aeroacoustics,Optimization design,Amiet theory,Machine learning,Autoencoder",
+                        "pdf:docinfo:modified": "2023-02-07T16:56:45Z",
+                        "Content-Length": "1324070",
+                        "Content-Type": "application/pdf",
+                        "dc:language": "en-US",
+                        "pdf:producer": "Acrobat Distiller 8.1.0 (Windows)",
+                        "dc:subject": [
+                            "Aeroacoustics,Optimization design,Amiet theory,Machine learning,Autoencoder",
+                            "Expert Systems With Applications, 217 (2023) 119513. doi:10.1016/j.eswa.2023.119513"
+                        ],
+                        "X-TIKA:EXCEPTION:warn": "org.xml.sax.SAXParseException; lineNumber: 87; columnNumber: 11; The content of elements must consist of well-formed character data or markup.\n\tat org.apache.xerces.parsers.DOMParser.parse(Unknown Source)\n\tat org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)\n\tat java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:122)\n\tat org.apache.tika.utils.XMLReaderUtils.buildDOM(XMLReaderUtils.java:396)\n\tat org.apache.tika.parser.pdf.PDMetadataExtractor.loadDOM(PDMetadataExtractor.java:472)\n\tat org.apache.tika.parser.pdf.PDMetadataExtractor.extract(PDMetadataExtractor.java:69)\n\tat org.apache.tika.parser.pdf.PDFParser.extractMetadata(PDFParser.java:423)\n\tat org.apache.tika.parser.pdf.PDFParser.parse(PDFParser.java:181)\n\tat org.apache.tika.parser.CompositeParser.parse(CompositeParser.java:298)\n\tat org.apache.tika.parser.CompositeParser.parse(CompositeParser.java:298)\n\tat org.apache.tika.parser.AutoDetectParser.parse(AutoDetectParser.java:175)\n\tat org.apache.tika.parser.RecursiveParserWrapper.parse(RecursiveParserWrapper.java:163)\n\tat org.apache.tika.server.core.resource.TikaResource.parse(TikaResource.java:352)\n\tat org.apache.tika.server.core.resource.RecursiveMetadataResource.parseMetadata(RecursiveMetadataResource.java:78)\n\tat org.apache.tika.server.core.resource.RecursiveMetadataResource.parseMetadataToMetadataList(RecursiveMetadataResource.java:190)\n\tat org.apache.tika.server.core.resource.RecursiveMetadataResource.getMetadata(RecursiveMetadataResource.java:179)\n\tat jdk.internal.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat org.apache.cxf.service.invoker.AbstractInvoker.performInvocation(AbstractInvoker.java:179)\n\tat org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:96)\n\tat org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:201)\n\tat org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:104)\n\tat org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:59)\n\tat org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:96)\n\tat org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:307)\n\tat org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:121)\n\tat org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:265)\n\tat org.apache.cxf.transport.http_jetty.JettyHTTPDestination.doService(JettyHTTPDestination.java:247)\n\tat org.apache.cxf.transport.http_jetty.JettyHTTPHandler.handle(JettyHTTPHandler.java:79)\n\tat org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)\n\tat org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:190)\n\tat org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)\n\tat org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:191)\n\tat org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)\n\tat org.eclipse.jetty.server.Server.handle(Server.java:516)\n\tat org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487)\n\tat org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732)\n\tat org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479)\n\tat org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)\n\tat org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)\n\tat org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)\n\tat org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)\n\tat org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)\n\tat java.base/java.lang.Thread.run(Thread.java:840)\n",
+                        "pdf:docinfo:custom:ElsevierWebPDFSpecifications": "7.0",
+                        "pdf:totalUnmappedUnicodeChars": "0",
+                        "access_permission:assemble_document": "true",
+                        "xmpTPg:NPages": "14",
+                        "pdf:hasXMP": "true",
+                        "pdf:charsPerPage": [
+                            "4632",
+                            "7035",
+                            "4418",
+                            "4887",
+                            "4242",
+                            "3215",
+                            "3361",
+                            "3553",
+                            "3680",
+                            "2730",
+                            "3569",
+                            "4967",
+                            "5447",
+                            "7572"
+                        ],
+                        "access_permission:extract_content": "true",
+                        "access_permission:can_print": "true",
+                        "CrossMarkDomains[2]": "sciencedirect.com",
+                        "X-TIKA:parse_time_millis": "2611",
+                        "access_permission:can_modify": "true",
+                        "pdf:docinfo:created": "2023-02-04T09:40:15Z",
+                        "CrossmarkMajorVersionDate": "2010-04-23"
                     }
                 }
             ]

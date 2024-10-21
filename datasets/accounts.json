@@ -6,23 +6,23 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Mystifying Raman",
-            "foaf:mbox": "mystifying_raman@email.com",
+            "foaf:name": "Vigilant Moser",
+            "foaf:mbox": "vigilant_moser@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Universit\u00e9 du Sahel"
+                "foaf:name": "Leyte Normal University"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "3537-4297-5472-X"
+                "value": "3102-4171-5349-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "mystifying_raman@test",
-                "schema:roleName": "reviewer",
-                "schema:publicKey": "50089b40d8a6696bc0fbdeb8244f7ba674c19e03c35b60478d928c27cf98aaf2"
+                "schema:identifier": "vigilant_moser@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "b164e8e5623a61d2769fcfedb042270139e59ecc0983af509ce1ed1c01392ec9"
             },
-            "schema:linked_project": "19045@test"
+            "schema:linked_project": "40870@test"
         }
     ]
 }
