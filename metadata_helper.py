@@ -73,7 +73,7 @@ def add_document(writer, metadata, full_text):
     )
     logging.info(f"Document {metadata['name']} indexed successfully.")
 
-    
+
 def search_ipfs(keyword, ix):
     """Search for a keyword in the indexed documents."""
     try:
@@ -89,3 +89,32 @@ def search_ipfs(keyword, ix):
                 logging.info(f"No results found for '{keyword}'")
     except Exception as e:
         logging.error(f"Error occurred during search: {e}")
+
+
+# Function to extract only Dublin Core related metadata
+def extract_dublin_core(metadata):
+    return {k: v for k, v in metadata.items() if k.startswith('dc:') or k.startswith('dcterms:')}
+
+# Function to parse a file and extract Dublin Core metadata
+def extract_metadata_from_file(file_path):
+    # Parse the file with Tika
+    parsed = parser.from_file(file_path)
+    
+    # Get the full metadata from the parsed content
+    metadata = parsed.get("metadata", {})
+    
+    # Extract only Dublin Core related metadata
+    dublin_core_metadata = extract_dublin_core(metadata)
+    
+    return dublin_core_metadata
+
+# Function to read a file and print Dublin Core metadata
+def process_file(file_path):
+    dublin_core_metadata = extract_metadata_from_file(file_path)
+    
+    # Check if any Dublin Core metadata was found
+    if dublin_core_metadata:
+        print("Dublin Core Metadata Extracted:")
+        print(json.dumps(dublin_core_metadata, indent=4))
+    else:
+        print("No Dublin Core metadata found.")

@@ -6,23 +6,23 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Thirsty Montalcini",
-            "foaf:mbox": "thirsty_montalcini@email.com",
+            "foaf:name": "Youthful Cameron",
+            "foaf:mbox": "youthful_cameron@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Universidad de Guadalajara"
+                "foaf:name": "Fachhochschule Rottenburg, Hochschule f\u00fcr Forstwirtschaft"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "6575-7693-4334-X"
+                "value": "2064-5001-9352-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "thirsty_montalcini@test",
-                "schema:roleName": "publisher",
-                "schema:publicKey": "b64165764ec9ea8a26a6c781c7d3c289e02da67001eb425a085d478c9f1e2c62"
+                "schema:identifier": "youthful_cameron@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "e182b8e4ae2f9f7225b196d5f81f8a42f228ef0c8772716dfebe9f4471f26489"
             },
-            "schema:linked_project": "59289@test"
+            "schema:linked_project": "85691@test"
         }
     ]
 }
