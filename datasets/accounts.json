@@ -6,23 +6,23 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Vigilant Moser",
-            "foaf:mbox": "vigilant_moser@email.com",
+            "foaf:name": "Thirsty Montalcini",
+            "foaf:mbox": "thirsty_montalcini@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Leyte Normal University"
+                "foaf:name": "Universidad de Guadalajara"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "3102-4171-5349-X"
+                "value": "6575-7693-4334-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "vigilant_moser@test",
+                "schema:identifier": "thirsty_montalcini@test",
                 "schema:roleName": "publisher",
-                "schema:publicKey": "b164e8e5623a61d2769fcfedb042270139e59ecc0983af509ce1ed1c01392ec9"
+                "schema:publicKey": "b64165764ec9ea8a26a6c781c7d3c289e02da67001eb425a085d478c9f1e2c62"
             },
-            "schema:linked_project": "40870@test"
+            "schema:linked_project": "59289@test"
         }
     ]
 }

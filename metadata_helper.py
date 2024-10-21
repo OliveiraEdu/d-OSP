@@ -62,10 +62,18 @@ def add_document(writer, metadata, full_text):
         creator=normalize_metadata_value(metadata['creator']),
         language=normalize_metadata_value(metadata['language']),
         subject=normalize_metadata_value(metadata['subject']),
+        description=normalize_metadata_value(metadata['description']),
+        publisher=normalize_metadata_value(metadata['publisher']),
+        date=normalize_metadata_value(metadata['date']),
+        abstract=normalize_metadata_value(metadata.get('abstract', '')),
+        format=normalize_metadata_value(metadata.get('format', '')),
+        created=normalize_metadata_value(metadata.get('created', '')),
+        modified=normalize_metadata_value(metadata.get('modified', '')),
         full_text=full_text
     )
     logging.info(f"Document {metadata['name']} indexed successfully.")
 
+    
 def search_ipfs(keyword, ix):
     """Search for a keyword in the indexed documents."""
     try:
