@@ -61,6 +61,26 @@
                 "schema:identifier": "romantic_gagarin@test",
                 "schema:roleName": "reviewer",
                 "schema:publicKey": "2e980e3556ff6d453849f874da1f5c1544e374352841a8433541335d3be2b761"
+            },
+            "schema:linked_project": "05852@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Focused Napier",
+            "foaf:mbox": "focused_napier@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Wageningen University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "1370-6662-4890-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "focused_napier@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "f45a7da5642a2f30f99ab28ad4c15f8a8af0fa3faed3d8d2dafce347ab9cfca4"
             }
         }
     ]
