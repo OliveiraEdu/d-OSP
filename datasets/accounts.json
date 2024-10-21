@@ -6,82 +6,23 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Sweet Perlman",
-            "foaf:mbox": "sweet_perlman@email.com",
+            "foaf:name": "Mystifying Raman",
+            "foaf:mbox": "mystifying_raman@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Cedarville College"
+                "foaf:name": "Universit\u00e9 du Sahel"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "8950-2815-2294-X"
+                "value": "3537-4297-5472-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "sweet_perlman@test",
+                "schema:identifier": "mystifying_raman@test",
                 "schema:roleName": "reviewer",
-                "schema:publicKey": "9dc1fe6a94c783e9c6308970119ad8c9167fb6d08607cdae96768b9115aa71f0"
+                "schema:publicKey": "50089b40d8a6696bc0fbdeb8244f7ba674c19e03c35b60478d928c27cf98aaf2"
             },
-            "schema:linked_project": "04448@test"
-        },
-        {
-            "@type": "foaf:Person",
-            "foaf:name": "Tender Moore",
-            "foaf:mbox": "tender_moore@email.com",
-            "foaf:organization": {
-                "@type": "foaf:Organization",
-                "foaf:name": "Polonia University in Cz\u00eastochowa"
-            },
-            "schema:identifier": {
-                "@type": "PropertyValue",
-                "propertyID": "ORCID",
-                "value": "2653-6942-5578-X"
-            },
-            "foaf:holdsAccount": {
-                "schema:identifier": "tender_moore@test",
-                "schema:roleName": "author",
-                "schema:publicKey": "871b97562c5da05e59b13984ccbee55b6bfd74aad0eacace58546da929d4bb88"
-            },
-            "schema:linked_project": "16528@test"
-        },
-        {
-            "@type": "foaf:Person",
-            "foaf:name": "Romantic Gagarin",
-            "foaf:mbox": "romantic_gagarin@email.com",
-            "foaf:organization": {
-                "@type": "foaf:Organization",
-                "foaf:name": "Lambuth University"
-            },
-            "schema:identifier": {
-                "@type": "PropertyValue",
-                "propertyID": "ORCID",
-                "value": "4971-1748-1488-X"
-            },
-            "foaf:holdsAccount": {
-                "schema:identifier": "romantic_gagarin@test",
-                "schema:roleName": "reviewer",
-                "schema:publicKey": "2e980e3556ff6d453849f874da1f5c1544e374352841a8433541335d3be2b761"
-            },
-            "schema:linked_project": "05852@test"
-        },
-        {
-            "@type": "foaf:Person",
-            "foaf:name": "Focused Napier",
-            "foaf:mbox": "focused_napier@email.com",
-            "foaf:organization": {
-                "@type": "foaf:Organization",
-                "foaf:name": "Wageningen University"
-            },
-            "schema:identifier": {
-                "@type": "PropertyValue",
-                "propertyID": "ORCID",
-                "value": "1370-6662-4890-X"
-            },
-            "foaf:holdsAccount": {
-                "schema:identifier": "focused_napier@test",
-                "schema:roleName": "author",
-                "schema:publicKey": "f45a7da5642a2f30f99ab28ad4c15f8a8af0fa3faed3d8d2dafce347ab9cfca4"
-            }
+            "schema:linked_project": "19045@test"
         }
     ]
 }
