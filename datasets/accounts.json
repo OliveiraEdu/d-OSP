@@ -6,43 +6,62 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Exciting Borg",
-            "foaf:mbox": "exciting_borg@email.com",
+            "foaf:name": "Sweet Perlman",
+            "foaf:mbox": "sweet_perlman@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Coventry University"
+                "foaf:name": "Cedarville College"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "3540-4855-6567-X"
+                "value": "8950-2815-2294-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "exciting_borg@test",
-                "schema:roleName": "publisher",
-                "schema:publicKey": "933877d1d93e8fc165aef66c4b37b0b9ca8608404e5eab61bed4335fd1214dad"
+                "schema:identifier": "sweet_perlman@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "9dc1fe6a94c783e9c6308970119ad8c9167fb6d08607cdae96768b9115aa71f0"
             },
-            "schema:linked_project": "77548@test"
+            "schema:linked_project": "04448@test"
         },
         {
             "@type": "foaf:Person",
-            "foaf:name": "Affectionate Greider",
-            "foaf:mbox": "affectionate_greider@email.com",
+            "foaf:name": "Tender Moore",
+            "foaf:mbox": "tender_moore@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Pukyong National University"
+                "foaf:name": "Polonia University in Cz\u00eastochowa"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "3127-0750-0684-X"
+                "value": "2653-6942-5578-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "affectionate_greider@test",
-                "schema:roleName": "reviewer",
-                "schema:publicKey": "055e711227a4b43d8254bb280a7850095c2b447e60fd04054f6bc84e8cb17d0e"
+                "schema:identifier": "tender_moore@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "871b97562c5da05e59b13984ccbee55b6bfd74aad0eacace58546da929d4bb88"
             },
-            "schema:linked_project": "38640@test"
+            "schema:linked_project": "16528@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Romantic Gagarin",
+            "foaf:mbox": "romantic_gagarin@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Lambuth University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "4971-1748-1488-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "romantic_gagarin@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "2e980e3556ff6d453849f874da1f5c1544e374352841a8433541335d3be2b761"
+            }
         }
     ]
 }
