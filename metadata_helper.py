@@ -76,7 +76,7 @@ def add_document(writer, metadata, full_text):
     logging.info(f"Document {metadata['name']} indexed successfully.")
 
 
-def search_ipfs(keyword, ix):
+def search_index(keyword, ix):
     """Search for a keyword in the indexed documents."""
     try:
         with ix.searcher() as searcher:

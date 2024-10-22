@@ -85,6 +85,108 @@
                             "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549"
                         ]
                     }
+                },
+                {
+                    "file_index": 4,
+                    "file_cid": "QmXh37WXcrLXkJX2cAPjbPdKZ2cxJXD58XX6eU1Zc41ka4",
+                    "metadata_cid": "QmVitpEUypqpbxQjv72bGfjKLReMGNvTYLm14ExBeodNeJ",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.7",
+                        "dc:title": "Aeroacoustic airfoil shape optimization enhanced by autoencoders",
+                        "dc:creator": "Jiaqing Kou",
+                        "dcterms:created": "2023-02-04T09:40:15Z",
+                        "dcterms:modified": "2023-02-07T16:56:45Z",
+                        "dc:language": "en-US",
+                        "dc:subject": [
+                            "Aeroacoustics,Optimization design,Amiet theory,Machine learning,Autoencoder",
+                            "Expert Systems With Applications, 217 (2023) 119513. doi:10.1016/j.eswa.2023.119513"
+                        ]
+                    }
+                },
+                {
+                    "file_index": 5,
+                    "file_cid": "QmRA3NWM82ZGynMbYzAgYTSXCVM14Wx1RZ8fKP42G6gjgj",
+                    "metadata_cid": "QmZ8QRtNnmAzJX3AbJPf84Pvr9iEN1YcgmczAyTYFzbbCc",
+                    "metadata": {
+                        "dcterms:created": "2009-03-24T17:33:15Z",
+                        "dc:format": "application/pdf; version=1.4",
+                        "dc:language": "en-GB"
+                    }
+                },
+                {
+                    "file_index": 6,
+                    "file_cid": "QmUq29KRwpTdvScB5oYzEDobDHyb4N1f9eaZXm4VaMCgiW",
+                    "metadata_cid": "QmNf9v11kNmrrrFw58VdMnS7GAjdfss6aiBaVkKq4ghdn7",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.7",
+                        "dc:title": "COVID19-MLSF: A multi-task learning-based stock market forecasting framework during the COVID-19 pandemic",
+                        "dc:description": "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549",
+                        "dc:creator": [
+                            "Chenxun Yuan",
+                            "Xiang Ma",
+                            "Hua Wang",
+                            "Caiming Zhang",
+                            "Xuemei Li"
+                        ],
+                        "dcterms:created": "2023-02-04T09:40:15Z",
+                        "dcterms:modified": "2023-02-07T16:52:03Z",
+                        "dc:language": "en-US",
+                        "dc:subject": [
+                            "Stock market forecasting,COVID-19 pandemic,Multi-task learning,Feature fusion,K-nearest neighbor classifier",
+                            "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549"
+                        ]
+                    }
+                },
+                {
+                    "file_index": 7,
+                    "file_cid": "QmXh37WXcrLXkJX2cAPjbPdKZ2cxJXD58XX6eU1Zc41ka4",
+                    "metadata_cid": "QmcpYudjp4oL7Wmn231HngRdK4XgMuwAZCkGQmFL47ktTc",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.7",
+                        "dc:title": "Aeroacoustic airfoil shape optimization enhanced by autoencoders",
+                        "dc:creator": "Jiaqing Kou",
+                        "dcterms:created": "2023-02-04T09:40:15Z",
+                        "dcterms:modified": "2023-02-07T16:56:45Z",
+                        "dc:language": "en-US",
+                        "dc:subject": [
+                            "Aeroacoustics,Optimization design,Amiet theory,Machine learning,Autoencoder",
+                            "Expert Systems With Applications, 217 (2023) 119513. doi:10.1016/j.eswa.2023.119513"
+                        ]
+                    }
+                },
+                {
+                    "file_index": 8,
+                    "file_cid": "QmRA3NWM82ZGynMbYzAgYTSXCVM14Wx1RZ8fKP42G6gjgj",
+                    "metadata_cid": "QmTP3KrASgJQzz3aqQvbcpBMFbxtvS6xTbju9S4qspPQSG",
+                    "metadata": {
+                        "dcterms:created": "2009-03-24T17:33:15Z",
+                        "dc:format": "application/pdf; version=1.4",
+                        "dc:language": "en-GB"
+                    }
+                },
+                {
+                    "file_index": 9,
+                    "file_cid": "QmUq29KRwpTdvScB5oYzEDobDHyb4N1f9eaZXm4VaMCgiW",
+                    "metadata_cid": "QmY3c4tCzveKDUZKjqyj9a6U8vDkuAs3q88D1UkcmWdBtJ",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.7",
+                        "dc:title": "COVID19-MLSF: A multi-task learning-based stock market forecasting framework during the COVID-19 pandemic",
+                        "dc:description": "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549",
+                        "dc:creator": [
+                            "Chenxun Yuan",
+                            "Xiang Ma",
+                            "Hua Wang",
+                            "Caiming Zhang",
+                            "Xuemei Li"
+                        ],
+                        "dcterms:created": "2023-02-04T09:40:15Z",
+                        "dcterms:modified": "2023-02-07T16:52:03Z",
+                        "dc:language": "en-US",
+                        "dc:subject": [
+                            "Stock market forecasting,COVID-19 pandemic,Multi-task learning,Feature fusion,K-nearest neighbor classifier",
+                            "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549"
+                        ]
+                    }
                 }
             ]
         }
