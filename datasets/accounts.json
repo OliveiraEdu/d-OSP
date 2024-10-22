@@ -1,0 +1,28 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "foaf": "http://xmlns.com/foaf/0.1/"
+    },
+    "@graph": [
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Exciting Pike",
+            "foaf:mbox": "exciting_pike@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Lincoln University San Francisco"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "3555-1617-7180-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "exciting_pike@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "bc3b756e9f6e089350606e8ab42011154b72f6cbb54af8bfeabca911af0dd740"
+            },
+            "schema:linked_project": "18863@test"
+        }
+    ]
+}
