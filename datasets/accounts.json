@@ -1,0 +1,28 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "foaf": "http://xmlns.com/foaf/0.1/"
+    },
+    "@graph": [
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Musing Perlman",
+            "foaf:mbox": "musing_perlman@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "International Ataturk Alatoo University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "6460-8086-0203-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "musing_perlman@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "0383a6c7ddf3c7a30b7631cc3bbc53008f1598ea9972d83984b1ee5891a2f6ba"
+            },
+            "schema:linked_project": "53831@test"
+        }
+    ]
+}

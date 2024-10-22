@@ -1,0 +1,92 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "dc": "http://purl.org/dc/terms/"
+    },
+    "@graph": [
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "53831@test",
+            "schema:publicKey": "4e014898c0e52da040e30f7fdcc4cb5a5fe4f86dc705ea85660fe7dd475943a6",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Investigating the Role of urban sprawl in disaster response",
+                "dc:abstract": "This study explores the impact of urban sprawl in disaster response, focusing on public health.",
+                "schema:keywords": [
+                    "urban sprawl",
+                    "disaster response",
+                    "public health"
+                ],
+                "schema:startDate": "2020-05-15",
+                "schema:endDate": "2027-06-25",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "World Wildlife Fund"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Lisbon, Portugal"
+                }
+            },
+            "schema:metadataCID": "QmeKyUDop7Snpd5C6S287R6qC65CdEwS2duW1MFinSB6Br",
+            "schema:linked_user": "musing_perlman@test",
+            "schema:files": [
+                {
+                    "file_index": 1,
+                    "file_cid": "QmXh37WXcrLXkJX2cAPjbPdKZ2cxJXD58XX6eU1Zc41ka4",
+                    "metadata_cid": "QmaghghvXoQ2zM9Qw3xWuqPYUavZAjBKHPZ8PkxTVvt7vR",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.7",
+                        "dc:title": "Aeroacoustic airfoil shape optimization enhanced by autoencoders",
+                        "dc:creator": "Jiaqing Kou",
+                        "dcterms:created": "2023-02-04T09:40:15Z",
+                        "dcterms:modified": "2023-02-07T16:56:45Z",
+                        "dc:language": "en-US",
+                        "dc:subject": [
+                            "Aeroacoustics,Optimization design,Amiet theory,Machine learning,Autoencoder",
+                            "Expert Systems With Applications, 217 (2023) 119513. doi:10.1016/j.eswa.2023.119513"
+                        ]
+                    }
+                },
+                {
+                    "file_index": 2,
+                    "file_cid": "QmRA3NWM82ZGynMbYzAgYTSXCVM14Wx1RZ8fKP42G6gjgj",
+                    "metadata_cid": "QmR9WrcSnjeUomZ35UvHwB6FxVEPqWtppAFyQCsts7T61p",
+                    "metadata": {
+                        "dcterms:created": "2009-03-24T17:33:15Z",
+                        "dc:format": "application/pdf; version=1.4",
+                        "dc:language": "en-GB"
+                    }
+                },
+                {
+                    "file_index": 3,
+                    "file_cid": "QmUq29KRwpTdvScB5oYzEDobDHyb4N1f9eaZXm4VaMCgiW",
+                    "metadata_cid": "QmVhKbErpxQSThcnyYLMjsUwSzVc3LKyu7kFPT82SuwjKq",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.7",
+                        "dc:title": "COVID19-MLSF: A multi-task learning-based stock market forecasting framework during the COVID-19 pandemic",
+                        "dc:description": "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549",
+                        "dc:creator": [
+                            "Chenxun Yuan",
+                            "Xiang Ma",
+                            "Hua Wang",
+                            "Caiming Zhang",
+                            "Xuemei Li"
+                        ],
+                        "dcterms:created": "2023-02-04T09:40:15Z",
+                        "dcterms:modified": "2023-02-07T16:52:03Z",
+                        "dc:language": "en-US",
+                        "dc:subject": [
+                            "Stock market forecasting,COVID-19 pandemic,Multi-task learning,Feature fusion,K-nearest neighbor classifier",
+                            "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
