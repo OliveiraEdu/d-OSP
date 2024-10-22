@@ -6,23 +6,23 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Youthful Cameron",
-            "foaf:mbox": "youthful_cameron@email.com",
+            "foaf:name": "Nice Cray",
+            "foaf:mbox": "nice_cray@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Fachhochschule Rottenburg, Hochschule f\u00fcr Forstwirtschaft"
+                "foaf:name": "Tamil Nadu Agricultural University"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "2064-5001-9352-X"
+                "value": "1389-0416-6821-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "youthful_cameron@test",
-                "schema:roleName": "author",
-                "schema:publicKey": "e182b8e4ae2f9f7225b196d5f81f8a42f228ef0c8772716dfebe9f4471f26489"
+                "schema:identifier": "nice_cray@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "87bf7c9f096f98e810c8dbb447154bc7dfe064b5176f9e51c5a9426887cabf7f"
             },
-            "schema:linked_project": "85691@test"
+            "schema:linked_project": "02570@test"
         }
     ]
 }

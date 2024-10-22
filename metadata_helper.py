@@ -2,12 +2,14 @@ import os
 import logging
 import shutil
 import mimetypes
+import time  # Import time for sleep
 from tika import parser
 from whoosh.index import create_in, open_dir, LockError
 from whoosh.fields import Schema, TEXT, ID, NUMERIC
 from whoosh.qparser import QueryParser
 from ipfs_functions import upload_file_to_ipfs, upload_json_to_ipfs
 from dump_to_json import update_project_entry_with_file_data
+import json  # Added for printing metadata
 
 # Logging configuration
 logging.basicConfig(level=logging.INFO)
@@ -65,10 +67,10 @@ def add_document(writer, metadata, full_text):
         description=normalize_metadata_value(metadata['description']),
         publisher=normalize_metadata_value(metadata['publisher']),
         date=normalize_metadata_value(metadata['date']),
-        abstract=normalize_metadata_value(metadata.get('abstract', '')),
-        format=normalize_metadata_value(metadata.get('format', '')),
-        created=normalize_metadata_value(metadata.get('created', '')),
-        modified=normalize_metadata_value(metadata.get('modified', '')),
+        abstract=normalize_metadata_value(metadata.get('abstract', '')),  # Provide fallback
+        format=normalize_metadata_value(metadata.get('format', '')),      # Provide fallback
+        created=normalize_metadata_value(metadata.get('created', '')),    # Provide fallback
+        modified=normalize_metadata_value(metadata.get('modified', '')),  # Provide fallback
         full_text=full_text
     )
     logging.info(f"Document {metadata['name']} indexed successfully.")
@@ -95,18 +97,24 @@ def search_ipfs(keyword, ix):
 def extract_dublin_core(metadata):
     return {k: v for k, v in metadata.items() if k.startswith('dc:') or k.startswith('dcterms:')}
 
+
 # Function to parse a file and extract Dublin Core metadata
 def extract_metadata_from_file(file_path):
-    # Parse the file with Tika
-    parsed = parser.from_file(file_path)
-    
-    # Get the full metadata from the parsed content
-    metadata = parsed.get("metadata", {})
-    
-    # Extract only Dublin Core related metadata
-    dublin_core_metadata = extract_dublin_core(metadata)
-    
-    return dublin_core_metadata
+    try:
+        # Parse the file with Tika
+        parsed = parser.from_file(file_path)
+        
+        # Get the full metadata from the parsed content
+        metadata = parsed.get("metadata", {})
+        
+        # Extract only Dublin Core related metadata
+        dublin_core_metadata = extract_dublin_core(metadata)
+        
+        return dublin_core_metadata
+    except Exception as e:
+        logging.error(f"Error extracting metadata from file '{file_path}': {e}")
+        return {}
+
 
 # Function to read a file and print Dublin Core metadata
 def process_file(file_path):
