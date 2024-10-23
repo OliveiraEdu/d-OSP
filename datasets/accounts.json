@@ -43,6 +43,26 @@
                 "schema:publicKey": "f6851c05aa44d8c045c61cdc530a2c30292d9f98dcf8ae5477283d89ee702141"
             },
             "schema:linked_project": "90664@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Awesome Banach",
+            "foaf:mbox": "awesome_banach@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Hirosaki Gakuin University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "9680-0330-0360-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "awesome_banach@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "de00e85a7847671fce28e3acfba746fb5fa2a0083bb061bc819d4ad557328c52"
+            },
+            "schema:linked_project": "03711@test"
         }
     ]
 }
