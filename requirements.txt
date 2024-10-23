@@ -13,3 +13,4 @@ whoosh
 matplotlib
 networkx
 pyld
+pyvis

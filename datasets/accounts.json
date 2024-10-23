@@ -6,23 +6,23 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Musing Perlman",
-            "foaf:mbox": "musing_perlman@email.com",
+            "foaf:name": "Heuristic Proskuriakova",
+            "foaf:mbox": "heuristic_proskuriakova@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "International Ataturk Alatoo University"
+                "foaf:name": "Edward Waters College"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "6460-8086-0203-X"
+                "value": "2382-1401-5687-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "musing_perlman@test",
-                "schema:roleName": "reviewer",
-                "schema:publicKey": "0383a6c7ddf3c7a30b7631cc3bbc53008f1598ea9972d83984b1ee5891a2f6ba"
+                "schema:identifier": "heuristic_proskuriakova@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "67e13f986993ac8ddc8bf29b069ffc6034016e0ef385f3674ddabfbb601e0dc6"
             },
-            "schema:linked_project": "53831@test"
+            "schema:linked_project": "89374@test"
         }
     ]
 }
