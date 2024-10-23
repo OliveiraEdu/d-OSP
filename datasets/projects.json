@@ -220,6 +220,192 @@
                     "file_cid": "QmeBTz4ZwyqPkPigpASZ3wJodBXzJRpeXQMwNcsWRqU5Jv",
                     "metadata_cid": "QmZFyMfhD2qR5TXnX6KLGErdmX5fdJ8k6LMUZ9B2d5GTxG",
                     "metadata": {}
+                },
+                {
+                    "file_index": 12,
+                    "file_cid": "QmT7ximApXtExAedhzUHGHDwRismRzuKykpH4dgTvGrNZs",
+                    "metadata_cid": "QmRKGmBzKiDkjn4gs8L1jnDwjovgAK2H3BvEpaYXAJui2C",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.7",
+                        "dc:title": "Diabetic retinopathy identification using parallel convolutional neural network based feature extractor and ELM classifier",
+                        "dc:description": "Expert Systems With Applications, 217 (2023) 119557. doi:10.1016/j.eswa.2023.119557",
+                        "dc:creator": [
+                            "Md. Nahiduzzaman",
+                            "Md. Robiul Islam",
+                            "Md. Omaer Faruq Goni",
+                            "Md. Shamim Anower",
+                            "Mominul Ahsan",
+                            "Julfikar Haider",
+                            "Marcin Kowalski"
+                        ],
+                        "dcterms:created": "2023-02-04T09:40:15Z",
+                        "dcterms:modified": "2023-02-07T17:54:35Z",
+                        "dc:language": "en",
+                        "dc:subject": [
+                            "Contrast limited adaptive histogram equalization (CLAHE),Diabetic retinopathy (DR),Parallel convolutional neural network (PCNN),Extreme LEARNING MACHine (ELM)",
+                            "Expert Systems With Applications, 217 (2023) 119557. doi:10.1016/j.eswa.2023.119557"
+                        ]
+                    }
+                },
+                {
+                    "file_index": 13,
+                    "file_cid": "QmdiRawzVNUiB28ENKQ7WefeFLEJ1xMjsJjwtHL2jnJ9xW",
+                    "metadata_cid": "QmNdDmT6RXE9Wra1uLy6EguRCz48qxsZAJxsnBAGborEYg",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.6",
+                        "dc:title": "The reproducibility debate is an opportunity, not a crisis",
+                        "dc:description": "BMC Research Notes, https://doi.org/10.1186/s13104-022-05942-3",
+                        "dc:creator": [
+                            "Marcus R. Munaf\u00f2 ",
+                            "Chris Chambers ",
+                            "Alexandra Collins ",
+                            "Laura Fortunato ",
+                            "Malcolm Macleod "
+                        ],
+                        "dcterms:created": "2022-02-04T06:52:19Z",
+                        "dcterms:modified": "2022-02-10T12:46:46Z",
+                        "dc:language": "EN",
+                        "dc:subject": [
+                            "UK Reproducibility Network,Reproducibility,Replicability,Research Integrity",
+                            "BMC Research Notes, https://doi.org/10.1186/s13104-022-05942-3"
+                        ]
+                    }
+                },
+                {
+                    "file_index": 14,
+                    "file_cid": "QmXquoApMLCcauNkz4tYw1Sp2tsqZ4edv1YtnQi5pmbw6C",
+                    "metadata_cid": "QmWmcNhhHB2mE3CtdF4aYp5UDmoBu5aNL5wgWNxwce7Wc8",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.7",
+                        "dc:title": "Mel Spectrogram-based advanced deep temporal clustering model with unsupervised data for fault diagnosis",
+                        "dc:creator": "Geonkyo Hong",
+                        "dcterms:created": "2023-02-07T18:16:11Z",
+                        "dcterms:modified": "2023-02-07T18:19:55Z",
+                        "dc:language": "en",
+                        "dc:subject": [
+                            "Anomaly detection,Data augmentation,Fault diagnosis,Mel spectrogram,Time series,Unsupervised learning",
+                            "Expert Systems With Applications, 217 (2023) 119551. doi:10.1016/j.eswa.2023.119551"
+                        ]
+                    }
+                },
+                {
+                    "file_index": 15,
+                    "file_cid": "QmXh37WXcrLXkJX2cAPjbPdKZ2cxJXD58XX6eU1Zc41ka4",
+                    "metadata_cid": "Qme5c7BirTdKnR7VeDhSThkABZUCKiYspwVv7LYW4fsY9e",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.7",
+                        "dc:title": "Aeroacoustic airfoil shape optimization enhanced by autoencoders",
+                        "dc:creator": "Jiaqing Kou",
+                        "dcterms:created": "2023-02-04T09:40:15Z",
+                        "dcterms:modified": "2023-02-07T16:56:45Z",
+                        "dc:language": "en-US",
+                        "dc:subject": [
+                            "Aeroacoustics,Optimization design,Amiet theory,Machine learning,Autoencoder",
+                            "Expert Systems With Applications, 217 (2023) 119513. doi:10.1016/j.eswa.2023.119513"
+                        ]
+                    }
+                },
+                {
+                    "file_index": 16,
+                    "file_cid": "QmZnh5Uuo7moZKMESFHpRjQFbbND5e3nArCzZg8uLARAgg",
+                    "metadata_cid": "QmWXV2sGi6qiMVHmjr5Z3AEFNtHtpskhbSnU9P7mR79d5a",
+                    "metadata": {
+                        "dcterms:created": "2023-02-07T10:24:44Z",
+                        "dcterms:modified": "2023-02-07T10:25:02Z",
+                        "dc:format": "application/pdf; version=1.7"
+                    }
+                },
+                {
+                    "file_index": 17,
+                    "file_cid": "QmUq29KRwpTdvScB5oYzEDobDHyb4N1f9eaZXm4VaMCgiW",
+                    "metadata_cid": "QmV28hfm88LcoDpkSqrszrpoZCAiEZ2z4y9gueoecb1KQa",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.7",
+                        "dc:title": "COVID19-MLSF: A multi-task learning-based stock market forecasting framework during the COVID-19 pandemic",
+                        "dc:description": "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549",
+                        "dc:creator": [
+                            "Chenxun Yuan",
+                            "Xiang Ma",
+                            "Hua Wang",
+                            "Caiming Zhang",
+                            "Xuemei Li"
+                        ],
+                        "dcterms:created": "2023-02-04T09:40:15Z",
+                        "dcterms:modified": "2023-02-07T16:52:03Z",
+                        "dc:language": "en-US",
+                        "dc:subject": [
+                            "Stock market forecasting,COVID-19 pandemic,Multi-task learning,Feature fusion,K-nearest neighbor classifier",
+                            "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549"
+                        ]
+                    }
+                },
+                {
+                    "file_index": 18,
+                    "file_cid": "QmSSY49SnmbCZ3oSaTki7CYZe1ZaWZfE1CsWHpt8Ge7acJ",
+                    "metadata_cid": "QmWGt6itraWvgCeN6DkwhvF1ZjGUHjxZAn457AAxnoSQD3",
+                    "metadata": {}
+                },
+                {
+                    "file_index": 19,
+                    "file_cid": "QmV1vYkuiwKGPA5Tyi4ECNFfWYocyTtQ3E5j7CSvPBX49Q",
+                    "metadata_cid": "QmUbLm4MfsCWBc3oDQh2E8Qp4fTzk4ubC3YhUvdgAF3Kxh",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.7",
+                        "dc:title": "Deep learning in insurance: Accuracy and model interpretability using TabNet",
+                        "dc:description": "Expert Systems With Applications, 217 (2023) 119543. doi:10.1016/j.eswa.2023.119543",
+                        "dc:creator": [
+                            "Kevin McDonnell",
+                            "Finbarr Murphy",
+                            "Barry Sheehan",
+                            "Leandro Masello",
+                            "German Castignani"
+                        ],
+                        "dcterms:created": "2023-02-04T09:40:15Z",
+                        "dcterms:modified": "2023-02-07T17:36:19Z",
+                        "dc:language": "en",
+                        "dc:subject": [
+                            "Deep Learning,Telematics,Connected Vehicles,Insurance,General Linear Model,XGBoost,Machine Learning,Explainable AI",
+                            "Expert Systems With Applications, 217 (2023) 119543. doi:10.1016/j.eswa.2023.119543"
+                        ]
+                    }
+                },
+                {
+                    "file_index": 20,
+                    "file_cid": "QmRA3NWM82ZGynMbYzAgYTSXCVM14Wx1RZ8fKP42G6gjgj",
+                    "metadata_cid": "QmRU9AkPhGSZESPeADSUmfLeGKdw2BVDpB22bEYQpY9nd1",
+                    "metadata": {
+                        "dcterms:created": "2009-03-24T17:33:15Z",
+                        "dc:format": "application/pdf; version=1.4",
+                        "dc:language": "en-GB"
+                    }
+                },
+                {
+                    "file_index": 21,
+                    "file_cid": "QmTLZSqzPexwEdniZXLPN6fUfmEXX6MXS3b4QjKURgxc9y",
+                    "metadata_cid": "Qmf8XZvinybkVoiFgnHmrMN16LESoi67s3d3PFsQ52H5KF",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.7",
+                        "dc:title": "Random feature selection using random subspace logistic regression",
+                        "dc:description": "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535",
+                        "dc:creator": [
+                            "Nuttanan Wichitaksorn",
+                            "Yingyue Kang",
+                            "Faqiang Zhang"
+                        ],
+                        "dcterms:created": "2023-09-04T20:45:13Z",
+                        "dcterms:modified": "2023-09-04T23:27:57Z",
+                        "dc:language": "en-US",
+                        "dc:subject": [
+                            "Feature selection,Logistic regression,Lasso logistic,Random subspace,Bootstrap",
+                            "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535"
+                        ]
+                    }
+                },
+                {
+                    "file_index": 22,
+                    "file_cid": "QmeBTz4ZwyqPkPigpASZ3wJodBXzJRpeXQMwNcsWRqU5Jv",
+                    "metadata_cid": "QmYMUAWmij5SHTJsFDsbkEK7UwaCnQFVngQ3vRkq3vFEWX",
+                    "metadata": {}
                 }
             ]
         }
