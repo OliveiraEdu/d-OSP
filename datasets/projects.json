@@ -6,299 +6,163 @@
     "@graph": [
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "92262@test",
-            "schema:publicKey": "8b109ec8797ac4ee7fb929a17be9bce8333a52fb39fc0c5013a88481531b99de",
+            "schema:identifier": "24115@test",
+            "schema:publicKey": "43684299afd4085d0b8e43c8322f7cbb6bf9fa51c5675ae850b04aeb06a48b47",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Investigating the Role of climate change in marine ecosystems",
-                "dc:abstract": "This study explores the impact of climate change in marine ecosystems, focusing on public health.",
+                "schema:name": "Exploring the Effects of deforestation on rural healthcare",
+                "dc:abstract": "This study aims to investigate the effects of deforestation on rural healthcare and propose strategies for improvement.",
+                "schema:keywords": [
+                    "deforestation",
+                    "rural healthcare",
+                    "sustainability"
+                ],
+                "schema:startDate": "2021-02-10",
+                "schema:endDate": "2025-01-28",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "European Union Horizon 2020"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Tokyo, Japan"
+                }
+            },
+            "schema:metadataCID": "QmQGNrAzZj55n4ydCFZaV7pa66sx8RE9ZxM7Doy3M4cu7k",
+            "schema:linked_user": "happy_northcutt@test",
+            "schema:files": [
+                {
+                    "file_index": 1,
+                    "file_cid": "QmXh37WXcrLXkJX2cAPjbPdKZ2cxJXD58XX6eU1Zc41ka4",
+                    "metadata_cid": "QmckqwTs92jYxSqufMbuCwXDofC96DhVeYHrtD8xRQ8KqW",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.7",
+                        "dc:title": "Aeroacoustic airfoil shape optimization enhanced by autoencoders",
+                        "dc:creator": "Jiaqing Kou",
+                        "dcterms:created": "2023-02-04T09:40:15Z",
+                        "dcterms:modified": "2023-02-07T16:56:45Z",
+                        "dc:language": "en-US",
+                        "dc:subject": [
+                            "Aeroacoustics,Optimization design,Amiet theory,Machine learning,Autoencoder",
+                            "Expert Systems With Applications, 217 (2023) 119513. doi:10.1016/j.eswa.2023.119513"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "07129@test",
+            "schema:publicKey": "87154aa15d1f3c288d5491efded846717514e1803089d82e4041a1119b331c34",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Investigating the Role of renewable energy in sustainable agriculture",
+                "dc:abstract": "This study explores the impact of renewable energy in sustainable agriculture, focusing on pollution mitigation.",
+                "schema:keywords": [
+                    "public health",
+                    "sustainable agriculture",
+                    "pollution mitigation"
+                ],
+                "schema:startDate": "2022-08-03",
+                "schema:endDate": "2026-02-28",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "European Union Horizon 2020"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Tokyo, Japan"
+                }
+            },
+            "schema:metadataCID": "QmUcsWtwhH3f7sktW9ZhE46RYLzTr1JPAEgBfLNy3RDQtP",
+            "schema:linked_user": "angry_moser@test",
+            "schema:files": [
+                {
+                    "file_index": 1,
+                    "file_cid": "QmUq29KRwpTdvScB5oYzEDobDHyb4N1f9eaZXm4VaMCgiW",
+                    "metadata_cid": "QmUWzLDJhd8N8jmuBvkfeAMvuzLiKEFfKKrehL1BQGAmpE",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.7",
+                        "dc:title": "COVID19-MLSF: A multi-task learning-based stock market forecasting framework during the COVID-19 pandemic",
+                        "dc:description": "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549",
+                        "dc:creator": [
+                            "Chenxun Yuan",
+                            "Xiang Ma",
+                            "Hua Wang",
+                            "Caiming Zhang",
+                            "Xuemei Li"
+                        ],
+                        "dcterms:created": "2023-02-04T09:40:15Z",
+                        "dcterms:modified": "2023-02-07T16:52:03Z",
+                        "dc:language": "en-US",
+                        "dc:subject": [
+                            "Stock market forecasting,COVID-19 pandemic,Multi-task learning,Feature fusion,K-nearest neighbor classifier",
+                            "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "18286@test",
+            "schema:publicKey": "877be9d37eb87a983d9e74cd9ed62d568a8e65920e683214ef3e67e7c9fbd434",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Investigating the Role of climate change in carbon neutrality",
+                "dc:abstract": "This study explores the impact of climate change in carbon neutrality, focusing on public health.",
                 "schema:keywords": [
                     "climate change",
-                    "marine ecosystems",
+                    "carbon neutrality",
                     "public health"
                 ],
-                "schema:startDate": "2023-01-26",
-                "schema:endDate": "2028-04-29",
+                "schema:startDate": "2021-09-26",
+                "schema:endDate": "2025-07-24",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "National Science Foundation"
+                    "schema:name": "National Institutes of Health"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
-                    "schema:name": "Rwanda"
+                    "schema:name": "Los Angeles, California, USA"
                 }
             },
-            "schema:metadataCID": "QmSSsZfVp2g89wH9orRJumRZGcd4WgXf3cJd9FFRiUfMLo",
-            "schema:linked_user": "inspiring_pasteur@test",
+            "schema:metadataCID": "Qmah9rr9rV51TKpL83ZHL9MheiDnqgTEapZSV4ipjdE51s",
+            "schema:linked_user": "zen_moser@test",
             "schema:files": [
                 {
                     "file_index": 1,
-                    "file_cid": "QmT7ximApXtExAedhzUHGHDwRismRzuKykpH4dgTvGrNZs",
-                    "metadata_cid": "QmXkZNjEgFhTx7yWQej7WRqZRibudZCW1BnUKtDA8kDASs",
+                    "file_cid": "QmV1vYkuiwKGPA5Tyi4ECNFfWYocyTtQ3E5j7CSvPBX49Q",
+                    "metadata_cid": "QmRMyo5mMDKgwCPjh3Q2FFqvcRC6Nodu4eCcbpv8oiDaL2",
                     "metadata": {
                         "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Diabetic retinopathy identification using parallel convolutional neural network based feature extractor and ELM classifier",
-                        "dc:description": "Expert Systems With Applications, 217 (2023) 119557. doi:10.1016/j.eswa.2023.119557",
+                        "dc:title": "Deep learning in insurance: Accuracy and model interpretability using TabNet",
+                        "dc:description": "Expert Systems With Applications, 217 (2023) 119543. doi:10.1016/j.eswa.2023.119543",
                         "dc:creator": [
-                            "Md. Nahiduzzaman",
-                            "Md. Robiul Islam",
-                            "Md. Omaer Faruq Goni",
-                            "Md. Shamim Anower",
-                            "Mominul Ahsan",
-                            "Julfikar Haider",
-                            "Marcin Kowalski"
+                            "Kevin McDonnell",
+                            "Finbarr Murphy",
+                            "Barry Sheehan",
+                            "Leandro Masello",
+                            "German Castignani"
                         ],
                         "dcterms:created": "2023-02-04T09:40:15Z",
-                        "dcterms:modified": "2023-02-07T17:54:35Z",
+                        "dcterms:modified": "2023-02-07T17:36:19Z",
                         "dc:language": "en",
                         "dc:subject": [
-                            "Contrast limited adaptive histogram equalization (CLAHE),Diabetic retinopathy (DR),Parallel convolutional neural network (PCNN),Extreme LEARNING MACHine (ELM)",
-                            "Expert Systems With Applications, 217 (2023) 119557. doi:10.1016/j.eswa.2023.119557"
-                        ]
-                    }
-                },
-                {
-                    "file_index": 2,
-                    "file_cid": "QmXh37WXcrLXkJX2cAPjbPdKZ2cxJXD58XX6eU1Zc41ka4",
-                    "metadata_cid": "QmPu6mVJ88TbbduPXDu6vTtSKEiKKCkEEcvqTEiajz2kPu",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Aeroacoustic airfoil shape optimization enhanced by autoencoders",
-                        "dc:creator": "Jiaqing Kou",
-                        "dcterms:created": "2023-02-04T09:40:15Z",
-                        "dcterms:modified": "2023-02-07T16:56:45Z",
-                        "dc:language": "en-US",
-                        "dc:subject": [
-                            "Aeroacoustics,Optimization design,Amiet theory,Machine learning,Autoencoder",
-                            "Expert Systems With Applications, 217 (2023) 119513. doi:10.1016/j.eswa.2023.119513"
-                        ]
-                    }
-                },
-                {
-                    "file_index": 3,
-                    "file_cid": "QmUq29KRwpTdvScB5oYzEDobDHyb4N1f9eaZXm4VaMCgiW",
-                    "metadata_cid": "QmNr97Gp5srTYGW7pJy5NM9J3z7yeSi7Tg2ocZNqxwRgVJ",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "COVID19-MLSF: A multi-task learning-based stock market forecasting framework during the COVID-19 pandemic",
-                        "dc:description": "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549",
-                        "dc:creator": [
-                            "Chenxun Yuan",
-                            "Xiang Ma",
-                            "Hua Wang",
-                            "Caiming Zhang",
-                            "Xuemei Li"
-                        ],
-                        "dcterms:created": "2023-02-04T09:40:15Z",
-                        "dcterms:modified": "2023-02-07T16:52:03Z",
-                        "dc:language": "en-US",
-                        "dc:subject": [
-                            "Stock market forecasting,COVID-19 pandemic,Multi-task learning,Feature fusion,K-nearest neighbor classifier",
-                            "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549"
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "90664@test",
-            "schema:publicKey": "293feb0267ff8484d81e7fd35b36428589fa4573bfdec1fae4f78f88461dfcc0",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Investigating the Role of AI in disaster response",
-                "dc:abstract": "This study explores the impact of AI in disaster response, focusing on public health.",
-                "schema:keywords": [
-                    "AI",
-                    "disaster response",
-                    "public health"
-                ],
-                "schema:startDate": "2021-07-08",
-                "schema:endDate": "2024-12-31",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "National Science Foundation"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Rwanda"
-                }
-            },
-            "schema:metadataCID": "QmdA1gPjqkT3z8rmP3FDGDhktZgF4vcv2U8Xyk3vrBgE67",
-            "schema:linked_user": "reverent_goldwasser@test",
-            "schema:files": [
-                {
-                    "file_index": 1,
-                    "file_cid": "QmT7ximApXtExAedhzUHGHDwRismRzuKykpH4dgTvGrNZs",
-                    "metadata_cid": "QmYj1ZFfQKXUMgnD2BDYMu3ac1rHfzrtcwd2XW6oeguPkQ",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Diabetic retinopathy identification using parallel convolutional neural network based feature extractor and ELM classifier",
-                        "dc:description": "Expert Systems With Applications, 217 (2023) 119557. doi:10.1016/j.eswa.2023.119557",
-                        "dc:creator": [
-                            "Md. Nahiduzzaman",
-                            "Md. Robiul Islam",
-                            "Md. Omaer Faruq Goni",
-                            "Md. Shamim Anower",
-                            "Mominul Ahsan",
-                            "Julfikar Haider",
-                            "Marcin Kowalski"
-                        ],
-                        "dcterms:created": "2023-02-04T09:40:15Z",
-                        "dcterms:modified": "2023-02-07T17:54:35Z",
-                        "dc:language": "en",
-                        "dc:subject": [
-                            "Contrast limited adaptive histogram equalization (CLAHE),Diabetic retinopathy (DR),Parallel convolutional neural network (PCNN),Extreme LEARNING MACHine (ELM)",
-                            "Expert Systems With Applications, 217 (2023) 119557. doi:10.1016/j.eswa.2023.119557"
-                        ]
-                    }
-                },
-                {
-                    "file_index": 2,
-                    "file_cid": "QmXh37WXcrLXkJX2cAPjbPdKZ2cxJXD58XX6eU1Zc41ka4",
-                    "metadata_cid": "QmPu6mVJ88TbbduPXDu6vTtSKEiKKCkEEcvqTEiajz2kPu",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Aeroacoustic airfoil shape optimization enhanced by autoencoders",
-                        "dc:creator": "Jiaqing Kou",
-                        "dcterms:created": "2023-02-04T09:40:15Z",
-                        "dcterms:modified": "2023-02-07T16:56:45Z",
-                        "dc:language": "en-US",
-                        "dc:subject": [
-                            "Aeroacoustics,Optimization design,Amiet theory,Machine learning,Autoencoder",
-                            "Expert Systems With Applications, 217 (2023) 119513. doi:10.1016/j.eswa.2023.119513"
-                        ]
-                    }
-                },
-                {
-                    "file_index": 3,
-                    "file_cid": "QmUq29KRwpTdvScB5oYzEDobDHyb4N1f9eaZXm4VaMCgiW",
-                    "metadata_cid": "QmZYR3Q5f3RxXZXzEE28Ka12aEAC229FQwfjN3gkjpBSzg",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "COVID19-MLSF: A multi-task learning-based stock market forecasting framework during the COVID-19 pandemic",
-                        "dc:description": "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549",
-                        "dc:creator": [
-                            "Chenxun Yuan",
-                            "Xiang Ma",
-                            "Hua Wang",
-                            "Caiming Zhang",
-                            "Xuemei Li"
-                        ],
-                        "dcterms:created": "2023-02-04T09:40:15Z",
-                        "dcterms:modified": "2023-02-07T16:52:03Z",
-                        "dc:language": "en-US",
-                        "dc:subject": [
-                            "Stock market forecasting,COVID-19 pandemic,Multi-task learning,Feature fusion,K-nearest neighbor classifier",
-                            "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549"
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "03711@test",
-            "schema:publicKey": "e2691f102552be41b7d9c25e5867e431ed0fbfecf131bdd589decd8aff485409",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Exploring the Effects of e-waste on rural healthcare",
-                "dc:abstract": "This study aims to investigate the effects of e-waste on rural healthcare and propose strategies for improvement.",
-                "schema:keywords": [
-                    "e-waste",
-                    "rural healthcare",
-                    "health outcomes"
-                ],
-                "schema:startDate": "2018-08-28",
-                "schema:endDate": "2026-07-05",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "United Nations Environment Programme"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Lagos, Nigeria"
-                }
-            },
-            "schema:metadataCID": "QmWW2EQoSnkCRJbCNMRcJMgPwU7Cd52Q5QhkGfaVzdwbov",
-            "schema:linked_user": "awesome_banach@test",
-            "schema:files": [
-                {
-                    "file_index": 1,
-                    "file_cid": "QmT7ximApXtExAedhzUHGHDwRismRzuKykpH4dgTvGrNZs",
-                    "metadata_cid": "QmSyCErxUhMEqjFU4NhqtbaYWrBAgAp92Du6ea9LxBy1gp",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Diabetic retinopathy identification using parallel convolutional neural network based feature extractor and ELM classifier",
-                        "dc:description": "Expert Systems With Applications, 217 (2023) 119557. doi:10.1016/j.eswa.2023.119557",
-                        "dc:creator": [
-                            "Md. Nahiduzzaman",
-                            "Md. Robiul Islam",
-                            "Md. Omaer Faruq Goni",
-                            "Md. Shamim Anower",
-                            "Mominul Ahsan",
-                            "Julfikar Haider",
-                            "Marcin Kowalski"
-                        ],
-                        "dcterms:created": "2023-02-04T09:40:15Z",
-                        "dcterms:modified": "2023-02-07T17:54:35Z",
-                        "dc:language": "en",
-                        "dc:subject": [
-                            "Contrast limited adaptive histogram equalization (CLAHE),Diabetic retinopathy (DR),Parallel convolutional neural network (PCNN),Extreme LEARNING MACHine (ELM)",
-                            "Expert Systems With Applications, 217 (2023) 119557. doi:10.1016/j.eswa.2023.119557"
-                        ]
-                    }
-                },
-                {
-                    "file_index": 2,
-                    "file_cid": "QmXh37WXcrLXkJX2cAPjbPdKZ2cxJXD58XX6eU1Zc41ka4",
-                    "metadata_cid": "QmfYmGW3z8i7hSqFkT8rSAtwGZrfb1LWso1uwwhgGPdGeH",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Aeroacoustic airfoil shape optimization enhanced by autoencoders",
-                        "dc:creator": "Jiaqing Kou",
-                        "dcterms:created": "2023-02-04T09:40:15Z",
-                        "dcterms:modified": "2023-02-07T16:56:45Z",
-                        "dc:language": "en-US",
-                        "dc:subject": [
-                            "Aeroacoustics,Optimization design,Amiet theory,Machine learning,Autoencoder",
-                            "Expert Systems With Applications, 217 (2023) 119513. doi:10.1016/j.eswa.2023.119513"
-                        ]
-                    }
-                },
-                {
-                    "file_index": 3,
-                    "file_cid": "QmUq29KRwpTdvScB5oYzEDobDHyb4N1f9eaZXm4VaMCgiW",
-                    "metadata_cid": "QmUujhMwVUbrx8QtvyTRgXS2phcNztZgLGw81ncH9Ad2AD",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "COVID19-MLSF: A multi-task learning-based stock market forecasting framework during the COVID-19 pandemic",
-                        "dc:description": "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549",
-                        "dc:creator": [
-                            "Chenxun Yuan",
-                            "Xiang Ma",
-                            "Hua Wang",
-                            "Caiming Zhang",
-                            "Xuemei Li"
-                        ],
-                        "dcterms:created": "2023-02-04T09:40:15Z",
-                        "dcterms:modified": "2023-02-07T16:52:03Z",
-                        "dc:language": "en-US",
-                        "dc:subject": [
-                            "Stock market forecasting,COVID-19 pandemic,Multi-task learning,Feature fusion,K-nearest neighbor classifier",
-                            "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549"
+                            "Deep Learning,Telematics,Connected Vehicles,Insurance,General Linear Model,XGBoost,Machine Learning,Explainable AI",
+                            "Expert Systems With Applications, 217 (2023) 119543. doi:10.1016/j.eswa.2023.119543"
                         ]
                     }
                 }

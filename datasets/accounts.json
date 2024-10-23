@@ -6,63 +6,63 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Inspiring Pasteur",
-            "foaf:mbox": "inspiring_pasteur@email.com",
+            "foaf:name": "Happy Northcutt",
+            "foaf:mbox": "happy_northcutt@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "University of Science and Technology"
+                "foaf:name": "Qinghai Radio & Television University"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "9085-1146-2060-X"
+                "value": "4017-3283-2378-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "inspiring_pasteur@test",
+                "schema:identifier": "happy_northcutt@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "100b0803b9d5a769cd99ea04c2c856be9553d66011d3ebdfb2416431fa500bc2"
+            },
+            "schema:linked_project": "24115@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Zen Moser",
+            "foaf:mbox": "zen_moser@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Jawaharlal Nehru University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "8952-4659-0979-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "zen_moser@test",
                 "schema:roleName": "publisher",
-                "schema:publicKey": "7028e2a4eb1f6341425c6c3db1d90bc7dae400543065c18d8e235d60767614ff"
+                "schema:publicKey": "af31c22500d7e355d085a0c02c4dc8b4061ee1a558958fcdd99b51d42e6293a3"
             },
-            "schema:linked_project": "92262@test"
+            "schema:linked_project": "07129@test"
         },
         {
             "@type": "foaf:Person",
-            "foaf:name": "Reverent Goldwasser",
-            "foaf:mbox": "reverent_goldwasser@email.com",
+            "foaf:name": "Wizardly Lamport",
+            "foaf:mbox": "wizardly_lamport@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "New York Film Academy"
+                "foaf:name": "Butler University"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "7798-5778-1668-X"
+                "value": "2071-1474-2008-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "reverent_goldwasser@test",
-                "schema:roleName": "reviewer",
-                "schema:publicKey": "f6851c05aa44d8c045c61cdc530a2c30292d9f98dcf8ae5477283d89ee702141"
+                "schema:identifier": "wizardly_lamport@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "47c0261542619e413edc6ad1938130418e13ebf2be98f9297660ce58bd3223b3"
             },
-            "schema:linked_project": "90664@test"
-        },
-        {
-            "@type": "foaf:Person",
-            "foaf:name": "Awesome Banach",
-            "foaf:mbox": "awesome_banach@email.com",
-            "foaf:organization": {
-                "@type": "foaf:Organization",
-                "foaf:name": "Hirosaki Gakuin University"
-            },
-            "schema:identifier": {
-                "@type": "PropertyValue",
-                "propertyID": "ORCID",
-                "value": "9680-0330-0360-X"
-            },
-            "foaf:holdsAccount": {
-                "schema:identifier": "awesome_banach@test",
-                "schema:roleName": "reviewer",
-                "schema:publicKey": "de00e85a7847671fce28e3acfba746fb5fa2a0083bb061bc819d4ad557328c52"
-            },
-            "schema:linked_project": "03711@test"
+            "schema:linked_project": "18286@test"
         }
     ]
 }
