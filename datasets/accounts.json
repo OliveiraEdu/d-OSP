@@ -6,23 +6,23 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Heuristic Proskuriakova",
-            "foaf:mbox": "heuristic_proskuriakova@email.com",
+            "foaf:name": "Jovial Northcutt",
+            "foaf:mbox": "jovial_northcutt@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Edward Waters College"
+                "foaf:name": "Kookmin University"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "2382-1401-5687-X"
+                "value": "9466-3779-0156-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "heuristic_proskuriakova@test",
-                "schema:roleName": "author",
-                "schema:publicKey": "67e13f986993ac8ddc8bf29b069ffc6034016e0ef385f3674ddabfbb601e0dc6"
+                "schema:identifier": "jovial_northcutt@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "43fecca79f674289cac3e88bd813863b7198691b8fc9dfd17751ea13452c22c9"
             },
-            "schema:linked_project": "89374@test"
+            "schema:linked_project": "41447@test"
         }
     ]
 }
