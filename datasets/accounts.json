@@ -6,23 +6,43 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Jovial Northcutt",
-            "foaf:mbox": "jovial_northcutt@email.com",
+            "foaf:name": "Inspiring Pasteur",
+            "foaf:mbox": "inspiring_pasteur@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Kookmin University"
+                "foaf:name": "University of Science and Technology"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "9466-3779-0156-X"
+                "value": "9085-1146-2060-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "jovial_northcutt@test",
-                "schema:roleName": "reviewer",
-                "schema:publicKey": "43fecca79f674289cac3e88bd813863b7198691b8fc9dfd17751ea13452c22c9"
+                "schema:identifier": "inspiring_pasteur@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "7028e2a4eb1f6341425c6c3db1d90bc7dae400543065c18d8e235d60767614ff"
             },
-            "schema:linked_project": "41447@test"
+            "schema:linked_project": "92262@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Reverent Goldwasser",
+            "foaf:mbox": "reverent_goldwasser@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "New York Film Academy"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "7798-5778-1668-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "reverent_goldwasser@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "f6851c05aa44d8c045c61cdc530a2c30292d9f98dcf8ae5477283d89ee702141"
+            },
+            "schema:linked_project": "90664@test"
         }
     ]
 }
