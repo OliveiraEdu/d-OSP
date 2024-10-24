@@ -167,6 +167,177 @@
                     }
                 }
             ]
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "57637@test",
+            "schema:publicKey": "2d7f23107e19d5bc0ab4181bc7d126922f67685cf76c1447e72ec6448c0621ad",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Investigating the Role of renewable energy in marine ecosystems",
+                "dc:abstract": "This study explores the impact of renewable energy in marine ecosystems, focusing on pollution mitigation.",
+                "schema:keywords": [
+                    "renewable energy",
+                    "marine ecosystems",
+                    "pollution mitigation"
+                ],
+                "schema:startDate": "2022-07-30",
+                "schema:endDate": "2026-01-12",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "National Geographic Society"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Berlin, Germany"
+                }
+            },
+            "schema:metadataCID": "QmcN5Hx5e2wUg2p1wwjVfKffggtBajboyVCzj8NFDXGCo7",
+            "schema:linked_user": "confident_bell@test",
+            "schema:files": [
+                {
+                    "file_index": 1,
+                    "file_cid": "QmT7ximApXtExAedhzUHGHDwRismRzuKykpH4dgTvGrNZs",
+                    "metadata_cid": "QmVcfXUxJi4Pf9Epj4Q6Vw9ifb4XSVGA57uXCygZWQtxyK",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.7",
+                        "dc:title": "Diabetic retinopathy identification using parallel convolutional neural network based feature extractor and ELM classifier",
+                        "dc:description": "Expert Systems With Applications, 217 (2023) 119557. doi:10.1016/j.eswa.2023.119557",
+                        "dc:creator": [
+                            "Md. Nahiduzzaman",
+                            "Md. Robiul Islam",
+                            "Md. Omaer Faruq Goni",
+                            "Md. Shamim Anower",
+                            "Mominul Ahsan",
+                            "Julfikar Haider",
+                            "Marcin Kowalski"
+                        ],
+                        "dcterms:created": "2023-02-04T09:40:15Z",
+                        "dcterms:modified": "2023-02-07T17:54:35Z",
+                        "dc:language": "en",
+                        "dc:subject": [
+                            "Contrast limited adaptive histogram equalization (CLAHE),Diabetic retinopathy (DR),Parallel convolutional neural network (PCNN),Extreme LEARNING MACHine (ELM)",
+                            "Expert Systems With Applications, 217 (2023) 119557. doi:10.1016/j.eswa.2023.119557"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "08040@test",
+            "schema:publicKey": "ce2fc6b6d45a1984d65f7132680725d68ce68cabab2b0f00f3bb5845501a7d13",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Investigating the Role of AI in sustainable agriculture",
+                "dc:abstract": "This study explores the impact of AI in sustainable agriculture, focusing on biodiversity.",
+                "schema:keywords": [
+                    "AI",
+                    "sustainable agriculture",
+                    "biodiversity"
+                ],
+                "schema:startDate": "2022-04-04",
+                "schema:endDate": "2027-08-12",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "Department of Energy"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Berlin, Germany"
+                }
+            },
+            "schema:metadataCID": "QmWQRvoqh8V2Zuuw6gmmuB2VsW1cP22xxYmdVSPR8iSQpW",
+            "schema:linked_user": "trusting_cocks@test",
+            "schema:files": [
+                {
+                    "file_index": 1,
+                    "file_cid": "QmZnh5Uuo7moZKMESFHpRjQFbbND5e3nArCzZg8uLARAgg",
+                    "metadata_cid": "QmUgPDfpPdy7dE4GVs1fFJFeS66nd5ovVTQ8wWdBhZkXvD",
+                    "metadata": {
+                        "dcterms:created": "2023-02-07T10:24:44Z",
+                        "dcterms:modified": "2023-02-07T10:25:02Z",
+                        "dc:format": "application/pdf; version=1.7"
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "69478@test",
+            "schema:publicKey": "45ab5e65ce23f0beb7a448486644da08f673eac93fee1a4932b59c0a57f59ebf",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Investigating the Role of AI in carbon neutrality",
+                "dc:abstract": "This study explores the impact of AI in carbon neutrality, focusing on biodiversity.",
+                "schema:keywords": [
+                    "AI",
+                    "carbon neutrality",
+                    "biodiversity"
+                ],
+                "schema:startDate": "2018-10-13",
+                "schema:endDate": "2026-10-15",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "National Institutes of Health"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Rajasthan, India"
+                }
+            },
+            "schema:metadataCID": "Qma5qahCiB2Mt1T9z1wpYmMmFpKF2M8JtGgaazqGJVmNkY",
+            "schema:linked_user": "gracious_haibt@test",
+            "schema:files": [
+                {
+                    "file_index": 1,
+                    "file_cid": "QmeBTz4ZwyqPkPigpASZ3wJodBXzJRpeXQMwNcsWRqU5Jv",
+                    "metadata_cid": "QmYMUAWmij5SHTJsFDsbkEK7UwaCnQFVngQ3vRkq3vFEWX",
+                    "metadata": {}
+                }
+            ]
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "73316@test",
+            "schema:publicKey": "a2bbf46572f20b93b306c80fcfed54e50debecffa6dd6ddc1a1509eeb69de57e",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Investigating the Role of climate change in carbon neutrality",
+                "dc:abstract": "This study explores the impact of climate change in carbon neutrality, focusing on public health.",
+                "schema:keywords": [
+                    "climate change",
+                    "carbon neutrality",
+                    "public health"
+                ],
+                "schema:startDate": "2022-08-24",
+                "schema:endDate": "2027-03-24",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "Food and Agriculture Organization"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Rotterdam, Netherlands"
+                }
+            },
+            "schema:metadataCID": "QmXoHb4sHosMMqXhPfBpmqrSN9SaNvsijoTAWeUEiLbopE"
         }
     ]
 }

@@ -63,6 +63,85 @@
                 "schema:publicKey": "47c0261542619e413edc6ad1938130418e13ebf2be98f9297660ce58bd3223b3"
             },
             "schema:linked_project": "18286@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Confident Bell",
+            "foaf:mbox": "confident_bell@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Baghyatoolah Medical Sciences University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "4488-9366-8514-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "confident_bell@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "39fc57c97582e213a3e5dfb7d056b9dd65339c65d3b1130524ed6307e8386751"
+            },
+            "schema:linked_project": "57637@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Trusting Cocks",
+            "foaf:mbox": "trusting_cocks@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Universidad ORT Uruguay"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "4423-0943-2892-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "trusting_cocks@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "a0e86647c35c598997c099f9c5de1349bb120486c23e4bba505224eb0a5af3d7"
+            },
+            "schema:linked_project": "08040@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Gracious Haibt",
+            "foaf:mbox": "gracious_haibt@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Asian Institute of Technology"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "4289-5882-0312-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "gracious_haibt@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "47b0c9af231e0e149ce54156ded0775a1f76b98f0269eab4bc54c18c7ec00c32"
+            },
+            "schema:linked_project": "69478@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Infallible Ride",
+            "foaf:mbox": "infallible_ride@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Azerbaijan State Oil Academy"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "0932-9388-0133-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "infallible_ride@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "4b9cc0adb6af4f474e7fba983a794d05549d71ea0cf3d52d1a86b1a144bb4a14"
+            }
         }
     ]
 }
