@@ -63,6 +63,26 @@
                 "schema:publicKey": "d5d84011bbd28c279a60576b6363be8c436279ead6fbd0f29adc8dbcb7ccb7c8"
             },
             "schema:linked_project": "55331@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Awesome Meitner",
+            "foaf:mbox": "awesome_meitner@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "University of the Netherlands Antilles, Curacao"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "5292-6884-3421-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "awesome_meitner@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "1fda892360cec2525f85ea83c7fb42574387199f11b3066a315c8ef993bef2fa"
+            },
+            "schema:linked_project": "14462@test"
         }
     ]
 }

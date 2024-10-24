@@ -189,6 +189,61 @@
                     }
                 }
             ]
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "14462@test",
+            "schema:publicKey": "edad9781618b9f3e9f1f8efc450003405e842b74668c9ff897133590bb4a60f1",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Analyzing the Influence of hydrogen energy on sustainable fisheries",
+                "dc:abstract": "This paper analyzes how hydrogen energy influences sustainable fisheries, providing insights into how to maximize its environmental sustainability.",
+                "schema:keywords": [
+                    "hydrogen energy",
+                    "sustainable fisheries",
+                    "environmental sustainability"
+                ],
+                "schema:startDate": "2021-12-27",
+                "schema:endDate": "2026-02-09",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "European Union Horizon 2020"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Berlin, Germany"
+                }
+            },
+            "schema:metadataCID": "QmXq2msuLaksgLukkKNhvuU2r59KS9saoLkHKivhnxvGcE",
+            "schema:linked_user": "awesome_meitner@test",
+            "schema:files": [
+                {
+                    "file_index": 1,
+                    "file_cid": "QmTLZSqzPexwEdniZXLPN6fUfmEXX6MXS3b4QjKURgxc9y",
+                    "metadata_cid": "QmdHD1YfHkHy3f2Bf8n3jBHhtVXPfnL9o5u9YgvgqovdNA",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.7",
+                        "dc:title": "Random feature selection using random subspace logistic regression",
+                        "dc:description": "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535",
+                        "dc:creator": [
+                            "Nuttanan Wichitaksorn",
+                            "Yingyue Kang",
+                            "Faqiang Zhang"
+                        ],
+                        "dcterms:created": "2023-09-04T20:45:13Z",
+                        "dcterms:modified": "2023-09-04T23:27:57Z",
+                        "dc:language": "en-US",
+                        "dc:subject": [
+                            "Feature selection,Logistic regression,Lasso logistic,Random subspace,Bootstrap",
+                            "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535"
+                        ]
+                    }
+                }
+            ]
         }
     ]
 }
