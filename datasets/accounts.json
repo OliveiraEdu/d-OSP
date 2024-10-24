@@ -83,6 +83,26 @@
                 "schema:publicKey": "1fda892360cec2525f85ea83c7fb42574387199f11b3066a315c8ef993bef2fa"
             },
             "schema:linked_project": "14462@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Busy Joliot",
+            "foaf:mbox": "busy_joliot@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "International School of Management ISM Dortmund"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "3179-7759-2664-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "busy_joliot@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "a49f66c5a8ac946294d065529188ca33fac80a399752f66d46881ff0c68138ea"
+            },
+            "schema:linked_project": "41303@test"
         }
     ]
 }
