@@ -6,39 +6,89 @@
     "@graph": [
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "25057@test",
-            "schema:publicKey": "fc341c53f4d3f116337b5139546a35823d9dcde6d8a91f672aabe9380b074909",
+            "schema:identifier": "72816@test",
+            "schema:publicKey": "51e4ef67c8468080de202021cdf53740020213ae369a1aca4df71dd2bec04947",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Exploring the Effects of wildlife monitoring on soil contamination",
-                "dc:abstract": "This study aims to investigate the effects of wildlife monitoring on soil contamination and propose strategies for improvement.",
+                "schema:name": "Investigating the Role of climate change in urban development",
+                "dc:abstract": "This study explores the impact of climate change in urban development, focusing on pollution mitigation.",
                 "schema:keywords": [
-                    "wildlife monitoring",
-                    "soil contamination",
-                    "resource optimization"
+                    "climate change",
+                    "urban development",
+                    "pollution mitigation"
                 ],
-                "schema:startDate": "2021-11-13",
-                "schema:endDate": "2027-09-25",
+                "schema:startDate": "2021-07-21",
+                "schema:endDate": "2028-02-26",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "United Nations Environment Programme"
+                    "schema:name": "World Wildlife Fund"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
-                    "schema:name": "Cape Town, South Africa"
+                    "schema:name": "Lisbon, Portugal"
                 }
             },
-            "schema:metadataCID": "QmP1EGfvB5D39qZ9AiNkGGYieYqtgDMksSWs5ca6yKCtwk",
-            "schema:linked_user": "sad_goodall@test",
+            "schema:metadataCID": "QmTP58bKjLiD3BLfYRYXUqEgoHnNuYrKozsSkB9UxBZPUY",
+            "schema:linked_user": "sleepy_ptolemy@test",
+            "schema:files": [
+                {
+                    "file_index": 1,
+                    "file_cid": "QmXquoApMLCcauNkz4tYw1Sp2tsqZ4edv1YtnQi5pmbw6C",
+                    "metadata_cid": "QmNfwXmL4R1ToJzYuucj1L1HYxrDvNAcJKVtywYWhLRmsg",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.7",
+                        "dc:title": "Mel Spectrogram-based advanced deep temporal clustering model with unsupervised data for fault diagnosis",
+                        "dc:creator": "Geonkyo Hong",
+                        "dcterms:created": "2023-02-07T18:16:11Z",
+                        "dcterms:modified": "2023-02-07T18:19:55Z",
+                        "dc:language": "en",
+                        "dc:subject": [
+                            "Anomaly detection,Data augmentation,Fault diagnosis,Mel spectrogram,Time series,Unsupervised learning",
+                            "Expert Systems With Applications, 217 (2023) 119551. doi:10.1016/j.eswa.2023.119551"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "94773@test",
+            "schema:publicKey": "e70e99ad0384c9b104c09767d45c33732b7a4ea26cf0e755fba5f6bed781f3e4",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Analyzing the Influence of digital twins on climate adaptation",
+                "dc:abstract": "This paper analyzes how digital twins influences climate adaptation, providing insights into how to maximize its risk mitigation.",
+                "schema:keywords": [
+                    "digital twins",
+                    "climate adaptation",
+                    "risk mitigation"
+                ],
+                "schema:startDate": "2020-11-28",
+                "schema:endDate": "2026-08-02",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "European Union Horizon 2020"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Rotterdam, Netherlands"
+                }
+            },
+            "schema:metadataCID": "QmefzDgsYwqAivmC9wdso56VqE4vsgk2Af2fRHcaop38bA",
+            "schema:linked_user": "unruffled_borg@test",
             "schema:files": [
                 {
                     "file_index": 1,
                     "file_cid": "QmdiRawzVNUiB28ENKQ7WefeFLEJ1xMjsJjwtHL2jnJ9xW",
-                    "metadata_cid": "QmRQjeQ54ZUYs8VKAWVqMUtaMtK4rhDLdmUv9nHJXjtjvT",
+                    "metadata_cid": "QmUProyRppTaJkyFQqXRXfznUKKLRmuRDcd7FLiP9wjB5N",
                     "metadata": {
                         "dc:format": "application/pdf; version=1.6",
                         "dc:title": "The reproducibility debate is an opportunity, not a crisis",
@@ -58,116 +108,44 @@
                             "BMC Research Notes, https://doi.org/10.1186/s13104-022-05942-3"
                         ]
                     }
-                },
-                {
-                    "file_index": 2,
-                    "file_cid": "QmTLZSqzPexwEdniZXLPN6fUfmEXX6MXS3b4QjKURgxc9y",
-                    "metadata_cid": "QmYmN5edfYJkohQnB9vdiimdJ2y3YiTgymEQAi7ceYc5Mn",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Random feature selection using random subspace logistic regression",
-                        "dc:description": "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535",
-                        "dc:creator": [
-                            "Nuttanan Wichitaksorn",
-                            "Yingyue Kang",
-                            "Faqiang Zhang"
-                        ],
-                        "dcterms:created": "2023-09-04T20:45:13Z",
-                        "dcterms:modified": "2023-09-04T23:27:57Z",
-                        "dc:language": "en-US",
-                        "dc:subject": [
-                            "Feature selection,Logistic regression,Lasso logistic,Random subspace,Bootstrap",
-                            "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535"
-                        ]
-                    }
                 }
             ]
         },
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "10948@test",
-            "schema:publicKey": "ada3f84254ddcb00db4da66004e5b245c16a7e9d22f7c88131ca39f1c2df46d0",
+            "schema:identifier": "66781@test",
+            "schema:publicKey": "84d9f4ef320d3bc29d8ed10ef3d969fe4b742f73642fb8134d4701a8a619f91e",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Exploring the Effects of telehealth on soil contamination",
-                "dc:abstract": "This study aims to investigate the effects of telehealth on soil contamination and propose strategies for improvement.",
+                "schema:name": "Analyzing the Influence of robotics on energy storage",
+                "dc:abstract": "This paper analyzes how robotics influences energy storage, providing insights into how to maximize its improved decision-making.",
                 "schema:keywords": [
-                    "telehealth",
-                    "soil contamination",
-                    "resource optimization"
+                    "robotics",
+                    "energy storage",
+                    "improved decision-making"
                 ],
-                "schema:startDate": "2024-02-07",
-                "schema:endDate": "2027-05-24",
+                "schema:startDate": "2021-10-17",
+                "schema:endDate": "2027-08-06",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "United Nations Environment Programme"
+                    "schema:name": "National Institutes of Health"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
-                    "schema:name": "Lisbon, Portugal"
+                    "schema:name": "Berlin, Germany"
                 }
             },
-            "schema:metadataCID": "QmaPXTWjMfLaZoUUsgHr7gNCBAdziowNfJuFPQinJdLFFk",
-            "schema:linked_user": "eager_gauss@test",
-            "schema:files": [
-                {
-                    "file_index": 1,
-                    "file_cid": "QmXh37WXcrLXkJX2cAPjbPdKZ2cxJXD58XX6eU1Zc41ka4",
-                    "metadata_cid": "QmSAW4LZ1v6dhQmtUp9TAezmxgNQXC3bymSw14QnK6fM5Q",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Aeroacoustic airfoil shape optimization enhanced by autoencoders",
-                        "dc:creator": "Jiaqing Kou",
-                        "dcterms:created": "2023-02-04T09:40:15Z",
-                        "dcterms:modified": "2023-02-07T16:56:45Z",
-                        "dc:language": "en-US",
-                        "dc:subject": [
-                            "Aeroacoustics,Optimization design,Amiet theory,Machine learning,Autoencoder",
-                            "Expert Systems With Applications, 217 (2023) 119513. doi:10.1016/j.eswa.2023.119513"
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "55331@test",
-            "schema:publicKey": "918ec814b3ee45fc1c611aa94d814a816a37bb37fafe5ec1dad3b15f918ea307",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Investigating the Role of climate change in marine ecosystems",
-                "dc:abstract": "This study explores the impact of climate change in marine ecosystems, focusing on pollution mitigation.",
-                "schema:keywords": [
-                    "climate change",
-                    "marine ecosystems",
-                    "pollution mitigation"
-                ],
-                "schema:startDate": "2020-11-01",
-                "schema:endDate": "2026-01-13",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "Bill and Melinda Gates Foundation"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Tokyo, Japan"
-                }
-            },
-            "schema:metadataCID": "QmPQ51ugc4mmG35kgb68vucRLFnK3UwuB5uUCPBTkGM6z3",
-            "schema:linked_user": "mystifying_almeida@test",
+            "schema:metadataCID": "QmQU69GdRR5yLLHvtMAf4jZ66V1VX2RZRVHbCyfUE869RK",
+            "schema:linked_user": "angry_nightingale@test",
             "schema:files": [
                 {
                     "file_index": 1,
                     "file_cid": "QmV1vYkuiwKGPA5Tyi4ECNFfWYocyTtQ3E5j7CSvPBX49Q",
-                    "metadata_cid": "Qmf9iPoa9dgAU7GjV2jZtK1rpSzBFC6HUFEeDp73S6i6PL",
+                    "metadata_cid": "QmX21jh1qKTV5CaywcnWpkhYiDGi3xwpJHXQqf7XbSsLwD",
                     "metadata": {
                         "dc:format": "application/pdf; version=1.7",
                         "dc:title": "Deep learning in insurance: Accuracy and model interpretability using TabNet",
@@ -192,121 +170,58 @@
         },
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "14462@test",
-            "schema:publicKey": "edad9781618b9f3e9f1f8efc450003405e842b74668c9ff897133590bb4a60f1",
+            "schema:identifier": "40254@test",
+            "schema:publicKey": "1b6e0b6c5140c3568ec14622a4abd4207bdf1ee9735c4ebeece35c4c53ba7462",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Analyzing the Influence of hydrogen energy on sustainable fisheries",
-                "dc:abstract": "This paper analyzes how hydrogen energy influences sustainable fisheries, providing insights into how to maximize its environmental sustainability.",
+                "schema:name": "Analyzing the Influence of satellite imagery on energy storage",
+                "dc:abstract": "This paper analyzes how satellite imagery influences energy storage, providing insights into how to maximize its personalized medicine.",
                 "schema:keywords": [
-                    "hydrogen energy",
-                    "sustainable fisheries",
-                    "environmental sustainability"
+                    "satellite imagery",
+                    "energy storage",
+                    "personalized medicine"
                 ],
-                "schema:startDate": "2021-12-27",
-                "schema:endDate": "2026-02-09",
+                "schema:startDate": "2021-06-22",
+                "schema:endDate": "2026-09-03",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "European Union Horizon 2020"
+                    "schema:name": "Bill and Melinda Gates Foundation"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
-                    "schema:name": "Berlin, Germany"
+                    "schema:name": "Kigali, Rwanda"
                 }
             },
-            "schema:metadataCID": "QmXq2msuLaksgLukkKNhvuU2r59KS9saoLkHKivhnxvGcE",
-            "schema:linked_user": "awesome_meitner@test",
+            "schema:metadataCID": "QmZsuhLpbQRd8purkymaLyKgyw3DmsCSmLSB4Eri72fFtS",
+            "schema:linked_user": "frosty_cole@test",
             "schema:files": [
                 {
                     "file_index": 1,
-                    "file_cid": "QmTLZSqzPexwEdniZXLPN6fUfmEXX6MXS3b4QjKURgxc9y",
-                    "metadata_cid": "QmdHD1YfHkHy3f2Bf8n3jBHhtVXPfnL9o5u9YgvgqovdNA",
+                    "file_cid": "QmT7ximApXtExAedhzUHGHDwRismRzuKykpH4dgTvGrNZs",
+                    "metadata_cid": "QmVqzuk7KUpXhJacCkZCRJgvYMemR56cx26TcrEnk1peXD",
                     "metadata": {
                         "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Random feature selection using random subspace logistic regression",
-                        "dc:description": "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535",
+                        "dc:title": "Diabetic retinopathy identification using parallel convolutional neural network based feature extractor and ELM classifier",
+                        "dc:description": "Expert Systems With Applications, 217 (2023) 119557. doi:10.1016/j.eswa.2023.119557",
                         "dc:creator": [
-                            "Nuttanan Wichitaksorn",
-                            "Yingyue Kang",
-                            "Faqiang Zhang"
+                            "Md. Nahiduzzaman",
+                            "Md. Robiul Islam",
+                            "Md. Omaer Faruq Goni",
+                            "Md. Shamim Anower",
+                            "Mominul Ahsan",
+                            "Julfikar Haider",
+                            "Marcin Kowalski"
                         ],
-                        "dcterms:created": "2023-09-04T20:45:13Z",
-                        "dcterms:modified": "2023-09-04T23:27:57Z",
-                        "dc:language": "en-US",
-                        "dc:subject": [
-                            "Feature selection,Logistic regression,Lasso logistic,Random subspace,Bootstrap",
-                            "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535"
-                        ]
-                    }
-                },
-                {
-                    "file_index": 2,
-                    "file_cid": "QmXquoApMLCcauNkz4tYw1Sp2tsqZ4edv1YtnQi5pmbw6C",
-                    "metadata_cid": "QmY7BCF2W6ZUKGSWWAgHXzeii6yu7g8qke9AvJ9gvndUPG",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Mel Spectrogram-based advanced deep temporal clustering model with unsupervised data for fault diagnosis",
-                        "dc:creator": "Geonkyo Hong",
-                        "dcterms:created": "2023-02-07T18:16:11Z",
-                        "dcterms:modified": "2023-02-07T18:19:55Z",
+                        "dcterms:created": "2023-02-04T09:40:15Z",
+                        "dcterms:modified": "2023-02-07T17:54:35Z",
                         "dc:language": "en",
                         "dc:subject": [
-                            "Anomaly detection,Data augmentation,Fault diagnosis,Mel spectrogram,Time series,Unsupervised learning",
-                            "Expert Systems With Applications, 217 (2023) 119551. doi:10.1016/j.eswa.2023.119551"
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "41303@test",
-            "schema:publicKey": "2e22153887d8c1921b5e3b6cd88439fbce1b554c28688bddc4fcf44cfb3d3a94",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Assessing the Benefits of cloud computing for smart transportation",
-                "dc:abstract": "This research focuses on the benefits and challenges posed by cloud computing for smart transportation, with an emphasis on its potential for environmental restoration.",
-                "schema:keywords": [
-                    "cloud computing",
-                    "smart transportation",
-                    "environmental restoration"
-                ],
-                "schema:startDate": "2020-02-13",
-                "schema:endDate": "2028-07-08",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "World Wildlife Fund"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Yellowstone National Park, USA"
-                }
-            },
-            "schema:metadataCID": "QmcRbvwRbwecwK8UTNVqe6dJi5527bsPENmqgxZh3d5N5G",
-            "schema:linked_user": "busy_joliot@test",
-            "schema:files": [
-                {
-                    "file_index": 1,
-                    "file_cid": "QmXquoApMLCcauNkz4tYw1Sp2tsqZ4edv1YtnQi5pmbw6C",
-                    "metadata_cid": "QmNxUqUqLQcUGcHRE4TzrbUGVWRYnJoTJ3iFxtNVrq519x",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Mel Spectrogram-based advanced deep temporal clustering model with unsupervised data for fault diagnosis",
-                        "dc:creator": "Geonkyo Hong",
-                        "dcterms:created": "2023-02-07T18:16:11Z",
-                        "dcterms:modified": "2023-02-07T18:19:55Z",
-                        "dc:language": "en",
-                        "dc:subject": [
-                            "Anomaly detection,Data augmentation,Fault diagnosis,Mel spectrogram,Time series,Unsupervised learning",
-                            "Expert Systems With Applications, 217 (2023) 119551. doi:10.1016/j.eswa.2023.119551"
+                            "Contrast limited adaptive histogram equalization (CLAHE),Diabetic retinopathy (DR),Parallel convolutional neural network (PCNN),Extreme LEARNING MACHine (ELM)",
+                            "Expert Systems With Applications, 217 (2023) 119557. doi:10.1016/j.eswa.2023.119557"
                         ]
                     }
                 }
