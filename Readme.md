@@ -236,8 +236,9 @@ The default Genesis block for Iroha 1 docker image `admin@test` does not have th
 - The project owner can designate the role of the other collaborators in RBAC
 
 ### Search Engine
-- Include projects metadata for indexing
-- Consider a knowledge graph for search results (Consider Ontologies like FOAF and Dublin Core)
+- Include projects metadata for indexing - Done
+- Consider a knowledge graph for search results (Consider Ontologies like FOAF and Dublin Core) - Done
+- Include user_account and project_acccount, affiliation, full name, role as indexed criterias for searching
 
 ### Outputs
 - Standardize on IC (icecream) whenever is possible - In progress
@@ -245,6 +246,8 @@ The default Genesis block for Iroha 1 docker image `admin@test` does not have th
 ### Entity Relationships Model
 - A user should be able to own n projects
 - On project details:
+
+```
 Project Account id = {'account_id': '18286@test'}, {
   "admin@test": {
     "file_1": {
@@ -256,10 +259,11 @@ Project Account id = {'account_id': '18286@test'}, {
   }
 }
  }
-
+```
 
 Or
 
+```
 Project Account id = {'account_id': '18286@test'}, {
   "admin@test": {
     "file_1": {
@@ -270,7 +274,7 @@ Project Account id = {'account_id': '18286@test'}, {
     "project_metadata_cid": "Qmah9rr9rV51TKpL83ZHL9MheiDnqgTEapZSV4ipjdE51s"
   }
 }
- 
+``` 
 
 
 ### Provenance
@@ -280,10 +284,14 @@ Project Account id = {'account_id': '18286@test'}, {
 - Optmize file and file metadata entries
 
 As - Is
+
+```
 Project Account id = {'account_id': '18286@test'}, { "admin@test" : { "file_1_CID" : "QmV1vYkuiwKGPA5Tyi4ECNFfWYocyTtQ3E5j7CSvPBX49Q", "file_1_metadata_CID" : "QmRMyo5mMDKgwCPjh3Q2FFqvcRC6Nodu4eCcbpv8oiDaL2", "linked_user" : "wizardly_lamport@test", "project_metadata_cid" : "Qmah9rr9rV51TKpL83ZHL9MheiDnqgTEapZSV4ipjdE51s" } }
+```
 
-To Be (something liket this) 
+To Be (something like this) 
 
+```
 Project Account id = {'account_id': '18286@test'}, {
   "admin@test": {
     "file_1": {
@@ -294,4 +302,5 @@ Project Account id = {'account_id': '18286@test'}, {
     "project_metadata_cid": "Qmah9rr9rV51TKpL83ZHL9MheiDnqgTEapZSV4ipjdE51s"
   }
 }
- }
+```
+
