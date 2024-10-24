@@ -25,18 +25,33 @@ topics = [
     {
         "title": "Investigating the Role of {subject} in {context}",
         "abstract": "This study explores the impact of {subject} in {context}, focusing on {impact}.",
-        "subjects": ["AI", "blockchain", "renewable energy", "urban sprawl", "climate change"],
-        "contexts": ["urban development", "sustainable agriculture", "marine ecosystems", "disaster response", "carbon neutrality"],
-        "impacts": ["public health", "biodiversity", "economic empowerment", "pollution mitigation", "ecosystem services"]
+        "subjects": ["AI", "blockchain", "renewable energy", "urban sprawl", "climate change", "quantum computing", "gene editing", "data privacy", "5G technology"],
+        "contexts": ["urban development", "sustainable agriculture", "marine ecosystems", "disaster response", "carbon neutrality", "smart cities", "biomedical research", "digital economies", "supply chain management"],
+        "impacts": ["public health", "biodiversity", "economic empowerment", "pollution mitigation", "ecosystem services", "data security", "innovation in healthcare", "energy efficiency", "environmental conservation"]
     },
     {
         "title": "Exploring the Effects of {subject} on {context}",
         "abstract": "This study aims to investigate the effects of {subject} on {context} and propose strategies for improvement.",
-        "subjects": ["e-waste", "deforestation", "ocean currents", "wildlife monitoring", "telehealth"],
-        "contexts": ["coastal communities", "soil contamination", "agriculture", "public safety", "rural healthcare"],
-        "impacts": ["sustainability", "ecosystem health", "resource optimization", "disaster management", "health outcomes"]
+        "subjects": ["e-waste", "deforestation", "ocean currents", "wildlife monitoring", "telehealth", "nanotechnology", "cybersecurity", "renewable materials", "electric vehicles"],
+        "contexts": ["coastal communities", "soil contamination", "agriculture", "public safety", "rural healthcare", "smart infrastructure", "space exploration", "manufacturing industry", "green transportation"],
+        "impacts": ["sustainability", "ecosystem health", "resource optimization", "disaster management", "health outcomes", "digital transformation", "space colonization", "supply chain resilience", "greenhouse gas reduction"]
+    },
+    {
+        "title": "Assessing the Benefits of {subject} for {context}",
+        "abstract": "This research focuses on the benefits and challenges posed by {subject} for {context}, with an emphasis on its potential for {impact}.",
+        "subjects": ["autonomous vehicles", "genetic algorithms", "biometrics", "virtual reality", "machine learning", "fusion energy", "cloud computing", "renewable plastics", "precision agriculture"],
+        "contexts": ["smart transportation", "industrial automation", "energy grids", "education", "urban planning", "global supply chains", "financial services", "ocean conservation", "healthcare systems"],
+        "impacts": ["safety improvements", "operational efficiency", "cost savings", "energy conservation", "access to education", "green innovation", "financial inclusion", "environmental restoration", "disease prevention"]
+    },
+    {
+        "title": "Analyzing the Influence of {subject} on {context}",
+        "abstract": "This paper analyzes how {subject} influences {context}, providing insights into how to maximize its {impact}.",
+        "subjects": ["satellite imagery", "robotics", "digital twins", "gene therapy", "deep learning", "hydrogen energy", "big data", "bioinformatics", "smart grids"],
+        "contexts": ["space exploration", "sustainable fisheries", "climate adaptation", "pharmaceutical research", "disaster preparedness", "energy storage", "urban resilience", "precision medicine", "agriculture"],
+        "impacts": ["improved decision-making", "resilience building", "personalized medicine", "energy reliability", "resource management", "environmental sustainability", "scientific discovery", "risk mitigation", "climate resilience"]
     }
 ]
+
 
 # Function to generate random dates
 def random_date(start_year=2018, end_year=2024):

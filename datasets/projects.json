@@ -6,39 +6,118 @@
     "@graph": [
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "24115@test",
-            "schema:publicKey": "43684299afd4085d0b8e43c8322f7cbb6bf9fa51c5675ae850b04aeb06a48b47",
+            "schema:identifier": "25057@test",
+            "schema:publicKey": "fc341c53f4d3f116337b5139546a35823d9dcde6d8a91f672aabe9380b074909",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Exploring the Effects of deforestation on rural healthcare",
-                "dc:abstract": "This study aims to investigate the effects of deforestation on rural healthcare and propose strategies for improvement.",
+                "schema:name": "Exploring the Effects of wildlife monitoring on soil contamination",
+                "dc:abstract": "This study aims to investigate the effects of wildlife monitoring on soil contamination and propose strategies for improvement.",
                 "schema:keywords": [
-                    "deforestation",
-                    "rural healthcare",
-                    "sustainability"
+                    "wildlife monitoring",
+                    "soil contamination",
+                    "resource optimization"
                 ],
-                "schema:startDate": "2021-02-10",
-                "schema:endDate": "2025-01-28",
+                "schema:startDate": "2021-11-13",
+                "schema:endDate": "2027-09-25",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "European Union Horizon 2020"
+                    "schema:name": "United Nations Environment Programme"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
-                    "schema:name": "Tokyo, Japan"
+                    "schema:name": "Cape Town, South Africa"
                 }
             },
-            "schema:metadataCID": "QmQGNrAzZj55n4ydCFZaV7pa66sx8RE9ZxM7Doy3M4cu7k",
-            "schema:linked_user": "happy_northcutt@test",
+            "schema:metadataCID": "QmP1EGfvB5D39qZ9AiNkGGYieYqtgDMksSWs5ca6yKCtwk",
+            "schema:linked_user": "sad_goodall@test",
+            "schema:files": [
+                {
+                    "file_index": 1,
+                    "file_cid": "QmdiRawzVNUiB28ENKQ7WefeFLEJ1xMjsJjwtHL2jnJ9xW",
+                    "metadata_cid": "QmRQjeQ54ZUYs8VKAWVqMUtaMtK4rhDLdmUv9nHJXjtjvT",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.6",
+                        "dc:title": "The reproducibility debate is an opportunity, not a crisis",
+                        "dc:description": "BMC Research Notes, https://doi.org/10.1186/s13104-022-05942-3",
+                        "dc:creator": [
+                            "Marcus R. Munaf\u00f2 ",
+                            "Chris Chambers ",
+                            "Alexandra Collins ",
+                            "Laura Fortunato ",
+                            "Malcolm Macleod "
+                        ],
+                        "dcterms:created": "2022-02-04T06:52:19Z",
+                        "dcterms:modified": "2022-02-10T12:46:46Z",
+                        "dc:language": "EN",
+                        "dc:subject": [
+                            "UK Reproducibility Network,Reproducibility,Replicability,Research Integrity",
+                            "BMC Research Notes, https://doi.org/10.1186/s13104-022-05942-3"
+                        ]
+                    }
+                },
+                {
+                    "file_index": 2,
+                    "file_cid": "QmTLZSqzPexwEdniZXLPN6fUfmEXX6MXS3b4QjKURgxc9y",
+                    "metadata_cid": "QmYmN5edfYJkohQnB9vdiimdJ2y3YiTgymEQAi7ceYc5Mn",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.7",
+                        "dc:title": "Random feature selection using random subspace logistic regression",
+                        "dc:description": "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535",
+                        "dc:creator": [
+                            "Nuttanan Wichitaksorn",
+                            "Yingyue Kang",
+                            "Faqiang Zhang"
+                        ],
+                        "dcterms:created": "2023-09-04T20:45:13Z",
+                        "dcterms:modified": "2023-09-04T23:27:57Z",
+                        "dc:language": "en-US",
+                        "dc:subject": [
+                            "Feature selection,Logistic regression,Lasso logistic,Random subspace,Bootstrap",
+                            "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "10948@test",
+            "schema:publicKey": "ada3f84254ddcb00db4da66004e5b245c16a7e9d22f7c88131ca39f1c2df46d0",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Exploring the Effects of telehealth on soil contamination",
+                "dc:abstract": "This study aims to investigate the effects of telehealth on soil contamination and propose strategies for improvement.",
+                "schema:keywords": [
+                    "telehealth",
+                    "soil contamination",
+                    "resource optimization"
+                ],
+                "schema:startDate": "2024-02-07",
+                "schema:endDate": "2027-05-24",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "United Nations Environment Programme"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Lisbon, Portugal"
+                }
+            },
+            "schema:metadataCID": "QmaPXTWjMfLaZoUUsgHr7gNCBAdziowNfJuFPQinJdLFFk",
+            "schema:linked_user": "eager_gauss@test",
             "schema:files": [
                 {
                     "file_index": 1,
                     "file_cid": "QmXh37WXcrLXkJX2cAPjbPdKZ2cxJXD58XX6eU1Zc41ka4",
-                    "metadata_cid": "QmckqwTs92jYxSqufMbuCwXDofC96DhVeYHrtD8xRQ8KqW",
+                    "metadata_cid": "QmSAW4LZ1v6dhQmtUp9TAezmxgNQXC3bymSw14QnK6fM5Q",
                     "metadata": {
                         "dc:format": "application/pdf; version=1.7",
                         "dc:title": "Aeroacoustic airfoil shape optimization enhanced by autoencoders",
@@ -56,96 +135,39 @@
         },
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "07129@test",
-            "schema:publicKey": "87154aa15d1f3c288d5491efded846717514e1803089d82e4041a1119b331c34",
+            "schema:identifier": "55331@test",
+            "schema:publicKey": "918ec814b3ee45fc1c611aa94d814a816a37bb37fafe5ec1dad3b15f918ea307",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Investigating the Role of renewable energy in sustainable agriculture",
-                "dc:abstract": "This study explores the impact of renewable energy in sustainable agriculture, focusing on pollution mitigation.",
+                "schema:name": "Investigating the Role of climate change in marine ecosystems",
+                "dc:abstract": "This study explores the impact of climate change in marine ecosystems, focusing on pollution mitigation.",
                 "schema:keywords": [
-                    "public health",
-                    "sustainable agriculture",
+                    "climate change",
+                    "marine ecosystems",
                     "pollution mitigation"
                 ],
-                "schema:startDate": "2022-08-03",
-                "schema:endDate": "2026-02-28",
+                "schema:startDate": "2020-11-01",
+                "schema:endDate": "2026-01-13",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "European Union Horizon 2020"
+                    "schema:name": "Bill and Melinda Gates Foundation"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
                     "schema:name": "Tokyo, Japan"
                 }
             },
-            "schema:metadataCID": "QmUcsWtwhH3f7sktW9ZhE46RYLzTr1JPAEgBfLNy3RDQtP",
-            "schema:linked_user": "zen_moser@test",
-            "schema:files": [
-                {
-                    "file_index": 1,
-                    "file_cid": "QmUq29KRwpTdvScB5oYzEDobDHyb4N1f9eaZXm4VaMCgiW",
-                    "metadata_cid": "QmUWzLDJhd8N8jmuBvkfeAMvuzLiKEFfKKrehL1BQGAmpE",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "COVID19-MLSF: A multi-task learning-based stock market forecasting framework during the COVID-19 pandemic",
-                        "dc:description": "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549",
-                        "dc:creator": [
-                            "Chenxun Yuan",
-                            "Xiang Ma",
-                            "Hua Wang",
-                            "Caiming Zhang",
-                            "Xuemei Li"
-                        ],
-                        "dcterms:created": "2023-02-04T09:40:15Z",
-                        "dcterms:modified": "2023-02-07T16:52:03Z",
-                        "dc:language": "en-US",
-                        "dc:subject": [
-                            "Stock market forecasting,COVID-19 pandemic,Multi-task learning,Feature fusion,K-nearest neighbor classifier",
-                            "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549"
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "18286@test",
-            "schema:publicKey": "877be9d37eb87a983d9e74cd9ed62d568a8e65920e683214ef3e67e7c9fbd434",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Investigating the Role of climate change in carbon neutrality",
-                "dc:abstract": "This study explores the impact of climate change in carbon neutrality, focusing on public health.",
-                "schema:keywords": [
-                    "climate change",
-                    "carbon neutrality",
-                    "public health"
-                ],
-                "schema:startDate": "2021-09-26",
-                "schema:endDate": "2025-07-24",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "National Institutes of Health"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Los Angeles, California, USA"
-                }
-            },
-            "schema:metadataCID": "Qmah9rr9rV51TKpL83ZHL9MheiDnqgTEapZSV4ipjdE51s",
-            "schema:linked_user": "zen_moser@test",
+            "schema:metadataCID": "QmPQ51ugc4mmG35kgb68vucRLFnK3UwuB5uUCPBTkGM6z3",
+            "schema:linked_user": "mystifying_almeida@test",
             "schema:files": [
                 {
                     "file_index": 1,
                     "file_cid": "QmV1vYkuiwKGPA5Tyi4ECNFfWYocyTtQ3E5j7CSvPBX49Q",
-                    "metadata_cid": "QmRMyo5mMDKgwCPjh3Q2FFqvcRC6Nodu4eCcbpv8oiDaL2",
+                    "metadata_cid": "Qmf9iPoa9dgAU7GjV2jZtK1rpSzBFC6HUFEeDp73S6i6PL",
                     "metadata": {
                         "dc:format": "application/pdf; version=1.7",
                         "dc:title": "Deep learning in insurance: Accuracy and model interpretability using TabNet",
@@ -167,177 +189,6 @@
                     }
                 }
             ]
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "57637@test",
-            "schema:publicKey": "2d7f23107e19d5bc0ab4181bc7d126922f67685cf76c1447e72ec6448c0621ad",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Investigating the Role of renewable energy in marine ecosystems",
-                "dc:abstract": "This study explores the impact of renewable energy in marine ecosystems, focusing on pollution mitigation.",
-                "schema:keywords": [
-                    "renewable energy",
-                    "marine ecosystems",
-                    "pollution mitigation"
-                ],
-                "schema:startDate": "2022-07-30",
-                "schema:endDate": "2026-01-12",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "National Geographic Society"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Berlin, Germany"
-                }
-            },
-            "schema:metadataCID": "QmcN5Hx5e2wUg2p1wwjVfKffggtBajboyVCzj8NFDXGCo7",
-            "schema:linked_user": "confident_bell@test",
-            "schema:files": [
-                {
-                    "file_index": 1,
-                    "file_cid": "QmT7ximApXtExAedhzUHGHDwRismRzuKykpH4dgTvGrNZs",
-                    "metadata_cid": "QmVcfXUxJi4Pf9Epj4Q6Vw9ifb4XSVGA57uXCygZWQtxyK",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Diabetic retinopathy identification using parallel convolutional neural network based feature extractor and ELM classifier",
-                        "dc:description": "Expert Systems With Applications, 217 (2023) 119557. doi:10.1016/j.eswa.2023.119557",
-                        "dc:creator": [
-                            "Md. Nahiduzzaman",
-                            "Md. Robiul Islam",
-                            "Md. Omaer Faruq Goni",
-                            "Md. Shamim Anower",
-                            "Mominul Ahsan",
-                            "Julfikar Haider",
-                            "Marcin Kowalski"
-                        ],
-                        "dcterms:created": "2023-02-04T09:40:15Z",
-                        "dcterms:modified": "2023-02-07T17:54:35Z",
-                        "dc:language": "en",
-                        "dc:subject": [
-                            "Contrast limited adaptive histogram equalization (CLAHE),Diabetic retinopathy (DR),Parallel convolutional neural network (PCNN),Extreme LEARNING MACHine (ELM)",
-                            "Expert Systems With Applications, 217 (2023) 119557. doi:10.1016/j.eswa.2023.119557"
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "08040@test",
-            "schema:publicKey": "ce2fc6b6d45a1984d65f7132680725d68ce68cabab2b0f00f3bb5845501a7d13",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Investigating the Role of AI in sustainable agriculture",
-                "dc:abstract": "This study explores the impact of AI in sustainable agriculture, focusing on biodiversity.",
-                "schema:keywords": [
-                    "AI",
-                    "sustainable agriculture",
-                    "biodiversity"
-                ],
-                "schema:startDate": "2022-04-04",
-                "schema:endDate": "2027-08-12",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "Department of Energy"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Berlin, Germany"
-                }
-            },
-            "schema:metadataCID": "QmWQRvoqh8V2Zuuw6gmmuB2VsW1cP22xxYmdVSPR8iSQpW",
-            "schema:linked_user": "trusting_cocks@test",
-            "schema:files": [
-                {
-                    "file_index": 1,
-                    "file_cid": "QmZnh5Uuo7moZKMESFHpRjQFbbND5e3nArCzZg8uLARAgg",
-                    "metadata_cid": "QmUgPDfpPdy7dE4GVs1fFJFeS66nd5ovVTQ8wWdBhZkXvD",
-                    "metadata": {
-                        "dcterms:created": "2023-02-07T10:24:44Z",
-                        "dcterms:modified": "2023-02-07T10:25:02Z",
-                        "dc:format": "application/pdf; version=1.7"
-                    }
-                }
-            ]
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "69478@test",
-            "schema:publicKey": "45ab5e65ce23f0beb7a448486644da08f673eac93fee1a4932b59c0a57f59ebf",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Investigating the Role of AI in carbon neutrality",
-                "dc:abstract": "This study explores the impact of AI in carbon neutrality, focusing on biodiversity.",
-                "schema:keywords": [
-                    "AI",
-                    "carbon neutrality",
-                    "biodiversity"
-                ],
-                "schema:startDate": "2018-10-13",
-                "schema:endDate": "2026-10-15",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "National Institutes of Health"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Rajasthan, India"
-                }
-            },
-            "schema:metadataCID": "Qma5qahCiB2Mt1T9z1wpYmMmFpKF2M8JtGgaazqGJVmNkY",
-            "schema:linked_user": "gracious_haibt@test",
-            "schema:files": [
-                {
-                    "file_index": 1,
-                    "file_cid": "QmeBTz4ZwyqPkPigpASZ3wJodBXzJRpeXQMwNcsWRqU5Jv",
-                    "metadata_cid": "QmYMUAWmij5SHTJsFDsbkEK7UwaCnQFVngQ3vRkq3vFEWX",
-                    "metadata": {}
-                }
-            ]
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "73316@test",
-            "schema:publicKey": "a2bbf46572f20b93b306c80fcfed54e50debecffa6dd6ddc1a1509eeb69de57e",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Investigating the Role of climate change in carbon neutrality",
-                "dc:abstract": "This study explores the impact of climate change in carbon neutrality, focusing on public health.",
-                "schema:keywords": [
-                    "climate change",
-                    "carbon neutrality",
-                    "public health"
-                ],
-                "schema:startDate": "2022-08-24",
-                "schema:endDate": "2027-03-24",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "Food and Agriculture Organization"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Rotterdam, Netherlands"
-                }
-            },
-            "schema:metadataCID": "QmXoHb4sHosMMqXhPfBpmqrSN9SaNvsijoTAWeUEiLbopE"
         }
     ]
 }
