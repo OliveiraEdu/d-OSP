@@ -6,83 +6,23 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Sleepy Ptolemy",
-            "foaf:mbox": "sleepy_ptolemy@email.com",
+            "foaf:name": "Exciting Collins",
+            "foaf:mbox": "exciting_collins@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Bilkent University"
+                "foaf:name": "Cambridge College"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "1554-5972-7255-X"
+                "value": "8826-8041-7012-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "sleepy_ptolemy@test",
-                "schema:roleName": "author",
-                "schema:publicKey": "6b722536de4ea9abf21c8fd5df85971307b63cef34ab1908f31238b5975e2fd6"
-            },
-            "schema:linked_project": "72816@test"
-        },
-        {
-            "@type": "foaf:Person",
-            "foaf:name": "Unruffled Borg",
-            "foaf:mbox": "unruffled_borg@email.com",
-            "foaf:organization": {
-                "@type": "foaf:Organization",
-                "foaf:name": "Ecole Sup\u00e9rieure de Commerce de Grenoble"
-            },
-            "schema:identifier": {
-                "@type": "PropertyValue",
-                "propertyID": "ORCID",
-                "value": "9417-5311-2905-X"
-            },
-            "foaf:holdsAccount": {
-                "schema:identifier": "unruffled_borg@test",
-                "schema:roleName": "author",
-                "schema:publicKey": "d5b972dbb5bf015b6543201667ee0020c6b27030759e6228a7fbffd4e04ad144"
-            },
-            "schema:linked_project": "94773@test"
-        },
-        {
-            "@type": "foaf:Person",
-            "foaf:name": "Angry Nightingale",
-            "foaf:mbox": "angry_nightingale@email.com",
-            "foaf:organization": {
-                "@type": "foaf:Organization",
-                "foaf:name": "Fontbonne College"
-            },
-            "schema:identifier": {
-                "@type": "PropertyValue",
-                "propertyID": "ORCID",
-                "value": "6511-3505-6380-X"
-            },
-            "foaf:holdsAccount": {
-                "schema:identifier": "angry_nightingale@test",
-                "schema:roleName": "author",
-                "schema:publicKey": "8cc001e7e2ead36ef0832a0b0e4c755619572a3dc47c1c344c269ec4a2d03bd8"
-            },
-            "schema:linked_project": "66781@test"
-        },
-        {
-            "@type": "foaf:Person",
-            "foaf:name": "Frosty Cole",
-            "foaf:mbox": "frosty_cole@email.com",
-            "foaf:organization": {
-                "@type": "foaf:Organization",
-                "foaf:name": "Institut National Polytechnique de Toulouse"
-            },
-            "schema:identifier": {
-                "@type": "PropertyValue",
-                "propertyID": "ORCID",
-                "value": "1129-8949-9952-X"
-            },
-            "foaf:holdsAccount": {
-                "schema:identifier": "frosty_cole@test",
+                "schema:identifier": "exciting_collins@test",
                 "schema:roleName": "publisher",
-                "schema:publicKey": "7d01d93e368fe206ae56b250eac23407e16c47f8129d262ea2f330a50848ed86"
+                "schema:publicKey": "287c4f95937e9fc19cc4e7d69ee2b9a4bfec6ab24fc304f32fe83142888855b1"
             },
-            "schema:linked_project": "40254@test"
+            "schema:linked_project": "11896@test"
         }
     ]
 }
