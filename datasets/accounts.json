@@ -23,6 +23,66 @@
                 "schema:publicKey": "287c4f95937e9fc19cc4e7d69ee2b9a4bfec6ab24fc304f32fe83142888855b1"
             },
             "schema:linked_project": "11896@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Hungry Lewin",
+            "foaf:mbox": "hungry_lewin@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Russell Berrie Nanotechnology Institute"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "5181-5954-7132-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "hungry_lewin@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "38f83db0ad132dd9ba987a3904b8331fb9802a0dd1ce1b77597eca58c21af0a3"
+            },
+            "schema:linked_project": "06253@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Funny Rhodes",
+            "foaf:mbox": "funny_rhodes@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Stie Perbanas Surabaya"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "4562-9832-0108-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "funny_rhodes@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "7f3032ce45b56882d2891738c3d02bdc6ad0b1b740716ebb7a36204848e92631"
+            },
+            "schema:linked_project": "37235@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Hopeful Merkle",
+            "foaf:mbox": "hopeful_merkle@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Masaryk University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "2183-7843-3162-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "hopeful_merkle@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "374c200ca995463fa54ef77d13bb461392f1af9189719adc4c48669f96040585"
+            },
+            "schema:linked_project": "33949@test"
         }
     ]
 }
