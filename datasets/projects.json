@@ -6,172 +6,34 @@
     "@graph": [
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "58143@test",
-            "schema:publicKey": "b58ce0d11c952b94b0d19b8fb0437c15bce9e305917b9c3e17a15cb3c07c99f4",
+            "schema:identifier": "74933@test",
+            "schema:publicKey": "f9ee90c1aac2fc19565bf4ec75133b13aeb72780081723829fad05ff6a673775",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Analyzing the Influence of digital twins on sustainable fisheries",
-                "dc:abstract": "This paper analyzes how digital twins influences sustainable fisheries, providing insights into how to maximize its energy reliability.",
+                "schema:name": "Assessing the Benefits of genetic algorithms for financial services",
+                "dc:abstract": "This research focuses on the benefits and challenges posed by genetic algorithms for financial services, with an emphasis on its potential for disease prevention.",
                 "schema:keywords": [
-                    "digital twins",
-                    "sustainable fisheries",
-                    "energy reliability"
+                    "genetic algorithms",
+                    "financial services",
+                    "disease prevention"
                 ],
-                "schema:startDate": "2023-08-14",
-                "schema:endDate": "2026-04-21",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "Bill and Melinda Gates Foundation"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Cape Town, South Africa"
-                }
-            },
-            "schema:metadataCID": "QmchZ7Re9y8X7sd3Nn5vndXizwPRTcKkjtUuJNYkEEvM8w",
-            "schema:linked_user": "condescending_ptolemy@test",
-            "schema:files": [
-                {
-                    "file_index": 1,
-                    "file_cid": "QmTLZSqzPexwEdniZXLPN6fUfmEXX6MXS3b4QjKURgxc9y",
-                    "metadata_cid": "QmZ9AMNcFDqmtYVMNBLdTNDVCGLnVmVmSZvDRVu8hBeKoD",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Random feature selection using random subspace logistic regression",
-                        "dc:description": "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535",
-                        "dc:creator": [
-                            "Nuttanan Wichitaksorn",
-                            "Yingyue Kang",
-                            "Faqiang Zhang"
-                        ],
-                        "dcterms:created": "2023-09-04T20:45:13Z",
-                        "dcterms:modified": "2023-09-04T23:27:57Z",
-                        "dc:language": "en-US",
-                        "dc:subject": [
-                            "Feature selection,Logistic regression,Lasso logistic,Random subspace,Bootstrap",
-                            "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535"
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "12539@test",
-            "schema:publicKey": "ae810dcbd8fb0ff5bbfa7420eef37f3b9da13b76a609c39824788f5e7abf64b4",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Analyzing the Influence of hydrogen energy on climate adaptation",
-                "dc:abstract": "This paper analyzes how hydrogen energy influences climate adaptation, providing insights into how to maximize its scientific discovery.",
-                "schema:keywords": [
-                    "hydrogen energy",
-                    "climate adaptation",
-                    "scientific discovery"
-                ],
-                "schema:startDate": "2019-11-09",
-                "schema:endDate": "2026-10-05",
+                "schema:startDate": "2021-09-26",
+                "schema:endDate": "2025-04-05",
                 "schema:funding": {
                     "@type": "schema:Organization",
                     "schema:name": "Department of Energy"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
-                    "schema:name": "Phuket, Thailand"
-                }
-            },
-            "schema:metadataCID": "QmaPQFP6oPd6gihXraYjKPc1GKkBeMfG9gfTDETCG6hP3k",
-            "schema:linked_user": "lucid_poincare@test",
-            "schema:files": [
-                {
-                    "file_index": 1,
-                    "file_cid": "QmUq29KRwpTdvScB5oYzEDobDHyb4N1f9eaZXm4VaMCgiW",
-                    "metadata_cid": "QmQWwKk1xneVELzmonjwbHk8q4NLeYcA7FHdWt1rcXpGPQ",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "COVID19-MLSF: A multi-task learning-based stock market forecasting framework during the COVID-19 pandemic",
-                        "dc:description": "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549",
-                        "dc:creator": [
-                            "Chenxun Yuan",
-                            "Xiang Ma",
-                            "Hua Wang",
-                            "Caiming Zhang",
-                            "Xuemei Li"
-                        ],
-                        "dcterms:created": "2023-02-04T09:40:15Z",
-                        "dcterms:modified": "2023-02-07T16:52:03Z",
-                        "dc:language": "en-US",
-                        "dc:subject": [
-                            "Stock market forecasting,COVID-19 pandemic,Multi-task learning,Feature fusion,K-nearest neighbor classifier",
-                            "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549"
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "29862@test",
-            "schema:publicKey": "fde9006e66d1a0a7bd25bdababa61fc566c719f39230477a59537330ad9a3ec8",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Investigating the Role of blockchain in disaster response",
-                "dc:abstract": "This study explores the impact of blockchain in disaster response, focusing on pollution mitigation.",
-                "schema:keywords": [
-                    "blockchain",
-                    "disaster response",
-                    "pollution mitigation"
-                ],
-                "schema:startDate": "2018-09-12",
-                "schema:endDate": "2028-04-24",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "United Nations Environment Programme"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
                     "schema:name": "Lisbon, Portugal"
                 }
             },
-            "schema:metadataCID": "QmfKvPLc5GPcA5yXKVJ4nTqQPFp4Qg7VoTD6FFFNxHHXRf",
-            "schema:linked_user": "condescending_moser@test",
-            "schema:files": [
-                {
-                    "file_index": 1,
-                    "file_cid": "QmUq29KRwpTdvScB5oYzEDobDHyb4N1f9eaZXm4VaMCgiW",
-                    "metadata_cid": "Qmck3MEDu3DgpimoqkkjxLJnyc27QXR3EEQwXde7yJXebq",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "COVID19-MLSF: A multi-task learning-based stock market forecasting framework during the COVID-19 pandemic",
-                        "dc:description": "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549",
-                        "dc:creator": [
-                            "Chenxun Yuan",
-                            "Xiang Ma",
-                            "Hua Wang",
-                            "Caiming Zhang",
-                            "Xuemei Li"
-                        ],
-                        "dcterms:created": "2023-02-04T09:40:15Z",
-                        "dcterms:modified": "2023-02-07T16:52:03Z",
-                        "dc:language": "en-US",
-                        "dc:subject": [
-                            "Stock market forecasting,COVID-19 pandemic,Multi-task learning,Feature fusion,K-nearest neighbor classifier",
-                            "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549"
-                        ]
-                    }
-                }
-            ]
+            "schema:metadataCID": "Qmf8ykuh62dkPoihRPk5bDh35F6uye21ocvzUwfusK9xEq",
+            "schema:linked_user": "affectionate_northcutt@test"
         }
     ]
 }

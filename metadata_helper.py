@@ -56,6 +56,8 @@ def get_writer_with_retry(ix, retries=5, delay=1):
 def add_document(writer, metadata, full_text):
     """Normalize the metadata and add it to the index."""
     writer.add_document(
+        user_id = metadata['user_id'],
+        project_id = metadata['project_id'],
         cid=metadata['cid'],
         name=normalize_metadata_value(metadata['name']),
         size=metadata['size'],

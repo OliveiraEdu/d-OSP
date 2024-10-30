@@ -6,63 +6,23 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Condescending Ptolemy",
-            "foaf:mbox": "condescending_ptolemy@email.com",
+            "foaf:name": "Affectionate Northcutt",
+            "foaf:mbox": "affectionate_northcutt@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "University of East"
+                "foaf:name": "Pennsylvania Institute of Technology"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "0763-6288-9494-X"
+                "value": "0672-5617-2499-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "condescending_ptolemy@test",
-                "schema:roleName": "reviewer",
-                "schema:publicKey": "9169acb7a008cac1eea1d5e986520deea1c1b1137f122f3d73002f37f50f4411"
+                "schema:identifier": "affectionate_northcutt@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "271c9fb31ef706b922f1136fbc42da507ef66784c70a747f4646f6010da2ac7b"
             },
-            "schema:linked_project": "58143@test"
-        },
-        {
-            "@type": "foaf:Person",
-            "foaf:name": "Lucid Poincare",
-            "foaf:mbox": "lucid_poincare@email.com",
-            "foaf:organization": {
-                "@type": "foaf:Organization",
-                "foaf:name": "Kyushu University"
-            },
-            "schema:identifier": {
-                "@type": "PropertyValue",
-                "propertyID": "ORCID",
-                "value": "2466-8670-1916-X"
-            },
-            "foaf:holdsAccount": {
-                "schema:identifier": "lucid_poincare@test",
-                "schema:roleName": "reviewer",
-                "schema:publicKey": "40cb58146bafcda4ee36d2581441488520dc5604cbc8c3fa62710e235ad7d940"
-            },
-            "schema:linked_project": "12539@test"
-        },
-        {
-            "@type": "foaf:Person",
-            "foaf:name": "Condescending Moser",
-            "foaf:mbox": "condescending_moser@email.com",
-            "foaf:organization": {
-                "@type": "foaf:Organization",
-                "foaf:name": "Vidyasagar University"
-            },
-            "schema:identifier": {
-                "@type": "PropertyValue",
-                "propertyID": "ORCID",
-                "value": "1128-2525-8161-X"
-            },
-            "foaf:holdsAccount": {
-                "schema:identifier": "condescending_moser@test",
-                "schema:roleName": "publisher",
-                "schema:publicKey": "b776369b2525e197da2d4af698b9c86212cdae2bb4005c106c86bd37cc529ac1"
-            },
-            "schema:linked_project": "29862@test"
+            "schema:linked_project": "74933@test"
         }
     ]
 }
