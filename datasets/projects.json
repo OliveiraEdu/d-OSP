@@ -6,49 +6,54 @@
     "@graph": [
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "11896@test",
-            "schema:publicKey": "2671ee08b5ec442513c4fdffbf995d85ee9aa4b71897c2629cd9e924d3472e39",
+            "schema:identifier": "58143@test",
+            "schema:publicKey": "b58ce0d11c952b94b0d19b8fb0437c15bce9e305917b9c3e17a15cb3c07c99f4",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Exploring the Effects of nanotechnology on agriculture",
-                "dc:abstract": "This study aims to investigate the effects of nanotechnology on agriculture and propose strategies for improvement.",
+                "schema:name": "Analyzing the Influence of digital twins on sustainable fisheries",
+                "dc:abstract": "This paper analyzes how digital twins influences sustainable fisheries, providing insights into how to maximize its energy reliability.",
                 "schema:keywords": [
-                    "nanotechnology",
-                    "agriculture",
-                    "health outcomes"
+                    "digital twins",
+                    "sustainable fisheries",
+                    "energy reliability"
                 ],
-                "schema:startDate": "2019-01-06",
-                "schema:endDate": "2027-11-16",
+                "schema:startDate": "2023-08-14",
+                "schema:endDate": "2026-04-21",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "European Union Horizon 2020"
+                    "schema:name": "Bill and Melinda Gates Foundation"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
-                    "schema:name": "Yellowstone National Park, USA"
+                    "schema:name": "Cape Town, South Africa"
                 }
             },
-            "schema:metadataCID": "QmZB6tNRM9nfehMQSdAJYdkumNEnafMTSpRZwSMgVAyk8x",
-            "schema:linked_user": "exciting_collins@test",
+            "schema:metadataCID": "QmchZ7Re9y8X7sd3Nn5vndXizwPRTcKkjtUuJNYkEEvM8w",
+            "schema:linked_user": "condescending_ptolemy@test",
             "schema:files": [
                 {
                     "file_index": 1,
-                    "file_cid": "QmXh37WXcrLXkJX2cAPjbPdKZ2cxJXD58XX6eU1Zc41ka4",
-                    "metadata_cid": "QmVsfU5LqvxTNgdmHoxpRZ2GaPY2SeWDNyumiVEgVugsLt",
+                    "file_cid": "QmTLZSqzPexwEdniZXLPN6fUfmEXX6MXS3b4QjKURgxc9y",
+                    "metadata_cid": "QmZ9AMNcFDqmtYVMNBLdTNDVCGLnVmVmSZvDRVu8hBeKoD",
                     "metadata": {
                         "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Aeroacoustic airfoil shape optimization enhanced by autoencoders",
-                        "dc:creator": "Jiaqing Kou",
-                        "dcterms:created": "2023-02-04T09:40:15Z",
-                        "dcterms:modified": "2023-02-07T16:56:45Z",
+                        "dc:title": "Random feature selection using random subspace logistic regression",
+                        "dc:description": "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535",
+                        "dc:creator": [
+                            "Nuttanan Wichitaksorn",
+                            "Yingyue Kang",
+                            "Faqiang Zhang"
+                        ],
+                        "dcterms:created": "2023-09-04T20:45:13Z",
+                        "dcterms:modified": "2023-09-04T23:27:57Z",
                         "dc:language": "en-US",
                         "dc:subject": [
-                            "Aeroacoustics,Optimization design,Amiet theory,Machine learning,Autoencoder",
-                            "Expert Systems With Applications, 217 (2023) 119513. doi:10.1016/j.eswa.2023.119513"
+                            "Feature selection,Logistic regression,Lasso logistic,Random subspace,Bootstrap",
+                            "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535"
                         ]
                     }
                 }
@@ -56,159 +61,113 @@
         },
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "06253@test",
-            "schema:publicKey": "e3b71d200e46cef3a0863703883f98a9cd0e5468cdd6ed67436a6d11acb6d25f",
+            "schema:identifier": "12539@test",
+            "schema:publicKey": "ae810dcbd8fb0ff5bbfa7420eef37f3b9da13b76a609c39824788f5e7abf64b4",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Investigating the Role of renewable energy in marine ecosystems",
-                "dc:abstract": "This study explores the impact of renewable energy in marine ecosystems, focusing on pollution mitigation.",
+                "schema:name": "Analyzing the Influence of hydrogen energy on climate adaptation",
+                "dc:abstract": "This paper analyzes how hydrogen energy influences climate adaptation, providing insights into how to maximize its scientific discovery.",
                 "schema:keywords": [
-                    "renewable energy",
-                    "marine ecosystems",
+                    "hydrogen energy",
+                    "climate adaptation",
+                    "scientific discovery"
+                ],
+                "schema:startDate": "2019-11-09",
+                "schema:endDate": "2026-10-05",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "Department of Energy"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Phuket, Thailand"
+                }
+            },
+            "schema:metadataCID": "QmaPQFP6oPd6gihXraYjKPc1GKkBeMfG9gfTDETCG6hP3k",
+            "schema:linked_user": "lucid_poincare@test",
+            "schema:files": [
+                {
+                    "file_index": 1,
+                    "file_cid": "QmUq29KRwpTdvScB5oYzEDobDHyb4N1f9eaZXm4VaMCgiW",
+                    "metadata_cid": "QmQWwKk1xneVELzmonjwbHk8q4NLeYcA7FHdWt1rcXpGPQ",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.7",
+                        "dc:title": "COVID19-MLSF: A multi-task learning-based stock market forecasting framework during the COVID-19 pandemic",
+                        "dc:description": "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549",
+                        "dc:creator": [
+                            "Chenxun Yuan",
+                            "Xiang Ma",
+                            "Hua Wang",
+                            "Caiming Zhang",
+                            "Xuemei Li"
+                        ],
+                        "dcterms:created": "2023-02-04T09:40:15Z",
+                        "dcterms:modified": "2023-02-07T16:52:03Z",
+                        "dc:language": "en-US",
+                        "dc:subject": [
+                            "Stock market forecasting,COVID-19 pandemic,Multi-task learning,Feature fusion,K-nearest neighbor classifier",
+                            "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "29862@test",
+            "schema:publicKey": "fde9006e66d1a0a7bd25bdababa61fc566c719f39230477a59537330ad9a3ec8",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Investigating the Role of blockchain in disaster response",
+                "dc:abstract": "This study explores the impact of blockchain in disaster response, focusing on pollution mitigation.",
+                "schema:keywords": [
+                    "blockchain",
+                    "disaster response",
                     "pollution mitigation"
                 ],
-                "schema:startDate": "2024-01-19",
-                "schema:endDate": "2027-06-10",
+                "schema:startDate": "2018-09-12",
+                "schema:endDate": "2028-04-24",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "Bill and Melinda Gates Foundation"
+                    "schema:name": "United Nations Environment Programme"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
-                    "schema:name": "Amazon Rainforest, Brazil"
+                    "schema:name": "Lisbon, Portugal"
                 }
             },
-            "schema:metadataCID": "QmeLTJ5GdhndUJqfhnbvZkGMESwdfXYZhuuVtjjDTikzzo",
-            "schema:linked_user": "hungry_lewin@test",
+            "schema:metadataCID": "QmfKvPLc5GPcA5yXKVJ4nTqQPFp4Qg7VoTD6FFFNxHHXRf",
+            "schema:linked_user": "condescending_moser@test",
             "schema:files": [
                 {
                     "file_index": 1,
-                    "file_cid": "QmXquoApMLCcauNkz4tYw1Sp2tsqZ4edv1YtnQi5pmbw6C",
-                    "metadata_cid": "QmfJ1igvtn8uEBNo5KY3XWMsUiD2jcX7DQQ8DLRnYXzdp3",
+                    "file_cid": "QmUq29KRwpTdvScB5oYzEDobDHyb4N1f9eaZXm4VaMCgiW",
+                    "metadata_cid": "Qmck3MEDu3DgpimoqkkjxLJnyc27QXR3EEQwXde7yJXebq",
                     "metadata": {
                         "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Mel Spectrogram-based advanced deep temporal clustering model with unsupervised data for fault diagnosis",
-                        "dc:creator": "Geonkyo Hong",
-                        "dcterms:created": "2023-02-07T18:16:11Z",
-                        "dcterms:modified": "2023-02-07T18:19:55Z",
-                        "dc:language": "en",
-                        "dc:subject": [
-                            "Anomaly detection,Data augmentation,Fault diagnosis,Mel spectrogram,Time series,Unsupervised learning",
-                            "Expert Systems With Applications, 217 (2023) 119551. doi:10.1016/j.eswa.2023.119551"
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "37235@test",
-            "schema:publicKey": "1dc1c6aaaf50b9326a0f880c1831d43aff2ede019e818e07e71a21d69cecaef6",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Investigating the Role of AI in disaster response",
-                "dc:abstract": "This study explores the impact of AI in disaster response, focusing on ecosystem services.",
-                "schema:keywords": [
-                    "AI",
-                    "disaster response",
-                    "ecosystem services"
-                ],
-                "schema:startDate": "2021-09-21",
-                "schema:endDate": "2025-07-17",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "Bill and Melinda Gates Foundation"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Kigali, Rwanda"
-                }
-            },
-            "schema:metadataCID": "QmcZDd1LmTsqcF4VkBZmKJtQpxE3WzefVqx7yUsrKjPdQm",
-            "schema:linked_user": "funny_rhodes@test",
-            "schema:files": [
-                {
-                    "file_index": 1,
-                    "file_cid": "QmTLZSqzPexwEdniZXLPN6fUfmEXX6MXS3b4QjKURgxc9y",
-                    "metadata_cid": "QmYmN5edfYJkohQnB9vdiimdJ2y3YiTgymEQAi7ceYc5Mn",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Random feature selection using random subspace logistic regression",
-                        "dc:description": "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535",
+                        "dc:title": "COVID19-MLSF: A multi-task learning-based stock market forecasting framework during the COVID-19 pandemic",
+                        "dc:description": "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549",
                         "dc:creator": [
-                            "Nuttanan Wichitaksorn",
-                            "Yingyue Kang",
-                            "Faqiang Zhang"
+                            "Chenxun Yuan",
+                            "Xiang Ma",
+                            "Hua Wang",
+                            "Caiming Zhang",
+                            "Xuemei Li"
                         ],
-                        "dcterms:created": "2023-09-04T20:45:13Z",
-                        "dcterms:modified": "2023-09-04T23:27:57Z",
+                        "dcterms:created": "2023-02-04T09:40:15Z",
+                        "dcterms:modified": "2023-02-07T16:52:03Z",
                         "dc:language": "en-US",
                         "dc:subject": [
-                            "Feature selection,Logistic regression,Lasso logistic,Random subspace,Bootstrap",
-                            "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535"
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "33949@test",
-            "schema:publicKey": "6d5fa2105c191dd62e6add044619d42285179bd58db80b6993e2830a4a6dd87d",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Assessing the Benefits of autonomous vehicles for industrial automation",
-                "dc:abstract": "This research focuses on the benefits and challenges posed by autonomous vehicles for industrial automation, with an emphasis on its potential for energy conservation.",
-                "schema:keywords": [
-                    "autonomous vehicles",
-                    "industrial automation",
-                    "energy conservation"
-                ],
-                "schema:startDate": "2024-12-17",
-                "schema:endDate": "2026-03-09",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "Asian Development Bank"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Amazon Rainforest, Brazil"
-                }
-            },
-            "schema:metadataCID": "QmWTaftDmhzYBSfACtMb6n8Sxqmsnk6iFSphjYxSasym1s",
-            "schema:linked_user": "hopeful_merkle@test",
-            "schema:files": [
-                {
-                    "file_index": 1,
-                    "file_cid": "QmTLZSqzPexwEdniZXLPN6fUfmEXX6MXS3b4QjKURgxc9y",
-                    "metadata_cid": "QmfGihDWASR8bymFwYS5ewzBLw1qoqzggEKDDVduGhySgT",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Random feature selection using random subspace logistic regression",
-                        "dc:description": "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535",
-                        "dc:creator": [
-                            "Nuttanan Wichitaksorn",
-                            "Yingyue Kang",
-                            "Faqiang Zhang"
-                        ],
-                        "dcterms:created": "2023-09-04T20:45:13Z",
-                        "dcterms:modified": "2023-09-04T23:27:57Z",
-                        "dc:language": "en-US",
-                        "dc:subject": [
-                            "Feature selection,Logistic regression,Lasso logistic,Random subspace,Bootstrap",
-                            "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535"
+                            "Stock market forecasting,COVID-19 pandemic,Multi-task learning,Feature fusion,K-nearest neighbor classifier",
+                            "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549"
                         ]
                     }
                 }
