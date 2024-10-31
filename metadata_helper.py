@@ -84,14 +84,81 @@ def search_index(keyword, ix):
             query = QueryParser("full_text", ix.schema).parse(keyword)
             results = searcher.search(query)
 
+            project_ids = []
             if results:
                 for result in results:
                     logging.info(f"CID: {result['cid']}, Project: {result['project_id']}, Name: {result['name']}, Title: {result['title']}, "
                                  f"Creator: {result['creator']}, Size: {result['size']} bytes")
+                    project_ids.append(result['project_id'])
             else:
                 logging.info(f"No results found for '{keyword}'")
+
+        return project_ids
     except Exception as e:
         logging.error(f"Error occurred during search: {e}")
+
+#Put the Iroha related function here for temporary tests
+
+from Crypto.Hash import keccak
+import os
+import binascii
+from iroha import IrohaCrypto
+from iroha import Iroha, IrohaGrpc
+from iroha.ed25519 import H
+import integration_helpers
+from iroha.primitive_pb2 import can_set_my_account_detail
+import sys
+import json
+import icecream as ic
+
+if sys.version_info[0] < 3:
+    raise Exception("Python 3 or a more recent version is required.")
+
+# Load configuration from config.json file
+config_path = "config.json"  # Update this path as needed
+with open(config_path, "r") as f:
+    config = json.load(f)
+
+IROHA_HOST_ADDR = config["IROHA_HOST_ADDR"]
+IROHA_PORT = config["IROHA_PORT"]
+ADMIN_ACCOUNT_ID = config["ADMIN_ACCOUNT_ID"]
+ADMIN_PRIVATE_KEY = config["ADMIN_PRIVATE_KEY"]
+
+iroha = Iroha(ADMIN_ACCOUNT_ID)
+net = IrohaGrpc("{}:{}".format(IROHA_HOST_ADDR, IROHA_PORT))
+
+# #Query - GetAccountDetail
+# query = iroha.query('GetAccountDetail', account_id=project_id)
+# IrohaCrypto.sign_query(query, ADMIN_PRIVATE_KEY)
+# response = net.send_query(query)
+# # print(response)
+# project_data = response.account_detail_response
+# project_details = project_data.detail
+# print(f'Project Account id = {project_account}, {project_details}')
+
+
+def get_project_details(project_ids, net, iroha):
+    """Get account details for each project ID."""
+    admin_private_key = ADMIN_PRIVATE_KEY
+
+    project_accounts = []
+    for project_id in project_ids[:n]:  # Read the first 'n' project IDs
+        query = iroha.query('GetAccountDetail', account_id=project_id)
+        IrohaCrypto.sign_query(query, admin_private_key)
+        response = net.send_query(query)
+        project_data = response.account_detail_response
+        project_details = project_data.detail
+        print(f"Project Account id = {project_id}, {project_details}")
+        project_accounts.append({
+            "account_id": project_id,
+            "project_details": project_details
+        })
+
+    return project_accounts
+
+
+
+
 
 
 # Function to extract only Dublin Core related metadata
