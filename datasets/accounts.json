@@ -6,23 +6,43 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Affectionate Northcutt",
-            "foaf:mbox": "affectionate_northcutt@email.com",
+            "foaf:name": "Exciting Pasteur",
+            "foaf:mbox": "exciting_pasteur@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Pennsylvania Institute of Technology"
+                "foaf:name": "Florida University of Medicine"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "0672-5617-2499-X"
+                "value": "8430-5362-1554-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "affectionate_northcutt@test",
+                "schema:identifier": "exciting_pasteur@test",
                 "schema:roleName": "author",
-                "schema:publicKey": "271c9fb31ef706b922f1136fbc42da507ef66784c70a747f4646f6010da2ac7b"
+                "schema:publicKey": "65b846c1b533d3e17afe455c8bc9878f22b30fde8997a7c59a139af5d771e5ff"
             },
-            "schema:linked_project": "74933@test"
+            "schema:linked_project": "73436@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Clever Poincare",
+            "foaf:mbox": "clever_poincare@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Seokyeong University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "4316-1408-1077-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "clever_poincare@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "fb6d63d45868b0af7af441ebcc8c286959beb24e50e4bd9eab8197a9c0587067"
+            },
+            "schema:linked_project": "40805@test"
         }
     ]
 }

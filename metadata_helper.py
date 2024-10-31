@@ -86,7 +86,7 @@ def search_index(keyword, ix):
 
             if results:
                 for result in results:
-                    logging.info(f"CID: {result['cid']}, Name: {result['name']}, Title: {result['title']}, "
+                    logging.info(f"CID: {result['cid']}, Project: {result['project_id']}, Name: {result['name']}, Title: {result['title']}, "
                                  f"Creator: {result['creator']}, Size: {result['size']} bytes")
             else:
                 logging.info(f"No results found for '{keyword}'")

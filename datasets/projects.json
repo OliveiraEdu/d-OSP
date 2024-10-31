@@ -6,39 +6,70 @@
     "@graph": [
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "74933@test",
-            "schema:publicKey": "f9ee90c1aac2fc19565bf4ec75133b13aeb72780081723829fad05ff6a673775",
+            "schema:identifier": "73436@test",
+            "schema:publicKey": "8169ccc5c71ee12447da26f7b8b87b376c627f213545df53c5664a623b0fd08c",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Assessing the Benefits of genetic algorithms for financial services",
-                "dc:abstract": "This research focuses on the benefits and challenges posed by genetic algorithms for financial services, with an emphasis on its potential for disease prevention.",
+                "schema:name": "Assessing the Benefits of autonomous vehicles for ocean conservation",
+                "dc:abstract": "This research focuses on the benefits and challenges posed by autonomous vehicles for ocean conservation, with an emphasis on its potential for financial inclusion.",
                 "schema:keywords": [
-                    "genetic algorithms",
-                    "financial services",
-                    "disease prevention"
+                    "autonomous vehicles",
+                    "ocean conservation",
+                    "financial inclusion"
                 ],
-                "schema:startDate": "2021-09-26",
-                "schema:endDate": "2025-04-05",
+                "schema:startDate": "2023-04-23",
+                "schema:endDate": "2026-06-28",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "Department of Energy"
+                    "schema:name": "Asian Development Bank"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
-                    "schema:name": "Lisbon, Portugal"
+                    "schema:name": "Bangkok, Thailand"
                 }
             },
-            "schema:metadataCID": "Qmf8ykuh62dkPoihRPk5bDh35F6uye21ocvzUwfusK9xEq",
-            "schema:linked_user": "affectionate_northcutt@test",
+            "schema:metadataCID": "QmY8vGZ8Enr3SNuwXNstqLRmNZR2XE9194QuU2b6X1UHnL",
+            "schema:linked_user": "exciting_pasteur@test"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "40805@test",
+            "schema:publicKey": "229b2979413d2448c8cb814bb116bfef9ba6526d19289d3ecaa0e66a623e2e6b",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Assessing the Benefits of cloud computing for smart transportation",
+                "dc:abstract": "This research focuses on the benefits and challenges posed by cloud computing for smart transportation, with an emphasis on its potential for disease prevention.",
+                "schema:keywords": [
+                    "cloud computing",
+                    "smart transportation",
+                    "disease prevention"
+                ],
+                "schema:startDate": "2022-01-26",
+                "schema:endDate": "2024-11-18",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "United Nations Environment Programme"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Berlin, Germany"
+                }
+            },
+            "schema:metadataCID": "QmctV7wdqDApcKvbXRkfLebmaHEqReN8r8vxtZGjR1iL27",
+            "schema:linked_user": "clever_poincare@test",
             "schema:files": [
                 {
                     "file_index": 1,
                     "file_cid": "QmUq29KRwpTdvScB5oYzEDobDHyb4N1f9eaZXm4VaMCgiW",
-                    "metadata_cid": "QmTf2AqDtce9DUSDxNnkGFkwAX9uVTYB2iQfJtxubZZEVx",
+                    "metadata_cid": "QmZ3yjSan6mKPTK4Bir3apGyroTvPjCuSDYeFtdStz99rL",
                     "metadata": {
                         "dc:format": "application/pdf; version=1.7",
                         "dc:title": "COVID19-MLSF: A multi-task learning-based stock market forecasting framework during the COVID-19 pandemic",
