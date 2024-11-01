@@ -114,18 +114,18 @@ import icecream as ic
 if sys.version_info[0] < 3:
     raise Exception("Python 3 or a more recent version is required.")
 
-# Load configuration from config.json file
-config_path = "config.json"  # Update this path as needed
-with open(config_path, "r") as f:
-    config = json.load(f)
+# # Load configuration from config.json file
+# config_path = "config.json"  # Update this path as needed
+# with open(config_path, "r") as f:
+#     config = json.load(f)
 
-IROHA_HOST_ADDR = config["IROHA_HOST_ADDR"]
-IROHA_PORT = config["IROHA_PORT"]
-ADMIN_ACCOUNT_ID = config["ADMIN_ACCOUNT_ID"]
-ADMIN_PRIVATE_KEY = config["ADMIN_PRIVATE_KEY"]
+# IROHA_HOST_ADDR = config["IROHA_HOST_ADDR"]
+# IROHA_PORT = config["IROHA_PORT"]
+# ADMIN_ACCOUNT_ID = config["ADMIN_ACCOUNT_ID"]
+# ADMIN_PRIVATE_KEY = config["ADMIN_PRIVATE_KEY"]
 
-iroha = Iroha(ADMIN_ACCOUNT_ID)
-net = IrohaGrpc("{}:{}".format(IROHA_HOST_ADDR, IROHA_PORT))
+# iroha = Iroha(ADMIN_ACCOUNT_ID)
+# net = IrohaGrpc("{}:{}".format(IROHA_HOST_ADDR, IROHA_PORT))
 
 # #Query - GetAccountDetail
 # query = iroha.query('GetAccountDetail', account_id=project_id)
@@ -142,7 +142,7 @@ def get_project_details(project_ids, net, iroha):
     admin_private_key = ADMIN_PRIVATE_KEY
 
     project_accounts = []
-    for project_id in project_ids[:n]:  # Read the first 'n' project IDs
+    for project_id in set(project_ids):  # Remove duplicates by converting to a set
         query = iroha.query('GetAccountDetail', account_id=project_id)
         IrohaCrypto.sign_query(query, admin_private_key)
         response = net.send_query(query)
@@ -157,7 +157,25 @@ def get_project_details(project_ids, net, iroha):
     return project_accounts
 
 
+def search_index(keyword, ix):
+    """Search for a keyword in the indexed documents."""
+    try:
+        with ix.searcher() as searcher:
+            query = QueryParser("full_text", ix.schema).parse(keyword)
+            results = searcher.search(query)
 
+            if results:
+                project_ids = []
+                for result in results:
+                    logging.info(f"CID: {result['cid']}, Project: {result['project_id']}, Name: {result['name']}, Title: {result['title']}, "
+                                 f"Creator: {result['creator']}, Size: {result['size']} bytes")
+                    project_ids.append(result['project_id'])
+            else:
+                logging.info(f"No results found for '{keyword}'")
+
+        return project_ids
+    except Exception as e:
+        logging.error(f"Error occurred during search: {e}")
 
 
 
