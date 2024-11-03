@@ -6,43 +6,23 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Exciting Pasteur",
-            "foaf:mbox": "exciting_pasteur@email.com",
+            "foaf:name": "Elastic Nash",
+            "foaf:mbox": "elastic_nash@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Florida University of Medicine"
+                "foaf:name": "Arab Open University"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "8430-5362-1554-X"
+                "value": "8952-1153-8849-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "exciting_pasteur@test",
-                "schema:roleName": "author",
-                "schema:publicKey": "65b846c1b533d3e17afe455c8bc9878f22b30fde8997a7c59a139af5d771e5ff"
+                "schema:identifier": "elastic_nash@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "5ec9cbc59fbb2d39908df311d5f024f415593fc040219a7da1e85113d6ff78cd"
             },
-            "schema:linked_project": "73436@test"
-        },
-        {
-            "@type": "foaf:Person",
-            "foaf:name": "Clever Poincare",
-            "foaf:mbox": "clever_poincare@email.com",
-            "foaf:organization": {
-                "@type": "foaf:Organization",
-                "foaf:name": "Seokyeong University"
-            },
-            "schema:identifier": {
-                "@type": "PropertyValue",
-                "propertyID": "ORCID",
-                "value": "4316-1408-1077-X"
-            },
-            "foaf:holdsAccount": {
-                "schema:identifier": "clever_poincare@test",
-                "schema:roleName": "author",
-                "schema:publicKey": "fb6d63d45868b0af7af441ebcc8c286959beb24e50e4bd9eab8197a9c0587067"
-            },
-            "schema:linked_project": "40805@test"
+            "schema:linked_project": "74289@test"
         }
     ]
 }
