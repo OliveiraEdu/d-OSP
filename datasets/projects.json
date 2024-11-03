@@ -33,7 +33,33 @@
                 }
             },
             "schema:metadataCID": "QmYLGs2hzebM56odvitzKoW4SDyAStJsAHYmLeUD8SERHR",
-            "schema:linked_user": "elastic_nash@test"
+            "schema:linked_user": "elastic_nash@test",
+            "schema:files": [
+                {
+                    "file_index": 1,
+                    "file_cid": "QmUq29KRwpTdvScB5oYzEDobDHyb4N1f9eaZXm4VaMCgiW",
+                    "metadata_cid": "QmbvhUdVof8L8o3zoGQuXkXQYnUwpHG1fxK3ZhtqkAD7b8",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.7",
+                        "dc:title": "COVID19-MLSF: A multi-task learning-based stock market forecasting framework during the COVID-19 pandemic",
+                        "dc:description": "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549",
+                        "dc:creator": [
+                            "Chenxun Yuan",
+                            "Xiang Ma",
+                            "Hua Wang",
+                            "Caiming Zhang",
+                            "Xuemei Li"
+                        ],
+                        "dcterms:created": "2023-02-04T09:40:15Z",
+                        "dcterms:modified": "2023-02-07T16:52:03Z",
+                        "dc:language": "en-US",
+                        "dc:subject": [
+                            "Stock market forecasting,COVID-19 pandemic,Multi-task learning,Feature fusion,K-nearest neighbor classifier",
+                            "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549"
+                        ]
+                    }
+                }
+            ]
         }
     ]
 }
