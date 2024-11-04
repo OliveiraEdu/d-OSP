@@ -6,43 +6,63 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Flamboyant Lehmann",
-            "foaf:mbox": "flamboyant_lehmann@email.com",
+            "foaf:name": "Recursing Diffie",
+            "foaf:mbox": "recursing_diffie@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Hogeschool voor de Kunsten Utrecht (HKU)"
+                "foaf:name": "Ecole Sup\u00e9rieure Internationale d'Administration des Entreprises"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "8997-3063-9645-X"
+                "value": "2442-8798-7206-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "flamboyant_lehmann@test",
-                "schema:roleName": "publisher",
-                "schema:publicKey": "ed484183b523bcbd654bba47ce3ebf20a156fe4b25ab04c2a848ec2f026ccb56"
+                "schema:identifier": "recursing_diffie@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "fe5e4f3cbb4e758dae0e2eae83f68dd54c36c50f6af6e86c3bf655c41b752bda"
             },
-            "schema:linked_project": "48359@test"
+            "schema:linked_project": "32824@test"
         },
         {
             "@type": "foaf:Person",
-            "foaf:name": "Zealous Bhaskara",
-            "foaf:mbox": "zealous_bhaskara@email.com",
+            "foaf:name": "Nifty Hermann",
+            "foaf:mbox": "nifty_hermann@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Zhetysu State University "
+                "foaf:name": "Showa Women's University"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "6542-7252-2458-X"
+                "value": "0071-2969-4608-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "zealous_bhaskara@test",
-                "schema:roleName": "publisher",
-                "schema:publicKey": "e4f77a79c61c8da029dc95589091925bd32f55f07ef941059e63e04997adcc50"
+                "schema:identifier": "nifty_hermann@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "fc445d85ea59d69e1e9128783433c2e3af525f7f3e472d9250b9b3ac8e613acf"
             },
-            "schema:linked_project": "23106@test"
+            "schema:linked_project": "41724@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Trusting Jones",
+            "foaf:mbox": "trusting_jones@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "University of Zadar"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "7776-4715-3722-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "trusting_jones@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "72275c7bf189a438ee3682db092d7593b294fb6ba6cc14e18ffeebdeebbea1a7"
+            },
+            "schema:linked_project": "62356@test"
         }
     ]
 }
