@@ -6,23 +6,43 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Elastic Nash",
-            "foaf:mbox": "elastic_nash@email.com",
+            "foaf:name": "Elated Hypatia",
+            "foaf:mbox": "elated_hypatia@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Arab Open University"
+                "foaf:name": "John Marshall Law School"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "8952-1153-8849-X"
+                "value": "8962-9199-7871-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "elastic_nash@test",
-                "schema:roleName": "reviewer",
-                "schema:publicKey": "5ec9cbc59fbb2d39908df311d5f024f415593fc040219a7da1e85113d6ff78cd"
+                "schema:identifier": "elated_hypatia@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "01e89b8814368c76173cb75add315787f9a837b8fbcb171c6558d20720d955fb"
             },
-            "schema:linked_project": "74289@test"
+            "schema:linked_project": "85095@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Focused Aryabhata",
+            "foaf:mbox": "focused_aryabhata@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Notre Dame College"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "2767-2042-0761-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "focused_aryabhata@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "845f0491a689729dd8206d86d7e82cf37408fb88a534a146fc15bf84a57194a8"
+            },
+            "schema:linked_project": "71403@test"
         }
     ]
 }

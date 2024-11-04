@@ -6,39 +6,120 @@
     "@graph": [
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "74289@test",
-            "schema:publicKey": "57bee5e0e23f723760b8e1b21a3a9afa61acece6c3b18f5eca3ee88eaee99ff8",
+            "schema:identifier": "85095@test",
+            "schema:publicKey": "ffdefeac80d174767289f9e01f035855f6b59ac4f8b0f5e7b4cabecb1bb7ac0e",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Analyzing the Influence of hydrogen energy on space exploration",
-                "dc:abstract": "This paper analyzes how hydrogen energy influences space exploration, providing insights into how to maximize its resilience building.",
+                "schema:name": "Exploring the Effects of deforestation on green transportation",
+                "dc:abstract": "This study aims to investigate the effects of deforestation on green transportation and propose strategies for improvement.",
                 "schema:keywords": [
-                    "hydrogen energy",
-                    "space exploration",
-                    "resilience building"
+                    "deforestation",
+                    "green transportation",
+                    "disaster management"
                 ],
-                "schema:startDate": "2024-09-24",
-                "schema:endDate": "2027-09-26",
+                "schema:startDate": "2021-10-27",
+                "schema:endDate": "2024-12-16",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "National Science Foundation"
+                    "schema:name": "Department of Energy"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
-                    "schema:name": "Accra, Ghana"
+                    "schema:name": "Rajasthan, India"
                 }
             },
-            "schema:metadataCID": "QmYLGs2hzebM56odvitzKoW4SDyAStJsAHYmLeUD8SERHR",
-            "schema:linked_user": "elastic_nash@test",
+            "schema:metadataCID": "QmQGLjhRg9qZk5SC6z53UktFbFsRJ39ogERb6hYckAU1Ru",
+            "schema:linked_user": "elated_hypatia@test",
             "schema:files": [
                 {
                     "file_index": 1,
                     "file_cid": "QmUq29KRwpTdvScB5oYzEDobDHyb4N1f9eaZXm4VaMCgiW",
-                    "metadata_cid": "QmbvhUdVof8L8o3zoGQuXkXQYnUwpHG1fxK3ZhtqkAD7b8",
+                    "metadata_cid": "QmfZBxzZJ428WVbdXY9VfbYEJZvKwZ3M5zxWCiQJdtdqwt",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.7",
+                        "dc:title": "COVID19-MLSF: A multi-task learning-based stock market forecasting framework during the COVID-19 pandemic",
+                        "dc:description": "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549",
+                        "dc:creator": [
+                            "Chenxun Yuan",
+                            "Xiang Ma",
+                            "Hua Wang",
+                            "Caiming Zhang",
+                            "Xuemei Li"
+                        ],
+                        "dcterms:created": "2023-02-04T09:40:15Z",
+                        "dcterms:modified": "2023-02-07T16:52:03Z",
+                        "dc:language": "en-US",
+                        "dc:subject": [
+                            "Stock market forecasting,COVID-19 pandemic,Multi-task learning,Feature fusion,K-nearest neighbor classifier",
+                            "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "71403@test",
+            "schema:publicKey": "28ad7daebfca244e3ed24da4f89f3b9403a9ed975ec448a9e5e33f0ca2a4fdb7",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Assessing the Benefits of precision agriculture for ocean conservation",
+                "dc:abstract": "This research focuses on the benefits and challenges posed by precision agriculture for ocean conservation, with an emphasis on its potential for financial inclusion.",
+                "schema:keywords": [
+                    "precision agriculture",
+                    "ocean conservation",
+                    "financial inclusion"
+                ],
+                "schema:startDate": "2020-10-30",
+                "schema:endDate": "2027-07-19",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "National Institutes of Health"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Yellowstone National Park, USA"
+                }
+            },
+            "schema:metadataCID": "Qmbkssrw2P14GxBzNJo3EK5jNrr4BCrMxHDRoJNCZJQ1fb",
+            "schema:linked_user": "focused_aryabhata@test",
+            "schema:files": [
+                {
+                    "file_index": 1,
+                    "file_cid": "QmUq29KRwpTdvScB5oYzEDobDHyb4N1f9eaZXm4VaMCgiW",
+                    "metadata_cid": "Qmeo2n3gEyes6QtvGUm4TXjAaaKuEosHJ9PLmKNCSwvTh9",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.7",
+                        "dc:title": "COVID19-MLSF: A multi-task learning-based stock market forecasting framework during the COVID-19 pandemic",
+                        "dc:description": "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549",
+                        "dc:creator": [
+                            "Chenxun Yuan",
+                            "Xiang Ma",
+                            "Hua Wang",
+                            "Caiming Zhang",
+                            "Xuemei Li"
+                        ],
+                        "dcterms:created": "2023-02-04T09:40:15Z",
+                        "dcterms:modified": "2023-02-07T16:52:03Z",
+                        "dc:language": "en-US",
+                        "dc:subject": [
+                            "Stock market forecasting,COVID-19 pandemic,Multi-task learning,Feature fusion,K-nearest neighbor classifier",
+                            "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549"
+                        ]
+                    }
+                },
+                {
+                    "file_index": 2,
+                    "file_cid": "QmUq29KRwpTdvScB5oYzEDobDHyb4N1f9eaZXm4VaMCgiW",
+                    "metadata_cid": "QmQNUjy7egdAygkHDswQgsv7CBCraWCJwsdCnsdZr8nFDx",
                     "metadata": {
                         "dc:format": "application/pdf; version=1.7",
                         "dc:title": "COVID19-MLSF: A multi-task learning-based stock market forecasting framework during the COVID-19 pandemic",

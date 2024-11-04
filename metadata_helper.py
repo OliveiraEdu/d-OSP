@@ -114,18 +114,18 @@ import icecream as ic
 if sys.version_info[0] < 3:
     raise Exception("Python 3 or a more recent version is required.")
 
-# # Load configuration from config.json file
-# config_path = "config.json"  # Update this path as needed
-# with open(config_path, "r") as f:
-#     config = json.load(f)
+# Load configuration from config.json file
+config_path = "config.json"  # Update this path as needed
+with open(config_path, "r") as f:
+    config = json.load(f)
 
-# IROHA_HOST_ADDR = config["IROHA_HOST_ADDR"]
-# IROHA_PORT = config["IROHA_PORT"]
-# ADMIN_ACCOUNT_ID = config["ADMIN_ACCOUNT_ID"]
-# ADMIN_PRIVATE_KEY = config["ADMIN_PRIVATE_KEY"]
+IROHA_HOST_ADDR = config["IROHA_HOST_ADDR"]
+IROHA_PORT = config["IROHA_PORT"]
+ADMIN_ACCOUNT_ID = config["ADMIN_ACCOUNT_ID"]
+ADMIN_PRIVATE_KEY = config["ADMIN_PRIVATE_KEY"]
 
-# iroha = Iroha(ADMIN_ACCOUNT_ID)
-# net = IrohaGrpc("{}:{}".format(IROHA_HOST_ADDR, IROHA_PORT))
+iroha = Iroha(ADMIN_ACCOUNT_ID)
+net = IrohaGrpc("{}:{}".format(IROHA_HOST_ADDR, IROHA_PORT))
 
 # #Query - GetAccountDetail
 # query = iroha.query('GetAccountDetail', account_id=project_id)
