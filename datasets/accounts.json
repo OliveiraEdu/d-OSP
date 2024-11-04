@@ -6,43 +6,43 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Elated Hypatia",
-            "foaf:mbox": "elated_hypatia@email.com",
+            "foaf:name": "Flamboyant Lehmann",
+            "foaf:mbox": "flamboyant_lehmann@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "John Marshall Law School"
+                "foaf:name": "Hogeschool voor de Kunsten Utrecht (HKU)"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "8962-9199-7871-X"
+                "value": "8997-3063-9645-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "elated_hypatia@test",
-                "schema:roleName": "author",
-                "schema:publicKey": "01e89b8814368c76173cb75add315787f9a837b8fbcb171c6558d20720d955fb"
+                "schema:identifier": "flamboyant_lehmann@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "ed484183b523bcbd654bba47ce3ebf20a156fe4b25ab04c2a848ec2f026ccb56"
             },
-            "schema:linked_project": "85095@test"
+            "schema:linked_project": "48359@test"
         },
         {
             "@type": "foaf:Person",
-            "foaf:name": "Focused Aryabhata",
-            "foaf:mbox": "focused_aryabhata@email.com",
+            "foaf:name": "Zealous Bhaskara",
+            "foaf:mbox": "zealous_bhaskara@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Notre Dame College"
+                "foaf:name": "Zhetysu State University "
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "2767-2042-0761-X"
+                "value": "6542-7252-2458-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "focused_aryabhata@test",
+                "schema:identifier": "zealous_bhaskara@test",
                 "schema:roleName": "publisher",
-                "schema:publicKey": "845f0491a689729dd8206d86d7e82cf37408fb88a534a146fc15bf84a57194a8"
+                "schema:publicKey": "e4f77a79c61c8da029dc95589091925bd32f55f07ef941059e63e04997adcc50"
             },
-            "schema:linked_project": "71403@test"
+            "schema:linked_project": "23106@test"
         }
     ]
 }

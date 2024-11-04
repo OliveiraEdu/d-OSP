@@ -6,39 +6,39 @@
     "@graph": [
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "85095@test",
-            "schema:publicKey": "ffdefeac80d174767289f9e01f035855f6b59ac4f8b0f5e7b4cabecb1bb7ac0e",
+            "schema:identifier": "48359@test",
+            "schema:publicKey": "ffdf27607495191e74ea9c9b15a035de2461b8219bfd0ddfaa540bbc631425e5",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Exploring the Effects of deforestation on green transportation",
-                "dc:abstract": "This study aims to investigate the effects of deforestation on green transportation and propose strategies for improvement.",
+                "schema:name": "Analyzing the Influence of smart grids on sustainable fisheries",
+                "dc:abstract": "This paper analyzes how smart grids influences sustainable fisheries, providing insights into how to maximize its resource management.",
                 "schema:keywords": [
-                    "deforestation",
-                    "green transportation",
-                    "disaster management"
+                    "smart grids",
+                    "sustainable fisheries",
+                    "resource management"
                 ],
-                "schema:startDate": "2021-10-27",
-                "schema:endDate": "2024-12-16",
+                "schema:startDate": "2024-12-08",
+                "schema:endDate": "2028-01-04",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "Department of Energy"
+                    "schema:name": "United Nations Environment Programme"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
-                    "schema:name": "Rajasthan, India"
+                    "schema:name": "Lagos, Nigeria"
                 }
             },
-            "schema:metadataCID": "QmQGLjhRg9qZk5SC6z53UktFbFsRJ39ogERb6hYckAU1Ru",
-            "schema:linked_user": "elated_hypatia@test",
+            "schema:metadataCID": "QmQw7m1n4QJ9dErN1q2Txtr9Y1pyvb2FqYoeHeXYM9qMak",
+            "schema:linked_user": "flamboyant_lehmann@test",
             "schema:files": [
                 {
                     "file_index": 1,
                     "file_cid": "QmUq29KRwpTdvScB5oYzEDobDHyb4N1f9eaZXm4VaMCgiW",
-                    "metadata_cid": "QmfZBxzZJ428WVbdXY9VfbYEJZvKwZ3M5zxWCiQJdtdqwt",
+                    "metadata_cid": "QmXG5EJTwjUyyoVmDbzdHjuBQyR7JQyTDkxz1WJAskCeo9",
                     "metadata": {
                         "dc:format": "application/pdf; version=1.7",
                         "dc:title": "COVID19-MLSF: A multi-task learning-based stock market forecasting framework during the COVID-19 pandemic",
@@ -63,80 +63,49 @@
         },
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "71403@test",
-            "schema:publicKey": "28ad7daebfca244e3ed24da4f89f3b9403a9ed975ec448a9e5e33f0ca2a4fdb7",
+            "schema:identifier": "23106@test",
+            "schema:publicKey": "cde289d7dbf325616095fb1ff1abfb74ac58ec5147def8d739d40afca79a4abf",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Assessing the Benefits of precision agriculture for ocean conservation",
-                "dc:abstract": "This research focuses on the benefits and challenges posed by precision agriculture for ocean conservation, with an emphasis on its potential for financial inclusion.",
+                "schema:name": "Investigating the Role of data privacy in biomedical research",
+                "dc:abstract": "This study explores the impact of data privacy in biomedical research, focusing on economic empowerment.",
                 "schema:keywords": [
-                    "precision agriculture",
-                    "ocean conservation",
-                    "financial inclusion"
+                    "data privacy",
+                    "biomedical research",
+                    "economic empowerment"
                 ],
-                "schema:startDate": "2020-10-30",
-                "schema:endDate": "2027-07-19",
+                "schema:startDate": "2019-06-08",
+                "schema:endDate": "2028-03-04",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "National Institutes of Health"
+                    "schema:name": "Bill and Melinda Gates Foundation"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
-                    "schema:name": "Yellowstone National Park, USA"
+                    "schema:name": "Svalbard, Norway"
                 }
             },
-            "schema:metadataCID": "Qmbkssrw2P14GxBzNJo3EK5jNrr4BCrMxHDRoJNCZJQ1fb",
-            "schema:linked_user": "focused_aryabhata@test",
+            "schema:metadataCID": "QmYSokvd4KGNvnxbERLYk2vCgbAiFDc27B6XUwqb8PUAuu",
+            "schema:linked_user": "zealous_bhaskara@test",
             "schema:files": [
                 {
                     "file_index": 1,
-                    "file_cid": "QmUq29KRwpTdvScB5oYzEDobDHyb4N1f9eaZXm4VaMCgiW",
-                    "metadata_cid": "Qmeo2n3gEyes6QtvGUm4TXjAaaKuEosHJ9PLmKNCSwvTh9",
+                    "file_cid": "QmXh37WXcrLXkJX2cAPjbPdKZ2cxJXD58XX6eU1Zc41ka4",
+                    "metadata_cid": "QmaoRv5wiDJ78pJahYUVkgoJgTbHGpdgJQRPH8im4xvPmG",
                     "metadata": {
                         "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "COVID19-MLSF: A multi-task learning-based stock market forecasting framework during the COVID-19 pandemic",
-                        "dc:description": "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549",
-                        "dc:creator": [
-                            "Chenxun Yuan",
-                            "Xiang Ma",
-                            "Hua Wang",
-                            "Caiming Zhang",
-                            "Xuemei Li"
-                        ],
+                        "dc:title": "Aeroacoustic airfoil shape optimization enhanced by autoencoders",
+                        "dc:creator": "Jiaqing Kou",
                         "dcterms:created": "2023-02-04T09:40:15Z",
-                        "dcterms:modified": "2023-02-07T16:52:03Z",
+                        "dcterms:modified": "2023-02-07T16:56:45Z",
                         "dc:language": "en-US",
                         "dc:subject": [
-                            "Stock market forecasting,COVID-19 pandemic,Multi-task learning,Feature fusion,K-nearest neighbor classifier",
-                            "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549"
-                        ]
-                    }
-                },
-                {
-                    "file_index": 2,
-                    "file_cid": "QmUq29KRwpTdvScB5oYzEDobDHyb4N1f9eaZXm4VaMCgiW",
-                    "metadata_cid": "QmQNUjy7egdAygkHDswQgsv7CBCraWCJwsdCnsdZr8nFDx",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "COVID19-MLSF: A multi-task learning-based stock market forecasting framework during the COVID-19 pandemic",
-                        "dc:description": "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549",
-                        "dc:creator": [
-                            "Chenxun Yuan",
-                            "Xiang Ma",
-                            "Hua Wang",
-                            "Caiming Zhang",
-                            "Xuemei Li"
-                        ],
-                        "dcterms:created": "2023-02-04T09:40:15Z",
-                        "dcterms:modified": "2023-02-07T16:52:03Z",
-                        "dc:language": "en-US",
-                        "dc:subject": [
-                            "Stock market forecasting,COVID-19 pandemic,Multi-task learning,Feature fusion,K-nearest neighbor classifier",
-                            "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549"
+                            "Aeroacoustics,Optimization design,Amiet theory,Machine learning,Autoencoder",
+                            "Expert Systems With Applications, 217 (2023) 119513. doi:10.1016/j.eswa.2023.119513"
                         ]
                     }
                 }
