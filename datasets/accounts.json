@@ -6,23 +6,23 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Youthful Curie",
-            "foaf:mbox": "youthful_curie@email.com",
+            "foaf:name": "Peaceful Newton",
+            "foaf:mbox": "peaceful_newton@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Lebanon Valley College"
+                "foaf:name": "Uva Wellassa University"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "4833-3023-0564-X"
+                "value": "8800-4579-6058-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "youthful_curie@test",
+                "schema:identifier": "peaceful_newton@test",
                 "schema:roleName": "author",
-                "schema:publicKey": "6c3f08fbd76d621caec873081100308e718106791cb07d522da5354b46ae0cd1"
+                "schema:publicKey": "daa07eb6d094e2fc656bce203e038b3bca3fd1a04a225e6395ef828dd19657c4"
             },
-            "schema:linked_project": "12694@test"
+            "schema:linked_project": "09938@test"
         }
     ]
 }

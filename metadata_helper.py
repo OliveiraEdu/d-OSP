@@ -136,49 +136,151 @@ net = IrohaGrpc("{}:{}".format(IROHA_HOST_ADDR, IROHA_PORT))
 # project_details = project_data.detail
 # print(f'Project Account id = {project_account}, {project_details}')
 
+#---
 
+import logging
+from rdflib import Graph, Literal, RDF, URIRef, Namespace
+from rdflib.namespace import FOAF, DC
+from whoosh.qparser import QueryParser
+from iroha import IrohaCrypto
+
+# Sample namespaces
+SCHEMA = Namespace("http://schema.org/")
+EX = Namespace("http://example.org/")
+
+# Functions provided earlier
 def get_project_details(project_ids, net, iroha):
-    """Get account details for each project ID."""
     admin_private_key = ADMIN_PRIVATE_KEY
     project_accounts = []
     
-    unique_project_ids = set(project_id for _, project_id in project_ids)  # Remove duplicates
-
-    for project_id in unique_project_ids:
+    for project_id in set(project_ids):  # Remove duplicates by converting to a set
         query = iroha.query('GetAccountDetail', account_id=project_id)
         IrohaCrypto.sign_query(query, admin_private_key)
         response = net.send_query(query)
         project_data = response.account_detail_response
         project_details = project_data.detail
-        print(f"Project Account id = {project_id}, {project_details}")
+        logging.info(f"Project Account id = {project_id}, {project_details}")
+        
         project_accounts.append({
             "account_id": project_id,
             "project_details": project_details
         })
-
     return project_accounts
 
-
 def search_index(keyword, ix):
-    """Search for a keyword in the indexed documents."""
-    project_ids = []
     try:
         with ix.searcher() as searcher:
             query = QueryParser("full_text", ix.schema).parse(keyword)
             results = searcher.search(query)
 
+            project_ids = []
+            search_results = []
             if results:
                 for result in results:
                     logging.info(f"CID: {result['cid']}, Project: {result['project_id']}, Name: {result['name']}, Title: {result['title']}, "
                                  f"Creator: {result['creator']}, Size: {result['size']} bytes")
-                    project_ids.append((result['cid'], result['project_id']))
+                    project_ids.append(result['project_id'])
+                    search_results.append({
+                        "cid": result['cid'],
+                        "project_id": result['project_id'],
+                        "name": result['name'],
+                        "title": result['title'],
+                        "creator": result['creator'],
+                        "size": result['size']
+                    })
             else:
                 logging.info(f"No results found for '{keyword}'")
 
+        # Ensure both lists are returned, even if empty
+        return project_ids, search_results
     except Exception as e:
         logging.error(f"Error occurred during search: {e}")
+        return [], []  # Return empty lists in case of an error
+
+# New function to generate the knowledge graph
+def generate_knowledge_graph(search_results, project_details):
+    g = Graph()
+    g.bind("schema", SCHEMA)
+    g.bind("ex", EX)
     
-    return project_ids
+    for search_result in search_results:
+        project_id = search_result['project_id']
+        project_uri = URIRef(EX[project_id])
+        g.add((project_uri, RDF.type, SCHEMA.Project))
+        g.add((project_uri, SCHEMA.identifier, Literal(project_id)))
+        
+        file_uri = URIRef(EX[search_result['name']])
+        g.add((file_uri, RDF.type, SCHEMA.MediaObject))
+        g.add((file_uri, SCHEMA.name, Literal(search_result['name'])))
+        g.add((file_uri, SCHEMA.headline, Literal(search_result['title'])))
+        g.add((file_uri, SCHEMA.creator, Literal(search_result['creator'])))
+        g.add((file_uri, SCHEMA.contentSize, Literal(search_result['size'])))
+        g.add((project_uri, EX.hasFile, file_uri))
+        
+        cid_uri = URIRef(EX[search_result['cid']])
+        g.add((cid_uri, RDF.type, SCHEMA.DigitalDocument))
+        g.add((cid_uri, SCHEMA.identifier, Literal(search_result['cid'])))
+        g.add((file_uri, EX.hasCID, cid_uri))
+        
+        # Check if CID is in project details
+        for detail in project_details:
+            if detail['account_id'] == project_id:
+                project_data = detail['project_details']
+                
+                # Check for matching CIDs in project details
+                for key, value in project_data.items():
+                    if value == search_result['cid']:
+                        g.add((project_uri, EX.hasFile, file_uri))
+                        g.add((file_uri, EX.hasCID, cid_uri))
+                        break
+
+    # Print or serialize the graph
+    print(g.serialize(format="turtle").decode("utf-8"))
+
+
+#---
+# def get_project_details(project_ids, net, iroha):
+#     """Get account details for each project ID."""
+#     admin_private_key = ADMIN_PRIVATE_KEY
+#     project_accounts = []
+    
+#     unique_project_ids = set(project_id for _, project_id in project_ids)  # Remove duplicates
+
+#     for project_id in unique_project_ids:
+#         query = iroha.query('GetAccountDetail', account_id=project_id)
+#         IrohaCrypto.sign_query(query, admin_private_key)
+#         response = net.send_query(query)
+#         project_data = response.account_detail_response
+#         project_details = project_data.detail
+#         print(f"Project Account id = {project_id}, {project_details}")
+#         project_accounts.append({
+#             "account_id": project_id,
+#             "project_details": project_details
+#         })
+
+#     return project_accounts
+
+
+# def search_index(keyword, ix):
+#     """Search for a keyword in the indexed documents."""
+#     project_ids = []
+#     try:
+#         with ix.searcher() as searcher:
+#             query = QueryParser("full_text", ix.schema).parse(keyword)
+#             results = searcher.search(query)
+
+#             if results:
+#                 for result in results:
+#                     logging.info(f"CID: {result['cid']}, Project: {result['project_id']}, Name: {result['name']}, Title: {result['title']}, "
+#                                  f"Creator: {result['creator']}, Size: {result['size']} bytes")
+#                     project_ids.append((result['cid'], result['project_id']))
+#             else:
+#                 logging.info(f"No results found for '{keyword}'")
+
+#     except Exception as e:
+#         logging.error(f"Error occurred during search: {e}")
+    
+#     return project_ids
 
 
 def check_cid_in_project_details(keyword, ix, net, iroha):

@@ -6,39 +6,39 @@
     "@graph": [
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "12694@test",
-            "schema:publicKey": "c7054052d1189a49938fff2e9794060e2b4d3c2c47d6337df77a03994e2d5c0c",
+            "schema:identifier": "09938@test",
+            "schema:publicKey": "17c5606e813bc52feec6a2a7d69b46d69ec97aeeff465cab507c5f9f0a894240",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Analyzing the Influence of digital twins on precision medicine",
-                "dc:abstract": "This paper analyzes how digital twins influences precision medicine, providing insights into how to maximize its personalized medicine.",
+                "schema:name": "Exploring the Effects of e-waste on green transportation",
+                "dc:abstract": "This study aims to investigate the effects of e-waste on green transportation and propose strategies for improvement.",
                 "schema:keywords": [
-                    "digital twins",
-                    "precision medicine",
-                    "personalized medicine"
+                    "e-waste",
+                    "green transportation",
+                    "supply chain resilience"
                 ],
-                "schema:startDate": "2020-01-19",
-                "schema:endDate": "2026-05-26",
+                "schema:startDate": "2020-12-30",
+                "schema:endDate": "2028-03-20",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "United Nations Environment Programme"
+                    "schema:name": "Asian Development Bank"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
-                    "schema:name": "Rotterdam, Netherlands"
+                    "schema:name": "Svalbard, Norway"
                 }
             },
-            "schema:metadataCID": "QmXSV2zghFun8rT44hwaWwNGFGMBnM1jdQVbghFunDSumL",
-            "schema:linked_user": "youthful_curie@test",
+            "schema:metadataCID": "QmRA1y8QYdUp6VMHkLnWtfqgGgxRUFZaRpBYTgSGSoLVjQ",
+            "schema:linked_user": "peaceful_newton@test",
             "schema:files": [
                 {
                     "file_index": 1,
                     "file_cid": "QmXh37WXcrLXkJX2cAPjbPdKZ2cxJXD58XX6eU1Zc41ka4",
-                    "metadata_cid": "QmaBLUUdGotvWFhgEQqVKcbZk2A6KZWvQ8a1tcV89tXD65",
+                    "metadata_cid": "QmZXzHYzx3W4pvxTNeG5esoVvpEzqARMj7mgbv2RfqH9jT",
                     "metadata": {
                         "dc:format": "application/pdf; version=1.7",
                         "dc:title": "Aeroacoustic airfoil shape optimization enhanced by autoencoders",
