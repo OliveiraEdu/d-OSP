@@ -197,45 +197,43 @@ def search_index(keyword, ix):
         logging.error(f"Error occurred during search: {e}")
         return [], []  # Return empty lists in case of an error
 
-# New function to generate the knowledge graph
+import json
+
 def generate_knowledge_graph(search_results, project_details):
     g = Graph()
-    g.bind("schema", SCHEMA)
-    g.bind("ex", EX)
     
     for search_result in search_results:
-        project_id = search_result['project_id']
-        project_uri = URIRef(EX[project_id])
-        g.add((project_uri, RDF.type, SCHEMA.Project))
-        g.add((project_uri, SCHEMA.identifier, Literal(project_id)))
+        # Create project node
+        project_uri = URIRef(f"http://example.org/project/{search_result['project_id']}")
+        g.add((project_uri, RDF.type, EX.Project))
+        g.add((project_uri, EX.hasCID, Literal(search_result['cid'])))
+        g.add((project_uri, EX.hasTitle, Literal(search_result['title'])))
         
-        file_uri = URIRef(EX[search_result['name']])
-        g.add((file_uri, RDF.type, SCHEMA.MediaObject))
-        g.add((file_uri, SCHEMA.name, Literal(search_result['name'])))
-        g.add((file_uri, SCHEMA.headline, Literal(search_result['title'])))
-        g.add((file_uri, SCHEMA.creator, Literal(search_result['creator'])))
-        g.add((file_uri, SCHEMA.contentSize, Literal(search_result['size'])))
-        g.add((project_uri, EX.hasFile, file_uri))
+        # Find matching project details for the current project ID
+        matching_details = next((detail for detail in project_details if detail['account_id'] == search_result['project_id']), None)
+        if not matching_details:
+            continue
         
-        cid_uri = URIRef(EX[search_result['cid']])
-        g.add((cid_uri, RDF.type, SCHEMA.DigitalDocument))
-        g.add((cid_uri, SCHEMA.identifier, Literal(search_result['cid'])))
-        g.add((file_uri, EX.hasCID, cid_uri))
-        
-        # Check if CID is in project details
-        for detail in project_details:
-            if detail['account_id'] == project_id:
-                project_data = detail['project_details']
-                
-                # Check for matching CIDs in project details
-                for key, value in project_data.items():
-                    if value == search_result['cid']:
-                        g.add((project_uri, EX.hasFile, file_uri))
-                        g.add((file_uri, EX.hasCID, cid_uri))
-                        break
+        # Parse project details, assuming JSON format
+        project_data = matching_details['project_details']
+        if isinstance(project_data, str):
+            try:
+                project_data = json.loads(project_data)
+            except json.JSONDecodeError:
+                logging.error(f"Failed to parse project details for project_id {search_result['project_id']}")
+                continue
 
-    # Print or serialize the graph
-    print(g.serialize(format="turtle").decode("utf-8"))
+        # Check for matching CIDs in project details
+        for key, value in project_data.items():
+            if isinstance(value, dict):
+                for sub_key, sub_value in value.items():
+                    if sub_value == search_result['cid']:
+                        g.add((project_uri, EX.hasFile, Literal(sub_key)))
+            elif value == search_result['cid']:
+                g.add((project_uri, EX.hasFile, Literal(key)))
+    
+    # Serialize and print graph for debugging
+    print(g.serialize(format='turtle'))
 
 
 #---
