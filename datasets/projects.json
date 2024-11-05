@@ -6,329 +6,39 @@
     "@graph": [
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "32824@test",
-            "schema:publicKey": "2bfc70545ee05c0ccd8ebe50f7fbcb2dcfff6f8ceba633425ad807ef352a8e8d",
+            "schema:identifier": "12694@test",
+            "schema:publicKey": "c7054052d1189a49938fff2e9794060e2b4d3c2c47d6337df77a03994e2d5c0c",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Analyzing the Influence of satellite imagery on energy storage",
-                "dc:abstract": "This paper analyzes how satellite imagery influences energy storage, providing insights into how to maximize its personalized medicine.",
+                "schema:name": "Analyzing the Influence of digital twins on precision medicine",
+                "dc:abstract": "This paper analyzes how digital twins influences precision medicine, providing insights into how to maximize its personalized medicine.",
                 "schema:keywords": [
-                    "satellite imagery",
-                    "energy storage",
+                    "digital twins",
+                    "precision medicine",
                     "personalized medicine"
                 ],
-                "schema:startDate": "2024-06-05",
-                "schema:endDate": "2027-02-15",
+                "schema:startDate": "2020-01-19",
+                "schema:endDate": "2026-05-26",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "National Geographic Society"
+                    "schema:name": "United Nations Environment Programme"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
-                    "schema:name": "Yellowstone National Park, USA"
+                    "schema:name": "Rotterdam, Netherlands"
                 }
             },
-            "schema:metadataCID": "QmcS9EAnpkijjkxYsNNwVjR69kJq1Se9iXE7UUHqHDw75b",
-            "schema:linked_user": "recursing_diffie@test",
+            "schema:metadataCID": "QmXSV2zghFun8rT44hwaWwNGFGMBnM1jdQVbghFunDSumL",
+            "schema:linked_user": "youthful_curie@test",
             "schema:files": [
                 {
                     "file_index": 1,
                     "file_cid": "QmXh37WXcrLXkJX2cAPjbPdKZ2cxJXD58XX6eU1Zc41ka4",
-                    "metadata_cid": "QmbxzzFCjkMpypTEfBNjPmt8mkKo8fUmY2fNtx3yVKjAYa",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Aeroacoustic airfoil shape optimization enhanced by autoencoders",
-                        "dc:creator": "Jiaqing Kou",
-                        "dcterms:created": "2023-02-04T09:40:15Z",
-                        "dcterms:modified": "2023-02-07T16:56:45Z",
-                        "dc:language": "en-US",
-                        "dc:subject": [
-                            "Aeroacoustics,Optimization design,Amiet theory,Machine learning,Autoencoder",
-                            "Expert Systems With Applications, 217 (2023) 119513. doi:10.1016/j.eswa.2023.119513"
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "41724@test",
-            "schema:publicKey": "4ddb713ed12ce055f32950c87fb0cadb2b5f3edc8c34bf7e824205b08d9450b0",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Exploring the Effects of deforestation on soil contamination",
-                "dc:abstract": "This study aims to investigate the effects of deforestation on soil contamination and propose strategies for improvement.",
-                "schema:keywords": [
-                    "deforestation",
-                    "soil contamination",
-                    "space colonization"
-                ],
-                "schema:startDate": "2021-03-05",
-                "schema:endDate": "2028-08-22",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "Bill and Melinda Gates Foundation"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Tokyo, Japan"
-                }
-            },
-            "schema:metadataCID": "QmYfqzSZpVXBJPNeg5AYEUGEjbm6idBesoPLt88JxBzHMW",
-            "schema:linked_user": "nifty_hermann@test",
-            "schema:files": [
-                {
-                    "file_index": 1,
-                    "file_cid": "QmTLZSqzPexwEdniZXLPN6fUfmEXX6MXS3b4QjKURgxc9y",
-                    "metadata_cid": "QmdpdBPnCz3BCeRKCmr7gJNB9uWkSkF5Ew2QVCAVLasvYG",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Random feature selection using random subspace logistic regression",
-                        "dc:description": "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535",
-                        "dc:creator": [
-                            "Nuttanan Wichitaksorn",
-                            "Yingyue Kang",
-                            "Faqiang Zhang"
-                        ],
-                        "dcterms:created": "2023-09-04T20:45:13Z",
-                        "dcterms:modified": "2023-09-04T23:27:57Z",
-                        "dc:language": "en-US",
-                        "dc:subject": [
-                            "Feature selection,Logistic regression,Lasso logistic,Random subspace,Bootstrap",
-                            "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535"
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "62356@test",
-            "schema:publicKey": "cfc4570d8190a258a47b2103f8b450f24cc37dd6046bd39816b43d087f903e50",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Analyzing the Influence of robotics on pharmaceutical research",
-                "dc:abstract": "This paper analyzes how robotics influences pharmaceutical research, providing insights into how to maximize its resilience building.",
-                "schema:keywords": [
-                    "robotics",
-                    "pharmaceutical research",
-                    "resilience building"
-                ],
-                "schema:startDate": "2024-03-27",
-                "schema:endDate": "2027-03-06",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "Food and Agriculture Organization"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Yellowstone National Park, USA"
-                }
-            },
-            "schema:metadataCID": "QmWyWxhoc9dk438QCZ5ixTTXb94CJDSHnxWGnw9LvQ2uoB",
-            "schema:linked_user": "trusting_jones@test",
-            "schema:files": [
-                {
-                    "file_index": 1,
-                    "file_cid": "QmUq29KRwpTdvScB5oYzEDobDHyb4N1f9eaZXm4VaMCgiW",
-                    "metadata_cid": "QmUKs4RH54TMKgWGx485zgwVE3RP1tnkr684EgzNiLkayU",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "COVID19-MLSF: A multi-task learning-based stock market forecasting framework during the COVID-19 pandemic",
-                        "dc:description": "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549",
-                        "dc:creator": [
-                            "Chenxun Yuan",
-                            "Xiang Ma",
-                            "Hua Wang",
-                            "Caiming Zhang",
-                            "Xuemei Li"
-                        ],
-                        "dcterms:created": "2023-02-04T09:40:15Z",
-                        "dcterms:modified": "2023-02-07T16:52:03Z",
-                        "dc:language": "en-US",
-                        "dc:subject": [
-                            "Stock market forecasting,COVID-19 pandemic,Multi-task learning,Feature fusion,K-nearest neighbor classifier",
-                            "Expert Systems With Applications, 217 (2023) 119549. doi:10.1016/j.eswa.2023.119549"
-                        ]
-                    }
-                },
-                {
-                    "file_index": 2,
-                    "file_cid": "QmZnh5Uuo7moZKMESFHpRjQFbbND5e3nArCzZg8uLARAgg",
-                    "metadata_cid": "QmTW2iVmNunrCH6v4tcE2C1hHaFrUzaqedxNp782rsV4MG",
-                    "metadata": {
-                        "dcterms:created": "2023-02-07T10:24:44Z",
-                        "dcterms:modified": "2023-02-07T10:25:02Z",
-                        "dc:format": "application/pdf; version=1.7"
-                    }
-                },
-                {
-                    "file_index": 3,
-                    "file_cid": "QmT7ximApXtExAedhzUHGHDwRismRzuKykpH4dgTvGrNZs",
-                    "metadata_cid": "QmUj9kwipFKqSe6FD1xyQwJKYYgiEqWEMQBKmHZLSN3BRk",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Diabetic retinopathy identification using parallel convolutional neural network based feature extractor and ELM classifier",
-                        "dc:description": "Expert Systems With Applications, 217 (2023) 119557. doi:10.1016/j.eswa.2023.119557",
-                        "dc:creator": [
-                            "Md. Nahiduzzaman",
-                            "Md. Robiul Islam",
-                            "Md. Omaer Faruq Goni",
-                            "Md. Shamim Anower",
-                            "Mominul Ahsan",
-                            "Julfikar Haider",
-                            "Marcin Kowalski"
-                        ],
-                        "dcterms:created": "2023-02-04T09:40:15Z",
-                        "dcterms:modified": "2023-02-07T17:54:35Z",
-                        "dc:language": "en",
-                        "dc:subject": [
-                            "Contrast limited adaptive histogram equalization (CLAHE),Diabetic retinopathy (DR),Parallel convolutional neural network (PCNN),Extreme LEARNING MACHine (ELM)",
-                            "Expert Systems With Applications, 217 (2023) 119557. doi:10.1016/j.eswa.2023.119557"
-                        ]
-                    }
-                },
-                {
-                    "file_index": 4,
-                    "file_cid": "QmdiRawzVNUiB28ENKQ7WefeFLEJ1xMjsJjwtHL2jnJ9xW",
-                    "metadata_cid": "QmQsUuoEPbtxgQhmCUiA6bdMvaEbdcgSBwzEJScXcRJ7QA",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.6",
-                        "dc:title": "The reproducibility debate is an opportunity, not a crisis",
-                        "dc:description": "BMC Research Notes, https://doi.org/10.1186/s13104-022-05942-3",
-                        "dc:creator": [
-                            "Marcus R. Munaf\u00f2 ",
-                            "Chris Chambers ",
-                            "Alexandra Collins ",
-                            "Laura Fortunato ",
-                            "Malcolm Macleod "
-                        ],
-                        "dcterms:created": "2022-02-04T06:52:19Z",
-                        "dcterms:modified": "2022-02-10T12:46:46Z",
-                        "dc:language": "EN",
-                        "dc:subject": [
-                            "UK Reproducibility Network,Reproducibility,Replicability,Research Integrity",
-                            "BMC Research Notes, https://doi.org/10.1186/s13104-022-05942-3"
-                        ]
-                    }
-                },
-                {
-                    "file_index": 5,
-                    "file_cid": "QmeBTz4ZwyqPkPigpASZ3wJodBXzJRpeXQMwNcsWRqU5Jv",
-                    "metadata_cid": "QmaDozapyCj1xVV84MseRGsqxJRJBJmFyoHJPzM1q3oKGk",
-                    "metadata": {}
-                },
-                {
-                    "file_index": 6,
-                    "file_cid": "QmTLZSqzPexwEdniZXLPN6fUfmEXX6MXS3b4QjKURgxc9y",
-                    "metadata_cid": "QmQVrDXTz88wLkqkyKpxmgLNmtzhbfm8d4A7ZUDe7KJPjZ",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Random feature selection using random subspace logistic regression",
-                        "dc:description": "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535",
-                        "dc:creator": [
-                            "Nuttanan Wichitaksorn",
-                            "Yingyue Kang",
-                            "Faqiang Zhang"
-                        ],
-                        "dcterms:created": "2023-09-04T20:45:13Z",
-                        "dcterms:modified": "2023-09-04T23:27:57Z",
-                        "dc:language": "en-US",
-                        "dc:subject": [
-                            "Feature selection,Logistic regression,Lasso logistic,Random subspace,Bootstrap",
-                            "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535"
-                        ]
-                    }
-                },
-                {
-                    "file_index": 7,
-                    "file_cid": "QmRA3NWM82ZGynMbYzAgYTSXCVM14Wx1RZ8fKP42G6gjgj",
-                    "metadata_cid": "Qma7VpzznoDgSzqfwX1TLyCYgrqNoLe1GaDkkR2WS5gxiP",
-                    "metadata": {
-                        "dcterms:created": "2009-03-24T17:33:15Z",
-                        "dc:format": "application/pdf; version=1.4",
-                        "dc:language": "en-GB"
-                    }
-                },
-                {
-                    "file_index": 8,
-                    "file_cid": "QmV1vYkuiwKGPA5Tyi4ECNFfWYocyTtQ3E5j7CSvPBX49Q",
-                    "metadata_cid": "QmZuvtDJpvFRZVds8Bd9AAtJ4bNeMLqaE8kSoxCCMbp6NL",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Deep learning in insurance: Accuracy and model interpretability using TabNet",
-                        "dc:description": "Expert Systems With Applications, 217 (2023) 119543. doi:10.1016/j.eswa.2023.119543",
-                        "dc:creator": [
-                            "Kevin McDonnell",
-                            "Finbarr Murphy",
-                            "Barry Sheehan",
-                            "Leandro Masello",
-                            "German Castignani"
-                        ],
-                        "dcterms:created": "2023-02-04T09:40:15Z",
-                        "dcterms:modified": "2023-02-07T17:36:19Z",
-                        "dc:language": "en",
-                        "dc:subject": [
-                            "Deep Learning,Telematics,Connected Vehicles,Insurance,General Linear Model,XGBoost,Machine Learning,Explainable AI",
-                            "Expert Systems With Applications, 217 (2023) 119543. doi:10.1016/j.eswa.2023.119543"
-                        ]
-                    }
-                },
-                {
-                    "file_index": 9,
-                    "file_cid": "QmXquoApMLCcauNkz4tYw1Sp2tsqZ4edv1YtnQi5pmbw6C",
-                    "metadata_cid": "QmU7M5znj9sG3geRVXM9BcKfiN13guFsVYkVdxSwBsQ4bT",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Mel Spectrogram-based advanced deep temporal clustering model with unsupervised data for fault diagnosis",
-                        "dc:creator": "Geonkyo Hong",
-                        "dcterms:created": "2023-02-07T18:16:11Z",
-                        "dcterms:modified": "2023-02-07T18:19:55Z",
-                        "dc:language": "en",
-                        "dc:subject": [
-                            "Anomaly detection,Data augmentation,Fault diagnosis,Mel spectrogram,Time series,Unsupervised learning",
-                            "Expert Systems With Applications, 217 (2023) 119551. doi:10.1016/j.eswa.2023.119551"
-                        ]
-                    }
-                },
-                {
-                    "file_index": 10,
-                    "file_cid": "QmTLZSqzPexwEdniZXLPN6fUfmEXX6MXS3b4QjKURgxc9y",
-                    "metadata_cid": "QmPZJbmag7qoKFQpEXbNgg8U8dKsnGDGZHjxToeWQsg9cR",
-                    "metadata": {
-                        "dc:format": "application/pdf; version=1.7",
-                        "dc:title": "Random feature selection using random subspace logistic regression",
-                        "dc:description": "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535",
-                        "dc:creator": [
-                            "Nuttanan Wichitaksorn",
-                            "Yingyue Kang",
-                            "Faqiang Zhang"
-                        ],
-                        "dcterms:created": "2023-09-04T20:45:13Z",
-                        "dcterms:modified": "2023-09-04T23:27:57Z",
-                        "dc:language": "en-US",
-                        "dc:subject": [
-                            "Feature selection,Logistic regression,Lasso logistic,Random subspace,Bootstrap",
-                            "Expert Systems With Applications, 217 (2023) 119535. doi:10.1016/j.eswa.2023.119535"
-                        ]
-                    }
-                },
-                {
-                    "file_index": 11,
-                    "file_cid": "QmXh37WXcrLXkJX2cAPjbPdKZ2cxJXD58XX6eU1Zc41ka4",
-                    "metadata_cid": "QmfUtMhJBpAuGHFr4B9o5zFfqFWCzmEy2dmEnxwZ9wMB9R",
+                    "metadata_cid": "QmaBLUUdGotvWFhgEQqVKcbZk2A6KZWvQ8a1tcV89tXD65",
                     "metadata": {
                         "dc:format": "application/pdf; version=1.7",
                         "dc:title": "Aeroacoustic airfoil shape optimization enhanced by autoencoders",

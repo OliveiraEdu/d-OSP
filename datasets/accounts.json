@@ -6,63 +6,23 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Recursing Diffie",
-            "foaf:mbox": "recursing_diffie@email.com",
+            "foaf:name": "Youthful Curie",
+            "foaf:mbox": "youthful_curie@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Ecole Sup\u00e9rieure Internationale d'Administration des Entreprises"
+                "foaf:name": "Lebanon Valley College"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "2442-8798-7206-X"
+                "value": "4833-3023-0564-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "recursing_diffie@test",
+                "schema:identifier": "youthful_curie@test",
                 "schema:roleName": "author",
-                "schema:publicKey": "fe5e4f3cbb4e758dae0e2eae83f68dd54c36c50f6af6e86c3bf655c41b752bda"
+                "schema:publicKey": "6c3f08fbd76d621caec873081100308e718106791cb07d522da5354b46ae0cd1"
             },
-            "schema:linked_project": "32824@test"
-        },
-        {
-            "@type": "foaf:Person",
-            "foaf:name": "Nifty Hermann",
-            "foaf:mbox": "nifty_hermann@email.com",
-            "foaf:organization": {
-                "@type": "foaf:Organization",
-                "foaf:name": "Showa Women's University"
-            },
-            "schema:identifier": {
-                "@type": "PropertyValue",
-                "propertyID": "ORCID",
-                "value": "0071-2969-4608-X"
-            },
-            "foaf:holdsAccount": {
-                "schema:identifier": "nifty_hermann@test",
-                "schema:roleName": "reviewer",
-                "schema:publicKey": "fc445d85ea59d69e1e9128783433c2e3af525f7f3e472d9250b9b3ac8e613acf"
-            },
-            "schema:linked_project": "41724@test"
-        },
-        {
-            "@type": "foaf:Person",
-            "foaf:name": "Trusting Jones",
-            "foaf:mbox": "trusting_jones@email.com",
-            "foaf:organization": {
-                "@type": "foaf:Organization",
-                "foaf:name": "University of Zadar"
-            },
-            "schema:identifier": {
-                "@type": "PropertyValue",
-                "propertyID": "ORCID",
-                "value": "7776-4715-3722-X"
-            },
-            "foaf:holdsAccount": {
-                "schema:identifier": "trusting_jones@test",
-                "schema:roleName": "author",
-                "schema:publicKey": "72275c7bf189a438ee3682db092d7593b294fb6ba6cc14e18ffeebdeebbea1a7"
-            },
-            "schema:linked_project": "62356@test"
+            "schema:linked_project": "12694@test"
         }
     ]
 }

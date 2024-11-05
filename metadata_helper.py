@@ -140,9 +140,11 @@ net = IrohaGrpc("{}:{}".format(IROHA_HOST_ADDR, IROHA_PORT))
 def get_project_details(project_ids, net, iroha):
     """Get account details for each project ID."""
     admin_private_key = ADMIN_PRIVATE_KEY
-
     project_accounts = []
-    for project_id in set(project_ids):  # Remove duplicates by converting to a set
+    
+    unique_project_ids = set(project_id for _, project_id in project_ids)  # Remove duplicates
+
+    for project_id in unique_project_ids:
         query = iroha.query('GetAccountDetail', account_id=project_id)
         IrohaCrypto.sign_query(query, admin_private_key)
         response = net.send_query(query)
@@ -159,23 +161,48 @@ def get_project_details(project_ids, net, iroha):
 
 def search_index(keyword, ix):
     """Search for a keyword in the indexed documents."""
+    project_ids = []
     try:
         with ix.searcher() as searcher:
             query = QueryParser("full_text", ix.schema).parse(keyword)
             results = searcher.search(query)
 
             if results:
-                project_ids = []
                 for result in results:
                     logging.info(f"CID: {result['cid']}, Project: {result['project_id']}, Name: {result['name']}, Title: {result['title']}, "
                                  f"Creator: {result['creator']}, Size: {result['size']} bytes")
-                    project_ids.append(result['project_id'])
+                    project_ids.append((result['cid'], result['project_id']))
             else:
                 logging.info(f"No results found for '{keyword}'")
 
-        return project_ids
     except Exception as e:
         logging.error(f"Error occurred during search: {e}")
+    
+    return project_ids
+
+
+def check_cid_in_project_details(keyword, ix, net, iroha):
+    """Check if CID from search results is found in the project account details."""
+    # Step 1: Search for the keyword in the index
+    project_id_cid_pairs = search_index(keyword, ix)
+    
+    if not project_id_cid_pairs:
+        logging.info("No projects found for the given keyword.")
+        return
+
+    # Step 2: Get project details for each unique project ID
+    project_details_list = get_project_details(project_id_cid_pairs, net, iroha)
+
+    # Step 3: Check for each CID and Project ID in the fetched project details
+    for cid, project_id in project_id_cid_pairs:
+        found = False
+        for project in project_details_list:
+            if project["account_id"] == project_id and cid in project["project_details"]:
+                logging.info(f"Match found! CID: {cid} is associated with Project ID: {project_id} in the project details.")
+                found = True
+                break
+        if not found:
+            logging.info(f"No match found for CID: {cid} and Project ID: {project_id} in the project details.")
 
 
 
