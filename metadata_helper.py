@@ -7,7 +7,7 @@ from tika import parser
 from whoosh.index import create_in, open_dir, LockError
 from whoosh.fields import Schema, TEXT, ID, NUMERIC
 from whoosh.qparser import QueryParser
-from ipfs_functions import upload_file_to_ipfs, upload_json_to_ipfs
+from ipfs_functions import *
 from dump_to_json import update_project_entry_with_file_data
 import json  # Added for printing metadata
 
@@ -168,31 +168,28 @@ def get_project_details(project_ids, net, iroha):
     return project_accounts
 
 def search_index(keyword, ix):
+    """Search for a keyword in the indexed documents."""
     try:
+        project_ids = []
+        search_results = []
         with ix.searcher() as searcher:
             query = QueryParser("full_text", ix.schema).parse(keyword)
             results = searcher.search(query)
 
-            project_ids = []
-            search_results = []
-            if results:
-                for result in results:
-                    logging.info(f"CID: {result['cid']}, Project: {result['project_id']}, Name: {result['name']}, Title: {result['title']}, "
-                                 f"Creator: {result['creator']}, Size: {result['size']} bytes")
-                    project_ids.append(result['project_id'])
-                    search_results.append({
-                        "cid": result['cid'],
-                        "project_id": result['project_id'],
-                        "name": result['name'],
-                        "title": result['title'],
-                        "creator": result['creator'],
-                        "size": result['size']
-                    })
-            else:
-                logging.info(f"No results found for '{keyword}'")
+            for result in results:
+                logging.info(f"CID: {result['cid']}, Project: {result['project_id']}, Name: {result['name']}, Title: {result['title']}, "
+                             f"Creator: {result['creator']}, Size: {result['size']} bytes")
+                project_ids.append(result['project_id'])
+                search_results.append({
+                    "cid": result['cid'],
+                    "project_id": result['project_id'],
+                    "name": result['name'],
+                    "title": result['title'],
+                    "creator": result['creator'],
+                    "size": result['size']
+                })
 
-        # Ensure both lists are returned, even if empty
-        return project_ids, search_results
+        return project_ids, search_results  # Return both lists
     except Exception as e:
         logging.error(f"Error occurred during search: {e}")
         return [], []  # Return empty lists in case of an error
@@ -228,6 +225,9 @@ def generate_knowledge_graph(search_results, project_details):
             if isinstance(value, dict):
                 for sub_key, sub_value in value.items():
                     if sub_value == search_result['cid']:
+                        search_result_cid = download_json_from_ipfs(search_result['cid'])
+                        print("Search Result CID: ", search_result_cid)
+                        print("CID in search matches CID in project")
                         g.add((project_uri, EX.hasFile, Literal(sub_key)))
             elif value == search_result['cid']:
                 g.add((project_uri, EX.hasFile, Literal(key)))
