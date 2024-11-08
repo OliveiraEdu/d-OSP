@@ -1,0 +1,27 @@
+@startuml
+start
+:Search for a keyword;
+:Fetch keyword in the index;
+
+if (Keyword found?) then (Yes)
+    :List File Name, File CID, File Metadata CID, and Project ID;
+    :Fetch Project ID account in blockchain;
+    :Retrieve project owner from account details;
+    :Fetch project owner account in blockchain;
+    :Retrieve institution from account details;
+
+    :Parse account details;
+    :Fetch File Metadata CID;
+    
+    if (File Metadata CID in index == File Metadata CID in blockchain?) then (Yes)
+        :File is valid;
+    else (No)
+        :File is invalid;
+    endif
+
+else (No)
+    :Keyword not found;
+endif
+
+stop
+@enduml
