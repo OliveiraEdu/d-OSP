@@ -6,23 +6,23 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Cranky Lederberg",
-            "foaf:mbox": "cranky_lederberg@email.com",
+            "foaf:name": "Nice Northcutt",
+            "foaf:mbox": "nice_northcutt@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Philander Smith College"
+                "foaf:name": "Los Angeles College of Chiropractic"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "0962-2791-4265-X"
+                "value": "7344-0227-6220-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "cranky_lederberg@test",
-                "schema:roleName": "publisher",
-                "schema:publicKey": "a24cb3fd4b5da6c4411d82c3365ff009795b9af234ed8ea6b853615733cb9828"
+                "schema:identifier": "nice_northcutt@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "9e5bf2e35b4355dc919f09e92d8bb49d2ffdda21c740c18433c3549071a41bea"
             },
-            "schema:linked_project": "77557@test"
+            "schema:linked_project": "62779@test"
         }
     ]
 }
