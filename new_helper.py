@@ -1,52 +1,76 @@
 import os
 from loguru import logger
 from ipfs_functions import *
+import tika
 from tika import parser
 
-# Helper function to list files, parse with Tika, upload to IPFS, and index with Woosh
-def process_files(directory_path):
-    
-    # Set up Loguru's logger with a basic configuration
-    logger.add("logs/logs.log", format="{time:MM.DD/YYYY} | {level} | {message}")
-    
-    for file_name in list_files(directory_path):
-        file_path = os.path.join(directory_path, file_name)
-        metadata = parse_file_with_tika(file_path)
-        file_cid = upload_file_to_ipfs(file_path)
-        metadata_cid = upload_json_to_ipfs(metadata)
-        index_file_with_woosh(file_path, metadata_cid)
+# Initialize Tika
+tika.initVM()
+
+# Set up a basic configuration for Loguru
+logger.add("logs.log", format="{time:MM.DD/YYYY} | {level} | {message}", level="INFO")
+
 
 # Individual functions
 def list_files(directory_path):
     """Return a list of files in the specified directory path."""
-    return [filename for filename in os.listdir(directory_path) if not os.path.basename(filename).startswith('.')]
+    try:
+        return [filename for filename in os.listdir(directory_path) if not os.path.basename(filename).startswith('.')]
+        logger.info(f"Listing {filename}")
+    except Exception as e:
+        logger.error(f"Error listing files in {directory_path}: {e}")
+        return []
 
 def parse_file_with_tika(file_path):
-    # Use Apache Tika to parse the file and extract its metadata
-    
-    # Initialize Tika
-    # tika.initVM()
-    
+    """Use Apache Tika to parse the file and extract its metadata."""
     try:
-        metadata = parser.from_file(file_path)
+        parsed = parser.from_file(file_path)
+        logger.info(f"Parsing {file_path} with Tika...")
+        metadata = parsed["metadata"]
         return metadata
     except Exception as e:
-        logger.error(f"Error processing file {filename}: {e}")
-        # continue
+        logger.error(f"Error parsing {file_path} with Tika: {e}")
+        return None
 
 def index_file_with_woosh(file_path, metadata_cid):
     # Index the file with Woosh using the provided metadata CID
-    pass  # TO DO: implement this function
+    try:
+        pass  # TO DO: implement this function
+        logger.info(f"Indexing {file_path} with Woosh...")
+    except Exception as e:
+        logger.error(f"Error indexing {file_path} with Woosh: {e}")
 
 # Helper function to orchestrate the entire process
 def process_files(directory_path):
     """Process files in the specified directory path."""
-    for filename in list_files(directory_path):
-        file_path = os.path.join(directory_path, filename)
-        metadata = parse_file_with_tika(file_path)
-        cid = upload_file_to_ipfs(file_path)
-        metadata_cid = upload_json_to_ipfs(metadata)
-        # index_file_with_woosh(file_path, metadata_cid)
+    try:
+        for filename in list_files(directory_path):
+            file_path = os.path.join(directory_path, filename)
+            print(file_path)
+            metadata = parse_file_with_tika(file_path)
+            print(metadata)
+            if metadata is not None and isinstance(metadata, dict):
+                cid = upload_file_to_ipfs(file_path)
+                print(cid)
+                if cid is not None:
+                    metadata_cid = upload_json_to_ipfs(metadata)
+                    print(metadata_cid)
+                    index_file_with_woosh(file_path, metadata_cid)
+    except Exception as e:
+        logger.error(f"Error processing files in {directory_path}: {e}")
+
+
+
+
+# # Helper function to orchestrate the entire process
+# def process_files(directory_path):
+#     """Process files in the specified directory path."""
+#     for filename in list_files(directory_path):
+#         file_path = os.path.join(directory_path, filename)
+#         metadata = parse_file_with_tika(file_path)
+#         cid = upload_file_to_ipfs(file_path)
+#         metadata_cid = upload_json_to_ipfs(metadata)
+#         # index_file_with_woosh(file_path, metadata_cid)
 
 
 
