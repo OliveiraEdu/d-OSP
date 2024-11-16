@@ -22,7 +22,26 @@
                 "schema:roleName": "reviewer",
                 "schema:publicKey": "9e5bf2e35b4355dc919f09e92d8bb49d2ffdda21c740c18433c3549071a41bea"
             },
-            "schema:linked_project": "62779@test"
+            "schema:linked_project": "07210@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Eager Chatterjee",
+            "foaf:mbox": "eager_chatterjee@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "University of Calgary"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "6961-8102-2674-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "eager_chatterjee@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "2bc78c891cffbcf0127f019c67d39a58d2f0ae14734bdcb72ac0193634c1c2db"
+            }
         }
     ]
 }
