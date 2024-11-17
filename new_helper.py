@@ -3,12 +3,13 @@ from loguru import logger
 from ipfs_functions import *
 import tika
 from tika import parser
+import integration_helpers
 
 # Initialize Tika
 tika.initVM()
 
 # Set up a basic configuration for Loguru
-logger.add("logs.log", format="{time:MM.DD/YYYY} | {level} | {message}", level="INFO")
+logger.add("logs/file_{time}.log", format="{time:MM.DD/YYYY} | {level} | {message}", level="INFO")
 
 
 # Individual functions
@@ -40,78 +41,136 @@ def index_file_with_woosh(file_path, metadata_cid):
     except Exception as e:
         logger.error(f"Error indexing {file_path} with Woosh: {e}")
 
+#Current
 # Helper function to orchestrate the entire process
+# def process_files(directory_path):
+#     """Process files in the specified directory path."""
+#     try:
+#         for filename in list_files(directory_path):
+#             file_path = os.path.join(directory_path, filename)
+#             print("file: ", file_path)
+#             metadata = parse_file_with_tika(file_path)
+#             print("file metadata: ", metadata)
+#             if metadata is not None and isinstance(metadata, dict):
+#                 file_cid = upload_file_to_ipfs(file_path)
+#                 print("file cid: ", file_cid)
+#                 if file_cid is not None:
+#                     metadata_cid = upload_json_to_ipfs(metadata)
+#                     print("file metadata cid: ", metadata_cid)
+#                     index_file_with_woosh(file_path, metadata_cid)
+#     except Exception as e:
+#         logger.error(f"Error processing files in {directory_path}: {e}")
+
+#Option 1
+# Helper function to orchestrate the entire process
+# def process_files(directory_path):
+#     """Process files in the specified directory path."""
+#     try:
+#         for filename in list_files(directory_path):
+#             file_path = os.path.join(directory_path, filename)
+#             print("File: ", file_path)
+#             metadata = parse_file_with_tika(file_path)
+#             print("File metadata: ", metadata)
+#             if metadata is not None and isinstance(metadata, dict):
+#                 file_cid = upload_file_to_ipfs(file_path)
+#                 # print("file cid: ", file_cid)
+#                 if file_cid is not None:
+#                     metadata_cid = upload_json_to_ipfs(metadata)
+#                     # print("file metadata cid: ", metadata_cid)
+#                     yield file_cid, metadata_cid
+#     except Exception as e:
+#         logger.error(f"Error processing files in {directory_path}: {e}")
+
+
+# Option 2
+# Helper function to orchestrate the entire process
+# def process_files(directory_path):
+#     """Process files in the specified directory path."""
+#     try:
+#         cid_dict = {}
+#         for filename in list_files(directory_path):
+#             file_path = os.path.join(directory_path, filename)
+#             print("file: ", file_path)
+#             metadata = parse_file_with_tika(file_path)
+#             print("file metadata: ", metadata)
+#             if metadata is not None and isinstance(metadata, dict):
+#                 file_cid = upload_file_to_ipfs(file_path)
+#                 print("file cid: ", file_cid)
+#                 if file_cid is not None:
+#                     metadata_cid = upload_json_to_ipfs(metadata)
+#                     print("file metadata cid: ", metadata_cid)
+#                     cid_dict[filename] = (file_cid, metadata_cid)
+#         return cid_dict
+#     except Exception as e:
+#         logger.error(f"Error processing files in {directory_path}: {e}")
+
+# # Example usage
+# if __name__ == "__main__":
+#     directory_path = "/path/to/directory"
+#     cid_dict = process_files(directory_path)
+#     print("CID Dictionary:")
+#     for filename, (file_cid, metadata_cid) in cid_dict.items():
+#         print(f"File: {filename}, File CID: {file_cid}, Metadata CID: {metadata_cid}")
+
+#Option 3
+# def process_files(directory_path):
+#     """Process files in the specified directory path."""
+#     try:
+#         cid_dict = {}
+#         for filename in list_files(directory_path):
+#             file_path = os.path.join(directory_path, filename)
+#             print("file: ", file_path)
+#             metadata = parse_file_with_tika(file_path)
+#             print("file metadata: ", metadata)
+#             if metadata is not None and isinstance(metadata, dict):
+#                 file_cid = upload_file_to_ipfs(file_path)
+#                 print("file cid: ", file_cid)
+#                 if file_cid is not None:
+#                     metadata_cid = upload_json_to_ipfs(metadata)
+#                     print("file metadata cid: ", metadata_cid)
+#                     cid_dict[filename] = (file_cid, metadata_cid)
+#         return list(cid_dict.values())
+#     except Exception as e:
+#         logger.error(f"Error processing files in {directory_path}: {e}")
+
+# def encoder(input_value):
+#     """Encode the provided input values using argument encoding."""
+#     encoded_value = ''.join(
+#         integration_helpers.argument_encoding(v).decode('utf-8') 
+#         for v in input_value
+#      )
+    
+#     # Return the string value
+#     return encoded_value
+
+#Option 4
 def process_files(directory_path):
     """Process files in the specified directory path."""
     try:
+        cid_dict = {}
+        file_count = 0
+
         for filename in list_files(directory_path):
             file_path = os.path.join(directory_path, filename)
-            print(file_path)
+            print("file: ", file_path)
+
             metadata = parse_file_with_tika(file_path)
-            print(metadata)
+            print("file metadata: ", metadata)
+
             if metadata is not None and isinstance(metadata, dict):
-                cid = upload_file_to_ipfs(file_path)
-                print(cid)
-                if cid is not None:
+                file_cid = upload_file_to_ipfs(file_path)
+                print("file cid: ", file_cid)
+
+                if file_cid is not None:
                     metadata_cid = upload_json_to_ipfs(metadata)
-                    print(metadata_cid)
-                    index_file_with_woosh(file_path, metadata_cid)
+                    print("file metadata cid: ", metadata_cid)
+
+                    # Create a unique key for the file and update the CID dictionary
+                    file_key = f"file_{file_count + 1}"
+                    cid_dict[filename] = {file_key: [file_cid, metadata_cid]}
+                    print(cid_dict[filename])
+                    file_count += 1
+
+        return cid_dict
     except Exception as e:
         logger.error(f"Error processing files in {directory_path}: {e}")
-
-
-
-
-# # Helper function to orchestrate the entire process
-# def process_files(directory_path):
-#     """Process files in the specified directory path."""
-#     for filename in list_files(directory_path):
-#         file_path = os.path.join(directory_path, filename)
-#         metadata = parse_file_with_tika(file_path)
-#         cid = upload_file_to_ipfs(file_path)
-#         metadata_cid = upload_json_to_ipfs(metadata)
-#         # index_file_with_woosh(file_path, metadata_cid)
-
-
-
-# def upload_documents_in_directory(directory_path):
-#     # Set up Loguru's logger with a basic configuration
-#     logger.add("logs/logs.log", format="{time:MM.DD/YYYY} | {level} | {message}")
-    
-#     for filename in os.listdir(directory_path):
-#         try:
-#             if not os.path.basename(filename).startswith('.'):
-#                 file_path = os.path.join(directory_path, filename)
-                
-#                 # Upload the file to IPFS and get its CID
-#                 file_cid = upload_file_to_ipfs(file_path)
-#                 logger.info(f"File {filename} uploaded to IPFS with CID: {file_cid}")
-
-#                 # # Call some other function to handle metadata_cid and upload it to IPFS
-#                 # metadata_cid = handle_metadata_and_upload_to_ipfs(file_path)
-
-#                 # # Add the file_cid and metadata_cid into the database or do something else
-#                 # add_file_cids_to_database(file_cid, metadata_cid)
-#         except Exception as e:
-#             logger.error(f"Error processing file {filename}: {e}")
-
-#     # Use Loguru's `catch` decorator to catch any unexpected errors in the function
-#     @logger.catch
-#     def upload_file_to_ipfs(file_path):
-#         try:
-#             raise ValueError("Mock error")
-#         except Exception as e:
-#             logger.error(f"Error uploading file {file_path} to IPFS: {e}")
-
-#     # Call the `upload_file_to_ipfs` function with a mock file path
-#     upload_file_to_ipfs("/path/to/mock/file.txt")
-
-# # Define the other functions used in this example
-# def handle_metadata_and_upload_to_ipfs(file_path):
-#     return "Metadata CID"
-
-# def add_file_cids_to_database(file_cid, metadata_cid):
-#     # Simulate adding the CIDs to the database
-
-
-#     print(f"Added file CID: {file_cid} and metadata CID: {metadata_cid} to the database")
