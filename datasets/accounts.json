@@ -42,6 +42,25 @@
                 "schema:roleName": "author",
                 "schema:publicKey": "2bc78c891cffbcf0127f019c67d39a58d2f0ae14734bdcb72ac0193634c1c2db"
             }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Condescending Panini",
+            "foaf:mbox": "condescending_panini@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "National Theatre Conservatory"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "7114-5091-6230-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "condescending_panini@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "655b30a48c29a649a445715921785a4945c24b50beefb3d22612befccc4b5ee7"
+            }
         }
     ]
 }

@@ -308,6 +308,36 @@
                     }
                 }
             ]
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "13355@test",
+            "schema:publicKey": "90e19a513e9c242785f6184650065cc57fcd07268b389ed4cad2df9a99bf870e",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Exploring the Effects of ocean currents on agriculture",
+                "dc:abstract": "This study aims to investigate the effects of ocean currents on agriculture and propose strategies for improvement.",
+                "schema:keywords": [
+                    "ocean currents",
+                    "agriculture",
+                    "supply chain resilience"
+                ],
+                "schema:startDate": "2018-03-24",
+                "schema:endDate": "2026-12-13",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "National Science Foundation"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Svalbard, Norway"
+                }
+            },
+            "schema:metadataCID": "QmdtLJkc1C66HP2iYWLnqfdUdN8nSgehjeJSoFWHtsjUgG"
         }
     ]
 }

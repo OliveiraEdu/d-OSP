@@ -90,3 +90,4 @@ def get_engine_receipts_result(tx_hash: str):
     bytes_object = bytes.fromhex(result)
     ascii_string = bytes_object.decode('ASCII', 'ignore')
     print(ascii_string)
+
