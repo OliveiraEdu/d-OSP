@@ -250,7 +250,88 @@ def index_file_with_woosh(file_path, metadata_cid):
 
 
 #Option 7
-def process_files(directory_path):
+# def process_files(directory_path):
+#     """Process files in the specified directory path."""
+#     try:
+#         cids = []
+#         file_count = 0
+
+#         for filename in list_files(directory_path):
+#             file_path = os.path.join(directory_path, filename)
+#             print("file: ", file_path)
+
+#             metadata = parse_file_with_tika(file_path)
+#             print("file metadata: ", metadata)
+
+#             if metadata is not None and isinstance(metadata, dict):
+#                 file_cid = upload_file_to_ipfs(file_path)
+#                 print("file cid: ", file_cid)
+
+#                 if file_cid is not None:
+#                     metadata_cid = upload_json_to_ipfs(metadata)
+#                     print("file metadata cid: ", metadata_cid)
+
+#                     # Create a unique key for the file and return its CIDs
+#                     file_key = f"file_{file_count + 1}"
+#                     cids.append((file_key, file_cid, metadata_cid))
+#                     file_count += 1
+                
+            
+#         return cids
+#     except Exception as e:
+#         logger.error(f"Error processing files in {directory_path}: {e}")
+
+
+#Option 9
+# def process_files(directory_path, id, DOMAIN):
+#     """Process files in the specified directory path."""
+#     try:
+#         cids = []
+#         file_count = 0
+
+#         for filename in list_files(directory_path):
+#             file_path = os.path.join(directory_path, filename)
+#             # print("file: ", file_path)
+
+#             metadata = parse_file_with_tika(file_path)
+#             # print("file metadata: ", metadata)
+
+#             if metadata is not None and isinstance(metadata, dict):
+#                 file_cid = upload_file_to_ipfs(file_path)
+#                 # print("file cid: ", file_cid)
+
+#                 if file_cid is not None:
+#                     metadata_cid = upload_json_to_ipfs(metadata)
+#                     print("file metadata cid: ", metadata_cid)
+
+#                     # Create a unique key for the file and return its CIDs
+#                     file_key = f"file_{file_count + 1}"
+#                     cids.append((file_key, file_cid, metadata_cid))
+#                     file_count += 1
+
+#                     # Assign cid_str here, so it gets updated for each file
+#                     cid_str = (file_key, file_cid, metadata_cid)
+
+#                     # Join file_cid and metadata_cid with a comma
+#                     joined_cids = f"{file_cid}, {metadata_cid}"
+
+#                     hash = create_contract()
+#                     address = integration_helpers.get_engine_receipts_address(hash)
+
+#                     hash = set_account_detail(
+#                         address, 
+#                         f"{id}@{DOMAIN}",  # Project ID as account
+#                         f"{file_key}",    # The key we're setting
+#                         joined_cids      # The value (CID from IPFS)
+#                     )
+
+#         return cids, cid_str, joined_cids if len(cids) > 0 else None
+#     except Exception as e:
+#         logger.error(f"Error processing files in {directory_path}: {e}")
+
+
+#Option 10
+def process_files(directory_path, id, DOMAIN):
     """Process files in the specified directory path."""
     try:
         cids = []
@@ -276,10 +357,27 @@ def process_files(directory_path):
                     cids.append((file_key, file_cid, metadata_cid))
                     file_count += 1
 
-        return cids
+                    # Assign cid_str here, so it gets updated for each file
+                    cid_str = (file_key, file_cid, metadata_cid)
+
+                    # Join file_cid and metadata_cid with a comma
+                    joined_cids = f"{file_cid}, {metadata_cid}"
+
+                    if not hasattr(process_files, 'create_contract_executed'):
+                        hash = create_contract()
+                        address = integration_helpers.get_engine_receipts_address(hash)
+                        process_files.create_contract_executed = True
+
+                    hash = set_account_detail(
+                        address, 
+                        f"{id}@{DOMAIN}",  # Project ID as account
+                        f"{file_key}",    # The key we're setting
+                        joined_cids      # The value (CID from IPFS)
+                    )
+
+        return cids, cid_str, joined_cids if len(cids) > 0 else None
     except Exception as e:
         logger.error(f"Error processing files in {directory_path}: {e}")
-
 
 def print_cids(cids):
     for i, cid in enumerate(cids):

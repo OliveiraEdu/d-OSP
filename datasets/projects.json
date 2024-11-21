@@ -338,6 +338,156 @@
                 }
             },
             "schema:metadataCID": "QmdtLJkc1C66HP2iYWLnqfdUdN8nSgehjeJSoFWHtsjUgG"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "21105@test",
+            "schema:publicKey": "8e22d09edfedcc7cdd29da899fd6e5c019428cfb7c3b6c3307b4991016719d00",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Assessing the Benefits of precision agriculture for industrial automation",
+                "dc:abstract": "This research focuses on the benefits and challenges posed by precision agriculture for industrial automation, with an emphasis on its potential for safety improvements.",
+                "schema:keywords": [
+                    "precision agriculture",
+                    "industrial automation",
+                    "safety improvements"
+                ],
+                "schema:startDate": "2019-08-19",
+                "schema:endDate": "2027-05-20",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "Department of Energy"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Phuket, Thailand"
+                }
+            },
+            "schema:metadataCID": "QmPUEbtGXZuAJGRAUQ1XszeZdiXxRggJMFTXejN1uXgPq9"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "28886@test",
+            "schema:publicKey": "48a8f7323c1a74abb9aa2ef04910335ec0ee696d84eb123850129a429e960ff0",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Investigating the Role of climate change in supply chain management",
+                "dc:abstract": "This study explores the impact of climate change in supply chain management, focusing on pollution mitigation.",
+                "schema:keywords": [
+                    "climate change",
+                    "supply chain management",
+                    "pollution mitigation"
+                ],
+                "schema:startDate": "2023-08-05",
+                "schema:endDate": "2027-04-19",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "Bill and Melinda Gates Foundation"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Accra, Ghana"
+                }
+            },
+            "schema:metadataCID": "QmSESH6dvovMTwrhZZ1SmieA29BRsNSd8jp6HQv4UKzyPS"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "04873@test",
+            "schema:publicKey": "ae9c6a6ca2d2dd5e2452cab5536e1a1c4312d26147f41b2f544ee37766d49d64",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Assessing the Benefits of autonomous vehicles for smart transportation",
+                "dc:abstract": "This research focuses on the benefits and challenges posed by autonomous vehicles for smart transportation, with an emphasis on its potential for access to education.",
+                "schema:keywords": [
+                    "autonomous vehicles",
+                    "smart transportation",
+                    "access to education"
+                ],
+                "schema:startDate": "2023-02-09",
+                "schema:endDate": "2025-03-16",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "Asian Development Bank"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Lisbon, Portugal"
+                }
+            },
+            "schema:metadataCID": "QmRZrdeRvbJfmHKUZCkmpLCDu98BmNkaXCgR6bkJiWxByi"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "98520@test",
+            "schema:publicKey": "abedc4611215f69797bfd09e9929eb4daa3862f8312ed5e7cd5de4212ba6f6f6",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Assessing the Benefits of virtual reality for industrial automation",
+                "dc:abstract": "This research focuses on the benefits and challenges posed by virtual reality for industrial automation, with an emphasis on its potential for cost savings.",
+                "schema:keywords": [
+                    "virtual reality",
+                    "industrial automation",
+                    "cost savings"
+                ],
+                "schema:startDate": "2024-08-20",
+                "schema:endDate": "2027-02-25",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "National Geographic Society"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Svalbard, Norway"
+                }
+            },
+            "schema:metadataCID": "QmTKgPGSeUAFAaWmh7AgoXxEH4roY31aESCggyJvGyaeui"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "07546@test",
+            "schema:publicKey": "3b31d8130c82c121132dac6d2b84d731ed283623425d900c7a640910b98ae1e9",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Assessing the Benefits of machine learning for financial services",
+                "dc:abstract": "This research focuses on the benefits and challenges posed by machine learning for financial services, with an emphasis on its potential for disease prevention.",
+                "schema:keywords": [
+                    "machine learning",
+                    "financial services",
+                    "disease prevention"
+                ],
+                "schema:startDate": "2019-12-29",
+                "schema:endDate": "2026-01-20",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "Department of Energy"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Lisbon, Portugal"
+                }
+            },
+            "schema:metadataCID": "Qmbvikqo3MSMhS5yX1R1vjcrjaMvBFQyUTfRV45iFkKuDr"
         }
     ]
 }
