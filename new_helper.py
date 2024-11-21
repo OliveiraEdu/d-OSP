@@ -337,6 +337,9 @@ def process_files(directory_path, id, DOMAIN):
         cids = []
         file_count = 0
 
+        # Initialize address to None (will be set later)
+        address = None
+
         for filename in list_files(directory_path):
             file_path = os.path.join(directory_path, filename)
             print("file: ", file_path)
@@ -363,10 +366,9 @@ def process_files(directory_path, id, DOMAIN):
                     # Join file_cid and metadata_cid with a comma
                     joined_cids = f"{file_cid}, {metadata_cid}"
 
-                    if not hasattr(process_files, 'create_contract_executed'):
+                    if address is None:
                         hash = create_contract()
                         address = integration_helpers.get_engine_receipts_address(hash)
-                        process_files.create_contract_executed = True
 
                     hash = set_account_detail(
                         address, 
