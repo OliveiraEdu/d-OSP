@@ -49,6 +49,43 @@ def extract_and_normalize_metadata(file_path):
     normalized_metadata = {k.lower(): v for k, v in metadata.items() if isinstance(v, str)}
     return normalized_metadata
 
+
+# Function to normalize metadata and handle lists
+def normalize_metadata_value(value):
+    """Normalize metadata value by handling strings and lists."""
+    if isinstance(value, list):
+        # Join the list into a single string
+        return ', '.join([str(v).lower() for v in value])
+    elif isinstance(value, str):
+        return value.lower()
+    return str(value).lower()  # For any other types, convert to string and lowercase
+
+
+def add_document(writer, metadata, full_text):
+    """Normalize the metadata and add it to the index."""
+    writer.add_document(
+        project_id = metadata['project_id'],
+        cid=metadata['cid'],
+        name=normalize_metadata_value(metadata['name']),
+        size=metadata['size'],
+        filetype=normalize_metadata_value(metadata['filetype']),
+        title=normalize_metadata_value(metadata['title']),
+        creator=normalize_metadata_value(metadata['creator']),
+        language=normalize_metadata_value(metadata['language']),
+        subject=normalize_metadata_value(metadata['subject']),
+        description=normalize_metadata_value(metadata['description']),
+        publisher=normalize_metadata_value(metadata['publisher']),
+        date=normalize_metadata_value(metadata['date']),
+        abstract=normalize_metadata_value(metadata.get('abstract', '')),  # Provide fallback
+        format=normalize_metadata_value(metadata.get('format', '')),      # Provide fallback
+        created=normalize_metadata_value(metadata.get('created', '')),    # Provide fallback
+        modified=normalize_metadata_value(metadata.get('modified', '')),  # Provide fallback
+        full_text=full_text
+    )
+    logging.info(f"Document {metadata['name']} indexed successfully.")
+
+
+
 # Step 2: Index Metadata
 def index_metadata(metadata):
     if not os.path.exists(INDEX_DIR):
@@ -110,9 +147,6 @@ def build_and_display_knowledge_graph(project_id, related_data):
             net.add_node(value, label=key)
             net.add_edge(project_id, value, label=key)
     net.show("knowledge_graph.html")
-
-# Script Execution - Consolidated Workflow
-file_path = "sample_document.pdf"
 
 # # Step 1: Extract and Normalize Metadata
 # print("Step 1: Extracting and Normalizing Metadata")
