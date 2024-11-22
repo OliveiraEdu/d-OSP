@@ -1,12 +1,13 @@
 import os
 from loguru import logger
 from ipfs_functions import *
-import tika
-from tika import parser
+# import tika
+# from tika import parser
 import integration_helpers
+from super_helper import *
 
-# Initialize Tika
-tika.initVM()
+# # Initialize Tika
+# tika.initVM()
 
 # Set up a basic configuration for Loguru
 logger.add("logs/file_{time}.log", format="{time:MM.DD/YYYY} | {level} | {message}", level="INFO")
@@ -331,7 +332,7 @@ def index_file_with_woosh(file_path, metadata_cid):
 
 
 #Option 10
-def process_files(directory_path, id, DOMAIN):
+def process_files(directory_path, project_id):
     """Process files in the specified directory path."""
     try:
         cids = []
@@ -344,8 +345,14 @@ def process_files(directory_path, id, DOMAIN):
             file_path = os.path.join(directory_path, filename)
             print("file: ", file_path)
 
-            metadata = parse_file_with_tika(file_path)
-            print("file metadata: ", metadata)
+            # metadata = parse_file_with_tika(file_path)
+            # print("file metadata: ", metadata)
+
+            metadata = extract_and_normalize_metadata(file_path)
+
+            print(metadata)
+
+            index_metadata(metadata)
 
             if metadata is not None and isinstance(metadata, dict):
                 file_cid = upload_file_to_ipfs(file_path)
@@ -372,7 +379,7 @@ def process_files(directory_path, id, DOMAIN):
 
                     hash = set_account_detail(
                         address, 
-                        f"{id}@{DOMAIN}",  # Project ID as account
+                        project_id,  # Project ID as account
                         f"{file_key}",    # The key we're setting
                         joined_cids      # The value (CID from IPFS)
                     )
@@ -390,46 +397,6 @@ def print_cids(cids):
         print(f"CIDs: {cids_str}")
         print("------------------------")
 
-#Option 8
-
-# def process_files(directory_path):
-#     """Process files in the specified directory path."""
-#     try:
-#         cids = []
-#         file_count = 0
-
-#         for filename in list_files(directory_path):
-#             file_path = os.path.join(directory_path, filename)
-#             print("file: ", file_path)
-
-#             metadata = parse_file_with_tika(file_path)
-#             print("file metadata: ", metadata)
-
-#             if metadata is not None and isinstance(metadata, dict):
-#                 file_cid, file_key = get_cid_and_file_key(file_path)
-#                 print("file cid: ", file_cid)
-
-#                 if file_cid is not None:
-#                     metadata_cid = upload_json_to_ipfs(metadata)
-#                     print("file metadata cid: ", metadata_cid)
-
-#                     # Create a string representation of the CID and file key
-#                     cid_str = f"({file_cid}, {metadata_cid})"
-
-#                     hash = set_account_detail(
-#                         address,
-#                         project_account['account_id'],
-#                         file_key,
-#                         cid_str
-#                     )
-#                     print("Hash: ", hash)
-
-#                     file_count += 1
-
-#                 cids.append((file_path, metadata))
-#         return [(item['file_path'], item['file_key'], item['cid_str']) for item in cids]
-#     except Exception as e:
-#         print(f"An error occurred: {e}")
 
 
 #Iroha functions

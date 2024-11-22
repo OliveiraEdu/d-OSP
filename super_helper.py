@@ -12,8 +12,8 @@ from datetime import datetime
 # Initialize Tika
 tika.initVM()
 
-# Configure IPFS client
-client = ipfshttpclient.connect('/ip4/127.0.0.1/tcp/5001')
+# # Configure IPFS client
+# client = ipfshttpclient.connect('/ip4/127.0.0.1/tcp/5001')
 
 # Directory for Whoosh index
 INDEX_DIR = "index"
@@ -22,7 +22,7 @@ if not os.path.exists(INDEX_DIR):
 
 # Define the schema
 schema = Schema(
-    project_account=TEXT(stored=True),
+    project_id=TEXT(stored=True),
     cid=ID(stored=True),
     name=TEXT(stored=True),
     size=NUMERIC(stored=True),
@@ -56,7 +56,7 @@ def index_metadata(metadata):
     ix = create_in(INDEX_DIR, schema) if not os.path.exists(INDEX_DIR + "/MAIN") else open_dir(INDEX_DIR)
     writer = ix.writer()
     writer.add_document(
-        project_account=metadata.get("project_account", ""),
+        project_id=metadata.get("project_id", ""),
         cid=metadata.get("cid", ""),
         name=metadata.get("name", ""),
         size=int(metadata.get("size", 0)),
@@ -114,48 +114,48 @@ def build_and_display_knowledge_graph(project_id, related_data):
 # Script Execution - Consolidated Workflow
 file_path = "sample_document.pdf"
 
-# Step 1: Extract and Normalize Metadata
-print("Step 1: Extracting and Normalizing Metadata")
-metadata = extract_and_normalize_metadata(file_path)
-print("Extracted Metadata:", json.dumps(metadata, indent=2))
+# # Step 1: Extract and Normalize Metadata
+# print("Step 1: Extracting and Normalizing Metadata")
+# metadata = extract_and_normalize_metadata(file_path)
+# print("Extracted Metadata:", json.dumps(metadata, indent=2))
 
-# Step 2: Index Metadata
-print("\nStep 2: Indexing Metadata")
-index_metadata(metadata)
-print("Metadata indexed successfully.")
+# # Step 2: Index Metadata
+# print("\nStep 2: Indexing Metadata")
+# index_metadata(metadata)
+# print("Metadata indexed successfully.")
 
-# Step 3: Send Metadata JSON to IPFS
-print("\nStep 3: Sending Metadata JSON to IPFS")
-metadata_cid = send_metadata_to_ipfs(metadata)
-print("Metadata CID:", metadata_cid)
+# # Step 3: Send Metadata JSON to IPFS
+# print("\nStep 3: Sending Metadata JSON to IPFS")
+# metadata_cid = send_metadata_to_ipfs(metadata)
+# print("Metadata CID:", metadata_cid)
 
-# Step 4: Search Metadata by Keyword
-keyword = "sample_keyword"  # Replace with an actual keyword relevant to your metadata
-print("\nStep 4: Searching Metadata by Keyword")
-metadata_cids = search_metadata(keyword)
-print("Search Results (Metadata CIDs):", metadata_cids)
+# # Step 4: Search Metadata by Keyword
+# keyword = "sample_keyword"  # Replace with an actual keyword relevant to your metadata
+# print("\nStep 4: Searching Metadata by Keyword")
+# metadata_cids = search_metadata(keyword)
+# print("Search Results (Metadata CIDs):", metadata_cids)
 
-# Step 5: Fetch Metadata from IPFS
-if metadata_cids:
-    print("\nStep 5: Fetching Metadata from IPFS")
-    fetched_metadata = fetch_metadata_from_ipfs(metadata_cids[0])
-    print("Fetched Metadata from IPFS:", json.dumps(fetched_metadata, indent=2))
-else:
-    print("\nNo metadata found for the specified keyword.")
+# # Step 5: Fetch Metadata from IPFS
+# if metadata_cids:
+#     print("\nStep 5: Fetching Metadata from IPFS")
+#     fetched_metadata = fetch_metadata_from_ipfs(metadata_cids[0])
+#     print("Fetched Metadata from IPFS:", json.dumps(fetched_metadata, indent=2))
+# else:
+#     print("\nNo metadata found for the specified keyword.")
 
-# Step 6: Build and Display Knowledge Graph
-project_id = metadata.get("project_account", "default_project_id")  # Fallback if no project account is in metadata
-print("\nStep 6: Building and Displaying Knowledge Graph")
-sample_related_data = {
-    "Owner": "Researcher_A",
-    "Funding Agency": "Agency_X",
-    "Files": {
-        "File 1": "file_cid_1",
-        "File 2": "file_cid_2"
-    },
-    "Keywords": ["Keyword_1", "Keyword_2"],
-    "Affiliated Institute": "Institute_Y"
-}
-build_and_display_knowledge_graph(project_id, sample_related_data)
-print("Knowledge graph created and saved as 'knowledge_graph.html'. Open this file to view the graph.")
-print("\nWorkflow Complete!")
+# # Step 6: Build and Display Knowledge Graph
+# project_id = metadata.get("project_id", "default_project_id")  # Fallback if no project account is in metadata
+# print("\nStep 6: Building and Displaying Knowledge Graph")
+# sample_related_data = {
+#     "Owner": "Researcher_A",
+#     "Funding Agency": "Agency_X",
+#     "Files": {
+#         "File 1": "file_cid_1",
+#         "File 2": "file_cid_2"
+#     },
+#     "Keywords": ["Keyword_1", "Keyword_2"],
+#     "Affiliated Institute": "Institute_Y"
+# }
+# build_and_display_knowledge_graph(project_id, sample_related_data)
+# print("Knowledge graph created and saved as 'knowledge_graph.html'. Open this file to view the graph.")
+# print("\nWorkflow Complete!")
