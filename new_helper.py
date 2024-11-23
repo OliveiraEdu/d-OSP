@@ -50,11 +50,15 @@ def process_files(directory_path, project_id):
         for filename in list_files(directory_path):
             file_path = os.path.join(directory_path, filename)
             print("file: ", file_path)
-
+            print("file name: ", filename)
             
-            metadata = extract_and_normalize_metadata(file_path) #calls super_helper.py
 
-            print(metadata)
+            try:
+                
+                metadata = extract_and_normalize_metadata(file_path) #calls super_helper.py
+                # print(metadata)
+            except Exception as e:
+                logger.error(f"Error extracting and normalizing {file_path}: {e}")
 
             index_metadata(metadata) #calls super_helper.py
 
@@ -90,7 +94,7 @@ def process_files(directory_path, project_id):
                     )
                     
                     # Add document to the Whoosh index
-                    add_document(writer, normalized_metadata, full_text)
+                    # add_document(writer, normalized_metadata, full_text)
 
         return cids, cid_str, joined_cids if len(cids) > 0 else None
     except Exception as e:

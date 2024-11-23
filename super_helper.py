@@ -8,6 +8,7 @@ from tika import parser
 import ipfshttpclient
 from pyvis.network import Network
 from datetime import datetime
+from loguru import logger
 
 # Initialize Tika
 tika.initVM()
@@ -16,7 +17,7 @@ tika.initVM()
 # client = ipfshttpclient.connect('/ip4/127.0.0.1/tcp/5001')
 
 # Directory for Whoosh index
-INDEX_DIR = "index"
+INDEX_DIR = "indexdir"
 if not os.path.exists(INDEX_DIR):
     os.mkdir(INDEX_DIR)
 
@@ -83,32 +84,7 @@ def add_document(writer, metadata, full_text):
         modified=normalize_metadata_value(metadata.get('modified', '')),  # Provide fallback
         full_text=full_text
     )
-    logging.info(f"Document {metadata['name']} indexed successfully.")
-
-
-def normalize_data(project_id, cid, filename, file_path, metadata):
-    # ... other variables and functions ...
-    
-    normalized_metadata = {
-        'project_id': project_id,
-        'cid': cid,  # Upload the full metadata
-        'name': filename,
-        'size': os.path.getsize(file_path),
-        'filetype': mimetypes.guess_type(filename)[0] if mimetypes.guess_type(filename) else "unknown",
-        'title': normalize_metadata_value(metadata.get("dc:title", f"Document {index}")),
-        'creator': normalize_metadata_value(metadata.get("dc:creator", "Unknown")),
-        'language': normalize_metadata_value(metadata.get("dc:language", "en")),
-        'subject': normalize_metadata_value(metadata.get("dc:subject", "")),
-        'description': normalize_metadata_value(metadata.get("dc:description", "")),
-        'publisher': normalize_metadata_value(metadata.get("dc:publisher", "Unknown")),
-        'date': normalize_metadata_value(metadata.get("dc:date", "")),
-        'abstract': normalize_metadata_value(metadata.get("dc:abstract", "")),
-        'format': normalize_metadata_value(metadata.get("dc:format", "")),
-        'created': normalize_metadata_value(metadata.get("dcterms:created", "")),
-        'modified': normalize_metadata_value(metadata.get("dcterms:modified", ""))
-    }
-    
-    return normalized_metadata
+    logger.info(f"Document {metadata['name']} indexed successfully.")
 
 
 # Call add_document function to execute document writing to the index - WIP for tomorrow UAI!
@@ -119,12 +95,27 @@ def index_metadata(metadata):
     ix = create_in(INDEX_DIR, schema) if not os.path.exists(INDEX_DIR + "/MAIN") else open_dir(INDEX_DIR)
     
     writer = ix.writer()
-    
-    normalized_metadata = normalize_data()
-    
-    writer.add_document(normalized_metadata)
-    
+    writer.add_document(
+        project_id=metadata.get("project_id", ""),
+        cid=metadata.get("cid", ""),
+        name=metadata.get("name", ""),
+        size=int(metadata.get("size", 0)),
+        filetype=metadata.get("filetype", ""),
+        title=metadata.get("title", ""),
+        creator=metadata.get("creator", ""),
+        language=metadata.get("language", ""),
+        subject=metadata.get("subject", ""),
+        description=metadata.get("description", ""),
+        publisher=metadata.get("publisher", ""),
+        date=metadata.get("date", ""),
+        abstract=metadata.get("abstract", ""),
+        format=metadata.get("format", ""),
+        created=metadata.get("created", ""),
+        modified=metadata.get("modified", ""),
+        full_text=metadata.get("full_text", "")
+    )
     writer.commit()
+    logger.info("File indexed")
 
 # Step 3: Send Metadata JSON to IPFS
 def send_metadata_to_ipfs(metadata):
