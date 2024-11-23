@@ -51,14 +51,13 @@ def process_files(directory_path, project_id):
             file_path = os.path.join(directory_path, filename)
             print("file: ", file_path)
 
-            # metadata = parse_file_with_tika(file_path)
-            # print("file metadata: ", metadata)
-
-            metadata = extract_and_normalize_metadata(file_path)
+            
+            metadata = extract_and_normalize_metadata(file_path) #calls super_helper.py
 
             print(metadata)
 
-            index_metadata(metadata)
+            index_metadata(metadata) #calls super_helper.py
+
 
             if metadata is not None and isinstance(metadata, dict):
                 file_cid = upload_file_to_ipfs(file_path)
@@ -89,6 +88,9 @@ def process_files(directory_path, project_id):
                         f"{file_key}",    # The key we're setting
                         joined_cids      # The value (CID from IPFS)
                     )
+                    
+                    # Add document to the Whoosh index
+                    add_document(writer, normalized_metadata, full_text)
 
         return cids, cid_str, joined_cids if len(cids) > 0 else None
     except Exception as e:
