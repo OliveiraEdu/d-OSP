@@ -3,6 +3,12 @@ from loguru import logger
 from ipfs_functions import *
 import integration_helpers
 from super_helper import *
+import tika
+from tika import parser
+
+
+# Initialize Tika
+tika.initVM()
 
 # Set up a basic configuration for Loguru
 logger.add("logs/file_{time}.log", format="{time:MM.DD/YYYY} | {level} | {message}", level="INFO")
@@ -37,9 +43,32 @@ def index_file_with_woosh(file_path, metadata_cid):
     except Exception as e:
         logger.error(f"Error indexing {file_path} with Woosh: {e}")
 
+
+# Step 1: Extract and Normalize Metadata
+def extract_and_normalize_metadata(file_path):
+    parsed = parser.from_file(file_path)
+    metadata = parsed["metadata"]
+    metadata["full_text"] = parsed.get("content", "").strip()
+    normalized_metadata = {k.lower(): v for k, v in metadata.items() if isinstance(v, str)}
+    return normalized_metadata
+
+
+# Function to normalize metadata and handle lists
+def normalize_metadata_value(value):
+    """Normalize metadata value by handling strings and lists."""
+    if isinstance(value, list):
+        # Join the list into a single string
+        return ', '.join([str(v).lower() for v in value])
+    elif isinstance(value, str):
+        return value.lower()
+    return str(value).lower()  # For any other types, convert to string and lowercase
+
+
+
 #Current
-def process_files(directory_path, project_id):
+def process_files(directory_path, project_id, schema):
     """Process files in the specified directory path."""
+    
     try:
         cids = []
         file_count = 0
@@ -60,8 +89,12 @@ def process_files(directory_path, project_id):
             except Exception as e:
                 logger.error(f"Error extracting and normalizing {file_path}: {e}")
 
-            index_metadata(metadata) #calls super_helper.py
-
+            try:
+                ix = index_metadata(metadata) #calls super_helper.py
+                print("This is ix: ", ix)
+                
+            except Exception as e:
+                logger.error(f"Error indexing metadata")
 
             if metadata is not None and isinstance(metadata, dict):
                 file_cid = upload_file_to_ipfs(file_path)

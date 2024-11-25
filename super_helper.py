@@ -1,14 +1,17 @@
 import json
 import os
+from whoosh.index import create_in, open_dir, LockError, EmptyIndexError
 from whoosh.fields import Schema, TEXT, ID, NUMERIC
-from whoosh.index import create_in, open_dir
 from whoosh.qparser import QueryParser
 import tika
 from tika import parser
-import ipfshttpclient
+# import ipfshttpclient
 from pyvis.network import Network
 from datetime import datetime
 from loguru import logger
+from new_helper import *
+import shutil
+import time  # Import time for sleep
 
 # Initialize Tika
 tika.initVM()
@@ -42,59 +45,61 @@ schema = Schema(
     full_text=TEXT(stored=False)
 )
 
-# Step 1: Extract and Normalize Metadata
-def extract_and_normalize_metadata(file_path):
-    parsed = parser.from_file(file_path)
-    metadata = parsed["metadata"]
-    metadata["full_text"] = parsed.get("content", "").strip()
-    normalized_metadata = {k.lower(): v for k, v in metadata.items() if isinstance(v, str)}
-    return normalized_metadata
-
-
-# Function to normalize metadata and handle lists
-def normalize_metadata_value(value):
-    """Normalize metadata value by handling strings and lists."""
-    if isinstance(value, list):
-        # Join the list into a single string
-        return ', '.join([str(v).lower() for v in value])
-    elif isinstance(value, str):
-        return value.lower()
-    return str(value).lower()  # For any other types, convert to string and lowercase
-
-
-def add_document(writer, metadata, full_text):
-    """Normalize the metadata and add it to the index."""
-    
-    writer.add_document(
-        project_id = metadata['project_id'],
-        cid=metadata['cid'],
-        name=normalize_metadata_value(metadata['name']),
-        size=metadata['size'],
-        filetype=normalize_metadata_value(metadata['filetype']),
-        title=normalize_metadata_value(metadata['title']),
-        creator=normalize_metadata_value(metadata['creator']),
-        language=normalize_metadata_value(metadata['language']),
-        subject=normalize_metadata_value(metadata['subject']),
-        description=normalize_metadata_value(metadata['description']),
-        publisher=normalize_metadata_value(metadata['publisher']),
-        date=normalize_metadata_value(metadata['date']),
-        abstract=normalize_metadata_value(metadata.get('abstract', '')),  # Provide fallback
-        format=normalize_metadata_value(metadata.get('format', '')),      # Provide fallback
-        created=normalize_metadata_value(metadata.get('created', '')),    # Provide fallback
-        modified=normalize_metadata_value(metadata.get('modified', '')),  # Provide fallback
-        full_text=full_text
+def get_schema():
+    return Schema(
+        project_id=TEXT(stored=True),
+        cid=ID(stored=True),
+        name=TEXT(stored=True),
+        size=NUMERIC(stored=True),
+        filetype=TEXT(stored=True),
+        title=TEXT(stored=True),
+        creator=TEXT(stored=True),
+        language=TEXT(stored=True),
+        subject=TEXT(stored=True),
+        description=TEXT(stored=True),
+        publisher=TEXT(stored=True),
+        date=TEXT(stored=True),
+        abstract=TEXT(stored=True),
+        format=TEXT(stored=True),
+        created=TEXT(stored=True),
+        modified=TEXT(stored=True),
+        full_text=TEXT(stored=False)
     )
-    logger.info(f"Document {metadata['name']} indexed successfully.")
+
+
+
+# def add_document(writer, metadata, full_text):
+#     """Normalize the metadata and add it to the index."""
+    
+#     writer.add_document(
+#         project_id = metadata['project_id'],
+#         cid=metadata['cid'],
+#         name=normalize_metadata_value(metadata['name']),
+#         size=metadata['size'],
+#         filetype=normalize_metadata_value(metadata['filetype']),
+#         title=normalize_metadata_value(metadata['title']),
+#         creator=normalize_metadata_value(metadata['creator']),
+#         language=normalize_metadata_value(metadata['language']),
+#         subject=normalize_metadata_value(metadata['subject']),
+#         description=normalize_metadata_value(metadata['description']),
+#         publisher=normalize_metadata_value(metadata['publisher']),
+#         date=normalize_metadata_value(metadata['date']),
+#         abstract=normalize_metadata_value(metadata.get('abstract', '')),  # Provide fallback
+#         format=normalize_metadata_value(metadata.get('format', '')),      # Provide fallback
+#         created=normalize_metadata_value(metadata.get('created', '')),    # Provide fallback
+#         modified=normalize_metadata_value(metadata.get('modified', '')),  # Provide fallback
+#         full_text=full_text
+#     )
+#     logger.info(f"Document {metadata['name']} indexed successfully.")
 
 
 # Call add_document function to execute document writing to the index - WIP for tomorrow UAI!
 # Step 2: Index Metadata
-def index_metadata(metadata):
-    if not os.path.exists(INDEX_DIR):
-        os.mkdir(INDEX_DIR)
-    ix = create_in(INDEX_DIR, schema) if not os.path.exists(INDEX_DIR + "/MAIN") else open_dir(INDEX_DIR)
+def index_metadata(metadata, recreate=False):
+    ix = recreate_index(schema) if recreate else create_in("indexdir", schema)
+    writer = get_writer_with_retry(ix)
     
-    writer = ix.writer()
+    
     writer.add_document(
         project_id=metadata.get("project_id", ""),
         cid=metadata.get("cid", ""),
@@ -116,23 +121,41 @@ def index_metadata(metadata):
     )
     writer.commit()
     logger.info("File indexed")
-
-# Step 3: Send Metadata JSON to IPFS
-def send_metadata_to_ipfs(metadata):
-    json_data = json.dumps(metadata)
-    res = client.add_json(json_data)
-    return res
+    
+    return ix  # Return the ix object here
 
 # Step 4: Search Metadata by Keyword
-def search_metadata(keyword):
-    ix = open_dir(INDEX_DIR)
-    qp = QueryParser("full_text", schema=ix.schema)
-    query = qp.parse(keyword)
-    results = []
-    with ix.searcher() as searcher:
-        result = searcher.search(query)
-        results = [hit["cid"] for hit in result]
-    return results
+# def search_metadata(keyword):
+#     ix = open_dir(INDEX_DIR)
+#     qp = QueryParser("full_text", schema=ix.schema)
+#     query = qp.parse(keyword)
+#     results = []
+#     with ix.searcher() as searcher:
+#         result = searcher.search(query)
+#         results = [hit["cid"] for hit in result]
+#     return results
+
+def search_index(keyword, ix):
+    """Search for a keyword in the indexed documents."""
+    try:
+        with ix.searcher() as searcher:
+            query = QueryParser("full_text", ix.schema).parse(keyword)
+            results = searcher.search(query)
+
+            project_ids = []
+            if results:
+                for result in results:
+                    logger.info(f"CID: {result['cid']}, Project: {result['project_id']}, Name: {result['name']}, Title: {result['title']}, "
+                                 f"Creator: {result['creator']}, Size: {result['size']} bytes")
+                    project_ids.append(result['project_id'])
+            else:
+                logger.info(f"No results found for '{keyword}'")
+
+        return project_ids
+    except Exception as e:
+        logger.error(f"Error occurred during search: {e}")
+
+
 
 # Step 5: Fetch Metadata from IPFS
 def fetch_metadata_from_ipfs(cid):
@@ -151,6 +174,55 @@ def build_and_display_knowledge_graph(project_id, related_data):
             net.add_node(value, label=key)
             net.add_edge(project_id, value, label=key)
     net.show("knowledge_graph.html")
+
+
+def recreate_index(schema):
+    """Recreate the index directory and start fresh."""
+    if os.path.exists("indexdir"):
+        shutil.rmtree("indexdir")  # Remove the entire index directory
+    os.mkdir("indexdir")
+    ix = create_in("indexdir", schema)  # Recreate index
+    logger.info("Index recreated.")
+    return ix
+
+def get_writer_with_retry(ix, retries=5, delay=1):
+    """Retry acquiring the writer with a delay, and reset lock if retries exhausted."""
+    for attempt in range(retries):
+        try:
+            return ix.writer()
+        except LockError:
+            logger.warning(f"Writer is locked, retrying in {delay} seconds... (Attempt {attempt + 1})")
+            time.sleep(delay)
+
+    reset_index_writer()
+    raise Exception("Failed to acquire writer lock after several attempts.")
+
+
+def reset_index_writer():
+    """Manually remove the lock file if it exists."""
+    lock_file = "indexdir/WRITELOCK"
+    if os.path.exists(lock_file):
+        os.remove(lock_file)
+        logger.info("Lock file removed. Writer reset.")
+
+
+# Function to set up the Whoosh index directory
+def setup_index(schema):
+    """Sets up the Whoosh index directory and returns the index object."""
+    index_dir = "indexdir"
+    if not os.path.exists(index_dir):
+        os.mkdir(index_dir)
+        logger.info("Index directory created.")
+        ix = create_in(index_dir, schema)
+    else:
+        try:
+            ix = open_dir(index_dir)
+            logger.info("Opened existing index.")
+        except EmptyIndexError:
+            logger.warning("Index is empty. Creating a new index.")
+            ix = create_in(index_dir, schema)
+    return ix
+
 
 # # Step 1: Extract and Normalize Metadata
 # print("Step 1: Extracting and Normalizing Metadata")

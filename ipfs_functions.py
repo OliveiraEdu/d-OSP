@@ -34,6 +34,14 @@ def upload_json_to_ipfs(json):
     # ic(file_metadata_CID)
     return file_metadata_CID
 
+# Step 3: Send Metadata JSON to IPFS
+# def send_metadata_to_ipfs(metadata):
+#     json_data = json.dumps(metadata)
+#     res = client.add_json(json_data)
+#     return res
+
+
+
 def download_json_from_ipfs(cid):
     try:
         metadata_cid = client.get_json(cid)
