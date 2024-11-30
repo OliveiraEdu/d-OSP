@@ -1,0 +1,35 @@
+@startuml
+title Research Account Diagram
+skinparam monochrome true
+
+class Person {
+  + name: string
+  + mbox: string
+  + identifier: PropertyValue
+}
+
+class Organization {
+  + name: string
+}
+
+class PropertyValue {
+  + propertyID: string
+  + value: string
+}
+
+class Account {
+  + identifier: string
+  + roleName: string
+  + publicKey: string
+}
+
+Person --|> Account
+
+Organization -- Person
+
+Person -right-> Account
+
+
+
+
+@enduml
