@@ -1,0 +1,80 @@
+% rc-portuguese.def
+
+%\decimalpoint%
+%\spanishdeactivate{~".<>}%
+
+
+\def\programname{Programa}
+\def\listprogramname{\'Indice de programas}
+
+\def\tablename{Tabela}  % Some babel distributions use `Cuadro'
+\def\listtablename{\'Indice de tabelas}
+
+\def\listfigurename{\'Indice de figuras}
+
+\def\contdname{bis}
+
+\def\questionname{QUEST\~{A}O}
+%\def\answername{RESPOSTA}
+\def\exercisename{EXERC\'ICIO}
+\def\problemname{PROBLEMA}
+\def\testname{TESTE}
+\def\solutionname{SOLU\c{C}\~{A}O}
+\def\answerschaptername{Respostas}
+\def\stepname{Passo}
+
+\def\theoremname{Teorema}
+\def\corollaryname{Corol\'{a}rio}
+\def\lemmaname{Lema}
+\def\propositionname{Proposi\c{c}\~{a}o}
+\def\examplename{Exemplo}
+\def\definitionname{Defini\c{c}\~{a}o}
+\def\conjecturename{Conjectura}
+\def\proofname{Prova}
+\def\ifname{se}
+\def\wherename{onde}
+
+\def\supportname{Financiamento}
+\def\trademarkname{Marcas registradas}
+\def\classificationname{Categorias}
+
+\def\bibetalname{et al.}
+\def\bibandname{e}
+\def\bibinname{em}
+\def\bibInname{Em}
+\def\bibeditorsname{editores}
+\def\bibeditorname{editor}
+\def\bibvolumename{volume}
+\def\bibVolumename{Volume}
+\def\bibnumbername{n\'umero}
+\def\bibNumbername{N\'umero}
+\def\bibofname{de}
+\def\bibeditionname{edi\c{c}\~{a}o}
+\def\bibpagesname{p\'aginas}
+\def\bibpagename{p\'agina}
+\def\bibtechnicalreportname{Relat\'{o}rio t\'ecnico}
+\def\bibMasterthesisname{Disserta\c{c}\~{a}o de Mestrado}
+\def\bibPhDthesisname{Tese Doutoral}
+\def\bibchaptername{cap{\'\i}tulo}
+\def\bibAvailableatname{URL:}
+\def\bibTBP{Aceito e aguardando publica\c{c}\~{a}o }
+\let\TBP=\bibTBP
+
+\def\pdfDocumentLists{\'Indices}
+\def\pdfFrontMatter{Pref\'acio}
+
+\def\bibcommaand{}
+    
+\def\bibjanname{janeiro}
+\def\bibfebname{fevereiro}
+\def\bibmarname{março}
+\def\bibaprname{abril}
+\def\bibmayname{maio}
+\def\bibjunname{junho}
+\def\bibjulname{julho}
+\def\bibaugname{agosto}
+\def\bibsepname{setembro}
+\def\biboctname{outubro}
+\def\bibnovname{novembro}
+\def\bibdecname{dezembro}
+

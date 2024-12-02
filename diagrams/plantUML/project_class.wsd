@@ -1,5 +1,6 @@
-@startuml
-title Research Project Diagram
+@startuml project_class
+
+title Research Project Class Diagram
 skinparam monochrome true
 
 class "ResearchProject" {
@@ -7,27 +8,18 @@ class "ResearchProject" {
   - publicKey : string
 }
 
-class "AdditionalMetadata" {
-  - @context : string
-  - @type : string
+class "ProjectMetadata" {
   - name : string
   - abstract : string
   - keywords : list<string>
   - startDate : date
   - endDate : date
-  - funding : FundingSource
-  - location : Location
-}
-
-class "FundingSource" {
   - organization : Organization
-}
-
-class "Location" {
   - city : string
   - country : string
 }
 
-' ResearchProject ->* AdditionalMetadata : has metadata
+
+ResearchProject -> ProjectMetadata : has metadata
 
 @enduml

@@ -1,0 +1,507 @@
+% rc-hyperlink.sty alpha v2.14
+%
+% Copyright (c) 2000-2008 Rafael Corchuelo (corchu@us.es)
+%
+% This class provides new commands for hyperlinking your text.
+%
+% This class IS NOT re-distributable.  Only members of the TDG are allowed to
+% use it.  If you happen to have this file, please, use it at your own risk.
+% No support is available.  Don't send me e-mail asking me about RC-HyperLink.
+% A day, RC-HyperLink will be made available to LaTeX users, but that day still
+% has to come!
+
+% alpha v0.0 2007/08/31
+%
+% New Features
+%   - Include this package to hyperlink your output files.  Note that this package
+%     may be used standalone since it does not depend on RC-BooK, but interacts with
+%     it if it is available.  \cite is linked properly as long as the natbib or the
+%     the standard LaTeX \cite command is used.  Do not expect it to work with
+%     other bibliography styles!
+%   - Simply put a \ref or a \cite in your  document and both the .dvi and .dpf will
+%     include a hyper-link to the target label. Note that hyperlinks are highlighted
+%     in blue as long as the document is compiled in draft mode; highlighting in
+%     final mode depends on your dvi or pdf viewer.
+%   - Use \hyperlink{link}{text} to include an explicit hyperlink in your document.
+%     For instance, \hyperlink{mailto:corchu@us.es}{click here to mail me!} to include a
+%     hyperlink to me email box in your document; similarly,
+%     \hyperlink{http://www.tdg-seville.info/corchu}{click here to visit my web site!}
+%     includes a hyperlink to my web site.
+%   - Use \url to typeset urls, \email to typeset emails, and \doi to typeset DOIs.
+%     Notice that \hyperlink is intended to hyperlink a piece of text in your document,
+%     whereas \url, \email, or \doi are intended to include a hyperreferenced url,
+%     email, or doi in your text.  For DOIs, the standard http://dx.doi.org server is used.
+%   - Use \path to typeset paths, file names, extensions, and so on.  Paths are not
+%     hyperlinked.
+%
+% Known bug... I mean features
+%
+%   - As of version 2.5.2419, Yap is not very good at hyperlinks.  Some times you see
+%     a link, but you can't click it.  For instance, try
+%
+%       Take a look at \url{http://www.tdg-seville.info}!
+%
+%     Yap thinks that the hyperlink is at the `t' in `at'.  Acrobat places hyperlinks
+%     properly, of course!  Use dvi2pdf to transform your dvi files into pdf and the
+%     links will be right.
+
+% alpha v0.1 2008/01/31
+%
+% New features
+%   - If this style is used with classes other than RC-BooK, \ref does not produce
+%     the S mark in front or reference numbers.
+%
+% Fixed bugs... I mean features
+%   - URLs can now contain spaces.
+%   - There was a problem with \sectionmark and MiKTeX 2.7.  I have replaced
+%     \sectionmark by \S.  Note that \S does not work well in co-operation with
+%     oz.sty, but, sure, you don't need to use such style anymore.
+
+% alpha v0.2 2011/31/12
+%
+% New features
+%   - RC-Hyperlink now generates both DVI and PDF annotations to deal with links properly.
+%   - PDF documents now have an outline of the document, i.e., bookmarks.
+%   - Conversion from PS to PDF is no longer supported.  To convert your DVI files into PDF
+%     use dvipdfmx -p a4 dvi-file.
+
+% alpha v0.3 2011/31/05
+%
+% New features
+%     - There's a new command \attach{file} by means of which you can attach an external file to
+%     your PDF output.  Note that the files that are attached are actually embedded into your PDF
+%     files, i.e., you need not distribute them.  Files can be of any type, e.g., text files,
+%     pictures, PDF documents, videos, and the like.
+
+% alpha v2.14 2012/08/31
+%
+% Fixed bugs, I mean... features
+%
+%   - The support for multiple co-existing versions of RC-BooK has been improved.
+%   - There's a new option called `blacklinks'.  It makes every hyperlink blank instead of blue.
+%   - The destination of hyperlinks is now placed a little above the actual destination.  This
+%     helps visualise the destination.  Before, you clicked on a link and then had to scroll up a
+%     little to visualise the destination.
+
+% Everything you need to know about dvipdfmx annotations for PDF: http://project.ktug.or.kr/dvipdfmx/doc/tb94cho.pdf
+% http://tex.loria.fr/ctan-doc/support/dvipdfm/dvipdfm.pdf
+% Everything about PDF: http://www.adobe.com/content/dam/Adobe/en/devnet/acrobat/pdfs/pdf_reference_1-7.pdf
+% Search for a document called dvipdfm.tex to learn who to generate a table of contents (outline) in PDF.
+
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+
+\ProvidesPackage{rc-hyperlink-2.14}
+   [2012/08/31 alpha v2.14 Copyright (C) 2004-2012 The Distributed Group]
+
+%\typeout{rc-hyperlink.sty alpha v0.1 Copyright (C) 2008 The Distributed Group}
+
+\RequirePackage{url}
+\RequirePackage{xspace}
+\RequirePackage{xcolor}
+
+\PassOptionsToPackage{obeyspaces,allowmove}{url}
+\PassOptionsToPackage{usenames,dvipsnames,table}{xcolor}
+
+% Options
+
+\newtoks\RCHL@beginhighligh
+\RCHL@beginhighligh={\bgroup\color{blue}}%
+
+\newtoks\RCHL@endhighligh
+\RCHL@endhighligh={\egroup}%
+
+\DeclareOption{final}{}
+\DeclareOption{draft}{}
+\DeclareOption{blacklinks}{%
+    \RCHL@beginhighligh={\bgroup}%
+}
+
+\ProcessOptions
+
+% \RCHyperLink
+
+\newcommand{\RCHyperLink}%
+{%
+    R%
+    \kern-.1667em\raise.25ex\hbox{C}%
+    \kern-.25em\raise.25ex\hbox{--}%
+    H%
+    \kern-.1em\raise.4ex\hbox{y}%
+    \kern-.1em\lower.4ex\hbox{p}%
+    \kern-.1em\lower.5ex\hbox{e}%
+    \kern-.1em\raise.2ex\hbox{r}%
+    \kern-.1em\hbox{L}
+    \kern-.1em\hbox{i}
+    \kern-.1em\hbox{n}
+    \kern-.1em\raise.6ex\hbox{k}
+    \xspace%
+}
+
+% By default, URLs are not broken at &, <, (, [, {, or -.  Fix this
+
+\def\UrlBreaks{\do\.\do\@\do\\\do\/\do\!\do\_\do\|\do\;\do\>\do\]\do\)\do\,\do\?\do\'\do+\do\=\do\#\do\&\do\(\do\[\do\{\do\<\do\-}%
+\def\UrlNoBreaks{}%
+\def\UrlOrds{\do\*\do\~\do\'\do\"}%
+
+% Redefine \ref so as to add a \S in front of each reference, and include hyperlinks
+
+\def\ref#1{% linha comentada acrescenta marca de seção ao número 
+    %\hyperref@ref{#1}{\RCHL@sectionmark\RCHL@refno{#1}}%
+    \hyperref@ref{#1}{\RCHL@refno{#1}}%
+}
+
+\def\pageref#1{%
+    \hyperref@ref{#1}{\RCHL@pageno{#1}}%
+}
+
+\let\RCHL@savelabel\label
+\def\label#1{%
+    \hyperref@label{#1}%
+    \RCHL@savelabel{#1}%
+}
+
+\let\RCHL@savesublabel\sublabel
+\def\sublabel#1#2{%
+    \hyperref@label{#2}%
+    \RCHL@savesublabel{#1}%
+}
+
+\def\addcontentsline#1#2#3{%
+    %\typeout{!#1!#2!#3!}\show\show%
+    % Just to link the number -->
+    \RCHL@addcontentsline{\protect\hyperref@ref{#2:\csname the#2\endcsname}{\thepage}}{#1}{#2}{#3}%
+    % To link the whole contents line -->
+%   \RCHL@addcontentsline{%
+%        \hyperref@ref{#2:\csname the#2\endcsname}{\thepage}}%
+%        {#1}{#2}{\hyperref@hiddenref{#2:\csname the#2\endcsname}{#3}}%
+}
+
+\def\RCHL@addcontentsline#1#2#3#4{%
+    \addtocontents{#2}{\protect\contentsline{#3}{#4}{#1}}%
+}
+
+%%\newcount\RCHL@outlevelcnt
+%%\newcount\RCHL@outlevel
+%%\newtoks\RCHL@outtitle
+%\def\RCHL@addcontentsline#1#2#3#4{%
+%    %\typeout{!#1!#2!#3!#4!}\show\show%
+%%    \RCHL@outlevelcnt=0\relax%
+%%    \@for\RCHL@level:=chapter,section,subsection,subsubsection\do{%
+%%        \advance\RCHL@outlevelcnt by 1%
+%%        \ifthenelse{\equal{#3}{\RCHL@level}}{\RCHL@outlevel=\RCHL@outlevelcnt}{}
+%%    }%
+%%    \ifnum\RCHL@outlevel>0%
+%%        \RCHL@outtitle={#4}%
+%%        \special{pdf:out \the\RCHL@outlevel\space << /Title (\the\RCHL@outtitle) /Dest [ @thispage /XYZ @xpos @ypos null ] >>}%
+%%    \fi%
+%    \addtocontents{#2}{\protect\contentsline{#3}{#4}{#1}}%
+%}
+
+\def\hyperlink#1#2{\hyperref@eref{#1}{#2}}
+
+% Interaction with natbib and standard LaTeX
+
+\AtBeginDocument{
+    \special{pdf:docview << /PageMode /UseOutlines /View [ /Fit ] /Page 1 >>}%
+    \@ifclassloaded{rc-book-2.14}
+    {
+        \let\RCHL@sectionmark=\S%\sectionmark
+    }
+    {
+        \let\RCHL@sectionmark=\relax
+    }
+    \@ifpackageloaded{natbib}
+    {
+        \def\hyper@natlinkstart#1{\RCHL@linkstart{citation:#1}}
+        \def\hyper@natlinkend{\RCHL@linkend}
+        \def\hyper@natanchorstart#1{\RCHL@anchorstart{citation:#1}}
+        \def\hyper@natanchorend{\RCHL@anchorend}
+        \def\NAT@anchor#1#2{%
+            \bgroup%
+                \def\@tempa{#2}\@ifx{\@tempa\@empty}{}{\@biblabel{#2}}%
+                \setbox0=\hbox{\raise\baselineskip\hbox{\hyper@natanchorstart{#1}\hyper@natanchorend}}%
+                \hbox{\wd0=0pt\ht0=0pt\dp0=0pt\box0}%
+            \egroup%
+        }%
+    }
+    {
+        \@latex@warning{
+            RC-HyperLink has been designed to work with\MessageBreak
+            package natbib.  Unfortunately, this package\MessageBreak
+            was not loaded in your preamble, so I'll do\MessageBreak
+            the best I can do to hyperlink your cites.\MessageBreak
+            Don't expect this to work well if other\MessageBreak
+            bibliographic packages such as aguplus, nlinproc\MessageBreak
+            and the like are loaded.
+        }
+
+        \def\@citex[#1]#2{%
+            \leavevmode%
+            \let\@citea\@empty%
+            \@cite{%
+                \@for\@citeb:=#2\do
+                {%
+                    \@citea%
+                    \def\@citea{,\penalty\@m\ }%
+                    \edef\@citeb{\expandafter\@firstofone\@citeb\@empty}%
+                    \if@filesw%
+                        \immediate\write\@auxout{\string\citation{\@citeb}}%
+                    \fi%
+                    \@ifundefined{b@\@citeb}%
+                    {%
+                        \hbox{\reset@font\bfseries(\@citeb?)}%
+                        \G@refundefinedtrue%
+                        \@latex@warning{Citation `\@citeb' on page \thepage \space undefined}%
+                    }%
+                    {%
+                        \hyperref@ref{citation:\@citeb}{\csname b@\@citeb\endcsname}%
+                    }%
+                }%
+            }{#1}%
+        }
+
+        \def\@lbibitem[#1]#2{%
+            \item[\@biblabel{#1}\hfill]%
+                \if@filesw%
+                    {%
+                        \let\protect\noexpand%
+                        \immediate\write\@auxout{\string\bibcite{#2}{#1}}
+                    }%
+                \fi%
+                \hyperref@label{citation:#2}%
+                \ignorespaces%
+        }
+
+        \def\@bibitem#1{%
+            \item%
+                \hyperref@label{citation:#1}%
+                \if@filesw%
+                    \immediate\write\@auxout{\string\bibcite{#1}{\the\value{\@listctr}}}%
+                \fi%
+                \ignorespaces%
+        }
+    }
+}
+
+% Internals
+
+\def\@setref#1#2#3{%
+    \ifx#1\relax%
+        \protect\G@refundefinedtrue\nfss@text{\reset@font\bfseries ??}%
+        \@latex@warning{Reference `#3' on page \thepage \space undefined}%
+    \else%
+        \expandafter#2#1%
+    \fi%
+}
+
+\def\RCHL@refno#1{%
+    \expandafter\@setref\csname r@#1\endcsname\@firstoftwo{#1}%
+    %\csname r@#1\endcsname%
+}
+
+\def\RCHL@pageno#1{%
+    \expandafter\@setref\csname r@#1\endcsname\@secondoftwo{#1}%
+}
+
+\def\RCHL@anchorstart#1{%
+    %\setbox0=\hbox{{\color{red}\scriptsize[#1]}}\wd0=0pt\ht0=0pt\dp0=0pt\relax\smash{\raisebox{1em}{\box0}}%
+    %\typeout{\the\lastskip}\show\show
+    %\Hy@SaveLastskip%
+    %\vskip-\lastskip
+    %\vskip-2\baselineskip%
+    %\vspace*{-2\baselineskip}%
+    \special{pdf:dest (#1-pdf) [ @thispage /XYZ @xpos @ypos null ]}%
+    \special{html:<a name="#1-dvi">}%
+    %\vskip2\baselineskip%
+}
+\def\RCHL@anchorend{%
+    \special{html:</a>}%
+    %\vspace*{2\baselineskip}
+    %\vskip2\baselineskip%
+    %\Hy@RestoreLastskip%
+    %\vskip\lastskip
+}
+
+\def\hyperref@label#1{%
+    \vspace*{-2\baselineskip}%
+    \RCHL@anchorstart{#1}%
+    \RCHL@anchorend%
+    \vspace*{2\baselineskip}%
+}
+
+\let\RCHL@anchor=\hyperref@label
+
+\def\RCHL@linkstart#1{%
+    %\setbox0=\hbox{{\color{blue}\scriptsize[#1]}}\wd0=0pt\ht0=0pt\dp0=0pt\relax\smash{\raisebox{1em}{\box0}}%
+    \special{html:<a href="\string###1-dvi">}%
+    \the\RCHL@beginhighligh%
+    \special{pdf:bann <<
+        /Subtype /Link
+        % /C [ 0 1 1 ]
+        % /Border [ 0 0 1 [1] ]
+        /Border [ 0 0 0 ]
+        /H /I
+        /A << /Type /Action /S /GoTo /D (#1-pdf) >> >>}%
+}
+
+\def\RCHL@linkend{%
+    \special{pdf:eann}%
+    \the\RCHL@endhighligh%
+    \special{html:</a>}%
+}
+
+\def\hyperref@ref#1#2{%
+    \RCHL@linkstart{#1}%
+    #2%
+    \RCHL@linkend%
+}
+
+\def\hyperref@hiddenref#1#2{%
+    \bgroup
+        \RCHL@beginhighligh={}%
+        \RCHL@endhighligh={}%
+        \RCHL@linkstart{#1}%
+        #2%
+        \RCHL@linkend%
+    \egroup
+}
+
+\def\RCHL@elinkstart#1{%
+    \special{html:<a href="#1">}% Note that the # is not escaped!
+    \the\RCHL@beginhighligh%
+    \special{pdf:bann
+        <<
+            /Subtype /Link
+            %/C [ 0 1 1 ]
+            %/Border [ 0 0 1 [1] ]
+            /Border [ 0 0 0 ]
+            /H /I
+            /A << /Type /Action /S /URI /URI (#1) >>
+        >>
+    }%
+}
+
+\def\RCHL@elinkend{%
+    \special{pdf:eann}%
+    \the\RCHL@endhighligh%
+    \special{html:</a>}%
+}
+
+\def\hyperref@eref#1#2{%
+    \RCHL@elinkstart{#1}%
+    #2%
+    \RCHL@elinkend%
+}
+
+% Patch url.sty
+
+\edef\RCHY@hash{\string#}
+\edef\RCHY@tilde{\string~}
+\edef\RCHY@quote{\string"}
+
+\long\def\RCHY@ReturnAfterFi#1\fi{\fi#1}
+\let\RCHY@normalisehook\relax
+
+\begingroup
+  \endlinechar=-1
+  \catcode`\^^M\active
+  \catcode`\%\active
+  \catcode`\#\active
+  \catcode`\_\active
+  \catcode`\$\active
+  \gdef\RCHY@normalise{
+    \begingroup
+    \catcode`\^^M\active
+    \def^^M{ }
+    \catcode`\%\active
+    \let%\@percentchar
+    \let\%\@percentchar
+    \catcode`\#\active
+    \def#{\RCHY@hash}
+    \def\#{\RCHY@hash}
+    \@makeother\&
+    \edef\textunderscore{\string_}
+    \let\_\textunderscore
+    \catcode`\_\active
+    \let_\textunderscore
+    \let~\RCHY@tilde
+    \let\~\RCHY@tilde
+    \let\textasciitilde\RCHY@tilde
+    \let\\\@backslashchar
+    \edef${\string$}
+    \ifx\@safe@activestrue\@undefined\else\@safe@activestrue\fi
+    \RCHY@normalisehook
+    \RCHY@n@rmalise
+  }
+  \catcode`\#=6
+  \gdef\RCHY@n@rmalise#1#2{
+    \edef\RCHY@tempa{
+      \endgroup
+      \noexpand#1{\RCHY@RemovePercentCr#2%^^M\@nil}
+    }
+    \RCHY@tempa
+  }
+  \gdef\RCHY@RemovePercentCr#1%^^M#2\@nil{
+    #1
+    \ifx\limits#2\limits
+    \else
+      \RCHY@ReturnAfterFi{
+        \RCHY@RemovePercentCr #2\@nil
+      }
+    \fi
+  }
+\endgroup
+
+\let\RCHY@saveurl\url
+\def\RCHY@url{\begingroup \Url}
+
+\def\UrlFont{\sffamily}%
+
+\DeclareRobustCommand*{\url}{\RCHY@normalise\url@}
+\def\url@#1{\hyperlink{#1}{\RCHY@url{#1}}}
+
+\DeclareRobustCommand*{\path}{\RCHY@normalise\path@}
+\def\path@#1{\RCHY@url{#1}}
+
+\DeclareRobustCommand*{\email}{\RCHY@normalise\email@}
+\def\email@#1{\hyperlink{mailto:#1}{\RCHY@url{#1}}}
+
+\DeclareRobustCommand*{\doi}{\RCHY@normalise\doi@}
+\def\doi@#1{\hyperlink{http://dx.doi.org/#1}{\RCHY@url{#1}}}
+
+%% The following definitions do not work when a URL contains a %... which is very common in
+%% urls typeset in the bibliografy since BibTex introduces a lot of % :(
+%
+%%\DeclareUrlCommand\url{%
+%%    \def\UrlLeft##1\UrlRight{\hyperref@eref{##1}{##1}}
+%%}
+%%
+%%\DeclareUrlCommand\email{%
+%%    \def\UrlLeft##1\UrlRight{\hyperref@eref{mailto:##1}{##1}}
+%%}
+%%
+%%\DeclareUrlCommand\doi{%
+%%    \def\UrlLeft##1\UrlRight{\hyperref@eref{http://dx.doi.org/##1}{##1}}
+%%}
+%
+%% The following definitions do work, but no hyperlinks are available in DVI
+%
+%%\def\UrlLeft#1\UrlRight{\hyperref@eref{\RCHY@urlprefix#1}{#1}}
+%
+%%\DeclareUrlCommand\url{%
+%%    \def\RCHY@urlprefix{}
+%%}
+%%
+%%\DeclareUrlCommand\email{%
+%%    \def\UrlLeft{mailto:}
+%%    \def\UrlRight{}
+%%    \def\RCHY@urlprefix{mailto:}%
+%%}
+%
+%%\DeclareUrlCommand\doi{%
+%%    \def\UrlLeft{http://dx.doi.org/}
+%%    \def\UrlRight{}
+%%    \def\RCHY@urlprefix{http://dx.doi.org/}%
+%%}
+
+\endinput 

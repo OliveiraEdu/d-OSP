@@ -1,0 +1,434 @@
+\documentclass[final]{rc-book-2.14}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{rc-natbib-2.14}
+\usepackage{rc-tabular-2.14}
+\usepackage{rc-listing-2.14}
+
+\loadlanguages{english,portuguese}
+\settypewriterfont{\sffamily\smaller}
+
+\input{Dirty-Tricks}
+
+\includeonly{Abstract, MAIN}
+
+\begin{document}
+
+\input{Cover}
+
+\makefront 
+    
+%====================================================================
+\chapter{Índice de abreviaturas}
+\label{app-acronym}
+%====================================================================
+
+\begin{description}
+    \item[EAI -] Integração de Aplicações Empresariais (\textit{Enterprise Application Integration})
+    \item[DSL -] Linguagem de Domínio Específico (\textit{Domain Specific Language})
+    \item[API -] Interface de Programação de Aplicativo (\textit{Application Programming Interface})
+\end{description}
+    
+
+%====================================================================  
+\chapter{Índice de símbolos}
+\label{app-acronym}
+%====================================================================
+
+\begin{description}
+	\item[ \textit{n} -] parâmetro que representa o número de threads.
+	\item[ $\lambda$ -] taxa de chegada de mensagens na solução.
+\end{description}
+    
+
+%==================================================================== 
+\chapter{Agradecimentos}
+\label{chp:acknowledgements}
+%====================================================================
+
+\drop Agradeço primeiramente a ....
+    
+
+
+%====================================================================
+\chapter{Resumo}
+\label{chp:general-abstract:portuguese}
+%====================================================================
+
+\begin{quotation}[Filósofo Romano (106 AC - 43 AC)]{Marcus T.~Cicero}
+    O início de todas as coisas é pequeno.
+\end{quotation}
+
+
+\begin{otherlanguage}{portuguese}
+    \drop Escreva aqui um resumo para a sua dissertação.
+\end{otherlanguage}
+
+
+%====================================================================
+\chapter{Abstract}
+\label{chp:general-abstract:english}
+
+%====================================================================
+
+\begin{quotation}[Roman philosopher (106 BC - 43 BC)]{Marcus T.~Cicero}
+    The beginnings of all things are small.
+\end{quotation}
+
+\drop Write here an abstract for your dissertation.
+
+\mainmatter
+
+
+%====================================================================
+\chapter{Introdução}
+\label{chp:introduction}
+%====================================================================
+
+\begin{quotation}[]{Chinese proverb}
+    The journey of a thousand miles \\ begins with a single step.
+\end{quotation}
+
+
+%-------------------------------------------------------------
+\section{Contexto da Pesquisa}
+\label{sec:introduction:context}
+%-------------------------------------------------------------
+
+Aqui você deve contextualizar seu trabalho, utilizando uma abordagem descritiva topdown, isto é, iniciar introduzindo a área na qual o trabalho é desenvolvido até chegar no tema central tratado na dissertação. Destacar a importância da área e, portanto, do tema abordado nessa área.
+
+ 
+%-------------------------------------------------------------
+\section{Motivação}
+\label{sec:introduction:motivation}
+%-------------------------------------------------------------
+
+Nessa seção você deve descrever qual é o problema que motiva o desenvolvimento dessa dissertação e porquê isso é um problema. Essa seção deve deixar clara a motivação da sua pesquisa perante o problema. No final da motivação, em um parágrafo a parte, sugere-se formular a hipótese geral da pesquisa. 
+ 
+
+%-------------------------------------------------------------
+\section{Objetivos}
+\label{sec:introduction:goal}
+%-------------------------------------------------------------
+
+Breve parágrafo de introdução dessa seção.
+
+
+%-------------------------------------------------------------
+\subsection{Geral}
+\label{subsec:introduction:goal:general}
+%-------------------------------------------------------------
+
+\begin{citeverbatim}
+Descreva em um breve parágrafo qual é o objetivo principal de sua pesquisa nessa dissertação.
+\end{citeverbatim}
+
+
+%-------------------------------------------------------------
+\subsection{Específicos}
+\label{subsec:introduction:goal:specific}
+%-------------------------------------------------------------
+
+\begin{itemize}
+  \item Objetivo específico 1
+  \item Objetivo específico 2
+  \item Objetivo específico 3
+  \item Objetivo específico 4
+\end{itemize}
+
+
+%-------------------------------------------------------------
+\section{Metodologia}
+\label{sec:introduction:methodology}
+%-------------------------------------------------------------
+
+Descrever os passos seguidos para o desenvolvimento da sua pesquisa. Indicar quais foram as técnicas e/ou materiais utilizados na pesquisa, como por exemplo: artigos científicos, livros, entrevistas, ...
+
+
+%-------------------------------------------------------------
+\section{Resumo das Contribuições}
+\label{sec:introduction:contributions}
+%-------------------------------------------------------------
+
+Breve parágrafo de introdução dessa seção.
+
+\begin{itemize}
+  \item Contribuição 1
+  \item Contribuição 2
+  \item Contribuição 3
+  \item Contribuição 4
+\end{itemize}
+
+
+%-------------------------------------------------------------
+\section{Estrutura do Documento}
+\label{sec:introduction:general-structure}
+%-------------------------------------------------------------
+
+Essa dissertação está organizada da seguinte maneira:
+
+
+\begin{description}
+
+\item[Capítulo~\ref{chp:introduction}.] Compreende essa introdução. A Seção~\ref{sec:introduction:context} descreve o contexto de pesquisa; a Seção~\ref{sec:introduction:motivation}; a Seção ...
+
+\item[Capítulo~\ref{chp:review}.] Proporciona para o leitor uma revisão da literatura técnica e científica relacionadas à pesquisa desenvolvida nessa dissertação. A Seção ... apresenta uma introdução a ... A Seção~\ref{sec:review:related-work}, introduz os trabalhos relacionados identificados ao longo dessa pesquisa.
+
+\item[Capítulo~\ref{chp:approach}.] Apresenta o trabalho desenvolvido ... A Seção ... ; a Seção ...
+
+\item[Capítulo~\ref{chp:experiments}.] Introduz a experimentação ... A Seção ... ; a Seção ... 
+
+\item[Capítulo~\ref{chp:conclusions}.] Apresenta as conclusões chegadas a partir da pesquisa desenvolvida nessa dissertação.
+
+\item[Capítulo~\ref{chp:future-work}.] Comenta as possíveis direções de pesquisa que podem ser desenvolvidas a partir deste trabalho.
+
+\end{description}
+
+
+%====================================================================
+\chapter{Revisão da Literatura}
+\label{chp:review}
+%====================================================================
+
+\begin{quotation}[Irish dramatist \& poet (1865-1939)]{William B.~Yeats}
+    Think like a wise man, \\ but communicate in plain language.
+\end{quotation}
+
+
+\drop Nesse capítulo, você deve dissertar sobre os conceitos e termos envolvidos no contexto e fundamentais para o entendimento do trabalho, referenciando autores da área. Cada seção abaixo, deve abordar um conceito diferente. Você pode subdividir este capítulo distintas seções, conforme julgar necessário.
+
+
+%-------------------------------------------------------------
+\section{Tema 1}
+\label{sec:review:topic-1}
+%-------------------------------------------------------------
+
+\begin{table}
+    \begin{rctabular}{clcl}
+        {Icon & Class & Icon & Class}
+        X & Y & X & Y \\
+        X & Y & X & Y \\ 
+        X & Y & X & Y \\
+        X & Y & X & Y \\
+        X & Y & X & Y \\
+    \end{rctabular}
+    \caption{Concrete syntax}
+    \label{table:concrete-syntax}
+\end{table}
+
+Table~\ref{table:concrete-syntax} shows the concrete syntax we use to represent the classes provided by our abstract syntax.
+
+%-------------------------------------------------------------
+\section{Tema 2}
+\label{sec:review:topic-2}
+%-------------------------------------------------------------
+
+%-------------------------------------------------------------
+\section{Trabalhos Relacionados}
+\label{sec:review:related-work}
+%-------------------------------------------------------------
+
+\drop Nesse capítulo você deve descrever e referenciar os trabalhos relacionados encontrados por você na literatura.
+
+De acordo com~\citet{Azanza10}, o mundo é belo, porém a escuridão pode deixá-lo mais triste~\cite{Ballard05,Bergin03}.
+
+%-------------------------------------------------------------
+\section{Resumo do Capítulo}
+\label{sec:review:summary}
+%-------------------------------------------------------------
+
+Nesse capítulo, foi introduzido .... 
+
+
+
+%====================================================================
+\chapter{Proposta}
+\label{chp:approach}
+%====================================================================
+
+\begin{quotation}[German Novelist (1749-1832)]{Johann W.~von Goethe}
+    Knowing is not enough; we must apply. \\ Willing is not enough; we must do.
+\end{quotation}
+
+
+\drop Nesse capítulo você deve introduzir o trabalho que você desenvolveu.
+
+
+%-------------------------------------------------------------
+\section{Seção 1}
+\label{sec:approach:section-1}
+%-------------------------------------------------------------
+
+\begin{figure}
+	\psfigure{./fig/sample-fig.eps}
+	\caption{Esse é um exemplo de como adicionar uma figura.}
+	\label{fig:solution}
+\end{figure}
+
+A Figura~\ref{fig:solution} representa ...
+
+%-------------------------------------------------------------
+\section{Seção 2}
+\label{sec:approach:section-2}
+%-------------------------------------------------------------
+
+\begin{program}
+\begin{listing}[99]
+to detectErrors() do \label{line:algorithm-detect-errors:1}
+  $q$ = WorkQueue.getInstance() \label{line:algorithm-detect-errors:2}
+  repeat \label{line:algorithm-detect-errors:3}
+    $b$ = fetch minimum of $q$ (waiting if necessary) \label{line:algorithm-detect-errors:4}
+    $c$ = findCorrelation($b$) \label{line:algorithm-detect-errors:5}
+    verifyCorrelation($c$) \label{line:algorithm-detect-errors:6}
+    for each binding $b$ in $c.nodes$ do \label{line:algorithm-detect-errors:7}
+      remove $b$ from $q$ \label{line:algorithm-detect-errors:8}
+    end for \label{line:algorithm-detect-errors:9}
+  end repeat \label{line:algorithm-detect-errors:10}
+end
+\end{listing}
+    \caption{Algorithm to detect errors}
+    \label{fig:algorithm-detect-errors}
+\end{program}
+
+In Program~\ref{fig:algorithm-detect-errors}... Line \ref{line:algorithm-detect-errors:1} starts the algorithm....
+ 
+%-------------------------------------------------------------
+\section{Seção 3}
+\label{sec:approach:section-3}
+%-------------------------------------------------------------
+
+A \inline{Process} has to fulfill the following invariants:
+
+\begin{listing}
+context Process
+    inv: tasks->union(entryPorts.tasks->union(exitPorts.tasks))->
+            isUnique(name)
+    inv: slots->isUnique(name)
+    inv: entryPorts->union(exitPorts)->isUnique(name)
+    inv: tasks->select(oclIsKindOf(Communicator))->size() = 0
+    inv: let interslots: Set(Slot) = slots->select(s: Slot |
+            not self.tasks->includes(s.source) and
+            self.tasks->includes(s.target) or
+            self.tasks->includes(s.source) and
+            not self.tasks->includes(s.target)) in
+            interslots->size() = self.entryPorts->size() +
+                                 self.exitPorts->size()
+\end{listing}
+
+These invariants state that tasks, slots and ports must have unique names, that a process cannot contain any tasks of kind \inline{Communicator} because these tasks are specific to ports, and that there can be only one interslot per port.
+
+%-------------------------------------------------------------
+\section{Resumo do Capítulo}
+\label{sec:approach:summary}
+%-------------------------------------------------------------
+
+Nesse capítulo, foi introduzido .... 
+
+
+
+
+
+%====================================================================
+\chapter{Experimentos}
+\label{chp:experiments}
+%====================================================================
+
+\begin{quotation}[German Novelist (1749-1832)]{Johann W.~von Goethe}
+    Knowing is not enough; we must apply. \\ Willing is not enough; we must do.
+\end{quotation}
+
+
+
+%-------------------------------------------------------------
+\section{Hipóteses}
+\label{sec:experiments:hipoteses}
+%-------------------------------------------------------------
+
+
+%-------------------------------------------------------------
+\section{Ambiente da Experimentação}
+\label{sec:experiments:environment}
+%-------------------------------------------------------------
+
+
+%-------------------------------------------------------------
+\section{Variáveis}
+\label{sec:experiments:variables}
+%-------------------------------------------------------------
+
+
+%-------------------------------------------------------------
+\section{Cenários}
+\label{sec:experiments:scenarios}
+%-------------------------------------------------------------
+
+
+%-------------------------------------------------------------
+\section{Execução e Coleta de Dados}
+\label{sec:experiments:execution}
+%-------------------------------------------------------------
+
+
+%-------------------------------------------------------------
+\section{Resultados e Discussão}
+\label{sec:experiments:results-discussion}
+%-------------------------------------------------------------
+
+
+%-------------------------------------------------------------
+\section{Ameaças à Validade}
+\label{sec:experiments:threats-to-validity}
+%-------------------------------------------------------------
+
+
+%-------------------------------------------------------------
+\section{Validação}
+\label{sec:experiments:validation}
+%-------------------------------------------------------------
+
+
+%-------------------------------------------------------------
+\section{Resumo do Capítulo}
+\label{sec:experiments:summary}
+%-------------------------------------------------------------
+
+Nesse capítulo, foi introduzido .... 
+
+    
+%====================================================================
+\chapter{Conclusões}
+\label{chp:conclusions}
+%====================================================================
+
+\begin{quotation}[British author (1564-1616)]{William Shakespeare}
+If you can look into the seeds of time, \\
+And say which grain will grow and which will not; \\
+Speak then to me.
+\end{quotation}
+
+\drop Escreva aqui as suas conclusões sobre o trabalho realizado.
+
+
+%====================================================================
+\chapter{Trabalhos Futuros}
+\label{chp:future-work}
+%====================================================================
+
+\begin{quotation}[Macbeth, Act I, Sc. 3, L. 58]{William Shakespeare}
+If you can look into the seeds of time, \\
+And say which grain will grow and which will not; \\
+Speak then to me.
+\end{quotation}
+
+\drop Descreva aqui os trabalhos que podem ser desenvolvidos como continuidade da sua pesquisa. 
+
+
+\backmatter
+
+% Appendices would be placed here	
+	
+
+\makeback{./Bibliography}
+
+
+\end{document}

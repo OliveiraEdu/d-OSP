@@ -1,33 +1,26 @@
-@startuml
+@startuml project_object
+
 title Research Project Diagram
 skinparam monochrome true
 
-class "ResearchProject" {
+top to bottom direction
+
+object "ResearchProject" {
   - identifier : "07210@test"
   - publicKey : "0a76b13e101fe3f24846fc355156fe247954dcd1151c9a6b3f788ad80b9a6af0string"
 }
 
-class "AdditionalMetadata" {
-  - @context : "http://schema.org/", "http://purl.org/dc/terms/"
-  - @type : "schema:ResearchProject"
+object "AdditionalMetadata" {
   - name : "Exploring the Effects of wildlife monitoring on rural healthcare"
   - abstract : "This study aims to investigate the effects of wildlife monitoring on rural healthcare and propose strategies for improvement."
-  - keywords : ["AI", "Automation"]
-  - startDate : date
-  - endDate : date
-  - funding : FundingSource
-  - location : Location
+  - keywords : "wildlife monitoring","rural healthcare", "sustainability"]
+  - startDate : "2018-07-20"
+  - endDate : "2026-02-26"
+  - organization : "National Institutes of Health"
+  - city : "Svalbard"
+  - country : "Norway"
 }
 
-class "FundingSource" {
-  - organization : Organization
-}
-
-class "Location" {
-  - city : string
-  - country : string
-}
-
-' ResearchProject ->* AdditionalMetadata : has metadata
+ResearchProject -> AdditionalMetadata : has metadata
 
 @enduml

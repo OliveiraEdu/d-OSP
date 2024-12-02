@@ -1,11 +1,13 @@
-@startuml
-title Research Account Diagram
+@startuml account_class
+
+title Account Diagram
 skinparam monochrome true
+
+top to bottom direction
 
 class Person {
   + name: string
   + mbox: string
-  + identifier: PropertyValue
 }
 
 class Organization {
@@ -24,12 +26,7 @@ class Account {
 }
 
 Person --|> Account
-
-Organization -- Person
-
-Person -right-> Account
-
-
-
+Person --|> Organization
+Person --|> PropertyValue
 
 @enduml

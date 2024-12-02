@@ -1,35 +1,33 @@
-@startuml
+@startuml account_class
+
 title Research Account Diagram
 skinparam monochrome true
 
+top to bottom direction
+
 object Person {
-  + name: string
-  + mbox: string
-  + identifier: PropertyValue
+  + name: "Nice Northcutt"
+  + mbox: "nice_northcutt@email.com"
+  
 }
 
 object Organization {
-  + name: string
+  + name: "Los Angeles College of Chiropractic"
 }
 
 object PropertyValue {
-  + propertyID: string
-  + value: string
+  + propertyID: "ORCID"
+  + value: "7344-0227-6220-X"
 }
 
 object Account {
-  + identifier: string
-  + roleName: string
-  + publicKey: string
+  + identifier: "nice_northcutt@test"
+  + roleName: "reviewer"
+  + publicKey: "9e5bf2e35b4355dc919f09e92d8bb49d2ffdda21c740c18433c3549071a41bea"
 }
 
 Person --|> Account
-
-Organization -- Person
-
-Person -right-> Account
-
-
-
+Person --|> Organization
+Person --|> PropertyValue
 
 @enduml

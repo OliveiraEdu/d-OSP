@@ -1,0 +1,318 @@
+% rc-tabular.sty alpha v2.14
+%
+% Copyright (c) 2007 Rafael Corchuelo (corchu@us.es)
+%
+% This class provides new commands for type-setting tabulars
+%
+% This class IS NOT re-distributable.  Only members of the TDG are allowed to
+% use it.  If you happen to have this file, please, use it at your own risk.
+% No support is available.  Don't send me e-mail asking me about RC-Tabular.
+% A day, RC-Tabular will be made available to LaTeX users, but that day still
+% has to come!
+
+% alpha v0.0 2007/08/31
+%
+% New features
+%   - Use \RCTabular to typeset the name of this package properly.
+%   - Use \emptyrow to typeset empty rows in rctabular environments.
+%   - The columns available are the following:
+%
+%       * rcl, as in standard LaTeX.
+%       * RCL, the paragraph counterparts of rcl.  rcl columns are typeset
+%         in one line; RCL columns are typeset in a paragraph of the
+%         appropriate width.
+%       * J, justified in a paragraph.
+%       * X, like J, but the first word will never be hyphenated, which may
+%         cause trouble if a column happens to be too narrow.
+%       * .{s} or ,{s}, a column of numbers aligned on the decimal point
+%         or the decimal comma, respectively.  The parameter specifies how
+%         wide the integer and/or the decimal parts are.  For instance, .{5.3}
+%         specifies that the column must be formatted so that all numbers
+%         have 5 digits on the integer part and 3 digits on the decimal part;
+%         similarly, {3} formats it as if all the numbers had three decimals,
+%         independently from the integer part.
+%       * : or ;, like before, but the width of the integer or the decimal
+%         parts are calculated automatically
+%
+%   - If a table has a repetitive column specification, you might well wish to
+%     use a specifier of the form *{n}{spec}.  For instance, instead of the column
+%     specifier {LLLLLLLLLL}, you may use *{10}{L}.
+%
+%   - The standard > and @ LaTeX specifiers are available, although you're
+%     encouraged not to use @.  Please let RC-Book decide the best @-spec!
+%
+%   - Please, give a try to the following examples to see how rctabular works.
+%     (Some examples include vertical rules to make the alignment more clear.
+%     Please, avoid using such rules in the real world and try to make your
+%     tabular as much rule-less as possible!)
+%
+%        \begin{rctabular}{|r|c|l|}
+%            {r & c & l}
+%            XXX  &
+%            XXX  &
+%            XXX  \\ \hline
+%        \end{rctabular}
+%
+%        \begin{rctabular}{|L|C|R|J|X|}
+%            {L & C & R & J & X }
+%            Supercalifragilisticexpialidocious. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  &
+%            Supercalifragilisticexpialidocious. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  &
+%            Supercalifragilisticexpialidocious. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  &
+%            Supercalifragilisticexpialidocious. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  &
+%            Supercalifragilisticexpialidocious. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  \\ \hline
+%        \end{rctabular}
+%
+%        \begin{rctabular}{|L|C|R|J|X|}
+%            {L & C x & R & J & X }
+%            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  &
+%            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  &
+%            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  &
+%            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  &
+%            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  \\ \hline
+%        \end{rctabular}
+%
+%        \begin{rctabular}{r.{2},{3.3}}
+%            {Name & Salary  & $\alpha^\beta$-rank}
+%            John    & 1200.20 &  -3,4 \\
+%            Mary    & 500.10  &  12,345 \\
+%            Melanie & 5.00    & 786,44 \\
+%        \end{rctabular}
+%
+%        \begin{rctabular}{r:;}
+%            {Name & Salary  & $\alpha^\beta$-rank}
+%            John    & 1200.20 &  -3,4 \\
+%            Mary    & 500.10  &  12,345 \\
+%            Melanie & 5.00    & 786,44 \\
+%        \end{rctabular}
+%
+% alpha v0.1 2011/11/11
+%
+% New features
+%   - Odd and even rows are now typeset in different gray and white to
+%     make them easier to read without using rules.
+%   - You can now use \multirow{n}{*}{row1 & row2 & ... & rown} to typeset a row that
+%     spans n lines.
+%
+% Fixed bugs, I mean features
+%   - The header is aligned according to the column specification.
+%   - Cells are aligned to the top, which improved readability.
+
+% alpha v2.14 2012/08/31
+%
+% New features
+%   - You can now use \subheader{text} to typeset a subheader.
+%
+% Fixed bugs, I mean... features
+%
+%   - The support for multiple co-existing versions of RC-BooK has been improved.
+%   
+
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+
+\ProvidesPackage{rc-tabular-2.14}
+   [2012/08/31 alpha v2.14 Copyright (C) 2004-2012 The Distributed Group]
+
+%\typeout{rc-tabular.sty alpha v0.1 Copyright (C) 2007-2011 The Distributed Group}
+
+\RequirePackage{ifthen}
+\RequirePackage{array}
+\RequirePackage{tabularx}
+\RequirePackage{dcolumn}
+\RequirePackage{color}
+\RequirePackage{xcolor}
+\RequirePackage{multirow}
+
+\PassOptionsToPackage{table}{xcolor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\def\DC@#1#2#3{%
+%  \uccode`\~=`#1\relax
+%  \m@th
+%  \afterassignment\DC@x\count@#3\relax{#1}{#2}}
+%\def\DC@x#1\relax#2#3{%
+%  \ifnum\z@>\count@
+%    \expandafter\DC@centre
+%  \else
+%    \expandafter\DC@right
+%  \fi
+%  {#2}{#3}{#1}}
+%\def\DC@centre#1#2#3{%
+%  \let\DC@end\DC@endcentre
+%  \uppercase{\def~}{\egroup\setbox\tw@=\hbox\bgroup{#2}}%
+%  \setbox\tw@=\hbox{{\phantom{{#2}}}}%
+%  \setbox\z@=\hbox\bgroup\mathcode`#1="8000 }
+%\def\DC@endcentre{\egroup
+%    \ifdim \wd\z@>\wd\tw@
+%      \setbox\tw@=\hbox to\wd\z@{\unhbox\tw@\hfill}%
+%    \else
+%      \setbox\z@=\hbox to\wd\tw@{\hfill\unhbox\z@}\fi
+%    \box\z@\box\tw@}
+%\def\DC@right#1#2#3{%
+%  \ifx\relax#3\relax
+%    \hfill
+%    \let\DC@rl\bgroup
+%  \else
+%    \edef\DC@rl{to\the\count@\dimen@ii\bgroup\hss\hfill}%
+%    \count@\@gobble#3\relax
+%  \fi
+%  \let\DC@end\DC@endright
+%  \uppercase{\def~}{\egroup\setbox\tw@\hbox to\dimen@\bgroup{#2}}%
+%   \setbox\z@\hbox{1}\dimen@ii\wd\z@
+%   \dimen@\count@\dimen@ii
+%   \setbox\z@\hbox{{#2}}\advance\dimen@\wd\z@
+%   \setbox\tw@\hbox to\dimen@{}%
+%   \setbox\z@\hbox\DC@rl\mathcode`#1="8000 }
+%\def\DC@endright{\hfil\egroup\box\z@\box\tw@}
+%\newcolumntype{D}[3]{>{\DC@{#1}{#2}{#3}}c<{\DC@end}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% \RCTabular
+
+\newcommand{\RCTabular}%
+{%
+    R%
+    \kern-.1667em\raise.25ex\hbox{C}%
+    \kern-.25em\raise.25ex\hbox{--}%
+    T%
+    \kern-.2em\lower.5ex\hbox{a}%
+    \kern-.4em\raise.5ex\hbox{b}%
+    \kern-.2em\lower.2ex\hbox{u}%
+    \kern-.2em\lower.2ex\hbox{l}%
+    \kern-.2em\lower.2ex\hbox{a}%
+    \kern-.2em\lower.2ex\hbox{r}%
+    \xspace%
+}
+
+% New column types
+
+\newcolumntype{L}{>{\hspace*{0pt}\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\hspace*{0pt}\centering\arraybackslash}X}
+\newcolumntype{R}{>{\hspace*{0pt}\raggedleft\arraybackslash}X}
+\newcolumntype{J}{>{\hspace*{0pt}\arraybackslash}X}
+\newcolumntype{.}[1]{D{.}{.}{#1}}
+\newcolumntype{,}[1]{D{,}{.}{#1}}
+\newcolumntype{:}[0]{D{.}{.}{-1}}
+\newcolumntype{;}[0]{D{,}{.}{-1}}
+
+\renewcommand\tabularxcolumn[1]{p{#1}}
+\extrarowheight=4pt
+
+% emptyrows
+
+\def\emptyrow{\mbox{}\\}
+
+% rctabular
+
+\newif\if@firstamp
+\def\@firstamptrue{\let\if@firstamp\iftrue}
+\def\@firstampfalse{\let\if@firstamp\iffalse}
+
+\newif\if@Xcolumn
+\def\@Xcolumntrue{\let\if@Xcolumn\iftrue}
+\def\@Xcolumnfalse{\let\if@Xcolumn\iffalse}
+\newtoks\rc@tabcolstoks
+\newtoks\rc@tabheadertoks
+\newcount\rc@numbercols
+
+\def\rc@analysetabcols#1#2/{%
+    \ifthenelse{\equal{#1}{+}}%
+    {}%
+    {%
+        \ifthenelse{\equal{#1}{L}}{\@Xcolumntrue}{}%
+        \ifthenelse{\equal{#1}{C}}{\@Xcolumntrue}{}%
+        \ifthenelse{\equal{#1}{R}}{\@Xcolumntrue}{}%
+        \ifthenelse{\equal{#1}{J}}{\@Xcolumntrue}{}%
+        \ifthenelse{\equal{#1}{X}}{\@Xcolumntrue}{}%
+        \advance\rc@numbercols by 1%
+        \rc@analysetabcols#2+/%
+    }%
+}
+
+%\def\headerbfseries{\ifmmode\mathbf\else\bfseries\fi}
+%\def\headerbfseries{\ifmmode\mathbf\ngroup\else\bfseries\fi}
+\def\headerbfseries#1{\ifmmode\mathbf\bgroup\else\bfseries\fi\textcolor{black}{#1}\ifmmode\egroup\fi}
+
+\def\rc@changetabheader#1&#2/{%
+    \if@firstamp%
+        \relax%
+    \else%
+        \rc@tabheadertoks\expandafter{\the\rc@tabheadertoks&}%
+    \fi%
+    \@firstampfalse%
+    %\rc@tabheadertoks\expandafter{\the\rc@tabheadertoks\multicolumn{1}{l}{\bfseries\ignorespaces#1}\ignorespaces}%
+    %\rc@tabheadertoks\expandafter{\the\rc@tabheadertoks{\color{white}\ignorespaces#1\ignorespaces}}%
+    %\rc@tabheadertoks\expandafter{\the\rc@tabheadertoks{\color{white}\ifmmode\mathbf\bgroup\else\bfseries\fi#1\ifmmode\egroup\fi}}%
+    %\rc@tabheadertoks\expandafter{\the\rc@tabheadertoks{\vrule height2.75ex depth1.25ex width 0.6pt\ifmmode\mathbf\bgroup\else\bfseries\fi\textcolor{white}{#1}\ifmmode\egroup\fi}}%
+    \rc@tabheadertoks\expandafter{\the\rc@tabheadertoks{\headerbfseries{#1}}}%
+    \ifthenelse{\equal{#2}{+}}%
+    {%
+    }%
+    {%
+        \rc@changetabheader#2/%
+    }%
+}
+
+\def\subheader{%
+    \@ifnextchar[%
+        {\@subheader}%
+        {\@subheader[c]}%
+}
+
+%-- comentado por RZF
+%\def\rctabularstyle{\rowcolors[\arrayrulecolor{lightgray}\hline]{1}{}{lightgray!50}}
+%\def\rcheaderstyle{\rowcolor[gray]{0.3}}
+
+\def\subheader#1{%
+    \multicolumn{\rc@numbercols}{>{\columncolor[gray]{0.5}}c}{\headerbfseries{#1}}%
+}
+
+\newenvironment{rctabular}[3][]{%
+    \bgroup%
+        \@Xcolumnfalse%
+        \rc@tabcolstoks={}%
+        \rc@numbercols=0%
+        \rc@analysetabcols#2+/%
+        \rc@tabheadertoks={}%
+        \@firstamptrue%
+        \rc@changetabheader#3&+/%
+        \if@Xcolumn%
+            \ifx\\#1\\%
+                \rc@tabcolstoks={\tabularx{0.95\hsize}{#2}}% \linewidth, \textwidth?
+            \else%
+                \rc@tabcolstoks={\tabularx{#1}{#2}}%
+            \fi%
+        \else%
+            \ifx\\#1\\%
+                \rc@tabcolstoks={\tabular{#2}}%
+            \else%
+                \rc@tabcolstoks={\csname tabular*\endcsname{#1}{#2}}%
+            \fi%
+        \fi%
+        %\typeout{++++++++ \the\rc@tabcolstoks +++++++}%
+        %\typeout{++++++++ \the\rc@tabheadertoks +++++++}%
+        \rctabularstyle%
+        \the\rc@tabcolstoks%
+            \rcheaderstyle%
+            \hline\hline
+            \expandafter\the\rc@tabheadertoks\relax\\%
+            \hline %\hline%
+}{%
+        \hline\hline%
+        \if@Xcolumn%
+            %\typeout{+++++ tabular XXX ++++++}
+            \endtabularx%
+        \else%
+            %\typeout{+++++ tabular :(  ++++++}
+            \endtabular%
+        \fi%
+        
+    \egroup%
+}%
+
+
+\endinput
+% EOF rc-tabular.sty
+
+

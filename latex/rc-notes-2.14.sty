@@ -1,0 +1,72 @@
+% rc-notes.sty alpha v2.14
+%
+% Copyright (c) 2012 Rafael Corchuelo (corchu@us.es)
+%
+% This class provides new commands for type-setting `yellow' notes.
+%
+% This class IS NOT re-distributable.  Only members of the TDG are allowed to
+% use it.  If you happen to have this file, please, use it at your own risk.
+% No support is available.  Don't send me e-mail asking me about RC-Notes.
+% A day, RC-Notes will be made available to LaTeX users, but that day still
+% has to come!
+
+% alpha v0.0 2012/31/05
+%
+% New features
+%   - There are three new commands called \dontforget, \comment, and \checkthis
+%     that are intended to produce annotations while working on a document.
+%     There's an additional command called \todo, which is like \dontforget, but
+%     prepends your text with ``TODO:''.
+
+% alpha v2.14 2012/08/31
+%
+% Fixed bugs, I mean... features
+%
+%   - The support for multiple co-existing versions of RC-BooK has been improved.
+
+
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+
+\ProvidesPackage{rc-notes-2.14}
+   [2012/08/31 alpha v2.14 Copyright (C) 2004-2012 The Distributed Group]
+
+\RequirePackage{xcolor}
+
+\PassOptionsToPackage{usenames,dvipsnames,table}{xcolor}
+
+\@ifundefined{if@draft}{%
+    \newif\if@draft%
+    \let\if@draft=\iftrue%
+}{%
+    \relax%
+}
+
+\if@draft%
+    \long\def\colorparbox#1#2{%
+        \bgroup%
+            \par%
+            \noindent%
+            \dimen0=\linewidth%
+            \advance\dimen0 by -8pt\relax%
+            \fboxsep=0pt%
+            \colorbox{#1}{%
+                \fboxsep=3pt%
+                \fboxrule=1pt% -6 = -2 * (3 + 1)
+                \fbox{\parbox[b]{\dimen0}{#2}}%
+            }%
+            \par%
+        \egroup%
+    }%
+    \long\def\dontforget#1{\colorparbox{OrangeRed}{{\bfseries DON'T FORGET:} #1}}%
+    \long\def\todo#1{\colorparbox{YellowGreen}{{\bfseries TO DO:} #1}}%
+    \long\def\checkthis#1{\colorparbox{CornflowerBlue}{{\bfseries CHECK THIS:} #1}}%
+    \long\def\comment#1{\colorparbox{Dandelion}{{\bfseries COMMENT:} #1}}%
+\else%
+    \long\def\dontforget#1{}%
+    \long\def\todo#1{}%
+    \long\def\checkthis#1{}%
+    \long\def\comment#1{}%
+\fi
+
+\endinput
+% EOF rc-notes.sty
