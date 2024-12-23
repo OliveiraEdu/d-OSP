@@ -16,8 +16,6 @@ import time  # Import time for sleep
 # Initialize Tika
 tika.initVM()
 
-# # Configure IPFS client
-# client = ipfshttpclient.connect('/ip4/127.0.0.1/tcp/5001')
 
 # Directory for Whoosh index
 INDEX_DIR = "indexdir"
@@ -68,34 +66,9 @@ def get_schema():
 
 
 
-# def add_document(writer, metadata, full_text):
-#     """Normalize the metadata and add it to the index."""
-    
-#     writer.add_document(
-#         project_id = metadata['project_id'],
-#         cid=metadata['cid'],
-#         name=normalize_metadata_value(metadata['name']),
-#         size=metadata['size'],
-#         filetype=normalize_metadata_value(metadata['filetype']),
-#         title=normalize_metadata_value(metadata['title']),
-#         creator=normalize_metadata_value(metadata['creator']),
-#         language=normalize_metadata_value(metadata['language']),
-#         subject=normalize_metadata_value(metadata['subject']),
-#         description=normalize_metadata_value(metadata['description']),
-#         publisher=normalize_metadata_value(metadata['publisher']),
-#         date=normalize_metadata_value(metadata['date']),
-#         abstract=normalize_metadata_value(metadata.get('abstract', '')),  # Provide fallback
-#         format=normalize_metadata_value(metadata.get('format', '')),      # Provide fallback
-#         created=normalize_metadata_value(metadata.get('created', '')),    # Provide fallback
-#         modified=normalize_metadata_value(metadata.get('modified', '')),  # Provide fallback
-#         full_text=full_text
-#     )
-#     logger.info(f"Document {metadata['name']} indexed successfully.")
-
-
 # Call add_document function to execute document writing to the index - WIP for tomorrow UAI!
 # Step 2: Index Metadata
-def index_metadata(metadata, recreate=False):
+def index_metadata(metadata, recreate=True):
     ix = recreate_index(schema) if recreate else create_in("indexdir", schema)
     writer = get_writer_with_retry(ix)
     
@@ -120,20 +93,11 @@ def index_metadata(metadata, recreate=False):
         full_text=metadata.get("full_text", "")
     )
     writer.commit()
+    
     logger.info("File indexed")
     
     return ix  # Return the ix object here
 
-# Step 4: Search Metadata by Keyword
-# def search_metadata(keyword):
-#     ix = open_dir(INDEX_DIR)
-#     qp = QueryParser("full_text", schema=ix.schema)
-#     query = qp.parse(keyword)
-#     results = []
-#     with ix.searcher() as searcher:
-#         result = searcher.search(query)
-#         results = [hit["cid"] for hit in result]
-#     return results
 
 def search_index(keyword, ix):
     """Search for a keyword in the indexed documents."""
@@ -141,13 +105,15 @@ def search_index(keyword, ix):
         with ix.searcher() as searcher:
             query = QueryParser("full_text", ix.schema).parse(keyword)
             results = searcher.search(query)
+            print(results)
 
             project_ids = []
             if results:
                 for result in results:
-                    logger.info(f"CID: {result['cid']}, Project: {result['project_id']}, Name: {result['name']}, Title: {result['title']}, "
-                                 f"Creator: {result['creator']}, Size: {result['size']} bytes")
-                    project_ids.append(result['project_id'])
+                    print(result)
+                    # logger.info(f"CID: {result['cid']}, Project: {result['project_id']}, Name: {result['name']}, Title: {result['title']}, "
+                    #              f"Creator: {result['creator']}, Size: {result['size']} bytes")
+                    # project_ids.append(result['project_id'])
             else:
                 logger.info(f"No results found for '{keyword}'")
 
@@ -223,49 +189,3 @@ def setup_index(schema):
             ix = create_in(index_dir, schema)
     return ix
 
-
-# # Step 1: Extract and Normalize Metadata
-# print("Step 1: Extracting and Normalizing Metadata")
-# metadata = extract_and_normalize_metadata(file_path)
-# print("Extracted Metadata:", json.dumps(metadata, indent=2))
-
-# # Step 2: Index Metadata
-# print("\nStep 2: Indexing Metadata")
-# index_metadata(metadata)
-# print("Metadata indexed successfully.")
-
-# # Step 3: Send Metadata JSON to IPFS
-# print("\nStep 3: Sending Metadata JSON to IPFS")
-# metadata_cid = send_metadata_to_ipfs(metadata)
-# print("Metadata CID:", metadata_cid)
-
-# # Step 4: Search Metadata by Keyword
-# keyword = "sample_keyword"  # Replace with an actual keyword relevant to your metadata
-# print("\nStep 4: Searching Metadata by Keyword")
-# metadata_cids = search_metadata(keyword)
-# print("Search Results (Metadata CIDs):", metadata_cids)
-
-# # Step 5: Fetch Metadata from IPFS
-# if metadata_cids:
-#     print("\nStep 5: Fetching Metadata from IPFS")
-#     fetched_metadata = fetch_metadata_from_ipfs(metadata_cids[0])
-#     print("Fetched Metadata from IPFS:", json.dumps(fetched_metadata, indent=2))
-# else:
-#     print("\nNo metadata found for the specified keyword.")
-
-# # Step 6: Build and Display Knowledge Graph
-# project_id = metadata.get("project_id", "default_project_id")  # Fallback if no project account is in metadata
-# print("\nStep 6: Building and Displaying Knowledge Graph")
-# sample_related_data = {
-#     "Owner": "Researcher_A",
-#     "Funding Agency": "Agency_X",
-#     "Files": {
-#         "File 1": "file_cid_1",
-#         "File 2": "file_cid_2"
-#     },
-#     "Keywords": ["Keyword_1", "Keyword_2"],
-#     "Affiliated Institute": "Institute_Y"
-# }
-# build_and_display_knowledge_graph(project_id, sample_related_data)
-# print("Knowledge graph created and saved as 'knowledge_graph.html'. Open this file to view the graph.")
-# print("\nWorkflow Complete!")

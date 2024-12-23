@@ -6,6 +6,8 @@ from super_helper import *
 import tika
 from tika import parser
 
+from super_helper import index_metadata
+
 
 # Initialize Tika
 tika.initVM()
@@ -78,14 +80,13 @@ def process_files(directory_path, project_id, schema):
 
         for filename in list_files(directory_path):
             file_path = os.path.join(directory_path, filename)
-            print("file: ", file_path)
+            print("file path: ", file_path)
             print("file name: ", filename)
             
-
             try:
                 
                 metadata = extract_and_normalize_metadata(file_path) #calls super_helper.py
-                # print(metadata)
+                print(metadata)
             except Exception as e:
                 logger.error(f"Error extracting and normalizing {file_path}: {e}")
 
@@ -106,14 +107,17 @@ def process_files(directory_path, project_id, schema):
 
                     # Create a unique key for the file and return its CIDs
                     file_key = f"file_{file_count + 1}"
+                    print("file_key :", file_key)
                     cids.append((file_key, file_cid, metadata_cid))
                     file_count += 1
 
                     # Assign cid_str here, so it gets updated for each file
                     cid_str = (file_key, file_cid, metadata_cid)
+                    print("cid_str :", cid_str)
 
                     # Join file_cid and metadata_cid with a comma
                     joined_cids = f"{file_cid}, {metadata_cid}"
+                    print("joined_cids :", joined_cids)
 
                     if address is None:
                         hash = create_contract()
@@ -125,7 +129,7 @@ def process_files(directory_path, project_id, schema):
                         f"{file_key}",    # The key we're setting
                         joined_cids      # The value (CID from IPFS)
                     )
-                    
+                    print("hash :", hash)
                     # Add document to the Whoosh index
                     # add_document(writer, normalized_metadata, full_text)
 

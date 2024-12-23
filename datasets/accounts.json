@@ -6,60 +6,41 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Nice Northcutt",
-            "foaf:mbox": "nice_northcutt@email.com",
+            "foaf:name": "Recursing Cohen",
+            "foaf:mbox": "recursing_cohen@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Los Angeles College of Chiropractic"
+                "foaf:name": "Kagoshima Women's College"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "7344-0227-6220-X"
+                "value": "2590-6635-7966-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "nice_northcutt@test",
-                "schema:roleName": "reviewer",
-                "schema:publicKey": "9e5bf2e35b4355dc919f09e92d8bb49d2ffdda21c740c18433c3549071a41bea"
-            },
-            "schema:linked_project": "07210@test"
-        },
-        {
-            "@type": "foaf:Person",
-            "foaf:name": "Eager Chatterjee",
-            "foaf:mbox": "eager_chatterjee@email.com",
-            "foaf:organization": {
-                "@type": "foaf:Organization",
-                "foaf:name": "University of Calgary"
-            },
-            "schema:identifier": {
-                "@type": "PropertyValue",
-                "propertyID": "ORCID",
-                "value": "6961-8102-2674-X"
-            },
-            "foaf:holdsAccount": {
-                "schema:identifier": "eager_chatterjee@test",
+                "schema:identifier": "recursing_cohen@test",
                 "schema:roleName": "author",
-                "schema:publicKey": "2bc78c891cffbcf0127f019c67d39a58d2f0ae14734bdcb72ac0193634c1c2db"
-            }
+                "schema:publicKey": "8f17d25d70f24800ce923758068a0f141ee18adc919be345555b374152d70546"
+            },
+            "schema:linked_project": "26995@test"
         },
         {
             "@type": "foaf:Person",
-            "foaf:name": "Condescending Panini",
-            "foaf:mbox": "condescending_panini@email.com",
+            "foaf:name": "Thirsty Payne",
+            "foaf:mbox": "thirsty_payne@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "National Theatre Conservatory"
+                "foaf:name": "National Kaohsiung University of Applied Sciences"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "7114-5091-6230-X"
+                "value": "1082-6058-2222-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "condescending_panini@test",
-                "schema:roleName": "publisher",
-                "schema:publicKey": "655b30a48c29a649a445715921785a4945c24b50beefb3d22612befccc4b5ee7"
+                "schema:identifier": "thirsty_payne@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "dfe6ec97863a0d1a1fd3cf567ab3cc9bdcd91fd47d9cf3acb26cdf420f74620b"
             }
         }
     ]
