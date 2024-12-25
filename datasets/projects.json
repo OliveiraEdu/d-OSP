@@ -32,7 +32,27 @@
                     "schema:name": "Accra, Ghana"
                 }
             },
-            "schema:metadataCID": "QmNz4Sc1U7zW992mvHPLtPLzS3QvGJoYWfBfSUh8TUpsHM"
+            "schema:metadataCID": "QmNz4Sc1U7zW992mvHPLtPLzS3QvGJoYWfBfSUh8TUpsHM",
+            "schema:linked_user": "recursing_cohen@test",
+            "schema:files": [
+                {
+                    "file_index": 1,
+                    "file_cid": "QmXh37WXcrLXkJX2cAPjbPdKZ2cxJXD58XX6eU1Zc41ka4",
+                    "metadata_cid": "Qmekwdsnu16Ka3B4Giycyp81GKrbyAXbPUArcHeBJgFgir",
+                    "metadata": {
+                        "dc:format": "application/pdf; version=1.7",
+                        "dc:title": "Aeroacoustic airfoil shape optimization enhanced by autoencoders",
+                        "dc:creator": "Jiaqing Kou",
+                        "dcterms:created": "2023-02-04T09:40:15Z",
+                        "dcterms:modified": "2023-02-07T16:56:45Z",
+                        "dc:language": "en-US",
+                        "dc:subject": [
+                            "Aeroacoustics,Optimization design,Amiet theory,Machine learning,Autoencoder",
+                            "Expert Systems With Applications, 217 (2023) 119513. doi:10.1016/j.eswa.2023.119513"
+                        ]
+                    }
+                }
+            ]
         }
     ]
 }

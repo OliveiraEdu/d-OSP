@@ -52,6 +52,7 @@ def extract_and_normalize_metadata(file_path):
     metadata = parsed["metadata"]
     metadata["full_text"] = parsed.get("content", "").strip()
     normalized_metadata = {k.lower(): v for k, v in metadata.items() if isinstance(v, str)}
+    # print("normalized metadata :", normalized_metadata)
     return normalized_metadata
 
 
@@ -85,13 +86,13 @@ def process_files(directory_path, project_id, schema):
             
             try:
                 
-                metadata = extract_and_normalize_metadata(file_path) #calls super_helper.py
-                print(metadata)
+                metadata = extract_and_normalize_metadata(file_path) #calls new_helper.py
+                print("metadata :", metadata)
             except Exception as e:
                 logger.error(f"Error extracting and normalizing {file_path}: {e}")
 
             try:
-                ix = index_metadata(metadata) #calls super_helper.py
+                ix = index_metadata(metadata, schema) #calls super_helper.py
                 print("This is ix: ", ix)
                 
             except Exception as e:
