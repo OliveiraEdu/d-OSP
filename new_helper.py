@@ -46,14 +46,136 @@ def index_file_with_woosh(file_path, metadata_cid):
         logger.error(f"Error indexing {file_path} with Woosh: {e}")
 
 
-# Step 1: Extract and Normalize Metadata
-def extract_and_normalize_metadata(file_path):
-    parsed = parser.from_file(file_path)
-    metadata = parsed["metadata"]
-    metadata["full_text"] = parsed.get("content", "").strip()
-    normalized_metadata = {k.lower(): v for k, v in metadata.items() if isinstance(v, str)}
-    # print("normalized metadata :", normalized_metadata)
-    return normalized_metadata
+from tika import parser
+from loguru import logger
+
+# Define Dublin Core fields
+# DUBLIN_CORE_FIELDS = [
+#     "title", "creator", "subject", "description", "publisher",
+#     "contributor", "date", "type", "format", "identifier",
+#     "source", "language", "relation", "coverage", "rights"
+# ]
+
+# def extract_and_normalize_metadata(file_path):
+#     """
+#     Extracts and normalizes Dublin Core metadata from a file, discarding other fields.
+
+#     Args:
+#         file_path (str): The path to the file to be processed.
+
+#     Returns:
+#         dict: A dictionary containing normalized Dublin Core metadata.
+#     """
+#     logger.info(f"Starting Dublin Core metadata extraction for file: {file_path}")
+    
+#     try:
+#         # Parse file using Apache Tika
+#         parsed = parser.from_file(file_path)
+#         metadata = parsed.get("metadata", {})
+#         print("metadata 2:", metadata)
+#         full_text = parsed.get("content", "")
+        
+
+#         # Initialize the normalized metadata dictionary
+#         normalized_metadata = {}
+
+#         # Extract and normalize metadata, ensuring only Dublin Core fields are included
+#         for field in DUBLIN_CORE_FIELDS:
+#             field_lower = field.lower()
+#             if field_lower in metadata:
+#                 value = metadata.get(field_lower)
+#                 if isinstance(value, str) and value.strip():  # Only consider non-empty strings
+#                     normalized_metadata[field] = value.strip()
+
+#         # Add full text if necessary
+#         if full_text:
+#             normalized_metadata["full_text"] = full_text
+
+#         # Log the extracted Dublin Core fields
+#         if normalized_metadata:
+#             logger.info(f"Extracted Dublin Core fields for file {file_path}: {list(normalized_metadata.keys())}")
+#         else:
+#             logger.warning(f"No Dublin Core metadata found for file: {file_path}")
+
+#         return normalized_metadata
+
+#     except Exception as e:
+#         logger.error(f"Error extracting metadata for file {file_path}: {e}")
+#         return {}
+
+
+import mimetypes
+
+# Function to parse and index documents from a directory
+def parse_documents_in_directory(directory_path, project_id):
+    """Parses documents in a directory and indexes them."""
+    
+    # ix = recreate_index(schema) if recreate else create_in("indexdir", schema)
+    
+    # writer = get_writer_with_retry(ix)
+    
+    # index = 1
+
+    for filename in os.listdir(directory_path):
+        logging.info(f"Processing file: {filename}")
+
+        if not os.path.basename(filename).startswith('.'):
+            file_path = os.path.join(directory_path, filename)
+
+            try:
+                parsed_document = parser.from_file(file_path)
+                print(parsed_document)
+            except Exception as e:
+                logging.error(f"Error parsing file with Tika: {e}")
+                continue
+                
+            if parsed_document:
+                metadata = parsed_document.get('metadata', {})
+                
+                full_text = parsed_document.get("content", "") or "No content extracted"
+                
+                # Extract Dublin Core related metadata
+                # dublin_core_metadata = extract_dublin_core(metadata)
+                    
+                # Normalize and upload JSON metadata to IPFS
+                normalized_metadata = {
+                    'project_id': project_id,
+                    'cid': upload_json_to_ipfs(metadata),  # Upload the full metadata
+                    'name': filename,
+                    'size': os.path.getsize(file_path),
+                    'filetype': mimetypes.guess_type(filename)[0] or "unknown",
+                    'title': normalize_metadata_value(metadata.get("dc:title", "")),
+                    'creator': normalize_metadata_value(metadata.get("dc:creator", "Unknown")),
+                    'language': normalize_metadata_value(metadata.get("dc:language", "en")),
+                    'subject': normalize_metadata_value(metadata.get("dc:subject", "")),
+                    'description': normalize_metadata_value(metadata.get("dc:description", "")),
+                    'publisher': normalize_metadata_value(metadata.get("dc:publisher", "Unknown")),
+                    'date': normalize_metadata_value(metadata.get("dc:date", "")),
+                    'abstract': normalize_metadata_value(metadata.get("dc:abstract", "")),
+                    'format': normalize_metadata_value(metadata.get("dc:format", "")),
+                    'created': normalize_metadata_value(metadata.get("dcterms:created", "")),
+                    'modified': normalize_metadata_value(metadata.get("dcterms:modified", ""))
+                }
+                    
+                logging.info(f"Indexed {filename} with CID: {normalized_metadata['cid']}")
+
+                # Add document to the Whoosh index
+                # add_document(writer, normalized_metadata, full_text)
+
+                # Print extracted Dublin Core metadata
+                # print("Dublin Core Metadata:")
+                # print(json.dumps(dublin_core_metadata, indent=4))
+
+                    
+            else:
+                logging.error(f"Parsing failed for '{filename}'.")
+                
+        # except Exception as e:
+        #       logging.error(f"Error processing file '{filename}': {e}")
+        #       continue
+    return metadata, full_text, normalized_metadata
+    # writer.commit()  # Commit changes once all files are processed
+    logging.info("All documents processed and index committed.")
 
 
 # Function to normalize metadata and handle lists
@@ -86,18 +208,18 @@ def process_files(directory_path, project_id, schema):
             
             try:
                 
-                metadata = extract_and_normalize_metadata(file_path) #calls new_helper.py
-                print("metadata :", metadata)
-            except Exception as e:
-                logger.error(f"Error extracting and normalizing {file_path}: {e}")
-
-            try:
-                ix = index_metadata(metadata, schema) #calls super_helper.py
-                print("This is ix: ", ix)
+                # metadata = parse_documents_in_directory("upload", project_id) #calls new_helper.py
+                
+                result = parse_documents_in_directory(directory_path, project_id)
+                metadata, full_text, normalized_metadata = result
+                print("metadata:", metadata)
+                # print("full_text: ", full_text)
+                print("normalized metadata:", normalized_metadata)
+                
                 
             except Exception as e:
-                logger.error(f"Error indexing metadata")
-
+                logger.error(f"Error extracting and normalizing {file_path}: {e}")
+          
             if metadata is not None and isinstance(metadata, dict):
                 file_cid = upload_file_to_ipfs(file_path)
                 print("file cid: ", file_cid)
@@ -133,6 +255,13 @@ def process_files(directory_path, project_id, schema):
                     print("hash :", hash)
                     # Add document to the Whoosh index
                     # add_document(writer, normalized_metadata, full_text)
+
+            try:
+                ix = index_metadata(metadata, full_text, schema, project_id, file_cid) #calls super_helper.py
+                print("This is ix: ", ix)
+                
+            except Exception as e:
+                logger.error(f"Error indexing metadata")
 
         return cids, cid_str, joined_cids if len(cids) > 0 else None
     except Exception as e:
