@@ -32,41 +32,7 @@ def get_schema():
         modified=TEXT(stored=True),
         full_text=TEXT(stored=True)  # Updated to stored=True
     )
-
-# Adjusted add_document function.
-# Adjusted add_document function.
-def add_document(project_id, file_cid, metadata, full_text):
-    """
-    Add a document to the Whoosh index.
-    :param writer: The index writer.
-    :param project_id: The associated project ID.
-    :param file_cid: The file CID.
-    :param metadata: A dictionary containing metadata.
-    """
-    normalized_metadata = {
-        'project_id': project_id,
-        'cid': file_cid,  # Upload the full metadata
-        # 'name': filename,
-        # 'size': os.path.getsize(file_path),
-        # 'filetype': mimetypes.guess_type(filename)[0] or "unknown",
-        'title': normalize_metadata_value(metadata.get("dc:title")),
-        'creator': normalize_metadata_value(metadata.get("dc:creator", "Unknown")),
-        'language': normalize_metadata_value(metadata.get("dc:language", "en")),
-        'subject': normalize_metadata_value(metadata.get("dc:subject", "")),
-        'description': normalize_metadata_value(metadata.get("dc:description", "")),
-        'publisher': normalize_metadata_value(metadata.get("dc:publisher", "Unknown")),
-        'date': normalize_metadata_value(metadata.get("dc:date", "")),
-        'abstract': normalize_metadata_value(metadata.get("dc:abstract", "")),
-        'format': normalize_metadata_value(metadata.get("dc:format", "")),
-        'created': normalize_metadata_value(metadata.get("dcterms:created", "")),
-        'modified': normalize_metadata_value(metadata.get("dcterms:modified", "")),
-        'full_text': full_text
-    }
-    
-    print(normalized_metadata)
-    
-    return normalized_metadata
-                            
+                           
 
 # def _normalize_value(value):
 #     return str(value) if isinstance(value, (str, int, float)) else 'Unknown'
@@ -156,17 +122,17 @@ def search_index(index, keyword):
         
         with index.searcher() as searcher:
             parser = MultifieldParser(
-                ["full_text", "name", "title", "subject"], 
+                ["abstract", "full_text", "name", "title", "subject"], 
                 schema = index.schema
             )
             query = parser.parse(keyword)
             results = searcher.search(query, limit=10)  # Limit to 10 results
 
             if results:
-                logger.info(f"Search successful: Found {len(results)} result(s).")
+                logger.info(f"Search successful: Found {len(results)} result(s). Presenting the first 10 result entries")
                 for i, result in enumerate(results, 1):
-                    # logger.info(f"{i}. Title: {result.get('title', 'N/A')}")
-                    print(result)
+                    logger.info(f"{i}. Project Id: {result['project_id']}, File CID: {result['cid']}, Title: {result['title']}")
+                    # print(result)
                 return [dict(result) for result in results]
             else:
                 logger.warning("No results found for the given keyword.")

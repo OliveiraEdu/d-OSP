@@ -107,76 +107,18 @@ from loguru import logger
 import mimetypes
 
 # Function to parse and index documents from a directory
-def parse_documents_in_directory(directory_path, project_id):
+def parse_documents_in_directory(file_path, filename,project_id):
     """Parses documents in a directory and indexes them."""
     
-    # ix = recreate_index(schema) if recreate else create_in("indexdir", schema)
+    parsed_document = parser.from_file(file_path)
+    print(parsed_document)
     
-    # writer = get_writer_with_retry(ix)
+    metadata = parsed_document.get('metadata', {}) or "No metadata extracted"
+                
+    full_text = parsed_document.get("content", "") or "No content extracted"
+                
+    return metadata, full_text
     
-    # index = 1
-
-    for filename in os.listdir(directory_path):
-        logging.info(f"Processing file: {filename}")
-
-        if not os.path.basename(filename).startswith('.'):
-            file_path = os.path.join(directory_path, filename)
-
-            try:
-                parsed_document = parser.from_file(file_path)
-                print(parsed_document)
-            except Exception as e:
-                logging.error(f"Error parsing file with Tika: {e}")
-                continue
-                
-            if parsed_document:
-                metadata = parsed_document.get('metadata', {})
-                
-                full_text = parsed_document.get("content", "") or "No content extracted"
-                
-                # Extract Dublin Core related metadata
-                # dublin_core_metadata = extract_dublin_core(metadata)
-                    
-                # Normalize and upload JSON metadata to IPFS
-                normalized_metadata = {
-                    'project_id': project_id,
-                    'cid': upload_json_to_ipfs(metadata),  # Upload the full metadata
-                    'name': filename,
-                    'size': os.path.getsize(file_path),
-                    'filetype': mimetypes.guess_type(filename)[0] or "unknown",
-                    'title': normalize_metadata_value(metadata.get("dc:title", "")),
-                    'creator': normalize_metadata_value(metadata.get("dc:creator", "Unknown")),
-                    'language': normalize_metadata_value(metadata.get("dc:language", "en")),
-                    'subject': normalize_metadata_value(metadata.get("dc:subject", "")),
-                    'description': normalize_metadata_value(metadata.get("dc:description", "")),
-                    'publisher': normalize_metadata_value(metadata.get("dc:publisher", "Unknown")),
-                    'date': normalize_metadata_value(metadata.get("dc:date", "")),
-                    'abstract': normalize_metadata_value(metadata.get("dc:abstract", "")),
-                    'format': normalize_metadata_value(metadata.get("dc:format", "")),
-                    'created': normalize_metadata_value(metadata.get("dcterms:created", "")),
-                    'modified': normalize_metadata_value(metadata.get("dcterms:modified", ""))
-                }
-                    
-                logging.info(f"Indexed {filename} with CID: {normalized_metadata['cid']}")
-
-                # Add document to the Whoosh index
-                # add_document(writer, normalized_metadata, full_text)
-
-                # Print extracted Dublin Core metadata
-                # print("Dublin Core Metadata:")
-                # print(json.dumps(dublin_core_metadata, indent=4))
-
-                    
-            else:
-                logging.error(f"Parsing failed for '{filename}'.")
-                
-        # except Exception as e:
-        #       logging.error(f"Error processing file '{filename}': {e}")
-        #       continue
-    return metadata, full_text, normalized_metadata
-    # writer.commit()  # Commit changes once all files are processed
-    logging.info("All documents processed and index committed.")
-
 
 # Function to normalize metadata and handle lists
 def normalize_metadata_value(value):
@@ -210,11 +152,11 @@ def process_files(directory_path, project_id, schema):
                 
                 # metadata = parse_documents_in_directory("upload", project_id) #calls new_helper.py
                 
-                result = parse_documents_in_directory(directory_path, project_id)
-                metadata, full_text, normalized_metadata = result
+                result = parse_documents_in_directory(file_path, filename, project_id)
+                metadata, full_text = result
                 print("metadata:", metadata)
                 # print("full_text: ", full_text)
-                print("normalized metadata:", normalized_metadata)
+                # print("normalized metadata:", normalized_metadata)
                 
                 
             except Exception as e:
