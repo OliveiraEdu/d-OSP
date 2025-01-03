@@ -3,13 +3,15 @@ import logging
 import os
 from whoosh.index import create_in, open_dir, LockError, EmptyIndexError
 from whoosh.fields import Schema, TEXT, ID
-from whoosh.qparser import QueryParser
+from whoosh.qparser import MultifieldParser
 import tika
 from tika import parser
 from datetime import datetime
 from loguru import logger
 import shutil
 import time
+
+
 
 # Initialize Tika
 tika.initVM()
@@ -18,7 +20,8 @@ tika.initVM()
 def get_schema():
     return Schema(
         project_id=TEXT(stored=True),
-        cid=ID(stored=True),
+        file_cid=ID(stored=True),
+        metadata_cid=ID(stored=True),
         creator=TEXT(stored=True),
         language=TEXT(stored=True),
         title=TEXT(stored=True),
@@ -69,17 +72,15 @@ def extract_dublin_core(metadata):
     return dc_metadata
 
 # Updated index_metadata function.
-def index_metadata(metadata, full_text, schema, project_id, file_cid, index_dir="indexdir", recreate=False):
+def index_metadata(metadata, full_text, schema, project_id, file_cid, metadata_cid, index_dir="indexdir", recreate=False):
     try:
         ix = recreate_index() if recreate else setup_index()
         writer = get_writer_with_retry(ix)
 
-        # metadata = {k: normalize_metadata_value(v) for k, v in metadata.items()}
-        # x = add_document(project_id, file_cid, metadata, full_text)
-        
         writer.add_document (
         project_id= project_id,
-        cid= file_cid,
+        file_cid= file_cid,
+        metadata_cid= metadata_cid,
         title= normalize_metadata_value(metadata.get("dc:title")),
         creator= normalize_metadata_value(metadata.get("dc:creator", "Unknown")),
         language= normalize_metadata_value(metadata.get("dc:language", "en")),
@@ -94,7 +95,7 @@ def index_metadata(metadata, full_text, schema, project_id, file_cid, index_dir=
         full_text= full_text)
        
         writer.commit()
-        logger.info(f"Metadata indexed successfully: {file_cid}")
+        logger.info(f"Metadata indexed successfully: {metadata_cid}")
         return ix
     
     except Exception as e:
@@ -102,13 +103,7 @@ def index_metadata(metadata, full_text, schema, project_id, file_cid, index_dir=
         return None
     
 
-from whoosh.qparser import MultifieldParser
 
-import logging
-
-# logger = logging.getLogger("super_helper")
-
-# Updated search_index function.
 def search_index(index, keyword):
     """
     Search for a keyword in the index and log the outcome.
@@ -116,6 +111,7 @@ def search_index(index, keyword):
     :param keyword: The keyword to search for.
     :return: List of search results or None if no results.
     """
+
     try:
         logger.info("Starting keyword search...")
         logger.info(f"Keyword: '{keyword}'")
@@ -123,42 +119,79 @@ def search_index(index, keyword):
         with index.searcher() as searcher:
             parser = MultifieldParser(
                 ["abstract", "full_text", "name", "title", "subject"], 
-                schema = index.schema
+                schema=index.schema
             )
             query = parser.parse(keyword)
-            results = searcher.search(query, limit=10)  # Limit to 10 results
+            results = searcher.search(query, limit=20)  # Limit to 10 results
 
             if results:
-                logger.info(f"Search successful: Found {len(results)} result(s). Presenting the first 10 result entries")
+                logger.info(f"Search successful: Found {len(results)} result(s).")
                 for i, result in enumerate(results, 1):
-                    logger.info(f"{i}. Project Id: {result['project_id']}, File CID: {result['cid']}, Title: {result['title']}")
+                    logger.info(f"{i}. Project Id: {result['project_id']}, File CID: {result['file_cid']}, Metadata CID: {result['metadata_cid']}, Title: {result['title']}")
                     # print(result)
-                return [dict(result) for result in results]
+                return [dict(result) for result in results], [result['project_id'] for result in results]
             else:
                 logger.warning("No results found for the given keyword.")
                 logger.info("Suggestion: Refine the keyword or try broader terms.")
-                return None
+                return None, []
+
     except Exception as e:
         logger.error(f"Error during keyword search: {e}")
-        return None
+        return None, []
 
 
-def check_fields(ix):
+
+import logging
+logging.basicConfig(level=logging.DEBUG)
+
+def validate_file_cid(index_cid, blockchain_data):
+    """
+    Validate the File CID from the index against all File CIDs in the blockchain data.
+
+    Args:
+        index_cid (str): File CID retrieved from the index.
+        blockchain_data (dict): Encoded blockchain data containing file CIDs.
+
+    Returns:
+        bool: True if valid, False otherwise.
+    """
+    import logging
+    logging.basicConfig(level=logging.DEBUG)
+
     try:
-        logger.info("Checking which fields have data...")
-        
-        with ix.searcher() as searcher:
-            # Get the schema of the Whoosh index
-            schema = ix.schema
-            
-            print("All fields:")
-            for field_name in sorted(schema.keys()):
-                print(field_name)
-            
+        logging.debug(f"Validating CID: {index_cid}")
+        logging.debug(f"Blockchain Data: {blockchain_data}")
+
+        # Check the data for the admin account
+        admin_data = blockchain_data.get("admin@test", {})
+        logging.debug(f"Admin Data: {admin_data}")
+
+        # Iterate through all keys in the admin data
+        for key, encoded_cids in admin_data.items():
+            logging.debug(f"Checking Key: {key}, Encoded CIDs: {encoded_cids}")
+
+            # Skip non-file keys like project_metadata_cid
+            if key == "project_metadata_cid":
+                continue
+
+            # Parse the CIDs for the current file key
+            blockchain_cids = [cid.strip() for cid in encoded_cids.split(",")]
+            logging.debug(f"Parsed CIDs: {blockchain_cids}")
+
+            # Check if the index CID matches any CID in the list
+            if index_cid in blockchain_cids:
+                logging.info(f"Match found for CID: {index_cid}")
+                return True
+
+        # If no match is found
+        logging.info("No match found for the CID.")
+        return False
     except Exception as e:
-        logger.error(f"Error during check: {e}")
+        logging.error(f"Error validating file CID: {e}")
+        return False
 
 
+    
 # Recreate index
 def recreate_index():
     if os.path.exists("indexdir"):
