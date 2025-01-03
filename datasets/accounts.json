@@ -21,7 +21,8 @@
                 "schema:identifier": "crazy_nash@test",
                 "schema:roleName": "reviewer",
                 "schema:publicKey": "e9a68ae4790e255c80ec8a3c0cd2e179ce815507c5df23f1fa03287a7d6252a9"
-            }
+            },
+            "schema:linked_project": "06535@test"
         },
         {
             "@type": "foaf:Person",

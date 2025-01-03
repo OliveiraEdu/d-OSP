@@ -32,7 +32,8 @@
                     "schema:name": "Lagos, Nigeria"
                 }
             },
-            "schema:metadataCID": "QmbmyecKUbwCDFPt6Uddx411bCvefLiRXPxHs5vnYz4XZm"
+            "schema:metadataCID": "QmbmyecKUbwCDFPt6Uddx411bCvefLiRXPxHs5vnYz4XZm",
+            "schema:linked_user": "crazy_nash@test"
         },
         {
             "@type": "schema:ResearchProject",
