@@ -15,6 +15,30 @@ tika.initVM()
 # Set up a basic configuration for Loguru
 logger.add("logs/file_{time}.log", format="{time:MM.DD/YYYY} | {level} | {message}", level="INFO")
 
+# Function to read accounts from JSON-LD
+def read_user_accounts_from_jsonld(file_path):
+    with open(file_path, mode='r', encoding='utf-8') as file:
+        data = json.load(file)
+        user_accounts = []
+        for entry in data["@graph"]:
+            if entry["@type"] == "foaf:Person":
+                account_id = entry.get("foaf:holdsAccount", {}).get("schema:identifier")
+                if account_id:
+                    user_accounts.append({'account_id': account_id})
+        return user_accounts
+
+
+def read_project_accounts_from_jsonld(file_path):
+    with open(file_path, mode='r', encoding='utf-8') as file:
+        data = json.load(file)
+        project_accounts = []
+        for entry in data["@graph"]:
+            if entry["@type"] == "schema:ResearchProject":
+                project_id = entry.get("schema:identifier")
+                if project_id:
+                    project_accounts.append({'account_id': project_id})
+        return project_accounts
+
 
 # Individual functions
 def list_files(directory_path):
