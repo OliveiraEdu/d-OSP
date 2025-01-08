@@ -9,6 +9,8 @@ from Crypto.Hash import keccak
 import json
 import logging
 import integration_helpers
+# from super_helper import decode_json
+from loguru import logger
 
 if sys.version_info[0] < 3:
     raise Exception("Python 3 or a more recent version is required.")
@@ -33,6 +35,9 @@ def get_account_detail(id):
     data = response.account_detail_response
     details = data.detail
     return details  # Add this line to return the project details
+
+
+
 
 
 # Functions provided earlier

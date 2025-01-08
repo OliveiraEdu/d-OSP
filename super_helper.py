@@ -10,11 +10,75 @@ from datetime import datetime
 from loguru import logger
 import shutil
 import time
+from ipfs_functions import download_json_from_ipfs
+from iroha_helper import get_account_detail
 
 
 
 # Initialize Tika
 tika.initVM()
+
+# JSON Decoding Helper
+def decode_json(data, context):
+    try:
+        return json.loads(data)
+    except json.JSONDecodeError as e:
+        logger.error(f"Error decoding JSON for {context}: {e}")
+        return None
+
+#Blockchain Fetch Helper
+def fetch_blockchain_data(account_id):
+    details = get_account_detail(account_id)
+    if not details:
+        logger.error(f"No details found for account ID: {account_id}")
+        return None
+    return decode_json(details, f"account ID {account_id}")
+
+
+def process_valid_result(project_id, validation_result):
+    project_metadata_cid = validation_result.get("project_metadata_cid")
+    linked_user = validation_result.get("linked_user")
+
+    if project_metadata_cid:
+        try:
+            project_metadata = download_json_from_ipfs(project_metadata_cid)
+            logger.debug(f"Downloaded project metadata: {project_metadata}")
+        except Exception as e:
+            logger.error(f"Failed to download project metadata from IPFS: {e}")
+
+    if linked_user:
+        user_details = fetch_blockchain_data(linked_user)
+        if user_details:
+            user_json_ld_cid = user_details.get("admin@test", {}).get("user_json_ld_cid")
+            if user_json_ld_cid:
+                try:
+                    user_metadata = download_json_from_ipfs(user_json_ld_cid)
+                    logger.debug(f"Downloaded user metadata: {user_metadata}")
+                except Exception as e:
+                    logger.error(f"Failed to download user metadata: {e}")
+
+
+def process_search_result(result_dict):
+    project_id = result_dict.get('project_id')
+    file_cid = result_dict.get('file_cid')
+    metadata_cid = result_dict.get('metadata_cid')
+
+    if not project_id or not file_cid or not metadata_cid:
+        logger.error(f"Missing required data in result: {result_dict}")
+        return
+
+    logger.info(f"Processing Project ID: {project_id}")
+    project_details = fetch_blockchain_data(project_id)
+    if not project_details:
+        return
+
+    validation_result = fetch_project_details(file_cid, project_details)
+    if validation_result["is_valid"]:
+        process_valid_result(project_id, validation_result)
+    else:
+        logger.warning(f"Invalid File CID for Project ID: {project_id}. Skipping metadata processing.")
+
+
 
 # Schema definition remains unchanged.
 def get_schema():
@@ -138,54 +202,6 @@ def search_index(index, keyword):
     except Exception as e:
         logger.error(f"Error during keyword search: {e}")
         return None, []
-
-
-
-# def validate_file_cid(index_cid, blockchain_data):
-#     """
-#     Validate the File CID from the index against all File CIDs in the blockchain data.
-
-#     Args:
-#         index_cid (str): File CID retrieved from the index.
-#         blockchain_data (dict): Encoded blockchain data containing file CIDs.
-
-#     Returns:
-#         bool: True if valid, False otherwise.
-#     """
-    
-#     logging.basicConfig(level=logging.INFO)
-
-#     try:
-#         logging.debug(f"Validating CID: {index_cid}")
-#         logging.debug(f"Blockchain Data: {blockchain_data}")
-
-#         # Check the data for the admin account
-#         admin_data = blockchain_data.get("admin@test", {})
-#         logging.debug(f"Admin Data: {admin_data}")
-
-#         # Iterate through all keys in the admin data
-#         for key, encoded_cids in admin_data.items():
-#             logging.debug(f"Checking Key: {key}, Encoded CIDs: {encoded_cids}")
-
-#             # Skip non-file keys like project_metadata_cid
-#             if key == "project_metadata_cid":
-#                 continue
-
-#             # Parse the CIDs for the current file key
-#             blockchain_cids = [cid.strip() for cid in encoded_cids.split(",")]
-#             logging.debug(f"Parsed CIDs: {blockchain_cids}")
-
-#             # Check if the index CID matches any CID in the list
-#             if index_cid in blockchain_cids:
-#                 logging.info(f"Match found for CID: {index_cid}")
-#                 return True
-
-#         # If no match is found
-#         logging.info("No match found for the CID.")
-#         return False
-#     except Exception as e:
-#         logging.error(f"Error validating file CID: {e}")
-#         return False
 
 
 def validate_file_cid(file_cid, project_details):
