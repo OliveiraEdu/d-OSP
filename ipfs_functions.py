@@ -1,6 +1,7 @@
 import ipfshttpclient
 import json
 from icecream import ic
+from loguru import logger
 
 
 # Load configuration from config.json file
@@ -47,6 +48,6 @@ def download_json_from_ipfs(cid):
         metadata_cid = client.get_json(cid)
         return metadata_cid
     except Exception as e:
-        logging.error(f"Error retrieving JSON from IPFS: {e}")
+        logger.error(f"Error retrieving JSON from IPFS: {e}")
         return None
 

@@ -6,61 +6,23 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Crazy Nash",
-            "foaf:mbox": "crazy_nash@email.com",
+            "foaf:name": "Competent Chandrasekhar",
+            "foaf:mbox": "competent_chandrasekhar@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Institut Sup\u00e9rieure d'Electronique de Paris"
+                "foaf:name": "University of Santo Tomas"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "9331-2337-8591-X"
+                "value": "8180-5971-2087-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "crazy_nash@test",
-                "schema:roleName": "reviewer",
-                "schema:publicKey": "e9a68ae4790e255c80ec8a3c0cd2e179ce815507c5df23f1fa03287a7d6252a9"
+                "schema:identifier": "competent_chandrasekhar@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "d553bb10d6da8da6b39a9dbb134f1d60f014c5a0f454b00b6662699e1cec51fe"
             },
-            "schema:linked_project": "06535@test"
-        },
-        {
-            "@type": "foaf:Person",
-            "foaf:name": "Modest Kare",
-            "foaf:mbox": "modest_kare@email.com",
-            "foaf:organization": {
-                "@type": "foaf:Organization",
-                "foaf:name": "National University of Modern Languages"
-            },
-            "schema:identifier": {
-                "@type": "PropertyValue",
-                "propertyID": "ORCID",
-                "value": "3623-4255-5291-X"
-            },
-            "foaf:holdsAccount": {
-                "schema:identifier": "modest_kare@test",
-                "schema:roleName": "reviewer",
-                "schema:publicKey": "ee4f4b4d4bde2326da6231e5e2d03d9e7b52cd5e50b61de47b6cc4c975482c23"
-            }
-        },
-        {
-            "@type": "foaf:Person",
-            "foaf:name": "Priceless Noyce",
-            "foaf:mbox": "priceless_noyce@email.com",
-            "foaf:organization": {
-                "@type": "foaf:Organization",
-                "foaf:name": "Arak University"
-            },
-            "schema:identifier": {
-                "@type": "PropertyValue",
-                "propertyID": "ORCID",
-                "value": "4165-1410-9152-X"
-            },
-            "foaf:holdsAccount": {
-                "schema:identifier": "priceless_noyce@test",
-                "schema:roleName": "reviewer",
-                "schema:publicKey": "61b8a46b00d05694a37b060a92c1d219714b3d954d50d558c60ec7ebc7d0608f"
-            }
+            "schema:linked_project": "14427@test"
         }
     ]
 }

@@ -115,8 +115,8 @@ def process_files(directory_path, project_id, schema):
 
         for filename in list_files(directory_path):
             file_path = os.path.join(directory_path, filename)
-            print("file path: ", file_path)
-            print("file name: ", filename)
+            # print("file path: ", file_path)
+            # print("file name: ", filename)
             
             try:
                 
@@ -130,15 +130,15 @@ def process_files(directory_path, project_id, schema):
           
             if metadata is not None and isinstance(metadata, dict):
                 file_cid = upload_file_to_ipfs(file_path)
-                print("file cid: ", file_cid)
+                # print("file cid: ", file_cid)
 
                 if file_cid is not None:
                     metadata_cid = upload_json_to_ipfs(metadata)
-                    print("file metadata cid: ", metadata_cid)
+                    # print("file metadata cid: ", metadata_cid)
 
                     # Create a unique key for the file and return its CIDs
                     file_key = f"file_{file_count + 1}"
-                    print("file_key :", file_key)
+                    # print("file_key :", file_key)
                     cids.append((file_key, file_cid, metadata_cid))
                     file_count += 1
 
@@ -148,7 +148,7 @@ def process_files(directory_path, project_id, schema):
 
                     # # Join file_cid and metadata_cid with a comma
                     joined_cids = f"{file_cid}, {metadata_cid}"
-                    print("joined_cids :", joined_cids)
+                    # print("joined_cids :", joined_cids)
 
                     if address is None:
                         hash = create_contract()
@@ -160,11 +160,11 @@ def process_files(directory_path, project_id, schema):
                         f"{file_key}",    # The key we're setting
                         joined_cids      # The value (CID from IPFS)
                     )
-                    print("hash :", hash)
+                    # print("hash :", hash)
                     
             try:
                 ix = index_metadata(metadata, full_text, schema, project_id, file_cid, metadata_cid) #calls super_helper.py
-                print("This is ix: ", ix)
+                
                 
             except Exception as e:
                 logger.error(f"Error indexing metadata")
@@ -173,13 +173,13 @@ def process_files(directory_path, project_id, schema):
     except Exception as e:
         logger.error(f"Error processing files in {directory_path}: {e}")
 
-def print_cids(cids):
-    for i, cid in enumerate(cids):
-        file_key, file_cid, metadata_cid = cid
-        print(f"File Key: {file_key}")
-        # cids_str = f"({'{0}'.format(file_cid)},{'{0}'.format(metadata_cid)})".format(file_cid, metadata_cid)
-        cids_str = f"{file_cid}, {metadata_cid}"
-        print(f"CIDs: {cids_str}")
-        print("------------------------")
+# def print_cids(cids):
+#     for i, cid in enumerate(cids):
+#         file_key, file_cid, metadata_cid = cid
+#         print(f"File Key: {file_key}")
+#         # cids_str = f"({'{0}'.format(file_cid)},{'{0}'.format(metadata_cid)})".format(file_cid, metadata_cid)
+#         cids_str = f"{file_cid}, {metadata_cid}"
+#         print(f"CIDs: {cids_str}")
+#         print("------------------------")
 
 

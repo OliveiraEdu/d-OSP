@@ -10,13 +10,37 @@ from datetime import datetime
 from loguru import logger
 import shutil
 import time
-from ipfs_functions import download_json_from_ipfs
+from ipfs_functions import download_json_from_ipfs, download_file_from_ipfs
 from iroha_helper import get_account_detail
-
-
+from clean_file_name import clean_file_name
 
 # Initialize Tika
 tika.initVM()
+
+def download_file(file_metadata_json, download_path, project_id, file_cid):
+    if "resourceName" in file_metadata_json:
+        # Extract and clean the filename
+        raw_file_name = file_metadata_json["resourceName"]
+        cleaned_file_name = clean_file_name(raw_file_name)  # Renamed to avoid conflict
+        logger.info(f"Cleaned file name: {cleaned_file_name}")
+
+        # Create user-specific download directory if it doesn't exist
+        download_directory = os.path.join(download_path, project_id)
+        os.makedirs(download_directory, exist_ok=True)
+        logger.info(f"Download directory ready: {download_directory}")
+
+        # Construct the full file path with the cleaned filename
+        file_path = os.path.join(download_directory, cleaned_file_name)
+        logger.info(f"Downloading file to: {file_path}")
+
+        # Download file using the file CID
+        try:
+            download_file_from_ipfs(file_cid, file_path)
+        except Exception as e:
+            logger.error(f"Failed to download file {cleaned_file_name}: {e}")
+    else:
+        logger.error(f"No 'resourceName' found for metadata CID: {file_metadata_json}")
+       
 
 # JSON Decoding Helper
 def decode_json(data, context):
