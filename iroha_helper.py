@@ -38,7 +38,7 @@ def create_contract():
     net.send_tx(tx)
     hex_hash = binascii.hexlify(IrohaCrypto.hash(tx))
     for status in net.tx_status_stream(tx):
-        print(status)
+        logger.info(status)
     return hex_hash
 
 # Function to link details using blockchain
@@ -64,7 +64,7 @@ def set_account_detail(address, account, key, value):
     IrohaCrypto.sign_transaction(tx, ADMIN_PRIVATE_KEY)
     response = net.send_tx(tx)
     for status in net.tx_status_stream(tx):
-        print(status)
+        logger.info(status)
     hex_hash = binascii.hexlify(IrohaCrypto.hash(tx))
     return hex_hash
 
@@ -75,7 +75,7 @@ def update_user_account_link(user_account_id, linked_project_id, accounts_filena
             with open(accounts_filename, mode='r', encoding='utf-8') as file:
                 data = json.load(file)
         else:
-            print(f"{accounts_filename} does not exist.")
+            logger.info(f"{accounts_filename} does not exist.")
             return
 
         user_found = False
@@ -85,18 +85,18 @@ def update_user_account_link(user_account_id, linked_project_id, accounts_filena
             if entry["@type"] == "foaf:Person" and entry.get("foaf:holdsAccount", {}).get("schema:identifier") == user_account_id:
                 entry["schema:linked_project"] = linked_project_id
                 user_found = True
-                print(f"Updated user account {user_account_id} with linked project {linked_project_id}")
+                logger.info(f"Updated user account {user_account_id} with linked project {linked_project_id}")
                 break
 
         if not user_found:
-            print(f"User account {user_account_id} not found.")
+            logger.info(f"User account {user_account_id} not found.")
 
         # Write back the updated data
         with open(accounts_filename, mode='w', encoding='utf-8') as file:
             json.dump(data, file, indent=4)
 
     except Exception as e:
-        print(f"Error updating user account in JSON-LD: {str(e)}")
+        logger.info(f"Error updating user account in JSON-LD: {str(e)}")
 
 
 # Function to update project account with linked user
@@ -106,7 +106,7 @@ def update_project_account_link(project_account_id, linked_user_id, projects_fil
             with open(projects_filename, mode='r', encoding='utf-8') as file:
                 data = json.load(file)
         else:
-            print(f"{projects_filename} does not exist.")
+            logger.info(f"{projects_filename} does not exist.")
             return
 
         project_found = False
@@ -116,18 +116,18 @@ def update_project_account_link(project_account_id, linked_user_id, projects_fil
             if entry["@type"] == "schema:ResearchProject" and entry.get("schema:identifier") == project_account_id:
                 entry["schema:linked_user"] = linked_user_id
                 project_found = True
-                print(f"Updated project account {project_account_id} with linked user {linked_user_id}")
+                logger.info(f"Updated project account {project_account_id} with linked user {linked_user_id}")
                 break
 
         if not project_found:
-            print(f"Project account {project_account_id} not found.")
+            logger.info(f"Project account {project_account_id} not found.")
 
         # Write back the updated data
         with open(projects_filename, mode='w', encoding='utf-8') as file:
             json.dump(data, file, indent=4)
 
     except Exception as e:
-        print(f"Error updating project account in JSON-LD: {str(e)}")
+        logger.info(f"Error updating project account in JSON-LD: {str(e)}")
 
 
 def get_account_detail(id):
@@ -169,9 +169,9 @@ def trace(func):
 
     def tracer(*args, **kwargs):
         name = func.__name__
-        print('\tEntering "{}"'.format(name))
+        logger.info('\tEntering "{}"'.format(name))
         result = func(*args, **kwargs)
-        print('\tLeaving "{}"'.format(name))
+        logger.info('\tLeaving "{}"'.format(name))
         return result
 
     return tracer
@@ -188,7 +188,7 @@ def create_contract():
     net.send_tx(tx)
     hex_hash = binascii.hexlify(IrohaCrypto.hash(tx))
     for status in net.tx_status_stream(tx):
-        print(status)
+        logger.info(status)
     return hex_hash
 
 # Helper function to simulate setting account details with Iroha
@@ -221,9 +221,9 @@ def set_account_detail(address, account, key, value):
     response = net.send_tx(tx)
 
     # Log the response and statuses
-    print(response)
+    logger.info(response)
     for status in net.tx_status_stream(tx):
-        print(status)
+        logger.info(status)
     
     # Get the transaction hash in hex form
     hex_hash = binascii.hexlify(IrohaCrypto.hash(tx))
