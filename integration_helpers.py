@@ -1,10 +1,10 @@
-import os
-import binascii
 from iroha import IrohaCrypto
 from iroha import Iroha, IrohaGrpc
 import sys
 from Crypto.Hash import keccak
 import json
+from loguru import logger
+
 
 if sys.version_info[0] < 3:
     raise Exception("Python 3 or a more recent version is required.")
@@ -31,9 +31,9 @@ def trace(func):
 
     def tracer(*args, **kwargs):
         name = func.__name__
-        print('\tEntering "{}"'.format(name))
+        logger.info('\tEntering "{}"'.format(name))
         result = func(*args, **kwargs)
-        print('\tLeaving "{}"'.format(name))
+        logger.info('\tLeaving "{}"'.format(name))
         return result
 
     return tracer
@@ -89,5 +89,5 @@ def get_engine_receipts_result(tx_hash: str):
     ].call_result.result_data
     bytes_object = bytes.fromhex(result)
     ascii_string = bytes_object.decode('ASCII', 'ignore')
-    print(ascii_string)
+    logger.info(ascii_string)
 

@@ -1,5 +1,8 @@
 import json
 import os
+from dataclasses import dataclass
+from loguru import logger
+
 
 # Helper function to convert bytes to hex string
 def bytes_to_hex_string(byte_value):
@@ -8,20 +11,6 @@ def bytes_to_hex_string(byte_value):
     return byte_value
 
 from dataclasses import dataclass
-
-@dataclass
-class UserAccount:
-    account_id: str
-    full_name: str
-    email: str
-    institution: str
-    orcid: str
-    role: str
-    public_key: str
-
-from dataclasses import dataclass
-import os
-import json
 
 @dataclass
 class UserAccount:
@@ -84,11 +73,11 @@ def dump_to_json_ld(user_account: UserAccount, filename="datasets/accounts.json"
             json.dump(data, file, indent=4)
 
         current_entry_number = len(data["@graph"])
-        print(f"Appended new entry to file '{filename}', current total entries: {current_entry_number}")
+        logger.info(f"Appended new entry to file '{filename}', current total entries: {current_entry_number}")
         return current_entry_number
 
     except Exception as e:
-        print(f"Error appending entry to JSON-LD: {str(e)}")
+        logger.info(f"Error appending entry to JSON-LD: {str(e)}")
         return None  # Return None on error
 
 
@@ -130,11 +119,11 @@ def dump_project_to_json_ld(project_id, project_public_key, project_filename="da
             json.dump(data, file, indent=4)
 
         current_entry_number = len(data["@graph"])
-        print(f"Appended new project entry to file '{project_filename}', current total entries: {current_entry_number}")
+        logger.info(f"Appended new project entry to file '{project_filename}', current total entries: {current_entry_number}")
         return current_entry_number
 
     except Exception as e:
-        print(f"Error appending entry to JSON-LD: {str(e)}")
+        logger.info(f"Error appending entry to JSON-LD: {str(e)}")
         return None  # Return None on error
 
 
@@ -152,7 +141,7 @@ def append_project_metadata_to_json_ld(project_id, project_metadata_json, projec
             with open(project_filename, mode='r', encoding='utf-8') as file:
                 data = json.load(file)
         else:
-            print(f"File '{project_filename}' does not exist. No metadata appended.")
+            logger.info(f"File '{project_filename}' does not exist. No metadata appended.")
             return None
 
         # Find the project entry by project_id
@@ -166,18 +155,18 @@ def append_project_metadata_to_json_ld(project_id, project_metadata_json, projec
                 break
 
         if not project_found:
-            print(f"Project with ID '{project_id}' not found in '{project_filename}'.")
+            logger.info(f"Project with ID '{project_id}' not found in '{project_filename}'.")
             return None
 
         # Write back to the JSON-LD file
         with open(project_filename, mode='w', encoding='utf-8') as file:
             json.dump(data, file, indent=4)
 
-        print(f"Appended metadata for project ID '{project_id}' to '{project_filename}'.")
+        logger.info(f"Appended metadata for project ID '{project_id}' to '{project_filename}'.")
         return True
 
     except Exception as e:
-        print(f"Error appending entry to JSON-LD: {str(e)}")
+        logger.info(f"Error appending entry to JSON-LD: {str(e)}")
         return None  # Return None on error
 
 
@@ -218,7 +207,7 @@ def update_or_append_project_metadata(project_id_base, project_metadata_json, pr
                 entry["schema:description"] = project_metadata_json
                 entry["schema:metadataCID"] = project_metadata_cid
                 project_found = True
-                print(f"Updated existing project entry for project ID: {project_id}")
+                logger.info(f"Updated existing project entry for project ID: {project_id}")
                 break
 
         # If project entry was not found, create a new one
@@ -230,18 +219,18 @@ def update_or_append_project_metadata(project_id_base, project_metadata_json, pr
                 "schema:metadataCID": project_metadata_cid
             }
             data["@graph"].append(new_entry)
-            print(f"Appended new project entry for project ID: {project_id}")
+            logger.info(f"Appended new project entry for project ID: {project_id}")
 
         # Write back to the JSON-LD file
         with open(project_filename, mode='w', encoding='utf-8') as file:
             json.dump(data, file, indent=4)
 
         current_entry_number = len(data["@graph"])
-        print(f"Current total entries in '{project_filename}': {current_entry_number}")
+        logger.info(f"Current total entries in '{project_filename}': {current_entry_number}")
         return current_entry_number
 
     except Exception as e:
-        print(f"Error updating or appending entry in JSON-LD: {str(e)}")
+        logger.info(f"Error updating or appending entry in JSON-LD: {str(e)}")
         return None  # Return None on error
 
 
@@ -257,27 +246,27 @@ def update_project_entry_with_file_data(project_id, file_cid, metadata_cid, meta
     try:
         with open(file_path, 'r') as file:
             project_data = json.load(file)
-            print(f"Loaded project data successfully.")
+            logger.info(f"Loaded project data successfully.")
     except FileNotFoundError:
-        print(f"File {file_path} not found.")
+        logger.info(f"File {file_path} not found.")
         return
     except json.JSONDecodeError as e:
-        print(f"Error decoding JSON: {e}")
+        logger.info(f"Error decoding JSON: {e}")
         return
 
-    # Print project data structure for better understanding
-    print(f"Current project_data: {json.dumps(project_data, indent=4)}")
+    # logger.info project data structure for better understanding
+    logger.info(f"Current project_data: {json.dumps(project_data, indent=4)}")
 
     # Search for the project in the @graph
     project_found = False
     for project in project_data.get('@graph', []):
         current_id = project.get('schema:identifier')
-        print(f"Checking project with ID: '{current_id}' against '{project_id}'")  # Ensure no hidden spaces or format differences
+        logger.info(f"Checking project with ID: '{current_id}' against '{project_id}'")  # Ensure no hidden spaces or format differences
 
         # Compare the current project's identifier with the target project_id
         if current_id.strip() == project_id.strip():  # Using .strip() to eliminate any trailing/leading whitespace issues
             project_found = True
-            print(f"Match found for project ID: {project_id}")
+            logger.info(f"Match found for project ID: {project_id}")
             
             # Prepare new file entry data to be added
             # Retrieve the current file count (or set it to 0 if this is the first file)
@@ -297,17 +286,17 @@ def update_project_entry_with_file_data(project_id, file_cid, metadata_cid, meta
             # Append the file entry to the project
             project['schema:files'].append(file_entry)
 
-            print(f"Updated project {project_id} with new file entry: {file_entry}")
+            logger.info(f"Updated project {project_id} with new file entry: {file_entry}")
             break
 
     if not project_found:
-        print(f"Project {project_id} not found in datasets/projects.json")
+        logger.info(f"Project {project_id} not found in datasets/projects.json")
         return
 
     # Write the updated data back to the JSON file
     try:
         with open(file_path, 'w') as file:
             json.dump(project_data, file, indent=4)
-            print(f"Successfully wrote updated data to {file_path}")
+            logger.info(f"Successfully wrote updated data to {file_path}")
     except Exception as e:
-        print(f"Error writing to file {file_path}: {e}")
+        logger.info(f"Error writing to file {file_path}: {e}")

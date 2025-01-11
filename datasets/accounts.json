@@ -252,6 +252,158 @@
                 "schema:roleName": "author",
                 "schema:publicKey": "30b2107eb547381892da7d96a6eb50c337bf0922e5737db9977046cb109932c7"
             }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Goofy Proskuriakova",
+            "foaf:mbox": "goofy_proskuriakova@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "West University of Timisoara"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "3655-9720-3199-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "goofy_proskuriakova@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "59e48e07f92428dc3476402d3c6b1122707935023ad28812ba5314d29168e695"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Inspiring Brahmagupta",
+            "foaf:mbox": "inspiring_brahmagupta@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Ecole Sup\u00e9rieure de Commerce de Bordeaux"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "8403-0494-8804-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "inspiring_brahmagupta@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "c00b77554900032aa8d52e405ff35565b79fb486d8edbc6cae8bcec050679fda"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Agitated Matsumoto",
+            "foaf:mbox": "agitated_matsumoto@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Instituto Superior Novas Profiss\u00f5es - INP"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "0649-0735-3274-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "agitated_matsumoto@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "17ed891fba7314a26830149f123148cc322c11fd84195ce7ad99ea81811edfa1"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Zen Joliot",
+            "foaf:mbox": "zen_joliot@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "American University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "6946-7770-7391-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "zen_joliot@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "149080105ddc5a64c22919d66a319a7d22ab38e522c106af57a1428774272907"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Goofy Perlman",
+            "foaf:mbox": "goofy_perlman@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Music Academy \"Karol Szymanowski\" in Katowice"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "1906-2492-4094-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "goofy_perlman@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "d0f7bb8e1ade13948c5ae893d100d7b61c3f8f1a34dd7736a83e8b6ebb230080"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Agitated Almeida",
+            "foaf:mbox": "agitated_almeida@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "China Three Gorges University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "8814-5203-0251-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "agitated_almeida@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "a3e1bd490f6454d08599d7846f180c41088f225671a14624ef2a415536bb61d3"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Unruffled Mirzakhani",
+            "foaf:mbox": "unruffled_mirzakhani@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Laurentian University of Sudbury"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "3058-7127-5249-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "unruffled_mirzakhani@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "1ef0fbd277254ed414d82382bf0e3ceb98dc3bbd6e35072e13d9dec302ed4d96"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Sweet Matsumoto",
+            "foaf:mbox": "sweet_matsumoto@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Technological University (Loikaw)"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "7800-4857-2654-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "sweet_matsumoto@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "5e010bc63eef08374f9bf38028c5c0eaa65dd5d18dbf51ad77b5fd68ec0c6fe2"
+            }
         }
     ]
 }

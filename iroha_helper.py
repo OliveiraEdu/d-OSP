@@ -81,10 +81,9 @@ def create_account(address, user_account_short_id, DOMAIN, user_public_key, user
     IrohaCrypto.sign_transaction(tx, ADMIN_PRIVATE_KEY)
     response = net.send_tx(tx)
     for status in net.tx_status_stream(tx):
-        print(status)
+        logger.info(status)
     hex_hash = binascii.hexlify(IrohaCrypto.hash(tx))
     line_number = dump_to_json_ld(user_account) #dumps this data to dataset/accounts.json for later use.
-    print(line_number)
     return hex_hash
 
 
