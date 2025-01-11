@@ -6,65 +6,62 @@
     "@graph": [
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "14427@test",
-            "schema:publicKey": "2c0b4d4ff7f5a67e29dc29dae91366fc301ed14a84b67480e6752124c5cb8f7e",
+            "schema:identifier": "73243@test",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Investigating the Role of 5G technology in supply chain management",
-                "dc:abstract": "This study explores the impact of 5G technology in supply chain management, focusing on economic empowerment.",
+                "schema:name": "Analyzing the Influence of digital twins on precision medicine",
+                "dc:abstract": "This paper analyzes how digital twins influences precision medicine, providing insights into how to maximize its energy reliability.",
                 "schema:keywords": [
-                    "5G technology",
-                    "supply chain management",
-                    "economic empowerment"
+                    "digital twins",
+                    "precision medicine",
+                    "energy reliability"
                 ],
-                "schema:startDate": "2019-08-31",
-                "schema:endDate": "2027-05-05",
+                "schema:startDate": "2023-05-12",
+                "schema:endDate": "2025-03-10",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "National Science Foundation"
+                    "schema:name": "Bill and Melinda Gates Foundation"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
-                    "schema:name": "Lisbon, Portugal"
+                    "schema:name": "Tokyo, Japan"
                 }
             },
-            "schema:metadataCID": "QmWCXQ2erWT5tn5HGhy3othDfv2QQnatYh9jrURY5GMdS9",
-            "schema:linked_user": "competent_chandrasekhar@test"
+            "schema:metadataCID": "QmW6MDJSfQD8pgMNkqCxNMYzeKkC8YDkCgHtkP5mkKzEqg",
+            "schema:linked_user": "elated_noether@test"
         },
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "59999@test",
-            "schema:publicKey": "381a116b1b725c9899dfeacfecd33259a2d8903707157781e17742f865d00330",
+            "schema:identifier": "77323@test",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Investigating the Role of AI in disaster response",
-                "dc:abstract": "This study explores the impact of AI in disaster response, focusing on environmental conservation.",
+                "schema:name": "Analyzing the Influence of gene therapy on energy storage",
+                "dc:abstract": "This paper analyzes how gene therapy influences energy storage, providing insights into how to maximize its personalized medicine.",
                 "schema:keywords": [
-                    "AI",
-                    "disaster response",
-                    "environmental conservation"
+                    "gene therapy",
+                    "energy storage",
+                    "personalized medicine"
                 ],
-                "schema:startDate": "2023-02-12",
-                "schema:endDate": "2027-02-03",
+                "schema:startDate": "2018-10-29",
+                "schema:endDate": "2028-06-19",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "World Wildlife Fund"
+                    "schema:name": "National Geographic Society"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
-                    "schema:name": "Los Angeles, California, USA"
+                    "schema:name": "Accra, Ghana"
                 }
             },
-            "schema:metadataCID": "QmS1AFEwA7DrsXVP8uNJWMnjwtHMW7EWkfhwsE6hadVGwP",
-            "schema:linked_user": "brave_lamarr@test"
+            "schema:metadataCID": "QmaWfoLPTka6WB8qTFiJ7YhZs2k3XPkdDDocEmTS5L7ZF7"
         }
     ]
 }

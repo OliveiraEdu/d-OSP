@@ -1,5 +1,3 @@
-
-#Iroha functions
 import os
 import binascii
 from iroha import IrohaCrypto
@@ -9,9 +7,8 @@ from Crypto.Hash import keccak
 import json
 import logging
 import integration_helpers
-# from super_helper import decode_json
 from loguru import logger
-from dump_to_json import dump_to_json_ld
+from dump_to_json import dump_to_json_ld, dump_project_to_json_ld
 from ipfs_functions import *
 
 if sys.version_info[0] < 3:
@@ -59,7 +56,7 @@ def create_detail_contract():
     return hex_hash
 
 @integration_helpers.trace
-def create_account(address, user_account_short_id, DOMAIN, user_public_key, user_account):
+def create_user_account(address, user_account_short_id, DOMAIN, user_public_key, user_account):
     params = integration_helpers.get_first_four_bytes_of_keccak(
         b"createAccount(string,string,string)"
     )
@@ -86,6 +83,35 @@ def create_account(address, user_account_short_id, DOMAIN, user_public_key, user
     line_number = dump_to_json_ld(user_account) #dumps this data to dataset/accounts.json for later use.
     return hex_hash
 
+
+@integration_helpers.trace
+def create_project_account(address, project_id, DOMAIN, project_public_key, project_account):
+    params = integration_helpers.get_first_four_bytes_of_keccak(
+        b"createAccount(string,string,string)"
+    )
+    no_of_param = 3
+    for x in range(no_of_param):
+        params = params + integration_helpers.left_padded_address_of_param(
+            x, no_of_param
+        )
+    params = params + integration_helpers.argument_encoding(project_id)  # source account id
+    params = params + integration_helpers.argument_encoding(DOMAIN)  # domain id
+    params = params + integration_helpers.argument_encoding(project_public_key)  #  key
+    tx = iroha.transaction(
+        [
+            iroha.command(
+                "CallEngine", caller=ADMIN_ACCOUNT_ID, callee=address, input=params
+            )
+        ]
+    )
+    IrohaCrypto.sign_transaction(tx, ADMIN_PRIVATE_KEY)
+    response = net.send_tx(tx)
+    for status in net.tx_status_stream(tx):
+        logger.info(status)
+    hex_hash = binascii.hexlify(IrohaCrypto.hash(tx))
+    line_number = dump_project_to_json_ld(f"{project_id}@{DOMAIN}", project_public_key) #dumps this data to dataset/projects.json for later use.
+    logger.info(line_number)
+    return hex_hash
 
 # Function to link details using blockchain
 def set_account_detail(address, account, key, value):
