@@ -34,6 +34,37 @@
             },
             "schema:metadataCID": "QmWCXQ2erWT5tn5HGhy3othDfv2QQnatYh9jrURY5GMdS9",
             "schema:linked_user": "competent_chandrasekhar@test"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "59999@test",
+            "schema:publicKey": "381a116b1b725c9899dfeacfecd33259a2d8903707157781e17742f865d00330",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Investigating the Role of AI in disaster response",
+                "dc:abstract": "This study explores the impact of AI in disaster response, focusing on environmental conservation.",
+                "schema:keywords": [
+                    "AI",
+                    "disaster response",
+                    "environmental conservation"
+                ],
+                "schema:startDate": "2023-02-12",
+                "schema:endDate": "2027-02-03",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "World Wildlife Fund"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Los Angeles, California, USA"
+                }
+            },
+            "schema:metadataCID": "QmS1AFEwA7DrsXVP8uNJWMnjwtHMW7EWkfhwsE6hadVGwP",
+            "schema:linked_user": "brave_lamarr@test"
         }
     ]
 }

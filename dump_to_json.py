@@ -7,8 +7,33 @@ def bytes_to_hex_string(byte_value):
         return byte_value.hex()
     return byte_value
 
-def dump_to_json_ld(account_id, user_account_full_name, user_account_email, user_account_institution, user_account_orcid, user_role, user_public_key, filename="datasets/accounts.json"):
-    
+from dataclasses import dataclass
+
+@dataclass
+class UserAccount:
+    account_id: str
+    full_name: str
+    email: str
+    institution: str
+    orcid: str
+    role: str
+    public_key: str
+
+from dataclasses import dataclass
+import os
+import json
+
+@dataclass
+class UserAccount:
+    account_id: str
+    full_name: str
+    email: str
+    institution: str
+    orcid: str
+    role: str
+    public_key: str
+
+def dump_to_json_ld(user_account: UserAccount, filename="datasets/accounts.json"):
     try:
         # Ensure that the 'datasets' directory exists
         directory = os.path.dirname(filename)
@@ -32,21 +57,21 @@ def dump_to_json_ld(account_id, user_account_full_name, user_account_email, user
         # Create a new user account entry
         new_entry = {
             "@type": "foaf:Person",
-            "foaf:name": user_account_full_name,
-            "foaf:mbox": user_account_email,
+            "foaf:name": user_account.full_name,  # Access attribute from UserAccount
+            "foaf:mbox": user_account.email,
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": user_account_institution
+                "foaf:name": user_account.institution
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": user_account_orcid
+                "value": user_account.orcid
             },
             "foaf:holdsAccount": {
-                "schema:identifier": account_id,
-                "schema:roleName": user_role,
-                "schema:publicKey": user_public_key
+                "schema:identifier": user_account.account_id,
+                "schema:roleName": user_account.role,
+                "schema:publicKey": user_account.public_key
                 # Removed private key for now
             }
         }
@@ -65,6 +90,7 @@ def dump_to_json_ld(account_id, user_account_full_name, user_account_email, user
     except Exception as e:
         print(f"Error appending entry to JSON-LD: {str(e)}")
         return None  # Return None on error
+
 
 
 

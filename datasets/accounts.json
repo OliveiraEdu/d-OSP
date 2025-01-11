@@ -23,6 +23,235 @@
                 "schema:publicKey": "d553bb10d6da8da6b39a9dbb134f1d60f014c5a0f454b00b6662699e1cec51fe"
             },
             "schema:linked_project": "14427@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Brave Lamarr",
+            "foaf:mbox": "brave_lamarr@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Cork Institute of Technology"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "1871-1046-5504-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "brave_lamarr@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "d511c9b75ccd4d3860d62a07286ef468fbad8e7293496ed6cc1ea10d1ad95ae7"
+            },
+            "schema:linked_project": "59999@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Hopeful Kilby",
+            "foaf:mbox": "hopeful_kilby@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Mahatma Gandhi University, Kerala"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "5807-3499-3695-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "hopeful_kilby@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "5014c921f61050853d8db8d866900a21f0cbfeaf6837de0008d1d0172d4f632d"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Condescending Murdock",
+            "foaf:mbox": "condescending_murdock@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Tambov State Technical University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "4513-2338-4245-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "condescending_murdock@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "d06ddbdfa1d2d5a8dfb7a6f7a87bf54a2aafdc92b320024351e6807ebc323ff2"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Kind Lumiere",
+            "foaf:mbox": "kind_lumiere@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Huazhong Agricultural University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "9192-9532-3298-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "kind_lumiere@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "a7272a2695465436fbe44de4bae3e1635a2be4a171b5a71ae20ed4e8564e136c"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Sweet Pasteur",
+            "foaf:mbox": "sweet_pasteur@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "College of St. Rose"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "2257-7402-5041-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "sweet_pasteur@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "4b4e1a7adb10e88244423c5d48985f82e4e304cd54f952cb44d6c8d25bbd2071"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Eager Booth",
+            "foaf:mbox": "eager_booth@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Istanbul Bilgi University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "2482-0385-0344-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "eager_booth@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "b5e3774f2d61eb82824c199aca4b8d6a468f0b7f4409f51285988ffe15d26fea"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Quizzical Pascal",
+            "foaf:mbox": "quizzical_pascal@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Universidad Aut\u00f3noma de Quer\u00e9taro"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "0461-2641-4697-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "quizzical_pascal@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "0b6e6dc5032895673a62d4a9655be68f61777f04f03e543166bb0b452d3ce768"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Strange Hodgkin",
+            "foaf:mbox": "strange_hodgkin@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Saginaw Valley State University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "5456-9738-6743-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "strange_hodgkin@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "6f101d63765a8953fca23e37a9f1c4eff073f0810d86cc50d43ff222d0f3c5f4"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Objective Napier",
+            "foaf:mbox": "objective_napier@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Oral Roberts University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "4300-3752-2941-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "objective_napier@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "bf54a46c7cfd646d7b91928891ba4b903f77b5e76a441a5310b05d2a96e6b61d"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Distracted Einstein",
+            "foaf:mbox": "distracted_einstein@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Sylhet International University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "0201-3927-8696-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "distracted_einstein@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "e7187eb02d7a8531d8e35a45ad8e09407fae7f2413ef843a7a67f8f4ba88ecd9"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Intelligent Borg",
+            "foaf:mbox": "intelligent_borg@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Universidad Cat\u00f3lica de Occidente"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "1288-0942-7058-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "intelligent_borg@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "a9d3beb789036be27e796e998faabe74464f81cf1fc4583005435dba68a1402a"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Fervent Chandrasekhar",
+            "foaf:mbox": "fervent_chandrasekhar@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Institute of Space Technology"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "0323-9563-1871-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "fervent_chandrasekhar@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "30b2107eb547381892da7d96a6eb50c337bf0922e5737db9977046cb109932c7"
+            }
         }
     ]
 }

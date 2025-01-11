@@ -17,6 +17,9 @@ from clean_file_name import clean_file_name
 # Initialize Tika
 tika.initVM()
 
+
+
+
 def download_file(file_metadata_json, download_path, project_id, file_cid):
     if "resourceName" in file_metadata_json:
         # Extract and clean the filename
