@@ -61,7 +61,8 @@
                     "schema:name": "Accra, Ghana"
                 }
             },
-            "schema:metadataCID": "QmaWfoLPTka6WB8qTFiJ7YhZs2k3XPkdDDocEmTS5L7ZF7"
+            "schema:metadataCID": "QmaWfoLPTka6WB8qTFiJ7YhZs2k3XPkdDDocEmTS5L7ZF7",
+            "schema:linked_user": "romantic_johnson@test"
         },
         {
             "@type": "schema:ResearchProject",

@@ -41,7 +41,8 @@
                 "schema:identifier": "romantic_johnson@test",
                 "schema:roleName": "author",
                 "schema:publicKey": "6cc2015624b935cd3c7aed3b6848528bc4b841ad196c0dc0abdf0e8c84032626"
-            }
+            },
+            "schema:linked_project": "77323@test"
         },
         {
             "@type": "foaf:Person",
