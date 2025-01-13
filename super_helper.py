@@ -17,6 +17,29 @@ from clean_file_name import clean_file_name
 # Initialize Tika
 tika.initVM()
 
+from contextlib import contextmanager
+import sys
+
+@contextmanager
+def with_logging_block(block_name, logger):
+    """
+    A reusable context manager for logging structured execution blocks.
+
+    Args:
+        block_name (str): The name of the block being executed.
+        logger (Logger): The logger instance.
+    """
+    try:
+        logger.info("\n" + "=" * 50)
+        logger.info(f"STARTING BLOCK: {block_name}")
+        logger.info("=" * 50)
+        yield  # Code within the `with` block will execute here
+    except Exception as e:
+        logger.error(f"An error occurred in block '{block_name}': {e}. Exiting.")
+        sys.exit(1)  # Graceful exit on error
+    finally:
+        logger.info(f"COMPLETED BLOCK: {block_name}")
+        logger.info("-" * 50 + "\n")
 
 
 
