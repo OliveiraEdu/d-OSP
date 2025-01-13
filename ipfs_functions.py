@@ -16,6 +16,7 @@ ipfs_address = f"/dns/{config['IPFS_ADDRESS']}/tcp/{config['IPFS_PORT']}/http"
 client = ipfshttpclient.connect(ipfs_address)
 
 def upload_file_to_ipfs(file_path):
+
     # Add the file to IPFS
     result = client.add(file_path)
     # ic(result['Name'], result['Hash'])
@@ -32,15 +33,7 @@ def download_file_from_ipfs(cid, output_path):
 def upload_json_to_ipfs(json):
     # Add the JSON to IPFS
     file_metadata_CID = client.add_json(json)
-    # ic(file_metadata_CID)
     return file_metadata_CID
-
-# Step 3: Send Metadata JSON to IPFS
-# def send_metadata_to_ipfs(metadata):
-#     json_data = json.dumps(metadata)
-#     res = client.add_json(json_data)
-#     return res
-
 
 
 def download_json_from_ipfs(cid):

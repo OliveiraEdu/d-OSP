@@ -62,6 +62,36 @@
                 }
             },
             "schema:metadataCID": "QmaWfoLPTka6WB8qTFiJ7YhZs2k3XPkdDDocEmTS5L7ZF7"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "37355@test",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Assessing the Benefits of virtual reality for urban planning",
+                "dc:abstract": "This research focuses on the benefits and challenges posed by virtual reality for urban planning, with an emphasis on its potential for environmental restoration.",
+                "schema:keywords": [
+                    "virtual reality",
+                    "urban planning",
+                    "environmental restoration"
+                ],
+                "schema:startDate": "2022-05-05",
+                "schema:endDate": "2025-05-16",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "Bill and Melinda Gates Foundation"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Tokyo, Japan"
+                }
+            },
+            "schema:metadataCID": "QmVqM2d9FhPwQNAhQ2mUCi9mzw8EdF3oqM4wzAHMUqcWWd",
+            "schema:linked_user": "wizardly_murdock@test"
         }
     ]
 }

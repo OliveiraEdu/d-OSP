@@ -60,6 +60,26 @@
                 "schema:identifier": "wizardly_murdock@test",
                 "schema:roleName": "author",
                 "schema:publicKey": "944f6ca0b600f7d9705a9dc1853ea6432221b91836251196630c02bf465cbf20"
+            },
+            "schema:linked_project": "37355@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Stupefied Hopper",
+            "foaf:mbox": "stupefied_hopper@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "College of Notre Dame of Maryland"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "0020-1813-0538-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "stupefied_hopper@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "c9f29627abf7418df036e47233d5a772b3cb4d5e43f8d0f4c7dd9353d6e57150"
             }
         }
     ]

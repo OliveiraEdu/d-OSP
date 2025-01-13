@@ -69,7 +69,7 @@ def process_valid_result(project_id, validation_result):
     if project_metadata_cid:
         try:
             project_metadata = download_json_from_ipfs(project_metadata_cid)
-            logger.debug(f"Downloaded project metadata: {project_metadata}")
+            logger.info(f"Downloaded project metadata: {project_metadata}")
         except Exception as e:
             logger.error(f"Failed to download project metadata from IPFS: {e}")
 
@@ -80,7 +80,7 @@ def process_valid_result(project_id, validation_result):
             if user_json_ld_cid:
                 try:
                     user_metadata = download_json_from_ipfs(user_json_ld_cid)
-                    logger.debug(f"Downloaded user metadata: {user_metadata}")
+                    logger.info(f"Downloaded user metadata: {user_metadata}")
                 except Exception as e:
                     logger.error(f"Failed to download user metadata: {e}")
 
@@ -232,7 +232,7 @@ def search_index(index, keyword):
 
 
 def validate_file_cid(file_cid, project_details):
-    logger.debug(f"Validating CID: {file_cid}")
+    logger.info(f"Validating CID: {file_cid}")
 
     # Fetch the project details for the specific project
     try:
@@ -240,9 +240,9 @@ def validate_file_cid(file_cid, project_details):
             for file_key, cids in user_data.items():
                 if file_key != 'project_metadata_cid':  # Skip project_metadata_cid key
                     if file_cid in cids.split(', '):  # Check if the CID exists in the value
-                        logger.debug(f"CID {file_cid} found in {file_key}.")
+                        logger.info(f"CID {file_cid} found in {file_key}.")
                         return True
-        logger.debug(f"CID {file_cid} not found in any file key.")
+        logger.warning(f"CID {file_cid} not found in any file key.")
         return False
     except Exception as e:
         logger.error(f"Error validating file CID: {e}")
@@ -250,7 +250,6 @@ def validate_file_cid(file_cid, project_details):
 
 
 
-from loguru import logger
 
 def fetch_project_details(file_cid, blockchain_data):
     """
@@ -263,7 +262,7 @@ def fetch_project_details(file_cid, blockchain_data):
     Returns:
         dict: Dictionary with 'is_valid', 'project_metadata_cid', and 'linked_user'.
     """
-    logger.debug(f"Validating and fetching details for CID: {file_cid}")
+    logger.info(f"Validating and fetching details for CID: {file_cid}")
     try:
         for admin, details in blockchain_data.items():
             # Check for file CIDs
@@ -271,7 +270,7 @@ def fetch_project_details(file_cid, blockchain_data):
                 if key not in ["project_metadata_cid", "linked_user"]:  # Skip metadata and linked user
                     cids = value.split(", ")
                     if file_cid in cids:
-                        logger.debug(f"File CID {file_cid} found under {key}.")
+                        logger.info(f"File CID {file_cid} found under {key}.")
                         return {
                             "is_valid": True,
                             "project_metadata_cid": details.get("project_metadata_cid"),
@@ -279,7 +278,7 @@ def fetch_project_details(file_cid, blockchain_data):
                         }
         
         # File CID not found
-        logger.debug(f"File CID {file_cid} not found in blockchain data.")
+        logger.warning(f"File CID {file_cid} not found in blockchain data.")
         return {
             "is_valid": False,
             "project_metadata_cid": None,
