@@ -218,40 +218,96 @@ def index_metadata(metadata, full_text, schema, project_id, file_cid, metadata_c
     
 
 
+# def search_index(index, keyword):
+#     """
+#     Search for a keyword in the index and log the outcome.
+#     :param index: The Whoosh index to search.
+#     :param keyword: The keyword to search for.
+#     :return: List of search results or None if no results.
+#     """
+
+#     try:
+#         logger.info("Starting keyword search...")
+#         logger.info(f"Keyword: '{keyword}'")
+        
+#         with index.searcher() as searcher:
+#             parser = MultifieldParser(
+#                 ["abstract", "full_text", "name", "title", "subject"], 
+#                 schema=index.schema
+#             )
+#             query = parser.parse(keyword)
+#             results = searcher.search(query, limit=20)  # Limit to 10 results
+
+#             if results:
+#                 logger.info(f"Search successful: Found {len(results)} result(s).")
+#                 for i, result in enumerate(results, 1):
+#                     logger.info(f"{i}. Project Id: {result['project_id']}, File CID: {result['file_cid']}, Metadata CID: {result['metadata_cid']}, Title: {result['title']}")
+                    
+#                 return [dict(result) for result in results], [result['project_id'] for result in results]
+#             else:
+#                 logger.warning("No results found for the given keyword.")
+#                 logger.info("Suggestion: Refine the keyword or try broader terms.")
+#                 return None, []
+
+#     except Exception as e:
+#         logger.error(f"Error during keyword search: {e}")
+#         return None, []
+
+
 def search_index(index, keyword):
     """
     Search for a keyword in the index and log the outcome.
-    :param index: The Whoosh index to search.
-    :param keyword: The keyword to search for.
-    :return: List of search results or None if no results.
+    
+    Parameters:
+        index: The Whoosh index to search.
+        keyword: The keyword to search for.
+    
+    Returns:
+        tuple: A list of search results as dictionaries and a list of project IDs.
     """
-
     try:
         logger.info("Starting keyword search...")
         logger.info(f"Keyword: '{keyword}'")
         
         with index.searcher() as searcher:
+            # Create a query parser for multiple fields
             parser = MultifieldParser(
                 ["abstract", "full_text", "name", "title", "subject"], 
                 schema=index.schema
             )
             query = parser.parse(keyword)
-            results = searcher.search(query, limit=20)  # Limit to 10 results
+            results = searcher.search(query, limit=20)  # Limit to 20 results
+            
+            with with_logging_block("Keyword Search", logger):
+                if not results:
+                    logger.warning(f"No search results found for keyword: '{keyword}'. Exiting the script.")
+                    sys.exit(1)
 
-            if results:
-                logger.info(f"Search successful: Found {len(results)} result(s).")
-                for i, result in enumerate(results, 1):
-                    logger.info(f"{i}. Project Id: {result['project_id']}, File CID: {result['file_cid']}, Metadata CID: {result['metadata_cid']}, Title: {result['title']}")
-                    # print(result)
-                return [dict(result) for result in results], [result['project_id'] for result in results]
-            else:
-                logger.warning("No results found for the given keyword.")
-                logger.info("Suggestion: Refine the keyword or try broader terms.")
-                return None, []
+                # Log the total number of search results
+                total_results = len(results)
+                logger.info(f"Total search results found for keyword '{keyword}': {total_results}")
+                
+                # List the `project_id` and `file_cid` for each search result
+                logger.info("Listing all search results:")
+                for idx, result in enumerate(results, 1):
+                    project_id = result.get('project_id', 'N/A')
+                    file_cid = result.get('file_cid', 'N/A')
+                    logger.info(f"Result {idx}: Project ID: {project_id}, File CID: {file_cid}")
+                
+                # Log the full details of search results, excluding the 'full_text' field
+                logger.info(f"Full search results for keyword '{keyword}' (excluding 'full_text'):")
+                for idx, result in enumerate(results, 1):
+                    filtered_result = {k: v for k, v in result.items() if k != "full_text"}
+                    logger.info(f"Result {idx}: {json.dumps(filtered_result, indent=2)}")
 
+            # Convert results to a list of dictionaries and extract project IDs
+            return [dict(result) for result in results], [result['project_id'] for result in results]
+    
     except Exception as e:
         logger.error(f"Error during keyword search: {e}")
         return None, []
+
+
 
 
 def validate_file_cid(file_cid, project_details):

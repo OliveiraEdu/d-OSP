@@ -6,82 +6,63 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Elated Noether",
-            "foaf:mbox": "elated_noether@email.com",
+            "foaf:name": "Epic Fermi",
+            "foaf:mbox": "epic_fermi@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Karachi School of Art"
+                "foaf:name": "City University of New York, Medgar Evers College"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "2182-3432-2982-X"
+                "value": "1186-0130-7997-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "elated_noether@test",
+                "schema:identifier": "epic_fermi@test",
                 "schema:roleName": "author",
-                "schema:publicKey": "f26542c817bef9db2133e2a67fde4cbf07f408d897b9ce323b2d463cffe2598a"
+                "schema:publicKey": "dceb1bbf902a61b328549d93c16ab3ad4f2f269360af9ceba3068f52ef1bd933"
             },
-            "schema:linked_project": "73243@test"
+            "schema:linked_project": "55943@test"
         },
         {
             "@type": "foaf:Person",
-            "foaf:name": "Romantic Johnson",
-            "foaf:mbox": "romantic_johnson@email.com",
+            "foaf:name": "Magical Noyce",
+            "foaf:mbox": "magical_noyce@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Paktia University"
+                "foaf:name": "University Campus Suffolk"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "1027-3561-0949-X"
+                "value": "6086-0801-4461-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "romantic_johnson@test",
-                "schema:roleName": "author",
-                "schema:publicKey": "6cc2015624b935cd3c7aed3b6848528bc4b841ad196c0dc0abdf0e8c84032626"
-            },
-            "schema:linked_project": "77323@test"
-        },
-        {
-            "@type": "foaf:Person",
-            "foaf:name": "Wizardly Murdock",
-            "foaf:mbox": "wizardly_murdock@email.com",
-            "foaf:organization": {
-                "@type": "foaf:Organization",
-                "foaf:name": "Baqai Medical University"
-            },
-            "schema:identifier": {
-                "@type": "PropertyValue",
-                "propertyID": "ORCID",
-                "value": "3202-1900-4101-X"
-            },
-            "foaf:holdsAccount": {
-                "schema:identifier": "wizardly_murdock@test",
-                "schema:roleName": "author",
-                "schema:publicKey": "944f6ca0b600f7d9705a9dc1853ea6432221b91836251196630c02bf465cbf20"
-            },
-            "schema:linked_project": "37355@test"
-        },
-        {
-            "@type": "foaf:Person",
-            "foaf:name": "Stupefied Hopper",
-            "foaf:mbox": "stupefied_hopper@email.com",
-            "foaf:organization": {
-                "@type": "foaf:Organization",
-                "foaf:name": "College of Notre Dame of Maryland"
-            },
-            "schema:identifier": {
-                "@type": "PropertyValue",
-                "propertyID": "ORCID",
-                "value": "0020-1813-0538-X"
-            },
-            "foaf:holdsAccount": {
-                "schema:identifier": "stupefied_hopper@test",
+                "schema:identifier": "magical_noyce@test",
                 "schema:roleName": "publisher",
-                "schema:publicKey": "c9f29627abf7418df036e47233d5a772b3cb4d5e43f8d0f4c7dd9353d6e57150"
-            }
+                "schema:publicKey": "c174cced875fb92dc8161435e44ad23a618495d968812a1a7c63ab398d0a0d4d"
+            },
+            "schema:linked_project": "76811@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Jolly Carson",
+            "foaf:mbox": "jolly_carson@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "School of Economic Sciences"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "8740-6568-5698-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "jolly_carson@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "17ee3952531c1aa128809122466bd76c70e4179877c32da4243c7776d2f9dd88"
+            },
+            "schema:linked_project": "60032@test"
         }
     ]
 }
