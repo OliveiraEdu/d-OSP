@@ -115,7 +115,7 @@ def process_files(directory_path, project_id, schema):
 
         for filename in list_files(directory_path):
             file_path = os.path.join(directory_path, filename)
-            # logger.info("file path: ", file_path)
+            logger.info(f"Indexing file:  {file_path}")
             # logger.info("file name: ", filename)
             
             try:
