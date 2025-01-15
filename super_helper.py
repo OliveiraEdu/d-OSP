@@ -42,6 +42,8 @@ def with_logging_block(block_name, logger):
         logger.info("-" * 50 + "\n")
 
 
+
+
 def processing_search_results(search_results, download_path):
     """
     Process search results by fetching and validating data, downloading metadata,
@@ -75,7 +77,7 @@ def processing_search_results(search_results, download_path):
                 logger.info(f"Metadata CID: {metadata_cid}")
 
                 # Fetch project details
-                with with_logging_block("Fetching Project Details", logger):
+                with with_logging_block("Fetching Project Details in the blockchain", logger):
                     project_details = get_account_detail(project_id)
                     if not project_details:
                         logger.error(f"No project details found for Project ID: {project_id}.")
@@ -83,7 +85,7 @@ def processing_search_results(search_results, download_path):
                     logger.info(f"Fetched project details for {project_id}: {project_details}")
 
                 # Parse blockchain data
-                with with_logging_block("Parsing Blockchain Data", logger):
+                with with_logging_block("JSONifying the Project Details", logger):
                     try:
                         blockchain_data = json.loads(project_details)
                         logger.info(f"Parsed blockchain data: {blockchain_data}")
