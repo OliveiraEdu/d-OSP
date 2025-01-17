@@ -1,0 +1,30 @@
+@startuml name Diagram1 
+!define return_result "Dictionary with 'is_valid', 'project_metadata_cid', and 'linked_user'"
+
+title fetch_project_details Function Diagram
+
+top to bottom direction
+
+start
+:Start logging;
+:Log "Validating and fetching details for CID";
+
+try
+  repeat
+  :Iterate over blockchain_data items (admin, details); 
+    :Iterate over details (key, value);
+    if (key not in ["project_metadata_cid", "linked_user"]) then (Yes)
+      :Split value by ", ";
+      if (file_cid in cids?) then (Yes)
+        :Log "File CID found";
+        return(return_result);
+      endif
+    endif
+  repeat while (blockchain_data items not exhausted)
+  :Log "File CID not found";
+  return(return_result);
+catch (Exception e)
+  :Log "Error fetching project details";
+  stop
+end try
+@enduml

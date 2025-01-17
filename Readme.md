@@ -219,7 +219,7 @@ The default Genesis block for Iroha 1 docker image `admin@test` does not have th
 
 ### Document functions and generate documentation
 
-- Check functions and maybe breakdown them further for [better maintainability](https://www.linkedin.com/posts/khuyen-tran-1401_productionreadydatascience-datascience-cleancode-activity-7236085519871307776-WLDK/?utm_source=share&utm_medium=member_android)
+- Check functions and maybe breakdown them further for [better maintainability](https://www.linkedin.com/posts/khuyen-tran-1401_productionreadydatascience-datascience-cleancode-activity-7236085519871307776-WLDK/?utm_source=share&utm_medium=member_android) - Done
 
 - Use a vanilla Jupyter Notebook docker image from [Jupyter Stacks](https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html)
 
@@ -229,7 +229,7 @@ The default Genesis block for Iroha 1 docker image `admin@test` does not have th
 
 ### CSV versus JSON
 
-- Replace CSV usage by JSON and store them in IPFS - In progress
+- Replace CSV usage by JSON and store them in IPFS - Done
 
 ### RBAC (Role Based Access Control)
 
@@ -237,70 +237,23 @@ The default Genesis block for Iroha 1 docker image `admin@test` does not have th
 
 ### Search Engine
 - Include projects metadata for indexing - Done
-- Consider a knowledge graph for search results (Consider Ontologies like FOAF and Dublin Core) - Done
+- Consider a knowledge graph for search results (Consider Ontologies like FOAF and Dublin Core) - Partially done, User and Project accounts are registered as metadata formatted in FOAF e DC - Pending Knowledge Graph
+
 - Include user_account and project_acccount, affiliation, full name, role as indexed criterias for searching
 
 ### Outputs
-- Standardize on IC (icecream) or Logger whenever is possible - In progress
+- Standardize on Logger whenever is possible - Done
 
 ### Entity Relationships Model
 - A user should be able to own n projects
-- On project details:
 
-```
-Project Account id = {'account_id': '18286@test'}, {
-  "admin@test": {
-    "file_1": {
-      "CID": "QmV1vYkuiwKGPA5Tyi4ECNFfWYocyTtQ3E5j7CSvPBX49Q",
-      "metadata_CID": "QmRMyo5mMDKgwCPjh3Q2FFqvcRC6Nodu4eCcbpv8oiDaL2"
-    },
-    "is_owner": "wizardly_lamport@test",
-    "project_metadata_cid": "Qmah9rr9rV51TKpL83ZHL9MheiDnqgTEapZSV4ipjdE51s"
-  }
-}
- }
-```
-
-Or
-
-```
-Project Account id = {'account_id': '18286@test'}, {
-  "admin@test": {
-    "file_1": {
-      "CID": "QmV1vYkuiwKGPA5Tyi4ECNFfWYocyTtQ3E5j7CSvPBX49Q",
-      "metadata_CID": "QmRMyo5mMDKgwCPjh3Q2FFqvcRC6Nodu4eCcbpv8oiDaL2"
-    },
-    "is_reviewer": "wizardly_lamport@test",
-    "project_metadata_cid": "Qmah9rr9rV51TKpL83ZHL9MheiDnqgTEapZSV4ipjdE51s"
-  }
-}
-``` 
-
+- On project details improve the data structute for storing file CID and file metadata CID - Done
 
 ### Provenance
 - Implementing a git like version control system for provenance
 
 ### Project Details
-- Optmize file and file metadata entries
+- Optmize file and file metadata entries - Done
 
-As - Is
-
-```
-Project Account id = {'account_id': '18286@test'}, { "admin@test" : { "file_1_CID" : "QmV1vYkuiwKGPA5Tyi4ECNFfWYocyTtQ3E5j7CSvPBX49Q", "file_1_metadata_CID" : "QmRMyo5mMDKgwCPjh3Q2FFqvcRC6Nodu4eCcbpv8oiDaL2", "linked_user" : "wizardly_lamport@test", "project_metadata_cid" : "Qmah9rr9rV51TKpL83ZHL9MheiDnqgTEapZSV4ipjdE51s" } }
-```
-
-To - Be (something like this) 
-
-```
-Project Account id = {'account_id': '18286@test'}, {
-  "admin@test": {
-    "file_1": {
-      "CID": "QmV1vYkuiwKGPA5Tyi4ECNFfWYocyTtQ3E5j7CSvPBX49Q",
-      "metadata_CID": "QmRMyo5mMDKgwCPjh3Q2FFqvcRC6Nodu4eCcbpv8oiDaL2"
-    },
-    "linked_user": "wizardly_lamport@test",
-    "project_metadata_cid": "Qmah9rr9rV51TKpL83ZHL9MheiDnqgTEapZSV4ipjdE51s"
-  }
-}
-```
-
+### Python code level improvements
+- Improve exiting on exceptions

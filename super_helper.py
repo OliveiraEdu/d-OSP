@@ -79,24 +79,25 @@ def processing_search_results(search_results, download_path):
                 # Fetch project details
                 with with_logging_block("Fetching Project Details in the blockchain", logger):
                     project_details = get_account_detail(project_id)
+                    blockchain_data = json.loads(project_details)
                     if not project_details:
                         logger.error(f"No project details found for Project ID: {project_id}.")
                         continue
                     logger.info(f"Fetched project details for {project_id}: {project_details}")
 
-                # Parse blockchain data
-                with with_logging_block("JSONifying the Project Details", logger):
-                    try:
-                        blockchain_data = json.loads(project_details)
-                        logger.info(f"Parsed blockchain data: {blockchain_data}")
-                    except json.JSONDecodeError as e:
-                        logger.error(f"Error decoding project details JSON for {project_id}: {e}")
-                        continue
+                # # Parse blockchain data
+                # with with_logging_block("JSONifying the Project Details", logger):
+                #     try:
+                #         blockchain_data = json.loads(project_details)
+                #         logger.info(f"Parsed blockchain data: {blockchain_data}")
+                #     except json.JSONDecodeError as e:
+                #         logger.error(f"Error decoding project details JSON for {project_id}: {e}")
+                #         continue
 
                 # Validate file CID
                 with with_logging_block("Validating File CID", logger):
                     validation_result = fetch_project_details(file_cid, blockchain_data)
-                    logger.info(f"Validation Result for {project_id}: {validation_result}")
+                    
                     if not validation_result["is_valid"]:
                         logger.warning(f"Invalid File CID for Project ID: {project_id}. Skipping metadata processing.")
                         continue
@@ -132,7 +133,7 @@ def processing_search_results(search_results, download_path):
                     with with_logging_block("Processing Metadata CID", logger):
                         file_metadata = download_json_from_ipfs(metadata_cid)
                         file_metadata_json = download_file(file_metadata, download_path, project_id, file_cid)
-                        logger.info(f"Downloaded file metadata: {file_metadata}")
+                        # logger.info(f"Downloaded file metadata: {file_metadata}")
 
 
 
@@ -407,7 +408,7 @@ def fetch_project_details(file_cid, blockchain_data):
                 if key not in ["project_metadata_cid", "linked_user"]:  # Skip metadata and linked user
                     cids = value.split(", ")
                     if file_cid in cids:
-                        logger.info(f"File CID {file_cid} found under {key}.")
+                        logger.info(f"File CID {file_cid} found under {key}, it is VALID")
                         return {
                             "is_valid": True,
                             "project_metadata_cid": details.get("project_metadata_cid"),
