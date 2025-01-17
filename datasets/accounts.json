@@ -63,6 +63,25 @@
                 "schema:publicKey": "17ee3952531c1aa128809122466bd76c70e4179877c32da4243c7776d2f9dd88"
             },
             "schema:linked_project": "60032@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Confident Archimedes",
+            "foaf:mbox": "confident_archimedes@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Hochschule Wismar, Fachhochschule f\u00fcr Technik, Wirtschaft und Gestaltung"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "2360-1255-4422-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "confident_archimedes@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "417918947db118bfe64553b00e3b060b7feb4a2c0bd2b5684271a5dd0923f356"
+            }
         }
     ]
 }
