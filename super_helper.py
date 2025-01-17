@@ -85,15 +85,6 @@ def processing_search_results(search_results, download_path):
                         continue
                     logger.info(f"Fetched project details for {project_id}: {project_details}")
 
-                # # Parse blockchain data
-                # with with_logging_block("JSONifying the Project Details", logger):
-                #     try:
-                #         blockchain_data = json.loads(project_details)
-                #         logger.info(f"Parsed blockchain data: {blockchain_data}")
-                #     except json.JSONDecodeError as e:
-                #         logger.error(f"Error decoding project details JSON for {project_id}: {e}")
-                #         continue
-
                 # Validate file CID
                 with with_logging_block("Validating File CID", logger):
                     validation_result = fetch_project_details(file_cid, blockchain_data)
