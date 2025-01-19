@@ -85,7 +85,7 @@ def create_user_account(address, user_account_short_id, DOMAIN, user_public_key,
 
 
 @integration_helpers.trace
-def create_project_account(address, project_id, DOMAIN, project_public_key, project_account):
+def create_project_account(address, project_id, DOMAIN, project_public_key):
     params = integration_helpers.get_first_four_bytes_of_keccak(
         b"createAccount(string,string,string)"
     )
@@ -212,7 +212,28 @@ def get_account_detail(id):
 
 
 
-
+@integration_helpers.trace
+def get_account(address, id, domain):
+    params = integration_helpers.get_first_four_bytes_of_keccak(b"getAccount(string)")
+    no_of_param = 1
+    for x in range(no_of_param):
+        params = params + integration_helpers.left_padded_address_of_param(
+            x, no_of_param
+        )
+    params = params + integration_helpers.argument_encoding(f"{id}@{domain}")  # project id
+    tx = iroha.transaction(
+        [
+            iroha.command(
+                "CallEngine", caller=ADMIN_ACCOUNT_ID, callee=address, input=params
+            )
+        ]
+    )
+    IrohaCrypto.sign_transaction(tx, ADMIN_PRIVATE_KEY)
+    response = net.send_tx(tx)
+    for status in net.tx_status_stream(tx):
+        logger.info(status)
+    hex_hash = binascii.hexlify(IrohaCrypto.hash(tx))
+    return hex_hash
 
 # Functions provided earlier
 def get_project_details(project_ids, net, iroha):

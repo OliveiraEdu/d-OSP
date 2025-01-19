@@ -89,7 +89,7 @@ def dump_to_json_ld(user_account: UserAccount, filename="datasets/accounts.json"
 
 
 
-def dump_project_to_json_ld(project_account: ProjectAccount, project_filename="datasets/projects.json"):
+def dump_project_to_json_ld(project_id, public_key, project_filename="datasets/projects.json"):
     try:
         # Ensure that the 'datasets' directory exists
         directory = os.path.dirname(project_filename)
@@ -113,8 +113,8 @@ def dump_project_to_json_ld(project_account: ProjectAccount, project_filename="d
         # Create a new project entry in JSON-LD format
         new_entry = {
             "@type": "schema:ResearchProject",
-            "schema:identifier": project_account.project_id,
-            "schema:publicKey": project_account.public_key  # Assuming publicKey is passed as a string
+            "schema:identifier": project_id,
+            "schema:publicKey": public_key  # Assuming publicKey is passed as a string
         }
 
         # Append new entry to the graph

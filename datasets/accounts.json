@@ -82,6 +82,120 @@
                 "schema:roleName": "reviewer",
                 "schema:publicKey": "417918947db118bfe64553b00e3b060b7feb4a2c0bd2b5684271a5dd0923f356"
             }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Cool Ardinghelli",
+            "foaf:mbox": "cool_ardinghelli@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "University of Management and Marketing"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "5305-8389-6549-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "cool_ardinghelli@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "7d135a23dd05d8ca661e0adca51962308bc79ecfccf36962e9dd1f6f30d4d848"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Suspicious Grothendieck",
+            "foaf:mbox": "suspicious_grothendieck@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Universidad Federico Henr\u00edquez y Carvajal"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "1300-5267-9531-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "suspicious_grothendieck@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "337ee293c318efb952af5b97b048dd8e1df8df94c748989e6cc9c070ed6233dc"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Gracious Perlman",
+            "foaf:mbox": "gracious_perlman@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Bauder College"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "3544-0855-5433-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "gracious_perlman@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "50200d37ec97c93691dbd7de009dac9f49120d6e9fb6a5bfed751878aa9ace8c"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Hungry Gates",
+            "foaf:mbox": "hungry_gates@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Clarke College"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "8645-9044-9096-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "hungry_gates@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "d27dd77659d999c21fd01066cc867afc4fb7f22482e24b1a82cd10bf6cf6c0e8"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Serene Einstein",
+            "foaf:mbox": "serene_einstein@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Hanoi University of Civil Engineering"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "0888-7840-3969-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "serene_einstein@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "5f8c469f38f77e69a314d38b17ccb3303a40e63bae243d2ae8993233a8c1d01c"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Nifty Goodall",
+            "foaf:mbox": "nifty_goodall@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Naval Postgraduate School"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "9744-3138-1825-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "nifty_goodall@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "e31e71595ae7e9ba5b8130a172df6e392f8a149bb97e613f0f02bb987d5bd670"
+            }
         }
     ]
 }
