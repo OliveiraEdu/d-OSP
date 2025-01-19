@@ -154,6 +154,8 @@ def process_files(directory_path, project_id, schema):
                         hash = create_contract()
                         address = integration_helpers.get_engine_receipts_address(hash)
 
+                    logger.debug(project_id)
+                    
                     hash = set_account_detail(
                         address, 
                         project_id,  # Project ID as account

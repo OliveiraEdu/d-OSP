@@ -6,299 +6,34 @@
     "@graph": [
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "55943@test",
+            "schema:identifier": "56557@test",
+            "schema:publicKey": "d8b0298552fc2ddff2104984c713f6b1382a4bca15f5f454146ea119822fe73a",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Exploring the Effects of deforestation on green transportation",
-                "dc:abstract": "This study aims to investigate the effects of deforestation on green transportation and propose strategies for improvement.",
+                "schema:name": "Exploring the Effects of telehealth on manufacturing industry",
+                "dc:abstract": "This study aims to investigate the effects of telehealth on manufacturing industry and propose strategies for improvement.",
                 "schema:keywords": [
-                    "deforestation",
-                    "green transportation",
-                    "digital transformation"
-                ],
-                "schema:startDate": "2020-09-30",
-                "schema:endDate": "2028-09-24",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "Asian Development Bank"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Berlin, Germany"
-                }
-            },
-            "schema:metadataCID": "QmaoBJmPjbWqq6j949e5yxoADH66WSKpJX6QAyHakCsT5D",
-            "schema:linked_user": "epic_fermi@test"
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "76811@test",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Assessing the Benefits of machine learning for industrial automation",
-                "dc:abstract": "This research focuses on the benefits and challenges posed by machine learning for industrial automation, with an emphasis on its potential for financial inclusion.",
-                "schema:keywords": [
-                    "machine learning",
-                    "industrial automation",
-                    "financial inclusion"
-                ],
-                "schema:startDate": "2022-09-05",
-                "schema:endDate": "2025-06-29",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "European Union Horizon 2020"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Lisbon, Portugal"
-                }
-            },
-            "schema:metadataCID": "Qmexe5pjZN1DzoFHXnuXZFzijgupwtDLNGbrXP7FyurQ6h",
-            "schema:linked_user": "magical_noyce@test"
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "60032@test",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Assessing the Benefits of machine learning for smart transportation",
-                "dc:abstract": "This research focuses on the benefits and challenges posed by machine learning for smart transportation, with an emphasis on its potential for financial inclusion.",
-                "schema:keywords": [
-                    "machine learning",
-                    "smart transportation",
-                    "financial inclusion"
-                ],
-                "schema:startDate": "2021-02-28",
-                "schema:endDate": "2026-11-08",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "Bill and Melinda Gates Foundation"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Rajasthan, India"
-                }
-            },
-            "schema:metadataCID": "QmUeLA7dzwBXgBhMu3xZu2cvMSM6LeBBZVoWHNZmbjfjU5",
-            "schema:linked_user": "jolly_carson@test"
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "48832@test",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Investigating the Role of renewable energy in disaster response",
-                "dc:abstract": "This study explores the impact of renewable energy in disaster response, focusing on ecosystem services.",
-                "schema:keywords": [
-                    "renewable energy",
-                    "disaster response",
-                    "ecosystem services"
-                ],
-                "schema:startDate": "2020-03-31",
-                "schema:endDate": "2027-10-17",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "European Union Horizon 2020"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Rajasthan, India"
-                }
-            },
-            "schema:metadataCID": "QmcAumeohAUmJDL16gVjrTFgYUsa4zP1xSuXidkhZyjxSd"
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "57405@test",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Exploring the Effects of e-waste on soil contamination",
-                "dc:abstract": "This study aims to investigate the effects of e-waste on soil contamination and propose strategies for improvement.",
-                "schema:keywords": [
-                    "e-waste",
-                    "soil contamination",
+                    "telehealth",
+                    "manufacturing industry",
                     "disaster management"
                 ],
-                "schema:startDate": "2019-05-31",
-                "schema:endDate": "2026-06-16",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "Bill and Melinda Gates Foundation"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Los Angeles, California, USA"
-                }
-            },
-            "schema:metadataCID": "QmUgc9zsN4xiKSE6xBFuekauqybMXtnA6hX85RzeAGVGfp"
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "97578@test",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Exploring the Effects of deforestation on rural healthcare",
-                "dc:abstract": "This study aims to investigate the effects of deforestation on rural healthcare and propose strategies for improvement.",
-                "schema:keywords": [
-                    "deforestation",
-                    "rural healthcare",
-                    "digital transformation"
-                ],
-                "schema:startDate": "2022-11-03",
-                "schema:endDate": "2026-01-24",
+                "schema:startDate": "2023-08-08",
+                "schema:endDate": "2026-02-13",
                 "schema:funding": {
                     "@type": "schema:Organization",
                     "schema:name": "United Nations Environment Programme"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
-                    "schema:name": "Phuket, Thailand"
-                }
-            },
-            "schema:metadataCID": "QmVccj1wQEDYkX67ZiR29AJnj3CPVedbMkwTvG9fB9J1VN"
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "90933@test",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Exploring the Effects of deforestation on green transportation",
-                "dc:abstract": "This study aims to investigate the effects of deforestation on green transportation and propose strategies for improvement.",
-                "schema:keywords": [
-                    "deforestation",
-                    "green transportation",
-                    "digital transformation"
-                ],
-                "schema:startDate": "2018-02-13",
-                "schema:endDate": "2026-03-25",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "Bill and Melinda Gates Foundation"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Rotterdam, Netherlands"
-                }
-            },
-            "schema:metadataCID": "QmU4BE7QWEdSRdE83858LnvenjKg9uLSpdzbqoxeE6QQtW"
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "26133@test",
-            "schema:publicKey": "35af4080e59f94b9a4a89c86a17fa1be06727e2c9c6c88b8c37aa0f413456758",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Analyzing the Influence of satellite imagery on energy storage",
-                "dc:abstract": "This paper analyzes how satellite imagery influences energy storage, providing insights into how to maximize its scientific discovery.",
-                "schema:keywords": [
-                    "satellite imagery",
-                    "energy storage",
-                    "scientific discovery"
-                ],
-                "schema:startDate": "2020-02-27",
-                "schema:endDate": "2027-02-18",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "National Science Foundation"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Berlin, Germany"
-                }
-            },
-            "schema:metadataCID": "Qme7xTZFiLvktfZshQnnDUmTsYpVEhQMDngaJTe6riN7on"
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "97234@test",
-            "schema:publicKey": "0d5e99d9548868cb10ab4f2bf917e93b932e8b32d43305fa3656ab8ec9a4e8ba",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Exploring the Effects of ocean currents on rural healthcare",
-                "dc:abstract": "This study aims to investigate the effects of ocean currents on rural healthcare and propose strategies for improvement.",
-                "schema:keywords": [
-                    "ocean currents",
-                    "rural healthcare",
-                    "health outcomes"
-                ],
-                "schema:startDate": "2018-10-14",
-                "schema:endDate": "2027-06-13",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "Department of Energy"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Los Angeles, California, USA"
-                }
-            },
-            "schema:metadataCID": "QmTx6bryuw2VTsmoA48AbHKX4mn6G9HwZHXJFCmft9ovfg"
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "06087@test",
-            "schema:publicKey": "fc1a16e6f71bebc110226dec113edde25e784431c9321f988b45e02ce3be716a",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Investigating the Role of 5G technology in smart cities",
-                "dc:abstract": "This study explores the impact of 5G technology in smart cities, focusing on public health.",
-                "schema:keywords": [
-                    "5G technology",
-                    "smart cities",
-                    "public health"
-                ],
-                "schema:startDate": "2022-09-07",
-                "schema:endDate": "2025-06-30",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "Bill and Melinda Gates Foundation"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
                     "schema:name": "Lagos, Nigeria"
                 }
             },
-            "schema:metadataCID": "QmTcGDkDQPV47AqLpn8otpQoQyA2o3U7NnC3W1jxzTgsF7"
+            "schema:metadataCID": "Qme2gyRk1FJNrVYASTJwDnZQVeEdEwFXhTC6j8LuzfNifp",
+            "schema:linked_user": "dreamy_johnson@test"
         }
     ]
 }
