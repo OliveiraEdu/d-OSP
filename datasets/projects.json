@@ -239,6 +239,66 @@
                 }
             },
             "schema:metadataCID": "Qme7xTZFiLvktfZshQnnDUmTsYpVEhQMDngaJTe6riN7on"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "97234@test",
+            "schema:publicKey": "0d5e99d9548868cb10ab4f2bf917e93b932e8b32d43305fa3656ab8ec9a4e8ba",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Exploring the Effects of ocean currents on rural healthcare",
+                "dc:abstract": "This study aims to investigate the effects of ocean currents on rural healthcare and propose strategies for improvement.",
+                "schema:keywords": [
+                    "ocean currents",
+                    "rural healthcare",
+                    "health outcomes"
+                ],
+                "schema:startDate": "2018-10-14",
+                "schema:endDate": "2027-06-13",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "Department of Energy"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Los Angeles, California, USA"
+                }
+            },
+            "schema:metadataCID": "QmTx6bryuw2VTsmoA48AbHKX4mn6G9HwZHXJFCmft9ovfg"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "06087@test",
+            "schema:publicKey": "fc1a16e6f71bebc110226dec113edde25e784431c9321f988b45e02ce3be716a",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Investigating the Role of 5G technology in smart cities",
+                "dc:abstract": "This study explores the impact of 5G technology in smart cities, focusing on public health.",
+                "schema:keywords": [
+                    "5G technology",
+                    "smart cities",
+                    "public health"
+                ],
+                "schema:startDate": "2022-09-07",
+                "schema:endDate": "2025-06-30",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "Bill and Melinda Gates Foundation"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Lagos, Nigeria"
+                }
+            },
+            "schema:metadataCID": "QmTcGDkDQPV47AqLpn8otpQoQyA2o3U7NnC3W1jxzTgsF7"
         }
     ]
 }

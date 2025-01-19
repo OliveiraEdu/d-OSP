@@ -196,6 +196,63 @@
                 "schema:roleName": "author",
                 "schema:publicKey": "e31e71595ae7e9ba5b8130a172df6e392f8a149bb97e613f0f02bb987d5bd670"
             }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Objective Proskuriakova",
+            "foaf:mbox": "objective_proskuriakova@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "University of Sindh"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "0137-5577-2971-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "objective_proskuriakova@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "b24081d98b576c009d4cf86d2f25ab61ee399f7d8b471b365a01586a248bd711"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Eager Morse",
+            "foaf:mbox": "eager_morse@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Technological University (Sittwe)"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "4814-6197-3525-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "eager_morse@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "f9535d5c4bf0060a6c6ba36c691dedbe19a2b5ba06ce24ddeb978f4b1b5a4033"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Sweet Kalam",
+            "foaf:mbox": "sweet_kalam@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Lanzhou University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "7860-2831-4667-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "sweet_kalam@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "162c255d58607b80d2fc534513b561109afc44a7a778dfe8f12949844cb501a5"
+            }
         }
     ]
 }
