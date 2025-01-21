@@ -460,6 +460,63 @@
                 "schema:roleName": "publisher",
                 "schema:publicKey": "0454717458ca283e07f6c26f89dd82f83b9bbdf076659ceba5453ffd3e2596d1"
             }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Beautiful Engelbart",
+            "foaf:mbox": "beautiful_engelbart@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "University of Massachusetts at Dartmouth"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "1180-4070-6346-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "beautiful_engelbart@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "6b081684498b2d4966006d49cfaa51da08c6540df7f405eb1e4054b061da06b7"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Charming Goose",
+            "foaf:mbox": "charming_goose@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Instituto Polit\u00e9cnico de Bragan\u00e7a"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "8057-3685-0555-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "charming_goose@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "95ec07006cbe0359185eef238b0662e7df400862de02a58d895dc3bf597efbba"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Crazy Austin",
+            "foaf:mbox": "crazy_austin@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "University of New York Tirana"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "5845-7098-5000-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "crazy_austin@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "f1c387bbd65efe0a66ed97e4d486a64c8dd9278093f8c58ddf4bde83385abbe6"
+            }
         }
     ]
 }

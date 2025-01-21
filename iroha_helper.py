@@ -322,22 +322,24 @@ def process_account(address, account_id):
             # logger.info(f"Processing data: {data}")
             
             # Find the account details for the specified ID
-            account_details = next(
+            account_metadata = next(
                 (entry for entry in data['@graph'] if entry['foaf:holdsAccount']['schema:identifier'] == account_id),
                 None
             )
             
-            logger.info(account_details)
+            logger.info(f"User Account Metadata: {account_metadata}")
 
             # Uploads User JSON-LD to IPFS
-            user_json_ld_cid = upload_json_to_ipfs(account_details) 
-            logger.info(f"user_json_ld_cid :, {user_json_ld_cid}")
+            user_json_ld_cid = upload_json_to_ipfs(account_metadata) 
+            logger.info(f"User Account Metadata CID: {user_json_ld_cid}")
 
             # Sends the resulting CID to Iroha 1
             hash = set_account_detail(address, account_id, "user_json_ld_cid", user_json_ld_cid)
-
+            integration_helpers.get_engine_receipts_address(hash)
             
-            if account_details is None:
+            # get_account(hash) #Lets evolve this
+            
+            if account_metadata is None:
                 logger.info(f"Account with ID '{account_id}' not found.")
                 return
             
