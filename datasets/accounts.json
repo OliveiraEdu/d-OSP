@@ -23,6 +23,443 @@
                 "schema:publicKey": "473a259b26ee9afa73b9be7a43a00ffce6ea1753758603c36f96e4bb6f30e3e9"
             },
             "schema:linked_project": "56557@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Intelligent Benz",
+            "foaf:mbox": "intelligent_benz@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "University of San Jose Recoletos"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "5999-8089-4703-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "intelligent_benz@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "f09b6b4627d4e85ce679b0bd0b1406d842d0bc90f85f913a92aefbec1087aa2b"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Friendly Neumann",
+            "foaf:mbox": "friendly_neumann@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Kansai University of Social Welfare"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "5890-4345-8776-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "friendly_neumann@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "f8618a2d5edaa2833f76532732f6248e5c3b0a5ce472b5e61bbc977dbec241b8"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Heuristic Nightingale",
+            "foaf:mbox": "heuristic_nightingale@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Quantum-Veritas International University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "7729-5223-7068-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "heuristic_nightingale@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "cd953c103e60949c3831e4618804d4e3244ed501585760609403dc1de647256a"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Eager Lamport",
+            "foaf:mbox": "eager_lamport@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Universit\u00e9 d'Aix-Marseille III"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "2583-4162-0741-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "eager_lamport@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "abe08eacd659a9de86065e6a5346dfb25965fb2752da9c82f5bc65b0d8eedb07"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Festive Kare",
+            "foaf:mbox": "festive_kare@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "St.Patrick's International College, London"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "2946-1008-7129-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "festive_kare@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "3d0260e3d6455363b8e3d12ee1d740195b43aebbcf7e5f2057019aaeb3285b3e"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Gracious Jones",
+            "foaf:mbox": "gracious_jones@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Hochschule f\u00fcr Technik und Wirtschaft Dresden (FH)"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "0124-7842-7304-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "gracious_jones@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "7d7c8f75afa41b3e39dbce4c9592c426f74e779b785ce92c678797d9db14364d"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Condescending Cohen",
+            "foaf:mbox": "condescending_cohen@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "London School of Hygiene & Tropical Medicine, University of London"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "2912-4950-2199-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "condescending_cohen@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "30fc24118ee5bb5405e435d4bfc027124dea317659dccd4f1605a77cb2c9e7a3"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Sad Keller",
+            "foaf:mbox": "sad_keller@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "National University of Defense Technology"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "8368-8576-0873-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "sad_keller@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "e470b8cdce8183cee363ca297de9bacf466472df23579abedd1cc573d293e737"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Quirky Panini",
+            "foaf:mbox": "quirky_panini@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Fachhochschule Furtwangen, Hochschule f\u00fcr Technik und Wirtschaft"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "9264-6004-6168-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "quirky_panini@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "b2b8a78c2207f7f823c7c2196be93a8d3418f51d6619c0b7973c15bafcb01556"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Admiring Feynman",
+            "foaf:mbox": "admiring_feynman@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Minnesota Bible College"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "7186-1086-3786-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "admiring_feynman@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "ebb008b196b1833934f5bacfdf10998202c505b64e72509efa69d851f49274bc"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Affectionate Antonelli",
+            "foaf:mbox": "affectionate_antonelli@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Federal University of Technology, Minna"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "0661-4262-2679-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "affectionate_antonelli@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "dd8075092ddbeee3cadf627def60ce1971ced788366ca4347e08c338187421f5"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Practical Brown",
+            "foaf:mbox": "practical_brown@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Universit\u00e9 Paris Sud (Paris XI)"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "2266-9915-3007-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "practical_brown@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "1f3e561aeff65f1394b2149d25e58984a78efd6791fa6adb6057a18f4def2515"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Magical Kepler",
+            "foaf:mbox": "magical_kepler@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Universitas Mercu Buana"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "4417-6892-5915-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "magical_kepler@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "3074de8c8c767edcba61a4b928aabc0a8f2ae35290f74c0cf096bda1fa85bb1c"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Unruffled Burnell",
+            "foaf:mbox": "unruffled_burnell@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Excel College"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "7029-0775-9917-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "unruffled_burnell@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "3ec26409b14fbed10e6a26c375bb31719700c3a4b5460f9056d4acd774e559e6"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Zealous Hoover",
+            "foaf:mbox": "zealous_hoover@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Universit\u00e9 Notre Dame d'Ha\u00efti"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "7755-1854-8630-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "zealous_hoover@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "cf9813accb761130a75c63c75d835a9cf365278e6ddb3fcdb3807c847d4fc868"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Confident Blackburn",
+            "foaf:mbox": "confident_blackburn@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Washington Bible College"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "5482-0004-7430-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "confident_blackburn@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "4e8906c3f606a3df517084be82dcfee74741e4b982b1627954ca5d37a52ced27"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Exciting Bassi",
+            "foaf:mbox": "exciting_bassi@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "London Metropolitan University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "5340-3148-1852-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "exciting_bassi@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "a1dfe14903bc9ec96de75e8435616b942e214b165f6703128d2c0217c6c1418f"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Unruffled Kirch",
+            "foaf:mbox": "unruffled_kirch@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Institute of Technology and Management"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "2381-7901-2712-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "unruffled_kirch@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "d9a4ca6ce8c101942476485575545d9061c67fc0e3f278643dde90e228ba9218"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Flamboyant Payne",
+            "foaf:mbox": "flamboyant_payne@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "University of Sassari"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "8168-4942-6822-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "flamboyant_payne@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "20000d4c43865524dd208ef627cd39815b0c3da987b50319a3a8e24d8820a1b4"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Romantic Nash",
+            "foaf:mbox": "romantic_nash@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Canadian College of Business & Computers"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "4232-0008-7638-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "romantic_nash@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "8f0b1d831115f6402a635bc4ce3cee0ccb74aee15af1e1b35ac3953ce3ad741a"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Agitated Hawking",
+            "foaf:mbox": "agitated_hawking@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Eastern University of Sri Lanka"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "3687-5509-2670-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "agitated_hawking@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "2129c25694f19ccdbb147c0a56dfdff1e8876a2e38f7878c74719484a6e70e20"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Boring Nobel",
+            "foaf:mbox": "boring_nobel@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Nara University of Education"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "8141-7195-1524-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "boring_nobel@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "3b6dbb91a53ac334655de2a0e1a5c18316a9804acda15b40e28117fc8052fa71"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Agitated Khayyam",
+            "foaf:mbox": "agitated_khayyam@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Nara University of Education"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "6137-4772-0918-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "agitated_khayyam@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "0454717458ca283e07f6c26f89dd82f83b9bbdf076659ceba5453ffd3e2596d1"
+            }
         }
     ]
 }
