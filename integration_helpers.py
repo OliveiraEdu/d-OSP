@@ -138,6 +138,7 @@ def get_engine_receipts_result(tx_hash: str):
         # Log the result
         logger.info(f"Result data: {result_data_hex}")
         logger.debug(f"Result decoded string: {ascii_string}")
+        return ascii_string
     except Exception as e:
         # Log any errors that occur during execution
         logger.error(f"An error occurred: {e}")

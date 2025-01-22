@@ -669,6 +669,196 @@
                 "schema:roleName": "publisher",
                 "schema:publicKey": "1e90674f9e7063a9508c11528c029cfa0a2155a76006103cda480fc3380adc8f"
             }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Flamboyant Herschel",
+            "foaf:mbox": "flamboyant_herschel@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Universidad de Puerto Rico, Humacao"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "0647-6576-7299-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "flamboyant_herschel@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "7e7a48896f84546f9e0640b912d8c14fe18ca31d0acd20a7f5f160013ac65391"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Jovial Kirch",
+            "foaf:mbox": "jovial_kirch@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Universidad Monsenor Oscar Arnulfo Romeo"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "6096-9061-4734-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "jovial_kirch@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "6ee3c86d99b67029448c8623c4c60ad33af4d3f9962533eb6c7e471ba45d8175"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Charming Hypatia",
+            "foaf:mbox": "charming_hypatia@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Higher Technological Institute"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "4794-7152-9030-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "charming_hypatia@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "0fab59ed072c311adaf07fb6a9eca5986ebd02ca40dc7ff4cbbf3c5b5b4c32ef"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Strange Keldysh",
+            "foaf:mbox": "strange_keldysh@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Kameshwar Singh Darbhanga Sanskrit University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "0753-1414-9583-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "strange_keldysh@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "0fd7f3070397d06960aa48e24780f8c96b50693d766f340660933d8230773394"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Sweet Heyrovsky",
+            "foaf:mbox": "sweet_heyrovsky@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Bangabandhu Sheikh Mujibur Rahman Agricultural University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "9910-3553-3072-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "sweet_heyrovsky@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "57097da60331764e69b17fe086f3858721d8100c17cf880fe924f68e7ba546c2"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Friendly Allen",
+            "foaf:mbox": "friendly_allen@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Universidad Estatal a Distancia"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "0252-2764-6367-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "friendly_allen@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "5ed128e46ed5712d320e58d09b18fc0c20b54860899c69978c659ae3c6074a92"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Frosty Ramanujan",
+            "foaf:mbox": "frosty_ramanujan@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Hofstra University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "5500-2133-7200-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "frosty_ramanujan@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "fbab3866bd8bf77f0e84d92534d8091d61efc71547e901d46022ba014186c77d"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Kind Rhodes",
+            "foaf:mbox": "kind_rhodes@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "University of Fine Arts Belgrade"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "7170-7001-8670-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "kind_rhodes@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "bc16c2713b5586f8cfde2b1420b2d5e57a954ddb8edf0a8acafd9138c94d845e"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Friendly Montalcini",
+            "foaf:mbox": "friendly_montalcini@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "University of Osteopathic Medicine and Health Science"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "3636-1207-6986-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "friendly_montalcini@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "82b3fa5a48b99561e0297dbb325bb838b61a12b5007f0af20003938b064cc5b5"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Optimistic Engelbart",
+            "foaf:mbox": "optimistic_engelbart@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Universit\u00e9 de Kikwite"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "8147-3826-0015-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "optimistic_engelbart@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "20ec78c7e9591054841d414dc16d616876487913a1c72a69de3987e35ff3e207"
+            }
         }
     ]
 }
