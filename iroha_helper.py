@@ -116,19 +116,61 @@ def create_project_account(address, project_id, DOMAIN, project_public_key):
     return hex_hash
 
 # Function to link details using blockchain
+# @integration_helpers.trace
+# def set_account_detail(address, account, key, value):
+#     params = integration_helpers.get_first_four_bytes_of_keccak(
+#         b"setAccountDetail(string,string,string)"
+#     )
+#     no_of_param = 3
+#     for x in range(no_of_param):
+#         params = params + integration_helpers.left_padded_address_of_param(
+#             x, no_of_param
+#         )
+#     params = params + integration_helpers.argument_encoding(account)  # account id
+#     params = params + integration_helpers.argument_encoding(key)  # key
+#     params = params + integration_helpers.argument_encoding(value)  # value
+#     tx = iroha.transaction(
+#         [
+#             iroha.command(
+#                 "CallEngine", caller=ADMIN_ACCOUNT_ID, callee=address, input=params
+#             )
+#         ]
+#     )
+#     IrohaCrypto.sign_transaction(tx, ADMIN_PRIVATE_KEY)
+#     response = net.send_tx(tx)
+#     for status in net.tx_status_stream(tx):
+#         logger.info(status)
+#     hex_hash = binascii.hexlify(IrohaCrypto.hash(tx))
+#     return hex_hash
+
+
+
 @integration_helpers.trace
 def set_account_detail(address, account, key, value):
+    """
+    Executes a transaction to update the details of an existing account.
+
+    Args:
+        address (str): The smart contract address.
+        account (str): The source account ID.
+        key (str): The key to update.
+        value (str): The value to set.
+
+    Returns:
+        str: The transaction hash in hexadecimal form.
+    """
+    # Generate the params for the "setAccountDetail" function
     params = integration_helpers.get_first_four_bytes_of_keccak(
         b"setAccountDetail(string,string,string)"
     )
     no_of_param = 3
     for x in range(no_of_param):
-        params = params + integration_helpers.left_padded_address_of_param(
-            x, no_of_param
-        )
-    params = params + integration_helpers.argument_encoding(account)  # account id
-    params = params + integration_helpers.argument_encoding(key)  # key
-    params = params + integration_helpers.argument_encoding(value)  # value
+        params = params + integration_helpers.left_padded_address_of_param(x, no_of_param)
+    params = params + integration_helpers.argument_encoding(account)  # source account id
+    params = params + integration_helpers.argument_encoding(key)      # key
+    params = params + integration_helpers.argument_encoding(value)    # value
+
+    # Create a transaction to call the engine
     tx = iroha.transaction(
         [
             iroha.command(
@@ -136,12 +178,35 @@ def set_account_detail(address, account, key, value):
             )
         ]
     )
+
+    # Sign and send the transaction
     IrohaCrypto.sign_transaction(tx, ADMIN_PRIVATE_KEY)
     response = net.send_tx(tx)
+
+    # Log the response and statuses
+    logger.info(response)
+    committed = False
     for status in net.tx_status_stream(tx):
-        logger.info(status)
-    hex_hash = binascii.hexlify(IrohaCrypto.hash(tx))
+        logger.info(f"Transaction status: {status}")
+        if status == "COMMITTED":
+            committed = True
+
+    if not committed:
+        logger.error("Transaction was not committed.")
+        return None
+
+    # Get the transaction hash in hex form
+    hex_hash = binascii.hexlify(IrohaCrypto.hash(tx)).decode('utf-8')
+
+    # Retrieve and decode engine receipts
+    result = integration_helpers.get_engine_receipts_result(hex_hash)
+    if result:
+        logger.info(f"Decoded Engine Receipts Result: {result}")
+    else:
+        logger.error("Failed to retrieve or decode Engine Receipts.")
+    
     return hex_hash
+
 
 # Function to update user account with linked project
 def update_user_account_link(user_account_id, linked_project_id, accounts_filename="datasets/accounts.json"):
@@ -311,6 +376,7 @@ def set_account_detail(address, account, key, value):
     
     # Get the transaction hash in hex form
     hex_hash = binascii.hexlify(IrohaCrypto.hash(tx))
+    integration_helpers.get_engine_receipts_result(hex_hash)
     return hex_hash
 
 
@@ -327,6 +393,7 @@ def process_account(address, account_id):
                 None
             )
             
+            logger.info(f"Processing account: {account_id}")
             logger.info(f"User Account Metadata: {account_metadata}")
 
             # Uploads User JSON-LD to IPFS
@@ -335,7 +402,7 @@ def process_account(address, account_id):
 
             # Sends the resulting CID to Iroha 1
             hash = set_account_detail(address, account_id, "user_json_ld_cid", user_json_ld_cid)
-            integration_helpers.get_engine_receipts_address(hash)
+            
             
             # get_account(hash) #Lets evolve this
             
@@ -343,7 +410,7 @@ def process_account(address, account_id):
                 logger.info(f"Account with ID '{account_id}' not found.")
                 return
             
-            logger.info(f"Processing account: {account_id}")
+            
            
             
     except FileNotFoundError:

@@ -374,6 +374,36 @@
                 }
             },
             "schema:metadataCID": "QmWzEAWzShaqEaBLke4HNdhhpn6BxZg2hgqiwJ6dyEkMHZ"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "98192@test",
+            "schema:publicKey": "257b68418a3ae271088fc721ac6339a7be26eeaa10f0ed42df860495790a8a1f",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Assessing the Benefits of cloud computing for smart transportation",
+                "dc:abstract": "This research focuses on the benefits and challenges posed by cloud computing for smart transportation, with an emphasis on its potential for environmental restoration.",
+                "schema:keywords": [
+                    "cloud computing",
+                    "smart transportation",
+                    "environmental restoration"
+                ],
+                "schema:startDate": "2024-11-29",
+                "schema:endDate": "2027-07-10",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "Bill and Melinda Gates Foundation"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Svalbard, Norway"
+                }
+            },
+            "schema:metadataCID": "QmNiame5i7oGQ36VTufxBpQEshFsWUGszkXGtngXSfFtuk"
         }
     ]
 }

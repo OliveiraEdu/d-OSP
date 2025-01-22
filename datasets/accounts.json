@@ -517,6 +517,158 @@
                 "schema:roleName": "reviewer",
                 "schema:publicKey": "f1c387bbd65efe0a66ed97e4d486a64c8dd9278093f8c58ddf4bde83385abbe6"
             }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Competent Pare",
+            "foaf:mbox": "competent_pare@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Universidad del Norte"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "4001-3645-8597-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "competent_pare@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "db5e1c169960a993d363035c2fe3324191ec9e693fd7876f7705aa190cdac4a6"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Silly Heisenberg",
+            "foaf:mbox": "silly_heisenberg@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Svey Reong University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "9184-2836-7913-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "silly_heisenberg@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "58e4ae0ff05bd255e7bc7f011b95e4aed692f01dca78ac7efbcfd3bca58c734a"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Exciting Mclean",
+            "foaf:mbox": "exciting_mclean@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Doane College"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "3035-5141-6293-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "exciting_mclean@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "83da799c4cf449ad0b25e28ecd39268d7a00fd4826cbb1eaf41647ae79bfb923"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Crazy Moser",
+            "foaf:mbox": "crazy_moser@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "National University of Kiev-Mohyla Academy"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "4447-2127-3988-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "crazy_moser@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "0754b2017496ec5c27c63a9d584bd70384c7c92a538977e476c64d679608105e"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Sleepy Cabrera",
+            "foaf:mbox": "sleepy_cabrera@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Universit\u00e9 de Montpellier II"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "6236-7955-2899-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "sleepy_cabrera@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "c80b8260bc21a700761704a2448bd0e7a4d762de43d781e14f440190d7f1bc40"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Cool Curran",
+            "foaf:mbox": "cool_curran@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Gratz College"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "5002-9354-1645-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "cool_curran@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "460eb578f9c79587ff150ad6f6a732f552b3b43beb68ad841da51d26dec54d1a"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Angry Ride",
+            "foaf:mbox": "angry_ride@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Universidade Fernando Pessoa"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "7797-7049-6030-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "angry_ride@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "7cdfe1c62374106842ad2ef75d4307949032beb0bf1f46667f4dcc6de42fb9e4"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Wonderful Montalcini",
+            "foaf:mbox": "wonderful_montalcini@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Paine College"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "3542-6440-5317-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "wonderful_montalcini@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "1e90674f9e7063a9508c11528c029cfa0a2155a76006103cda480fc3380adc8f"
+            }
         }
     ]
 }
