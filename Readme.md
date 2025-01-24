@@ -253,7 +253,7 @@ The default Genesis block for Iroha 1 docker image `admin@test` does not have th
 - Implementing a git like version control system for provenance
 
 ### Project Details
-- Optmize file and file metadata entries - Done
+- Optimize file and file metadata entries - Done
 
 ### Python code level improvements
 - Improve exiting on exceptions
