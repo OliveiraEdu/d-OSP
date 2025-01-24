@@ -268,5 +268,19 @@
             "address": "91ABF7E328C683B7454BCA7044F51D6925A88708",
             "hex_hash": "766db3e7d2a0153cb87fa2ad1278c666cdeb955c9d048cd36e33fb6f7fb9860e"
         }
+    ],
+    "boring_keller@test": [
+        {
+            "address": "91ABF7E328C683B7454BCA7044F51D6925A88708",
+            "hex_hash": "579b66cbb1e6260a0c5848edc40dc876a0b599b42b5f0d21d7af08f22f6c5774"
+        },
+        {
+            "address": "91ABF7E328C683B7454BCA7044F51D6925A88708",
+            "hex_hash": "54e85ab1e872d823704a147d7467048e664000293111416763b4017ced86affb"
+        },
+        {
+            "address": "91ABF7E328C683B7454BCA7044F51D6925A88708",
+            "hex_hash": "35a1a0cc3dc25a3d163186aa4f110843d6648da6a12a632f7f7d63b2d4dcff70"
+        }
     ]
 }

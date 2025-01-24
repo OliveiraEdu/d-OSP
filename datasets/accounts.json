@@ -1467,6 +1467,25 @@
                 "schema:roleName": "author",
                 "schema:publicKey": "86b16fdb66d1e59447ab0be9ecc898b6fe8b3c14d840408a75dccad7c77fb063"
             }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Boring Keller",
+            "foaf:mbox": "boring_keller@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Isra University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "8563-1100-2124-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "boring_keller@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "e6a17288b9be6dca866a1829fb7c84fd7d41885ad3c7d69d9d8bd791ea0a8812"
+            }
         }
     ]
 }
