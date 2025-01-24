@@ -7,13 +7,13 @@ import tika
 from tika import parser
 from iroha_helper import *
 from super_helper import index_metadata
+import re
+from typing import Optional
+
 
 
 # Initialize Tika
 tika.initVM()
-
-# Set up a basic configuration for Loguru
-logger.add("logs/file_{time}.log", format="{time:MM.DD/YYYY} | {level} | {message}", level="INFO")
 
 # Function to read accounts from JSON-LD
 def read_user_accounts_from_jsonld(file_path):
@@ -177,3 +177,112 @@ def process_files(directory_path, project_id, schema):
 
 
 
+
+@integration_helpers.trace
+def extract_user_json_ld_cid_from_data(data: dict) -> Optional[str]:
+    try:
+        # Step 1: Ensure 'data' is a dictionary
+        if not isinstance(data, dict):
+            raise ValueError("Expected input 'data' to be a dictionary.")
+        
+        # Step 2: Ensure 'json_data' is a valid JSON string
+        json_data_str = data.get('json_data', '')  # Safely get 'json_data'
+        json_data = json.loads(json_data_str)  # Parse 'json_data' into a dictionary
+        
+        # Step 3: Access the 'admin@test' key inside the parsed dictionary
+        if 'admin@test' in json_data:
+            admin_data = json_data['admin@test']
+            
+            # Step 4: Access 'user_json_ld_cid'
+            if 'user_json_ld_cid' in admin_data:
+                return admin_data['user_json_ld_cid']
+            else:
+                raise KeyError("'user_json_ld_cid' not found in the data")
+        else:
+            raise KeyError("'admin@test' not found in the parsed data")
+            
+    except (KeyError, json.JSONDecodeError, ValueError) as e:
+        logger.error(f"Error during JSON processing: {e}")
+        return None
+
+# Main function to clean input, log, and test
+@integration_helpers.trace
+def process_raw_data(raw_data: str) -> Optional[str]:
+    try:
+        # Clean non-printable characters (e.g., \u0001)
+        clean_data = re.sub(r'[^\x20-\x7E]', '', raw_data)
+        
+        # Parse the cleaned JSON string into a dictionary
+        data = json.loads(clean_data)
+        
+        # Extract the CID
+        user_json_ld_cid = extract_user_json_ld_cid_from_data(data)
+        
+        # Log the results
+        if user_json_ld_cid:
+            logger.info(f"User Metadata CID: {user_json_ld_cid}")
+        else:
+            logger.info("'user_json_ld_cid' not found or an error occurred.")
+        
+        return user_json_ld_cid
+    except json.JSONDecodeError as e:
+        logger.error(f"Error decoding JSON: {e}")
+        return None
+
+import json
+import os
+import base64
+
+def dump_variable(variable, variable_name, temp="temp"):
+    """
+    Dumps a Python variable to a JSON file, handling bytes by encoding them to base64 strings.
+
+    Args:
+        variable: The variable to dump (must be JSON-serializable or contain bytes).
+        variable_name: Name of the variable (used for the filename).
+        temp: Directory to save the file (default is "temp").
+    """
+    os.makedirs(temp, exist_ok=True)  # Ensure the directory exists
+    file_path = os.path.join(temp, f"{variable_name}.json")
+    
+    def encode_bytes(obj):
+        if isinstance(obj, bytes):
+            return {"__bytes__": True, "data": base64.b64encode(obj).decode("utf-8")}
+        raise TypeError(f"Object of type {type(obj)} is not JSON serializable")
+    
+    try:
+        with open(file_path, "w") as f:
+            json.dump(variable, f, indent=4, default=encode_bytes)
+        logger.info(f"Variable '{variable_name}' successfully dumped to {file_path}")
+    except Exception as e:
+        logger.error(f"Failed to dump variable '{variable_name}': {e}")
+
+def load_variable(variable_name, temp="temp"):
+    """
+    Loads a Python variable from a JSON file, decoding base64-encoded bytes.
+
+    Args:
+        variable_name: Name of the variable (used for the filename).
+        temp: Directory where the file is stored (default is "temp").
+
+    Returns:
+        The loaded variable, or None if the file does not exist or loading fails.
+    """
+    file_path = os.path.join(temp, f"{variable_name}.json")
+    
+    def decode_bytes(obj):
+        if "__bytes__" in obj:
+            return base64.b64decode(obj["data"].encode("utf-8"))
+        return obj
+    
+    try:
+        with open(file_path, "r") as f:
+            variable = json.load(f, object_hook=decode_bytes)
+        logger.info(f"Variable '{variable_name}' successfully loaded from {file_path}")
+        return variable
+    except FileNotFoundError:
+        logger.error(f"File '{file_path}' not found.")
+    except Exception as e:
+        logger.error(f"Failed to load variable '{variable_name}': {e}")
+    
+    return None

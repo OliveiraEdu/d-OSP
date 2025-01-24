@@ -11,6 +11,12 @@ from loguru import logger
 from dump_to_json import dump_to_json_ld, dump_project_to_json_ld
 from ipfs_functions import *
 
+# import re
+
+from typing import Optional
+
+
+
 if sys.version_info[0] < 3:
     raise Exception("Python 3 or a more recent version is required.")
 
@@ -281,28 +287,115 @@ def get_account_detail(id):
 
 
 
+# @integration_helpers.trace
+# def get_account(address, id, domain):
+#     params = integration_helpers.get_first_four_bytes_of_keccak(b"getAccount(string)")
+#     no_of_param = 1
+#     for x in range(no_of_param):
+#         params = params + integration_helpers.left_padded_address_of_param(
+#             x, no_of_param
+#         )
+#     params = params + integration_helpers.argument_encoding(f"{id}@{domain}")  # project id
+#     tx = iroha.transaction(
+#         [
+#             iroha.command(
+#                 "CallEngine", caller=ADMIN_ACCOUNT_ID, callee=address, input=params
+#             )
+#         ]
+#     )
+#     IrohaCrypto.sign_transaction(tx, ADMIN_PRIVATE_KEY)
+#     response = net.send_tx(tx)
+#     for status in net.tx_status_stream(tx):
+#         logger.info(status)
+#     hex_hash = binascii.hexlify(IrohaCrypto.hash(tx))
+#     return hex_hash
+
+
+import os
+import json
+import binascii
+import logging
+from iroha import IrohaCrypto
+
+# Configure logger
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+logger = logging.getLogger(__name__)
+
+# Function to dump data to JSON
 @integration_helpers.trace
-def get_account(address, id, domain):
-    params = integration_helpers.get_first_four_bytes_of_keccak(b"getAccount(string)")
-    no_of_param = 1
-    for x in range(no_of_param):
-        params = params + integration_helpers.left_padded_address_of_param(
-            x, no_of_param
+def append_to_json_file(file_path, id, domain, data):
+    try:
+        # Create the topmost key
+        top_key = f"{id}@{domain}"
+
+        # Check if the file exists, otherwise create an empty JSON structure
+        if not os.path.exists(file_path):
+            with open(file_path, 'w') as f:
+                json.dump({}, f)
+
+        # Load the existing data from the file
+        with open(file_path, 'r') as f:
+            json_data = json.load(f)
+
+        # Append data under the topmost key
+        if top_key not in json_data:
+            json_data[top_key] = []
+        json_data[top_key].append(data)
+
+        # Write the updated data back to the file
+        with open(file_path, 'w') as f:
+            json.dump(json_data, f, indent=4)
+
+        logger.info(f"Appended data under '{top_key}' in {file_path}")
+    except Exception as e:
+        logger.error(f"Failed to append data to JSON file: {e}")
+
+# Refactored get_account function
+@integration_helpers.trace
+def get_account(address, id, domain, json_file="logs/account_data.json"):
+    try:
+        logger.warning(f"create_account_contract_address: {address}")
+        # Prepare the parameters for the transaction
+        params = integration_helpers.get_first_four_bytes_of_keccak(b"getAccount(string)")
+        no_of_param = 1
+        for x in range(no_of_param):
+            params += integration_helpers.left_padded_address_of_param(x, no_of_param)
+        params += integration_helpers.argument_encoding(f"{id}@{domain}")  # project id
+
+        # Create and sign the transaction
+        tx = iroha.transaction(
+            [
+                iroha.command(
+                    "CallEngine", caller=ADMIN_ACCOUNT_ID, callee=address, input=params
+                )
+            ]
         )
-    params = params + integration_helpers.argument_encoding(f"{id}@{domain}")  # project id
-    tx = iroha.transaction(
-        [
-            iroha.command(
-                "CallEngine", caller=ADMIN_ACCOUNT_ID, callee=address, input=params
-            )
-        ]
-    )
-    IrohaCrypto.sign_transaction(tx, ADMIN_PRIVATE_KEY)
-    response = net.send_tx(tx)
-    for status in net.tx_status_stream(tx):
-        logger.info(status)
-    hex_hash = binascii.hexlify(IrohaCrypto.hash(tx))
-    return hex_hash
+        IrohaCrypto.sign_transaction(tx, ADMIN_PRIVATE_KEY)
+
+        # Send the transaction and log the status
+        response = net.send_tx(tx)
+        for status in net.tx_status_stream(tx):
+            logger.info(status)
+
+        # Compute the hex hash of the transaction
+        hex_hash = binascii.hexlify(IrohaCrypto.hash(tx)).decode()
+
+        # Prepare the data to be dumped into the JSON file
+        account_data = {
+            "address": address,
+            "hex_hash": hex_hash
+        }
+        logger.warning(f"Account Data: {account_data}")
+        
+        # Append the data to the JSON file
+        append_to_json_file(json_file, id, domain, account_data)
+
+        return hex_hash
+    except Exception as e:
+        logger.error(f"Error in get_account: {e}")
+        return None
+
+
 
 # Functions provided earlier
 @integration_helpers.trace

@@ -1,0 +1,138 @@
+{
+    "exciting_morse@test": [
+        {
+            "address": "57FC07FE9A17800F0745515179832B4B09CAF43B",
+            "hex_hash": "99bec1a90f43fde3518a5dbd1014b47b69c7453ab57b46283d763e5b25a2183b"
+        },
+        {
+            "address": "57FC07FE9A17800F0745515179832B4B09CAF43B",
+            "hex_hash": "a084553114d056bad77f15d998312c0b3bc45c6ad25ddce81159e52a33623637"
+        }
+    ],
+    "pedantic_dirac@test": [
+        {
+            "address": "32E501E885E7C6DF4052E85D843C3D08C1CB1848",
+            "hex_hash": "057503ec2c301358e8bc05bb0943a8d76bdf5228ed9686de7ec7134bbf19badf"
+        },
+        {
+            "address": "32E501E885E7C6DF4052E85D843C3D08C1CB1848",
+            "hex_hash": "4b371c0b2dc072c260ed69cd94c2111d942ef68397718e2dac04d9abf8933444"
+        }
+    ],
+    "inspiring_nobel@test": [
+        {
+            "address": "FD4A82D59E18F427AE0945F70D924254EB1DE184",
+            "hex_hash": "a5cb2eb5f6c80e937ff115c3b96dba1c75fd035c96f92bb78117bc7c4afef06a"
+        },
+        {
+            "address": "FD4A82D59E18F427AE0945F70D924254EB1DE184",
+            "hex_hash": "c883bebc74964d42f3a22dda00f55a0966c022d522610cc1c898633ea02c2887"
+        }
+    ],
+    "recursing_jenner@test": [
+        {
+            "address": "6A7D482574B68B9BFF6166936B335CC93B6A7F89",
+            "hex_hash": "3fce38c0a2aead37fe5ef00c976551d0196b00d934f67d1f5524489837fef7cf"
+        },
+        {
+            "address": "6A7D482574B68B9BFF6166936B335CC93B6A7F89",
+            "hex_hash": "ff6ed8e037746aa0d7d05e4e8a611a8d0b62eafd53e9a71fec6cac69aaa4fc30"
+        }
+    ],
+    "kind_poitras@test": [
+        {
+            "address": "D6D614DF0D906E36C8B3EAE8242F09D20F310CEF",
+            "hex_hash": "b2185b92bd20d17968b94066c1f5349b1ee068cd1fab20f84178b07cf1a665e2"
+        },
+        {
+            "address": "D6D614DF0D906E36C8B3EAE8242F09D20F310CEF",
+            "hex_hash": "f6c3301a2012953a09daf66d4e81d30aab2f4b0d4febafd44d64090cc029029f"
+        }
+    ],
+    "pedantic_agnesi@test": [
+        {
+            "address": "D684013695863C326D367AA9052212C01D4BD378",
+            "hex_hash": "317179bd28e0cb22e8238c5b8563f861a4d60da410a638010d340b3a8f3c8f58"
+        },
+        {
+            "address": "D684013695863C326D367AA9052212C01D4BD378",
+            "hex_hash": "0d94ba8f9d3f3b5fe9b89d86bc43201e0f7f146f21519976d012732c63537ed7"
+        }
+    ],
+    "hopeful_murdock@test": [
+        {
+            "address": "7ADC4ABD8FAD8885C769726AA12828BDD7B3B54B",
+            "hex_hash": "9c59ea989f77d937dc22f92237f565403bb7cd082fd96d2520afc62ab8fef48b"
+        },
+        {
+            "address": "7ADC4ABD8FAD8885C769726AA12828BDD7B3B54B",
+            "hex_hash": "3cb063c116f7391a298f48416b9e759b5a8e03a2276476ec1c0cbc046f2cac88"
+        }
+    ],
+    "affectionate_cori@test": [
+        {
+            "address": "657BF68B97C7A1E8732F70A679904758494C8A55",
+            "hex_hash": "e7f2e32484204e1994cca95669dcd611f405178dae5f2ffb6dfb24132cc32676"
+        },
+        {
+            "address": "657BF68B97C7A1E8732F70A679904758494C8A55",
+            "hex_hash": "38d493ead420979b374b8df9a33e4493f485409a464cef433e40e3c52b4a4d51"
+        },
+        {
+            "address": "657BF68B97C7A1E8732F70A679904758494C8A55",
+            "hex_hash": "443ce7a59877af6c30276c03e47929898f878c8b7d1f6b7385a902dc0c84f734"
+        },
+        {
+            "address": "657BF68B97C7A1E8732F70A679904758494C8A55",
+            "hex_hash": "c80644ba4db8281d2376a88e578917e64398bb946062ba77e7f0d05b79fa6ccc"
+        }
+    ],
+    "confident_neumann@test": [
+        {
+            "address": "62331ECE9926EABD6E31F59A4602014B858209D4",
+            "hex_hash": "b33c3eef44c13d7ea6521936f0b188091597cb86a6aa10e7a06495b77a643dc4"
+        },
+        {
+            "address": "62331ECE9926EABD6E31F59A4602014B858209D4",
+            "hex_hash": "96bc42cc974df3204172b20101788848aff5954ab231f947f4f4846f02a4e2b6"
+        }
+    ],
+    "modest_murdock@test": [
+        {
+            "address": "D61267F0CDCFC05EC302CD9BFF3FFB9BE183CB4D",
+            "hex_hash": "f0350de8aec4ee2234dd9405481d3a2743380085893af4d86b2a20234c5a3d7e"
+        },
+        {
+            "address": "D61267F0CDCFC05EC302CD9BFF3FFB9BE183CB4D",
+            "hex_hash": "21c0154c9b1816cf8d4fe22edf2b7f5b0f135691c4628c3e728f015a8772aa74"
+        }
+    ],
+    "inspiring_mendel@test": [
+        {
+            "address": "91ABF7E328C683B7454BCA7044F51D6925A88708",
+            "hex_hash": "b94cd0e3fc0fc1d86145cbacc14a630760f79028a0f59df3ae3bf77cc17d4348"
+        },
+        {
+            "address": "91ABF7E328C683B7454BCA7044F51D6925A88708",
+            "hex_hash": "56ce52d5c70fe4011e9352a570f4ad3e8682528f3f8c03794a082137dec87c4a"
+        }
+    ],
+    "stoic_pare@test": [
+        {
+            "address": "91ABF7E328C683B7454BCA7044F51D6925A88708",
+            "hex_hash": "1610d881aa9e55ebc55afbdb668494c8093edf6d008cd7408931441089fa6712"
+        },
+        {
+            "address": "91ABF7E328C683B7454BCA7044F51D6925A88708",
+            "hex_hash": "901dd96e5517cdf4cc7f1da9766f5bfc71c8d0286235fdf45d882afd47479f5d"
+        },
+        {
+            "address": "",
+            "hex_hash": "0c6ef1abdd0a6ba0ab1eb54c7d06fef52b4b0be09d7c8cf01d4b7953c703dce0"
+        },
+        {
+            "address": "",
+            "hex_hash": "c64fa25e2215af268be289e2f69c4e13db81a32f299738c657d2923e2581272c"
+        }
+    ]
+}

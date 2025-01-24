@@ -859,6 +859,462 @@
                 "schema:roleName": "publisher",
                 "schema:publicKey": "20ec78c7e9591054841d414dc16d616876487913a1c72a69de3987e35ff3e207"
             }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Zealous Almeida",
+            "foaf:mbox": "zealous_almeida@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "University College of Arts, Crafts and Design"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "0443-1874-4266-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "zealous_almeida@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "7ed17bc7ae50e50f008c0647eab4e38e0fdb738a397cfa757a6784f8275d84cf"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Jolly Hoover",
+            "foaf:mbox": "jolly_hoover@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Addis Ababa Science & Technology University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "7257-6039-5091-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "jolly_hoover@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "05b4c0db6687ab47e4b61033d391331c065692ca2393333b2184703d4aeaad22"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Cool Nash",
+            "foaf:mbox": "cool_nash@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Tarleton State University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "8479-3140-3566-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "cool_nash@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "749dab06d0298920665c7ec85f4ec17892ffb520dc86d2843c1eb249f574b30c"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Nifty Poitras",
+            "foaf:mbox": "nifty_poitras@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Ecole Nationale Sup\u00e9rieure de Physique de Grenoble"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "8906-7784-4703-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "nifty_poitras@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "56e194632a35950fa731395e00c54e1441ce5196be9bf8e73e53eea5aa424ea1"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Charming Rhodes",
+            "foaf:mbox": "charming_rhodes@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Ecole Normale Sup\u00e9rieure de Lyon"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "5787-4946-2344-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "charming_rhodes@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "83deff69ba6a6cb5f1b250190046816e6405615ab5350b7768a3cf54036cc9c0"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Cool Cray",
+            "foaf:mbox": "cool_cray@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Universidad Pablo de Olavide"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "8657-4818-1520-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "cool_cray@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "43f670d5670626df4e2d789bb8d4cbbe831df91a1ca2969816d5e6d14b22cbce"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Elated Murdock",
+            "foaf:mbox": "elated_murdock@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "University of Lusaka"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "9383-2385-2555-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "elated_murdock@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "b93bcd15059984319fbd5ee014eda1b67242a391afce02bab9189daf1d7af7d8"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Romantic Poincare",
+            "foaf:mbox": "romantic_poincare@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "University \u201cPavaresia\u201d Vlore"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "2094-4060-4306-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "romantic_poincare@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "12a09ed1586734315d2ed2b28b3cf2d4245dbe82ad46a8c662f62ed491e952db"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Intelligent Knuth",
+            "foaf:mbox": "intelligent_knuth@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Heilongjiang Commercial University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "0823-9819-2670-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "intelligent_knuth@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "39c8dd836bff2bdb0ff9a285c3dffa37af84a97a32c8608f9504bc02f3ddf8de"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Peaceful Morse",
+            "foaf:mbox": "peaceful_morse@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Washington State University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "8474-2740-9948-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "peaceful_morse@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "44c8bf0759ddb2bcf5f509288c9afb58fc2075fe0f202ac277f020fdb19a7348"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Exciting Morse",
+            "foaf:mbox": "exciting_morse@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "University of Information Technology and Management in Rzeszow"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "7322-7715-0844-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "exciting_morse@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "2a473ee51c684db83d8f8196200640ceb01601048f37439d1ceac4dd586f3e21"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Pedantic Dirac",
+            "foaf:mbox": "pedantic_dirac@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Aomori Chuoh Gakuin University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "5007-1003-4022-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "pedantic_dirac@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "8d60aeaa740d459761b290a73881410aded53f3c3a3cfcc0996312f8bef19137"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Inspiring Nobel",
+            "foaf:mbox": "inspiring_nobel@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Teikyo Heisei University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "7803-5838-1627-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "inspiring_nobel@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "125e2ffc9ca7b458c8c0df490535eb16fbb4e06ce2093beb403fb584411a6526"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Recursing Jenner",
+            "foaf:mbox": "recursing_jenner@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Dutch University Institute for Art History (DUIA)"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "2790-2827-7046-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "recursing_jenner@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "6df90b2f33e31d6df1ced4d99e405fa839a2d2e6c35b52ef7c62d50439353731"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Kind Poitras",
+            "foaf:mbox": "kind_poitras@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Minsk State Linguistic University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "4904-7468-2863-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "kind_poitras@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "d364daf800cd60bb78d854b6a58b928623bb3bbbb2862fb76ee56d6c549b753b"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Thirsty Murdock",
+            "foaf:mbox": "thirsty_murdock@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Modern Institute of Managament"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "9527-7848-7007-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "thirsty_murdock@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "a87a71260c0c7c202a14525a02b67bccdc301d168ca218f62ebd9064cc3c1eb7"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Pedantic Agnesi",
+            "foaf:mbox": "pedantic_agnesi@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Colby College"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "4378-2909-4906-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "pedantic_agnesi@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "8110ef04ead61ad2ba8a0b9d346c5bc6095d1101c6f49625300835e26c661cce"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Hopeful Murdock",
+            "foaf:mbox": "hopeful_murdock@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Arkansas State University, Newport"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "8417-9414-9602-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "hopeful_murdock@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "5649b5e4cec443c881e1b0024b2356a82a3d53832a29ac132181cc178a0d5a1a"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Affectionate Cori",
+            "foaf:mbox": "affectionate_cori@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "University of Scranton"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "7131-7769-0669-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "affectionate_cori@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "2d24053545aac8740a22998b38e2e77db221e3633ea54b31b3fba6f78afa6655"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Confident Neumann",
+            "foaf:mbox": "confident_neumann@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Al Hussein Bin Talal University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "5674-7638-5633-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "confident_neumann@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "4c143375048c120c9d8f37b2c6efe176fbfea9f64df3336dc38ba67dee0ba2b0"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Youthful Morse",
+            "foaf:mbox": "youthful_morse@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Mordovian State University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "3582-0439-6158-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "youthful_morse@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "98fa154f0bfac8ed1fb0c8e7e455d037728faefe72b5d2823120cdab418432cf"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Modest Murdock",
+            "foaf:mbox": "modest_murdock@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Dublin City University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "1901-7245-3241-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "modest_murdock@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "52828161027e05255ba43225e6db352aa6a87f67d973ae825a00ff9b084dfb86"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Inspiring Mendel",
+            "foaf:mbox": "inspiring_mendel@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "South Gujarat University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "1923-9974-9156-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "inspiring_mendel@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "ab195500ceebbeba46f2657e51d9c7876970dedeb9c4d5411fe3e8c5fe796343"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Stoic Pare",
+            "foaf:mbox": "stoic_pare@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Shiraz Payamnoor University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "1033-6521-3362-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "stoic_pare@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "46838fb7e36f05b206b418319fa0f449f4453cc65baa7d70712c04425e61890d"
+            }
         }
     ]
 }

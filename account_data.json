@@ -1,0 +1,12 @@
+{
+    "peaceful_morse@test": [
+        {
+            "address": "B9034002F336DF810E61EB86EBC8438CDB310D88",
+            "hex_hash": "b'6d9bb6bc2161ecd3978f5f3dd40d186f1752eff944390773a74ab3d31876b1a0'"
+        },
+        {
+            "address": "B9034002F336DF810E61EB86EBC8438CDB310D88",
+            "hex_hash": "b'e7ab7749d49896b7ae337bc2e24dce798cc903f2ce6ba30b5bb1babfb1d73101'"
+        }
+    ]
+}
