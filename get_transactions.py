@@ -9,12 +9,12 @@ test_public_key = IrohaCrypto.derive_public_key(test_private_key).decode("utf-8"
 def send_transaction_and_print_status(transaction):
     IrohaCrypto.sign_transaction(transaction, ADMIN_PRIVATE_KEY)
     hex_hash = binascii.hexlify(IrohaCrypto.hash(transaction))
-    print('Transaction hash = {}, creator = {}'.format(
+    logger.info('Transaction hash = {}, creator = {}'.format(
         hex_hash, transaction.payload.reduced_payload.creator_account_id))
     response = net.send_tx(transaction)
-    print(response)
+    logger.info(response)
     for status in net.tx_status_stream(transaction):
-        print(status)
+        logger.info(status)
     return hex_hash
 
 @integration_helpers.trace
