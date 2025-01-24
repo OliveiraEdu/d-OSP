@@ -143,3 +143,15 @@ def get_engine_receipts_result(tx_hash: str):
         # Log any errors that occur during execution
         logger.error(f"An error occurred: {e}")
         
+
+
+@trace
+def get_blocks():
+    """
+    Subscribe to blocks stream from the network
+    :return:
+    """
+    query = iroha.blocks_query()
+    IrohaCrypto.sign_query(query, ADMIN_PRIVATE_KEY)
+    for block in net.send_blocks_stream_query(query):
+        print('The next block arrived:', block)

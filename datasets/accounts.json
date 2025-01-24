@@ -1315,6 +1315,158 @@
                 "schema:roleName": "author",
                 "schema:publicKey": "46838fb7e36f05b206b418319fa0f449f4453cc65baa7d70712c04425e61890d"
             }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Funny Leakey",
+            "foaf:mbox": "funny_leakey@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "College of Notre Dame"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "9463-0962-9054-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "funny_leakey@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "2113d9063b1f20a9bef977771fef6c6957998c7b76966e66d60b2eae1d9c5c18"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Zealous Mclean",
+            "foaf:mbox": "zealous_mclean@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Universidad de La Frontera"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "8572-2849-7599-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "zealous_mclean@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "bb5b78b1f996bb6bc47654279844dbd8c25ecac21d016efd0f9b02721fd19be9"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Wonderful Moore",
+            "foaf:mbox": "wonderful_moore@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Rajiv Gandhi University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "4141-5247-5205-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "wonderful_moore@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "705bac8d0e9dc253720195d4173b0bb9554878a29c0993975387c34db10ed1e8"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Gracious Montalcini",
+            "foaf:mbox": "gracious_montalcini@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Hemchandracharay North Gujarat University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "0834-9335-4505-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "gracious_montalcini@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "0c9280223e75c1c40b2e8426e08de3cc3373d18d4f28529596dc86b1575f2817"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Objective Chaplygin",
+            "foaf:mbox": "objective_chaplygin@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Universidad Albert Einstein"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "4194-3802-9132-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "objective_chaplygin@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "fd0cbed862755cb10c23c797fc574db85b9135e3763e632987ffd805d38e12cf"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Wizardly Montalcini",
+            "foaf:mbox": "wizardly_montalcini@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Anna University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "4311-8677-9414-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "wizardly_montalcini@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "18d2f9b88e64916d91e054a509967db994e6d155b8fd2433f711340671fa1a70"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Sad Gauss",
+            "foaf:mbox": "sad_gauss@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Kassala University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "0697-9345-6863-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "sad_gauss@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "70fe553dd9a9289e2f958ea7c8078afcb04c784e2e12051a80dab9cb618d7612"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Compassionate Raman",
+            "foaf:mbox": "compassionate_raman@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "University of Bolton"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "0426-7964-4964-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "compassionate_raman@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "86b16fdb66d1e59447ab0be9ecc898b6fe8b3c14d840408a75dccad7c77fb063"
+            }
         }
     ]
 }
