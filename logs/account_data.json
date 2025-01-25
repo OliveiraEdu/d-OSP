@@ -290,5 +290,25 @@
             "address": "91ABF7E328C683B7454BCA7044F51D6925A88708",
             "hex_hash": "35a1a0cc3dc25a3d163186aa4f110843d6648da6a12a632f7f7d63b2d4dcff70"
         }
+    ],
+    "festive_margulis@test": [
+        {
+            "address": "CA8D1C6932C8BF53761164F90821D9B2FE80D286",
+            "hex_hash": "a0a99dc8ce1f2bf5493c63bb8449f92b2d2ec6c8e3e59a8945b5235bd19bc3a4"
+        },
+        {
+            "address": "CA8D1C6932C8BF53761164F90821D9B2FE80D286",
+            "hex_hash": "a74cc7f5bc0366f72bacc871dc801b00925534e7e94468e2d610d72a8ec7e406"
+        }
+    ],
+    "youthful_ride@test": [
+        {
+            "address": "44D5169FCDBA68A0431CC6B3CEEAFE63969B2BA9",
+            "hex_hash": "818ae85c03b519482e46776a0b93b9a567270d8599cf787ab292302470bef6bb"
+        },
+        {
+            "address": "44D5169FCDBA68A0431CC6B3CEEAFE63969B2BA9",
+            "hex_hash": "83e14243eed633cdd7266cc78f66332f9cbac61f068299ee0f75aea2ca18153c"
+        }
     ]
 }

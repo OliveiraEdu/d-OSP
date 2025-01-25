@@ -1486,6 +1486,44 @@
                 "schema:roleName": "author",
                 "schema:publicKey": "e6a17288b9be6dca866a1829fb7c84fd7d41885ad3c7d69d9d8bd791ea0a8812"
             }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Festive Margulis",
+            "foaf:mbox": "festive_margulis@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "University of South Asia"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "9099-6407-9892-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "festive_margulis@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "6ca1cfce51fad15d5cad833baab04127558599ccb15b4c3611e794cc1d1c3d74"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Youthful Ride",
+            "foaf:mbox": "youthful_ride@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Tui Online University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "9036-1605-4504-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "youthful_ride@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "535e30f82a4c3488df4502917a6a472c50096c3277e8c84d20e875bb5c0a3c57"
+            }
         }
     ]
 }
