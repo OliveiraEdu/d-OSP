@@ -1524,6 +1524,25 @@
                 "schema:roleName": "author",
                 "schema:publicKey": "535e30f82a4c3488df4502917a6a472c50096c3277e8c84d20e875bb5c0a3c57"
             }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Optimistic Dewdney",
+            "foaf:mbox": "optimistic_dewdney@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Universidad de Valencia"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "7061-2235-0889-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "optimistic_dewdney@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "3e25a2514ba0e863eb87ceff7893e2c6206480afddf57b0aaaa8bb9a49cfd0e0"
+            }
         }
     ]
 }
