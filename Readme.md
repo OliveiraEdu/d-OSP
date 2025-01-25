@@ -1,6 +1,6 @@
-# Open Science Platform
+# 1- Open Science Platform
 
-## Introduction
+## 1.1 Introduction
 
 This artifact demonstrates the creation and management of user accounts, project accounts, and linked accounts using IPFS and Iroha.
 
@@ -14,29 +14,29 @@ This is the repository for the project Open Science, on its final form the proje
 
 ---
 
-## Components
+## 1.2 Components
 
-### Iroha 1 Python SDK
+### 1.2.1 Iroha 1 Python SDK
 
 This notebook uses [Iroha 1 Python Library ](https://pypi.org/project/iroha/)
 
 
-### Smart Contracts
+### 1.2.2 Smart Contracts
 
 The integration of smart contracts into Iroha 1 is executed by Hyperledger Burrow. For additional information refer to [Iroha Smart Contracts Integration](https://iroha.readthedocs.io/en/develop/integrations/burrow.html?highlight=contract). Use this docker image `hyperledger/iroha-burrow:pr-3960`, see below.
 
 
-### IPFS
+### 1.2.3 IPFS
 
 This project uses [Python IPFS HTTP Client](https://github.com/ipfs-shipyard/py-ipfs-http-client)
 
 
 ---
-## Requirements
+## 1.3 Requirements
 
-Docker images:
+1.3.1 Docker images:
 
-- new_jupyter_lab (see `docker/Dockerfile`)
+- new_jupyter_lab (see `OpenScience/docker/Dockerfile`)
 
 - [Iroha 1](https://iroha.readthedocs.io/en/develop/overview.html)
 
@@ -44,9 +44,16 @@ Docker images:
 
 * All containers must be attached to the iroha network.
 
-* Clone the Iroha 1 repo:
+
+## 2  Setup
+
+
+2.1  Clone the Iroha 1 repo:
 
 ```bash
+
+cd ~/
+
 git clone https://github.com/iroha
 
 cd iroha
@@ -59,6 +66,8 @@ git checkout 0d22d117863560c5330299bea592360fd8252941
 
 ```
 
+2.1.1 Editing the `genesis.block` file
+
 ### Genesis Block
 
 The default Genesis block for Iroha 1 docker image `admin@test` does not have the proper permission to creat smart contracts, therefore it is necessary to add the permission for the `admin@test` account editing the `genesis.block`file as instructed below.
@@ -66,7 +75,7 @@ The default Genesis block for Iroha 1 docker image `admin@test` does not have th
 
 #### How to run a specific genesis-block, to add/change permissions for the admin
 
-- Open iroha/example/genesis_block file and locate the following block:
+- Open `iroha/example/genesis_block` file and locate the following block:
 
 ```genesis_block
 "createRole":{
@@ -110,34 +119,33 @@ The default Genesis block for Iroha 1 docker image `admin@test` does not have th
 ---
 
 
-* Running Postgress (Database for Iroha 1)
+2.2 Create local directories at your docker host:
 
 ```bash
-docker run --name some-postgres \
--e POSTGRES_USER=postgres \
--e POSTGRES_PASSWORD=mysecretpassword \
--p 5432:5432 \
---network=iroha-network \
--d postgres:9.5 \
--c 'max_prepared_transactions=100' \
--- restart always
+mkdir ~/ipfs_repo ~/ipfs_repo/staging ~/ipfs_repo/data
 ```
 
 
-* Create local directories at your docker host:
+2.1 Jupyter Notebooks
+
+2.1.1 Clone the OpenScience repository
 
 ```bash
-mkdir ipfs_repo ipfs_repo/staging ipfs_repo/data
+cd ~/
+
+git clone http://github.com/OliveiraEdu/OpenScience
 ```
 
-  
-## Setup
-
-
-2.1 - Jupyter Notebooks
+2.1.2 Building the docker image
 
 ```bash
-docker run -it -p 10.0.0.100:10000:8888 --network=iroha-network new_jupyter_lab
+cd ~/OpenScience/docker
+docker build --no-cache -t new_jupyter_lab .
+```
+
+2.1.3 Runnning the docker container
+```bash
+docker run -it -p 10000:8888 --network=iroha-network new_jupyter_lab
 ```
 
 2.2 IPFS Node
@@ -146,7 +154,12 @@ docker run -it -p 10.0.0.100:10000:8888 --network=iroha-network new_jupyter_lab
 docker run -d --name ipfs_node -v ~/ipfs_repo/staging:/export -v ~/ipfs_repo/data:/data/ipfs -p 4001:4001 -p 8080:8080 -p 5001:5001 --network iroha-network ipfs/go-ipfs:v0.4.23
 ```
 
-2.3 Iroha Network
+2.3 Postgress
+```bash
+docker run --name some-postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 --network=iroha-network -d postgres:9.5 -c 'max_prepared_transactions=100'
+```
+
+2.4 Iroha Network
 
 ```bash
 docker run --name iroha -d -p 50051:50051 -p 7001:7001 -v $(pwd)/iroha/example:/opt/iroha_data -v blockstore:/tmp/block_store --network=iroha-network --restart always -e KEY='node0' hyperledger/iroha-burrow:pr-3960
@@ -156,10 +169,20 @@ docker run --name iroha -d -p 50051:50051 -p 7001:7001 -v $(pwd)/iroha/example:/
 
 For iroha and IPFS, go to the Jupyter, check and edit `config.json` according to the networking settings for your environment.
 
+```json
+{
+    "IROHA_HOST_ADDR": "10.0.0.100",
+    "IROHA_PORT": "50051",
+    "ADMIN_ACCOUNT_ID": "admin@test",
+    "ADMIN_PRIVATE_KEY": "f101537e319568c765b2cc89698325604991dca57b9716b58016b253506cab70",
+    "IPFS_ADDRESS": "10.0.0.100",
+    "IPFS_PORT": 5001
+}
+```
 
 ----
 
-## Test the Platform
+## 3 Test the Platform
 
 |Step|Description|Outcome|
 |---|-----------|----|
@@ -168,7 +191,7 @@ For iroha and IPFS, go to the Jupyter, check and edit `config.json` according to
 |3|[Cross Linking User and Project accounts](http://s:10000/lab/tree/3%20-%20Artifact%20-%20Project%20%20Cross%20Link%20Account%20and%20Project%20Account.ipynb)| Sets a bi-directional link between an user account and a project account|
 |4|[Querying linked accounts](http://s:10000/lab/tree/Artifact%20-%20Querying%20Linked%20Account%20and%20Project%20accounts.ipynb)| Querying Linked Account and Project accounts|
 
-### Summary
+### 4 Summary
 
 This artifact demonstrates the creation and management of user accounts, project accounts, and linked accounts using IPFS and Iroha. The sequence diagram shows the steps involved in creating and linking these accounts.
 
@@ -177,7 +200,7 @@ This artifact demonstrates the creation and management of user accounts, project
 [3]: http://s:10000/lab/tree/3%20-%20Artifact%20-%20Project%20%20Cross%20Link%20Account%20and%20Project%20Account.ipynb
 
 ---
-## Caveats and Workarounds
+## 5 Caveats and Workarounds
 
 ### Genesis Block
 
@@ -207,7 +230,7 @@ The default Genesis block for Iroha 1 docker image `admin@test` does not have th
 ---
 
 
-## Future Improvements
+## 6 Future Improvements
 
 ### New features
 
