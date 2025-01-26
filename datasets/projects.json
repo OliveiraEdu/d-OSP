@@ -439,6 +439,96 @@
                 }
             },
             "schema:metadataCID": "QmPTSBNAp5fqUNVfuNKMkzgGoNm9WrPWGrtjjamRv6Nzwc"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "89201@test",
+            "schema:publicKey": "3dfed32a9ba024f3bcdbff85f9e4e3a18982cc385b9bf0fc01bd4b494a7346b0",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Analyzing the Influence of satellite imagery on urban resilience",
+                "dc:abstract": "This paper analyzes how satellite imagery influences urban resilience, providing insights into how to maximize its resilience building.",
+                "schema:keywords": [
+                    "satellite imagery",
+                    "urban resilience",
+                    "resilience building"
+                ],
+                "schema:startDate": "2022-06-04",
+                "schema:endDate": "2025-11-15",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "Department of Energy"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Cape Town, South Africa"
+                }
+            },
+            "schema:metadataCID": "QmVT1XCVQBcAsk6fmkg1dMRYiGE1Bxq6YyRh9zuxanL1rW"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "45032@test",
+            "schema:publicKey": "6935cc68eef43591d31a42860219360a92c11aaceeda703cf9120351d3e2b475",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Investigating the Role of AI in smart cities",
+                "dc:abstract": "This study explores the impact of AI in smart cities, focusing on innovation in healthcare.",
+                "schema:keywords": [
+                    "AI",
+                    "smart cities",
+                    "innovation in healthcare"
+                ],
+                "schema:startDate": "2021-12-07",
+                "schema:endDate": "2026-06-06",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "Food and Agriculture Organization"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Yellowstone National Park, USA"
+                }
+            },
+            "schema:metadataCID": "QmXTkXu9QNzPYN8qgnsd5yHZc9goyBMoyqyjSAsFRWcEyE"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "17487@test",
+            "schema:publicKey": "3a209840968ba286da10ba7bc6de097dd3678e4cb0ae49360c20d3cb60389979",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Exploring the Effects of renewable materials on soil contamination",
+                "dc:abstract": "This study aims to investigate the effects of renewable materials on soil contamination and propose strategies for improvement.",
+                "schema:keywords": [
+                    "renewable materials",
+                    "soil contamination",
+                    "supply chain resilience"
+                ],
+                "schema:startDate": "2018-11-11",
+                "schema:endDate": "2028-11-29",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "Department of Energy"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Bangkok, Thailand"
+                }
+            },
+            "schema:metadataCID": "QmbDr3zbJuAizcFzpgGQC9kXW3YiHdPdWsrfoZXzZdGMCb"
         }
     ]
 }

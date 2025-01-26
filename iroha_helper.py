@@ -490,11 +490,11 @@ def process_account(address, account_id):
             logger.info(f"User Account Metadata: {account_metadata}")
 
             # Uploads User JSON-LD to IPFS
-            user_json_ld_cid = upload_json_to_ipfs(account_metadata) 
-            logger.info(f"User Account Metadata CID: {user_json_ld_cid}")
+            account_metadata_cid = upload_json_to_ipfs(account_metadata) 
+            logger.info(f"User Account Metadata CID: {account_metadata_cid}")
 
             # Sends the resulting CID to Iroha 1
-            hash = set_account_detail(address, account_id, "user_json_ld_cid", user_json_ld_cid)
+            hash = set_account_detail(address, account_id, "account_metadata_cid", account_metadata_cid)
             
             
             # get_account(hash) #Lets evolve this

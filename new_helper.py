@@ -179,7 +179,7 @@ def process_files(directory_path, project_id, schema):
 
 
 @integration_helpers.trace
-def extract_user_json_ld_cid_from_data(data: dict) -> Optional[str]:
+def extract_account_metadata_cid_from_data(data: dict) -> Optional[str]:
     try:
         # Step 1: Ensure 'data' is a dictionary
         if not isinstance(data, dict):
@@ -193,11 +193,11 @@ def extract_user_json_ld_cid_from_data(data: dict) -> Optional[str]:
         if 'admin@test' in json_data:
             admin_data = json_data['admin@test']
             
-            # Step 4: Access 'user_json_ld_cid'
-            if 'user_json_ld_cid' in admin_data:
-                return admin_data['user_json_ld_cid']
+            # Step 4: Access 'account_metadata_cid'
+            if 'account_metadata_cid' in admin_data:
+                return admin_data['account_metadata_cid']
             else:
-                raise KeyError("'user_json_ld_cid' not found in the data")
+                raise KeyError("'account_metadata_cid' not found in the data")
         else:
             raise KeyError("'admin@test' not found in the parsed data")
             
@@ -216,15 +216,15 @@ def process_raw_data(raw_data: str) -> Optional[str]:
         data = json.loads(clean_data)
         
         # Extract the CID
-        user_json_ld_cid = extract_user_json_ld_cid_from_data(data)
+        account_metadata_cid = extract_account_metadata_cid_from_data(data)
         
         # Log the results
-        if user_json_ld_cid:
-            logger.info(f"User Metadata CID: {user_json_ld_cid}")
+        if account_metadata_cid:
+            logger.info(f"User Metadata CID: {account_metadata_cid}")
         else:
-            logger.info("'user_json_ld_cid' not found or an error occurred.")
+            logger.info("'account_metadata_cid' not found or an error occurred.")
         
-        return user_json_ld_cid
+        return account_metadata_cid
     except json.JSONDecodeError as e:
         logger.error(f"Error decoding JSON: {e}")
         return None

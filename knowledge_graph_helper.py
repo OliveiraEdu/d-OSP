@@ -224,9 +224,9 @@ def build_knowledge_graph(search_results, index, graph_output_path="knowledge_gr
                 logger.error(f"Error decoding user details JSON for {linked_user}: {e}")
                 continue
 
-            user_json_ld_cid = user_details.get("admin@test", {}).get("user_json_ld_cid", None)
-            if user_json_ld_cid:
-                user_metadata = download_json_from_ipfs(user_json_ld_cid)
+            account_metadata_cid = user_details.get("admin@test", {}).get("account_metadata_cid", None)
+            if account_metadata_cid:
+                user_metadata = download_json_from_ipfs(account_metadata_cid)
                 graph.add_node(linked_user, label=f"User: {linked_user}", color="red", shape="diamond")
                 graph.add_edge(project_id, linked_user, label="Owner")
 

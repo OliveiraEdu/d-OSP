@@ -1543,6 +1543,44 @@
                 "schema:roleName": "publisher",
                 "schema:publicKey": "3e25a2514ba0e863eb87ceff7893e2c6206480afddf57b0aaaa8bb9a49cfd0e0"
             }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Wonderful Albattani",
+            "foaf:mbox": "wonderful_albattani@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Narsee Monjee Institute of Management Studies"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "8367-3034-9340-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "wonderful_albattani@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "129598e3bad15bba4c5257e4d522aac47342f325491c580bb0a6479b85e10e7a"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Practical Curran",
+            "foaf:mbox": "practical_curran@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Universidad de Hermosillo"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "2497-3197-3587-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "practical_curran@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "fde634f47ffccc9d14c062d8fd55817fc422b5cb39f5a4b20ad6d24a1844ec10"
+            }
         }
     ]
 }

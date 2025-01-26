@@ -87,13 +87,13 @@ def metadata_block(processed_results, download_path):
                         user_details = get_account_detail(linked_user)
                         user_details = json.loads(user_details)
                         
-                        user_json_ld_cid = user_details.get("admin@test", {}).get("user_json_ld_cid")
-                        if user_json_ld_cid:
+                        account_metadata_cid = user_details.get("admin@test", {}).get("account_metadata_cid")
+                        if account_metadata_cid:
                             try:
-                                user_metadata = download_json_from_ipfs(user_json_ld_cid)
+                                user_metadata = download_json_from_ipfs(account_metadata_cid)
                                 logger.info(f"Downloaded user metadata: {user_metadata}")
                             except Exception as e:
-                                logger.error(f"Error downloading user metadata for CID {user_json_ld_cid}: {e}")
+                                logger.error(f"Error downloading user metadata for CID {account_metadata_cid}: {e}")
                         else:
                             logger.warning(f"User JSON-LD CID not found for linked user {linked_user}.")
                     except json.JSONDecodeError as e:
