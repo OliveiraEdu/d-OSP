@@ -386,5 +386,25 @@
             "address": "FF762AC4E3D64AC77F560CC0DB6D0623F32E8F70",
             "hex_hash": "62520fa862719cb57f0b464aeefdc4631785c3bf9bd9593ef421f90c09be33fb"
         }
+    ],
+    "great_black@test": [
+        {
+            "address": "FF762AC4E3D64AC77F560CC0DB6D0623F32E8F70",
+            "hex_hash": "01ae0145dacf6f06ecf608ff67cb277c1c452bc79fe3dee656e1c244ea1f7ccf"
+        },
+        {
+            "address": "FF762AC4E3D64AC77F560CC0DB6D0623F32E8F70",
+            "hex_hash": "7b785ac53edf59c82852f4055847bf39d310e20a8511c6ae6a333ffce61382a0"
+        }
+    ],
+    "41830@test": [
+        {
+            "address": "FF762AC4E3D64AC77F560CC0DB6D0623F32E8F70",
+            "hex_hash": "d520d5d935a8383f6f511a550b6ecb710de9cbba02e4b4675a4478dde7f2cf7e"
+        },
+        {
+            "address": "FF762AC4E3D64AC77F560CC0DB6D0623F32E8F70",
+            "hex_hash": "edc2c31ca590979c18c1511d0a61c543dfa46ed145a7374cf968691e375d0fb5"
+        }
     ]
 }
