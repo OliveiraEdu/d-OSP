@@ -186,6 +186,7 @@ For iroha and IPFS, go to the Jupyter, check and edit `config.json` according to
 
 |Step|Description|Outcome|
 |---|-----------|----|
+|0| Deploy Contracts| Deploy contracts for account creation and details settings.
 |1|[User Account Creation](http://s:10000/lab/tree/1%20-%20Artifact%20-%20User%20Account%20Creation.ipynb)| Creates an user account|
 |2|[Project Account Creation](http://s:10000/lab/tree/2%20-%20Artifact%20-%20Project%20Account%20Creation.ipynb)| Creates a project account|
 |3|[Cross Linking User and Project accounts](http://s:10000/lab/tree/3%20-%20Artifact%20-%20Project%20%20Cross%20Link%20Account%20and%20Project%20Account.ipynb)| Sets a bi-directional link between an user account and a project account|
@@ -193,7 +194,7 @@ For iroha and IPFS, go to the Jupyter, check and edit `config.json` according to
 
 ### 4 Summary
 
-This artifact demonstrates the creation and management of user accounts, project accounts, and linked accounts using IPFS and Iroha. The sequence diagram shows the steps involved in creating and linking these accounts.
+This artifact demonstrates the creation and management of user accounts, project accounts, and linked accounts using IPFS and Iroha. The sequence diagram shows the steps involved in creating and linking these accounts. See notebook 7.
 
 [1]: http://s:10000/lab/tree/1%20-%20Artifact%20-%20User%20Account%20Creation.ipynb
 [2]: http://s:10000/lab/tree/2%20-%20Artifact%20-%20Project%20Account%20Creation.ipynb
