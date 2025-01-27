@@ -200,7 +200,7 @@ This artifact demonstrates the creation and management of user accounts, project
 [2]: http://s:10000/lab/tree/2%20-%20Artifact%20-%20Project%20Account%20Creation.ipynb
 [3]: http://s:10000/lab/tree/3%20-%20Artifact%20-%20Project%20%20Cross%20Link%20Account%20and%20Project%20Account.ipynb
 
----
+
 ## 5 Caveats and Workarounds
 
 ### Genesis Block
