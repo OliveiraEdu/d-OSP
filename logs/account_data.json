@@ -406,5 +406,65 @@
             "address": "FF762AC4E3D64AC77F560CC0DB6D0623F32E8F70",
             "hex_hash": "edc2c31ca590979c18c1511d0a61c543dfa46ed145a7374cf968691e375d0fb5"
         }
+    ],
+    "relaxed_ardinghelli@test": [
+        {
+            "address": "451ACFA0FADDF590FB4EDFD1EA4B0411DF0B963E",
+            "hex_hash": "ffd9623d4182acf049e464fd1cb794d3b2f176afdfd35af78eda8f71093ece12"
+        },
+        {
+            "address": "451ACFA0FADDF590FB4EDFD1EA4B0411DF0B963E",
+            "hex_hash": "64cedfc09fefc6ba93aa2b90b938c1983eefced8001c93ab685121b4bec2c92e"
+        }
+    ],
+    "64812@test": [
+        {
+            "address": "451ACFA0FADDF590FB4EDFD1EA4B0411DF0B963E",
+            "hex_hash": "60816601d592f460e89a199304700890093684d1b2008199dd5cb2d52836cc57"
+        },
+        {
+            "address": "451ACFA0FADDF590FB4EDFD1EA4B0411DF0B963E",
+            "hex_hash": "21ec172d86a1cd3709e61db04045b67bd45936ee32a24ca86f207dec8765fb81"
+        }
+    ],
+    "youthful_neumann@test": [
+        {
+            "address": "7F527500292905F7FFDABA710453F1EAEFAC9CF7",
+            "hex_hash": "2a5fb4daf43f2544db81cec94c1135e732f908464174358e362773702daabe54"
+        },
+        {
+            "address": "7F527500292905F7FFDABA710453F1EAEFAC9CF7",
+            "hex_hash": "1e70b7c848c2d8712eb0141dc768d2e8690b8b4f2a7581557a4e163c365530f1"
+        }
+    ],
+    "09982@test": [
+        {
+            "address": "7F527500292905F7FFDABA710453F1EAEFAC9CF7",
+            "hex_hash": "7085fba4490d1b9b87f65e6163f3799dc5a66096a300248b4285fa1f326b2614"
+        },
+        {
+            "address": "7F527500292905F7FFDABA710453F1EAEFAC9CF7",
+            "hex_hash": "1e3a4382eb76bf6468612653e13cd498c8218e0b2c39c9fb4384578c1ec8e18b"
+        }
+    ],
+    "57012@test": [
+        {
+            "address": "7F527500292905F7FFDABA710453F1EAEFAC9CF7",
+            "hex_hash": "9f5f15dd5b3e4108e18a7dd0ff68fac29e0e961d911e1f93de688893a96d461c"
+        },
+        {
+            "address": "7F527500292905F7FFDABA710453F1EAEFAC9CF7",
+            "hex_hash": "170ff8bf3380494d6a2d67136cafaf94d7f93dea622676d4898e498c0f73ee25"
+        }
+    ],
+    "angry_proskuriakova@test": [
+        {
+            "address": "7F527500292905F7FFDABA710453F1EAEFAC9CF7",
+            "hex_hash": "1cbbace6ef6102522173d29b372165a8527fd56aa1c25b334898f8b5feef6bac"
+        },
+        {
+            "address": "7F527500292905F7FFDABA710453F1EAEFAC9CF7",
+            "hex_hash": "b6095814385c9fcec5290646ae388fbb9deefba9f16fb6e915965c74abc1bf4f"
+        }
     ]
 }

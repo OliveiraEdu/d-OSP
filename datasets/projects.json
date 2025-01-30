@@ -6,34 +6,94 @@
     "@graph": [
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "41830@test",
-            "schema:publicKey": "d0cfbe39c2b60d818d913531d900b4225a47c447c410e7d572367dc569b3ad47",
+            "schema:identifier": "64812@test",
+            "schema:publicKey": "a486e71d0616b30b67c5be37dc569e95778a7666b3452238a4d5bfe08415aea3",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Investigating the Role of renewable energy in biomedical research",
-                "dc:abstract": "This study explores the impact of renewable energy in biomedical research, focusing on public health.",
+                "schema:name": "Investigating the Role of renewable energy in carbon neutrality",
+                "dc:abstract": "This study explores the impact of renewable energy in carbon neutrality, focusing on economic empowerment.",
                 "schema:keywords": [
                     "renewable energy",
-                    "biomedical research",
-                    "public health"
+                    "carbon neutrality",
+                    "economic empowerment"
                 ],
-                "schema:startDate": "2020-01-25",
-                "schema:endDate": "2028-07-04",
+                "schema:startDate": "2022-05-10",
+                "schema:endDate": "2026-04-11",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "United Nations Environment Programme"
+                    "schema:name": "Asian Development Bank"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
-                    "schema:name": "Los Angeles, California, USA"
+                    "schema:name": "Rajasthan, India"
                 }
             },
-            "schema:metadataCID": "QmYV8eTg9bnigUvND3M1n7D2yxUMD4UjF1aRbdGE9UvSFB",
-            "schema:linked_user": "great_black@test"
+            "schema:metadataCID": "QmcrPRpjak36Cwfn2mpDouGvP9Xu9pnrY6hodLcX9g4i4h",
+            "schema:linked_user": "relaxed_ardinghelli@test"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "09982@test",
+            "schema:publicKey": "6b2bd820afd80a27b32a9d715db5d9628c8ee3db9a9302caf67f4943619cacb0",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Assessing the Benefits of cloud computing for ocean conservation",
+                "dc:abstract": "This research focuses on the benefits and challenges posed by cloud computing for ocean conservation, with an emphasis on its potential for environmental restoration.",
+                "schema:keywords": [
+                    "cloud computing",
+                    "ocean conservation",
+                    "environmental restoration"
+                ],
+                "schema:startDate": "2020-09-17",
+                "schema:endDate": "2027-11-18",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "Department of Energy"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Berlin, Germany"
+                }
+            },
+            "schema:metadataCID": "QmSoPhu8MZ7N4LBfnFzwTfZtD4FEfgPy4BhJevBXG1neQo"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "57012@test",
+            "schema:publicKey": "104272ad86fb13a276151ed02b21eab0d53ce89150c5a6b2004b4e7ac960bccf",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Analyzing the Influence of smart grids on climate adaptation",
+                "dc:abstract": "This paper analyzes how smart grids influences climate adaptation, providing insights into how to maximize its climate resilience.",
+                "schema:keywords": [
+                    "smart grids",
+                    "climate adaptation",
+                    "climate resilience"
+                ],
+                "schema:startDate": "2022-05-15",
+                "schema:endDate": "2026-05-31",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "Asian Development Bank"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Lisbon, Portugal"
+                }
+            },
+            "schema:metadataCID": "QmUeGMUpvpKYT48sXg7uk9vgx5TF18Pyy7aGjvR9wgnaCr"
         }
     ]
 }
