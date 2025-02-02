@@ -6,94 +6,104 @@
     "@graph": [
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "64812@test",
-            "schema:publicKey": "a486e71d0616b30b67c5be37dc569e95778a7666b3452238a4d5bfe08415aea3",
+            "schema:identifier": "84131@test",
+            "schema:publicKey": "c6b3719da30059616a23b123f91668e4d045eed70d90824ef097bd2668cfe160",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Investigating the Role of renewable energy in carbon neutrality",
-                "dc:abstract": "This study explores the impact of renewable energy in carbon neutrality, focusing on economic empowerment.",
+                "schema:name": "Exploring the Effects of cybersecurity on space exploration",
+                "dc:abstract": "This study aims to investigate the effects of cybersecurity on space exploration and propose strategies for improvement.",
                 "schema:keywords": [
-                    "renewable energy",
-                    "carbon neutrality",
-                    "economic empowerment"
+                    "cybersecurity",
+                    "space exploration",
+                    "digital transformation"
                 ],
-                "schema:startDate": "2022-05-10",
-                "schema:endDate": "2026-04-11",
+                "schema:startDate": "2022-08-18",
+                "schema:endDate": "2027-09-04",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "Asian Development Bank"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Rajasthan, India"
-                }
-            },
-            "schema:metadataCID": "QmcrPRpjak36Cwfn2mpDouGvP9Xu9pnrY6hodLcX9g4i4h",
-            "schema:linked_user": "relaxed_ardinghelli@test"
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "09982@test",
-            "schema:publicKey": "6b2bd820afd80a27b32a9d715db5d9628c8ee3db9a9302caf67f4943619cacb0",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Assessing the Benefits of cloud computing for ocean conservation",
-                "dc:abstract": "This research focuses on the benefits and challenges posed by cloud computing for ocean conservation, with an emphasis on its potential for environmental restoration.",
-                "schema:keywords": [
-                    "cloud computing",
-                    "ocean conservation",
-                    "environmental restoration"
-                ],
-                "schema:startDate": "2020-09-17",
-                "schema:endDate": "2027-11-18",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "Department of Energy"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Berlin, Germany"
-                }
-            },
-            "schema:metadataCID": "QmSoPhu8MZ7N4LBfnFzwTfZtD4FEfgPy4BhJevBXG1neQo"
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "57012@test",
-            "schema:publicKey": "104272ad86fb13a276151ed02b21eab0d53ce89150c5a6b2004b4e7ac960bccf",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Analyzing the Influence of smart grids on climate adaptation",
-                "dc:abstract": "This paper analyzes how smart grids influences climate adaptation, providing insights into how to maximize its climate resilience.",
-                "schema:keywords": [
-                    "smart grids",
-                    "climate adaptation",
-                    "climate resilience"
-                ],
-                "schema:startDate": "2022-05-15",
-                "schema:endDate": "2026-05-31",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "Asian Development Bank"
+                    "schema:name": "Food and Agriculture Organization"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
                     "schema:name": "Lisbon, Portugal"
                 }
             },
-            "schema:metadataCID": "QmUeGMUpvpKYT48sXg7uk9vgx5TF18Pyy7aGjvR9wgnaCr"
+            "schema:metadataCID": "QmTxdHcgr64Xn4i2pFgp6wPnhMX13CL1Fg94BTqeuNejrQ",
+            "schema:linked_user": "compassionate_khorana@test"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "02699@test",
+            "schema:publicKey": "db6efd44ef3d1e17bddd61f97655ff7ed86c20909d0270f427743116115214ce",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Assessing the Benefits of precision agriculture for financial services",
+                "dc:abstract": "This research focuses on the benefits and challenges posed by precision agriculture for financial services, with an emphasis on its potential for access to education.",
+                "schema:keywords": [
+                    "precision agriculture",
+                    "financial services",
+                    "access to education"
+                ],
+                "schema:startDate": "2019-09-26",
+                "schema:endDate": "2028-05-20",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "United Nations Environment Programme"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Amazon Rainforest, Brazil"
+                }
+            },
+            "schema:metadataCID": "QmT1XXAKiVccJQfk7BfAnaTUkN9zPaZesUnC9CavXuXXjU"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "21705@test",
+            "schema:publicKey": "73c79a66969b2673f8ad3ffbb6f7cf5f8eb996ae56720a614da198911a3d0a4d",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Exploring the Effects of renewable materials on green transportation",
+                "dc:abstract": "This study aims to investigate the effects of renewable materials on green transportation and propose strategies for improvement.",
+                "schema:keywords": [
+                    "renewable materials",
+                    "green transportation",
+                    "supply chain resilience"
+                ],
+                "schema:startDate": "2020-05-31",
+                "schema:endDate": "2027-07-17",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "National Geographic Society"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Bangkok, Thailand"
+                }
+            },
+            "schema:metadataCID": "QmZBdt5FvU5idWFUwqwYXvzDtCDpe6qkyCxdCKfU3kz7Zo"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "16508@test",
+            "schema:publicKey": "8f84e24c05b83d3675d540b5c0a6b3c6d573afd852fe0894250171ce43918b60"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "01876@test",
+            "schema:publicKey": "ecb55dd12522a8d8d6f12d4b9c7384f16d945f006872adb9b6cd45f6aac40540"
         }
     ]
 }

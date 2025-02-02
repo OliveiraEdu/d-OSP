@@ -6,61 +6,23 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Relaxed Ardinghelli",
-            "foaf:mbox": "relaxed_ardinghelli@email.com",
+            "foaf:name": "Compassionate Khorana",
+            "foaf:mbox": "compassionate_khorana@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "King's College"
+                "foaf:name": "Central South University"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "1611-3922-1511-X"
+                "value": "6946-4336-8161-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "relaxed_ardinghelli@test",
+                "schema:identifier": "compassionate_khorana@test",
                 "schema:roleName": "reviewer",
-                "schema:publicKey": "9e961cae3870f93695fd5f963dcf76867a9c60d538713a4c4c69317b17b7678d"
+                "schema:publicKey": "8ba8a4f167b2e50f87f097a9b2fcab93c75bd44cb21964d106d0da9c15788164"
             },
-            "schema:linked_project": "64812@test"
-        },
-        {
-            "@type": "foaf:Person",
-            "foaf:name": "Youthful Neumann",
-            "foaf:mbox": "youthful_neumann@email.com",
-            "foaf:organization": {
-                "@type": "foaf:Organization",
-                "foaf:name": "Allahabad University"
-            },
-            "schema:identifier": {
-                "@type": "PropertyValue",
-                "propertyID": "ORCID",
-                "value": "7087-9949-7478-X"
-            },
-            "foaf:holdsAccount": {
-                "schema:identifier": "youthful_neumann@test",
-                "schema:roleName": "publisher",
-                "schema:publicKey": "7c90913b8b28fdc78e3cebc5adbb391b6afe81f98c01fb894252deed6ef93d56"
-            }
-        },
-        {
-            "@type": "foaf:Person",
-            "foaf:name": "Angry Proskuriakova",
-            "foaf:mbox": "angry_proskuriakova@email.com",
-            "foaf:organization": {
-                "@type": "foaf:Organization",
-                "foaf:name": "Illinois College of Optometry"
-            },
-            "schema:identifier": {
-                "@type": "PropertyValue",
-                "propertyID": "ORCID",
-                "value": "6709-1840-9029-X"
-            },
-            "foaf:holdsAccount": {
-                "schema:identifier": "angry_proskuriakova@test",
-                "schema:roleName": "author",
-                "schema:publicKey": "c26594fa1d32bfa6f7cf4d2583cdf364fda0c8a3f74c0f826497f7f165d1b69f"
-            }
+            "schema:linked_project": "84131@test"
         }
     ]
 }
