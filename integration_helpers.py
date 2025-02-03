@@ -105,13 +105,6 @@ def get_engine_receipts_address(tx_hash: str):
 
     return contract_add
 
-# @trace
-# def get_engine_receipts_address(tx_hash: str):
-#     query = iroha.query("GetEngineReceipts", tx_hash=tx_hash)
-#     IrohaCrypto.sign_query(query, ADMIN_PRIVATE_KEY)
-#     response = net.send_query(query)
-#     contract_add = response.engine_receipts_response.engine_receipts[0].contract_address
-#     return contract_add
 
 
 @trace
@@ -149,18 +142,6 @@ def get_engine_receipts_result(tx_hash: str):
     except Exception as e:
         # Log any errors that occur during execution
         logger.error(f"An error occurred: {e}")
-        
-# @trace
-# def get_engine_receipts_result(tx_hash: str):
-#     query = iroha.query("GetEngineReceipts", tx_hash=tx_hash)
-#     IrohaCrypto.sign_query(query, ADMIN_PRIVATE_KEY)
-#     response = net.send_query(query)
-#     result = response.engine_receipts_response.engine_receipts[
-#         0
-#     ].call_result.result_data
-#     bytes_object = bytes.fromhex(result)
-#     ascii_string = bytes_object.decode('ASCII', 'ignore')
-#     logger.info(ascii_string)
 
 
 @trace
