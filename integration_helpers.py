@@ -153,4 +153,5 @@ def get_blocks():
     query = iroha.blocks_query()
     IrohaCrypto.sign_query(query, ADMIN_PRIVATE_KEY)
     for block in net.send_blocks_stream_query(query):
-        logger.info('The next block arrived:', block)
+        logger.info(f'The next block arrived: {block}')
+

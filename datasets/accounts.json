@@ -23,6 +23,120 @@
                 "schema:publicKey": "8ba8a4f167b2e50f87f097a9b2fcab93c75bd44cb21964d106d0da9c15788164"
             },
             "schema:linked_project": "84131@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Crazy Poitras",
+            "foaf:mbox": "crazy_poitras@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Shanghai Second Medical University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "9737-9408-6076-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "crazy_poitras@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "9f6ae7f1860770769cf1798d15260590aebd1b5d36f545852319c2c58273a6e8"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Awesome Faraday",
+            "foaf:mbox": "awesome_faraday@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Kyoto Bunkyo University"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "9007-1931-0496-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "awesome_faraday@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "bd1c149b0f6a0afe23f9254e4e5ac2c5affbda6c549c721505c68b2a6c2ecc20"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Determined Pike",
+            "foaf:mbox": "determined_pike@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "City University Athens"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "9951-4322-0437-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "determined_pike@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "057ac277bff2b51216d9974ab3c7c1859ec5071f3fc0d8d12ba6ff0f59f8fdde"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Nifty Payne",
+            "foaf:mbox": "nifty_payne@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "National American University, Albuquerque"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "9889-7886-1210-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "nifty_payne@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "e23145b816f108a9eefee481ba8d5ecd0709c0511543710a93cc92feed88a8bc"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Youthful Proskuriakova",
+            "foaf:mbox": "youthful_proskuriakova@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Universit\u00e9 de Caen Basse Normandie"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "3671-2530-0162-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "youthful_proskuriakova@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "d4b87aafb2e35a2ad6d79beff209752f541f30ee4bad1ba1993b028564704be8"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Focused Beaver",
+            "foaf:mbox": "focused_beaver@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Gulf University for Science and Technology"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "1903-6335-5216-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "focused_beaver@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "341683d70e9e075df36032bba6ea54e41bb58770eb2c95b07d26cb00cd004eb2"
+            }
         }
     ]
 }

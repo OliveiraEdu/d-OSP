@@ -544,5 +544,75 @@
             "address": "D8FED27AE4768FCF4AFAB71AC6D148957A38EDB3",
             "hex_hash": "58c1d665c019b896bb5dad7c3e2be95a59d404e328fcdb30694d36a1bd47fdb2"
         }
+    ],
+    "crazy_poitras@test": [
+        {
+            "address": "5391E2AB62425D0E66C8B32C0C4994F38C0918F9",
+            "hex_hash": "7121f8ae34f8088caf2d603b647bc6ce8785558a31e5e1fbc98d3c9d8320311c"
+        },
+        {
+            "address": "5391E2AB62425D0E66C8B32C0C4994F38C0918F9",
+            "hex_hash": "4d7dca02b937768c89315efa6950ca04bcd26a928a35cd2ca6e0152ef4d64386"
+        }
+    ],
+    "74262@test": [
+        {
+            "address": "5391E2AB62425D0E66C8B32C0C4994F38C0918F9",
+            "hex_hash": "e4f327f6e9ac67c559818a55e9cf29af0fc11e8924cb24e02bdc9328b3f50dfe"
+        },
+        {
+            "address": "5391E2AB62425D0E66C8B32C0C4994F38C0918F9",
+            "hex_hash": "572b734ef202f1ad7a063303f583e938cc89bbafdde2bb06c727e72222c9b6e7"
+        }
+    ],
+    "awesome_faraday@test": [
+        {
+            "address": "BD0274D8D8C2EE62AEB41678578DA174A4CE7BA1",
+            "hex_hash": "14dd7b602991b2cfa740a89cb6f17f8ce16501fc6529aef74ebcdefd57d586ca"
+        },
+        {
+            "address": "BD0274D8D8C2EE62AEB41678578DA174A4CE7BA1",
+            "hex_hash": "fa9b1e73592f0cb23a50f0568433e3816805cc1664c10223379855e543e0bd53"
+        }
+    ],
+    "determined_pike@test": [
+        {
+            "address": "BD0274D8D8C2EE62AEB41678578DA174A4CE7BA1",
+            "hex_hash": "8081d9d7f10b14bddb3e595352d4d6df3397e5caa5ab099d59aeb181e5e8ec41"
+        },
+        {
+            "address": "BD0274D8D8C2EE62AEB41678578DA174A4CE7BA1",
+            "hex_hash": "e7ff82c155971c1d49bbd7039dee62fa0490b58d6fd4ecc1a14eb13d4bf7420b"
+        }
+    ],
+    "nifty_payne@test": [
+        {
+            "address": "BD0274D8D8C2EE62AEB41678578DA174A4CE7BA1",
+            "hex_hash": "22e3fa1fe07d5c67d0949353c1bdd2eb3b7cc33b82b52f13ff6029eac61836a2"
+        },
+        {
+            "address": "BD0274D8D8C2EE62AEB41678578DA174A4CE7BA1",
+            "hex_hash": "4030eb4071c9481cdebffe90e70a85753a4897b294cb39203b139c1dc898b9fb"
+        }
+    ],
+    "youthful_proskuriakova@test": [
+        {
+            "address": "BD0274D8D8C2EE62AEB41678578DA174A4CE7BA1",
+            "hex_hash": "7d2d6cb757ba6c5e7b85598ea3a883ea867c55cf1efda72f46a143e043f262bd"
+        },
+        {
+            "address": "BD0274D8D8C2EE62AEB41678578DA174A4CE7BA1",
+            "hex_hash": "23eb933297d689cfe8384793ad16e717fadb1066bd24d5aa98b7cf59f5cbba2d"
+        }
+    ],
+    "focused_beaver@test": [
+        {
+            "address": "BD0274D8D8C2EE62AEB41678578DA174A4CE7BA1",
+            "hex_hash": "3e5761cdeb580808b20db5346ff0125f8c2c07bc34cb42d696be0856a3809c23"
+        },
+        {
+            "address": "BD0274D8D8C2EE62AEB41678578DA174A4CE7BA1",
+            "hex_hash": "7c148a1253d21009160dd897ea381a0679dbc5d84aaf3e1e3eba31b48f77e775"
+        }
     ]
 }
