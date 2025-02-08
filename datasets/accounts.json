@@ -137,6 +137,101 @@
                 "schema:roleName": "author",
                 "schema:publicKey": "341683d70e9e075df36032bba6ea54e41bb58770eb2c95b07d26cb00cd004eb2"
             }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Intelligent Napier",
+            "foaf:mbox": "intelligent_napier@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Hamilton College"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "6504-8885-0702-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "intelligent_napier@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "c93f87f58ef1c5240feeb7a1d84cdbc54d503b05f736b96a945bf8089fd5bf1c"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Festive Proskuriakova",
+            "foaf:mbox": "festive_proskuriakova@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Hiram College"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "5469-0058-3297-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "festive_proskuriakova@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "66244bcf2d79550226daabf2235cef6008e98e7811286476dda389b0a45f4be2"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Upbeat Proskuriakova",
+            "foaf:mbox": "upbeat_proskuriakova@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "University of Wales, Bangor"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "2266-8299-8967-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "upbeat_proskuriakova@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "a6ee278747377abcb8e00e8d8b94fef37b13e3c295dcf1ec1ee7cad6e3e9eaa7"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Quirky Ptolemy",
+            "foaf:mbox": "quirky_ptolemy@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Northern University Bangladesh"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "0623-4155-7068-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "quirky_ptolemy@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "7ba8e651ab0811399ed4b68248ab4e811118c85d51f3db7667d7e4d226902575"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Amazing Joliot",
+            "foaf:mbox": "amazing_joliot@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Technische Fachhochschule Wildau"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "7073-6334-8506-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "amazing_joliot@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "7ba659433d45a246e2d1649b6ba8d5d88e1d9c0bfabe5560653df192a027efbc"
+            }
         }
     ]
 }
