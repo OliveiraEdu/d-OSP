@@ -20,24 +20,28 @@ def read_user_accounts_from_jsonld(file_path):
     with open(file_path, mode='r', encoding='utf-8') as file:
         data = json.load(file)
         user_accounts = []
+        username = []
         for entry in data["@graph"]:
             if entry["@type"] == "foaf:Person":
                 account_id = entry.get("foaf:holdsAccount", {}).get("schema:identifier")
                 if account_id:
                     user_accounts.append({'account_id': account_id})
-        return user_accounts
+                    username.append({'account_id': account_id.split('@')[0]})
+        return user_accounts, username
 
 
 def read_project_accounts_from_jsonld(file_path):
     with open(file_path, mode='r', encoding='utf-8') as file:
         data = json.load(file)
         project_accounts = []
+        project = []
         for entry in data["@graph"]:
             if entry["@type"] == "schema:ResearchProject":
                 project_id = entry.get("schema:identifier")
                 if project_id:
                     project_accounts.append({'account_id': project_id})
-        return project_accounts
+                    project.append({'account_id': project_id.split('@')[0]})
+        return project_accounts, project
 
 
 # Individual functions
@@ -205,34 +209,71 @@ def extract_account_metadata_cid_from_data(data: dict) -> Optional[str]:
         logger.error(f"Error during JSON processing: {e}")
         return None
 
-# Main function to clean input, log, and test
+from typing import Optional, Tuple
+
 @integration_helpers.trace
-def process_raw_data(raw_data: str) -> Optional[str]:
+def extract_metadata_from_data(data: dict) -> Tuple[Optional[str], Optional[str]]:
+    """
+    Extracts 'account_metadata_cid' and 'project_id' from the given data dictionary.
+    
+    :param data: Dictionary containing JSON data.
+    :return: A tuple containing ('account_metadata_cid', 'project_id') or (None, None) on failure.
+    """
     try:
-        # Clean non-printable characters (e.g., \u0001)
-        clean_data = re.sub(r'[^\x20-\x7E]', '', raw_data)
+        if not isinstance(data, dict):
+            raise ValueError("Expected input 'data' to be a dictionary.")
         
-        # Parse the cleaned JSON string into a dictionary
-        data = json.loads(clean_data)
+        json_data_str = data.get('json_data', '')
+        json_data = json.loads(json_data_str)  # Parse JSON string into a dictionary
         
-        # Extract the CID
-        account_metadata_cid = extract_account_metadata_cid_from_data(data)
+        admin_data = json_data.get('admin@test', {})
+        if not isinstance(admin_data, dict):
+            raise KeyError("'admin@test' not found or is not a dictionary in the parsed data")
         
-        # Log the results
+        account_metadata_cid = admin_data.get('account_metadata_cid')
+        project_id = admin_data.get('linked_project')
+        
+        return account_metadata_cid, project_id
+    
+    except (KeyError, json.JSONDecodeError, ValueError) as e:
+        logger.error(f"Error during JSON processing: {e}")
+        return None, None
+
+@integration_helpers.trace
+def process_raw_data(raw_data: str) -> Tuple[Optional[str], Optional[str]]:
+    """
+    Processes raw JSON string data, cleans non-printable characters, extracts metadata.
+    
+    :param raw_data: Raw JSON string.
+    :return: A tuple containing ('account_metadata_cid', 'project_id') or (None, None) on failure.
+    """
+    try:
+        clean_data = re.sub(r'[^\x20-\x7E]', '', raw_data)  # Remove non-printable characters
+        data = json.loads(clean_data)  # Parse JSON string
+        
+        account_metadata_cid, project_id = extract_metadata_from_data(data)
+        
         if account_metadata_cid:
             logger.info(f"User Metadata CID: {account_metadata_cid}")
         else:
             logger.info("'account_metadata_cid' not found or an error occurred.")
         
-        return account_metadata_cid
+        if project_id:
+            logger.info(f"Project ID: {project_id}")
+        else:
+            logger.info("'project_id' not found or an error occurred.")
+        
+        return account_metadata_cid, project_id
     except json.JSONDecodeError as e:
         logger.error(f"Error decoding JSON: {e}")
-        return None
+        return None, None
+
 
 import json
 import os
 import base64
 
+@integration_helpers.trace
 def dump_variable(variable, variable_name, temp="temp"):
     """
     Dumps a Python variable to a JSON file, handling bytes by encoding them to base64 strings.
@@ -286,3 +327,5 @@ def load_variable(variable_name, temp="temp"):
         logger.error(f"Failed to load variable '{variable_name}': {e}")
     
     return None
+
+

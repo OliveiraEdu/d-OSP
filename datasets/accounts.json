@@ -42,6 +42,25 @@
                 "schema:roleName": "publisher",
                 "schema:publicKey": "578f3ce2d29080f483bd3bb80aea86df59eebdaf4701aa6bff21290e5676eee1"
             }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Eager Ride",
+            "foaf:mbox": "eager_ride@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "College of Busniess Admnistration"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "0887-1009-0790-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "eager_ride@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "e69e7844c0fb9e698f40102a029addb68b3c45f7d2408a02240eda07f0049c97"
+            }
         }
     ]
 }

@@ -64,6 +64,36 @@
                 }
             },
             "schema:metadataCID": "QmRXkSh7UPWBNzbLjEL7YTSyPgk6fFyfj1BrGG4Axk5A6d"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "92181@test",
+            "schema:publicKey": "d45e9fc7ddcbe85f5f7f981666aa4228edf7d17d5b86e822d33f2a5315d27a92",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Analyzing the Influence of hydrogen energy on disaster preparedness",
+                "dc:abstract": "This paper analyzes how hydrogen energy influences disaster preparedness, providing insights into how to maximize its climate resilience.",
+                "schema:keywords": [
+                    "hydrogen energy",
+                    "disaster preparedness",
+                    "climate resilience"
+                ],
+                "schema:startDate": "2022-01-14",
+                "schema:endDate": "2028-04-20",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "Asian Development Bank"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Rajasthan, India"
+                }
+            },
+            "schema:metadataCID": "Qmc3efuDTcBE2BKeQ3b22KadoHz62863MdeeXs7GtQM4fT"
         }
     ]
 }
