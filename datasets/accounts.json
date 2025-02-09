@@ -6,61 +6,43 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Distracted Rhodes",
-            "foaf:mbox": "distracted_rhodes@email.com",
+            "foaf:name": "Gallant Montalcini",
+            "foaf:mbox": "gallant_montalcini@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "East Kazakhstan State University"
+                "foaf:name": "International School of Management"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "7285-7830-7682-X"
+                "value": "0192-1055-9859-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "distracted_rhodes@test",
-                "schema:roleName": "publisher",
-                "schema:publicKey": "0f24776f3d65a2263ce26e6aa15bf8bee4496983d01fe114def398cdb39308d0"
+                "schema:identifier": "gallant_montalcini@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "192198c44341dd65bdc51dc44f0a334f58e4d653859f3f0bf3e215b312c12988"
             },
-            "schema:linked_project": "23897@test"
+            "schema:linked_project": "52333@test"
         },
         {
             "@type": "foaf:Person",
-            "foaf:name": "Unruffled Merkle",
-            "foaf:mbox": "unruffled_merkle@email.com",
+            "foaf:name": "Exciting Hofstadter",
+            "foaf:mbox": "exciting_hofstadter@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Lebanese American University"
+                "foaf:name": "Dhurakijpundit University"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "7882-5876-3606-X"
+                "value": "0505-8709-9666-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "unruffled_merkle@test",
-                "schema:roleName": "publisher",
-                "schema:publicKey": "578f3ce2d29080f483bd3bb80aea86df59eebdaf4701aa6bff21290e5676eee1"
-            }
-        },
-        {
-            "@type": "foaf:Person",
-            "foaf:name": "Eager Ride",
-            "foaf:mbox": "eager_ride@email.com",
-            "foaf:organization": {
-                "@type": "foaf:Organization",
-                "foaf:name": "College of Busniess Admnistration"
+                "schema:identifier": "exciting_hofstadter@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "dbe5043db833486921eb5604149023d41619bbe4c9156240b6c7d5832b9a942b"
             },
-            "schema:identifier": {
-                "@type": "PropertyValue",
-                "propertyID": "ORCID",
-                "value": "0887-1009-0790-X"
-            },
-            "foaf:holdsAccount": {
-                "schema:identifier": "eager_ride@test",
-                "schema:roleName": "publisher",
-                "schema:publicKey": "e69e7844c0fb9e698f40102a029addb68b3c45f7d2408a02240eda07f0049c97"
-            }
+            "schema:linked_project": "38273@test"
         }
     ]
 }

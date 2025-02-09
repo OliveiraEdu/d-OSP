@@ -6,94 +6,65 @@
     "@graph": [
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "23897@test",
-            "schema:publicKey": "49476f2a225bb6f324e4bfcacbcab7985a012bd7967b1226d3156f537bcb3766",
+            "schema:identifier": "52333@test",
+            "schema:publicKey": "04b04e56be3d5997d11a85c2d7119438ae9ec64020e71372bf4fbf05603cae26",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Investigating the Role of 5G technology in biomedical research",
-                "dc:abstract": "This study explores the impact of 5G technology in biomedical research, focusing on ecosystem services.",
+                "schema:name": "Exploring the Effects of telehealth on coastal communities",
+                "dc:abstract": "This study aims to investigate the effects of telehealth on coastal communities and propose strategies for improvement.",
                 "schema:keywords": [
-                    "5G technology",
-                    "biomedical research",
-                    "ecosystem services"
+                    "telehealth",
+                    "coastal communities",
+                    "sustainability"
                 ],
-                "schema:startDate": "2018-01-10",
-                "schema:endDate": "2028-05-28",
+                "schema:startDate": "2020-07-04",
+                "schema:endDate": "2027-07-14",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "National Institutes of Health"
+                    "schema:name": "Bill and Melinda Gates Foundation"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
-                    "schema:name": "Phuket, Thailand"
+                    "schema:name": "Cape Town, South Africa"
                 }
             },
-            "schema:metadataCID": "QmZWxvqf9TMxLMKjMBLHpNmnXaUJRvACahXqZt2dkf7G3u",
-            "schema:linked_user": "distracted_rhodes@test"
+            "schema:metadataCID": "QmZzEdxoNxRmg7KE7zMUdz6zhvpS3zWJRXzX9pGynWtW3L",
+            "schema:linked_user": "gallant_montalcini@test"
         },
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "87810@test",
-            "schema:publicKey": "b76e0e70d5307a9661695050f4ce0b8b9d5b1209e030a8af92089817fa289357",
+            "schema:identifier": "38273@test",
+            "schema:publicKey": "ff29ec09278cde6391a1b1a6cab1918a75aa1e097e666e9bade43ceabb12ef36",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Analyzing the Influence of big data on precision medicine",
-                "dc:abstract": "This paper analyzes how big data influences precision medicine, providing insights into how to maximize its environmental sustainability.",
+                "schema:name": "Exploring the Effects of electric vehicles on manufacturing industry",
+                "dc:abstract": "This study aims to investigate the effects of electric vehicles on manufacturing industry and propose strategies for improvement.",
                 "schema:keywords": [
-                    "big data",
-                    "precision medicine",
-                    "environmental sustainability"
+                    "electric vehicles",
+                    "manufacturing industry",
+                    "resource optimization"
                 ],
-                "schema:startDate": "2024-07-26",
-                "schema:endDate": "2027-10-17",
+                "schema:startDate": "2023-10-09",
+                "schema:endDate": "2025-10-06",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "United Nations Environment Programme"
+                    "schema:name": "European Union Horizon 2020"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
-                    "schema:name": "Rotterdam, Netherlands"
+                    "schema:name": "Accra, Ghana"
                 }
             },
-            "schema:metadataCID": "QmRXkSh7UPWBNzbLjEL7YTSyPgk6fFyfj1BrGG4Axk5A6d"
-        },
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "92181@test",
-            "schema:publicKey": "d45e9fc7ddcbe85f5f7f981666aa4228edf7d17d5b86e822d33f2a5315d27a92",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Analyzing the Influence of hydrogen energy on disaster preparedness",
-                "dc:abstract": "This paper analyzes how hydrogen energy influences disaster preparedness, providing insights into how to maximize its climate resilience.",
-                "schema:keywords": [
-                    "hydrogen energy",
-                    "disaster preparedness",
-                    "climate resilience"
-                ],
-                "schema:startDate": "2022-01-14",
-                "schema:endDate": "2028-04-20",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "Asian Development Bank"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Rajasthan, India"
-                }
-            },
-            "schema:metadataCID": "Qmc3efuDTcBE2BKeQ3b22KadoHz62863MdeeXs7GtQM4fT"
+            "schema:metadataCID": "QmUVDTxUHXmQ3cB2jWgKsJVpmkukBniMwq51p2P3hdCqdL",
+            "schema:linked_user": "exciting_hofstadter@test"
         }
     ]
 }
