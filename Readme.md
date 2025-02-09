@@ -274,7 +274,7 @@ The default Genesis block for Iroha 1 docker image `admin@test` does not have th
 - On project details improve the data structute for storing file CID and file metadata CID - Done
 
 ### Provenance
-- Implementing a git like version control system for provenance
+- Implementing a git like version control system for provenance - Done (although following a distinct approach for provenance of the blockchain transasctions only)
 
 ### Project Details
 - Optimize file and file metadata entries - Done
