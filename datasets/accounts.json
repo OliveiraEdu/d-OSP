@@ -232,6 +232,44 @@
                 "schema:roleName": "publisher",
                 "schema:publicKey": "7ba659433d45a246e2d1649b6ba8d5d88e1d9c0bfabe5560653df192a027efbc"
             }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Beautiful Ellis",
+            "foaf:mbox": "beautiful_ellis@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Yanbu University College"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "9657-7288-3592-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "beautiful_ellis@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "f74857bafcd6c77e5a97bb25a43eb0e8be98a9f7ec44b3209db0514233b95daf"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Quizzical Noyce",
+            "foaf:mbox": "quizzical_noyce@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Balochistan University of Information Technology & Management Sciences "
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "3145-3604-8462-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "quizzical_noyce@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "a1b3bfd96e831c024f8bb9bb1572f40b9e39c019db14c87a856865207f4a55e3"
+            }
         }
     ]
 }

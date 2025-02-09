@@ -164,6 +164,126 @@
                 }
             },
             "schema:metadataCID": "QmavjajTRPpVKFBm94rZdCxzVDaxMdPnwwQRzRUwFnrTDn"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "63385@test",
+            "schema:publicKey": "e907f3d69ec9e2be3551c660e026703a69bf31462168cc608aebc5a1ae23793c",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Analyzing the Influence of smart grids on disaster preparedness",
+                "dc:abstract": "This paper analyzes how smart grids influences disaster preparedness, providing insights into how to maximize its scientific discovery.",
+                "schema:keywords": [
+                    "smart grids",
+                    "disaster preparedness",
+                    "scientific discovery"
+                ],
+                "schema:startDate": "2020-09-22",
+                "schema:endDate": "2028-09-03",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "National Institutes of Health"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Lisbon, Portugal"
+                }
+            },
+            "schema:metadataCID": "QmT4BKgVwxcZvnMWdUwRsNmAaNfND17n4Uig1LEPGs6NDh"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "91634@test",
+            "schema:publicKey": "27e8e323d759098d01901b24a4872e53f22b8799227ef31686c5e25ef1fbc5dd",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Exploring the Effects of renewable materials on coastal communities",
+                "dc:abstract": "This study aims to investigate the effects of renewable materials on coastal communities and propose strategies for improvement.",
+                "schema:keywords": [
+                    "renewable materials",
+                    "coastal communities",
+                    "resource optimization"
+                ],
+                "schema:startDate": "2019-12-06",
+                "schema:endDate": "2027-04-28",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "Department of Energy"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Lisbon, Portugal"
+                }
+            },
+            "schema:metadataCID": "QmckwwL8gW29zhWpEX2G2qAyFqVvo62P22WvRHrmtfYvuf"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "02688@test",
+            "schema:publicKey": "f0c3ce10613ddc533d2e89faa7216c7767f13133c6b20f40e9138e1712126530",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Investigating the Role of urban sprawl in sustainable agriculture",
+                "dc:abstract": "This study explores the impact of urban sprawl in sustainable agriculture, focusing on environmental conservation.",
+                "schema:keywords": [
+                    "urban sprawl",
+                    "sustainable agriculture",
+                    "environmental conservation"
+                ],
+                "schema:startDate": "2022-07-18",
+                "schema:endDate": "2026-10-08",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "National Science Foundation"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Accra, Ghana"
+                }
+            },
+            "schema:metadataCID": "QmWVu9aJS5gyaSvPb48s2HVyCRiBKUkAffVE7x93u4hcv6"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "20146@test",
+            "schema:publicKey": "e811a0d0b87d8552cad315ad1420e317e9df1078b3fa01eff4aec53ab988416f",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Analyzing the Influence of bioinformatics on sustainable fisheries",
+                "dc:abstract": "This paper analyzes how bioinformatics influences sustainable fisheries, providing insights into how to maximize its risk mitigation.",
+                "schema:keywords": [
+                    "bioinformatics",
+                    "sustainable fisheries",
+                    "risk mitigation"
+                ],
+                "schema:startDate": "2020-08-14",
+                "schema:endDate": "2026-07-28",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "European Union Horizon 2020"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Los Angeles, California, USA"
+                }
+            },
+            "schema:metadataCID": "QmSDS1UfYDrvuqehdSPszkFnXqHkAxDdSoG3e8p8UXmg6k"
         }
     ]
 }
