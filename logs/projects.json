@@ -1,0 +1,70 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "dc": "http://purl.org/dc/terms/"
+    },
+    "@graph": [
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "72798@test",
+            "schema:publicKey": "96ef4d52f11fd30eeb83cb857f9696adba819a4837ea1a04d7c91cfd2386297d",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Exploring the Effects of electric vehicles on space exploration",
+                "dc:abstract": "This study aims to investigate the effects of electric vehicles on space exploration and propose strategies for improvement.",
+                "schema:keywords": [
+                    "electric vehicles",
+                    "space exploration",
+                    "sustainability"
+                ],
+                "schema:startDate": "2023-06-01",
+                "schema:endDate": "2028-10-06",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "United Nations Environment Programme"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Tokyo, Japan"
+                }
+            },
+            "schema:metadataCID": "QmdbBDkpyDiHT8Cm31BrNPC3F861RC1KpgZaViA19UeADi",
+            "schema:linked_user": "youthful_albattani@test"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "98639@test",
+            "schema:publicKey": "d4d6b7e457eeee33d690adf1a7175f3e17ec2cc3f29135dc84e8d29a5b9e6868",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Analyzing the Influence of gene therapy on pharmaceutical research",
+                "dc:abstract": "This paper analyzes how gene therapy influences pharmaceutical research, providing insights into how to maximize its scientific discovery.",
+                "schema:keywords": [
+                    "gene therapy",
+                    "pharmaceutical research",
+                    "scientific discovery"
+                ],
+                "schema:startDate": "2018-10-19",
+                "schema:endDate": "2027-11-14",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "National Science Foundation"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Yellowstone National Park, USA"
+                }
+            },
+            "schema:metadataCID": "QmQACRmJQVbzsLdR2BqtyCA8YoSkGT8LuRhT2dXQN3bn2w",
+            "schema:linked_user": "optimistic_aryabhata@test"
+        }
+    ]
+}

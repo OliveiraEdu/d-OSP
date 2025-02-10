@@ -1,0 +1,48 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "foaf": "http://xmlns.com/foaf/0.1/"
+    },
+    "@graph": [
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Youthful Albattani",
+            "foaf:mbox": "youthful_albattani@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Universit\u00e9 de Montr\u00e9al"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "7496-5922-3125-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "youthful_albattani@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "f796e75b3df1d330511a81d95e29d1f0be99d090e0ea23d2833528ab5899651a"
+            },
+            "schema:linked_project": "72798@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Optimistic Aryabhata",
+            "foaf:mbox": "optimistic_aryabhata@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Muthesius-Hochschule, Fachhochschule f\u00fcr Kunst und Gestaltung"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "4138-5255-4792-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "optimistic_aryabhata@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "580b63a70112040e38248f0430798ebd77ace027ff00e4757f411d7c30590c78"
+            },
+            "schema:linked_project": "98639@test"
+        }
+    ]
+}

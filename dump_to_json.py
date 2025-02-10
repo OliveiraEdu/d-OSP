@@ -28,7 +28,7 @@ class ProjectAccount:
     public_key: str  # Public key for cryptographic purposes
 
     
-def dump_to_json_ld(user_account: UserAccount, filename="datasets/accounts.json"):
+def dump_to_json_ld(user_account: UserAccount, filename="logs/accounts.json"):
     try:
         # Ensure that the 'datasets' directory exists
         directory = os.path.dirname(filename)
@@ -89,7 +89,7 @@ def dump_to_json_ld(user_account: UserAccount, filename="datasets/accounts.json"
 
 
 
-def dump_project_to_json_ld(project_id, public_key, project_filename="datasets/projects.json"):
+def dump_project_to_json_ld(project_id, public_key, project_filename="logs/projects.json"):
     try:
         # Ensure that the 'datasets' directory exists
         directory = os.path.dirname(project_filename)
@@ -135,7 +135,7 @@ def dump_project_to_json_ld(project_id, public_key, project_filename="datasets/p
 
 
 
-def append_project_metadata_to_json_ld(project_id, project_metadata_json, project_metadata_cid, project_filename="datasets/projects.json"):
+def append_project_metadata_to_json_ld(project_id, project_metadata_json, project_metadata_cid, project_filename="logs/projects.json"):
     try:
         # Ensure that the 'datasets' directory exists
         directory = os.path.dirname(project_filename)
@@ -179,7 +179,7 @@ def append_project_metadata_to_json_ld(project_id, project_metadata_json, projec
 import json
 import os
 
-def update_or_append_project_metadata(project_id_base, project_metadata_json, project_metadata_cid, domain="test", project_filename="datasets/projects.json"):
+def update_or_append_project_metadata(project_id_base, project_metadata_json, project_metadata_cid, domain="test", project_filename="logs/projects.json"):
     # Create the dynamic project_id
     project_id = f"{project_id_base}@{domain}"  # Format: project_id@test
 
@@ -246,7 +246,7 @@ def update_project_entry_with_file_data(project_id, file_cid, metadata_cid, meta
         project_id = project_id.get('account_id', '').strip()  # Ensure project_id is correctly extracted as a string
     
     # Path to your projects.json file
-    file_path = 'datasets/projects.json'
+    file_path = 'logs/projects.json'
 
     # Open the JSON file
     try:
@@ -296,7 +296,7 @@ def update_project_entry_with_file_data(project_id, file_cid, metadata_cid, meta
             break
 
     if not project_found:
-        logger.info(f"Project {project_id} not found in datasets/projects.json")
+        logger.info(f"Project {project_id} not found in logs/projects.json")
         return
 
     # Write the updated data back to the JSON file

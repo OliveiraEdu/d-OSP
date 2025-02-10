@@ -216,7 +216,7 @@ def set_account_detail(address, account, key, value):
 
 
 # Function to update user account with linked project
-def update_user_account_link(user_account_id, linked_project_id, accounts_filename="datasets/accounts.json"):
+def update_user_account_link(user_account_id, linked_project_id, accounts_filename="logs/accounts.json"):
     try:
         if os.path.exists(accounts_filename):
             with open(accounts_filename, mode='r', encoding='utf-8') as file:
@@ -247,7 +247,7 @@ def update_user_account_link(user_account_id, linked_project_id, accounts_filena
 
 
 # Function to update project account with linked user
-def update_project_account_link(project_account_id, linked_user_id, projects_filename="datasets/projects.json"):
+def update_project_account_link(project_account_id, linked_user_id, projects_filename="logs/projects.json"):
     try:
         if os.path.exists(projects_filename):
             with open(projects_filename, mode='r', encoding='utf-8') as file:
@@ -526,7 +526,7 @@ def set_account_detail(address, account, key, value):
 @integration_helpers.trace
 def process_account(address, account_id):
     try:
-        with open('datasets/accounts.json', 'r', encoding='utf-8') as jsonldfile:
+        with open('logs/accounts.json', 'r', encoding='utf-8') as jsonldfile:
             data = json.load(jsonldfile)
             # logger.info(f"Processing data: {data}")
             
@@ -557,6 +557,6 @@ def process_account(address, account_id):
            
             
     except FileNotFoundError:
-        logger.error("The JSON-LD file 'datasets/accounts.json' does not exist.")
+        logger.error("The JSON-LD file 'logs/accounts.json' does not exist.")
     except Exception as e:
         logger.error(f"Error processing account: {str(e)}")
