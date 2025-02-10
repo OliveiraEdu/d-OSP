@@ -19,7 +19,6 @@ def upload_file_to_ipfs(file_path):
 
     # Add the file to IPFS
     result = client.add(file_path)
-    # ic(result['Name'], result['Hash'])
     value = result['Hash']
     return value
 
@@ -30,11 +29,16 @@ def download_file_from_ipfs(cid, output_path):
     with open(output_path, 'wb') as f:
         f.write(file_data)
 
-def upload_json_to_ipfs(json):
-    # Add the JSON to IPFS
-    file_metadata_CID = client.add_json(json)
-    return file_metadata_CID
+def upload_json_to_ipfs(json_data):
+    try:
+        metadata_cid = client.add_json(json_data)  # Ensure 'client' is properly defined
+        logger.success(f"Success uploading JSON to IPFS. CID: {metadata_cid}")
+        return metadata_cid
+    except Exception as e:
+        logger.error(f"Error uploading JSON to IPFS: {e}")
+        return None
 
+    
 
 def download_json_from_ipfs(cid):
     try:
