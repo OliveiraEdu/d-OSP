@@ -6,65 +6,123 @@
     "@graph": [
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "72798@test",
-            "schema:publicKey": "96ef4d52f11fd30eeb83cb857f9696adba819a4837ea1a04d7c91cfd2386297d",
+            "schema:identifier": "08056@test",
+            "schema:publicKey": "8960458ddd421eb5b37ff04340938c9762afb8ae10dc835f0c88a3bc411fdeb1",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Exploring the Effects of electric vehicles on space exploration",
-                "dc:abstract": "This study aims to investigate the effects of electric vehicles on space exploration and propose strategies for improvement.",
+                "schema:name": "Exploring the Effects of telehealth on public safety",
+                "dc:abstract": "This study aims to investigate the effects of telehealth on public safety and propose strategies for improvement.",
                 "schema:keywords": [
-                    "electric vehicles",
-                    "space exploration",
-                    "sustainability"
+                    "telehealth",
+                    "public safety",
+                    "greenhouse gas reduction"
                 ],
-                "schema:startDate": "2023-06-01",
-                "schema:endDate": "2028-10-06",
+                "schema:startDate": "2020-12-28",
+                "schema:endDate": "2028-03-29",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "United Nations Environment Programme"
+                    "schema:name": "National Institutes of Health"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
-                    "schema:name": "Tokyo, Japan"
+                    "schema:name": "Bangkok, Thailand"
                 }
             },
-            "schema:metadataCID": "QmdbBDkpyDiHT8Cm31BrNPC3F861RC1KpgZaViA19UeADi",
-            "schema:linked_user": "youthful_albattani@test"
+            "schema:metadataCID": "QmfVcinCg2XPD8SdyKMLHVvv418GYdWoGNX4jSiNF8PgQG"
         },
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "98639@test",
-            "schema:publicKey": "d4d6b7e457eeee33d690adf1a7175f3e17ec2cc3f29135dc84e8d29a5b9e6868",
+            "schema:identifier": "84237@test",
+            "schema:publicKey": "51d1b8921828b1d34b7bacd66a85841c53277677b42d9ae0c453016246473176",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Analyzing the Influence of gene therapy on pharmaceutical research",
-                "dc:abstract": "This paper analyzes how gene therapy influences pharmaceutical research, providing insights into how to maximize its scientific discovery.",
+                "schema:name": "Investigating the Role of 5G technology in carbon neutrality",
+                "dc:abstract": "This study explores the impact of 5G technology in carbon neutrality, focusing on innovation in healthcare.",
                 "schema:keywords": [
-                    "gene therapy",
-                    "pharmaceutical research",
-                    "scientific discovery"
+                    "5G technology",
+                    "carbon neutrality",
+                    "innovation in healthcare"
                 ],
-                "schema:startDate": "2018-10-19",
-                "schema:endDate": "2027-11-14",
+                "schema:startDate": "2018-05-12",
+                "schema:endDate": "2026-02-14",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "National Science Foundation"
+                    "schema:name": "European Union Horizon 2020"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
-                    "schema:name": "Yellowstone National Park, USA"
+                    "schema:name": "Cape Town, South Africa"
                 }
             },
-            "schema:metadataCID": "QmQACRmJQVbzsLdR2BqtyCA8YoSkGT8LuRhT2dXQN3bn2w",
-            "schema:linked_user": "optimistic_aryabhata@test"
+            "schema:metadataCID": "QmZThzvBo7h4QGQPKX2y7FqyqfJo4vPbum17Zioc445E6G"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "63021@test",
+            "schema:publicKey": "e3d3741b6a17a58750770ac1e4a6264600115ef5338db499b9a3d7aef3187864",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Analyzing the Influence of bioinformatics on urban resilience",
+                "dc:abstract": "This paper analyzes how bioinformatics influences urban resilience, providing insights into how to maximize its resilience building.",
+                "schema:keywords": [
+                    "bioinformatics",
+                    "urban resilience",
+                    "resilience building"
+                ],
+                "schema:startDate": "2019-05-02",
+                "schema:endDate": "2026-09-10",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "National Institutes of Health"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Svalbard, Norway"
+                }
+            },
+            "schema:metadataCID": "QmapVvUCvrTu5vBSvjffDyyqQvSrtLohp6o16LE7z1aJeH"
+        },
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "72144@test",
+            "schema:publicKey": "dd3f18643d7be5395d4f9d27d2f04bc1f669d30f1f6a2a494f42ccb95eef1aa4",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Assessing the Benefits of renewable plastics for healthcare systems",
+                "dc:abstract": "This research focuses on the benefits and challenges posed by renewable plastics for healthcare systems, with an emphasis on its potential for operational efficiency.",
+                "schema:keywords": [
+                    "renewable plastics",
+                    "healthcare systems",
+                    "operational efficiency"
+                ],
+                "schema:startDate": "2023-11-06",
+                "schema:endDate": "2026-02-05",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "Food and Agriculture Organization"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Lagos, Nigeria"
+                }
+            },
+            "schema:metadataCID": "QmbDqRJgAgfCejaGKpCmF7QivJ4TwKRrdiPEwC1F8shDsA"
         }
     ]
 }

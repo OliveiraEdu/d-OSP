@@ -6,43 +6,79 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Youthful Albattani",
-            "foaf:mbox": "youthful_albattani@email.com",
+            "foaf:name": "Elastic Pike",
+            "foaf:mbox": "elastic_pike@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Universit\u00e9 de Montr\u00e9al"
+                "foaf:name": "Wesley University of Science and Technology"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "7496-5922-3125-X"
+                "value": "2379-0112-6232-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "youthful_albattani@test",
-                "schema:roleName": "publisher",
-                "schema:publicKey": "f796e75b3df1d330511a81d95e29d1f0be99d090e0ea23d2833528ab5899651a"
-            },
-            "schema:linked_project": "72798@test"
+                "schema:identifier": "elastic_pike@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "f3fa0e56dd69dbb1fdf3880c92f82a7f7ba1d06e6b70c9fc72bbd6f5a57cd938"
+            }
         },
         {
             "@type": "foaf:Person",
-            "foaf:name": "Optimistic Aryabhata",
-            "foaf:mbox": "optimistic_aryabhata@email.com",
+            "foaf:name": "Musing Neumann",
+            "foaf:mbox": "musing_neumann@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Muthesius-Hochschule, Fachhochschule f\u00fcr Kunst und Gestaltung"
+                "foaf:name": "University of Rio Grande"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "4138-5255-4792-X"
+                "value": "4998-5853-3029-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "optimistic_aryabhata@test",
-                "schema:roleName": "reviewer",
-                "schema:publicKey": "580b63a70112040e38248f0430798ebd77ace027ff00e4757f411d7c30590c78"
+                "schema:identifier": "musing_neumann@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "0812b05877374df2dae7646fda6c461c60aecefa77ed8b74f58f1b1522481856"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Vigorous Payne",
+            "foaf:mbox": "vigorous_payne@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Fachhochschule Rottenburg, Hochschule f\u00fcr Forstwirtschaft"
             },
-            "schema:linked_project": "98639@test"
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "7994-4168-8167-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "vigorous_payne@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "f5d88252087b37b9d602fa2fc524d7158f45725ebaa1ea4972030a7df9d302d3"
+            }
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Upbeat Neumann",
+            "foaf:mbox": "upbeat_neumann@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Universit\u00e4t Flensburg"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "9899-2445-1472-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "upbeat_neumann@test",
+                "schema:roleName": "author",
+                "schema:publicKey": "0d21181cb2626e98e24b9326044b564b331462043d10b92b05f19407d139e914"
+            }
         }
     ]
 }
