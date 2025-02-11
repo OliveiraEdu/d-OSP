@@ -54,4 +54,3 @@ def download_json_from_ipfs(cid):
     except Exception as e:
         logger.error(f"Error retrieving JSON from IPFS: {e}")
         return None
-

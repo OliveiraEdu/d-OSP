@@ -122,7 +122,8 @@
                     "schema:name": "Lagos, Nigeria"
                 }
             },
-            "schema:metadataCID": "QmbDqRJgAgfCejaGKpCmF7QivJ4TwKRrdiPEwC1F8shDsA"
+            "schema:metadataCID": "QmbDqRJgAgfCejaGKpCmF7QivJ4TwKRrdiPEwC1F8shDsA",
+            "schema:linked_user": "upbeat_neumann@test"
         }
     ]
 }

@@ -1,5 +1,4 @@
 import os
-from loguru import logger
 from ipfs_functions import *
 import integration_helpers
 from super_helper import *
@@ -9,8 +8,10 @@ from iroha_helper import *
 from super_helper import index_metadata
 import re
 from typing import Optional
-
-
+import json
+import base64
+from loguru import logger
+# import mimetypes
 
 # Initialize Tika
 tika.initVM()
@@ -76,9 +77,6 @@ def index_file_with_woosh(file_path, metadata_cid):
 
 
 
-
-
-import mimetypes
 
 # Function to parse and index documents from a directory
 def parse_documents_in_directory(file_path, filename,project_id):
@@ -269,9 +267,6 @@ def process_raw_data(raw_data: str) -> Tuple[Optional[str], Optional[str]]:
         return None, None
 
 
-import json
-import os
-import base64
 
 @integration_helpers.trace
 def dump_variable(variable, variable_name, temp="temp"):
@@ -319,7 +314,7 @@ def load_variable(variable_name, temp="temp"):
     try:
         with open(file_path, "r") as f:
             variable = json.load(f, object_hook=decode_bytes)
-        logger.info(f"Variable '{variable_name}' successfully loaded from {file_path}")
+        logger.success(f"Variable '{variable_name}' successfully loaded from {file_path}")
         return variable
     except FileNotFoundError:
         logger.error(f"File '{file_path}' not found.")

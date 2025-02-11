@@ -78,6 +78,26 @@
                 "schema:identifier": "upbeat_neumann@test",
                 "schema:roleName": "author",
                 "schema:publicKey": "0d21181cb2626e98e24b9326044b564b331462043d10b92b05f19407d139e914"
+            },
+            "schema:linked_project": "72144@test"
+        },
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Exciting Napier",
+            "foaf:mbox": "exciting_napier@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "University of Macedonia"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "8206-1430-6714-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "exciting_napier@test",
+                "schema:roleName": "publisher",
+                "schema:publicKey": "88cc284fbbe5f8a3362f5aef3d68444b66103a54888e61ea1067b8e63d098d72"
             }
         }
     ]
