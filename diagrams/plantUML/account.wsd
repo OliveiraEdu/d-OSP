@@ -1,5 +1,11 @@
 @startuml
 
+title User Account
+skinparam monochrome true
+
+top to bottom direction
+
+
 ' Define Person entity
 class "foaf:Person" {
     + foaf:name

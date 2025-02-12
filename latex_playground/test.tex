@@ -2,13 +2,12 @@
 \usepackage{longtable}
 \usepackage{multirow}
 \usepackage{array}
-\documentclass{article}
 \usepackage{graphicx}  % For inserting images
 \usepackage{caption}   % For better caption formatting
 \usepackage{float}     % To control figure placement
 
 
-\title{Schema and Relationships}
+\title{Open Science Platform Artifact}
 \author{Eduardo Oliveira}
 \date{\today}
 
@@ -16,9 +15,28 @@
 
 \maketitle
 
-\section{Entities Representation}
+\section{Open Science Platform}
 
-\subsection{User Account}
+\subsection{Overview}
+
+The Open Science platform aims to empower researchers and members of the scientific community by providing a secure, transparent, and tamper-evident environment for sharing project artifacts and data. Building on this objective, our platform leverages cutting-edge technologies to ensure the integrity and reliability of shared information.
+
+\subsection{Technology Stack}
+
+The Open Science platform is built upon a robust technical foundation, comprising:
+
+\begin{itemize}
+  \item Hyperledger Iroha v1 Blockchain: Serves as the core infrastructure for account management and transaction recording, ensuring secure and transparent data exchange.
+  \item IPFS (InterPlanetary File System): Provides decentralized storage for project artifacts and metadata, guaranteeing tamper-proof and persistent access to shared information.
+  \item Apache Tika: Utilized for extracting file metadata, enhancing the platform's ability to manage and describe artifact content.
+  \item Woosh: For efficient indexing and search capabilities for artifacts stored on the platform.
+  \item Jupyter Notebooks in Python: The front-end interface of the platform leverages Jupyter Notebooks in Python to provide automate and display the execution steps of the activities in the platform.
+\end{itemize}
+
+\subsection{Operations}
+
+
+
 
 \begin{longtable}{|l|l|p{8cm}|}
     \hline
@@ -78,20 +96,28 @@
         \item \textbf{foaf:Organization} – Represents an institution or organization to which a person is affiliated.
         \item \textbf{foaf:holdsAccount} – Represents an individual's digital account, containing an identifier, role, and public key.
         \item \textbf{schema:identifier} – Represents a unique identifier (such as an ORCID) assigned to a person.
-        \item \textbf{schema:linked_project} – Represents a research project associated with a specific individual.
     \end{itemize}
     
-    
-    Each \texttt{foaf:Person} entity is associated with an \texttt{foaf:Organization}, has a \texttt{foaf:holdsAccount}, and a unique \texttt{schema:identifier}. The entity "Upbeat Neumann" also has an additional relationship linking them to a specific research project.
     
     \vspace{1cm}
     
     \begin{figure}[H]
         \centering
         \includegraphics[width=\textwidth]{/home/eduardo/Documents/repo/Git/OpenScience/out/diagrams/plantUML/account/account.png}  % Placeholder for the SVG file
-        \caption{Entity-Relationship Diagram foror the user account.}
+        \caption{Entity-Relationship diagram for the user account.}
         \label{fig:er-diagram}
     \end{figure}
+
+   
+    \vspace{1cm}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{/home/eduardo/Documents/repo/Git/OpenScience/out/diagrams/plantUML/project/project.png}  % Placeholder for the SVG file
+        \caption{Entity-Relationship diagram for the project account.}
+        \label{fig:er-diagram}
+    \end{figure}
+    
     
     
 \end{document}

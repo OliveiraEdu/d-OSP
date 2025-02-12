@@ -1,0 +1,46 @@
+@startuml
+
+title Project Account
+skinparam monochrome true
+
+top to bottom direction
+
+
+' Define Research Project entity
+class "schema:ResearchProject" {
+    + schema:identifier
+    + schema:publicKey
+    + schema:metadataCID
+}
+
+' Define Description entity
+class "schema:description" {
+    + schema:name
+    + dc:abstract
+    + schema:startDate
+    + schema:endDate
+    + schema:keywords
+}
+
+' Define Funding Organization entity
+class "schema:funding" {
+    + schema:name
+}
+
+' Define Location entity
+class "schema:location" {
+    + schema:name
+}
+
+' Define Linked User entity (optional)
+class "schema:linked_user" {
+    + email
+}
+
+' Define Relationships
+"schema:ResearchProject" -- "schema:description" : has >
+"schema:ResearchProject" -- "schema:funding" : funded by >
+"schema:ResearchProject" -- "schema:location" : located in >
+"schema:ResearchProject" -- "schema:linked_user" : linked to > (optional)
+
+@enduml
