@@ -1,0 +1,40 @@
+@startuml
+
+' Define Person entity
+class "foaf:Person" {
+    + foaf:name
+    + foaf:mbox
+}
+
+' Define Organization entity
+class "foaf:Organization" {
+    + foaf:name
+}
+
+' Define HoldsAccount entity
+class "foaf:holdsAccount" {
+    + schema:identifier
+    + schema:roleName
+    + schema:publicKey
+}
+
+' Define Identifier entity
+class "schema:identifier" {
+    + propertyID
+    + value
+}
+
+' Define Project entity (linked to a person)
+class "schema:linked_project" {
+    + projectID
+}
+
+' Define relationships for each person
+"foaf:Person" -- "foaf:Organization" : belongs to >
+"foaf:Person" -- "foaf:holdsAccount" : has >
+"foaf:Person" -- "schema:identifier" : has >
+
+' Define Upbeat Neumann's special link
+"foaf:Person" -- "schema:linked_project" : linked to >
+
+@enduml
