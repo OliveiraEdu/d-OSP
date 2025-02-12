@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage{longtable}
+
+\title{Schema and Relationships}
+\author{Eduardo Oliveira}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Entities Representation}
+
+\subsection{User Account}
+
+\begin{longtable}{|l|l|p{8cm}|}
+\hline
+\textbf{Entity} & \textbf{Attribute} & \textbf{Description} \\
+\hline
+\texttt{@context} & schema & The Schema.org namespace, which defines terms used for structured data. \\
+                      & foaf & The FOAF (Friend of a Friend) namespace, which defines terms used for structured data. \\
+\hline
+\texttt{foaf:Person} & foaf:name & The name of the person. \\
+                     & foaf:mbox & The email address of the person. \\
+\hline
+\texttt{foaf:holdsAccount} & schema:identifier & Unique account identifier. \\
+                           & schema:publicKey & Cryptographic public key. \\
+                           & schema:roleName & The role associated with this account (e.g., author, reviewer, publisher). \\
+\hline
+\texttt{foaf:Organization} & foaf:name & The name of the organization. \\
+\hline
+\texttt{schema:identifier} & propertyID & Identifier type ORCID. \\
+                           & value & The actual identifier value. \\
+\hline
+\end{longtable}
+
+\subsection{Project Account}
+
+\begin{longtable}{|l|l|p{8cm}|}
+\hline
+\textbf{Entity} & \textbf{Attribute} & \textbf{Description} \\
+\hline
+\texttt{@context} & schema & The schema.org and the Dublin Core (dc) namespaces, which defines terms used for structured data. \\
+\hline
+\texttt{@type} & schema:ResearchProject & Represents a research project. \\
+\hline
+\texttt{@type} & schema:ResearchProject & Represents a research project. \\
+\hline
+\texttt{@type} & schema:ResearchProject & Represents a research project. \\
+\hline
+\texttt{dc:abstract} & dc:abstract & A brief description of the research project. \\
+\hline
+\texttt{schema:endDate} & schema:endDate & The date when the research project is scheduled to end. \\
+\hline
+\texttt{schema:funding} & schema:name & The name of the organization providing funding. \\
+                         & schema:@type & Organization type of the funding entity. \\
+\hline
+\texttt{schema:keywords} & schema:keywords & A list of keywords relevant to the research project. \\
+\hline
+\texttt{schema:location} & schema:name & The location of the research project. \\
+                         & schema:@type & The type of location: Place. \\
+\hline
+\texttt{schema:name} & schema:name & The title of the research project." \\
+\hline
+\texttt{schema:startDate} & schema:startDate & The start date of the research project. \\
+\hline
+\end{longtable}
+
+
+
+\end{document}
