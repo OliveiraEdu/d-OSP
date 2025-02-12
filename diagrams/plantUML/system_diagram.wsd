@@ -1,6 +1,7 @@
 
 @startuml
 !include <C4/C4_Container>
+skinparam monochrome true
 LAYOUT_LEFT_RIGHT()
 
 Person(user, "user")

@@ -1,4 +1,5 @@
 @startuml
+skinparam monochrome true
 set separator none
 title Open Science Platform - Containers
 
