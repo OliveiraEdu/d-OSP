@@ -1,0 +1,19 @@
+@startuml
+
+title Open Science Platform Operations
+
+participant Platform as "Platform"
+participant User as "User"
+participant Indexer as "Indexer"
+participant Parser as "Metadata Parser"
+participant IPFS as "IPFS"
+participant SE as "Search Engine"
+participant Blockchain as "Blockchain"
+
+User -> SE: Search Files by Keywords
+SE -> User: Return results
+SE -> Blockchain: Validate File Provenance (Validation)
+Blockchain -> User: Confirm Valid File
+User -> IPFS: Download File to Local File System
+
+@enduml

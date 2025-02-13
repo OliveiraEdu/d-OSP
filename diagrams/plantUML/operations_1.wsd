@@ -1,0 +1,28 @@
+@startuml
+
+title Open Science Platform Operations
+
+participant Platform as "Platform"
+participant User as "User"
+participant Indexer as "Indexer"
+participant Parser as "Metadata Parser"
+participant IPFS as "IPFS"
+participant Blockchain as "Blockchain"
+
+User ->> Platform: Enrolls
+Platform ->> Blockchain: Create user account
+User ->> Platform: Register project
+Platform ->> Blockchain: Create project account
+
+User ->> Platform: Upload file
+Platform ->> IPFS: Upload file
+IPFS ->> Platform: Returns the file CID
+Platform ->> Blockchain: Update the project account with the file CID
+Platform ->> Parser: Sends the file for parsing
+Parser ->> Platform: Returns parsed metadata
+Platform ->> IPFS: Uploads metadata (JSON)
+IPFS ->> Platform: Returns the metadata CID
+Platform ->> Blockchain: Update the project account with the metadata CID
+Platform ->> Indexer: Index file
+
+@enduml

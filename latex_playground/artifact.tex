@@ -44,10 +44,34 @@ Aside from the decentralized technologies above, the platform also relies on the
 
 The Open Science platform is comprised of the following operations:
 
-User self-enrollment - Any user can self enroll in the platform, the only requirement is a set of public/private keys conformant with standard Ed25519 with SHA-3. The user must provide identity information such as: full name, institution, email, ORCID and role (e.g. author, publisher, reviewer).
+\begin{itemize}
+    \item User self-enrollment:
+          \indent Any user can self-enroll in the platform, with only a set of public/private keys conformant with standard Ed25519 and SHA-3 as a requirement. The user must provide identity information such as full name, institution, email, ORCID, and role (e.g., author, publisher, reviewer). A JSON formatted representation of the user metadata is stored on IPFS, and the generated CID (Content Identifier) is stored in the blockchain of the user account.
 
-Project registering - Once enrolled, a user can register a project providing a descriptive name for the project, an abstract summarizing the scope and goals of the project, keywords related to the project, start and end date, funding agency and location. The system automatically assigns an account in the blockchain for the project and links the user as the project owner.
+    \item Project registering:
+          \indent Once enrolled, a user can register a project by providing a descriptive name for the project, an abstract summarizing the scope and goals of the project, keywords related to the project, start and end dates, funding agency, and location. The system automatically assigns an account in the blockchain for the project and links the user as the project owner bi-directionally. A JSON formatted representation of the project metadata is stored on IPFS, and the generated CID (Content Identifier) is stored in the blockchain of the project account.
 
+    \item File upload:
+          \indent Users can upload artifacts such as papers, reports, images, datasets, etc., from their local machine to the platform. These files are stored securely on IPFS. A unique identifier (CID - Content Identifier) is generated for each artifact uploaded, which is used to track data provenance.
+
+    \item Metadata extraction:
+          \indent In tandem with the upload process, metadata information from each uploaded file is extracted.
+
+    \item Metadata upload:
+          \indent A JSON formatted representation of the metadata extracted from a file is uploaded on IPFS. The generated CID (Content Identifier) is stored in the blockchain of the project account.
+
+    \item File indexing:
+          \indent The system indexes the files and their corresponding metadata, enabling efficient search functionality for users.
+
+    \item Keyword search:
+          \indent Any user can perform searches based on keywords. Positive occurrences are displayed along with metadata information from the files.
+
+    \item File validation:
+          \indent The file validation is performed. A file is considered valid if the CID in IPFS and the CID stored on the blockchain match exactly.
+
+    \item File download:
+          \indent The valid file is downloaded to the local file system.
+\end{itemize}
 
 
 
