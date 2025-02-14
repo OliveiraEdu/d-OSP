@@ -2,10 +2,10 @@
 
 title Open Science Platform Operations
 
-participant Platform as "Platform"
 participant User as "User"
-participant Indexer as "Indexer"
+participant Platform as "Platform"
 participant Parser as "Metadata Parser"
+participant Indexer as "Indexer"
 participant IPFS as "IPFS"
 participant Blockchain as "Blockchain"
 

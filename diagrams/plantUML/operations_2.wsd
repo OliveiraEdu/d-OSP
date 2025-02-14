@@ -2,18 +2,32 @@
 
 title Open Science Platform Operations
 
-participant Platform as "Platform"
 participant User as "User"
-participant Indexer as "Indexer"
-participant Parser as "Metadata Parser"
-participant IPFS as "IPFS"
+participant Platform as "Platform"
 participant SE as "Search Engine"
+participant Indexer as "Indexer"
+participant IPFS as "IPFS"
 participant Blockchain as "Blockchain"
 
 User -> SE: Search Files by Keywords
-SE -> User: Return results
-SE -> Blockchain: Validate File Provenance (Validation)
-Blockchain -> User: Confirm Valid File
-User -> IPFS: Download File to Local File System
+SE -> Indexer: Parse the index for the keyword
+
+
+alt Process Results
+    Indexer -> Platform: Show results
+
+    Platform -> Plafform: Process results
+
+    Platform -> Blockchain: Query file CID from project metadata
+    Blockchain -> Platform: Fetch corresponding Blockchain record
+
+    Platform -> IPFS: Fetch IPFS file
+    IPFS -> Platform: Confirm IPFS Record
+
+    Platform -> Platform: Confirm file validation
+
+end
+
+IPFS -> User: Download File to Local File System
 
 @enduml
