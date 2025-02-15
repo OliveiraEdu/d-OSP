@@ -12,9 +12,13 @@ from dump_to_json import dump_to_json_ld, dump_project_to_json_ld
 from ipfs_functions import *
 import time
 
-# import re
 
 from typing import Optional
+
+
+# Configure logger
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+logger = logging.getLogger(__name__)
 
 
 
@@ -121,36 +125,6 @@ def create_project_account(address, project_id, DOMAIN, project_public_key):
     line_number = dump_project_to_json_ld(f"{project_id}@{DOMAIN}", project_public_key) #dumps this data to dataset/projects.json for later use.
     logger.info(line_number)
     # return hex_hash
-
-# Function to link details using blockchain
-# @integration_helpers.trace
-# def set_account_detail(address, account, key, value):
-#     params = integration_helpers.get_first_four_bytes_of_keccak(
-#         b"setAccountDetail(string,string,string)"
-#     )
-#     no_of_param = 3
-#     for x in range(no_of_param):
-#         params = params + integration_helpers.left_padded_address_of_param(
-#             x, no_of_param
-#         )
-#     params = params + integration_helpers.argument_encoding(account)  # account id
-#     params = params + integration_helpers.argument_encoding(key)  # key
-#     params = params + integration_helpers.argument_encoding(value)  # value
-#     tx = iroha.transaction(
-#         [
-#             iroha.command(
-#                 "CallEngine", caller=ADMIN_ACCOUNT_ID, callee=address, input=params
-#             )
-#         ]
-#     )
-#     IrohaCrypto.sign_transaction(tx, ADMIN_PRIVATE_KEY)
-#     response = net.send_tx(tx)
-#     for status in net.tx_status_stream(tx):
-#         logger.info(status)
-#     hex_hash = binascii.hexlify(IrohaCrypto.hash(tx))
-#     return hex_hash
-
-
 
 @integration_helpers.trace
 def set_account_detail(address, account, key, value):
@@ -288,39 +262,6 @@ def get_account_detail(id):
 
 
 
-# @integration_helpers.trace
-# def get_account(address, id, domain):
-#     params = integration_helpers.get_first_four_bytes_of_keccak(b"getAccount(string)")
-#     no_of_param = 1
-#     for x in range(no_of_param):
-#         params = params + integration_helpers.left_padded_address_of_param(
-#             x, no_of_param
-#         )
-#     params = params + integration_helpers.argument_encoding(f"{id}@{domain}")  # project id
-#     tx = iroha.transaction(
-#         [
-#             iroha.command(
-#                 "CallEngine", caller=ADMIN_ACCOUNT_ID, callee=address, input=params
-#             )
-#         ]
-#     )
-#     IrohaCrypto.sign_transaction(tx, ADMIN_PRIVATE_KEY)
-#     response = net.send_tx(tx)
-#     for status in net.tx_status_stream(tx):
-#         logger.info(status)
-#     hex_hash = binascii.hexlify(IrohaCrypto.hash(tx))
-#     return hex_hash
-
-
-import os
-import json
-import binascii
-import logging
-from iroha import IrohaCrypto
-
-# Configure logger
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
-logger = logging.getLogger(__name__)
 
 # Function to dump data to JSON
 @integration_helpers.trace
@@ -402,51 +343,6 @@ def get_account(address, id, domain, json_file="logs/account_data.json"):
         logger.error(f"Error in get_account: {e}")
         return None
     
-# def get_account(address, id, domain, json_file="logs/account_data.json"):
-#     try:
-#         logger.warning(f"create_account_contract_address: {address}")
-#         # Prepare the parameters for the transaction
-#         params = integration_helpers.get_first_four_bytes_of_keccak(b"getAccount(string)")
-#         no_of_param = 1
-#         for x in range(no_of_param):
-#             params += integration_helpers.left_padded_address_of_param(x, no_of_param)
-#         params += integration_helpers.argument_encoding(f"{id}@{domain}")  # project id
-
-#         # Create and sign the transaction
-#         tx = iroha.transaction(
-#             [
-#                 iroha.command(
-#                     "CallEngine", caller=ADMIN_ACCOUNT_ID, callee=address, input=params
-#                 )
-#             ]
-#         )
-#         IrohaCrypto.sign_transaction(tx, ADMIN_PRIVATE_KEY)
-
-#         # Send the transaction and log the status
-#         response = net.send_tx(tx)
-#         for status in net.tx_status_stream(tx):
-#             logger.info(status)
-
-#         # Compute the hex hash of the transaction
-#         hex_hash = binascii.hexlify(IrohaCrypto.hash(tx)).decode()
-
-#         # Prepare the data to be dumped into the JSON file
-#         account_data = {
-#             "address": address,
-#             "hex_hash": hex_hash
-#         }
-#         logger.warning(f"Account Data: {account_data}")
-        
-#         # Append the data to the JSON file
-#         append_to_json_file(json_file, id, domain, account_data)
-
-#         return hex_hash
-#     except Exception as e:
-#         logger.error(f"Error in get_account: {e}")
-#         return None
-
-
-
 # Functions provided earlier
 @integration_helpers.trace
 def get_project_details(project_ids, net, iroha):

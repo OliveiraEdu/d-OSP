@@ -12,13 +12,12 @@ participant Blockchain as "Blockchain"
 User -> SE: Search Files by Keywords
 SE -> Indexer: Parse the index for the keyword
 
+Indexer -> Platform: Show results
+
 
 alt Process Results
-    Indexer -> Platform: Show results
-
-    Platform -> Plafform: Process results
-
-    Platform -> Blockchain: Query file CID from project metadata
+    
+    Platform -> Blockchain: Fetch project details
     Blockchain -> Platform: Fetch corresponding Blockchain record
 
     Platform -> IPFS: Fetch IPFS file
