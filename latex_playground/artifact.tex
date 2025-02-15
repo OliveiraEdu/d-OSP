@@ -27,17 +27,17 @@ The Open Science platform aims to empower researchers and members of the scienti
 The Open Science platform is built upon a robust technical foundation, comprising:
 
 \begin{itemize}
-    \item Hyperledger Iroha v1 Blockchain: The core infrastructure for account management and transaction recording and business rules enforcement through Smart Contracts ensuring secure and transparent data exchange.
-    \item IPFS (InterPlanetary File System): The decentralized storage for project artifacts and metadata, guaranteeing tamper-proof and persistent access to shared information.
+      \item Hyperledger Iroha v1 Blockchain: The core infrastructure for account management and transaction recording and business rules enforcement through Smart Contracts ensuring secure and transparent data exchange.
+      \item IPFS (InterPlanetary File System): The decentralized storage for project artifacts and metadata, guaranteeing tamper-proof and persistent access to shared information.
 \end{itemize}
 
 
 Aside from the decentralized technologies above, the platform also relies on the following off-chain, centralized components:
 
 \begin{itemize}
-    \item Jupyter Notebooks in Python: The front-end interface of the platform leverages Jupyter Notebooks in Python to automate and display the execution steps of the activities in the platform.
-    \item Apache Tika: Utilized for extracting file metadata, enhancing the platform's ability to manage and describe artifact content.
-    \item Woosh: For efficient indexing and search capabilities for artifacts stored on the platform.
+      \item Jupyter Notebooks in Python: The front-end interface of the platform leverages Jupyter Notebooks in Python to automate and display the execution steps of the activities in the platform.
+      \item Apache Tika: Utilized for extracting file metadata, enhancing the platform's ability to manage and describe artifact content.
+      \item Woosh: For efficient indexing and search capabilities for artifacts stored on the platform.
 \end{itemize}
 
 \subsection{Operations}
@@ -45,34 +45,43 @@ Aside from the decentralized technologies above, the platform also relies on the
 The Open Science platform is comprised of the following operations:
 
 \begin{itemize}
-    \item User self-enrollment:
-          \indent Any user can self-enroll in the platform, with only a set of public/private keys conformant with standard Ed25519 and SHA-3 as a requirement. The user must provide identity information such as full name, institution, email, ORCID, and role (e.g., author, publisher, reviewer). A JSON formatted representation of the user metadata is stored on IPFS, and the generated CID (Content Identifier) is stored in the blockchain of the user account.
+      \item User self-enrollment:
+            \indent Any user can self-enroll in the platform, with only a set of public/private keys conformant with standard ED25519 and SHA-3 as a requirement. The user must provide identity information such as full name, institution, email, ORCID, and role (e.g., author, publisher, reviewer). A JSON formatted representation of the user metadata is stored on IPFS, and the generated CID (Content Identifier) is stored in the blockchain of the user account.
 
-    \item Project registering:
-          \indent Once enrolled, a user can register a project by providing a descriptive name for the project, an abstract summarizing the scope and goals of the project, keywords related to the project, start and end dates, funding agency, and location. The system automatically assigns an account in the blockchain for the project and links the user as the project owner bi-directionally. A JSON formatted representation of the project metadata is stored on IPFS, and the generated CID (Content Identifier) is stored in the blockchain of the project account.
+      \item Project registering:
+            \indent Once enrolled, a user can register a project by providing a descriptive name for the project, an abstract summarizing the scope and goals of the project, keywords related to the project, start and end dates, funding agency, and location. The system automatically assigns an account in the blockchain for the project and links the user as the project owner bi-directionally. A JSON formatted representation of the project metadata is stored on IPFS, and the generated CID (Content Identifier) is stored in the blockchain of the project account.
 
-    \item File upload:
-          \indent Users can upload artifacts such as papers, reports, images, datasets, etc., from their local machine to the platform. These files are stored securely on IPFS. A unique identifier (CID - Content Identifier) is generated for each artifact uploaded, which is used to track data provenance.
+      \item File upload:
+            \indent Users can upload artifacts such as papers, reports, images, datasets, etc., from their local machine to the platform. These files are stored securely on IPFS. A unique identifier (CID - Content Identifier) is generated for each artifact uploaded, which is used to track data provenance.
 
-    \item Metadata extraction:
-          \indent In tandem with the upload process, metadata information from each uploaded file is extracted.
+      \item Metadata extraction:
+            \indent In tandem with the upload process, metadata information from each uploaded file is extracted.
 
-    \item Metadata upload:
-          \indent A JSON formatted representation of the metadata extracted from a file is uploaded on IPFS. The generated CID (Content Identifier) is stored in the blockchain of the project account.
+      \item Metadata upload:
+            \indent A JSON formatted representation of the metadata extracted from a file is uploaded on IPFS. The generated CID (Content Identifier) is stored in the blockchain of the project account.
 
-    \item File indexing:
-          \indent The system indexes the files and their corresponding metadata, enabling efficient search functionality for users.
+      \item File indexing:
+            \indent The system indexes the files and their corresponding metadata, enabling efficient search functionality for users.
 
-    \item Keyword search:
-          \indent Any user can perform searches based on keywords. Positive occurrences are displayed along with metadata information from the files.
+      \item Keyword search:
+            \indent Any user can perform searches based on keywords. Positive occurrences are displayed along with metadata information from the files.
 
-    \item File validation:
-          \indent The file validation is performed. A file is considered valid if the CID in IPFS and the CID stored on the blockchain match exactly.
+      \item File validation:
+            \indent The file validation is performed. A file is considered valid if the CID in IPFS and the CID stored on the blockchain match exactly.
 
-    \item File download:
-          \indent The valid file is downloaded to the local file system.
+      \item File download:
+            \indent The valid file is downloaded to the local file system.
 \end{itemize}
 
+
+
+\subsection{Data Model}
+
+The data model that supports the platform is comprised of two main classes User and Project. The User class contains attributes for user identity information, while the Project class contains attributes for project metadata. A many-to-many relationship exists between Users and Projects where, a single user can be associated with multiple projects.
+
+\subsection{Ontologies}
+
+To describe the attributes of each entity in the data model, three main ontologies were considered: FOAF (Friend of a Friend), Dublin Core and Schema.org. These standard vocabularies provide a common language for describing metadata information and can potentially easy the integration with other systems adopting W3C standards for semantic Web.
 
 
 
@@ -81,9 +90,9 @@ The Open Science platform is comprised of the following operations:
 The Open Science platform offers numerous benefits for researchers and members of the scientific community, including:
 
 \begin{itemize}
-    \item Secure data sharing: By utilizing blockchain technology and IPFS, the platform ensures tamper-proof data exchange.
-    \item Transparent data management: The use of smart contracts and decentralized storage guarantees transparency in data access and modification history.
-    \item Collaborative research environment: The platform enables researchers to collaborate on projects, share artifacts and results, and track progress.
+      \item Secure data sharing: By utilizing blockchain technology and IPFS, the platform ensures tamper-proof data exchange.
+      \item Transparent data management: The use of smart contracts and decentralized storage guarantees transparency in data access and modification history.
+      \item Collaborative research environment: The platform enables researchers to collaborate on projects, share artifacts and results, and track progress.
 \end{itemize}
 
 \subsection{Challenges}
@@ -91,9 +100,9 @@ The Open Science platform offers numerous benefits for researchers and members o
 The Open Science platform faces several challenges, including:
 
 \begin{itemize}
-    \item Scalability: As the number of users increases, the platform needs to be able to handle a growing amount of data and transactions efficiently.
-    \item Interoperability: Ensuring seamless integration with existing research platforms and tools is crucial for widespread adoption.
-    \item User Adoption: Educating researchers about the benefits of decentralized technologies and the Open Science platform can be an uphill battle.
+      \item Scalability: As the number of users increases, the platform needs to be able to handle a growing amount of data and transactions efficiently.
+      \item Interoperability: Ensuring seamless integration with existing research platforms and tools is crucial for widespread adoption.
+      \item User Adoption: Educating researchers about the benefits of decentralized technologies and the Open Science platform can be an uphill battle.
 \end{itemize}
 
 \subsection{Future Work}
@@ -101,9 +110,9 @@ The Open Science platform faces several challenges, including:
 The Open Science platform has several areas for future development, including:
 
 \begin{itemize}
-    \item Integration with existing research platforms: Collaborations with established research platforms to expand the platform's reach and user base.
-    \item Enhanced security measures: Implementing additional security protocols to protect against potential threats and maintain the integrity of shared information.
-    \item User interface improvements: Enhancing the web interface to make it more user-friendly and accessible for researchers from diverse backgrounds.
+      \item Integration with existing research platforms: Collaborations with established research platforms to expand the platform's reach and user base.
+      \item Enhanced security measures: Implementing additional security protocols to protect against potential threats and maintain the integrity of shared information.
+      \item User interface improvements: Enhancing the web interface to make it more user-friendly and accessible for researchers from diverse backgrounds.
 \end{itemize}
 
 \section{Conclusion}
