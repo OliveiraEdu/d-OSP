@@ -1,6 +1,6 @@
 @startuml
 
-title Open Science Platform Operations
+title Open Science indexing and validation
 
 participant User as "User"
 participant Platform as "Platform"
