@@ -1,15 +1,75 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{begley_reproducibility_2015}
-C.~Glenn Begley and John~P.A. Ioannidis.
-\newblock Reproducibility in {Science}: {Improving} the {Standard} for {Basic}
-  and {Preclinical} {Research}.
-\newblock {\em Circulation Research}, 116(1):116--126, January 2015.
+\bibitem{Benet}
+Juan Benet.
+\newblock {IPFS - Content Addressed, Versioned, P2P File System (DRAFT 3)},
+  November 2022.
+\newblock Last accessed on 30 Nov 2022.
+
+\bibitem{foster_open_2017}
+Erin~D. Foster and Ariel Deardorff.
+\newblock Open {Science} {Framework} ({OSF}).
+\newblock {\em jmla}, 105(2), April 2017.
 
 \bibitem{freedman_economics_2015}
 Leonard~P. Freedman, Iain~M. Cockburn, and Timothy~S. Simcoe.
 \newblock The {Economics} of {Reproducibility} in {Preclinical} {Research}.
 \newblock {\em PLOS Biology}, 13(6):e1002165, June 2015.
+
+\bibitem{hevner2004design}
+Alan~R. Hevner, Salvatore~T. March, Jinsoo Park, and Sudha Ram.
+\newblock Design science in information systems research.
+\newblock {\em MIS Quarterly}, 28(1):75--105, 2004.
+
+\bibitem{landis_call_2012}
+Story~C. Landis, Susan~G. Amara, Khusru Asadullah, Chris~P. Austin, Robi
+  Blumenstein, Eileen~W. Bradley, Ronald~G. Crystal, Robert~B. Darnell,
+  Robert~J. Ferrante, Howard Fillit, Robert Finkelstein, Marc Fisher, Howard~E.
+  Gendelman, Robert~M. Golub, John~L. Goudreau, Robert~A. Gross, Amelie~K.
+  Gubitz, Sharon~E. Hesterlee, David~W. Howells, John Huguenard, Katrina
+  Kelner, Walter Koroshetz, Dimitri Krainc, Stanley~E. Lazic, Michael~S.
+  Levine, Malcolm~R. Macleod, John~M. McCall, Richard~T. Moxley~III, Kalyani
+  Narasimhan, Linda~J. Noble, Steve Perrin, John~D. Porter, Oswald Steward,
+  Ellis Unger, Ursula Utz, and Shai~D. Silberberg.
+\newblock A call for transparent reporting to optimize the predictive value of
+  preclinical research.
+\newblock {\em Nature}, 490(7419):187--191, October 2012.
+
+\bibitem{nakamoto2012bitcoin}
+Satoshi Nakamoto.
+\newblock Bitcoin: A peer-to-peer electronic cash system, 2009.
+
+\bibitem{oliveira2023blockchain}
+Eduardo Oliveira, Rafael~Z. Frantz, Carlos Molina-Jim{\'e}nez, Thiago Heck,
+  Sandro Sawicki, and Fabricia Roos-Frantz.
+\newblock On the use of blockchain technology to improve the reproducibility of
+  preclinical research experiments.
+\newblock In {\em Proceedings of the 25th International Conference on
+  Enterprise Information Systems (ICEIS 2023)}, pages 173--179. INSTICC,
+  SciTePress, 2023.
+
+\bibitem{Pagen71}
+Matthew~J Page, Joanne~E McKenzie, Patrick~M Bossuyt, Isabelle Boutron, Tammy~C
+  Hoffmann, Cynthia~D Mulrow, Larissa Shamseer, Jennifer~M Tetzlaff, Elie~A
+  Akl, Sue~E Brennan, Roger Chou, Julie Glanville, Jeremy~M Grimshaw,
+  Asbj{\o}rn Hr{\'o}bjartsson, Manoj~M Lalu, Tianjing Li, Elizabeth~W Loder,
+  Evan Mayo-Wilson, Steve McDonald, Luke~A McGuinness, Lesley~A Stewart, James
+  Thomas, Andrea~C Tricco, Vivian~A Welch, Penny Whiting, and David Moher.
+\newblock The prisma 2020 statement: an updated guideline for reporting
+  systematic reviews.
+\newblock {\em BMJ}, 372, 2021.
+
+\bibitem{percie2020arrive}
+Nathalie Percie~du Sert, Amrita Ahluwalia, Syed Alam, Mark~T. Avey, Monya
+  Baker, Warren~J. Browne, et~al.
+\newblock Reporting animal research: Explanation and elaboration for the arrive
+  guidelines 2.0.
+\newblock {\em PLOS Biology}, 18(7):e3000411, 2020.
+
+\bibitem{Szabo-1994}
+Nick Szabo.
+\newblock Smart contracts, January 1994.
+\newblock Last accessed on 28 Jan 2021.
 
 \bibitem{vasilevsky_reproducibility_2013}
 Nicole~A. Vasilevsky, Matthew~H. Brush, Holly Paddock, Laura Ponting,
