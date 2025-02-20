@@ -5,7 +5,8 @@
 \usepackage{graphicx}  % For inserting images
 \usepackage{caption}   % For better caption formatting
 \usepackage{float}     % To control figure placement
-
+\usepackage{natbib}  % Recommended for author-year citations
+\usepackage{hyperref}
 
 \title{Dissertation}
 \author{Eduardo Oliveira}
@@ -41,9 +42,9 @@ Building upon these foundations, this study proposes the development of a struct
 
 \section{Research Context}
 
-The scientific community has long recognized the importance of reproducibility in ensuring the validity and accuracy of research findings. Reproducibility refers to the ability of researchers to replicate another researcher's study or experiment, with minimal changes, to verify its results and conclusions \cite{NSF2019}. However, despite widespread efforts to address this issue, failed reproductions continue to be a persistent problem across various scientific domains, which not only compromises the credibility of individual studies but also undermines our collective understanding of scientific phenomena.
+The scientific community has long recognized the importance of reproducibility in ensuring the validity and accuracy of research findings. Reproducibility refers to the ability of researchers to replicate another researcher's study or experiment, with minimal changes, to verify its results and conclusions \cite{vasilevsky_reproducibility_2013}. However, despite widespread efforts to address this issue, failed reproductions continue to be a persistent problem across various scientific domains, which not only compromises the credibility of individual studies but also undermines our collective understanding of scientific phenomena.
 
-Studies have shown that reproducibility rates vary widely across disciplines, but even among those fields with a strong tradition of rigor, replication rates often fall short. For instance, a study published in the journal Science found that only 22\% of papers published in top-tier journals were replicable \cite{Field2018}. Similarly, a review of studies on reproducibility in Nature revealed that only 15\% of studies reported high levels of reproducibility \cite{Lakens2015}.
+Studies have shown that reproducibility rates vary widely across disciplines, but even among those fields with a strong tradition of rigor, replication rates often fall short. For instance, a study published in the journal Science found that only 22\% of papers published in top-tier journals were replicable \cite{freedman_economics_2015}. Similarly, a review of studies on reproducibility in Nature revealed that only 15\% of studies reported high levels of reproducibility \cite{begley_reproducibility_2015}.
 
 Several interrelated factors contribute to these poor rates of reproducibility. Methodological flaws, such as sampling biases or inadequate control groups, often result in difficulties replicating findings. Additionally, a lack of transparency in research practices such as insufficient reporting on methods, materials and results hinders independent verification and replication efforts. Furthermore, limited resources, including small research teams or restricted funding, can prevent the rigorous experimentation necessary to ensure high reproducibility levels.
 
@@ -144,7 +145,7 @@ This section provides an overview of the structure and organization of this diss
 
 
 \bibliographystyle{plain}
-\bibliography{references}
+\bibliography{Bibliography.bib}
 
 
 \end{document}
