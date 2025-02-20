@@ -1,0 +1,61 @@
+@startuml
+!define DC <http://purl.org/dc/terms/>
+!define FOAF <http://xmlns.com/foaf/0.1/>
+!define SCHEMA <http://schema.org/>
+
+skinparam monochrome true
+
+class "foaf:Person" as Person {
+  + foaf:name : String
+  + foaf:mbox : String
+  + schema:identifier : PropertyValue
+  + foaf:holdsAccount : OnlineAccount
+  + schema:linked_project : ResearchProject
+}
+
+class "foaf:Organization" as Organization {
+  + foaf:name : String
+}
+
+class "schema:ResearchProject" as ResearchProject {
+  + schema:identifier : String
+  + schema:publicKey : String
+  + schema:name : String
+  + dc:abstract : String
+  + schema:keywords : String[]
+  + schema:startDate : Date
+  + schema:endDate : Date
+  + schema:funding : Organization
+  + schema:location : Place
+  + schema:metadataCID : String
+  + schema:linked_user : Person
+}
+
+class "foaf:OnlineAccount" as OnlineAccount {
+  + schema:identifier : String
+  + schema:roleName : String
+  + schema:publicKey : String
+}
+
+class "schema:PropertyValue" as PropertyValue {
+  + propertyID : String
+  + value : String
+}
+
+class "schema:Organization" as FundingOrganization {
+  + schema:name : String
+}
+
+class "schema:Place" as Place {
+  + schema:name : String
+}
+
+' Relationships
+Person --|> Organization : "foaf:member"
+Person --|> OnlineAccount : "foaf:holdsAccount"
+Person -- ResearchProject : "schema:linked_project"
+OnlineAccount --|> PropertyValue : "schema:identifier"
+ResearchProject --|> FundingOrganization : "schema:funding"
+ResearchProject --|> Place : "schema:location"
+ResearchProject -- Person : "schema:linked_user"
+@enduml
