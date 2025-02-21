@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1740104690 "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/artifact.tex" "artifact.pdf" "artifact" 1740104690
+["pdflatex"] 1740135054 "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/artifact.tex" "artifact.pdf" "artifact" 1740135054
   "/etc/texmf/web2c/texmf.cnf" 1701553138 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/artifact.tex" 1740104688 9117 f126718d502b27346300c5562bc1eaa1 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -49,7 +49,7 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1701553183 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1710494692 2800392 5302ca1083901a3fb21e189f575b5416 ""
-  "artifact.aux" 1740104690 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "artifact.aux" 1740135054 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
   "artifact.tex" 1740104688 9117 f126718d502b27346300c5562bc1eaa1 ""
   (generated)
   "artifact.aux"
