@@ -21,12 +21,7 @@
 
 \subsection{Overview}
 
-The Open Science platform aims to empower researchers and members of the scientific community by providing a secure, transparent, traceable and tamper-proof environment for sharing project artifacts and data. Building on this objective, the platform leverages decentralized technologies to ensure the integrity and reliability of shared information.
-
-The proposed decentralized model is designed to facilitate seamless sharing, collaboration, and validation of research data across various Open Science initiatives. By leveraging blockchain technology and IPFS-based storage solutions, this model enables researchers to securely share their data while maintaining control over its metadata.
-
-To ensure the integrity and accuracy of shared data, the model incorporates smart contract mechanisms that validate user input at the point of upload. These smart contracts are programmed with specific rules and criteria that verify the quality and consistency of the data, ensuring that only validated data is stored and shared within the network.
-
+The proposed decentralized model is designed to facilitate seamless sharing, collaboration, and validation of research data. By leveraging blockchain technology and IPFS-based storage solutions, this model enables researchers to securely share their data while maintaining control over its metadata. The Open Science platform aims to empower researchers and members of the scientific community by providing a secure, transparent, traceable, and tamper-proof environment for sharing project artifacts and data. To achieve this, the platform builds upon decentralized technologies such as blockchain, IPFS, and smart contracts, which ensure the integrity and reliability of shared information through validation mechanisms that verify user input at the point of upload.
 
 
 
@@ -91,51 +86,6 @@ To describe the attributes of each entity in the data model, three main ontologi
 
 \subsection{Entity-relationship model}
 
-
-User Accounts Table
-
-\begin{table}[h]
-      \centering
-      \begin{tabular}{|l|l|}
-            \hline
-            \textbf{Attribute}    & \textbf{Description} \
-            \hline
-            foaf:name             & Researcher's full name \
-            foaf:mbox             & Researcher's email \
-            foaf:organization     & Affiliated institution \
-            schema:identifier     & Unique identifier (e.g., ORCID) \
-            foaf:holdsAccount     & Online account details (ID, role, public key) \
-            schema:linked_project & Associated research project ID \
-            \hline
-      \end{tabular}
-      \caption{User Account Attributes}
-      \label{tab:user_accounts}
-\end{table}
-
-Research Projects Table
-
-\begin{table}[h]
-      \centering
-      \begin{tabular}{|l|l|}
-            \hline
-            \textbf{Attribute} & \textbf{Description} \
-            \hline
-            schema:identifier  & Unique project identifier \
-            schema:publicKey   & Cryptographic key \
-            schema:name        & Project name \
-            dc:abstract        & Research abstract \
-            schema:keywords    & Keywords describing the project \
-            schema:startDate   & Start date of the project \
-            schema:endDate     & End date of the project \
-            schema:funding     & Funding organization details \
-            schema:location    & Project location \
-            schema:metadataCID & IPFS metadata content ID \
-            schema:linked_user & Associated researcher ID \
-            \hline
-      \end{tabular}
-      \caption{Research Project Attributes}
-      \label{tab:research_projects}
-\end{table}
 
 
 \subsection{Blockchain Operations}

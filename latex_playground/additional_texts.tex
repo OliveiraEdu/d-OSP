@@ -1,3 +1,51 @@
+User Accounts Table
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Attribute}    & \textbf{Description} \
+        \hline
+        foaf:name             & Researcher's full name \
+        foaf:mbox             & Researcher's email \
+        foaf:organization     & Affiliated institution \
+        schema:identifier     & Unique identifier (e.g., ORCID) \
+        foaf:holdsAccount     & Online account details (ID, role, public key) \
+        schema:linked_project & Associated research project ID \
+        \hline
+    \end{tabular}
+    \caption{User Account Attributes}
+    \label{tab:user_accounts}
+\end{table}
+
+Research Projects Table
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Attribute} & \textbf{Description} \
+        \hline
+        schema:identifier  & Unique project identifier \
+        schema:publicKey   & Cryptographic key \
+        schema:name        & Project name \
+        dc:abstract        & Research abstract \
+        schema:keywords    & Keywords describing the project \
+        schema:startDate   & Start date of the project \
+        schema:endDate     & End date of the project \
+        schema:funding     & Funding organization details \
+        schema:location    & Project location \
+        schema:metadataCID & IPFS metadata content ID \
+        schema:linked_user & Associated researcher ID \
+        \hline
+    \end{tabular}
+    \caption{Research Project Attributes}
+    \label{tab:research_projects}
+\end{table}
+
+
+
+
 \section{Introduction_old}
 
 
