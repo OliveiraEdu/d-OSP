@@ -79,11 +79,11 @@ Nicole~A. Vasilevsky, Matthew~H. Brush, Holly Paddock, Laura Ponting,
 \newblock {\em PeerJ}, 1:e148, September 2013.
 
 \bibitem{wilkinson2016fair}
-Mark~D Wilkinson, Michel Dumontier, IJsbrand~Jan Aalbersberg, Gabrielle
+Mark~D. Wilkinson, Michel Dumontier, IJsbrand~Jan Aalbersberg, Gabrielle
   Appleton, Myles Axton, Arie Baak, Niklas Blomberg, Jan-Willem Boiten,
-  Luiz~Bonino da~Silva~Santos, Philip~E Bourne, et~al.
+  Luiz~Bonino da~Silva~Santos, and Philip~E. Bourne.
 \newblock The fair guiding principles for scientific data management and
   stewardship.
-\newblock {\em Scientific Data}, 3(1):160018, 2016.
+\newblock {\em Scientific Data}, 3:160018, 2016.
 
 \end{thebibliography}
