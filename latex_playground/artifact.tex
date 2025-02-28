@@ -21,7 +21,62 @@
 
 \subsection{Overview}
 
-The proposed decentralized model is designed to facilitate seamless sharing, collaboration, and validation of research data. By leveraging blockchain technology and IPFS-based storage solutions, this model enables researchers to securely share their data while maintaining control over its metadata. The Open Science platform aims to empower researchers and members of the scientific community by providing a secure, transparent, traceable, and tamper-proof environment for sharing project artifacts and data. To achieve this, the platform builds upon decentralized technologies such as blockchain, IPFS, and smart contracts, which ensure the integrity and reliability of shared information through validation mechanisms that verify user input at the point of upload.
+The proposed decentralized model is designed to facilitate seamless sharing, collaboration, and validation of research data, addressing key challenges in reproducibility and transparency. Traditional centralized systems often suffer from data silos, lack of verifiability, and risks of manipulation, which hinder open and trustworthy scientific practices. By leveraging blockchain technology and IPFS-based storage solutions, this model enables researchers to securely share their data while maintaining control over its metadata and provenance.
+
+The Open Science platform empowers researchers and the broader scientific community by providing a secure, transparent, traceable, and tamper-proof environment for sharing project artifacts and data. It achieves this through a decentralized architecture built upon blockchain, IPFS, and smart contracts, ensuring the integrity and reliability of shared information. Validation mechanisms verify user input at the point of upload, preventing unauthorized modifications and enhancing trust in scientific outputs. This approach supports Open Science principles by promoting verifiable, long-term access to research artifacts without reliance on centralized intermediaries.
+
+
+
+\section{Introduction}
+This chapter presents the design and implementation of the Open Science Platform, a decentralized system integrating blockchain, IPFS, and smart contracts to enhance research reproducibility. The platform facilitates transparent and verifiable research artifact management by leveraging decentralized storage and immutable records while incorporating off-chain services to provide indexing, metadata extraction, and automated workflow execution.
+
+\section{Technology Stack}
+The Open Science Platform is developed using a hybrid architecture that combines decentralized and off-chain technologies to ensure secure, traceable, and efficient data management.
+
+\subsection{Decentralized Components}
+\begin{itemize}
+      \item \textbf{Hyperledger Iroha v1 Blockchain:} Acts as the core infrastructure for managing user and project accounts, recording transactions, and enforcing business rules via smart contracts to ensure secure and transparent data exchange.
+      \item \textbf{InterPlanetary File System (IPFS):} Provides decentralized, tamper-proof storage for research artifacts and metadata, ensuring persistent and verifiable access to shared data.
+\end{itemize}
+
+\subsection{Off-Chain Components}
+\begin{itemize}
+      \item \textbf{Jupyter Notebooks (Python):} Serves as the front-end interface, automating and displaying execution steps related to research workflows.
+      \item \textbf{Apache Tika:} Extracts metadata from uploaded files, enhancing artifact organization and searchability.
+      \item \textbf{Whoosh:} Facilitates efficient indexing and keyword-based search for stored artifacts.
+\end{itemize}
+
+\section{Platform Operations}
+The platform encompasses multiple core operations that govern user interaction and data management.
+
+\subsection{User Self-Enrollment}
+Users enroll in the platform by generating public/private keys conforming to ED25519 and SHA-3 standards. During registration, they provide identity information (e.g., name, institution, email, ORCID, role). The user's metadata is stored as a JSON file in IPFS, with the corresponding Content Identifier (CID) recorded on the blockchain.
+
+\subsection{Project Registration}
+Registered users can create projects by providing a descriptive name, an abstract, relevant keywords, start and end dates, funding agency, and location. A blockchain account is automatically assigned to the project, establishing a bi-directional link between the project owner and the project metadata stored on IPFS.
+
+\subsection{Artifact Management}
+\subsubsection{File Upload}
+Users upload research artifacts such as papers, datasets, and images. Each file is stored on IPFS, generating a unique CID that ensures traceability.
+
+\subsubsection{Metadata Extraction and Storage}
+Simultaneously with the upload process, Apache Tika extracts metadata from the file. The extracted metadata is formatted in JSON, stored on IPFS, and its CID is linked to the corresponding project account on the blockchain.
+
+\subsubsection{Indexing and Search}
+The system indexes both files and metadata to enable efficient search functionality. Users can search for artifacts using keywords, with results displaying metadata and retrieval details.
+
+\subsection{Verification and Access}
+\subsubsection{File Validation}
+To ensure data integrity, the platform verifies whether the CID of a stored file on IPFS matches the CID recorded on the blockchain. Any mismatch indicates tampering or corruption.
+
+\subsubsection{File Download}
+Validated files can be retrieved from IPFS and downloaded to the local file system.
+
+\section{Security and Integrity Considerations}
+This section discusses security mechanisms ensuring the authenticity and integrity of stored research artifacts. It covers cryptographic hashing, blockchain immutability, and IPFS redundancy, as well as potential attack vectors and mitigation strategies.
+
+\section{Conclusion}
+This chapter has detailed the technological underpinnings and operational workflows of the Open Science Platform. By leveraging blockchain, IPFS, and smart contracts alongside off-chain indexing and metadata extraction, the platform enhances research reproducibility through immutable data storage, verifiable metadata, and automated validation mechanisms.
 
 
 
