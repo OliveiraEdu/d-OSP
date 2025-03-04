@@ -1,0 +1,35 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+skinparam monochrome true
+
+LAYOUT_WITH_LEGEND()
+
+title System Context Diagram for Open Science Platform
+
+Person(user, "Researcher", "A researcher who enrolls and interacts with the platform to upload and manage research artifacts.")
+
+System(open_science_platform, "Open Science Platform", "A decentralized platform that integrates blockchain, IPFS, and smart contracts to manage and share research artifacts.")
+
+System_Boundary(open_science_boundary, "Core Services") {
+    System_Ext(blockchain, "Blockchain", "A decentralized ledger that ensures the integrity and traceability of user data, projects, and research artifacts.")
+    System_Ext(smart_contract, "Smart Contract", "Enforces business rules and automates transactions on the blockchain, providing verifiable and immutable execution.")
+    
+    System_Ext(ipfs, "Distributed File System", "A decentralized file storage system used to store research artifacts and metadata.")
+
+}
+
+
+System_Boundary(metadata_boundary, "Extended Services") {
+    System_Ext(metadata_extraction, "Metadata Extraction", "A service that extracts and structures metadata from uploaded research artifacts.")
+    System_Ext(search_system, "Search System", "A search engine used to index and search for research artifacts by keywords.")
+}
+
+
+Rel(user, open_science_platform, "Registers and interacts with")
+Rel(open_science_platform, smart_contract, "Trusted code execution")
+Rel(open_science_platform, blockchain, "Uses for user and project data storage")
+Rel(open_science_platform, ipfs, "Stores and retrieves research artifacts")
+Rel(open_science_platform, metadata_extraction, "Extracts metadata from uploaded files")
+Rel(open_science_platform, search_system, "Indexes and searches research artifacts")
+@enduml

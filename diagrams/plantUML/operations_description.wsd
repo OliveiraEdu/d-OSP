@@ -1,0 +1,39 @@
+@startuml
+
+actor User
+entity "User Account" as UserAccount
+entity "Project Account" as ProjectAccount
+entity "IPFS Storage" as IPFS
+entity "Blockchain" as Blockchain
+entity "Metadata Extraction" as MetadataExtraction
+entity "Search System" as SearchSystem
+entity "File Validation" as FileValidation
+
+User -> UserAccount : Registers with private key and identity data
+User -> Blockchain : Creates user blockchain account
+UserAccount -> IPFS : Uploads user data
+UserAccount -> Blockchain : Records user data CID
+User -> ProjectAccount : Registers a project with details
+User -> Blockchain : Creates project blockchain account
+ProjectAccount -> IPFS : Uploads project data
+ProjectAccount -> Blockchain : Records project data CID
+UserAccount -> ProjectAccount : Links user and project accounts
+UserAccount -> ProjectAccount : Updates bidirectional association
+
+User -> IPFS : Uploads research artifact
+IPFS -> Blockchain : Records artifact CID
+User -> MetadataExtraction : Extracts metadata from file
+MetadataExtraction -> IPFS : Uploads extracted metadata
+MetadataExtraction -> Blockchain : Records metadata CID
+IPFS -> Blockchain : Stores content identifier for the artifact
+SearchSystem -> IPFS : Indexes metadata for search
+User -> SearchSystem : Performs keyword search
+SearchSystem -> IPFS : Retrieves metadata
+SearchSystem -> User : Displays search results
+
+FileValidation -> IPFS : Retrieves artifact CID
+FileValidation -> Blockchain : Verifies CID matches
+FileValidation -> User : Confirms artifact validity
+User -> IPFS : Downloads validated artifact
+
+@enduml
