@@ -105,7 +105,7 @@ def normalize_metadata_value(value):
 
 
 #Current
-def process_files(directory_path, project_id, schema):
+def process_files(directory_path, project_id, schema, hash):
     """Process files in the specified directory path."""
     
     try:
@@ -150,10 +150,10 @@ def process_files(directory_path, project_id, schema):
 
                     # # Join file_cid and metadata_cid with a comma
                     joined_cids = f"{file_cid}, {metadata_cid}"
-                    # logger.info("joined_cids :", joined_cids)
+                    logger.info(f"file CID, Metadata CID: {joined_cids}")
 
                     if address is None:
-                        hash = create_contract()
+                        # hash = create_contract()
                         address = integration_helpers.get_engine_receipts_address(hash)
 
                     logger.debug(project_id)
