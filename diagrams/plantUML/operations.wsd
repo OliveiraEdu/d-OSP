@@ -1,0 +1,32 @@
+@startuml
+  participant User as "User"
+  participant Project as "Project"
+  participant Artifact as "Artifact"
+
+  User --> RegistrationService
+  RegistrationService --> Blockchain
+  RegistrationService --> IPFS
+
+  Project --> ProjectRegistrationService
+  ProjectRegistrationService --> Blockchain
+  ProjectRegistrationService --> IPFS
+
+  Artifact --> FileUploadService
+  FileUploadService --> IPFS
+
+  Artifact --> MetadataExtractor
+  MetadataExtractor --> FileMetadataUploader
+  FileMetadataUploader --> IPFS
+
+  Artifact --> FileIndexer
+  FileIndexer --> SearchEngine
+  SearchEngine --> KeywordSearch
+
+  Artifact --> ValidationService
+  ValidationService --> Blockchain
+  ValidationService --> IPFS
+
+  Artifact --> DownloadService
+  DownloadService --> LocalFileSystem
+
+@enduml
