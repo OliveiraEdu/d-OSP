@@ -7,6 +7,10 @@
 \usepackage{float}     % To control figure placement
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage{svg}
+
+
+\graphicspath{ {.//home/eduardo/Documents/repo/Git/OpenScience/out/diagrams/plantUML/} }
 
 
 \title{Artifact}
@@ -61,6 +65,14 @@ The extended services enhance the platform's features by improving file and meta
       \item \textbf{Apache Tika:} Extracts metadata from uploaded files, enhancing artifact organization and searchability.
       \item \textbf{Whoosh:} Facilitates efficient indexing and keyword-based search for stored artifacts.
 \end{itemize}
+
+\begin{figure}[h!]
+      \centering
+      \includesvg[width=0.8\textwidth]{example.svg}
+      \caption{An example SVG image}
+      \label{fig:svg_example}
+\end{figure}
+
 
 
 

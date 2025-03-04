@@ -12,11 +12,10 @@ title Container diagram for Open Science Platform
 Person(researcher, "Researcher", "A researcher who enrolls and interacts with the platform to upload and manage research artifacts.")
 
 System_Boundary(core_services, "Core Services") {
-    Container(open_science_platform, "Open Science Platform", "Python, Flask", "A decentralized platform that integrates blockchain, IPFS, and smart contracts to manage and share research artifacts.")
     Container(jupyter_notebooks, "Jupyter Notebooks", "Python, Jupyter", "Provides the front-end interface for users to interact with the platform and manage research artifacts.")
     Container(iroha_python_lib, "Iroha v1 Python Library", "Python", "Handles communication with the Hyperledger Iroha blockchain.")
     Container(ipfs_https_client, "IPFS HTTPS Client", "Python", "Handles communication with the IPFS network to store and retrieve research artifacts.")
-    Container(smart_contracts, "Smart Contracts", "Solidity (EVM)", "Smart contracts tightly integrated with Hyperledger Burrow, providing Ethereum EVM compatible functionalities for managing projects and artifacts.")
+    
 }
 
 System_Boundary(extended_services, "Extended Services") {
@@ -24,16 +23,20 @@ System_Boundary(extended_services, "Extended Services") {
     Container(search_system, "Search System", "Whoosh, Python", "Provides keyword-based search functionality for stored artifacts.")
 }
 
-System_Ext(blockchain, "Hyperledger Iroha", "A decentralized ledger that ensures the integrity and traceability of user data, projects, and research artifacts.")
-System_Ext(ipfs, "IPFS Network", "A decentralized file storage network used to store research artifacts and metadata.")
+System_Boundary(decentralized_services, "Decentralizaed Services"){
+    Container(blockchain, "Hyperledger Iroha", "A decentralized ledger that ensures the integrity and traceability of user data, projects, and research artifacts.")
+    Container(ipfs, "IPFS Network", "A decentralized file storage network used to store research artifacts and metadata.")
+    Container(smart_contracts, "Smart Contracts", "Solidity (EVM)", "Smart contracts tightly integrated with Hyperledger Burrow, providing Ethereum EVM compatible functionalities for managing projects and artifacts.")
+    Container(burrow, "Hyperledger Burrow", "Provides EVM compatible run time")
+}
 
 Rel(researcher, jupyter_notebooks, "Uses", "HTTPS")
-Rel(jupyter_notebooks, open_science_platform, "Interacts with")
 Rel(jupyter_notebooks, iroha_python_lib, "Calls API functions to interact with", "JSON over HTTPS")
 Rel(jupyter_notebooks, ipfs_https_client, "Communicates with", "HTTPS")
-Rel(open_science_platform, blockchain, "Uses", "Manages user and project data")
-Rel(open_science_platform, ipfs, "Stores and retrieves research artifacts")
-Rel(open_science_platform, smart_contracts, "Uses", "Executes project and artifact-related transactions")
-Rel(metadata_extraction, open_science_platform, "Extracts metadata from artifacts")
-Rel(search_system, open_science_platform, "Indexes and searches artifacts")
+Rel(iroha_python_lib, smart_contracts, "Sends transactions and queries")
+Rel(smart_contracts, burrow, "Process the Smart Contract")
+Rel(ipfs_https_client, ipfs, "Upload and download files and JSON objects")
+Rel(jupyter_notebooks, metadata_extraction, "Extract Metadata")
+Rel(jupyter_notebooks, search_system, "Index and Search")
+Rel(burrow, blockchain, "Execute transactions and queries")
 @enduml
