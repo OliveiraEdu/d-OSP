@@ -6,23 +6,23 @@
     "@graph": [
         {
             "@type": "foaf:Person",
-            "foaf:name": "Jolly Noether",
-            "foaf:mbox": "jolly_noether@email.com",
+            "foaf:name": "Zealous Ptolemy",
+            "foaf:mbox": "zealous_ptolemy@email.com",
             "foaf:organization": {
                 "@type": "foaf:Organization",
-                "foaf:name": "Morris College"
+                "foaf:name": "Ashkelon Academic College"
             },
             "schema:identifier": {
                 "@type": "PropertyValue",
                 "propertyID": "ORCID",
-                "value": "9833-6461-2701-X"
+                "value": "6153-7096-0437-X"
             },
             "foaf:holdsAccount": {
-                "schema:identifier": "jolly_noether@test",
-                "schema:roleName": "author",
-                "schema:publicKey": "93b24e83e5a01970f786207eb4d3d194731fed63daf76ed9ee31c1ac83310ab6"
+                "schema:identifier": "zealous_ptolemy@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "ca4c00c0a43bbd2caf070ab780886906ebb70e2c3d975972ccab4e15c01f33bd"
             },
-            "schema:linked_project": "10278@test"
+            "schema:linked_project": "02226@test"
         }
     ]
 }

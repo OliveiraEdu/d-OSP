@@ -6,34 +6,34 @@
     "@graph": [
         {
             "@type": "schema:ResearchProject",
-            "schema:identifier": "10278@test",
-            "schema:publicKey": "aedfcdeb76fd825b0725190f431fd3ac1b766b1092cfcd87265ba514ff20a0d1",
+            "schema:identifier": "02226@test",
+            "schema:publicKey": "1c6b8d00c8382c93eb0dd3eeb24a20bfece56a28326bbaebb647cadaf4750520",
             "schema:description": {
                 "@context": {
                     "schema": "http://schema.org/",
                     "dc": "http://purl.org/dc/terms/"
                 },
                 "@type": "schema:ResearchProject",
-                "schema:name": "Analyzing the Influence of satellite imagery on space exploration",
-                "dc:abstract": "This paper analyzes how satellite imagery influences space exploration, providing insights into how to maximize its resource management.",
+                "schema:name": "Assessing the Benefits of precision agriculture for global supply chains",
+                "dc:abstract": "This research focuses on the benefits and challenges posed by precision agriculture for global supply chains, with an emphasis on its potential for disease prevention.",
                 "schema:keywords": [
-                    "satellite imagery",
-                    "space exploration",
-                    "resource management"
+                    "precision agriculture",
+                    "global supply chains",
+                    "disease prevention"
                 ],
-                "schema:startDate": "2024-03-13",
-                "schema:endDate": "2027-08-15",
+                "schema:startDate": "2023-12-18",
+                "schema:endDate": "2027-01-02",
                 "schema:funding": {
                     "@type": "schema:Organization",
-                    "schema:name": "National Geographic Society"
+                    "schema:name": "World Wildlife Fund"
                 },
                 "schema:location": {
                     "@type": "schema:Place",
-                    "schema:name": "Tokyo, Japan"
+                    "schema:name": "Los Angeles, California, USA"
                 }
             },
-            "schema:metadataCID": "QmeGiBxNBmv42LKGd2ju7Y7SxkQscX8zCiVaS2wLgXKjjx",
-            "schema:linked_user": "jolly_noether@test"
+            "schema:metadataCID": "Qmay4cDaxUaZaHoJKqzN69XkiX8wMx17aG4VMmwmkLcL1a",
+            "schema:linked_user": "zealous_ptolemy@test"
         }
     ]
 }
