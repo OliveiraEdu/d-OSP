@@ -28,7 +28,17 @@
 
 Traditional centralized systems often exhibit data silos, limited verifiability, and susceptibility to manipulation, impeding the openness and reliability of scientific practices. The decentralized model introduced in this work is designed to mitigate these challenges by enabling efficient data sharing, fostering collaboration, and enhancing the validation of research outputs, thereby strengthening reproducibility and transparency.
 
-This chapter details the design and implementation of the Open Science Platform, a decentralized system that integrates blockchain, IPFS, and smart contracts to improve research reproducibility. By leveraging immutable records and decentralized storage, the platform ensures transparent and verifiable research artifact management. Additionally, off-chain services are incorporated to facilitate file indexing, metadata extraction, and search functionality. The proposed platform aligns with Open Science principles by providing verifiable and persistently traceable access to research artifacts.
+This chapter details the design and implementation of the Open Science Platform, a decentralized system that integrates blockchain, IPFS, and smart contracts to improve research reproducibility. By leveraging immutable records and decentralized storage, the platform ensures transparent and verifiable research artifact management. Additionally, extended services are incorporated to facilitate file indexing, metadata extraction, and search functionality. The proposed platform aligns with Open Science principles by providing verifiable and persistently traceable access to research artifacts.
+
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.98\textwidth, keepaspectratio]{c4_context_diagram.eps}
+      \caption{System context diagram for the Open Science Platform}
+      \label{fig:c4_context_diagram}
+\end{figure}
+
+
 
 \subsection{Technology Stack}
 The Open Science Platform is developed using a hybrid architecture that combines decentralized and off-chain technologies to ensure secure, traceable, and efficient data management.
@@ -56,8 +66,6 @@ The extended services enhance the platform's features by improving file and meta
 
 \begin{itemize}
       \item \textbf{Jupyter Notebooks (Python):} Powers the front-end interface, facilitating the automation and display of the execution steps. Blockchain interactions are managed via the Iroha v1 Python library, while communication with the IPFS network is handled through the HTTPS client library.
-      \item \textbf{Apache Tika:} Extracts metadata from uploaded files, enhancing artifact organization and searchability.
-      \item \textbf{Whoosh:} Facilitates efficient indexing and keyword-based search for stored artifacts.
 \end{itemize}
 
 \begin{figure}[htbp]
@@ -81,6 +89,15 @@ The platform supports a set of core operations that regulate user interactions w
       \item \textbf{User and Project Accounts Linkage} – Once both user and project accounts are created, the system updates their attributes to establish a bidirectional association. This ensures that querying a user account reveals linked project accounts, and vice versa, facilitating traceability and efficient project management.
 \end{itemize}
 
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.98\textwidth, keepaspectratio]{c4_platform_operations_1.eps}
+      \caption{Operations diagram for the Open Science Platform}
+      \label{fig:c4_operations_diagram}
+\end{figure}
+
+
 \subsection{Artifact Management}
 
 \begin{itemize}
@@ -92,6 +109,15 @@ The platform supports a set of core operations that regulate user interactions w
 
       \item \textbf{Searching} – Users can perform keyword-based searches to locate relevant research artifacts, with search results displaying metadata details, including descriptions, subject and authorship.
 \end{itemize}
+
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.98\textwidth, keepaspectratio]{c4_platform_operations_2}
+      \caption{File operations diagram for the Open Science Platform}
+      \label{fig:c4_file_operations_diagram}
+\end{figure}
+
 
 
 \subsection{Verification and Access}

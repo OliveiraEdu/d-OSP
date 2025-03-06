@@ -1,0 +1,17 @@
+@startuml
+
+skinparam monochrome true
+
+title Open Science Platform Operations
+
+participant User as "User"
+participant Platform as "Platform"
+participant Blockchain as "Blockchain"
+
+User ->> Platform: Enrolls
+Platform ->> Blockchain: Create user account
+User ->> Platform: Register project
+Platform ->> Blockchain: Create project account
+
+
+@enduml

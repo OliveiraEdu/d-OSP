@@ -1,8 +1,11 @@
 @startuml
 
+skinparam monochrome true
+
 title Open Science Platform Operations
 
 participant User as "User"
+participant Project as "Project"
 participant Platform as "Platform"
 participant Parser as "Metadata Parser"
 participant Indexer as "Indexer"
