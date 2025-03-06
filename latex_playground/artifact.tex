@@ -7,10 +7,10 @@
 \usepackage{float}     % To control figure placement
 \usepackage{booktabs}
 \usepackage{array}
-\usepackage{svg}
+\usepackage{epsfig}
 
 
-\graphicspath{ {.//home/eduardo/Documents/repo/Git/OpenScience/out/diagrams/plantUML/} }
+\graphicspath{ {/home/eduardo/Documents/repo/Git/OpenScience/out/diagrams/plantUML/c4_container_diagram} }
 
 
 \title{Artifact}
@@ -31,7 +31,7 @@ This chapter details the design and implementation of the Open Science Platform,
 
 \begin{figure}[h]
       \centering
-      \includegraphics[width=0.8\textwidth]{/home/eduardo/Documents/repo/Git/OpenScience/out/diagrams/plantUML/c4_context_diagram/c4_context_diagram.png}
+      \includegraphics[width=0.8\textwidth]{/home/eduardo/Documents/repo/Git/OpenScience/out/diagrams/plantUML/c4_container_diagram/c4_container_diagram.pdf}
       \caption{System Context Diagram for the Open Science Platform.}
       \label{fig:open_science_context}
 \end{figure}
@@ -66,12 +66,10 @@ The extended services enhance the platform's features by improving file and meta
       \item \textbf{Whoosh:} Facilitates efficient indexing and keyword-based search for stored artifacts.
 \end{itemize}
 
-\begin{figure}[h!]
-      \centering
-      \includesvg[width=0.8\textwidth]{example.svg}
-      \caption{An example SVG image}
-      \label{fig:svg_example}
+\begin{figure}
+      \includegraphics{/home/eduardo/Documents/repo/Git/OpenScience/out/diagrams/plantUML/c4_container_diagram/c4_container_diagram.eps}
 \end{figure}
+
 
 
 
