@@ -8,9 +8,10 @@
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{epsfig}
+\usepackage{float}  % Allows better figure placement
 
+\graphicspath{{fig/}} % Set the directory where graphics are located
 
-\graphicspath{ {/home/eduardo/Documents/repo/Git/OpenScience/out/diagrams/plantUML/c4_container_diagram} }
 
 
 \title{Artifact}
@@ -28,13 +29,6 @@
 Traditional centralized systems often exhibit data silos, limited verifiability, and susceptibility to manipulation, impeding the openness and reliability of scientific practices. The decentralized model introduced in this work is designed to mitigate these challenges by enabling efficient data sharing, fostering collaboration, and enhancing the validation of research outputs, thereby strengthening reproducibility and transparency.
 
 This chapter details the design and implementation of the Open Science Platform, a decentralized system that integrates blockchain, IPFS, and smart contracts to improve research reproducibility. By leveraging immutable records and decentralized storage, the platform ensures transparent and verifiable research artifact management. Additionally, off-chain services are incorporated to facilitate file indexing, metadata extraction, and search functionality. The proposed platform aligns with Open Science principles by providing verifiable and persistently traceable access to research artifacts.
-
-\begin{figure}[h]
-      \centering
-      \includegraphics[width=0.8\textwidth]{/home/eduardo/Documents/repo/Git/OpenScience/out/diagrams/plantUML/c4_container_diagram/c4_container_diagram.pdf}
-      \caption{System Context Diagram for the Open Science Platform.}
-      \label{fig:open_science_context}
-\end{figure}
 
 \subsection{Technology Stack}
 The Open Science Platform is developed using a hybrid architecture that combines decentralized and off-chain technologies to ensure secure, traceable, and efficient data management.
@@ -66,11 +60,12 @@ The extended services enhance the platform's features by improving file and meta
       \item \textbf{Whoosh:} Facilitates efficient indexing and keyword-based search for stored artifacts.
 \end{itemize}
 
-\begin{figure}
-      \includegraphics{/home/eduardo/Documents/repo/Git/OpenScience/out/diagrams/plantUML/c4_container_diagram/c4_container_diagram.eps}
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.98\textwidth, keepaspectratio]{c4_container_diagram.eps}
+      \caption{Container diagram for the Open Science Platform}
+      \label{fig:c4_container_diagram}
 \end{figure}
-
-
 
 
 
