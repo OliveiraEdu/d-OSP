@@ -418,7 +418,7 @@ def fetch_project_details(file_cid, blockchain_data):
         for admin, details in blockchain_data.items():
             # Check for file CIDs
             for key, value in details.items():
-                if key not in ["project_metadata_cid", "linked_user"]:  # Skip metadata and linked user
+                if key not in ["account_metadata_cid", "linked_user"]:  # Skip metadata and linked user
                     cids = value.split(", ")
                     if file_cid in cids:
                         logger.info(f"***** File CID {file_cid} found under {key}, the file is VALID *****")

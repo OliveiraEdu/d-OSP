@@ -3,23 +3,22 @@ start
 :Search for a keyword;
 :Fetch keyword in the index;
 
-if (Keyword found?) then (Yes)
-    :List Project ID and File CID;
-    :Display file metadata;
-    :Fetch Project ID account in blockchain;
-    :Retrieve project owner from account details;
-    :Fetch project owner account in blockchain;
+if (Keyword found?) then (yes)
+    :Get search results;
+    :Fetch Project ID and File CID from search results;
+    :Fetch Project ID account details in blockchain;
 
-    :Parse account details;
-    :Fetch File Metadata CID;
+    :Parse Project account details;
+    :Fetch File CID from Project account details;
     
-    if (File Metadata CID in index == File Metadata CID in blockchain?) then (Yes)
+    if (File CID from search results == File CID in Project account details in blockchain?) then (yes)
         :File is valid;
-    else (No)
+        :Download file from IPFS;
+    else (no)
         :File is invalid;
     endif
 
-else (No)
+else (no)
     :Keyword not found;
 endif
 
