@@ -4,11 +4,11 @@ start
 :Fetch keyword in the index;
 
 if (Keyword found?) then (Yes)
-    :List File Name, File CID, File Metadata CID, and Project ID;
+    :List Project ID and File CID;
+    :Display file metadata;
     :Fetch Project ID account in blockchain;
     :Retrieve project owner from account details;
     :Fetch project owner account in blockchain;
-    :Retrieve institution from account details;
 
     :Parse account details;
     :Fetch File Metadata CID;

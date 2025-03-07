@@ -257,7 +257,7 @@ def get_account_detail(id):
     response = net.send_query(query)
     data = response.account_detail_response
     details = data.detail
-    logger.info(f'User Account id = {id}, {details}')
+    logger.info(f'Account id = {id}, {details}')
     return details  # Add this line to return the project details
 
 

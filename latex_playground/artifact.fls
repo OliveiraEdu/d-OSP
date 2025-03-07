@@ -267,6 +267,17 @@ INPUT ./fig//c4_platform_operations_2.eps
 INPUT ./fig//c4_platform_operations_2-eps-converted-to.pdf
 INPUT ./fig//c4_platform_operations_2-eps-converted-to.pdf
 INPUT ./fig//c4_platform_operations_2-eps-converted-to.pdf
+INPUT ./fig//keyword_and_file_validation.eps
+INPUT ./fig//keyword_and_file_validation.eps
+INPUT fig//keyword_and_file_validation.eps
+INPUT ./fig//keyword_and_file_validation.eps
+INPUT ./fig//keyword_and_file_validation.eps
+INPUT ./fig//keyword_and_file_validation-eps-converted-to.pdf
+INPUT ./fig//keyword_and_file_validation-eps-converted-to.pdf
+INPUT ./fig//keyword_and_file_validation.eps
+INPUT ./fig//keyword_and_file_validation-eps-converted-to.pdf
+INPUT ./fig//keyword_and_file_validation-eps-converted-to.pdf
+INPUT ./fig//keyword_and_file_validation-eps-converted-to.pdf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT artifact.aux
 INPUT /usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc

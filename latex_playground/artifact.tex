@@ -120,13 +120,23 @@ The platform supports a set of core operations that regulate user interactions w
 
 
 
-\subsection{Verification and Access}
+\subsection{Validation and Download}
 
 \begin{itemize}
       \item \textbf{File Validation} – To ensure data integrity and authenticity, the platform verifies whether the CID of a file stored on IPFS matches the CID recorded on the blockchain. A discrepancy between these identifiers signals potential tampering or corruption.
 
       \item \textbf{File Download} – The system retrieves and downloads validated files from IPFS to the user local file system for later usage.
 \end{itemize}
+
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.98\textwidth, keepaspectratio]{keyword_and_file_validation.eps}
+      \caption{File validation and download}
+      \label{fig:c4_file_validation}
+\end{figure}
+
+
 
 
 \subsection{Data Model}
