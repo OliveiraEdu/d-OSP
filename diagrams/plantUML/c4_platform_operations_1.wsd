@@ -2,7 +2,7 @@
 
 skinparam monochrome true
 
-title Open Science Platform Operations
+title Open Science Platform - User Enrollment and Project Registering
 
 participant User as "User"
 participant Platform as "Platform"

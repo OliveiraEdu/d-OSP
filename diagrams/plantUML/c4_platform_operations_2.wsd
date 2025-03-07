@@ -2,7 +2,7 @@
 
 skinparam monochrome true
 
-title Open Science Platform Operations
+title Open Science Platform - Artifact Management
 
 participant User as "User"
 participant Project as "Project"
@@ -12,7 +12,7 @@ participant Indexer as "Indexer"
 participant IPFS as "IPFS"
 participant Blockchain as "Blockchain"
 
-User ->> Platform: Upload file
+User ->> Platform: Select local file
 Platform ->> IPFS: Upload file
 IPFS ->> Platform: Returns the file CID
 Platform ->> Blockchain: Update the project account with the file CID
