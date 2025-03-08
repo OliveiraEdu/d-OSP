@@ -1,0 +1,26 @@
+@startuml
+
+skinparam monochrome true
+
+title Open Science Platform - Search and Validation
+
+participant User as "User"
+participant Platform as "Platform"
+participant Search as "Search Engine"
+participant Indexer as "Indexer"
+participant IPFS as "IPFS"
+participant Blockchain as "Blockchain"
+
+User ->> Platform: Search for a keyword
+Platform ->> Indexer: Looks up for the keyword
+Indexer ->> Platform: Return search results
+Platform ->> Blockchain: Fetch Project ID account details
+Blockchain ->> Platform: Return Project account details
+
+Platform ->> Platform: Validate file
+
+
+IPFS ->> Platform: Sends file using file CID
+Platform ->> User: Download file
+
+@enduml
