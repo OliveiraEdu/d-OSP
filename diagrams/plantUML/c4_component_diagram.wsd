@@ -1,0 +1,24 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+skinparam monochrome true
+
+
+LAYOUT_WITH_LEGEND()
+
+title Component Diagram for Open Science Platform
+
+Person(user, "User", "Interacts with the system via Jupyter Notebook")
+
+Boundary(docker_env, "Docker Containers",  $type="Component") {
+    Component(jupyter, "Jupyter Server", "Python, Iroha v1 Library, IPFS Client, Apache Tika, Woosh", "User front-end and processing environment")
+    Component(iroha, "Blockchain", "Iroha v1 Hyperledger Iroha", "Distributed ledger for transaction management")
+    ComponentDb(db, "Relational Database", "PostgreSQL", "Stores blockchain data for Iroha v1")
+    Component(ipfs, "Storage", "InterPlanetary File System", "Decentralized storage and file retrieval")
+}
+
+Rel(user, jupyter, "Uses", "Jupyter Notebook UI")
+Rel(jupyter, iroha, "Submits transactions to", "gRPC API")
+Rel(jupyter, ipfs, "Uploads and retrieves files from", "HTTPS API")
+Rel(iroha, db, "Stores blockchain data in")
+
+@enduml

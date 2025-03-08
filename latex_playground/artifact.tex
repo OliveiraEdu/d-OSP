@@ -76,6 +76,69 @@ The extended services enhance the platform's features by improving file and meta
 \end{figure}
 
 
+\subsection{System Components and Interactions in the Open Science Platform}
+
+The Open Science Platform consists of multiple interconnected components, each serving a distinct role in ensuring secure, verifiable, and reproducible research data management. The primary components include Jupyter Server, the blockchain Hyperledger Iroha v1 and the InterPlanetary File System (IPFS). Each of these elements are encapsulated within a Docker container to provide modularity, ease of deployment and reproducibility.
+
+\subsubsection{Jupyter Server}
+The Jupyter Server acts as the primary interface for users interacting with the platform. This component provides a Python kernel for the execution environment that integrates the Iroha v1 Library, the IPFS HTTPS client, Apache Tika for metadata handling, and the Woosh Indexer and Search system. It enables users to:
+
+\begin{itemize}
+      \item Execute Python scripts to submit transactions and queries to the blockchain via smart contracts.
+      \item Upload and retrieve files and metadata (JSON objects) stored in IPFS.
+      \item Process and index research data using Apache Tika and Woosh for enhanced searchability.
+      \item Access and visualize blockchain-stored metadata for Open Science applications.
+\end{itemize}
+
+\subsubsection{Blockchain}
+The blockchain runs based on a Hyperledger Iroha v1 network and acts as a distributed ledger for recording transactions. It ensures immutability, transparency, and verifiability of stored research metadata. This component:
+\begin{itemize}
+      \item Receives transactions from the Jupyter Server via a gRPC API.
+      \item Stores metadata references, ensuring that uploaded research artifacts can be authenticated.
+      \item Interacts with PostgreSQL for structured storage of blockchain metadata.
+      \item Supports smart contracts through the integration of Hyperledger Burrow, which provides a modular blockchain client with a permissioned smart contract interpreter partially developed to the specification of the Ethereum Virtual Machine (EVM).
+
+\end{itemize}
+
+\subsubsection{Storage}
+The InterPlanetary File System (IPFS) is a decentralized storage solution that manages the research outputs. This component:
+\begin{itemize}
+      \item Stores digital research artifacts in a content-addressed manner.
+      \item Allows the Jupyter Server to upload and retrieve files via an HTTPS API.
+      \item Ensures long-term availability of scientific data through distributed storage principles.
+\end{itemize}
+
+
+\subsubsection{Relational Database (PostgreSQL)}
+The PostgreSQL database provides structured storage for blockchain-related data. It is used exclusively and managed by Iroha v1 to:
+\begin{itemize}
+      \item Maintain an efficient and queryable record of transactions.
+      \item Ensure that research metadata stored on the blockchain can be retrieved and verified.
+      \item Support blockchain operations requiring fast access to structured data.
+\end{itemize}
+
+\subsubsection{Component Interactions}
+The components interact in aseamless and decentralized manner:
+\begin{enumerate}
+      \item \textbf{User Interaction}: The user submits transactions, uploads files, and queries research data through the Jupyter Server.
+      \item \textbf{Blockchain Transactions}: Jupyter Server sends and retrieves research metadata to the Iroha blockchain via gRPC API.
+      \item \textbf{Metadata Storage}: Iroha stores data in the PostgreSQL database for efficient retrieval.
+      \item \textbf{Decentralized Storage}: Research artifacts are stored in IPFS, with their unique file identifiers recorded on the blockchain.
+      \item \textbf{File Retrieval}: Users can retrieve files from IPFS using their content identifiers (CID), ensuring authenticity and reproducibility.
+\end{enumerate}
+
+This architecture guarantees trustworthy and reproducible scientific research by leveraging blockchain for integrity, IPFS for decentralized storage, and Jupyter as an accessible research environment.
+
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.98\textwidth, keepaspectratio]{c4_component_diagram.eps}
+      \caption{Componentdiagram for the Open Science Platform}
+      \label{fig:c4_component_diagram}
+\end{figure}
+
+
+
 
 \subsection{Platform Operations}
 The platform supports a set of core operations that regulate user interactions with projects and data management.
@@ -149,23 +212,33 @@ The platform supports a set of core operations that regulate user interactions w
 
 \subsection{Data Model}
 
-The data model that supports the platform is comprised of two main classes User and Project. The User class contains attributes for user identity information, while the Project class contains attributes for project metadata. A many-to-many relationship exists between Users and Projects where, a single user can be associated with multiple projects.
-
-To describe the attributes of each entity in the data model, three main ontologies were considered: FOAF (Friend of a Friend), Dublin Core and Schema.org. These standard vocabularies provide a common language for describing metadata information and can potentially easy the integration with other systems adopting W3C standards for semantic Web, like knowledge graphs, for instance.
-
-\subsection{Entity-relationship model}
+The data model that supports the Open Science Platform is designed to ensure structured, interoperable, and verifiable research metadata. It consists of two primary entities: User and Project. The User entity represents individual researchers, storing identity attributes, while the Project entity encapsulates metadata related to scientific projects, such as title, description, contributors, and research artifacts. A many-to-many relationship exists between Users and Projects, allowing multiple researchers to collaborate on a single project and enabling individual users to be associated with multiple research initiatives.
 
 
-blokchains, smart contracts are verifiable piece of code
 
-\subsection{Ontologies}
-
-To describe the attributes of each entity in the data model, three main ontologies were considered: FOAF (Friend of a Friend), Dublin Core and Schema.org. These standard vocabularies provide a common language for describing metadata information and can potentially easy the integration with other systems adopting W3C standards for semantic Web, like knowledge graphs, for instance.
-
-\subsection{Entity-relationship model}
+\subsection{Entity-Relationship Model}
 
 
-blokchains, smart contracts are verifiable piece of code
+
+\subsection{Comparing Models}
+
+
+\subsection{Metadata Representation}
+
+
+To standardize metadata representation and enhance interoperability, three key ontologies were incorporated: \textbf{FOAF (Friend of a Friend)}, \textbf{Dublin Core}, and \textbf{Schema.org}. These vocabularies provide a common semantic framework that facilitates integration with other systems based on W3C standards, such as knowledge graphs and linked data environments. FOAF is particularly useful for modeling user identity and social connections, Dublin Core provides metadata descriptors for digital assets, and Schema.org enhances discoverability by aligning with web-based search engines and indexing mechanisms.
+
+\subsection{Entity-Relationship Model and Blockchain Integration}
+
+The Open Science Platform leverages a structured \textbf{entity-relationship model} to ensure consistent representation of research metadata while integrating blockchain technology for \textbf{verifiability and immutability}. Traditional relational models, commonly used in databases, define users, projects, and their associations through structured schema, but the platform extends this model by incorporating blockchain transactions and decentralized identifiers.
+
+A fundamental distinction in this model is the role of \textbf{blockchain as a verifiable data layer}. Instead of storing research artifacts directly in a database, the platform uses the blockchain to record \textbf{metadata fingerprints}—cryptographic hashes and content identifiers (CIDs) linking to files stored in the \textbf{InterPlanetary File System (IPFS)}. Each transaction involving metadata updates is signed and verified, ensuring \textbf{provenance, integrity, and reproducibility} of research data.
+
+Additionally, \textbf{smart contracts}, powered by \textbf{Hyperledger Burrow}, enforce access control, project governance, and data-sharing policies. These contracts serve as self-executing agreements that define conditions for modifying project records, ensuring compliance with Open Science principles.
+
+The integration of ontologies, relational structures, and blockchain elements results in a \textbf{hybrid data model} that combines the expressiveness of semantic web technologies with the security and transparency of distributed ledger technology. This model underpins the Open Science Platform's ability to facilitate reproducible, auditable, and decentralized scientific research.
+
+
 
 
 \subsection{Metadata}

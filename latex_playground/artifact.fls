@@ -247,6 +247,17 @@ INPUT ./fig//c4_container_diagram.eps
 INPUT ./fig//c4_container_diagram-eps-converted-to.pdf
 INPUT ./fig//c4_container_diagram-eps-converted-to.pdf
 INPUT ./fig//c4_container_diagram-eps-converted-to.pdf
+INPUT ./fig//c4_component_diagram.eps
+INPUT ./fig//c4_component_diagram.eps
+INPUT fig//c4_component_diagram.eps
+INPUT ./fig//c4_component_diagram.eps
+INPUT ./fig//c4_component_diagram.eps
+INPUT ./fig//c4_component_diagram-eps-converted-to.pdf
+INPUT ./fig//c4_component_diagram-eps-converted-to.pdf
+INPUT ./fig//c4_component_diagram.eps
+INPUT ./fig//c4_component_diagram-eps-converted-to.pdf
+INPUT ./fig//c4_component_diagram-eps-converted-to.pdf
+INPUT ./fig//c4_component_diagram-eps-converted-to.pdf
 INPUT ./fig//c4_platform_operations_1.eps
 INPUT fig//c4_platform_operations_1.eps
 INPUT ./fig//c4_platform_operations_1.eps
@@ -275,8 +286,6 @@ INPUT ./fig//c4_searching_and_validation.eps
 INPUT ./fig//c4_searching_and_validation-eps-converted-to.pdf
 INPUT ./fig//c4_searching_and_validation-eps-converted-to.pdf
 INPUT ./fig//c4_searching_and_validation.eps
-INPUT ./fig//c4_searching_and_validation-eps-converted-to.pdf
-INPUT ./fig//c4_searching_and_validation-eps-converted-to.pdf
 INPUT ./fig//c4_searching_and_validation-eps-converted-to.pdf
 INPUT ./fig//c4_searching_and_validation-eps-converted-to.pdf
 INPUT ./fig//c4_searching_and_validation-eps-converted-to.pdf
