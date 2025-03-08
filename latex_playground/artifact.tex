@@ -209,35 +209,71 @@ The platform supports a set of core operations that regulate user interactions w
 
 
 
+\subsection{Entity-Relationship Model for the Open Science Platform}
 
-\subsection{Data Model}
-
-The data model that supports the Open Science Platform is designed to ensure structured, interoperable, and verifiable research metadata. It consists of two primary entities: User and Project. The User entity represents individual researchers, storing identity attributes, while the Project entity encapsulates metadata related to scientific projects, such as title, description, contributors, and research artifacts. A many-to-many relationship exists between Users and Projects, allowing multiple researchers to collaborate on a single project and enabling individual users to be associated with multiple research initiatives.
-
+The entity-relationship model for the Open Science Platform defines the logical structure of users and research projects, capturing the associations between these entities. The primary entities in this model are \texttt{User} and \texttt{Project}, which are connected through an ownership relationship.
 
 
-\subsection{Entity-Relationship Model}
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.98\textwidth, keepaspectratio]{entity_relationship_model.eps}
+      \caption{Entity-relationship model for the Open Science Platform}
+      \label{fig:er_model}
+\end{figure}
+
+
+
+\subsection{User Entity}
+The \texttt{User} entity represents an individual interacting with the platform. Each user is uniquely identified by an account ID and has attributes that describe personal and institutional information. The attributes of the \texttt{User} entity are listed in Table \ref{tab:user_attributes}.
+
+\begin{table}[h]
+      \centering
+      \caption{Attributes of the User entity}
+      \label{tab:user_attributes}
+      \begin{tabular}{|l|l|}
+            \hline
+            \textbf{Attribute}   & \textbf{Description}                             \\ \hline
+            \texttt{account\_id} & A unique identifier assigned to the user         \\ \hline
+            \texttt{full\_name}  & The complete name of the user                    \\ \hline
+            \texttt{email}       & The email address used for communication         \\ \hline
+            \texttt{institution} & The organization to which the user is affiliated \\ \hline
+            \texttt{orcid}       & The Open Researcher and Contributor ID           \\ \hline
+            \texttt{role}        & The role of the user within the platform         \\ \hline
+      \end{tabular}
+\end{table}
+
+\subsection{Project Entity}
+The \texttt{Project} entity represents a research project registered in the platform. It contains essential metadata to describe the project and facilitate discovery and collaboration. The attributes of the \texttt{Project} entity are listed in Table \ref{tab:project_attributes}.
+
+\begin{table}[h]
+      \centering
+      \caption{Attributes of the Project entity}
+      \label{tab:project_attributes}
+      \begin{tabular}{|l|l|}
+            \hline
+            \textbf{Attribute} & \textbf{Description}                                    \\ \hline
+            \texttt{id}        & A unique identifier assigned to the project             \\ \hline
+            \texttt{name}      & The official name of the project                        \\ \hline
+            \texttt{abstract}  & A brief summary outlining the research objectives       \\ \hline
+            \texttt{keywords}  & A list of relevant keywords associated with the project \\ \hline
+            \texttt{startDate} & The date when the project officially begins             \\ \hline
+            \texttt{endDate}   & The date when the project is expected to conclude       \\ \hline
+            \texttt{city}      & The city where the project is primarily conducted       \\ \hline
+            \texttt{country}   & The country associated with the research project        \\ \hline
+      \end{tabular}
+\end{table}
+
+\subsection{Ownership Relationship}
+A \texttt{User} owns one or more \texttt{Project} entities, establishing a one-to-many relationship. This means that a single user can be responsible for multiple projects, but each project is owned by exactly one user. This relationship is crucial for managing project access, ensuring accountability, and maintaining provenance of research activities. This model ensures a structured representation of research projects and their associated users, supporting an organized approach to data management in the Open Science Platform.
 
 
 
 \subsection{Comparing Models}
 
-
 \subsection{Metadata Representation}
 
 
 To standardize metadata representation and enhance interoperability, three key ontologies were incorporated: \textbf{FOAF (Friend of a Friend)}, \textbf{Dublin Core}, and \textbf{Schema.org}. These vocabularies provide a common semantic framework that facilitates integration with other systems based on W3C standards, such as knowledge graphs and linked data environments. FOAF is particularly useful for modeling user identity and social connections, Dublin Core provides metadata descriptors for digital assets, and Schema.org enhances discoverability by aligning with web-based search engines and indexing mechanisms.
-
-\subsection{Entity-Relationship Model and Blockchain Integration}
-
-The Open Science Platform leverages a structured \textbf{entity-relationship model} to ensure consistent representation of research metadata while integrating blockchain technology for \textbf{verifiability and immutability}. Traditional relational models, commonly used in databases, define users, projects, and their associations through structured schema, but the platform extends this model by incorporating blockchain transactions and decentralized identifiers.
-
-A fundamental distinction in this model is the role of \textbf{blockchain as a verifiable data layer}. Instead of storing research artifacts directly in a database, the platform uses the blockchain to record \textbf{metadata fingerprints}—cryptographic hashes and content identifiers (CIDs) linking to files stored in the \textbf{InterPlanetary File System (IPFS)}. Each transaction involving metadata updates is signed and verified, ensuring \textbf{provenance, integrity, and reproducibility} of research data.
-
-Additionally, \textbf{smart contracts}, powered by \textbf{Hyperledger Burrow}, enforce access control, project governance, and data-sharing policies. These contracts serve as self-executing agreements that define conditions for modifying project records, ensuring compliance with Open Science principles.
-
-The integration of ontologies, relational structures, and blockchain elements results in a \textbf{hybrid data model} that combines the expressiveness of semantic web technologies with the security and transparency of distributed ledger technology. This model underpins the Open Science Platform's ability to facilitate reproducible, auditable, and decentralized scientific research.
-
 
 
 

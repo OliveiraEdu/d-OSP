@@ -1,0 +1,30 @@
+@startuml entity_relationship_model
+
+title Entity-relationship model for the Open Science Platform
+skinparam monochrome true
+
+top to bottom direction
+
+class "User" {
+  + account_id: string
+  + full_name: string
+  + email: string
+  + institution: string
+  + orcid: string
+  + role: string
+}
+
+class "Project" {
+  + id: string 
+  + name: string
+  + abstract: string
+  + keywords: list<string>
+  + startDate: date
+  + endDate: date
+  + city: string
+  + country: string
+}
+
+User "1" --> "0..*" Project : owns >
+
+@enduml
