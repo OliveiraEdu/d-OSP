@@ -418,48 +418,154 @@ By reusing the \texttt{account} entity, the Open Science Platform ER model ensur
 \end{figure}
 
 
-\subsection{Metadata Representation}
+\section{Role of Metadata and Use of Ontologies in the Open Science Platform}
+
+Metadata plays a crucial role in both the \texttt{Account} and \texttt{Project} classes within the Open Science platform. It is used to capture and represent essential information about the user and the research project, providing context and structure to their respective data. This metadata is stored in JSON format, following established semantic web standards and leveraging ontologies to enhance data interoperability and accessibility.
+
+\subsection{Account Metadata}
+The metadata for the \texttt{Account} class describes the attributes associated with a user on the platform. This metadata is structured using multiple ontologies, primarily \texttt{FOAF} (Friend of a Friend) and \texttt{Schema.org}, to provide detailed and interoperable information about the user. The key attributes in the \texttt{Account} metadata include the user's name, email, organizational affiliation, unique identifier (ORCID), role, public key, and linked project.
+
+\begin{table}[h]
+      \centering
+      \begin{tabular}{|l|l|}
+            \hline
+            \textbf{Attribute}              & \textbf{Description}                                                                                            \\ \hline
+            \texttt{foaf:name}              & The name of the user.                                                                                           \\ \hline
+            \texttt{foaf:mbox}              & The email address of the user.                                                                                  \\ \hline
+            \texttt{foaf:organization}      & The organization the user is affiliated with, described as an instance of the \texttt{foaf:Organization} class. \\ \hline
+            \texttt{schema:identifier}      & A unique identifier for the user, such as an ORCID identifier.                                                  \\ \hline
+            \texttt{foaf:holdsAccount}      & The user's account details, including their role and public key.                                                \\ \hline
+            \texttt{schema:linked\_project} & The project associated with the user.                                                                           \\ \hline
+      \end{tabular}
+      \caption{Account Metadata Attributes}
+\end{table}
+
+These attributes ensure that the user's profile is rich, structured, and semantically linked to relevant data across different systems. By employing these ontologies, the platform ensures that user data can be easily shared and understood by external systems, enabling better integration with other Open Science platforms.
+
+\subsection{Project Metadata}
+The metadata for the \texttt{Project} class provides essential details about the research project hosted on the platform. Similar to the user metadata, the project metadata is structured using \texttt{Schema.org} and \texttt{Dublin Core} (\texttt{dc}) ontologies. This structure allows for a comprehensive description of the project, including its name, abstract, keywords, timeline, funding details, and location.
+
+\begin{table}[h]
+      \centering
+      \begin{tabular}{|l|l|}
+            \hline
+            \textbf{Attribute}           & \textbf{Description}                                                                                           \\ \hline
+            \texttt{schema:name}         & The name of the research project.                                                                              \\ \hline
+            \texttt{dc:abstract}         & A brief abstract describing the project's objectives and focus.                                                \\ \hline
+            \texttt{schema:keywords}     & Keywords associated with the project, such as "precision agriculture" and "global supply chains."              \\ \hline
+            \texttt{schema:startDate}    & The start date of the project.                                                                                 \\ \hline
+            \texttt{schema:endDate}      & The end date of the project.                                                                                   \\ \hline
+            \texttt{schema:funding}      & The funding organization for the project, described as an instance of the \texttt{schema:Organization} class.  \\ \hline
+            \texttt{schema:location}     & The physical location where the project is based, described as an instance of the \texttt{schema:Place} class. \\ \hline
+            \texttt{schema:metadataCID}  & A unique identifier for the metadata of the project.                                                           \\ \hline
+            \texttt{schema:linked\_user} & The user associated with the project.                                                                          \\ \hline
+      \end{tabular}
+      \caption{Project Metadata Attributes}
+\end{table}
+
+This metadata not only captures the essential details of the project but also ensures that these details are linked to the user's profile, making it easier to track the relationship between users and their associated research efforts.
+
+\subsection{Ontologies and Their Role}
+An ontology is a formal representation of knowledge as a set of concepts within a domain and the relationships between those concepts. In the context of the Open Science platform, ontologies help structure data in a way that promotes interoperability, consistency, and clarity. The use of ontologies such as \texttt{FOAF}, \texttt{Schema.org}, and \texttt{Dublin Core} ensures that data is standardized and can be easily shared and understood across different systems.
+
+\begin{table}[h]
+      \centering
+      \begin{tabular}{|l|l|}
+            \hline
+            \textbf{Ontology}                  & \textbf{Description}                                                                                                                                                                                                                                                          \\ \hline
+            \textbf{FOAF (Friend of a Friend)} & A vocabulary used to describe people, their activities, and their relationships to other people and objects. In the Open Science platform, it is used to describe the user (or \texttt{Account}) class, including attributes like name, email, and organization.              \\ \hline
+            \textbf{Schema.org}                & A collaborative initiative that provides a structured vocabulary for data markup on the web. It is used extensively in the Open Science platform for describing both user and project metadata, ensuring compatibility with web standards and promoting data discoverability. \\ \hline
+            \textbf{Dublin Core (DC)}          & A metadata standard used for describing a wide range of resources. It is particularly useful for describing the abstract, keywords, and other descriptive elements of the project class in the Open Science platform.                                                         \\ \hline
+      \end{tabular}
+      \caption{Ontologies Used in the Open Science Platform}
+\end{table}
+
+These ontologies were chosen because of their widespread adoption, their ability to standardize data across different systems, and their support for rich, machine-readable representations. By aligning with these ontologies, the platform ensures that its metadata is compatible with other Open Science initiatives and services, facilitating seamless integration and data exchange.
+
+\subsection{Conclusion}
+In summary, metadata plays a vital role in the Open Science platform by enabling the structured and interoperable representation of user and project information. The use of ontologies like \texttt{FOAF}, \texttt{Schema.org}, and \texttt{Dublin Core} enhances the platform's ability to share and integrate data, ensuring that the platform contributes effectively to the broader Open Science ecosystem.
 
 
-To standardize metadata representation and enhance interoperability, three key ontologies were incorporated: \textbf{FOAF (Friend of a Friend)}, \textbf{Dublin Core}, and \textbf{Schema.org}. These vocabularies provide a common semantic framework that facilitates integration with other systems based on W3C standards, such as knowledge graphs and linked data environments. FOAF is particularly useful for modeling user identity and social connections, Dublin Core provides metadata descriptors for digital assets, and Schema.org enhances discoverability by aligning with web-based search engines and indexing mechanisms.
+\section{Account Metadata JSON}
 
-
-
-\subsection{Metadata}
-
-Metadata in the context of the platform has a two fold approach. The first is related to the identity of an user account, holding key value pairs of attributes related to the user such as full name, email, institution, ORCID.
-
+The following JSON structure describes the metadata for an \texttt{Account} in the Open Science platform:
 
 \begin{verbatim}
-      {
-          "@context": {
-              "schema": "http://schema.org/",
-              "foaf": "http://xmlns.com/foaf/0.1/"
-          },
-          "@graph": [
-              {
-                  "@type": "foaf:Person",
-                  "foaf:name": "Jolly Noether",
-                  "foaf:mbox": "jolly_noether@email.com",
-                  "foaf:organization": {
-                      "@type": "foaf:Organization",
-                      "foaf:name": "Morris College"
-                  },
-                  "schema:identifier": {
-                      "@type": "PropertyValue",
-                      "propertyID": "ORCID",
-                      "value": "9833-6461-2701-X"
-                  },
-                  "foaf:holdsAccount": {
-                      "schema:identifier": "jolly_noether@test",
-                      "schema:roleName": "author",
-                      "schema:publicKey": <publick ey value>},
-                  "schema:linked_project": "10278@test"
-              }
-          ]
-      }
-      \end{verbatim}
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "foaf": "http://xmlns.com/foaf/0.1/"
+    },
+    "@graph": [
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Zealous Ptolemy",
+            "foaf:mbox": "zealous_ptolemy@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Ashkelon Academic College"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "6153-7096-0437-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "zealous_ptolemy@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "ca4c00c0a43bbd2caf070ab780886906ebb70e2c3d975972ccab4e15c01f33bd"
+            },
+            "schema:linked_project": "02226@test"
+        }
+    ]
+}
+\end{verbatim}
 
+\section{Project Metadata JSON}
+
+The following JSON structure describes the metadata for a \texttt{Project} in the Open Science platform:
+
+\begin{verbatim}
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "dc": "http://purl.org/dc/terms/"
+    },
+    "@graph": [
+        {
+            "@type": "schema:ResearchProject",
+            "schema:identifier": "02226@test",
+            "schema:publicKey": "1c6b8d00c8382c93eb0dd3eeb24a20bfece56a28326bbaebb647cadaf4750520",
+            "schema:description": {
+                "@context": {
+                    "schema": "http://schema.org/",
+                    "dc": "http://purl.org/dc/terms/"
+                },
+                "@type": "schema:ResearchProject",
+                "schema:name": "Assessing the Benefits of precision agriculture for global supply chains",
+                "dc:abstract": "This research focuses on the benefits and challenges posed by precision agriculture for global supply chains, with an emphasis on its potential for disease prevention.",
+                "schema:keywords": [
+                    "precision agriculture",
+                    "global supply chains",
+                    "disease prevention"
+                ],
+                "schema:startDate": "2023-12-18",
+                "schema:endDate": "2027-01-02",
+                "schema:funding": {
+                    "@type": "schema:Organization",
+                    "schema:name": "World Wildlife Fund"
+                },
+                "schema:location": {
+                    "@type": "schema:Place",
+                    "schema:name": "Los Angeles, California, USA"
+                }
+            },
+            "schema:metadataCID": "Qmay4cDaxUaZaHoJKqzN69XkiX8wMx17aG4VMmwmkLcL1a",
+            "schema:linked_user": "zealous_ptolemy@test"
+        }
+    ]
+}
+\end{verbatim}
 
 
 
