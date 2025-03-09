@@ -209,7 +209,7 @@ The platform supports a set of core operations that regulate user interactions w
 
 
 
-\subsection{Entity-Relationship Model for the Open Science Platform}
+\subsection{Data Model for the Open Science Platform}
 
 The entity-relationship model for the Open Science Platform defines the logical structure of users and research projects, capturing the associations between these entities. The primary entities in this model are \texttt{User} and \texttt{Project}, which are connected through an ownership relationship.
 
@@ -232,13 +232,14 @@ The \texttt{User} entity represents an individual interacting with the platform.
       \label{tab:user_attributes}
       \begin{tabular}{|l|l|}
             \hline
-            \textbf{Attribute}   & \textbf{Description}                             \\ \hline
-            \texttt{account\_id} & A unique identifier assigned to the user         \\ \hline
-            \texttt{full\_name}  & The complete name of the user                    \\ \hline
-            \texttt{email}       & The email address used for communication         \\ \hline
-            \texttt{institution} & The organization to which the user is affiliated \\ \hline
-            \texttt{orcid}       & The Open Researcher and Contributor ID           \\ \hline
-            \texttt{role}        & The role of the user within the platform         \\ \hline
+            \textbf{Attribute}       & \textbf{Description}                             \\ \hline
+            \texttt{account\_id}     & A unique identifier assigned to the user         \\ \hline
+            \texttt{full\_name}      & The complete name of the user                    \\ \hline
+            \texttt{email}           & The email address used for communication         \\ \hline
+            \texttt{institution}     & The organization to which the user is affiliated \\ \hline
+            \texttt{orcid}           & The Open Researcher and Contributor ID           \\ \hline
+            \texttt{role}            & The role of the user within the research project \\ \hline
+            \texttt{linked\_project} & The research project the user is assigned to     \\ \hline
       \end{tabular}
 \end{table}
 
@@ -251,25 +252,25 @@ The \texttt{Project} entity represents a research project registered in the plat
       \label{tab:project_attributes}
       \begin{tabular}{|l|l|}
             \hline
-            \textbf{Attribute} & \textbf{Description}                                    \\ \hline
-            \texttt{id}        & A unique identifier assigned to the project             \\ \hline
-            \texttt{name}      & The official name of the project                        \\ \hline
-            \texttt{abstract}  & A brief summary outlining the research objectives       \\ \hline
-            \texttt{keywords}  & A list of relevant keywords associated with the project \\ \hline
-            \texttt{startDate} & The date when the project officially begins             \\ \hline
-            \texttt{endDate}   & The date when the project is expected to conclude       \\ \hline
-            \texttt{city}      & The city where the project is primarily conducted       \\ \hline
-            \texttt{country}   & The country associated with the research project        \\ \hline
+            \textbf{Attribute}    & \textbf{Description}                                    \\ \hline
+            \texttt{project\_id}  & A unique identifier assigned to the project             \\ \hline
+            \texttt{name}         & The official name of the project                        \\ \hline
+            \texttt{abstract}     & A brief summary outlining the research objectives       \\ \hline
+            \texttt{keywords}     & A list of relevant keywords associated with the project \\ \hline
+            \texttt{startDate}    & The date when the project officially begins             \\ \hline
+            \texttt{endDate}      & The date when the project is expected to conclude       \\ \hline
+            \texttt{city}         & The city where the project is primarily conducted       \\ \hline
+            \texttt{country}      & The country associated with the research project        \\ \hline
+            \texttt{linked\_user} & The user linked to the project                          \\ \hline
       \end{tabular}
 \end{table}
 
 \subsection{Ownership Relationship}
 A \texttt{User} owns one or more \texttt{Project} entities, establishing a one-to-many relationship. This means that a single user can be responsible for multiple projects, but each project is owned by exactly one user. This relationship is crucial for managing project access, ensuring accountability, and maintaining provenance of research activities. This model ensures a structured representation of research projects and their associated users, supporting an organized approach to data management in the Open Science Platform.
 
-\subsection{Hyperledger Iroha v1 Data Model}
+\subsection{ Data Model for Hyperledger Iroha v1}
 
-
-The entity-relationship (ER) model represents a permissioned blockchain system, likely based on Hyperledger Iroha. This model defines the core entities, their attributes, and relationships to enable role-based access control, asset management, and multi-signature security.
+The entity-relationship (ER) model of Hyperledger Iroha defines the core entities, attributes, and relationships that facilitate role-based access control, asset management, and multi-signature security. While Iroha v1 includes a broader set of entities, this research focuses solely on the account-related classes and attributes.
 
 \section{Core Entities and Their Attributes}
 \subsection{Account Entity}

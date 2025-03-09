@@ -6,12 +6,13 @@ skinparam monochrome true
 top to bottom direction
 
 class "User" {
-  + account_id: string
+  + account_id: string 
   + full_name: string
   + email: string
   + institution: string
   + orcid: string
   + role: string
+  + linked_project: string
 }
 
 class "Project" {
@@ -23,6 +24,7 @@ class "Project" {
   + endDate: date
   + city: string
   + country: string
+  + linked_user: string
 }
 
 User "1" --> "0..*" Project : owns >
