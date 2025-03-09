@@ -9,6 +9,7 @@
 \usepackage{array}
 \usepackage{epsfig}
 \usepackage{float}  % Allows better figure placement
+\usepackage{tabularx} 
 
 \graphicspath{{fig/}} % Set the directory where graphics are located
 
@@ -224,53 +225,57 @@ The entity-relationship model for the Open Science Platform defines the logical 
 
 
 \subsection{User Entity}
-The \texttt{User} entity represents an individual interacting with the platform. Each user is uniquely identified by an account ID and has attributes that describe personal and institutional information. The attributes of the \texttt{User} entity are listed in Table \ref{tab:user_attributes}.
+The \texttt{User} entity represents an individual interacting with the platform. Each user is uniquely identified by an account ID and has attributes that describe personal and institutional information. The attributes of the \texttt{User} entity are listed in Table \ref{tab:user_entity}.
 
 \begin{table}[h]
       \centering
-      \caption{Attributes of the User entity}
-      \label{tab:user_attributes}
-      \begin{tabular}{|l|l|}
+      \renewcommand{\arraystretch}{1.2}
+      \caption{User Entity Attributes}
+      \label{tab:user_entity}
+      \begin{tabularx}{\textwidth}{|l|X|}
             \hline
-            \textbf{Attribute}       & \textbf{Description}                             \\ \hline
-            \texttt{account\_id}     & A unique identifier assigned to the user         \\ \hline
-            \texttt{full\_name}      & The complete name of the user                    \\ \hline
-            \texttt{email}           & The email address used for communication         \\ \hline
-            \texttt{institution}     & The organization to which the user is affiliated \\ \hline
-            \texttt{orcid}           & The Open Researcher and Contributor ID           \\ \hline
-            \texttt{role}            & The role of the user within the research project \\ \hline
-            \texttt{linked\_project} & The research project the user is assigned to     \\ \hline
-      \end{tabular}
+            \textbf{Attribute}       & \textbf{Description}                              \\ \hline
+            \texttt{account\_id}     & A unique identifier assigned to the user.         \\ \hline
+            \texttt{full\_name}      & The complete name of the user.                    \\ \hline
+            \texttt{email}           & The email address used for communication.         \\ \hline
+            \texttt{institution}     & The organization to which the user is affiliated. \\ \hline
+            \texttt{orcid}           & The Open Researcher and Contributor ID.           \\ \hline
+            \texttt{role}            & The role of the user within the research project. \\ \hline
+            \texttt{linked\_project} & The research project the user is assigned to.     \\ \hline
+      \end{tabularx}
 \end{table}
+
 
 \subsection{Project Entity}
-The \texttt{Project} entity represents a research project registered in the platform. It contains essential metadata to describe the project and facilitate discovery and collaboration. The attributes of the \texttt{Project} entity are listed in Table \ref{tab:project_attributes}.
+The \texttt{Project} entity represents a research project registered in the platform. It contains essential metadata to describe the project and facilitate discovery and collaboration. The attributes of the \texttt{Project} entity are listed in Table \ref{tab:project_entity}.
 
 \begin{table}[h]
       \centering
-      \caption{Attributes of the Project entity}
-      \label{tab:project_attributes}
-      \begin{tabular}{|l|l|}
+      \renewcommand{\arraystretch}{1.2}
+      \caption{Project Entity Attributes}
+      \label{tab:project_entity}
+      \begin{tabularx}{\textwidth}{|l|X|}
             \hline
-            \textbf{Attribute}    & \textbf{Description}                                    \\ \hline
-            \texttt{project\_id}  & A unique identifier assigned to the project             \\ \hline
-            \texttt{name}         & The official name of the project                        \\ \hline
-            \texttt{abstract}     & A brief summary outlining the research objectives       \\ \hline
-            \texttt{keywords}     & A list of relevant keywords associated with the project \\ \hline
-            \texttt{startDate}    & The date when the project officially begins             \\ \hline
-            \texttt{endDate}      & The date when the project is expected to conclude       \\ \hline
-            \texttt{city}         & The city where the project is primarily conducted       \\ \hline
-            \texttt{country}      & The country associated with the research project        \\ \hline
-            \texttt{linked\_user} & The user linked to the project                          \\ \hline
-      \end{tabular}
+            \textbf{Attribute}    & \textbf{Description}                                                \\ \hline
+            \texttt{project\_id}  & A unique identifier assigned to the project.                        \\ \hline
+            \texttt{name}         & The official name of the project.                                   \\ \hline
+            \texttt{abstract}     & A brief summary outlining the research objectives.                  \\ \hline
+            \texttt{keywords}     & A list of relevant keywords associated with the project.            \\ \hline
+            \texttt{startDate}    & The date when the project officially begins.                        \\ \hline
+            \texttt{endDate}      & The date when the project was concluded or is expected to conclude. \\ \hline
+            \texttt{city}         & The city where the project is primarily conducted.                  \\ \hline
+            \texttt{country}      & The country associated with the research project.                   \\ \hline
+            \texttt{linked\_user} & The user linked to the project.                                     \\ \hline
+      \end{tabularx}
 \end{table}
+
 
 \subsection{Ownership Relationship}
 A \texttt{User} owns one or more \texttt{Project} entities, establishing a one-to-many relationship. This means that a single user can be responsible for multiple projects, but each project is owned by exactly one user. This relationship is crucial for managing project access, ensuring accountability, and maintaining provenance of research activities. This model ensures a structured representation of research projects and their associated users, supporting an organized approach to data management in the Open Science Platform.
 
 \subsection{ Data Model for Hyperledger Iroha v1}
 
-The entity-relationship (ER) model of Hyperledger Iroha defines the core entities, attributes, and relationships that facilitate role-based access control, asset management, and multi-signature security. While Iroha v1 includes a broader set of entities, this research focuses solely on the account-related classes and attributes.
+The entity-relationship (ER) model of Hyperledger Iroha defines the core entities, attributes, and relationships that facilitate role-based access control, asset management, and multi-signature security. While Iroha v1 includes a broader set of entities, this research focuses solely on the account and domain related classes and attributes.
 
 \section{Core Entities and Their Attributes}
 \subsection{Account Entity}
@@ -278,132 +283,50 @@ The \texttt{account} entity represents a user or system account registered on th
 
 \begin{table}[h]
       \centering
-      \caption{Attributes of the Account Entity}
-      \label{tab:account_attributes}
-      \begin{tabular}{|c|l|}
+      \label{tab:account_entity}
+      \renewcommand{\arraystretch}{1.2}
+      \begin{tabularx}{\textwidth}{|l|X|}
             \hline
             \textbf{Attribute}   & \textbf{Description}                                            \\ \hline
             \texttt{account\_id} & Unique identifier of the account                                \\ \hline
             \texttt{domain\_id}  & Links the account to a specific domain                          \\ \hline
             \texttt{quorum}      & Required number of signatories for multi-signature transactions \\ \hline
             \texttt{data}        & Stores additional metadata in JSON format                       \\ \hline
-      \end{tabular}
+      \end{tabularx}
 \end{table}
-
-The account entity is associated with multiple other entities:
-\begin{itemize}
-      \item \texttt{account\_has\_signatory} links accounts to public keys.
-      \item \texttt{account\_has\_roles} assigns roles to accounts.
-      \item \texttt{account\_has\_asset} tracks asset ownership.
-      \item \texttt{account\_has\_grantable\_permissions} defines access control for delegation.
-\end{itemize}
-
-\subsection{Signatory Entity}
-The \texttt{signatory} entity manages cryptographic authentication.
-
-\begin{table}[h]
-      \centering
-      \caption{Attributes of the Signatory Entity}
-      \label{tab:signatory_attributes}
-      \begin{tabular}{|c|l|}
-            \hline
-            \textbf{Attribute}   & \textbf{Description}                         \\ \hline
-            \texttt{public\_key} & Cryptographic key associated with an account \\ \hline
-      \end{tabular}
-\end{table}
-
-Each account can have multiple public keys, enabling multi-signature security.
-
-\subsection{Asset Entity}
-The \texttt{asset} entity represents digital assets on the blockchain.
-
-\begin{table}[h]
-      \centering
-      \caption{Attributes of the Asset Entity}
-      \label{tab:asset_attributes}
-      \begin{tabular}{|c|l|}
-            \hline
-            \textbf{Attribute}  & \textbf{Description}                        \\ \hline
-            \texttt{asset\_id}  & Unique identifier for the asset             \\ \hline
-            \texttt{domain\_id} & Links the asset to a domain                 \\ \hline
-            \texttt{precision}  & Defines decimal precision for asset amounts \\ \hline
-      \end{tabular}
-\end{table}
-
-The entity is associated with \texttt{account\_has\_asset}, which links assets to accounts.
-
-\section{Role and Permission Management}
-\subsection{Role Entity}
-The \texttt{role} entity defines permission-based access control.
-
-\begin{table}[h]
-      \centering
-      \caption{Attributes of the Role Entity}
-      \label{tab:role_attributes}
-      \begin{tabular}{|c|l|}
-            \hline
-            \textbf{Attribute} & \textbf{Description}           \\ \hline
-            \texttt{role\_id}  & Unique identifier for the role \\ \hline
-      \end{tabular}
-\end{table}
-
-\texttt{role\_has\_permissions} links roles to specific permissions, and \texttt{account\_has\_roles} assigns roles to accounts.
 
 \subsection{Domain Entity}
-The \texttt{domain} entity organizes accounts and assets within logical boundaries.
+The \texttt{domain} entity organizes accounts within logical boundaries.A \texttt{domain} can have multiple \texttt{accounts}.
 
 \begin{table}[h]
       \centering
-      \caption{Attributes of the Domain Entity}
-      \label{tab:domain_attributes}
-      \begin{tabular}{|c|l|}
+      \label{tab:domain_entity}
+      \renewcommand{\arraystretch}{1.2}
+      \begin{tabularx}{\textwidth}{|l|X|}
             \hline
             \textbf{Attribute}     & \textbf{Description}                                    \\ \hline
             \texttt{domain\_id}    & Unique identifier for the domain                        \\ \hline
             \texttt{default\_role} & Default role assigned to accounts created in the domain \\ \hline
-      \end{tabular}
+      \end{tabularx}
 \end{table}
-
-\section{Permission and Transaction Management}
-Permissions are enforced using:
-\begin{itemize}
-      \item \texttt{role\_has\_permissions}: Maps permissions to roles.
-      \item \texttt{account\_has\_grantable\_permissions}: Defines permissions that an account can delegate.
-      \item \texttt{account\_has\_roles}: Assigns roles to accounts.
-\end{itemize}
-
-\section{Relationship Cardinalities}
-\subsection{One-to-Many Relationships}
-\begin{itemize}
-      \item A \texttt{domain} can have multiple \texttt{accounts} and \texttt{assets}.
-      \item A \texttt{role} can have multiple \texttt{permissions}.
-      \item An \texttt{account} can be linked to multiple \texttt{roles}, \texttt{signatories}, and \texttt{assets}.
-\end{itemize}
-
-\subsection{Many-to-Many Relationships}
-\begin{itemize}
-      \item \texttt{account\_has\_roles}: An account can have multiple roles; a role can be assigned to multiple accounts.
-      \item \texttt{role\_has\_permissions}: A role can have multiple permissions, and each permission can belong to multiple roles.
-      \item \texttt{account\_has\_grantable\_permissions}: An account can delegate specific permissions to multiple others.
-\end{itemize}
 
 
 \begin{figure}[htbp]
       \centering
       \includegraphics[width=0.98\textwidth, keepaspectratio]{iroha_v1_er_model.eps}
-      \caption{Iroha v1 Entity-relationship model}
+      \caption{Subset of the Iroha v1 Entity-relationship model}
       \label{fig:iroha_v1_er_model}
 \end{figure}
 
 
-This ER model follows Hyperledger Iroha’s permissioned blockchain structure. It ensures fine-grained access control, multi-signature security, and domain-based account management. The model enables role-based permissions and asset tracking, making it well-suited for financial applications, identity management, and blockchain-based ecosystems.
+This ER model follows Hyperledger Iroha’s permissioned blockchain structure. It ensures fine-grained access control, multi-signature security, and domain-based account management.
 
 
 \subsection{Relationship Between the Open Science Platform ER Model and the Iroha v1 ER Model}
 
-The Open Science Platform ER model leverages the entity structure of the Iroha v1 ER model, particularly the \texttt{account} class, to represent both the \texttt{User} and \texttt{Project} entities. In this approach, instead of introducing separate relational tables for users and projects, the \texttt{account} entity in the Iroha v1 ER model serves as a general-purpose representation, encapsulating all necessary attributes in a structured format.
+The Open Science Platform ER model leverages the entity structure of the Iroha v1 ER model, particularly the \texttt{account} entity, to represent both the \texttt{User} and \texttt{Project} entities. In this approach, instead of introducing separate entitties for users and projects, the \texttt{account} entity in the Iroha v1 ER model serves as a general-purpose representation, encapsulating all necessary attributes in a structured format.
 
-The attributes specific to users and projects, which are not natively present in the Iroha v1 \texttt{account} entity, are stored as JSON objects within the \texttt{data} field of the \texttt{account} table. This design provides a flexible and scalable means of extending the entity's attributes without modifying the core schema of the Iroha blockchain.
+The attributes specific to users and projects, which are not natively present in the Iroha v1 \texttt{account} entity, are stored as JSON objects within the \texttt{data} field of the \texttt{account} entity. This design provides a flexible and scalable means of extending the entity's attributes without modifying the core schema of the Iroha blockchain.
 
 From a relational perspective, the \texttt{account} entity maintains its standard associations with roles, permissions, and assets as defined in the Iroha v1 ER model. This ensures that user accounts and project accounts can both participate in the blockchain's permissioning system, asset ownership model, and role-based access control without requiring modifications to the underlying structure.
 
@@ -414,21 +337,43 @@ By reusing the \texttt{account} entity, the Open Science Platform ER model ensur
 \begin{figure}[htbp]
       \centering
       \includegraphics[width=0.98\textwidth, keepaspectratio]{comparing_er_models.eps}
-      \caption{Comparing ER models}
+      \caption{Comparison of the Entintiy-relationship models}
       \label{fig:comparing_er_models}
 \end{figure}
 
 
-\section{Role of Metadata and Use of Ontologies in the Open Science Platform}
+\subsection{The role of metadata and ontologies in the Open Science Platform}
 
 Metadata plays a crucial role in both the \texttt{Account} and \texttt{Project} classes within the Open Science platform. It is used to capture and represent essential information about the user and the research project, providing context and structure to their respective data. This metadata is stored in JSON format, following established semantic web standards and leveraging ontologies to enhance data interoperability and accessibility.
+
+
+\subsection{Selected Ontologies}
+An ontology is a formal representation of knowledge as a set of concepts within a domain and the relationships between those concepts. In the context of the Open Science platform, ontologies help structure data in a way that promotes interoperability, consistency, and clarity. The use of ontologies such as \texttt{FOAF}, \texttt{Schema.org}, and \texttt{Dublin Core} ensures that data is standardized and can be easily shared and understood across different systems.
+
+\begin{table}[h]
+      \centering
+      \label{tab:ontologies}
+      \renewcommand{\arraystretch}{1.2}
+      \begin{tabularx}{\textwidth}{|l|X|}            \hline
+            \textbf{Ontology}                  & \textbf{Description}                                                                                                                                                                                                                                   \\ \hline
+            \textbf{FOAF (Friend of a Friend)} & A vocabulary used to describe people, their activities, and their relationships to other people and objects. It is used to describe the \texttt{User} entity, including attributes like name, email, and organization.                                 \\ \hline
+            \textbf{Schema.org}                & A collaborative initiative that provides a structured vocabulary for data markup on the web. It is used for describing both \texttt{User} and \texttt{Project} metadata, ensuring compatibility with web standards and promoting data discoverability. \\ \hline
+            \textbf{Dublin Core (DC)}          & A metadata standard used for describing a wide range of resources, for describing the abstract, keywords, and other descriptive elements of the \texttt{Project} entity.                                                                               \\ \hline
+      \end{tabularx}
+      \caption{Ontologies used in the Open Science Platform}
+\end{table}
+
+These ontologies were chosen because of their widespread adoption, their ability to standardize data across different systems, and their support for rich, machine-readable representations. By aligning with these ontologies, the platform ensures that its metadata is compatible with other Open Science initiatives and services, facilitating seamless integration and data exchange.
+
 
 \subsection{Account Metadata}
 The metadata for the \texttt{Account} class describes the attributes associated with a user on the platform. This metadata is structured using multiple ontologies, primarily \texttt{FOAF} (Friend of a Friend) and \texttt{Schema.org}, to provide detailed and interoperable information about the user. The key attributes in the \texttt{Account} metadata include the user's name, email, organizational affiliation, unique identifier (ORCID), role, public key, and linked project.
 
 \begin{table}[h]
       \centering
-      \begin{tabular}{|l|l|}
+      \label{tab:user_metadata}
+      \renewcommand{\arraystretch}{1.2}
+      \begin{tabularx}{\textwidth}{|l|X|}
             \hline
             \textbf{Attribute}              & \textbf{Description}                                                                                            \\ \hline
             \texttt{foaf:name}              & The name of the user.                                                                                           \\ \hline
@@ -437,7 +382,7 @@ The metadata for the \texttt{Account} class describes the attributes associated 
             \texttt{schema:identifier}      & A unique identifier for the user, such as an ORCID identifier.                                                  \\ \hline
             \texttt{foaf:holdsAccount}      & The user's account details, including their role and public key.                                                \\ \hline
             \texttt{schema:linked\_project} & The project associated with the user.                                                                           \\ \hline
-      \end{tabular}
+      \end{tabularx}
       \caption{Account Metadata Attributes}
 \end{table}
 
@@ -448,7 +393,9 @@ The metadata for the \texttt{Project} class provides essential details about the
 
 \begin{table}[h]
       \centering
-      \begin{tabular}{|l|l|}
+      \label{tab:project_metadata}
+      \renewcommand{\arraystretch}{1.2}
+      \begin{tabularx}{\textwidth}{|l|X|}
             \hline
             \textbf{Attribute}           & \textbf{Description}                                                                                           \\ \hline
             \texttt{schema:name}         & The name of the research project.                                                                              \\ \hline
@@ -460,28 +407,12 @@ The metadata for the \texttt{Project} class provides essential details about the
             \texttt{schema:location}     & The physical location where the project is based, described as an instance of the \texttt{schema:Place} class. \\ \hline
             \texttt{schema:metadataCID}  & A unique identifier for the metadata of the project.                                                           \\ \hline
             \texttt{schema:linked\_user} & The user associated with the project.                                                                          \\ \hline
-      \end{tabular}
+      \end{tabularx}
       \caption{Project Metadata Attributes}
 \end{table}
 
 This metadata not only captures the essential details of the project but also ensures that these details are linked to the user's profile, making it easier to track the relationship between users and their associated research efforts.
 
-\subsection{Ontologies and Their Role}
-An ontology is a formal representation of knowledge as a set of concepts within a domain and the relationships between those concepts. In the context of the Open Science platform, ontologies help structure data in a way that promotes interoperability, consistency, and clarity. The use of ontologies such as \texttt{FOAF}, \texttt{Schema.org}, and \texttt{Dublin Core} ensures that data is standardized and can be easily shared and understood across different systems.
-
-\begin{table}[h]
-      \centering
-      \begin{tabular}{|l|l|}
-            \hline
-            \textbf{Ontology}                  & \textbf{Description}                                                                                                                                                                                                                                                          \\ \hline
-            \textbf{FOAF (Friend of a Friend)} & A vocabulary used to describe people, their activities, and their relationships to other people and objects. In the Open Science platform, it is used to describe the user (or \texttt{Account}) class, including attributes like name, email, and organization.              \\ \hline
-            \textbf{Schema.org}                & A collaborative initiative that provides a structured vocabulary for data markup on the web. It is used extensively in the Open Science platform for describing both user and project metadata, ensuring compatibility with web standards and promoting data discoverability. \\ \hline
-            \textbf{Dublin Core (DC)}          & A metadata standard used for describing a wide range of resources. It is particularly useful for describing the abstract, keywords, and other descriptive elements of the project class in the Open Science platform.                                                         \\ \hline
-      \end{tabular}
-      \caption{Ontologies Used in the Open Science Platform}
-\end{table}
-
-These ontologies were chosen because of their widespread adoption, their ability to standardize data across different systems, and their support for rich, machine-readable representations. By aligning with these ontologies, the platform ensures that its metadata is compatible with other Open Science initiatives and services, facilitating seamless integration and data exchange.
 
 \subsection{Conclusion}
 In summary, metadata plays a vital role in the Open Science platform by enabling the structured and interoperable representation of user and project information. The use of ontologies like \texttt{FOAF}, \texttt{Schema.org}, and \texttt{Dublin Core} enhances the platform's ability to share and integrate data, ensuring that the platform contributes effectively to the broader Open Science ecosystem.

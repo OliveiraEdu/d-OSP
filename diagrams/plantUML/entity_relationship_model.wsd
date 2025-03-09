@@ -1,11 +1,11 @@
 @startuml entity_relationship_model
 
-title Entity-relationship model for the Open Science Platform
+title Open Science Platform Entity-relationship model
 skinparam monochrome true
 
 top to bottom direction
 
-class "User" {
+entity "User" {
   + account_id: string 
   + full_name: string
   + email: string
@@ -15,7 +15,7 @@ class "User" {
   + linked_project: string
 }
 
-class "Project" {
+entity "Project" {
   + id: string 
   + name: string
   + abstract: string
@@ -27,6 +27,6 @@ class "Project" {
   + linked_user: string
 }
 
-User "1" --> "0..*" Project : owns >
+User  ||--o{ Project : is linked to 
 
 @enduml

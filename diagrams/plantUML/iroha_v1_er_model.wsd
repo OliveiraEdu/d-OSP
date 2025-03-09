@@ -1,5 +1,5 @@
 @startuml
-title Hyperledger Iroha v1 ER Model
+title Hyperledger Iroha v1 Entity-relationship model(subset)
 skinparam monochrome true
 
 entity "account" {
@@ -10,68 +10,12 @@ entity "account" {
     data : json
 }
 
-entity "signatory" {
-    * public_key : string
-}
-
-entity "account_has_signatory" {
-    * account_id : string
-    * public_key : string
-}
-
-entity "account_has_roles" {
-    * account_id : string
-    * role_id : string
-}
-
-entity "role" {
-    * role_id : string
-}
-
-entity "role_has_permissions" {
-    * role_id : string
-    permission : string
-}
-
 entity "domain" {
     * domain_id : string
     default_role : string
 }
 
-entity "account_has_asset" {
-    * account_id : string
-    * asset_id : string
-    amount : int
-}
+domain ||--o{ account : has  
 
-entity "asset" {
-    * asset_id : string
-    domain_id : string
-    precision : int
-}
-
-entity "account_has_grantable_permissions" {
-    * permittee_account_id : string
-    * account_id : string
-    permission : string
-}
-
-entity "peer" {
-    * public_key : string
-    address : string
-}
-
-account -- domain : belongs_to
-account -- account_has_signatory : has >
-account -- account_has_roles : has >
-account -- account_has_asset : owns >
-account -- account_has_grantable_permissions : grants >
-role -- role_has_permissions : has >
-role -- account_has_roles : assigned_to >
-domain -- asset : contains >
-account_has_roles -- role : assigns >
-account_has_signatory -- signatory : links >
-account_has_asset -- asset : tracks >
-account_has_grantable_permissions -- account : delegates >
 
 @enduml

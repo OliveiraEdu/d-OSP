@@ -1,28 +1,49 @@
 @startuml
 
+
 skinparam monochrome true
+top to bottom direction
 
-
-entity "Open Science Platform ER Model" as OpenScience {
-  + account: string
-  + type: string
-  + metadata: JSON
+entity "Open Science Platform - User Entity " as user {
+  * account_id: string 
+  + full_name: string
+  + email: string
+  + institution: string
+  + orcid: string
+  + role: string
+  + linked_project: string
 }
 
-entity "Iroha v1 Model" as Iroha {
-  + account: string
-  + type: string
-  + data: JSON
+entity "Open Science Platform - Project Entity" as project {
+  * id: string 
+  + name: string
+  + abstract: string
+  + keywords: list<string>
+  + startDate: date
+  + endDate: date
+  + city: string
+  + country: string
+  + linked_user: string
 }
 
-' Relationship between the two models
-OpenScience --|> Iroha : Account Mapping
+user  ||--o{ project : is linked to 
+
+
+
+entity "Iroha v1 Model - Account Entity" as Iroha {
+      * account_id : string
+    -- 
+    domain_id : string
+    quorum : int
+    data : json
+
+}
 
 ' Attribute definitions in Iroha for the JSON usage
-note right of Iroha
-  JSON data in Iroha
+note bottom of Iroha
+  The data attribute in Iroha v1
   stores additional attributes for User
-  and Project classes
+  and Project classes on a JSON structured object
 end note
 
 @enduml
