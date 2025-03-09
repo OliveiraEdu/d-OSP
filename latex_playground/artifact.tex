@@ -32,10 +32,10 @@ This chapter details the design and implementation of the Open Science Platform,
 
 
 \begin{figure}[htbp]
-      \centering
-      \includegraphics[width=0.98\textwidth, keepaspectratio]{c4_context_diagram}
-      \caption{System context diagram for the Open Science Platform}
-      \label{fig:c4_context_diagram}
+    \centering
+    \includegraphics[width=0.98\textwidth, keepaspectratio]{c4_context_diagram}
+    \caption{System context diagram for the Open Science Platform}
+    \label{fig:c4_context_diagram}
 \end{figure}
 
 
@@ -48,8 +48,8 @@ The Open Science Platform is developed using a hybrid architecture that combines
 The core services of the Open Science Platform provide the fundamental infrastructure for secure and verifiable research artifact management.
 
 \begin{itemize}
-      \item \textbf{Hyperledger Iroha v1 Blockchain:} Acts as the core infrastructure for managing user and project accounts, recording transactions, and enforcing business rules via smart contracts to ensure secure and transparent data exchange.
-      \item \textbf{InterPlanetary File System (IPFS):} Provides decentralized, tamper-proof storage for research artifacts and metadata, ensuring persistent and verifiable access to shared data.
+    \item \textbf{Hyperledger Iroha v1 Blockchain:} Acts as the core infrastructure for managing user and project accounts, recording transactions, and enforcing business rules via smart contracts to ensure secure and transparent data exchange.
+    \item \textbf{InterPlanetary File System (IPFS):} Provides decentralized, tamper-proof storage for research artifacts and metadata, ensuring persistent and verifiable access to shared data.
 \end{itemize}
 
 \subsection{Extended Services}
@@ -57,22 +57,22 @@ The core services of the Open Science Platform provide the fundamental infrastru
 The extended services enhance the platform's features by improving file and metadata processing.
 
 \begin{itemize}
-      \item \textbf{Apache Tika:} Extracts metadata from uploaded files, enhancing artifact organization and searchability.
-      \item \textbf{Whoosh:} Facilitates efficient indexing and keyword-based search for stored artifacts.
+    \item \textbf{Apache Tika:} Extracts metadata from uploaded files, enhancing artifact organization and searchability.
+    \item \textbf{Whoosh:} Facilitates efficient indexing and keyword-based search for stored artifacts.
 \end{itemize}
 
 
 \subsection{User Interface, integration and execution}
 
 \begin{itemize}
-      \item \textbf{Jupyter Notebooks (Python):} Powers the front-end interface, facilitating the automation and display of the execution steps. Blockchain interactions are managed via the Iroha v1 Python library, while communication with the IPFS network is handled through the HTTPS client library.
+    \item \textbf{Jupyter Notebooks (Python):} Powers the front-end interface, facilitating the automation and display of the execution steps. Blockchain interactions are managed via the Iroha v1 Python library, while communication with the IPFS network is handled through the HTTPS client library.
 \end{itemize}
 
 \begin{figure}[htbp]
-      \centering
-      \includegraphics[width=0.98\textwidth, keepaspectratio]{c4_container_diagram}
-      \caption{Container diagram for the Open Science Platform}
-      \label{fig:c4_container_diagram}
+    \centering
+    \includegraphics[width=0.98\textwidth, keepaspectratio]{c4_container_diagram}
+    \caption{Container diagram for the Open Science Platform}
+    \label{fig:c4_container_diagram}
 \end{figure}
 
 
@@ -84,57 +84,57 @@ The Open Science Platform consists of multiple interconnected components, each s
 The Jupyter Server acts as the primary interface for users interacting with the platform. This component provides a Python kernel for the execution environment that integrates the Iroha v1 Library, the IPFS HTTPS client, Apache Tika for metadata handling, and the Woosh Indexer and Search system. It enables users to:
 
 \begin{itemize}
-      \item Execute Python scripts to submit transactions and queries to the blockchain via smart contracts.
-      \item Upload and retrieve files and metadata (JSON objects) stored in IPFS.
-      \item Process and index research data using Apache Tika and Woosh for enhanced searchability.
-      \item Access and visualize blockchain-stored metadata for Open Science applications.
+    \item Execute Python scripts to submit transactions and queries to the blockchain via smart contracts.
+    \item Upload and retrieve files and metadata (JSON objects) stored in IPFS.
+    \item Process and index research data using Apache Tika and Woosh for enhanced searchability.
+    \item Access and visualize blockchain-stored metadata for Open Science applications.
 \end{itemize}
 
 \subsubsection{Blockchain}
 The blockchain runs based on a Hyperledger Iroha v1 network and acts as a distributed ledger for recording transactions. It ensures immutability, transparency, and verifiability of stored research metadata. This component:
 \begin{itemize}
-      \item Receives transactions from the Jupyter Server via a gRPC API.
-      \item Stores metadata references, ensuring that uploaded research artifacts can be authenticated.
-      \item Interacts with PostgreSQL for structured storage of blockchain metadata.
-      \item Supports smart contracts through the integration of Hyperledger Burrow, which provides a modular blockchain client with a permissioned smart contract interpreter partially developed to the specification of the Ethereum Virtual Machine (EVM).
+    \item Receives transactions from the Jupyter Server via a gRPC API.
+    \item Stores metadata references, ensuring that uploaded research artifacts can be authenticated.
+    \item Interacts with PostgreSQL for structured storage of blockchain metadata.
+    \item Supports smart contracts through the integration of Hyperledger Burrow, which provides a modular blockchain client with a permissioned smart contract interpreter partially developed to the specification of the Ethereum Virtual Machine (EVM).
 
 \end{itemize}
 
 \subsubsection{Storage}
 The InterPlanetary File System (IPFS) is a decentralized storage solution that manages the research outputs. This component:
 \begin{itemize}
-      \item Stores digital research artifacts in a content-addressed manner.
-      \item Allows the Jupyter Server to upload and retrieve files via an HTTPS API.
-      \item Ensures long-term availability of scientific data through distributed storage principles.
+    \item Stores digital research artifacts in a content-addressed manner.
+    \item Allows the Jupyter Server to upload and retrieve files via an HTTPS API.
+    \item Ensures long-term availability of scientific data through distributed storage principles.
 \end{itemize}
 
 
 \subsubsection{Relational Database (PostgreSQL)}
 The PostgreSQL database provides structured storage for blockchain-related data. It is used exclusively and managed by Iroha v1 to:
 \begin{itemize}
-      \item Maintain an efficient and queryable record of transactions.
-      \item Ensure that research metadata stored on the blockchain can be retrieved and verified.
-      \item Support blockchain operations requiring fast access to structured data.
+    \item Maintain an efficient and queryable record of transactions.
+    \item Ensure that research metadata stored on the blockchain can be retrieved and verified.
+    \item Support blockchain operations requiring fast access to structured data.
 \end{itemize}
 
 \subsubsection{Component Interactions}
 The components interact in aseamless and decentralized manner:
 \begin{enumerate}
-      \item \textbf{User Interaction}: The user submits transactions, uploads files, and queries research data through the Jupyter Server.
-      \item \textbf{Blockchain Transactions}: Jupyter Server sends and retrieves research metadata to the Iroha blockchain via gRPC API.
-      \item \textbf{Metadata Storage}: Iroha stores data in the PostgreSQL database for efficient retrieval.
-      \item \textbf{Decentralized Storage}: Research artifacts are stored in IPFS, with their unique file identifiers recorded on the blockchain.
-      \item \textbf{File Retrieval}: Users can retrieve files from IPFS using their content identifiers (CID), ensuring authenticity and reproducibility.
+    \item \textbf{User Interaction}: The user submits transactions, uploads files, and queries research data through the Jupyter Server.
+    \item \textbf{Blockchain Transactions}: Jupyter Server sends and retrieves research metadata to the Iroha blockchain via gRPC API.
+    \item \textbf{Metadata Storage}: Iroha stores data in the PostgreSQL database for efficient retrieval.
+    \item \textbf{Decentralized Storage}: Research artifacts are stored in IPFS, with their unique file identifiers recorded on the blockchain.
+    \item \textbf{File Retrieval}: Users can retrieve files from IPFS using their content identifiers (CID), ensuring authenticity and reproducibility.
 \end{enumerate}
 
 This architecture guarantees trustworthy and reproducible scientific research by leveraging blockchain for integrity, IPFS for decentralized storage, and Jupyter as an accessible research environment.
 
 
 \begin{figure}[htbp]
-      \centering
-      \includegraphics[width=0.98\textwidth, keepaspectratio]{c4_component_diagram.eps}
-      \caption{Componentdiagram for the Open Science Platform}
-      \label{fig:c4_component_diagram}
+    \centering
+    \includegraphics[width=0.98\textwidth, keepaspectratio]{c4_component_diagram.eps}
+    \caption{Componentdiagram for the Open Science Platform}
+    \label{fig:c4_component_diagram}
 \end{figure}
 
 
@@ -144,49 +144,49 @@ This architecture guarantees trustworthy and reproducible scientific research by
 The platform supports a set of core operations that regulate user interactions with projects and data management.
 
 \begin{itemize}
-      \item \textbf{User Self-Enrollment} – A user self-enrolls on the platform by providing a private key that complies with the ED25519 or SHA-3 standards and identity information, including full name, institution, email, ORCID, and role. An account is created for the user in the blockchain. All data provided in the enrollment is structured in key/value pairs into a JSON object and uploaded to IPFS, with the corresponding Content Identifier (CID) recorded on the blockchain attributes of the user account.
+    \item \textbf{User Self-Enrollment} – A user self-enrolls on the platform by providing a private key that complies with the ED25519 or SHA-3 standards and identity information, including full name, institution, email, ORCID, and role. An account is created for the user in the blockchain. All data provided in the enrollment is structured in key/value pairs into a JSON object and uploaded to IPFS, with the corresponding Content Identifier (CID) recorded on the blockchain attributes of the user account.
 
-      \item \textbf{Project Registration} – Users can register a project by specifying a descriptive name, an abstract, relevant keywords, start and end dates, funding agency, and location. Upon registration, a blockchain account is created. This data is structured in key/value pairs into a JSON object and uploaded to IPFS, with the corresponding Content Identifier (CID) recorded on the blockchain attributes of the project account.
+    \item \textbf{Project Registration} – Users can register a project by specifying a descriptive name, an abstract, relevant keywords, start and end dates, funding agency, and location. Upon registration, a blockchain account is created. This data is structured in key/value pairs into a JSON object and uploaded to IPFS, with the corresponding Content Identifier (CID) recorded on the blockchain attributes of the project account.
 
 
-      \item \textbf{User and Project Accounts Linkage} – Once both user and project accounts are created, the system updates their attributes to establish a bidirectional association. This ensures that querying a user account reveals linked project accounts, and vice versa, facilitating traceability and efficient project management.
+    \item \textbf{User and Project Accounts Linkage} – Once both user and project accounts are created, the system updates their attributes to establish a bidirectional association. This ensures that querying a user account reveals linked project accounts, and vice versa, facilitating traceability and efficient project management.
 \end{itemize}
 
 
 \begin{figure}[htbp]
-      \centering
-      \includegraphics[width=0.98\textwidth, keepaspectratio]{c4_platform_operations_1}
-      \caption{User enrollment and project registering for the Open Science Platform}
-      \label{fig:c4_operations_diagram}
+    \centering
+    \includegraphics[width=0.98\textwidth, keepaspectratio]{c4_platform_operations_1}
+    \caption{User enrollment and project registering for the Open Science Platform}
+    \label{fig:c4_operations_diagram}
 \end{figure}
 
 
 \subsection{Artifact Management}
 
 \begin{itemize}
-      \item \textbf{File Upload} – A user may upload research artifacts, including papers, datasets, and images. Each file is stored on IPFS, generating a unique Content Identifier (CID) that ensures traceability and integrity. The CID is then recorded on the blockchain attributes of the project, establishing a verifiable reference to the artifact.
+    \item \textbf{File Upload} – A user may upload research artifacts, including papers, datasets, and images. Each file is stored on IPFS, generating a unique Content Identifier (CID) that ensures traceability and integrity. The CID is then recorded on the blockchain attributes of the project, establishing a verifiable reference to the artifact.
 
-      \item \textbf{Metadata Extraction and Storage} – After the upload,the file available metadata is extracted. The extracted metadata is structured in key/value pairs into a JSON object and uploaded to IPFS, with the corresponding Content Identifier (CID) recorded on the attributes of the project account in the blockchain, ensuring metadata provenance and verification.
+    \item \textbf{Metadata Extraction and Storage} – After the upload,the file available metadata is extracted. The extracted metadata is structured in key/value pairs into a JSON object and uploaded to IPFS, with the corresponding Content Identifier (CID) recorded on the attributes of the project account in the blockchain, ensuring metadata provenance and verification.
 
-      \item \textbf{Indexing} – To facilitate efficient retrieval, the system indexes the metadata of every uploaded file, including full text indexing for text based files.
+    \item \textbf{Indexing} – To facilitate efficient retrieval, the system indexes the metadata of every uploaded file, including full text indexing for text based files.
 
-      \item \textbf{Searching} – Users can perform keyword-based searches to locate relevant research artifacts, with search results displaying metadata details, including descriptions, subject and authorship.
+    \item \textbf{Searching} – Users can perform keyword-based searches to locate relevant research artifacts, with search results displaying metadata details, including descriptions, subject and authorship.
 \end{itemize}
 
 
 \begin{figure}[htbp]
-      \centering
-      \includegraphics[width=0.98\textwidth, keepaspectratio]{c4_platform_operations_2}
-      \caption{File operations diagram for the Open Science Platform}
-      \label{fig:c4_file_operations_diagram}
+    \centering
+    \includegraphics[width=0.98\textwidth, keepaspectratio]{c4_platform_operations_2}
+    \caption{File operations diagram for the Open Science Platform}
+    \label{fig:c4_file_operations_diagram}
 \end{figure}
 
 
 \begin{figure}[htbp]
-      \centering
-      \includegraphics[width=0.98\textwidth, keepaspectratio]{c4_searching_and_validation.eps}
-      \caption{keyword search, file validation and download}
-      \label{fig:c4_keyword_search}
+    \centering
+    \includegraphics[width=0.98\textwidth, keepaspectratio]{c4_searching_and_validation.eps}
+    \caption{keyword search, file validation and download}
+    \label{fig:c4_keyword_search}
 \end{figure}
 
 
@@ -194,17 +194,17 @@ The platform supports a set of core operations that regulate user interactions w
 \subsection{Validation and Download}
 
 \begin{itemize}
-      \item \textbf{File Validation} – To ensure data integrity and authenticity, the platform verifies whether the CID of a file stored on IPFS matches the CID recorded on the blockchain. A discrepancy between these identifiers signals potential tampering or corruption.
+    \item \textbf{File Validation} – To ensure data integrity and authenticity, the platform verifies whether the CID of a file stored on IPFS matches the CID recorded on the blockchain. A discrepancy between these identifiers signals potential tampering or corruption.
 
-      \item \textbf{File Download} – The system retrieves and downloads validated files from IPFS to the user local file system for later usage.
+    \item \textbf{File Download} – The system retrieves and downloads validated files from IPFS to the user local file system for later usage.
 \end{itemize}
 
 
 \begin{figure}[htbp]
-      \centering
-      \includegraphics[width=0.98\textwidth, keepaspectratio]{keyword_and_file_validation.eps}
-      \caption{File validation and download}
-      \label{fig:c4_file_validation}
+    \centering
+    \includegraphics[width=0.98\textwidth, keepaspectratio]{keyword_and_file_validation.eps}
+    \caption{File validation and download}
+    \label{fig:c4_file_validation}
 \end{figure}
 
 
@@ -215,10 +215,10 @@ The entity-relationship model for the Open Science Platform defines the logical 
 
 
 \begin{figure}[htbp]
-      \centering
-      \includegraphics[width=0.98\textwidth, keepaspectratio]{entity_relationship_model.eps}
-      \caption{Entity-relationship model for the Open Science Platform}
-      \label{fig:er_model}
+    \centering
+    \includegraphics[width=0.98\textwidth, keepaspectratio]{entity_relationship_model.eps}
+    \caption{Entity-relationship model for the Open Science Platform}
+    \label{fig:er_model}
 \end{figure}
 
 
@@ -227,44 +227,168 @@ The entity-relationship model for the Open Science Platform defines the logical 
 The \texttt{User} entity represents an individual interacting with the platform. Each user is uniquely identified by an account ID and has attributes that describe personal and institutional information. The attributes of the \texttt{User} entity are listed in Table \ref{tab:user_attributes}.
 
 \begin{table}[h]
-      \centering
-      \caption{Attributes of the User entity}
-      \label{tab:user_attributes}
-      \begin{tabular}{|l|l|}
-            \hline
-            \textbf{Attribute}   & \textbf{Description}                             \\ \hline
-            \texttt{account\_id} & A unique identifier assigned to the user         \\ \hline
-            \texttt{full\_name}  & The complete name of the user                    \\ \hline
-            \texttt{email}       & The email address used for communication         \\ \hline
-            \texttt{institution} & The organization to which the user is affiliated \\ \hline
-            \texttt{orcid}       & The Open Researcher and Contributor ID           \\ \hline
-            \texttt{role}        & The role of the user within the platform         \\ \hline
-      \end{tabular}
+    \centering
+    \caption{Attributes of the User entity}
+    \label{tab:user_attributes}
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Attribute}   & \textbf{Description}                             \\ \hline
+        \texttt{account\_id} & A unique identifier assigned to the user         \\ \hline
+        \texttt{full\_name}  & The complete name of the user                    \\ \hline
+        \texttt{email}       & The email address used for communication         \\ \hline
+        \texttt{institution} & The organization to which the user is affiliated \\ \hline
+        \texttt{orcid}       & The Open Researcher and Contributor ID           \\ \hline
+        \texttt{role}        & The role of the user within the platform         \\ \hline
+    \end{tabular}
 \end{table}
 
 \subsection{Project Entity}
 The \texttt{Project} entity represents a research project registered in the platform. It contains essential metadata to describe the project and facilitate discovery and collaboration. The attributes of the \texttt{Project} entity are listed in Table \ref{tab:project_attributes}.
 
 \begin{table}[h]
-      \centering
-      \caption{Attributes of the Project entity}
-      \label{tab:project_attributes}
-      \begin{tabular}{|l|l|}
-            \hline
-            \textbf{Attribute} & \textbf{Description}                                    \\ \hline
-            \texttt{id}        & A unique identifier assigned to the project             \\ \hline
-            \texttt{name}      & The official name of the project                        \\ \hline
-            \texttt{abstract}  & A brief summary outlining the research objectives       \\ \hline
-            \texttt{keywords}  & A list of relevant keywords associated with the project \\ \hline
-            \texttt{startDate} & The date when the project officially begins             \\ \hline
-            \texttt{endDate}   & The date when the project is expected to conclude       \\ \hline
-            \texttt{city}      & The city where the project is primarily conducted       \\ \hline
-            \texttt{country}   & The country associated with the research project        \\ \hline
-      \end{tabular}
+    \centering
+    \caption{Attributes of the Project entity}
+    \label{tab:project_attributes}
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Attribute} & \textbf{Description}                                    \\ \hline
+        \texttt{id}        & A unique identifier assigned to the project             \\ \hline
+        \texttt{name}      & The official name of the project                        \\ \hline
+        \texttt{abstract}  & A brief summary outlining the research objectives       \\ \hline
+        \texttt{keywords}  & A list of relevant keywords associated with the project \\ \hline
+        \texttt{startDate} & The date when the project officially begins             \\ \hline
+        \texttt{endDate}   & The date when the project is expected to conclude       \\ \hline
+        \texttt{city}      & The city where the project is primarily conducted       \\ \hline
+        \texttt{country}   & The country associated with the research project        \\ \hline
+    \end{tabular}
 \end{table}
 
 \subsection{Ownership Relationship}
 A \texttt{User} owns one or more \texttt{Project} entities, establishing a one-to-many relationship. This means that a single user can be responsible for multiple projects, but each project is owned by exactly one user. This relationship is crucial for managing project access, ensuring accountability, and maintaining provenance of research activities. This model ensures a structured representation of research projects and their associated users, supporting an organized approach to data management in the Open Science Platform.
+
+\subsection{Hyperledger Iroha v1 Data Model}
+
+
+The entity-relationship (ER) model represents a permissioned blockchain system, likely based on Hyperledger Iroha. This model defines the core entities, their attributes, and relationships to enable role-based access control, asset management, and multi-signature security.
+
+\section{Core Entities and Their Attributes}
+\subsection{Account Entity}
+The \texttt{account} entity represents a user or system account registered on the blockchain. Table \ref{tab:account_attributes} lists its attributes.
+
+\begin{table}[h]
+    \centering
+    \caption{Attributes of the Account Entity}
+    \label{tab:account_attributes}
+    \begin{tabular}{|c|l|}
+        \hline
+        \textbf{Attribute}   & \textbf{Description}                                            \\ \hline
+        \texttt{account\_id} & Unique identifier of the account                                \\ \hline
+        \texttt{domain\_id}  & Links the account to a specific domain                          \\ \hline
+        \texttt{quorum}      & Required number of signatories for multi-signature transactions \\ \hline
+        \texttt{data}        & Stores additional metadata in JSON format                       \\ \hline
+    \end{tabular}
+\end{table}
+
+The account entity is associated with multiple other entities:
+\begin{itemize}
+    \item \texttt{account\_has\_signatory} links accounts to public keys.
+    \item \texttt{account\_has\_roles} assigns roles to accounts.
+    \item \texttt{account\_has\_asset} tracks asset ownership.
+    \item \texttt{account\_has\_grantable\_permissions} defines access control for delegation.
+\end{itemize}
+
+\subsection{Signatory Entity}
+The \texttt{signatory} entity manages cryptographic authentication.
+
+\begin{table}[h]
+    \centering
+    \caption{Attributes of the Signatory Entity}
+    \label{tab:signatory_attributes}
+    \begin{tabular}{|c|l|}
+        \hline
+        \textbf{Attribute}   & \textbf{Description}                         \\ \hline
+        \texttt{public\_key} & Cryptographic key associated with an account \\ \hline
+    \end{tabular}
+\end{table}
+
+Each account can have multiple public keys, enabling multi-signature security.
+
+\subsection{Asset Entity}
+The \texttt{asset} entity represents digital assets on the blockchain.
+
+\begin{table}[h]
+    \centering
+    \caption{Attributes of the Asset Entity}
+    \label{tab:asset_attributes}
+    \begin{tabular}{|c|l|}
+        \hline
+        \textbf{Attribute}  & \textbf{Description}                        \\ \hline
+        \texttt{asset\_id}  & Unique identifier for the asset             \\ \hline
+        \texttt{domain\_id} & Links the asset to a domain                 \\ \hline
+        \texttt{precision}  & Defines decimal precision for asset amounts \\ \hline
+    \end{tabular}
+\end{table}
+
+The entity is associated with \texttt{account\_has\_asset}, which links assets to accounts.
+
+\section{Role and Permission Management}
+\subsection{Role Entity}
+The \texttt{role} entity defines permission-based access control.
+
+\begin{table}[h]
+    \centering
+    \caption{Attributes of the Role Entity}
+    \label{tab:role_attributes}
+    \begin{tabular}{|c|l|}
+        \hline
+        \textbf{Attribute} & \textbf{Description}           \\ \hline
+        \texttt{role\_id}  & Unique identifier for the role \\ \hline
+    \end{tabular}
+\end{table}
+
+\texttt{role\_has\_permissions} links roles to specific permissions, and \texttt{account\_has\_roles} assigns roles to accounts.
+
+\subsection{Domain Entity}
+The \texttt{domain} entity organizes accounts and assets within logical boundaries.
+
+\begin{table}[h]
+    \centering
+    \caption{Attributes of the Domain Entity}
+    \label{tab:domain_attributes}
+    \begin{tabular}{|c|l|}
+        \hline
+        \textbf{Attribute}     & \textbf{Description}                                    \\ \hline
+        \texttt{domain\_id}    & Unique identifier for the domain                        \\ \hline
+        \texttt{default\_role} & Default role assigned to accounts created in the domain \\ \hline
+    \end{tabular}
+\end{table}
+
+\section{Permission and Transaction Management}
+Permissions are enforced using:
+\begin{itemize}
+    \item \texttt{role\_has\_permissions}: Maps permissions to roles.
+    \item \texttt{account\_has\_grantable\_permissions}: Defines permissions that an account can delegate.
+    \item \texttt{account\_has\_roles}: Assigns roles to accounts.
+\end{itemize}
+
+\section{Relationship Cardinalities}
+\subsection{One-to-Many Relationships}
+\begin{itemize}
+    \item A \texttt{domain} can have multiple \texttt{accounts} and \texttt{assets}.
+    \item A \texttt{role} can have multiple \texttt{permissions}.
+    \item An \texttt{account} can be linked to multiple \texttt{roles}, \texttt{signatories}, and \texttt{assets}.
+\end{itemize}
+
+\subsection{Many-to-Many Relationships}
+\begin{itemize}
+    \item \texttt{account\_has\_roles}: An account can have multiple roles; a role can be assigned to multiple accounts.
+    \item \texttt{role\_has\_permissions}: A role can have multiple permissions, and each permission can belong to multiple roles.
+    \item \texttt{account\_has\_grantable\_permissions}: An account can delegate specific permissions to multiple others.
+\end{itemize}
+
+\section{Conclusion}
+This ER model follows Hyperledger Iroha’s permissioned blockchain structure. It ensures fine-grained access control, multi-signature security, and domain-based account management. The model enables role-based permissions and asset tracking, making it well-suited for financial applications, identity management, and blockchain-based ecosystems.
+
 
 
 
@@ -324,9 +448,9 @@ The platform deploys standard Ethereum EVM contracts in Solidity for account cre
 The Open Science platform offers numerous benefits for researchers and members of the scientific community, including:
 
 \begin{itemize}
-      \item Secure data sharing: By utilizing blockchain technology and IPFS, the platform ensures tamper-proof data exchange.
-      \item Transparent data management: The use of smart contracts and decentralized storage guarantees transparency in data access and modification history.
-      \item Collaborative research environment: The platform enables researchers to collaborate on projects, share artifacts and results, and track progress.
+    \item Secure data sharing: By utilizing blockchain technology and IPFS, the platform ensures tamper-proof data exchange.
+    \item Transparent data management: The use of smart contracts and decentralized storage guarantees transparency in data access and modification history.
+    \item Collaborative research environment: The platform enables researchers to collaborate on projects, share artifacts and results, and track progress.
 \end{itemize}
 
 \subsection{Challenges}
@@ -334,9 +458,9 @@ The Open Science platform offers numerous benefits for researchers and members o
 The Open Science platform faces several challenges, including:
 
 \begin{itemize}
-      \item Scalability: As the number of users increases, the platform needs to be able to handle a growing amount of data and transactions efficiently.
-      \item Interoperability: Ensuring seamless integration with existing research platforms and tools is crucial for widespread adoption.
-      \item User Adoption: Educating researchers about the benefits of decentralized technologies and the Open Science platform can be an uphill battle.
+    \item Scalability: As the number of users increases, the platform needs to be able to handle a growing amount of data and transactions efficiently.
+    \item Interoperability: Ensuring seamless integration with existing research platforms and tools is crucial for widespread adoption.
+    \item User Adoption: Educating researchers about the benefits of decentralized technologies and the Open Science platform can be an uphill battle.
 \end{itemize}
 
 \subsection{Future Work}
@@ -344,9 +468,9 @@ The Open Science platform faces several challenges, including:
 The Open Science platform has several areas for future development, including:
 
 \begin{itemize}
-      \item Integration with existing research platforms: Collaborations with established research platforms to expand the platform's reach and user base.
-      \item Enhanced security measures: Implementing additional security protocols to protect against potential threats and maintain the integrity of shared information.
-      \item User interface improvements: Enhancing the web interface to make it more user-friendly and accessible for researchers from diverse backgrounds.
+    \item Integration with existing research platforms: Collaborations with established research platforms to expand the platform's reach and user base.
+    \item Enhanced security measures: Implementing additional security protocols to protect against potential threats and maintain the integrity of shared information.
+    \item User interface improvements: Enhancing the web interface to make it more user-friendly and accessible for researchers from diverse backgrounds.
 \end{itemize}
 
 \section{Conclusion}
