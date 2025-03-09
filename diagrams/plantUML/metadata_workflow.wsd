@@ -1,0 +1,16 @@
+@startuml
+title Metadata Handling Workflow in the Open Science Platform
+skinparam monochrome true
+
+start
+
+:Retrieve metadata (User, Project, or File);
+:Format metadata as JSON-LD;
+:Send JSON-LD object to IPFS;
+:Get IPFS CID;
+:Send CID to Blockchain;
+:Write CID into account details;
+:Get transaction record for provenance;
+
+stop
+@enduml

@@ -346,6 +346,18 @@ INPUT ./fig//comparing_er_models.eps
 INPUT ./fig//comparing_er_models-eps-converted-to.pdf
 INPUT ./fig//comparing_er_models-eps-converted-to.pdf
 INPUT ./fig//comparing_er_models-eps-converted-to.pdf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
+INPUT ./fig//metadata_workflow_sequence.eps
+INPUT ./fig//metadata_workflow_sequence.eps
+INPUT fig//metadata_workflow_sequence.eps
+INPUT ./fig//metadata_workflow_sequence.eps
+INPUT ./fig//metadata_workflow_sequence.eps
+INPUT ./fig//metadata_workflow_sequence-eps-converted-to.pdf
+INPUT ./fig//metadata_workflow_sequence-eps-converted-to.pdf
+INPUT ./fig//metadata_workflow_sequence.eps
+INPUT ./fig//metadata_workflow_sequence-eps-converted-to.pdf
+INPUT ./fig//metadata_workflow_sequence-eps-converted-to.pdf
+INPUT ./fig//metadata_workflow_sequence-eps-converted-to.pdf
 INPUT artifact.aux
 INPUT /usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -354,4 +366,5 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb
 INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb

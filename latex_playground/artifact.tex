@@ -366,7 +366,7 @@ An ontology is a formal representation of knowledge as a set of concepts within 
 These ontologies were chosen because of their widespread adoption, their ability to standardize data across different systems, and their support for rich, machine-readable representations. By aligning with these ontologies, the platform ensures that its metadata is compatible with other Open Science initiatives and services, facilitating seamless integration and data exchange.
 
 
-\subsection{Account Metadata}
+\subsection{User Metadata}
 The metadata for the \texttt{Account} class describes the attributes associated with a user on the platform. This metadata is structured using multiple ontologies, primarily \texttt{FOAF} (Friend of a Friend) and \texttt{Schema.org}, to provide detailed and interoperable information about the user. The key attributes in the \texttt{Account} metadata include the user's name, email, organizational affiliation, unique identifier (ORCID), role, public key, and linked project.
 
 \begin{table}[h]
@@ -386,10 +386,69 @@ The metadata for the \texttt{Account} class describes the attributes associated 
       \caption{Account Metadata Attributes}
 \end{table}
 
-These attributes ensure that the user's profile is rich, structured, and semantically linked to relevant data across different systems. By employing these ontologies, the platform ensures that user data can be easily shared and understood by external systems, enabling better integration with other Open Science platforms.
 
-\subsection{Project Metadata}
-The metadata for the \texttt{Project} class provides essential details about the research project hosted on the platform. Similar to the user metadata, the project metadata is structured using \texttt{Schema.org} and \texttt{Dublin Core} (\texttt{dc}) ontologies. This structure allows for a comprehensive description of the project, including its name, abstract, keywords, timeline, funding details, and location.
+\subsection{The use of JSON-LD for metadata representation}
+
+JSON for Linked Data (JSON-LD) is a lightweight Linked Data format designed to structure and interconnect data on the web using standard JSON. It extends JSON by incorporating semantic web principles, making data more discoverable, reusable, and machine-readable. JSON-LD achieves this by including a \texttt{@context} element, which maps terms to well-defined ontologies, and a \texttt{@graph} element, which structures entities and their relationships in a linked data format.
+
+A key advantage of JSON-LD is its compatibility with existing JSON-based systems while enabling seamless integration with the semantic web. By leveraging vocabularies such as Schema.org and Dublin Core, JSON-LD ensures interoperability across diverse platforms and datasets. This makes it particularly useful for Open Science applications, where structured metadata enhances research reproducibility and data sharing.
+
+In the context of the Open Science platform, JSON-LD is used to encode metadata for users and research projects, ensuring alignment with widely accepted ontologies. The structured representation enables automatic indexing, metadata enrichment, and semantic search capabilities, facilitating better knowledge discovery and integration within the scientific community.
+
+
+\subsection{The \texttt{User} Metadata JSON-LD object}
+
+The user metadata is structured using two primary ontologies: Friend of a Friend (FOAF) and Schema.org.
+
+The FOAF ontology is used to describe personal and organizational attributes of users within the platform. It provides well-defined properties such as \texttt{foaf:name} for the user’s full name, \texttt{foaf:mbox} for email addresses, and \texttt{foaf:organization} for institutional affiliations. By leveraging FOAF, the platform ensures standardized representation of user identities and their associations, facilitating integration with other systems that utilize FOAF-based user profiles.
+
+Schema.org complements FOAF by enriching the user metadata with structured properties that enhance discoverability and machine readability. The \texttt{schema:identifier} property, for instance, is used to store unique user identifiers such as ORCID, ensuring compatibility with global researcher identification systems. Additionally, \texttt{schema:roleName} captures the user’s role within the platform (e.g., reviewer, publisher), while \texttt{schema:publicKey} stores cryptographic keys associated with the user’s account. The \texttt{schema:linked\_project} property establishes connections between users and their associated research projects, enabling efficient metadata retrieval and knowledge graph construction as exhibited in Figure~\ref{jsonld:user}, the JSON-LD structure represents the project metadata in the Open Science platform.
+
+
+
+\begin{figure}[h]
+      \centering
+      \caption{JSON-LD structure for user metadata in the Open Science platform}
+      \label{jsonld:user}
+      \begin{verbatim}
+  {
+      "@context": {
+          "schema": "http://schema.org/",
+          "foaf": "http://xmlns.com/foaf/0.1/"
+      },
+      "@graph": [
+          {
+              "@type": "foaf:Person",
+              "foaf:name": "Zealous Ptolemy",
+              "foaf:mbox": "zealous_ptolemy@email.com",
+              "foaf:organization": {
+                  "@type": "foaf:Organization",
+                  "foaf:name": "Ashkelon Academic College"
+              },
+              "schema:identifier": {
+                  "@type": "PropertyValue",
+                  "propertyID": "ORCID",
+                  "value": "6153-7096-0437-X"
+              },
+              "foaf:holdsAccount": {
+                  "schema:identifier": "zealous_ptolemy@test",
+                  "schema:roleName": "reviewer",
+                  "schema:publicKey": "ca4c00c0a43bbd2caf070ab780886906ebb70e2c3d975972ccab4e15c01f33bd"
+              },
+              "schema:linked_project": "02226@test"
+          }
+      ]
+  }
+  \end{verbatim}
+\end{figure}
+
+
+
+By combining FOAF and Schema.org, the Open Science platform ensures that user metadata is both human-readable and machine-actionable, promoting seamless integration with external research infrastructures and fostering an interoperable ecosystem for Open Science.
+
+\subsection{The \texttt{Project} Metadata JSON-LD object}
+
+The metadata for the \texttt{Project} entity provides essential details about the research project hosted on the platform. Similar to the user metadata, the project metadata is structured using \texttt{Schema.org} and \texttt{Dublin Core} (\texttt{dc}) ontologies. This structure allows for a comprehensive description of the project, including its name, abstract, keywords, timeline, funding details, and location.
 
 \begin{table}[h]
       \centering
@@ -411,93 +470,143 @@ The metadata for the \texttt{Project} class provides essential details about the
       \caption{Project Metadata Attributes}
 \end{table}
 
+The following JSON structure describes the metadata for a \texttt{Project} in the Open Science platform as shown in Figure~\ref{jsonld:project}.
+
+
+\begin{figure}[h]
+      \centering
+      \caption{JSON-LD structure for project metadata in the Open Science platform}
+      \label{jsonld:project}
+      \begin{verbatim}
+  {
+      "@context": {
+          "schema": "http://schema.org/",
+          "dc": "http://purl.org/dc/terms/"
+      },
+      "@graph": [
+          {
+              "@type": "schema:ResearchProject",
+              "schema:identifier": "02226@test",
+              "schema:publicKey": "1c6b8d00c8382c93eb0dd3eeb24a20bfece56a28326bbaebb647cadaf4750520",
+              "schema:description": {
+                  "@context": {
+                      "schema": "http://schema.org/",
+                      "dc": "http://purl.org/dc/terms/"
+                  },
+                  "@type": "schema:ResearchProject",
+                  "schema:name": "Assessing the Benefits of precision agriculture for global supply chains",
+                  "dc:abstract": "This research focuses on the benefits and challenges posed by precision agriculture for global supply chains, with an emphasis on its potential for disease prevention.",
+                  "schema:keywords": [
+                      "precision agriculture",
+                      "global supply chains",
+                      "disease prevention"
+                  ],
+                  "schema:startDate": "2023-12-18",
+                  "schema:endDate": "2027-01-02",
+                  "schema:funding": {
+                      "@type": "schema:Organization",
+                      "schema:name": "World Wildlife Fund"
+                  },
+                  "schema:location": {
+                      "@type": "schema:Place",
+                      "schema:name": "Los Angeles, California, USA"
+                  }
+              },
+              "schema:metadataCID": "Qmay4cDaxUaZaHoJKqzN69XkiX8wMx17aG4VMmwmkLcL1a",
+              "schema:linked_user": "zealous_ptolemy@test"
+          }
+      ]
+  }
+  \end{verbatim}
+\end{figure}
+
+
 This metadata not only captures the essential details of the project but also ensures that these details are linked to the user's profile, making it easier to track the relationship between users and their associated research efforts.
+
+
+\subsection{General Metadata Handling Workflow}
+
+The Open Science platform follows a general approach to metadata handling, ensuring that it is properly formatted, stored, and made immutable through blockchain integration. The process begins with processing the relevant metadata, which may pertain to a user, project, or file. This metadata is then formatted according to the JSON-LD standard, ensuring semantic interoperability and alignment with established ontologies.
+
+Once formatted, the JSON-LD object is sent to the InterPlanetary File System (IPFS), a decentralized storage solution that provides content-addressable storage. Upon successful storage, IPFS generates a unique Content Identifier (CID) that serves as a reference to the stored metadata. This CID is then recorded on the blockchain by writing it into the account details associated with the entity. By anchoring the metadata CID on the blockchain, the platform ensures integrity, immutability, and transparency.
+
+Finally, the blockchain transaction containing the CID serves as a provenance record, allowing stakeholders to verify and trace metadata modifications over time. The entire workflow guarantees that metadata remains both accessible and verifiable, promoting reproducibility and trust within the Open Science ecosystem.
+
+Figure~\ref{fig:metadata_workflow} illustrates the sequence of operations in the metadata handling process.
+
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.98\textwidth, keepaspectratio]{metadata_workflow_sequence.eps}
+      \caption{General workflow for metadata handling in the Open Science Platform}
+      \label{fig:metadata_workflow}
+\end{figure}
+
+
+
+\subsection{Blockchain Representation of Metadata}
+
+\subsection{User Account}
+
+\begin{figure}[h]
+      \centering
+      \caption{Blockchain Representation of User Account}
+      \label{fig:user_blockchain_representation}
+      \begin{verbatim}
+    {
+        "account_id": "zealous_ptolemy@test",
+        "domain_id": "test",
+        "quorum": 1,
+        "json_data": {
+            "admin@test": {
+                "linked_project": "02226@test",
+                "account_metadata_cid": "QmT31fzDBNYAz1jAoAa7gQqSP7mDquv3fR8z1xLfxeHR5o"
+            }
+        }
+    }
+    \end{verbatim}
+\end{figure}
+
+\subsection*{Project Account Representation}
+\begin{figure}[h]
+      \centering
+      \caption{Blockchain Representation of Project Account}
+      \label{fig:project_blockchain_representation}
+      \begin{verbatim}
+    {
+        "account_id": "02226@test",
+        "domain_id": "test",
+        "quorum": 1,
+        "json_data": {
+            "admin@test": {
+                "file_1": [
+                    "QmTLZSqzPexwEdniZXLPN6fUfmEXX6MXS3b4QjKURgxc9y",
+                    "Qmchg7At5whR1T4xP8TwTMd8ntQqJXbbSicJRtGGaW1Z2P"
+                ],
+                "linked_user": "zealous_ptolemy@test",
+                "account_metadata_cid": "Qmay4cDaxUaZaHoJKqzN69XkiX8wMx17aG4VMmwmkLcL1a"
+            }
+        }
+    }
+    \end{verbatim}
+\end{figure}
+
+\subsection*{File Representation}
+
+In the project representation, the \texttt{file\_1} attribute consists of two CID values:
+
+\begin{itemize}
+      \item The \textbf{first CID} (\texttt{QmTLZSqzPexwEdniZXLPN6fUfmEXX6MXS3b4QjKURgxc9y}) corresponds to the \textbf{file stored on IPFS}.
+      \item The \textbf{second CID} (\texttt{Qmchg7At5whR1T4xP8TwTMd8ntQqJXbbSicJRtGGaW1Z2P}) corresponds to the \textbf{metadata of the file}, ensuring that all relevant details are retrievable.
+\end{itemize}
+
+This structure allows for the efficient tracking and retrieval of research project data while maintaining provenance and integrity through blockchain storage.
+
 
 
 \subsection{Conclusion}
 In summary, metadata plays a vital role in the Open Science platform by enabling the structured and interoperable representation of user and project information. The use of ontologies like \texttt{FOAF}, \texttt{Schema.org}, and \texttt{Dublin Core} enhances the platform's ability to share and integrate data, ensuring that the platform contributes effectively to the broader Open Science ecosystem.
 
-
-\section{Account Metadata JSON}
-
-The following JSON structure describes the metadata for an \texttt{Account} in the Open Science platform:
-
-\begin{verbatim}
-{
-    "@context": {
-        "schema": "http://schema.org/",
-        "foaf": "http://xmlns.com/foaf/0.1/"
-    },
-    "@graph": [
-        {
-            "@type": "foaf:Person",
-            "foaf:name": "Zealous Ptolemy",
-            "foaf:mbox": "zealous_ptolemy@email.com",
-            "foaf:organization": {
-                "@type": "foaf:Organization",
-                "foaf:name": "Ashkelon Academic College"
-            },
-            "schema:identifier": {
-                "@type": "PropertyValue",
-                "propertyID": "ORCID",
-                "value": "6153-7096-0437-X"
-            },
-            "foaf:holdsAccount": {
-                "schema:identifier": "zealous_ptolemy@test",
-                "schema:roleName": "reviewer",
-                "schema:publicKey": "ca4c00c0a43bbd2caf070ab780886906ebb70e2c3d975972ccab4e15c01f33bd"
-            },
-            "schema:linked_project": "02226@test"
-        }
-    ]
-}
-\end{verbatim}
-
-\section{Project Metadata JSON}
-
-The following JSON structure describes the metadata for a \texttt{Project} in the Open Science platform:
-
-\begin{verbatim}
-{
-    "@context": {
-        "schema": "http://schema.org/",
-        "dc": "http://purl.org/dc/terms/"
-    },
-    "@graph": [
-        {
-            "@type": "schema:ResearchProject",
-            "schema:identifier": "02226@test",
-            "schema:publicKey": "1c6b8d00c8382c93eb0dd3eeb24a20bfece56a28326bbaebb647cadaf4750520",
-            "schema:description": {
-                "@context": {
-                    "schema": "http://schema.org/",
-                    "dc": "http://purl.org/dc/terms/"
-                },
-                "@type": "schema:ResearchProject",
-                "schema:name": "Assessing the Benefits of precision agriculture for global supply chains",
-                "dc:abstract": "This research focuses on the benefits and challenges posed by precision agriculture for global supply chains, with an emphasis on its potential for disease prevention.",
-                "schema:keywords": [
-                    "precision agriculture",
-                    "global supply chains",
-                    "disease prevention"
-                ],
-                "schema:startDate": "2023-12-18",
-                "schema:endDate": "2027-01-02",
-                "schema:funding": {
-                    "@type": "schema:Organization",
-                    "schema:name": "World Wildlife Fund"
-                },
-                "schema:location": {
-                    "@type": "schema:Place",
-                    "schema:name": "Los Angeles, California, USA"
-                }
-            },
-            "schema:metadataCID": "Qmay4cDaxUaZaHoJKqzN69XkiX8wMx17aG4VMmwmkLcL1a",
-            "schema:linked_user": "zealous_ptolemy@test"
-        }
-    ]
-}
-\end{verbatim}
 
 
 
