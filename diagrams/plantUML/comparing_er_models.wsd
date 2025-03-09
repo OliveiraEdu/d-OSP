@@ -1,0 +1,28 @@
+@startuml
+
+skinparam monochrome true
+
+
+entity "Open Science Platform ER Model" as OpenScience {
+  + account: string
+  + type: string
+  + metadata: JSON
+}
+
+entity "Iroha v1 Model" as Iroha {
+  + account: string
+  + type: string
+  + data: JSON
+}
+
+' Relationship between the two models
+OpenScience --|> Iroha : Account Mapping
+
+' Attribute definitions in Iroha for the JSON usage
+note right of Iroha
+  JSON data in Iroha
+  stores additional attributes for User
+  and Project classes
+end note
+
+@enduml

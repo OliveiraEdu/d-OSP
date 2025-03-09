@@ -1,5 +1,5 @@
 @startuml
-title Hyperledger Iroha ER Model
+title Hyperledger Iroha v1 ER Model
 skinparam monochrome true
 
 entity "account" {
