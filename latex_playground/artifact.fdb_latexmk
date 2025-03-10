@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1741616826 "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/artifact.tex" "artifact.pdf" "artifact" 1741616827
+["pdflatex"] 1741617005 "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/artifact.tex" "artifact.pdf" "artifact" 1741617007
   "/etc/texmf/web2c/texmf.cnf" 1701553138 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/artifact.tex" 1741616825 47921 60e1ce76092db70debf33616248ffc14 ""
+  "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/artifact.tex" 1741617005 47869 1cf43fdbc5a4b035242fc264632705b4 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -53,8 +53,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1701553183 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1710494692 2800392 5302ca1083901a3fb21e189f575b5416 ""
-  "artifact.aux" 1741616826 9103 21d6f38a785ec542e3f42a7c6f9adacf "pdflatex"
-  "artifact.tex" 1741616825 47921 60e1ce76092db70debf33616248ffc14 ""
+  "artifact.aux" 1741617006 9103 21d6f38a785ec542e3f42a7c6f9adacf "pdflatex"
+  "artifact.tex" 1741617005 47869 1cf43fdbc5a4b035242fc264632705b4 ""
   "fig//c4_component_diagram.eps" 1741444501 139185 8ead8f53d124c0118db796479a0b8d2a ""
   "fig//c4_container_diagram.eps" 1741608588 227525 62154b52ef550faac61bd6a8480ade6b ""
   "fig//c4_context_diagram.eps" 1741300963 173704 da65c8770f47daaa7506dfe9dd5756f6 ""
