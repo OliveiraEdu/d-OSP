@@ -279,12 +279,13 @@ The entity-relationship (ER) model of Hyperledger Iroha defines the core entitie
 
 \section{Core Entities and Their Attributes}
 \subsection{Account Entity}
-The \texttt{account} entity represents a user or system account registered on the blockchain. Table \ref{tab:account_attributes} lists its attributes.
+The \texttt{account} entity represents a user or system account registered on the blockchain. Table \ref{tab:account_entity} lists its attributes.
 
 \begin{table}[h]
       \centering
-      \label{tab:account_entity}
       \renewcommand{\arraystretch}{1.2}
+      \caption{Attributes of the \texttt{account} entity}
+      \label{tab:account_entity}
       \begin{tabularx}{\textwidth}{|l|X|}
             \hline
             \textbf{Attribute}   & \textbf{Description}                                            \\ \hline
@@ -295,20 +296,23 @@ The \texttt{account} entity represents a user or system account registered on th
       \end{tabularx}
 \end{table}
 
+
 \subsection{Domain Entity}
-The \texttt{domain} entity organizes accounts within logical boundaries.A \texttt{domain} can have multiple \texttt{accounts}.
+The \texttt{domain} entity organizes accounts within logical boundaries. A \texttt{domain} can contain multiple \texttt{accounts}, as illustrated in Table~\ref{tab:domain_entity}.
 
 \begin{table}[h]
       \centering
-      \label{tab:domain_entity}
       \renewcommand{\arraystretch}{1.2}
+      \caption{Attributes of the \texttt{domain} entity}
+      \label{tab:domain_entity}
       \begin{tabularx}{\textwidth}{|l|X|}
             \hline
-            \textbf{Attribute}     & \textbf{Description}                                    \\ \hline
-            \texttt{domain\_id}    & Unique identifier for the domain                        \\ \hline
-            \texttt{default\_role} & Default role assigned to accounts created in the domain \\ \hline
+            \textbf{Attribute}     & \textbf{Description}                                        \\ \hline
+            \texttt{domain\_id}    & Unique identifier for the domain                            \\ \hline
+            \texttt{default\_role} & Default role assigned to accounts created within the domain \\ \hline
       \end{tabularx}
 \end{table}
+
 
 
 \begin{figure}[htbp]
