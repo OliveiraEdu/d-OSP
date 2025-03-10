@@ -236,6 +236,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT ./fig//c4_context_diagram.eps
+INPUT ./fig//c4_context_diagram.eps
 INPUT fig//c4_context_diagram.eps
 INPUT ./fig//c4_context_diagram.eps
 INPUT ./fig//c4_context_diagram.eps
@@ -270,6 +271,7 @@ INPUT ./fig//c4_component_diagram.eps
 INPUT ./fig//c4_component_diagram-eps-converted-to.pdf
 INPUT ./fig//c4_component_diagram-eps-converted-to.pdf
 INPUT ./fig//c4_component_diagram-eps-converted-to.pdf
+INPUT ./fig//c4_platform_operations_1.eps
 INPUT ./fig//c4_platform_operations_1.eps
 INPUT fig//c4_platform_operations_1.eps
 INPUT ./fig//c4_platform_operations_1.eps

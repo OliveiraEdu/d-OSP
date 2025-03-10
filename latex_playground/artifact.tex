@@ -29,12 +29,13 @@
 
 Traditional centralized systems often exhibit data silos, limited verifiability, and susceptibility to manipulation, impeding the openness and reliability of scientific practices. The decentralized model introduced in this work is designed to mitigate these challenges by enabling efficient data sharing, fostering collaboration, and enhancing the validation of research outputs, thereby strengthening reproducibility and transparency.
 
-This chapter details the design and implementation of the Open Science Platform, a decentralized system that integrates blockchain, IPFS, and smart contracts to improve research reproducibility. By leveraging immutable records and decentralized storage, the platform ensures transparent and verifiable research artifact management. Additionally, extended services are incorporated to facilitate file indexing, metadata extraction, and search functionality. The proposed platform aligns with Open Science principles by providing verifiable and persistently traceable access to research artifacts.
+This chapter details the design and implementation of the Open Science Platform, a decentralized system that integrates blockchain, IPFS, and smart contracts to improve research reproducibility. By leveraging immutable records and decentralized storage, the platform ensures transparent and verifiable research artifact management. Additionally, extended services are incorporated to facilitate file indexing, metadata extraction, and search functionality. The proposed platform aligns with Open Science principles by providing verifiable and persistently traceable access to research artifacts. Figure~\ref{fig:c4_context_diagram} presents the high level building blocks of the platform.
+
 
 
 \begin{figure}[htbp]
       \centering
-      \includegraphics[width=0.98\textwidth, keepaspectratio]{c4_context_diagram}
+      \includegraphics[width=0.98\textwidth, keepaspectratio]{c4_context_diagram.eps}
       \caption{System context diagram for the Open Science Platform}
       \label{fig:c4_context_diagram}
 \end{figure}
@@ -42,7 +43,7 @@ This chapter details the design and implementation of the Open Science Platform,
 
 
 \subsection{Technology Stack}
-The Open Science Platform is developed using a hybrid architecture that combines decentralized and off-chain technologies to ensure secure, traceable, and efficient data management.
+The Open Science Platform is developed using a hybrid architecture that combines decentralized and off-chain technologies to ensure secure, traceable, and efficient data management, figure~\ref{fig:c4_container_diagram} presents the a first level breakdown of building blocks of the platform.
 
 \subsection{Core Services}
 
@@ -79,7 +80,7 @@ The extended services enhance the platform's features by improving file and meta
 
 \subsection{System Components and Interactions in the Open Science Platform}
 
-The Open Science Platform consists of multiple interconnected components, each serving a distinct role in ensuring secure, verifiable, and reproducible research data management. The primary components include Jupyter Server, the blockchain Hyperledger Iroha v1 and the InterPlanetary File System (IPFS). Each of these elements are encapsulated within a Docker container to provide modularity, ease of deployment and reproducibility.
+The Open Science Platform consists of multiple interconnected components, each serving a distinct role in ensuring secure, verifiable, and reproducible research data management. The primary components include Jupyter Server, the blockchain Hyperledger Iroha v1 and the InterPlanetary File System (IPFS). Each of these elements are encapsulated within a Docker container to provide modularity, ease of deployment and reproducibility. The implementation level architecture is presented in figure~\ref{fig:c4_component_diagram}.
 
 \subsubsection{Jupyter Server}
 The Jupyter Server acts as the primary interface for users interacting with the platform. This component provides a Python kernel for the execution environment that integrates the Iroha v1 Library, the IPFS HTTPS client, Apache Tika for metadata handling, and the Woosh Indexer and Search system. It enables users to:
@@ -142,7 +143,13 @@ This architecture guarantees trustworthy and reproducible scientific research by
 
 
 \subsection{Platform Operations}
-The platform supports a set of core operations that regulate user interactions with projects and data management.
+The platform supports a set of core operations that regulate user interactions with projects and research artifacts.
+
+\subsection{User Enrollment and Project Registration}
+
+\sloppy
+The Open Science Platform enables user enrollment and project registration, ensuring transparent and verifiable account management on the blockchain. Users self-enroll by providing cryptographic credentials and identity details, which are securely stored using a combination of blockchain attributes and decentralized storage through IPFS. Similarly, projects are registered with essential metadata, establishing a distinct blockchain account for each one. To maintain traceability and facilitate efficient project management, the system links user and project accounts bidirectionally, allowing for streamlined queries and provenance tracking. This process is depicted in Figure~\ref{fig:c4_operations_1}.
+\fussy
 
 \begin{itemize}
       \item \textbf{User Self-Enrollment} – A user self-enrolls on the platform by providing a private key that complies with the ED25519 or SHA-3 standards and identity information, including full name, institution, email, ORCID, and role. An account is created for the user in the blockchain. All data provided in the enrollment is structured in key/value pairs into a JSON object and uploaded to IPFS, with the corresponding Content Identifier (CID) recorded on the blockchain attributes of the user account.
@@ -156,24 +163,16 @@ The platform supports a set of core operations that regulate user interactions w
 
 \begin{figure}[htbp]
       \centering
-      \includegraphics[width=0.98\textwidth, keepaspectratio]{c4_platform_operations_1}
+      \includegraphics[width=0.98\textwidth, keepaspectratio]{c4_platform_operations_1.eps}
       \caption{User enrollment and project registering for the Open Science Platform}
-      \label{fig:c4_operations_diagram}
+      \label{fig:c4_operations_1}
 \end{figure}
-
 
 \subsection{Artifact Management}
 
-\begin{itemize}
-      \item \textbf{File Upload} – A user may upload research artifacts, including papers, datasets, and images. Each file is stored on IPFS, generating a unique Content Identifier (CID) that ensures traceability and integrity. The CID is then recorded on the blockchain attributes of the project, establishing a verifiable reference to the artifact.
+The Open Science Platform provides a structured approach to managing research artifacts, ensuring their integrity, traceability, and accessibility. Users can upload various types of research files, including papers, datasets, and images, which are securely stored in a decentralized manner using IPFS. Each uploaded file is assigned a unique Content Identifier (CID), which is recorded on the blockchain, creating a tamper-proof reference. To enhance discoverability, metadata is extracted, structured, and stored on IPFS, with its CID also registered on the blockchain. The system further supports indexing and full-text search capabilities, enabling efficient retrieval of research artifacts.
 
-      \item \textbf{Metadata Extraction and Storage} – After the upload,the file available metadata is extracted. The extracted metadata is structured in key/value pairs into a JSON object and uploaded to IPFS, with the corresponding Content Identifier (CID) recorded on the attributes of the project account in the blockchain, ensuring metadata provenance and verification.
-
-      \item \textbf{Indexing} – To facilitate efficient retrieval, the system indexes the metadata of every uploaded file, including full text indexing for text based files.
-
-      \item \textbf{Searching} – Users can perform keyword-based searches to locate relevant research artifacts, with search results displaying metadata details, including descriptions, subject and authorship.
-\end{itemize}
-
+The file upload and metadata management workflow are illustrated in Figure~\ref{fig:c4_file_operations_diagram}. A user may upload research artifacts, such as papers, datasets, and images, which are stored on IPFS. Each file is assigned a unique CID, ensuring traceability and integrity, and this CID is recorded on the blockchain attributes of the corresponding project account. After upload, metadata is extracted, structured in key/value pairs, and uploaded to IPFS, with its CID also recorded on the blockchain to preserve provenance. To enhance searchability, the system indexes metadata, including full-text indexing for text-based files.
 
 \begin{figure}[htbp]
       \centering
@@ -182,24 +181,16 @@ The platform supports a set of core operations that regulate user interactions w
       \label{fig:c4_file_operations_diagram}
 \end{figure}
 
+The platform also enables users to search for research artifacts using keyword-based queries. As depicted in Figure~\ref{fig:c4_keyword_search}, the search engine looks up keywords in the indexed metadata and returns relevant results. Each result includes metadata details such as descriptions, subjects, and authorship, allowing users to identify relevant artifacts efficiently.
 
 \begin{figure}[htbp]
       \centering
       \includegraphics[width=0.98\textwidth, keepaspectratio]{c4_searching_and_validation.eps}
-      \caption{keyword search, file validation and download}
+      \caption{Keyword search, file validation, and download}
       \label{fig:c4_keyword_search}
 \end{figure}
 
-
-
-\subsection{Validation and Download}
-
-\begin{itemize}
-      \item \textbf{File Validation} – To ensure data integrity and authenticity, the platform verifies whether the CID of a file stored on IPFS matches the CID recorded on the blockchain. A discrepancy between these identifiers signals potential tampering or corruption.
-
-      \item \textbf{File Download} – The system retrieves and downloads validated files from IPFS to the user local file system for later usage.
-\end{itemize}
-
+Once a file has been located, the platform performs a validation step to ensure its integrity and authenticity. The CID stored on IPFS is compared against the CID recorded on the blockchain. If they match, the file is considered valid; otherwise, the system flags it as potentially tampered with or corrupted. This validation mechanism safeguards research artifacts against unauthorized modifications. The file validation and retrieval process is depicted in figure~\ref{fig:c4_file_validation}. A validated file can then be retrieved and downloaded from IPFS to the user's local system for further use.
 
 \begin{figure}[htbp]
       \centering
@@ -212,7 +203,7 @@ The platform supports a set of core operations that regulate user interactions w
 
 \subsection{Data Model for the Open Science Platform}
 
-The entity-relationship model for the Open Science Platform defines the logical structure of users and research projects, capturing the associations between these entities. The primary entities in this model are \texttt{User} and \texttt{Project}, which are connected through an ownership relationship.
+The entity-relationship model for the Open Science Platform defines the logical structure of users and research projects, capturing the associations between these entities. The primary entities in this model are \texttt{User} and \texttt{Project}, which are connected through an linked relationship, figure~\ref{fig:er_model} presents the model.
 
 
 \begin{figure}[htbp]
@@ -270,12 +261,12 @@ The \texttt{Project} entity represents a research project registered in the plat
 \end{table}
 
 
-\subsection{Ownership Relationship}
-A \texttt{User} owns one or more \texttt{Project} entities, establishing a one-to-many relationship. This means that a single user can be responsible for multiple projects, but each project is owned by exactly one user. This relationship is crucial for managing project access, ensuring accountability, and maintaining provenance of research activities. This model ensures a structured representation of research projects and their associated users, supporting an organized approach to data management in the Open Science Platform.
+\subsection{Linked relationship between user and project enttities}
+A \texttt{User} is linked to one or more \texttt{Project} entities, establishing a one-to-many relationship. This means that a single user can be responsible for multiple projects. This model ensures a structured representation of research projects and their associated users, supporting an organized approach to data management in the Open Science Platform.
 
 \subsection{ Data Model for Hyperledger Iroha v1}
 
-The entity-relationship (ER) model of Hyperledger Iroha defines the core entities, attributes, and relationships that facilitate role-based access control, asset management, and multi-signature security. While Iroha v1 includes a broader set of entities, this research focuses solely on the account and domain related classes and attributes.
+The entity-relationship (ER) model of Hyperledger Iroha defines the core entities, attributes, and relationships that facilitate role-based access control, asset management, and multi-signature security. While Iroha v1 includes a broader set of entities, this research focuses solely on the account and domain related classes and attributes, as presented in figure~\ref{fig:iroha_v1_er_model}
 
 \section{Core Entities and Their Attributes}
 \subsection{Account Entity}
@@ -334,7 +325,7 @@ The attributes specific to users and projects, which are not natively present in
 
 From a relational perspective, the \texttt{account} entity maintains its standard associations with roles, permissions, and assets as defined in the Iroha v1 ER model. This ensures that user accounts and project accounts can both participate in the blockchain's permissioning system, asset ownership model, and role-based access control without requiring modifications to the underlying structure.
 
-By reusing the \texttt{account} entity, the Open Science Platform ER model ensures compatibility with Iroha's existing mechanisms for identity management, cryptographic signing, and permission delegation. Additionally, this approach aligns with the decentralized and immutable nature of blockchain, ensuring that both user and project entities benefit from the security and transparency features inherent to the Iroha v1 framework.
+By reusing the \texttt{account} entity, the Open Science Platform ER model ensures compatibility with Iroha's existing mechanisms for identity management, cryptographic signing, and permission delegation. Additionally, this approach aligns with the decentralized and immutable nature of blockchain, ensuring that both user and project entities benefit from the security and transparency features inherent to the Iroha v1 framework. Figure~\ref{fig:comparing_er_models} provides a comparison between models and the rationale of use.
 
 
 
@@ -352,11 +343,11 @@ Metadata plays a crucial role in both the \texttt{Account} and \texttt{Project} 
 
 
 \subsection{Selected Ontologies}
-An ontology is a formal representation of knowledge as a set of concepts within a domain and the relationships between those concepts. In the context of the Open Science platform, ontologies help structure data in a way that promotes interoperability, consistency, and clarity. The use of ontologies such as \texttt{FOAF}, \texttt{Schema.org}, and \texttt{Dublin Core} ensures that data is standardized and can be easily shared and understood across different systems.
+An ontology is a formal representation of knowledge as a set of concepts within a domain and the relationships between those concepts. In the context of the Open Science platform, ontologies help structure data in a way that promotes interoperability, consistency, and clarity. The use of ontologies such as \texttt{FOAF}, \texttt{Schema.org}, and \texttt{Dublin Core} ensures that data is standardized and can be easily shared and understood across different systems. These ontologies were chosen because of their widespread adoption, their ability to standardize data across different systems, and their support for rich, machine-readable representations.
+
 
 \begin{table}[h]
       \centering
-      \label{tab:ontologies}
       \renewcommand{\arraystretch}{1.2}
       \begin{tabularx}{\textwidth}{|l|X|}            \hline
             \textbf{Ontology}                  & \textbf{Description}                                                                                                                                                                                                                                   \\ \hline
@@ -365,9 +356,13 @@ An ontology is a formal representation of knowledge as a set of concepts within 
             \textbf{Dublin Core (DC)}          & A metadata standard used for describing a wide range of resources, for describing the abstract, keywords, and other descriptive elements of the \texttt{Project} entity.                                                                               \\ \hline
       \end{tabularx}
       \caption{Ontologies used in the Open Science Platform}
+      \label{tab:ontologies}
 \end{table}
 
-These ontologies were chosen because of their widespread adoption, their ability to standardize data across different systems, and their support for rich, machine-readable representations. By aligning with these ontologies, the platform ensures that its metadata is compatible with other Open Science initiatives and services, facilitating seamless integration and data exchange.
+
+As shown in table~\ref{tab:ontologies}, by aligning with these ontologies, the platform ensures that its metadata is compatible with other Open Science initiatives and services, facilitating seamless integration and data exchange.
+
+
 
 
 \subsection{User Metadata}
@@ -375,7 +370,6 @@ The metadata for the \texttt{Account} class describes the attributes associated 
 
 \begin{table}[h]
       \centering
-      \label{tab:user_metadata}
       \renewcommand{\arraystretch}{1.2}
       \begin{tabularx}{\textwidth}{|l|X|}
             \hline
@@ -388,6 +382,7 @@ The metadata for the \texttt{Account} class describes the attributes associated 
             \texttt{schema:linked\_project} & The project associated with the user.                                                                           \\ \hline
       \end{tabularx}
       \caption{Account Metadata Attributes}
+      \label{tab:user_metadata}
 \end{table}
 
 
