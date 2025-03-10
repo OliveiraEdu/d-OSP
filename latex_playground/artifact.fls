@@ -358,6 +358,17 @@ INPUT ./fig//metadata_workflow_sequence.eps
 INPUT ./fig//metadata_workflow_sequence-eps-converted-to.pdf
 INPUT ./fig//metadata_workflow_sequence-eps-converted-to.pdf
 INPUT ./fig//metadata_workflow_sequence-eps-converted-to.pdf
+INPUT ./fig//provenance_timeline.eps
+INPUT ./fig//provenance_timeline.eps
+INPUT fig//provenance_timeline.eps
+INPUT ./fig//provenance_timeline.eps
+INPUT ./fig//provenance_timeline.eps
+INPUT ./fig//provenance_timeline-eps-converted-to.pdf
+INPUT ./fig//provenance_timeline-eps-converted-to.pdf
+INPUT ./fig//provenance_timeline.eps
+INPUT ./fig//provenance_timeline-eps-converted-to.pdf
+INPUT ./fig//provenance_timeline-eps-converted-to.pdf
+INPUT ./fig//provenance_timeline-eps-converted-to.pdf
 INPUT artifact.aux
 INPUT /usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb

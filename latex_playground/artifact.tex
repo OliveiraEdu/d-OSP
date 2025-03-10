@@ -615,13 +615,19 @@ This structure allows for the efficient tracking and retrieval of research proje
 
 \subsection{Provenance in the Open Science Platform}
 
-The provenance system takes a two-fold approach, with both methods being native features of their respective systems. The first approach leverages Iroha v1’s transaction logging capabilities, where each transaction is recorded with a hexadecimal hash and timestamp. This provides a reliable mechanism for tracking the evolution of account states over time. The hash acts as a snapshot, allowing for the retrieval of any past state of an account based on the corresponding transaction hash.
+The provenance system takes a two-fold approach, with both methods being native features of their respective systems. The first approach leverages Iroha v1’s transaction logging capabilities, where each transaction is recorded with a hexadecimal hash and timestamp. This provides a reliable mechanism for tracking the evolution of account states over time. The hash acts as a snapshot, allowing for the retrieval of any past state of an account based on the corresponding transaction hash, as depicted in in Figure~\ref{fig:provenance}.
 
 The second approach makes use of IPFS’s native feature of Content Identifiers (CIDs) to track metadata associated with accounts, projects, and files. Each piece of metadata is linked to a unique CID, which allows for decentralized storage and immutability. A mismatch of the CID indicates that the metadata or file has been modified, ensuring the integrity of the information over time.
 
 Together, these two approaches—transaction logging through Iroha v1’s blockchain and metadata tracking through IPFS CIDs—provide a robust and transparent provenance system, ensuring both the transaction history and the integrity of metadata are verifiably recorded and traceable.
 
 
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.98\textwidth, keepaspectratio]{provenance_timeline.eps}
+      \caption{Transaction logging and provenance query}
+      \label{fig:provenance}
+\end{figure}
 
 
 
