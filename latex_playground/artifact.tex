@@ -385,6 +385,8 @@ The metadata for the \texttt{Account} class describes the attributes associated 
       \label{tab:user_metadata}
 \end{table}
 
+As presented in Table~\ref{tab:user_metadata}, this structured metadata helps ensure the user information is standardized and interoperable across different systems and platforms.
+
 
 \subsection{The use of JSON-LD for metadata representation}
 
@@ -630,42 +632,14 @@ Together, these two approaches—transaction logging through Iroha v1’s blockc
 
 
 
-\subsection{Smart Contract}
+\subsection{Conclusion}
+The Open Science Platform provides a comprehensive and robust framework for enhancing the reproducibility and transparency of scientific research. It leverages a modern technology stack comprising the Iroha v1 blockchain, InterPlanetary File System (IPFS), Jupyter Notebooks, Apache Tika, and Woosh. This stack ensures secure and efficient management of data and artifacts across the platform. The Iroha v1 blockchain, integrated with smart contracts and the Ethereum-compatible Hyperledger Burrow, guarantees the immutability and trustworthiness of all recorded actions, while IPFS enables decentralized storage of research data, ensuring scalability and resilience. Jupyter Notebooks serve as the primary front-end interface, providing an interactive environment for users to engage with research artifacts. Apache Tika facilitates the extraction and processing of metadata from various document types, while Woosh powers advanced search and indexing functionalities, improving data discoverability and retrieval.
 
-The platform deploys standard Ethereum EVM contracts in Solidity for account creation and detail setting. These contracts are deployed through the Iroha v1 Python Library.
+Platform operations are streamlined and well-defined. User enrollment and project registration are handled seamlessly through the Iroha v1 blockchain, where both users and projects are registered as accounts. This facilitates the management of roles, permissions, and interactions within the platform, ensuring efficient tracking. Artifact management is integrated with the platform's metadata extraction system, allowing for the efficient storage and retrieval of research artifacts that are consistently linked to their respective provenance, reinforcing the auditability of scientific outputs. Additionally, the search and validation functionalities provide users with powerful tools to find, and explore research data, ensuring that relevant information is trusted.
 
-\subsection{Benefits}
+The data model, represented through an Entity-Relationship (ER) model, underpins the platform's data structure, offering a flexible and comprehensive approach to managing users, projects, metadata, and research artifacts. The role of metadata in the platform is crucial, as it is structured using well-established ontologies, including FOAF, Schema.org, and Dublin Core. These ontologies standardize the metadata representation, enabling interoperability and ensuring that all data is both machine-readable and discoverable. The integration of blockchain technology ensures that all metadata is transparently recorded, with the blockchain acting as a secure ledger for all metadata transactions, ensuring data integrity and facilitating trust in the platform. Provenance tracking is an essential aspect of the Open Science Platform, allowing for the tracing of data and results back to their origin, providing transparency, accountability, and enhancing the reproducibility of research.
 
-The Open Science platform offers numerous benefits for researchers and members of the scientific community, including:
-
-\begin{itemize}
-      \item Secure data sharing: By utilizing blockchain technology and IPFS, the platform ensures tamper-proof data exchange.
-      \item Transparent data management: The use of smart contracts and decentralized storage guarantees transparency in data access and modification history.
-      \item Collaborative research environment: The platform enables researchers to collaborate on projects, share artifacts and results, and track progress.
-\end{itemize}
-
-\subsection{Challenges}
-
-The Open Science platform faces several challenges, including:
-
-\begin{itemize}
-      \item Scalability: As the number of users increases, the platform needs to be able to handle a growing amount of data and transactions efficiently.
-      \item Interoperability: Ensuring seamless integration with existing research platforms and tools is crucial for widespread adoption.
-      \item User Adoption: Educating researchers about the benefits of decentralized technologies and the Open Science platform can be an uphill battle.
-\end{itemize}
-
-\subsection{Future Work}
-
-The Open Science platform has several areas for future development, including:
-
-\begin{itemize}
-      \item Integration with existing research platforms: Collaborations with established research platforms to expand the platform's reach and user base.
-      \item Enhanced security measures: Implementing additional security protocols to protect against potential threats and maintain the integrity of shared information.
-      \item User interface improvements: Enhancing the web interface to make it more user-friendly and accessible for researchers from diverse backgrounds.
-\end{itemize}
-
-\section{Conclusion}
-The Open Science platform is a comprehensive solution for secure, transparent, traceable, and tamper-proof data sharing and collaboration. By leveraging decentralized technologies, the platform empowers researchers to share project artifacts and data in a reliable and trustworthy manner.
+Looking to the future, the Open Science Platform holds significant potential for further development. Ongoing efforts will focus on expanding the artifact management capabilities, integrating more advanced search functionalities, and enhancing the platform’s ability to handle large-scale, multi-source research data. A key focus will be on improving interoperability with existing open science platforms and initiatives, ensuring seamless integration and data exchange across various systems. Additionally, the platform aims to incorporate blockchain-based incentive mechanisms to encourage active participation and adoption. By offering rewards and recognition for contributors and users, these mechanisms will help foster a collaborative and thriving research ecosystem, accelerating the platform's growth and encouraging wider use in the scientific community. The continued adoption of open standards and the enhancement of user experience will ensure the platform’s scalability and relevance within the broader open science ecosystem.
 
 \end{document}
 
