@@ -542,11 +542,15 @@ Figure~\ref{fig:metadata_workflow} illustrates the sequence of operations in the
       \label{fig:metadata_workflow}
 \end{figure}
 
-
-
 \subsection{Blockchain Representation of Metadata}
 
+In the Open Science platform, metadata for users, projects, and files are stored on the blockchain. This ensures the integrity and provenance of the metadata while leveraging decentralized technologies. The following subsections describe the structure of blockchain representations for both user and project data, as well as the files associated with these projects.
+
 \subsection{User Account}
+
+The representation of a user's account on the blockchain contains the standard Iroha v1 attributes for the account entity, such as the unique account identifier, domain information, and quorum for consensus. Additionally, the \texttt{json\_data} attribute references both the project to which the user is linked and the user's metadata CID (Content Identifier) stored on IPFS. This blockchain-based approach ensures that the user’s information remains immutable and traceable, which is critical for maintaining the integrity of research data.
+
+The JSON structure describes the account details for a user in the Open Science platform as shown in Figure~\ref{fig:user_blockchain_representation}.
 
 \begin{figure}[h]
       \centering
@@ -567,7 +571,13 @@ Figure~\ref{fig:metadata_workflow} illustrates the sequence of operations in the
     \end{verbatim}
 \end{figure}
 
-\subsection*{Project Account Representation}
+\subsection{Project Account}
+
+The project account representation similarly uses a blockchain-based structure to store project-related metadata. Each project is identified by a unique account ID, along with the project’s domain and quorum. The project metadata is linked to the user and includes important information about files associated with the project, including their CID references on IPFS. This ensures that the project data is linked to the user’s account and that all files and metadata related to the project are securely stored on the blockchain for provenance tracking.
+
+The JSON structure describes the account details for a user in the Open Science platform as shown in Figure~\ref{fig:project_blockchain_representation}.
+
+
 \begin{figure}[h]
       \centering
       \caption{Blockchain Representation of Project Account}
@@ -591,21 +601,26 @@ Figure~\ref{fig:metadata_workflow} illustrates the sequence of operations in the
     \end{verbatim}
 \end{figure}
 
+
 \subsection*{File Representation}
 
-In the project representation, the \texttt{file\_1} attribute consists of two CID values:
+Within the project account, each file associated with the project is represented by a CID pair. The first CID refers to the file stored on IPFS, while the second CID references the metadata associated with that file. This structure ensures that the file's content and its metadata are both stored and tracked independently, but are still linked to the blockchain for integrity and provenance.
 
 \begin{itemize}
-      \item The \textbf{first CID} (\texttt{QmTLZSqzPexwEdniZXLPN6fUfmEXX6MXS3b4QjKURgxc9y}) corresponds to the \textbf{file stored on IPFS}.
+      \item The \textbf{first CID} (\texttt{QmTLZSqzPexwEdniZXLPN6fUfmEXX6MXS3b4QjKURgxc9y}) corresponds to the \textbf{file}.
       \item The \textbf{second CID} (\texttt{Qmchg7At5whR1T4xP8TwTMd8ntQqJXbbSicJRtGGaW1Z2P}) corresponds to the \textbf{metadata of the file}, ensuring that all relevant details are retrievable.
 \end{itemize}
 
 This structure allows for the efficient tracking and retrieval of research project data while maintaining provenance and integrity through blockchain storage.
 
+\subsection{Provenance in the Open Science Platform}
 
+The provenance system takes a two-fold approach, with both methods being native features of their respective systems. The first approach leverages Iroha v1’s transaction logging capabilities, where each transaction is recorded with a hexadecimal hash and timestamp. This provides a reliable mechanism for tracking the evolution of account states over time. The hash acts as a snapshot, allowing for the retrieval of any past state of an account based on the corresponding transaction hash.
 
-\subsection{Conclusion}
-In summary, metadata plays a vital role in the Open Science platform by enabling the structured and interoperable representation of user and project information. The use of ontologies like \texttt{FOAF}, \texttt{Schema.org}, and \texttt{Dublin Core} enhances the platform's ability to share and integrate data, ensuring that the platform contributes effectively to the broader Open Science ecosystem.
+The second approach makes use of IPFS’s native feature of Content Identifiers (CIDs) to track metadata associated with accounts, projects, and files. Each piece of metadata is linked to a unique CID, which allows for decentralized storage and immutability. A mismatch of the CID indicates that the metadata or file has been modified, ensuring the integrity of the information over time.
+
+Together, these two approaches—transaction logging through Iroha v1’s blockchain and metadata tracking through IPFS CIDs—provide a robust and transparent provenance system, ensuring both the transaction history and the integrity of metadata are verifiably recorded and traceable.
+
 
 
 

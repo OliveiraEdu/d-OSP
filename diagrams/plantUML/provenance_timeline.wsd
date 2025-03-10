@@ -1,0 +1,26 @@
+@startuml
+actor User
+entity "Open Science Platform" as Platform
+entity "Iroha v1 Blockchain" as Iroha
+entity "Account Metadata" as AccountMetadata
+entity "IPFS" as IPFS
+
+Platform -> Iroha: Create or update account
+Iroha -> Platform: Log transaction hash and timestamp
+Platform -> IPFS: Generate/Update metadata (JSON or file)
+IPFS -> Platform: Return CID
+Platform -> AccountMetadata: Update the account details with CID
+
+== Query Provenance ==
+
+User -> Platform: Query account state by transaction hash
+Platform -> Iroha: Retrieve state by hash
+Iroha -> Platform: Return state at that timestamp
+Platform -> User: Return account state at query time
+
+User -> Platform: Query account metadata by CID
+Platform -> IPFS: Retrieve metadata by CID
+IPFS -> Platform: Return metadata content
+Platform -> User: Return metadata content
+
+@enduml
