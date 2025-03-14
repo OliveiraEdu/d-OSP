@@ -27,7 +27,7 @@
 
 \subsection{Overview}
 
-Traditional centralized systems often exhibit data silos, limited verifiability, and susceptibility to manipulation, impeding the openness and reliability of scientific practices. The decentralized model introduced in this work is designed to mitigate these challenges by enabling efficient data sharing, fostering collaboration, and enhancing the validation of research outputs, thereby strengthening reproducibility and transparency.
+Traditional centralized research repositories often exhibit data silos, limited verifiability, and susceptibility to manipulation, impeding the openness and reliability of scientific practices. The decentralized model introduced in this work is designed to mitigate these challenges by enabling efficient data sharing, fostering collaboration, and enhancing the validation of research outputs, thereby strengthening reproducibility and transparency.
 
 This chapter details the design and implementation of the Open Science Platform, a decentralized system that integrates blockchain, IPFS, and smart contracts to improve research reproducibility. By leveraging immutable records and decentralized storage, the platform ensures transparent and verifiable research artifact management. Additionally, extended services are incorporated to facilitate file indexing, metadata extraction, and search functionality. The proposed platform aligns with Open Science principles by providing verifiable and persistently traceable access to research artifacts. Figure~\ref{fig:c4_context_diagram} presents the high level building blocks of the platform.
 
@@ -43,14 +43,14 @@ This chapter details the design and implementation of the Open Science Platform,
 
 
 \subsection{Technology Stack}
-The Open Science Platform is developed using a hybrid architecture that combines decentralized and off-chain technologies to ensure secure, traceable, and efficient data management, figure~\ref{fig:c4_container_diagram} presents the a first level breakdown of building blocks of the platform.
+The Open Science Platform is built on a hybrid architecture that strategically integrates decentralized and centralized components to balance security, traceability, and efficiency in data management. Decentralized technologies, such as blockchain and IPFS, ensure data integrity and tamper resistance, while centralized components facilitate indexing, search, and user interactions. Figure~\ref{fig:c4_container_diagram} presents a high-level breakdown of the platform's core building blocks.
 
 \subsection{Core Services}
 
 The core services of the Open Science Platform provide the fundamental infrastructure for secure and verifiable research artifact management.
 
 \begin{itemize}
-      \item \textbf{Hyperledger Iroha v1 Blockchain:} Acts as the core infrastructure for managing user and project accounts, recording transactions, and enforcing business rules via smart contracts to ensure secure and transparent data exchange.
+      \item \textbf{Hyperledger Iroha v1 Blockchain:} Acts as the immutable ledger for managing user and project accounts, recording transactions, and enforcing business rules via smart contracts to ensure secure and transparent data exchange.
       \item \textbf{InterPlanetary File System (IPFS):} Provides decentralized, tamper-proof storage for research artifacts and metadata, ensuring persistent and verifiable access to shared data.
 \end{itemize}
 

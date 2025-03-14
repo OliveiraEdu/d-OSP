@@ -1,0 +1,74 @@
+\begin{thebibliography}{10}
+
+\bibitem{bartling2014opening}
+Stefan Bartling and Sascha Friesike.
+\newblock {\em Opening Science: The Evolving Guide on How the Web is Changing
+  Research, Collaboration and Scholarly Publishing}.
+\newblock Springer, 2014.
+
+\bibitem{benet2014ipfs}
+Juan Benet.
+\newblock Ipfs - content addressed, versioned, p2p file system.
+\newblock Technical report, Protocol Labs, 2014.
+
+\bibitem{chen2018blockchain}
+Guanghua Chen, Bing Xu, Manli Lu, and Naixue Xuan.
+\newblock Exploring blockchain technology and its potential applications for
+  education.
+\newblock {\em Journal of Computing in Higher Education}, 30(3):517--532, 2018.
+
+\bibitem{wilkinson2016fair}
+Mark D.~Wilkinson et~al.
+\newblock The fair guiding principles for scientific data management and
+  stewardship.
+\newblock {\em Scientific Data}, 3(160018), 2016.
+
+\bibitem{ioannidis2005reproducibility}
+John P.~A. Ioannidis.
+\newblock Why most published research findings are false.
+\newblock {\em PLoS Medicine}, 2(8):e124, 2005.
+
+\bibitem{merkle1988digital}
+Ralph~C. Merkle.
+\newblock A digital signature based on a conventional encryption function.
+\newblock {\em Advances in Cryptology - CRYPTO '87}, pages 369--378, 1988.
+
+\bibitem{nakamoto2008bitcoin}
+Satoshi Nakamoto.
+\newblock {\em Bitcoin: A Peer-to-Peer Electronic Cash System}.
+\newblock 2008.
+
+\bibitem{narayanan2016bitcoin}
+Arvind Narayanan, Joseph Bonneau, Edward Felten, Andrew Miller, and Steven
+  Goldfeder.
+\newblock {\em Bitcoin and Cryptocurrency Technologies}.
+\newblock Princeton University Press, 2016.
+
+\bibitem{rivest1992md}
+Ronald~L. Rivest.
+\newblock The md5 message-digest algorithm.
+\newblock {\em RFC 1321}, 1992.
+
+\bibitem{tennant2021decentralized}
+Jon Tennant, Bjorn Brembs, and Ludo Waltman.
+\newblock Decentralized science: The future of open access.
+\newblock {\em F1000Research}, 10:1156, 2021.
+
+\bibitem{wood2014ethereum}
+Gavin Wood.
+\newblock Ethereum: A secure decentralised generalised transaction ledger.
+\newblock In {\em Ethereum Project Yellow Paper}, 2014.
+
+\bibitem{zhang2020scientific}
+P.~Zhang, G.~Schmidt, and T.~White.
+\newblock Blockchain and scientific data integrity: A new paradigm for open
+  science.
+\newblock {\em Journal of Information Science}, 46(2):195--210, 2020.
+
+\bibitem{zhang2018blockchain}
+Y.~Zhang, R.~Xue, and L.~Liu.
+\newblock Blockchain technology in scientific research: Theoretical
+  foundations, applications, and challenges.
+\newblock {\em Future Generation Computer Systems}, 89:160--175, 2018.
+
+\end{thebibliography}
