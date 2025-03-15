@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{bayer_improving_1993}
 Dave Bayer, Stuart Haber, and W.~Scott Stornetta.
@@ -7,10 +7,46 @@ Dave Bayer, Stuart Haber, and W.~Scott Stornetta.
 \newblock In Renato Capocelli, Alfredo De~Santis, and Ugo Vaccaro, editors,
   {\em Sequences {II}}, pages 329--334, New York, NY, 1993. Springer New York.
 
+\bibitem{bonneau2015sok}
+Joseph Bonneau, Andrew Miller, Jeremy Clark, Arvind Narayanan, Joshua~A. Kroll,
+  and Edward~W. Felten.
+\newblock Sok: Research perspectives and challenges for bitcoin and
+  cryptocurrencies.
+\newblock {\em Proceedings - IEEE Symposium on Security and Privacy}, pages
+  104--121, 2015.
+
+\bibitem{castro1999practical}
+Miguel Castro and Barbara Liskov.
+\newblock Practical byzantine fault tolerance.
+\newblock In {\em Proceedings of the Third Symposium on Operating Systems
+  Design and Implementation (OSDI)}, pages 173--186, 1999.
+
+\bibitem{buterin2020ghost}
+Vitalik~Buterin et~al.
+\newblock Combining ghost and casper.
+\newblock {\em arXiv preprint arXiv:2003.03052}, 2020.
+
 \bibitem{haber_how_1991}
 Stuart Haber and W.~Scott Stornetta.
 \newblock How to time-stamp a digital document.
 \newblock {\em J. Cryptology}, 3(2):99--111, January 1991.
+
+\bibitem{kiayias2017ouroboros}
+Aggelos Kiayias, Alexander Russell, Bernardo David, and Roman Oliynykov.
+\newblock Ouroboros: A provably secure proof-of-stake blockchain protocol.
+\newblock In {\em Proceedings of the 37th Annual International Cryptology
+  Conference (CRYPTO)}, pages 357--388. Springer, 2017.
+
+\bibitem{king2012ppcoin}
+Sunny King and Scott Nadal.
+\newblock Ppcoin: Peer-to-peer crypto-currency with proof-of-stake.
+\newblock 2012.
+
+\bibitem{lamport1982byzantine}
+Leslie Lamport, Robert Shostak, and Marshall Pease.
+\newblock The byzantine generals problem.
+\newblock {\em ACM Transactions on Programming Languages and Systems},
+  4(3):382--401, 1982.
 
 \bibitem{goos_digital_1988}
 Ralph~C. Merkle.
@@ -26,5 +62,12 @@ Ralph~C. Merkle.
 \bibitem{nakamoto2012bitcoin}
 Satoshi Nakamoto.
 \newblock Bitcoin: A peer-to-peer electronic cash system, 2009.
+
+\bibitem{narayanan2016bitcoin}
+Arvind Narayanan, Joseph Bonneau, Edward Felten, Andrew Miller, and Steven
+  Goldfeder.
+\newblock {\em Bitcoin and Cryptocurrency Technologies: A Comprehensive
+  Introduction}.
+\newblock Princeton University Press, 2016.
 
 \end{thebibliography}

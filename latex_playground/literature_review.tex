@@ -36,16 +36,20 @@ The inherent properties of blockchain—decentralization, immutability, transpar
 Consensus mechanisms are fundamental to blockchain networks, ensuring agreement among distributed nodes without requiring centralized authority. These mechanisms validate transactions and maintain the integrity of the ledger, preventing issues such as double-spending and malicious attacks.
 
 \subsubsection{Proof of Work (PoW)}
-Proof of Work (PoW) was first implemented in Bitcoin \cite{nakamoto2008bitcoin} and remains one of the most well-known consensus mechanisms. PoW requires network participants, known as miners, to solve complex cryptographic puzzles using computational resources. The first miner to find a valid solution can append a new block to the blockchain and receive a block reward. This process ensures security but comes at the cost of significant energy consumption \cite{narayanan2016bitcoin}. Additionally, the difficulty adjustment mechanism ensures that blocks are produced at a steady rate by modifying the complexity of the puzzle based on the total computational power of the network.
+
+Proof of Work (PoW) was first implemented in Bitcoin \cite{nakamoto2012bitcoin} and remains one of the most well-known consensus mechanisms. PoW requires network participants, known as miners, to solve complex cryptographic puzzles using computational resources. The first miner to find a valid solution can append a new block to the blockchain and receive a block reward. This process ensures security but comes at the cost of significant energy consumption \cite{narayanan2016bitcoin}. Additionally, the difficulty adjustment mechanism ensures that blocks are produced at a steady rate by modifying the complexity of the puzzle based on the total computational power of the network.
 
 \subsubsection{Proof of Stake (PoS)}
-Proof of Stake (PoS) was introduced as an energy-efficient alternative to PoW \cite{king2012ppcoin}. Instead of relying on computational work, PoS selects validators based on the amount of cryptocurrency they hold and are willing to "stake" as collateral. Validators are incentivized to act honestly since they risk losing their stake if they attempt to manipulate the system. Variants of PoS, such as Delegated Proof of Stake (DPoS) \cite{larimer2014delegated}, introduce mechanisms where token holders vote for delegates to validate transactions on their behalf, improving efficiency while maintaining decentralization.
+
+Proof of Stake (PoS) is a consensus mechanism designed to address the scalability and energy inefficiencies of Proof of Work (PoW). Its development reflects a paradigm shift in blockchain security and governance, with roots in early cryptocurrency discourse and iterative improvements over time. The concept emerged in 2011 through discussions on the Bitcointalk forum, predating its formal implementation. The first practical application appeared in 2012 with PPCoin (later Peercoin), introduced by Sunny King and Scott Nadal \cite{king2012ppcoin}. While Peercoin pioneered PoS, it adopted a hybrid PoW/PoS model to bootstrap initial security, where PoW mined the first blocks, and PoS secured subsequent ones. This hybrid approach aimed to mitigate Bitcoin’s soaring energy costs, which exceeded \$150,000 daily in 2012. The first pure PoS implementation arrived in 2013 with NXT Blackcoin, which eliminated mining entirely and relied solely on staking. These projects demonstrated that decentralized consensus could be achieved without energy-intensive computations, setting the stage for modern PoS systems like Ethereum 2.0 \cite{buterin2020ghost}and Cardano \cite{kiayias2017ouroboros}.
+
 
 \subsubsection{Mining and Block Validation}
-Mining is the process by which transactions are validated and added to a blockchain. In PoW-based systems, miners compete to solve cryptographic puzzles, while in PoS-based systems, validators are selected to propose and confirm blocks based on their stakes. The mining process serves two key purposes: securing the network by making attacks computationally expensive and issuing new tokens as rewards. The incentive structure aligns participant behavior with the network’s security goals \cite{bonneau2015sok}.
+Mining is the process by which transactions are validated and added to a blockchain. In PoW-based systems, miners compete to solve cryptographic puzzles, while in PoS-based systems, validators are selected to propose and confirm blocks based on their stakes. Mining serves two key purposes: securing the network by making attacks computationally expensive and issuing new tokens as rewards. This incentive structure aligns participant behavior with the network’s security goals \cite{bonneau2015sok}. For example, Bitcoin employs PoW mining, while Ethereum 2.0 uses PoS validation.
 
 \subsubsection{Byzantine Fault Tolerance (BFT)}
-Byzantine Fault Tolerance (BFT) is a property of distributed systems that allows them to function correctly even if some nodes act maliciously or fail \cite{lamport1982byzantine}. Traditional consensus mechanisms, such as Practical Byzantine Fault Tolerance (PBFT) \cite{castro1999practical}, require all participants to communicate and reach consensus before a block is finalized. PBFT-based systems provide high efficiency and finality but require a known set of validators, making them more suitable for permissioned blockchains. Many modern blockchain frameworks, including Hyperledger Iroha, incorporate BFT-based consensus mechanisms to enhance security and reliability.
+Byzantine Fault Tolerance (BFT) is a property of distributed systems that allows them to function correctly even if some nodes act maliciously or fail \cite{lamport1982byzantine}. Traditional consensus mechanisms, such as Practical Byzantine Fault Tolerance (PBFT) \cite{castro1999practical}, require \(2f+1\) honest nodes out of \(3f+1\) total nodes to tolerate \(f\) Byzantine faults. PBFT-based systems provide high efficiency and finality but require a known set of validators, making them more suitable for permissioned blockchains like Hyperledger Iroha.
+
 
 \subsection{Public and Private Blockchains}
 
@@ -59,9 +63,6 @@ Private blockchains restrict participation to authorized entities, making them s
 
 \subsection{Hybrid Blockchain Models}
 Hybrid blockchain models combine aspects of both public and private blockchains. These architectures allow organizations to maintain a private ledger while interacting with public networks for verification and transparency purposes. Such approaches are particularly useful in industries where both privacy and auditability are required, such as supply chain management and financial services \cite{zhao2019blockchain}.
-
-\subsection{Conclusion}
-Consensus mechanisms, mining, and fault tolerance strategies are critical in ensuring blockchain security and functionality. The choice between PoW, PoS, and BFT-based approaches impacts the efficiency, decentralization, and security of blockchain networks. Furthermore, the distinction between public, private, and hybrid blockchains influences their applications, with public blockchains prioritizing trustlessness and private blockchains emphasizing control and efficiency. Understanding these foundational aspects enables the development of blockchain-based solutions tailored to the needs of Open Science and research reproducibility.
 
 
 \section*{Public Key Cryptography in Blockchain}
@@ -95,6 +96,9 @@ In blockchain systems, ECC is primarily used for:
 \end{enumerate}
 
 Bitcoin, for instance, uses the \textbf{secp256k1} elliptic curve for key generation and signing, which provides a 256-bit key length offering high security with lower processing overhead compared to traditional cryptographic methods.
+
+\subsection{Conclusion}
+Consensus mechanisms, mining, and fault tolerance strategies are critical in ensuring blockchain security and functionality. The choice between PoW, PoS, and BFT-based approaches impacts the efficiency, decentralization, and security of blockchain networks. Furthermore, the distinction between public, private, and hybrid blockchains influences their applications, with public blockchains prioritizing trustlessness and private blockchains emphasizing control and efficiency. Understanding these foundational aspects enables the development of blockchain-based solutions tailored to the needs of Open Science and research reproducibility.
 
 \subsection*{Conclusion}
 Public key cryptography is a cornerstone of blockchain security, enabling authentication, digital signatures, and secure communication. The adoption of ECC and its derivatives, such as ECDSA and EdDSA, has significantly improved the efficiency and scalability of blockchain networks, making them resilient to attacks while minimizing computational and storage costs. Future blockchain advancements may incorporate more advanced cryptographic techniques, including post-quantum cryptography, to further enhance security in decentralized systems.
