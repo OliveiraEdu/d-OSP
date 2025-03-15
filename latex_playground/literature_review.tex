@@ -7,6 +7,7 @@
 \usepackage{float}     % To control figure placement
 \usepackage{natbib}  % Recommended for author-year citations
 \usepackage{hyperref}
+\usepackage{amsmath}
 
 \title{Dissertation}
 \author{Eduardo Oliveira}
@@ -20,7 +21,7 @@
 
 \section{Blockchain}
 
-\subsection{Origins of Blockchain}
+\subsection{Foundational Aspects}
 
 Blockchain is a decentralized, immutable ledger technology designed to facilitate secure and transparent transactions within distributed networks. Initially conceptualized for the Bitcoin blockchain \cite{nakamoto2012bitcoin}, this technology has since evolved into a multi-purpose infrastructure underpinning various domains, including finance, supply chain management, and digital identity verification.
 
@@ -29,6 +30,34 @@ The development of blockchain, however, did not occur in isolation. The concept 
 Building on these foundational cryptographic concepts, Stuart Haber and W. Scott Stornetta proposed a method for securely time-stamping digital documents in 1991 \cite{haber_how_1991}. This innovation was significant because it prevented backdating and tampering, laying the groundwork for immutable records. In 1992, Haber, Stornetta, and Bayer further refined this approach by incorporating Merkle trees into their time-stamping system, thereby improving efficiency and strengthening security \cite{bayer_improving_1993}. These advancements not only contributed to the development of blockchain but also highlighted the potential of decentralized, immutable ledgers for maintaining verifiable records.
 
 The inherent properties of blockchain—decentralization, immutability, transparency, and security—make it particularly well-suited for addressing challenges in scientific reproducibility. By maintaining an auditable and tamper-proof history of research data and workflows, blockchain ensures long-term verifiability and integrity. This application leverages the foundational principles established by early cryptographic and distributed systems research, demonstrating how blockchain can extend beyond financial transactions to support rigorous scientific reproducibility.
+
+
+\section*{Contextualizing Decentralization and Distributed Systems}
+
+Decentralization and distributed systems are foundational principles that underpin blockchain technology and its applications. Unlike traditional systems that rely on a central authority to manage operations, decentralized systems distribute control and decision-making across a network of participants. This architecture eliminates single points of failure, enhances security, and fosters transparency.
+
+\subsection*{Decentralization: A Core Principle}
+Decentralization ensures that no single entity has overarching control over the system. In blockchain networks, this is achieved through consensus protocols that govern how nodes validate transactions and maintain the ledger. Decentralized systems can be categorized into levels such as fully centralized, semi-decentralized, or fully decentralized, depending on the degree of control dispersed among participants \cite{nakamoto2008bitcoin}. Fully decentralized systems, such as Bitcoin or Ethereum, operate without middlemen or central authorities, empowering users with full control over their assets and data.
+
+This distribution of control enhances fault tolerance by ensuring that if one node or server fails, others can maintain the network's functionality. For example, decentralized storage systems replicate data across multiple nodes, ensuring redundancy and reliability even in the face of node failures \cite{decentralizedstorage2024}. Additionally, decentralization improves transparency by making all transactions publicly verifiable on an immutable ledger.
+
+\subsection*{Role of Distributed Systems}
+Distributed systems are integral to achieving decentralization in blockchain. These systems rely on a peer-to-peer network where each node maintains a copy of the blockchain ledger. When a transaction occurs, it is broadcast to all nodes, validated through consensus mechanisms, and added to the ledger \cite{lamport1982byzantine}. This architecture ensures that all nodes agree on the current state of the blockchain without requiring a central authority.
+
+Distributed computing also plays a critical role in maintaining real-time synchronization across nodes. Consensus protocols like Proof of Work (PoW) or Proof of Stake (PoS) ensure that only valid transactions are added to the blockchain while resolving conflicts between competing blocks \cite{bonneau2015sok}. This decentralized approach enhances security by making it computationally infeasible for malicious actors to alter historical records.
+
+\subsection*{Absence of Central Authority}
+The absence of a central authority in blockchain networks is a key differentiator from traditional systems. In conventional architectures, a single entity governs operations, creating potential vulnerabilities such as censorship, inefficiency, and single points of failure. Blockchain eliminates these risks by distributing control among participants who collectively validate transactions.
+
+For example:
+\begin{itemize}
+    \item In decentralized finance (DeFi), users interact directly with smart contracts rather than intermediaries like banks or payment processors \cite{defi2024}.
+    \item Decentralized applications (dApps) operate on blockchains without relying on centralized servers or databases. Instead, they use smart contracts to execute transactions securely and transparently \cite{dapps2025}.
+\end{itemize}
+
+This non-centralized structure not only enhances security but also promotes user sovereignty by giving individuals control over their data and assets without needing to trust third parties.
+
+
 
 
 \subsection{Consensus Mechanisms in Blockchain}
@@ -48,7 +77,67 @@ Proof of Stake (PoS) is a consensus mechanism designed to address the scalabilit
 Mining is the process by which transactions are validated and added to a blockchain. In PoW-based systems, miners compete to solve cryptographic puzzles, while in PoS-based systems, validators are selected to propose and confirm blocks based on their stakes. Mining serves two key purposes: securing the network by making attacks computationally expensive and issuing new tokens as rewards. This incentive structure aligns participant behavior with the network’s security goals \cite{bonneau2015sok}. For example, Bitcoin employs PoW mining, while Ethereum 2.0 uses PoS validation.
 
 \subsubsection{Byzantine Fault Tolerance (BFT)}
+
 Byzantine Fault Tolerance (BFT) is a property of distributed systems that allows them to function correctly even if some nodes act maliciously or fail \cite{lamport1982byzantine}. Traditional consensus mechanisms, such as Practical Byzantine Fault Tolerance (PBFT) \cite{castro1999practical}, require \(2f+1\) honest nodes out of \(3f+1\) total nodes to tolerate \(f\) Byzantine faults. PBFT-based systems provide high efficiency and finality but require a known set of validators, making them more suitable for permissioned blockchains like Hyperledger Iroha.
+
+Hyperledger Iroha incorporates a specialized BFT consensus mechanism called YAC (Yet Another Consensus), which is optimized for voting-based block validation and low-latency operations. This integration ensures that Iroha can achieve consensus efficiently while maintaining the robustness expected of BFT systems.
+
+\subsubsection{YAC Consensus and Byzantine Fault Tolerance}
+The YAC (Yet Another Consensus) algorithm ensures Byzantine Fault Tolerance (BFT) \cite{yac2018bft} by employing a voting-based mechanism to achieve consensus in permissioned blockchain networks. Here’s how YAC achieves BFT:
+
+\subsection*{1. Voting for Block Hash}
+Validators in the network vote on the hash of the proposed block rather than its entire content. This reduces communication overhead while ensuring consistency among honest nodes.
+
+\subsection*{2. Fault Tolerance}
+YAC tolerates Byzantine faults by requiring a supermajority (e.g., 2/3 of validators) to agree on the block hash. This guarantees that even if some nodes act maliciously or fail, the system can still reach consensus.
+
+\subsection*{3. Finality}
+Once a supermajority is reached, the block is considered finalized, and all honest nodes accept it as part of the blockchain. This prevents forks and ensures the integrity of the ledger.
+
+\subsection*{4. Permissioned Design}
+YAC is specifically designed for permissioned blockchains, where validators are pre-approved entities. This controlled environment enhances security and reduces the likelihood of large-scale malicious attacks.
+
+YAC’s lightweight design and focus on efficient communication make it suitable for enterprise-grade applications, such as Hyperledger Iroha, where high performance and reliability are critical \cite{yac2018bft}.
+
+\section*{Consensus Formulae for YAC}
+
+The YAC (Yet Another Consensus) algorithm ensures Byzantine Fault Tolerance (BFT) by implementing a voting-based process. The key formulae are as follows:
+
+\subsection*{1. Fault Tolerance}
+The network must satisfy:
+\[
+    n \geq 3f + 1
+\]
+Where:
+\begin{itemize}
+    \item \( n \): Total number of nodes in the network.
+    \item \( f \): Maximum number of Byzantine (malicious or faulty) nodes tolerated.
+\end{itemize}
+
+This ensures that the network can tolerate up to \( f \) Byzantine nodes while still achieving consensus.
+
+\subsection*{2. Supermajority Agreement}
+For a block to be finalized, a supermajority of nodes must agree on its hash:
+\[
+    v > \frac{2n}{3}
+\]
+Where:
+\begin{itemize}
+    \item \( v \): Number of votes for the block hash.
+    \item \( n \): Total number of nodes.
+\end{itemize}
+
+This condition guarantees both safety and liveness in consensus.
+
+\subsection*{3. Voting Process}
+The voting process involves two phases:
+\begin{enumerate}
+    \item \textbf{Proposal Phase}: A leader node proposes a block hash.
+    \item \textbf{Voting Phase}: Nodes vote on the proposed hash, and votes are collected until the supermajority condition is met.
+\end{enumerate}
+
+\subsection*{4. Finality}
+Once a block achieves supermajority agreement, it is considered finalized and added to the blockchain. This ensures that all honest nodes accept the same block, preventing forks.
 
 
 \subsection{Public and Private Blockchains}

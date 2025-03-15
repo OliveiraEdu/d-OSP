@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{decentralizedstorage2024}
+Blockchain-based decentralized storage systems for sustainable data
+  self-sovereignty: A comparative study.
+\newblock {\em Sustainability}, 16(17):7671, 2024.
+
 \bibitem{bayer_improving_1993}
 Dave Bayer, Stuart Haber, and W.~Scott Stornetta.
 \newblock Improving the {Efficiency} and {Reliability} of {Digital}
@@ -59,6 +64,11 @@ Ralph~C. Merkle.
   Berlin, Heidelberg, 1988.
 \newblock Series Title: Lecture Notes in Computer Science.
 
+\bibitem{nakamoto2008bitcoin}
+Satoshi Nakamoto.
+\newblock Bitcoin: A peer-to-peer electronic cash system.
+\newblock 2008.
+
 \bibitem{nakamoto2012bitcoin}
 Satoshi Nakamoto.
 \newblock Bitcoin: A peer-to-peer electronic cash system, 2009.
@@ -69,5 +79,19 @@ Arvind Narayanan, Joseph Bonneau, Edward Felten, Andrew Miller, and Steven
 \newblock {\em Bitcoin and Cryptocurrency Technologies: A Comprehensive
   Introduction}.
 \newblock Princeton University Press, 2016.
+
+\bibitem{defi2024}
+Investopedia Staff.
+\newblock What is decentralized finance (defi) and how does it work?, 2024.
+
+\bibitem{dapps2025}
+Investopedia Staff.
+\newblock Decentralized applications (dapps): Definition, uses, pros and cons,
+  2025.
+
+\bibitem{yac2018bft}
+Makoto Takemiya and Kenta Tanaka.
+\newblock Yac: Bft consensus algorithm for blockchain.
+\newblock {\em arXiv preprint arXiv:1809.00554}, 2018.
 
 \end{thebibliography}

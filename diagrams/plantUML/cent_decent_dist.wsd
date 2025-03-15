@@ -1,0 +1,59 @@
+@startuml
+skinparam linetype ortho
+
+!define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
+!include DEVICONS/server.puml
+!include DEVICONS/network.puml
+
+title Centralized, Decentralized, and Distributed Systems
+
+' Centralized System
+rectangle "Centralized System" {
+    node CentralServer as CS <<server>> {
+        CS : Central Authority
+    }
+    node Client1 as C1 <<network>> {
+        C1 : Client
+    }
+    node Client2 as C2 <<network>> {
+        C2 : Client
+    }
+    node Client3 as C3 <<network>> {
+        C3 : Client
+    }
+    CS -down-> C1 : Communication
+    CS -down-> C2 : Communication
+    CS -down-> C3 : Communication
+}
+
+' Decentralized System
+rectangle "Decentralized System" {
+    node Node1 as N1 <<server>> {
+        N1 : Node 1
+    }
+    node Node2 as N2 <<server>> {
+        N2 : Node 2
+    }
+    node Node3 as N3 <<server>> {
+        N3 : Node 3
+    }
+    N1 -down-> N2 : Peer-to-peer connection
+    N2 -down-> N3 : Peer-to-peer connection
+    N3 -up-> N1 : Peer-to-peer connection
+}
+
+' Distributed System
+rectangle "Distributed System" {
+    node DistributedNode1 as DN1 <<server>> {
+        DN1 : Distributed Node 1
+    }
+    node DistributedNode2 as DN2 <<server>> {
+        DN2 : Distributed Node 2
+    }
+    node DistributedNode3 as DN3 <<server>> {
+        DN3 : Distributed Node 3
+    }
+    DN1 -right-> DN2 : Data replication/synchronization
+    DN2 -right-> DN3 : Data replication/synchronization
+}
+@enduml
