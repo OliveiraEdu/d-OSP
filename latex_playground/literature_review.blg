@@ -3,9 +3,19 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: literature_review.aux
 The style file: plain.bst
 Database file #1: Bibliography.bib
+Warning--I didn't find a database entry for "nakamoto2008bitcoin"
+Warning--I didn't find a database entry for "narayanan2016bitcoin"
+Warning--I didn't find a database entry for "king2012ppcoin"
+Warning--I didn't find a database entry for "larimer2014delegated"
+Warning--I didn't find a database entry for "bonneau2015sok"
+Warning--I didn't find a database entry for "lamport1982byzantine"
+Warning--I didn't find a database entry for "castro1999practical"
+Warning--I didn't find a database entry for "buterin2014next"
+Warning--I didn't find a database entry for "androulaki2018hyperledger"
+Warning--I didn't find a database entry for "zhao2019blockchain"
 You've used 4 entries,
             2118 wiz_defined-function locations,
-            527 strings with 4943 characters,
+            537 strings with 5127 characters,
 and the built_in function-call counts, 1734 in all, are:
 = -- 161
 > -- 97
@@ -44,3 +54,4 @@ warning$ -- 0
 while$ -- 18
 width$ -- 5
 write$ -- 50
+(There were 10 warnings)
