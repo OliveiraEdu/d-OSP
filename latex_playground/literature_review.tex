@@ -18,84 +18,22 @@
 
 
 
-\chapter{Literature Review}
-
-The literature review establishes the theoretical and technological foundations of this research. It examines the key components of the Open Science Platform, focusing on blockchain technology, decentralized applications (dApps), the InterPlanetary File System (IPFS), mathematical underpinnings, Open Science principles, and relevant prior work.
-
 \section{Blockchain}
 
-Blockchain is a decentralized and immutable ledger technology that enables trustless transactions across distributed networks. Originating with Bitcoin \cite{nakamoto2008bitcoin}, blockchain has since evolved to support various applications beyond cryptocurrencies, including supply chain management, identity verification, and, more recently, Open Science. The core properties of blockchain---immutability, transparency, and decentralization---align closely with the needs of scientific reproducibility, ensuring that research data and methodologies remain verifiable over time.
 
-\subsection{Blockchain Architecture and Components}
-A blockchain consists of blocks linked cryptographically, each containing a set of transactions, a timestamp, and a reference to the previous block \cite{narayanan2016bitcoin}. The consensus mechanism ensures agreement across nodes, with Proof of Work (PoW) and Proof of Stake (PoS) being the most widely adopted models. Hyperledger Iroha, used in this research, follows a permissioned blockchain model, providing a controlled environment for research data provenance.
+\subsection{Origins of Blockchain}
 
-\subsection{Smart Contracts and Reproducibility}
-Smart contracts are self-executing agreements stored on the blockchain. Ethereum introduced the first mainstream implementation of smart contracts, enabling automated, tamper-proof execution of predefined logic \cite{wood2014ethereum}. This research leverages Hyperledger Burrow's Ethereum Virtual Machine (EVM) compatibility to integrate smart contracts, enhancing metadata provenance tracking and experiment validation.
+Here's a revised version of the text with smoother transitions:
 
-\subsection{Blockchain for Scientific Data Integrity}
-Blockchain can prevent tampering with research records by providing cryptographically secured audit trails. Multiple studies \cite{chen2018blockchain, zhang2020scientific} have explored blockchain's role in research integrity, particularly in timestamping scientific experiments and ensuring the immutability of datasets.
+\subsection{Origins of Blockchain}
 
-\section{Decentralized Applications (dApps)}
+Blockchain is a decentralized, immutable ledger technology designed to facilitate secure and transparent transactions within distributed networks. Initially conceptualized for the Bitcoin blockchain \cite{nakamoto2012bitcoin}, this technology has since evolved into a multi-purpose infrastructure underpinning various domains, including finance, supply chain management, and digital identity verification.
 
-Decentralized applications (dApps) operate on blockchain networks, providing functionalities without a central authority. Unlike traditional web applications, dApps leverage smart contracts for backend logic, ensuring transparency and security.
+The development of blockchain, however, did not occur in isolation. The concept of a cryptographically secured chain of blocks predates Bitcoin and draws from earlier research on distributed consensus and cryptographic techniques. A key component in blockchain structures is the Merkle tree, introduced by Ralph Merkle in the 1980s \cite{goos_digital_1988}. These trees enable efficient data integrity verification by organizing hashes in a hierarchical structure, which is crucial for maintaining the integrity of blockchain data.
 
-\subsection{dApps Characteristics and Development}
-dApps consist of three primary layers: the blockchain layer, smart contracts, and the frontend interface. This research employs a Jupyter Notebook interface as the user front-end, calling blockchain functions through the Hyperledger Iroha Python library.
+Building on these foundational cryptographic concepts, Stuart Haber and W. Scott Stornetta proposed a method for securely time-stamping digital documents in 1991 \cite{haber_how_1991}. This innovation was significant because it prevented backdating and tampering, laying the groundwork for immutable records. In 1992, Haber, Stornetta, and Bayer further refined this approach by incorporating Merkle trees into their time-stamping system, thereby improving efficiency and strengthening security \cite{bayer_improving_1993}. These advancements not only contributed to the development of blockchain but also highlighted the potential of decentralized, immutable ledgers for maintaining verifiable records.
 
-\subsection{dApps in Open Science}
-Existing dApps in Open Science, such as DeSci (Decentralized Science) initiatives, aim to improve research accessibility and funding mechanisms \cite{tennant2021decentralized}. Our implementation focuses on decentralized provenance tracking, ensuring that every research step remains verifiable.
-
-\section{InterPlanetary File System (IPFS)}
-
-IPFS is a decentralized storage network that facilitates distributed data sharing. Unlike traditional centralized storage, IPFS uses content-addressable storage, where files are identified by cryptographic hashes \cite{benet2014ipfs}.
-
-\subsection{IPFS and Research Data Storage}
-IPFS ensures persistent and tamper-proof storage of scientific datasets. Instead of relying on a single server, research files are replicated across nodes, improving resilience and accessibility.
-
-\subsection{IPFS Integration with Blockchain}
-While blockchains are inefficient for storing large datasets, IPFS complements them by storing research files while only storing cryptographic hashes on the blockchain. This hybrid approach ensures data integrity while maintaining scalability.
-
-\section{Mathematical Aspects}
-
-The research platform relies on several mathematical principles, including cryptographic hashing, Merkle trees, and consensus algorithms.
-
-\subsection{Cryptographic Hashing}
-Cryptographic hash functions, such as SHA-256, ensure data integrity by generating unique hashes for files and transactions \cite{rivest1992md}. Hashes play a crucial role in verifying research data authenticity.
-
-\subsection{Merkle Trees for Efficient Data Verification}
-Merkle trees facilitate efficient verification of large datasets in blockchain environments \cite{merkle1988digital}. They enable quick consistency checks for research records stored on IPFS.
-
-\subsection{Consensus Mechanisms and Security}
-Different consensus mechanisms impact blockchain security and efficiency. Hyperledger Iroha’s Byzantine Fault Tolerant (BFT) consensus ensures robustness against malicious actors while maintaining system scalability.
-
-\section{Open Science}
-
-Open Science promotes transparency, accessibility, and collaboration in research. Its principles align with the FAIR data guidelines (Findability, Accessibility, Interoperability, and Reusability) \cite{wilkinson2016fair}.
-
-\subsection{Challenges in Scientific Reproducibility}
-The reproducibility crisis has affected multiple disciplines, highlighting issues in data availability and methodological transparency \cite{ioannidis2005reproducibility}. Blockchain-based solutions provide tamper-proof provenance tracking to address these concerns.
-
-\subsection{Existing Open Science Platforms}
-Platforms such as Zenodo, Open Science Framework (OSF), and Figshare provide centralized repositories for research artifacts. However, they lack decentralized validation mechanisms, which this research aims to introduce.
-
-\section{Related Work}
-
-Several studies have explored blockchain applications in Open Science, each offering partial solutions to the reproducibility problem.
-
-\subsection{Blockchain for Scientific Publishing}
-The work of Bartling and Friesike \cite{bartling2014opening} discusses blockchain’s potential in decentralized peer review, while Orvium provides a blockchain-based platform for transparent scientific publishing.
-
-\subsection{Blockchain for Research Provenance}
-Zhang et al. \cite{zhang2018blockchain} introduced a blockchain model for tracking scientific workflows, yet their approach lacked integration with decentralized storage. Our research extends this by leveraging IPFS for long-term data preservation.
-
-\subsection{Gaps in Existing Solutions}
-While prior works have examined individual components, none have provided an integrated platform combining blockchain, IPFS, and ontology-driven metadata for scientific reproducibility. This research fills that gap by designing a holistic Open Science Platform.
-
-\section{Conclusion}
-
-This chapter reviewed blockchain technology, dApps, IPFS, mathematical foundations, and Open Science principles, culminating in an analysis of related works. These discussions establish the foundation for the proposed Open Science Platform, demonstrating how its components contribute to improving research reproducibility.
-
-
+The inherent properties of blockchain—decentralization, immutability, transparency, and security—make it particularly well-suited for addressing challenges in scientific reproducibility. By maintaining an auditable and tamper-proof history of research data and workflows, blockchain ensures long-term verifiability and integrity. This application leverages the foundational principles established by early cryptographic and distributed systems research, demonstrating how blockchain can extend beyond financial transactions to support rigorous scientific inquiry.
 
 \bibliographystyle{plain}
 \bibliography{Bibliography.bib}

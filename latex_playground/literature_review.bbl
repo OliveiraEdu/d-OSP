@@ -1,74 +1,30 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{1}
 
-\bibitem{bartling2014opening}
-Stefan Bartling and Sascha Friesike.
-\newblock {\em Opening Science: The Evolving Guide on How the Web is Changing
-  Research, Collaboration and Scholarly Publishing}.
-\newblock Springer, 2014.
+\bibitem{bayer_improving_1993}
+Dave Bayer, Stuart Haber, and W.~Scott Stornetta.
+\newblock Improving the {Efficiency} and {Reliability} of {Digital}
+  {Time}-{Stamping}.
+\newblock In Renato Capocelli, Alfredo De~Santis, and Ugo Vaccaro, editors,
+  {\em Sequences {II}}, pages 329--334, New York, NY, 1993. Springer New York.
 
-\bibitem{benet2014ipfs}
-Juan Benet.
-\newblock Ipfs - content addressed, versioned, p2p file system.
-\newblock Technical report, Protocol Labs, 2014.
+\bibitem{haber_how_1991}
+Stuart Haber and W.~Scott Stornetta.
+\newblock How to time-stamp a digital document.
+\newblock {\em J. Cryptology}, 3(2):99--111, January 1991.
 
-\bibitem{chen2018blockchain}
-Guanghua Chen, Bing Xu, Manli Lu, and Naixue Xuan.
-\newblock Exploring blockchain technology and its potential applications for
-  education.
-\newblock {\em Journal of Computing in Higher Education}, 30(3):517--532, 2018.
-
-\bibitem{wilkinson2016fair}
-Mark D.~Wilkinson et~al.
-\newblock The fair guiding principles for scientific data management and
-  stewardship.
-\newblock {\em Scientific Data}, 3(160018), 2016.
-
-\bibitem{ioannidis2005reproducibility}
-John P.~A. Ioannidis.
-\newblock Why most published research findings are false.
-\newblock {\em PLoS Medicine}, 2(8):e124, 2005.
-
-\bibitem{merkle1988digital}
+\bibitem{goos_digital_1988}
 Ralph~C. Merkle.
-\newblock A digital signature based on a conventional encryption function.
-\newblock {\em Advances in Cryptology - CRYPTO '87}, pages 369--378, 1988.
+\newblock A {Digital} {Signature} {Based} on a {Conventional} {Encryption}
+  {Function}.
+\newblock In G.~Goos, J.~Hartmanis, D.~Barstow, W.~Brauer, P.~Brinch~Hansen,
+  D.~Gries, D.~Luckham, C.~Moler, A.~Pnueli, G.~Seegmüller, J.~Stoer,
+  N.~Wirth, and Carl Pomerance, editors, {\em Advances in {Cryptology} —
+  {CRYPTO} ’87}, volume 293, pages 369--378. Springer Berlin Heidelberg,
+  Berlin, Heidelberg, 1988.
+\newblock Series Title: Lecture Notes in Computer Science.
 
-\bibitem{nakamoto2008bitcoin}
+\bibitem{nakamoto2012bitcoin}
 Satoshi Nakamoto.
-\newblock {\em Bitcoin: A Peer-to-Peer Electronic Cash System}.
-\newblock 2008.
-
-\bibitem{narayanan2016bitcoin}
-Arvind Narayanan, Joseph Bonneau, Edward Felten, Andrew Miller, and Steven
-  Goldfeder.
-\newblock {\em Bitcoin and Cryptocurrency Technologies}.
-\newblock Princeton University Press, 2016.
-
-\bibitem{rivest1992md}
-Ronald~L. Rivest.
-\newblock The md5 message-digest algorithm.
-\newblock {\em RFC 1321}, 1992.
-
-\bibitem{tennant2021decentralized}
-Jon Tennant, Bjorn Brembs, and Ludo Waltman.
-\newblock Decentralized science: The future of open access.
-\newblock {\em F1000Research}, 10:1156, 2021.
-
-\bibitem{wood2014ethereum}
-Gavin Wood.
-\newblock Ethereum: A secure decentralised generalised transaction ledger.
-\newblock In {\em Ethereum Project Yellow Paper}, 2014.
-
-\bibitem{zhang2020scientific}
-P.~Zhang, G.~Schmidt, and T.~White.
-\newblock Blockchain and scientific data integrity: A new paradigm for open
-  science.
-\newblock {\em Journal of Information Science}, 46(2):195--210, 2020.
-
-\bibitem{zhang2018blockchain}
-Y.~Zhang, R.~Xue, and L.~Liu.
-\newblock Blockchain technology in scientific research: Theoretical
-  foundations, applications, and challenges.
-\newblock {\em Future Generation Computer Systems}, 89:160--175, 2018.
+\newblock Bitcoin: A peer-to-peer electronic cash system, 2009.
 
 \end{thebibliography}
