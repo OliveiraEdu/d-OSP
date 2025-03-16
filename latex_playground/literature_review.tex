@@ -17,6 +17,28 @@
 
 \maketitle
 
+\section{Decentralization and Distributed Systems}
+
+Decentralization and distributed systems are fundamental paradigms that redefine how data is processed, stored, and verified across various domains. Unlike traditional architectures that rely on a centralized entity to manage operations, decentralized systems distribute control among multiple participants. This approach enhances fault tolerance, ensures system resilience, and mitigates risks associated with single points of failure. Distributed systems, in turn, rely on a network of interconnected nodes to collectively maintain and process data, enabling scalability and redundancy. These principles underpin various modern technologies, including blockchain and decentralized file storage networks, which eliminate reliance on centralized intermediaries and foster transparency and security.
+
+\subsection{Decentralization and Distributed Systems the foundation for Blockchain and IPFS}
+
+Blockchain technology embodies decentralization by ensuring that no single entity controls data integrity and transaction validation. Transactions are recorded on a distributed ledger that is maintained collectively by network participants through consensus mechanisms \cite{nakamoto2008bitcoin}. By employing cryptographic techniques and game-theoretic incentives, blockchain achieves trustless verification, preventing unauthorized modifications while ensuring transparency.
+
+Similarly, the InterPlanetary File System (IPFS) leverages distributed system principles to provide decentralized data storage \cite{Benet}. Unlike conventional file storage, which relies on centralized servers, IPFS distributes files across a peer-to-peer network, addressing them based on their content rather than location. This approach not only ensures data persistence but also enhances accessibility by allowing multiple nodes to host and retrieve the same content. In contrast to blockchain, which primarily records transactions and state changes, IPFS enables efficient and scalable storage of large data objects, complementing blockchain’s immutability with a robust storage layer.
+
+Both blockchain and IPFS exemplify the synergy between decentralization and distributed computing. Blockchain secures and verifies data integrity, while IPFS ensures scalable, redundant storage, collectively forming the foundation for decentralized applications, provenance tracking, and secure data sharing.
+
+\subsection{Decentralization and Distributed Systems in the Open Science Platform}
+
+The Open Science Platform integrates decentralized and distributed technologies to enhance scientific transparency, reproducibility, and accessibility. Traditional research infrastructures often suffer from data silos, paywalled access, and risks of data loss or manipulation. By leveraging blockchain and IPFS, the platform ensures that research artifacts remain tamper-proof, permanently accessible, and verifiable.
+
+Blockchain serves as a provenance-tracking mechanism by recording immutable hashes of research data, ensuring the integrity and authenticity of published findings. Researchers can timestamp and digitally sign experimental protocols, datasets, and publications, guaranteeing that any modifications are publicly traceable \cite{bonneau2015sok}. IPFS complements this functionality by hosting scientific artifacts in a decentralized manner, preventing single points of failure and enabling unrestricted access to research outputs.
+
+Through the integration of these technologies, the Open Science Platform mitigates the risks associated with centralized control in research dissemination. Traditional repositories may impose restrictions on data access, suffer from institutional biases, or become unavailable over time. In contrast, a decentralized infrastructure empowers researchers to share knowledge freely, ensuring that scientific progress remains transparent and universally accessible.
+
+Decentralization and distributed systems redefine how data integrity, accessibility, and transparency are maintained across various domains. Blockchain and IPFS provide complementary solutions that enhance security, immutability, and scalability. In the context of Open Science, these technologies eliminate reliance on centralized institutions, ensuring that research artifacts remain verifiable and permanently accessible. By leveraging decentralization, the Open Science Platform fosters an ecosystem of trustless collaboration, where scientific knowledge can be openly shared and validated by the global research community. To fully grasp the impact of these technologies, it is essential to examine their core components, underlying mechanisms, and real-world applications. The following sections explore blockchain fundamentals, decentralized applications (dApps), and IPFS, detailing how each contributes to building resilient and transparent digital infrastructures.
+
 
 
 \section{Blockchain}
@@ -29,34 +51,7 @@ The development of blockchain, however, did not occur in isolation. The concept 
 
 Building on these foundational cryptographic concepts, Stuart Haber and W. Scott Stornetta proposed a method for securely time-stamping digital documents in 1991 \cite{haber_how_1991}. This innovation was significant because it prevented backdating and tampering, laying the groundwork for immutable records. In 1992, Haber, Stornetta, and Bayer further refined this approach by incorporating Merkle trees into their time-stamping system, thereby improving efficiency and strengthening security \cite{bayer_improving_1993}. These advancements not only contributed to the development of blockchain but also highlighted the potential of decentralized, immutable ledgers for maintaining verifiable records.
 
-The inherent properties of blockchain—decentralization, immutability, transparency, and security—make it particularly well-suited for addressing challenges in scientific reproducibility. By maintaining an auditable and tamper-proof history of research data and workflows, blockchain ensures long-term verifiability and integrity. This application leverages the foundational principles established by early cryptographic and distributed systems research, demonstrating how blockchain can extend beyond financial transactions to support rigorous scientific reproducibility.
-
-
-\section*{Contextualizing Decentralization and Distributed Systems}
-
-Decentralization and distributed systems are foundational principles that underpin blockchain technology and its applications. Unlike traditional systems that rely on a central authority to manage operations, decentralized systems distribute control and decision-making across a network of participants. This architecture eliminates single points of failure, enhances security, and fosters transparency.
-
-\subsection*{Decentralization: A Core Principle}
-Decentralization ensures that no single entity has overarching control over the system. In blockchain networks, this is achieved through consensus protocols that govern how nodes validate transactions and maintain the ledger. Decentralized systems can be categorized into levels such as fully centralized, semi-decentralized, or fully decentralized, depending on the degree of control dispersed among participants \cite{nakamoto2008bitcoin}. Fully decentralized systems, such as Bitcoin or Ethereum, operate without middlemen or central authorities, empowering users with full control over their assets and data.
-
-This distribution of control enhances fault tolerance by ensuring that if one node or server fails, others can maintain the network's functionality. For example, decentralized storage systems replicate data across multiple nodes, ensuring redundancy and reliability even in the face of node failures \cite{decentralizedstorage2024}. Additionally, decentralization improves transparency by making all transactions publicly verifiable on an immutable ledger.
-
-\subsection*{Role of Distributed Systems}
-Distributed systems are integral to achieving decentralization in blockchain. These systems rely on a peer-to-peer network where each node maintains a copy of the blockchain ledger. When a transaction occurs, it is broadcast to all nodes, validated through consensus mechanisms, and added to the ledger \cite{lamport1982byzantine}. This architecture ensures that all nodes agree on the current state of the blockchain without requiring a central authority.
-
-Distributed computing also plays a critical role in maintaining real-time synchronization across nodes. Consensus protocols like Proof of Work (PoW) or Proof of Stake (PoS) ensure that only valid transactions are added to the blockchain while resolving conflicts between competing blocks \cite{bonneau2015sok}. This decentralized approach enhances security by making it computationally infeasible for malicious actors to alter historical records.
-
-\subsection*{Absence of Central Authority}
-The absence of a central authority in blockchain networks is a key differentiator from traditional systems. In conventional architectures, a single entity governs operations, creating potential vulnerabilities such as censorship, inefficiency, and single points of failure. Blockchain eliminates these risks by distributing control among participants who collectively validate transactions.
-
-For example:
-\begin{itemize}
-    \item In decentralized finance (DeFi), users interact directly with smart contracts rather than intermediaries like banks or payment processors \cite{defi2024}.
-    \item Decentralized applications (dApps) operate on blockchains without relying on centralized servers or databases. Instead, they use smart contracts to execute transactions securely and transparently \cite{dapps2025}.
-\end{itemize}
-
-This non-centralized structure not only enhances security but also promotes user sovereignty by giving individuals control over their data and assets without needing to trust third parties.
-
+The inherent properties of blockchain—decentralization, immutability, transparency, and security—make it particularly well-suited for addressing challenges in scientific reproducibility. By maintaining an auditable and tamper-proof history of research data and workflows, blockchain ensures long-term verifiability and integrity. This application leverages the foundational principles established by early cryptographic and distributed systems research, demonstrating how blockchain can extend beyond financial transactions to improve scientific research reproducibility.
 
 
 
@@ -70,7 +65,7 @@ Proof of Work (PoW) was first implemented in Bitcoin \cite{nakamoto2012bitcoin} 
 
 \subsubsection{Proof of Stake (PoS)}
 
-Proof of Stake (PoS) is a consensus mechanism designed to address the scalability and energy inefficiencies of Proof of Work (PoW). Its development reflects a paradigm shift in blockchain security and governance, with roots in early cryptocurrency discourse and iterative improvements over time. The concept emerged in 2011 through discussions on the Bitcointalk forum, predating its formal implementation. The first practical application appeared in 2012 with PPCoin (later Peercoin), introduced by Sunny King and Scott Nadal \cite{king2012ppcoin}. While Peercoin pioneered PoS, it adopted a hybrid PoW/PoS model to bootstrap initial security, where PoW mined the first blocks, and PoS secured subsequent ones. This hybrid approach aimed to mitigate Bitcoin’s soaring energy costs, which exceeded \$150,000 daily in 2012. The first pure PoS implementation arrived in 2013 with NXT Blackcoin, which eliminated mining entirely and relied solely on staking. These projects demonstrated that decentralized consensus could be achieved without energy-intensive computations, setting the stage for modern PoS systems like Ethereum 2.0 \cite{buterin2020ghost}and Cardano \cite{kiayias2017ouroboros}.
+Proof of Stake (PoS) is a consensus mechanism designed to address the scalability and energy inefficiencies of Proof of Work (PoW). Its development reflects a paradigm shift in blockchain security and governance, with roots in early cryptocurrency discourse and iterative improvements over time. The concept emerged in 2011 through discussions on the Bitcointalk forum, predating its formal implementation. The first practical application appeared in 2012 with PPCoin (later Peercoin) \cite{king2012ppcoin}. While Peercoin pioneered PoS, it adopted a hybrid PoW/PoS model to bootstrap initial security, where PoW mined the first blocks, and PoS secured subsequent ones. The first pure PoS implementation arrived in 2013 with NXT Blackcoin \cite{benzinga2020pos}, which eliminated mining entirely and relied solely on staking. These projects demonstrated that decentralized consensus could be achieved without energy-intensive computations, setting the stage for modern PoS systems like Ethereum 2.0 \cite{buterin2020ghost}and Cardano \cite{kiayias2017ouroboros}.
 
 
 \subsubsection{Mining and Block Validation}
