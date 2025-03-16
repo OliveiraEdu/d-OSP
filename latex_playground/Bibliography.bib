@@ -1,25 +1,123 @@
-@article{benzinga2020pos,
-  title     = {From Peercoin And NXT To Algorand - A History Of Proof Of Stake},
-  journal   = {Benzinga},
+@standard{std90,
+  key = {STD90},
+  organization = {RFC Editor},
+  title        = {Internet Standard 90},
+  url          = {https://www.rfc-editor.org/info/std90},
+  note         = {Comprises RFC 8259 at the time of writing},
+}
+
+@techreport{rfc8259,
+  author       = {Bray, T., Ed.},
+  title        = {The JavaScript Object Notation (JSON) Data Interchange Format},
+  number       = {RFC 8259},
+  series       = {STD},
+  volume       = {90},
+  publisher    = {RFC Editor},
+  year         = {2017},
+  month        = dec,
+  doi          = {10.17487/RFC8259},
+  url          = {https://www.rfc-editor.org/info/rfc8259}
+}
+
+
+@misc{muratov_yac_2018,
+	title = {{YAC}: {BFT} {Consensus} {Algorithm} for {Blockchain}},
+	shorttitle = {{YAC}},
+	url = {http://arxiv.org/abs/1809.00554},
+	doi = {10.48550/arXiv.1809.00554},
+	abstract = {Consensus in decentralized systems that asynchronously receive events and which are subject to Byzantine faults is a common problem with many real-life applications. Advances in decentralized systems, such as distributed ledger (i.e., blockchain) technology, has only increased the importance of ﬁnding performant and secure solutions to consensus of state machine replication in decentralized systems.},
+	language = {en},
+	urldate = {2025-03-15},
+	publisher = {arXiv},
+	author = {Muratov, Fedor and Lebedev, Andrei and Iushkevich, Nikolai and Nasrulin, Bulat and Takemiya, Makoto},
+	month = sep,
+	year = {2018},
+	note = {arXiv:1809.00554 [cs]},
+	keywords = {Computer Science - Distributed, Parallel, and Cluster Computing},
+	file = {PDF:/home/eduardo/Zotero/storage/IDEBL9S6/Muratov et al. - 2018 - YAC BFT Consensus Algorithm for Blockchain.pdf:application/pdf},
+}
+
+
+@article{kiayias2020ouroboros,
+  author    = {Aggelos Kiayias and Alexander Russell and Bernardo David and Roman Oliynykov},
+  title     = {Ouroboros: The Underlying Science Behind Cardano’s Proof-of-Stake Blockchain},
+  journal   = {Cryptology ePrint Archive},
   year      = {2020},
-  url       = {https://www.benzinga.com/markets/cryptocurrency/20/07/16589995/from-peercoin-and-nxt-to-algorand-a-history-of-proof-of-stake}
+  volume    = {2020},
+  pages     = {352},
+  url       = {https://eprint.iacr.org/2020/352.pdf}
 }
 
-@article{nakamoto2008bitcoin,
-  author    = {Satoshi Nakamoto},
-  title     = {Bitcoin: A Peer-to-Peer Electronic Cash System},
-  year      = {2008},
-  url       = {https://bitcoin.org/bitcoin.pdf}
+
+@article{bayer1993improving,
+  author    = {Dave Bayer and Stuart Haber and W. Scott Stornetta},
+  title     = {Improving the Efficiency and Reliability of Digital Time-Stamping},
+  journal   = {Sequences II: Methods in Communication, Security, and Computer Science},
+  year      = {1993},
+  pages     = {329-334},
+  publisher = {Springer-Verlag},
+  url       = {https://doi.org/10.1007/978-1-4613-9323-8_25}
 }
 
-@article{decentralizedstorage2024,
-  title     = {Blockchain-Based Decentralized Storage Systems for Sustainable Data Self-Sovereignty: A Comparative Study},
-  journal   = {Sustainability},
-  year      = {2024},
-  volume    = {16},
-  number    = {17},
-  pages     = {7671},
-  url       = {https://www.mdpi.com/2071-1050/16/17/7671}
+
+@book{katz2020introduction,
+  author    = {Jonathan Katz and Yehuda Lindell},
+  title     = {Introduction to Modern Cryptography},
+  year      = {2020},
+  publisher = {Chapman and Hall/CRC},
+  edition   = {3rd}
+}
+
+@book{roughgarden2016twentyone,
+  author    = {Tim Roughgarden},
+  title     = {Twenty-One Lectures on Algorithmic Game Theory},
+  year      = {2016},
+  publisher = {Cambridge University Press},
+  url       = {https://www.cambridge.org/files/3914/7629/0049/Algorithmic_Game_Theory.pdf}
+}
+
+@book{coulouris2011distributed,
+  author    = {George Coulouris and Jean Dollimore and Tim Kindberg and Jonathon Blair},
+  title     = {Distributed Systems: Concepts and Design},
+  year      = {2011},
+  publisher = {Addison-Wesley}
+}
+
+@article{decentralizedstorage2021,
+  author    = {M. Sookhak and H. Talebian and M. W. Storer},
+  title     = {Decentralized Storage Systems: A Survey},
+  journal   = {ACM Computing Surveys},
+  year      = {2021},
+  volume    = {54},
+  number    = {6},
+  pages     = {1--36}
+}
+
+@article{attanasi2020hybrid,
+  author    = {Alessio Maria Attanasi and Maria Grazia Pazienza},
+  title     = {Hybrid Blockchains: Survey and Classification},
+  journal   = {Information},
+  year      = {2020},
+  volume    = {11},
+  number    = {4},
+  pages     = {222},
+  doi       = {10.3390/info11040222}
+}
+
+@inproceedings{cachin2016architecture,
+  author    = {Christian Cachin},
+  title     = {Architecture of the Hyperledger Blockchain Fabric},
+  booktitle = {Workshop on Distributed Cryptocurrencies and Consensus Ledgers (DCCL)},
+  year      = {2016},
+  url       = {https://eprint.iacr.org/2016/994.pdf}
+}
+
+@misc{benet2014ipfs,
+  author    = {Juan Benet},
+  title     = {IPFS - Content Addressed, Versioned, P2P File System},
+  year      = {2014},
+  howpublished = {White paper},
+  url       = {https://ipfs.io/ipfs/QmR7GSQM93Cx5eAg6a6GJ1SM1rdmkr3gAqVRd748JhGTbt}
 }
 
 @article{lamport1982byzantine,
@@ -33,58 +131,27 @@
   doi       = {10.1145/357172.357176}
 }
 
-@article{bonneau2015sok,
-  author    = {Joseph Bonneau and Andrew Miller and Jeremy Clark and Arvind Narayanan and Joshua A. Kroll and Edward W. Felten},
-  title     = {SoK: Research Perspectives and Challenges for Bitcoin and Cryptocurrencies},
-  journal   = {Proceedings - IEEE Symposium on Security and Privacy},
-  year      = {2015},
-  pages     = {104--121},
-  doi       = {10.1109/SP.2015.14}
+@incollection{goos_digital_1988,
+  address   = {Berlin, Heidelberg},
+  title     = {A Digital Signature Based on a Conventional Encryption Function},
+  volume    = {293},
+  booktitle = {Advances in Cryptology — CRYPTO '87},
+  publisher = {Springer Berlin Heidelberg},
+  author    = {Ralph C. Merkle},
+  year      = {1988},
+  doi       = {10.1007/3-540-48184-2_32},
+  pages     = {369--378}
 }
 
-@misc{defi2024,
-  title     = {What Is Decentralized Finance (DeFi) and How Does It Work?},
-  author    = {Investopedia Staff},
-  year      = {2024},
-  url       = {https://www.investopedia.com/decentralized-finance-defi-5113835}
-}
-
-@misc{dapps2025,
-  title     = {Decentralized Applications (dApps): Definition, Uses, Pros and Cons},
-  author    = {Investopedia Staff},
-  year      = {2025},
-  url       = {https://www.investopedia.com/terms/d/decentralized-applications-dapps.asp}
-}
-
-
-
-@article{yac2018bft,
-  author    = {Makoto Takemiya and Kenta Tanaka},
-  title     = {YAC: BFT Consensus Algorithm for Blockchain},
-  journal   = {arXiv preprint arXiv:1809.00554},
-  year      = {2018},
-  url       = {https://arxiv.org/pdf/1809.00554.pdf}
-}
-
-
-@article{bonneau2015sok,
-  author    = {Joseph Bonneau and Andrew Miller and Jeremy Clark and Arvind Narayanan and Joshua A. Kroll and Edward W. Felten},
-  title     = {SoK: Research Perspectives and Challenges for Bitcoin and Cryptocurrencies},
-  journal   = {Proceedings - IEEE Symposium on Security and Privacy},
-  year      = {2015},
-  pages     = {104--121},
-  doi       = {10.1109/SP.2015.14}
-}
-
-@article{lamport1982byzantine,
-  author    = {Leslie Lamport and Robert Shostak and Marshall Pease},
-  title     = {The Byzantine Generals Problem},
-  journal   = {ACM Transactions on Programming Languages and Systems},
-  volume    = {4},
-  number    = {3},
-  year      = {1982},
-  pages     = {382--401},
-  doi       = {10.1145/357172.357176}
+@article{haber_how_1991,
+  author    = {Stuart Haber and W. Scott Stornetta},
+  title     = {How to Time-Stamp a Digital Document},
+  journal   = {Journal of Cryptology},
+  volume    = {3},
+  number    = {2},
+  year      = {1991},
+  pages     = {99--111},
+  doi       = {10.1007/BF00196791}
 }
 
 @inproceedings{castro1999practical,
@@ -95,15 +162,29 @@
   pages     = {173--186}
 }
 
-@article{pmc10649370,
-  title     = {Grouped Multilayer Practical Byzantine Fault Tolerance Algorithm: A Practical Byzantine Fault Tolerance Consensus Algorithm Optimized for Digital Asset Trading Scenarios},
-  journal   = {PMC Articles},
-  year      = {2023},
-  month     = {November}
+@misc{nakamoto2008bitcoin,
+  author    = {Satoshi Nakamoto},
+  title     = {Bitcoin: A Peer-to-Peer Electronic Cash System},
+  year      = {2008},
+  url       = {https://bitcoin.org/bitcoin.pdf}
 }
 
+@misc{king2012ppcoin,
+  author    = {Sunny King and Scott Nadal},
+  title     = {PPCoin: Peer-to-Peer Crypto-Currency with Proof-of-Stake},
+  year      = {2012},
+  howpublished = {White paper},
+  url       = {https://peercoin.net/assets/paper/peercoin-paper.pdf}
+}
 
-
+@article{bonneau2015sok,
+  author    = {Joseph Bonneau and Andrew Miller and Jeremy Clark and Arvind Narayanan and Joshua A. Kroll and Edward W. Felten},
+  title     = {SoK: Research Perspectives and Challenges for Bitcoin and Cryptocurrencies},
+  journal   = {Proceedings - IEEE Symposium on Security and Privacy},
+  year      = {2015},
+  pages     = {104--121},
+  doi       = {10.1109/SP.2015.14}
+}
 
 @book{narayanan2016bitcoin,
   author    = {Arvind Narayanan and Joseph Bonneau and Edward Felten and Andrew Miller and Steven Goldfeder},
@@ -112,16 +193,6 @@
   year      = {2016}
 }
 
-
-@inproceedings{king2012ppcoin,
-  author    = {Sunny King and Scott Nadal},
-  title     = {PPCoin: Peer-to-Peer Crypto-Currency with Proof-of-Stake},
-  year      = {2012},
-  howpublished = {White paper},
-  url       = {https://peercoin.net/assets/paper/peercoin-paper.pdf}
-}
-
-
 @article{buterin2020ghost,
   author    = {Vitalik Buterin et al.},
   title     = {Combining GHOST and Casper},
@@ -129,427 +200,20 @@
   year      = {2020}
 }
 
-@inproceedings{kiayias2017ouroboros,
-  author    = {Aggelos Kiayias and Alexander Russell and Bernardo David and Roman Oliynykov},
-  title     = {Ouroboros: A Provably Secure Proof-of-Stake Blockchain Protocol},
-  booktitle = {Proceedings of the 37th Annual International Cryptology Conference (CRYPTO)},
-  year      = {2017},
-  pages     = {357--388},
-  publisher = {Springer},
-  doi       = {10.1007/978-3-319-63688-7_12}
-}
-
-
-
-@inproceedings{bayer_improving_1993,
-	address = {New York, NY},
-	title = {Improving the {Efficiency} and {Reliability} of {Digital} {Time}-{Stamping}},
-	isbn = {978-1-4613-9323-8},
-	abstract = {To establish that a document was created after a given moment in time, it is necessary to report events that could not have been predicted before they happened. To establish that a document was created before a given moment in time, it is necessary to cause an event based on the document, which can be observed by others. Cryptographic hash functions can be used both to report events succinctly, and to cause events based on documents without revealing their contents. Haber and Stornetta have proposed two schemes for digital time-stamping which rely on these principles [HaSt 91].},
-	booktitle = {Sequences {II}},
-	publisher = {Springer New York},
-	author = {Bayer, Dave and Haber, Stuart and Stornetta, W. Scott},
-	editor = {Capocelli, Renato and De Santis, Alfredo and Vaccaro, Ugo},
-	year = {1993},
-	pages = {329--334},
-}
-
-@article{haber_how_1991,
-	title = {How to time-stamp a digital document},
-	volume = {3},
-	issn = {0933-2790, 1432-1378},
-	url = {http://link.springer.com/10.1007/BF00196791},
-	doi = {10.1007/BF00196791},
-	language = {en},
-	number = {2},
-	urldate = {2025-03-15},
-	journal = {J. Cryptology},
-	author = {Haber, Stuart and Stornetta, W. Scott},
-	month = jan,
-	year = {1991},
-	pages = {99--111}
-}
-
-
-@incollection{goos_digital_1988,
-	address = {Berlin, Heidelberg},
-	title = {A {Digital} {Signature} {Based} on a {Conventional} {Encryption} {Function}},
-	volume = {293},
-	isbn = {978-3-540-18796-7 978-3-540-48184-3},
-	url = {http://link.springer.com/10.1007/3-540-48184-2_32},
-	urldate = {2025-03-15},
-	booktitle = {Advances in {Cryptology} — {CRYPTO} ’87},
-	publisher = {Springer Berlin Heidelberg},
-	author = {Merkle, Ralph C.},
-	editor = {Goos, G. and Hartmanis, J. and Barstow, D. and Brauer, W. and Brinch Hansen, P. and Gries, D. and Luckham, D. and Moler, C. and Pnueli, A. and Seegmüller, G. and Stoer, J. and Wirth, N. and Pomerance, Carl},
-	year = {1988},
-	doi = {10.1007/3-540-48184-2_32},
-	note = {Series Title: Lecture Notes in Computer Science},
-	pages = {369--378}
-	}
-
-
-
-@article{munafo2017manifesto,
-  author = {Munafò, Marcus R. and Nosek, Brian A. and Bishop, Dorothy V. M. and Button, Katherine S. and Chambers, Christopher D. and Sert, Neysan and Ioannidis, John P. A.},
-  title = {A Manifesto for Reproducible Science},
-  journal = {Nature Human Behaviour},
-  volume = {1},
-  pages = {0021},
-  year = {2017},
-  doi = {10.1038/s41562-016-0021}
+@misc{benzinga2020pos,
+  title     = {From Peercoin and NXT to Algorand - A History of Proof of Stake},
+  howpublished = {Online article},
+  journal   = {Benzinga},
+  year      = {2020},
+  url       = {https://www.benzinga.com/markets/cryptocurrency/20/07/16589995/from-peercoin-and-nxt-to-algorand-a-history-of-proof-of-stake}
 }
 
 @article{wilkinson2016fair,
-  author = {Wilkinson, Mark D. and Dumontier, Michel and Aalbersberg, IJsbrand Jan and Appleton, Gabrielle and Axton, Myles and Baak, Arie and Blomberg, Niklas and Boiten, Jan-Willem and da Silva Santos, Luiz Bonino and Bourne, Philip E.},
-  title = {The FAIR Guiding Principles for Scientific Data Management and Stewardship},
-  journal = {Scientific Data},
-  volume = {3},
-  pages = {160018},
-  year = {2016},
-  doi = {10.1038/sdata.2016.18}
-}
-
-@article{baker2016reproducibility,
-  author = {Baker, Monya},
-  title = {1,500 Scientists Lift the Lid on Reproducibility},
-  journal = {Nature},
-  volume = {533},
-  number = {7604},
-  pages = {452-454},
-  year = {2016},
-  doi = {10.1038/533452a}
-}
-
-@article{peng2011reproducible,
-  author = {Peng, Roger D.},
-  title = {Reproducible Research in Computational Science},
-  journal = {Science},
-  volume = {334},
-  number = {6060},
-  pages = {1226-1227},
-  year = {2011},
-  doi = {10.1126/science.1213847}
-}
-
-@article{stark2018before,
-  author = {Stark, Philip B.},
-  title = {Before Reproducibility Must Come Preproducibility},
-  journal = {Nature},
-  volume = {557},
-  number = {7705},
-  pages = {613},
-  year = {2018},
-  doi = {10.1038/d41586-018-05256-0}
-}
-
-
-@inproceedings{oliveira2023blockchain,
-  author    = {Eduardo Oliveira and Rafael Z. Frantz and Carlos Molina-Jim{\'e}nez and Thiago Heck and Sandro Sawicki and Fabricia Roos-Frantz},
-  title     = {On the Use of Blockchain Technology to Improve the Reproducibility of Preclinical Research Experiments},
-  booktitle = {Proceedings of the 25th International Conference on Enterprise Information Systems (ICEIS 2023)},
-  year      = {2023},
-  pages     = {173--179},
-  publisher = {SciTePress},
-  organization = {INSTICC},
-  doi       = {10.5220/0011851700003467},
-  isbn      = {978-989-758-648-4},
-}
-
-@article{hevner2004design,
-  author    = {Hevner, Alan R. and March, Salvatore T. and Park, Jinsoo and Ram, Sudha},
-  title     = {Design Science in Information Systems Research},
-  journal   = {MIS Quarterly},
-  volume    = {28},
-  number    = {1},
-  pages     = {75--105},
-  year      = {2004}
-}
-
-@article{percie2020arrive,
-  author    = {Percie du Sert, Nathalie and Ahluwalia, Amrita and Alam, Syed and Avey, Mark T. and Baker, Monya and Browne, Warren J. and others},
-  title     = {Reporting animal research: Explanation and elaboration for the ARRIVE guidelines 2.0},
-  journal   = {PLOS Biology},
-  volume    = {18},
-  number    = {7},
-  pages     = {e3000411},
-  year      = {2020},
-  doi       = {10.1371/journal.pbio.3000411}
-}
-
-
-@article {Pagen71,
-	author = {Page, Matthew J and McKenzie, Joanne E and Bossuyt, Patrick M and Boutron, Isabelle and Hoffmann, Tammy C and Mulrow, Cynthia D and Shamseer, Larissa and Tetzlaff, Jennifer M and Akl, Elie A and Brennan, Sue E and Chou, Roger and Glanville, Julie and Grimshaw, Jeremy M and Hr{\'o}bjartsson, Asbj{\o}rn and Lalu, Manoj M and Li, Tianjing and Loder, Elizabeth W and Mayo-Wilson, Evan and McDonald, Steve and McGuinness, Luke A and Stewart, Lesley A and Thomas, James and Tricco, Andrea C and Welch, Vivian A and Whiting, Penny and Moher, David},
-	title = {The PRISMA 2020 statement: an updated guideline for reporting systematic reviews},
-	volume = {372},
-	elocation-id = {n71},
-	year = {2021},
-	doi = {10.1136/bmj.n71},
-	publisher = {BMJ Publishing Group Ltd},
-	URL = {https://www.bmj.com/content/372/bmj.n71},
-	eprint = {https://www.bmj.com/content/372/bmj.n71.full.pdf},
-	journal = {BMJ}
-}
-
-
-
-@article{foster_open_2017,
-	title = {Open {Science} {Framework} ({OSF})},
-	volume = {105},
-	issn = {1558-9439, 1536-5050},
-	url = {http://jmla.pitt.edu/ojs/jmla/article/view/88},
-	doi = {10.5195/jmla.2017.88},
-	abstract = {The Open Science Framework (OSF) is a free, open source, research workflow web application developed and maintained by the Center for Open Science (COS).},
-	number = {2},
-	urldate = {2023-09-02},
-	journal = {jmla},
-	author = {Foster, Erin D. and Deardorff, Ariel},
-	month = apr,
-	year = {2017}
-}
-
-
-@article{freedman_economics_2015,
-	title = {The {Economics} of {Reproducibility} in {Preclinical} {Research}},
-	volume = {13},
-	issn = {1545-7885},
-	url = {https://dx.plos.org/10.1371/journal.pbio.1002165},
-	doi = {10.1371/journal.pbio.1002165},
-	language = {en},
-	number = {6},
-	urldate = {2022-11-13},
-	journal = {PLOS Biology},
-	author = {Freedman, Leonard P. and Cockburn, Iain M. and Simcoe, Timothy S.},
-	month = jun,
-	year = {2015},
-	pages = {e1002165},
-	}
-
-@article{vasilevsky_reproducibility_2013,
-	title = {On the reproducibility of science: unique identification of research resources in the biomedical literature},
-	volume = {1},
-	issn = {2167-8359},
-	shorttitle = {On the reproducibility of science},
-	url = {https://peerj.com/articles/148},
-	doi = {10.7717/peerj.148},
-	language = {en},
-	urldate = {2022-11-13},
-	journal = {PeerJ},
-	author = {Vasilevsky, Nicole A. and Brush, Matthew H. and Paddock, Holly and Ponting, Laura and Tripathy, Shreejoy J. and LaRocca, Gregory M. and Haendel, Melissa A.},
-	month = sep,
-	year = {2013},
-	pages = {e148},
-	}
-
-@article{landis_call_2012,
-	title = {A call for transparent reporting to optimize the predictive value of preclinical research},
-	volume = {490},
-	issn = {0028-0836, 1476-4687},
-	url = {http://www.nature.com/articles/nature11556},
-	doi = {10.1038/nature11556},
-	language = {en},
-	number = {7419},
-	urldate = {2022-11-13},
-	journal = {Nature},
-	author = {Landis, Story C. and Amara, Susan G. and Asadullah, Khusru and Austin, Chris P. and Blumenstein, Robi and Bradley, Eileen W. and Crystal, Ronald G. and Darnell, Robert B. and Ferrante, Robert J. and Fillit, Howard and Finkelstein, Robert and Fisher, Marc and Gendelman, Howard E. and Golub, Robert M. and Goudreau, John L. and Gross, Robert A. and Gubitz, Amelie K. and Hesterlee, Sharon E. and Howells, David W. and Huguenard, John and Kelner, Katrina and Koroshetz, Walter and Krainc, Dimitri and Lazic, Stanley E. and Levine, Michael S. and Macleod, Malcolm R. and McCall, John M. and Moxley III, Richard T. and Narasimhan, Kalyani and Noble, Linda J. and Perrin, Steve and Porter, John D. and Steward, Oswald and Unger, Ellis and Utz, Ursula and Silberberg, Shai D.},
-	month = oct,
-	year = {2012},
-	pages = {187--191},
-	}
-
-@article{svenson_animals_2022,
-	title = {Animals, quality and the pursuit of relevance},
-	volume = {15},
-	issn = {1754-8403, 1754-8411},
-	url = {https://journals.biologists.com/dmm/article/15/10/dmm049775/277008/Animals-quality-and-the-pursuit-of-relevance},
-	doi = {10.1242/dmm.049775},
-		language = {en},
-	number = {10},
-	urldate = {2022-11-13},
-	journal = {Disease Models \& Mechanisms},
-	author = {Svenson, Karen L. and Krasinski, Stephen D. and Ellis, Michael and Rosenthal, Nadia and Liu, Edison T. and Fasman, Kenneth H.},
-	month = oct,
-	year = {2022},
-	pages = {dmm049775},
-	}
-
-@article{begley_reproducibility_2015,
-	title = {Reproducibility in {Science}: {Improving} the {Standard} for {Basic} and {Preclinical} {Research}},
-	volume = {116},
-	issn = {0009-7330, 1524-4571},
-	shorttitle = {Reproducibility in {Science}},
-	url = {https://www.ahajournals.org/doi/10.1161/CIRCRESAHA.114.303819},
-	doi = {10.1161/CIRCRESAHA.114.303819},
-	language = {en},
-	number = {1},
-	urldate = {2022-11-13},
-	journal = {Circulation Research},
-	author = {Begley, C. Glenn and Ioannidis, John P.A.},
-	month = jan,
-	year = {2015},
-	pages = {116--126},
-	}
-
-@article{ioannidis_increasing_2014,
-	title = {Increasing value and reducing waste in research design, conduct, and analysis},
-	volume = {383},
-	issn = {01406736},
-	url = {https://linkinghub.elsevier.com/retrieve/pii/S0140673613622278},
-	doi = {10.1016/S0140-6736(13)62227-8},
-	language = {en},
-	number = {9912},
-	urldate = {2022-11-13},
-	journal = {The Lancet},
-	author = {Ioannidis, John P A and Greenland, Sander and Hlatky, Mark A and Khoury, Muin J and Macleod, Malcolm R and Moher, David and Schulz, Kenneth F and Tibshirani, Robert},
-	month = jan,
-	year = {2014},
-	pages = {166--175},
-	}
-
-@article{manolagas_reproducibility_2014,
-	title = {Reproducibility of {Results} in {Preclinical} {Studies}: {A} {Perspective} {From} the {Bone} {Field}: {REPRODUCIBILITY} {OF} {RESULTS} {IN} {PRECLINICAL} {STUDIES}},
-	volume = {29},
-	issn = {08840431},
-	shorttitle = {Reproducibility of {Results} in {Preclinical} {Studies}},
-	url = {https://onlinelibrary.wiley.com/doi/10.1002/jbmr.2293},
-	doi = {10.1002/jbmr.2293},
-	language = {en},
-	number = {10},
-	urldate = {2022-11-13},
-	journal = {Journal of Bone and Mineral Research},
-	author = {Manolagas, Stavros C and Kronenberg, Henry M},
-	month = oct,
-	year = {2014},
-	pages = {2131--2140},
-	}
-
-@article{curtis_experimental_2015,
-	title = {Experimental design and analysis and their reporting: new guidance for publication in {BJP}: {Editorial}},
-	volume = {172},
-	issn = {00071188},
-	shorttitle = {Experimental design and analysis and their reporting},
-	url = {https://onlinelibrary.wiley.com/doi/10.1111/bph.12856},
-	doi = {10.1111/bph.12856},
-	language = {en},
-	number = {14},
-	urldate = {2022-11-13},
-	journal = {British Journal of Pharmacology},
-	author = {Curtis, Michael J and Bond, Richard A and Spina, Domenico and Ahluwalia, Amrita and Alexander, Stephen P A and Giembycz, Mark A and Gilchrist, Annette and Hoyer, Daniel and Insel, Paul A and Izzo, Angelo A and Lawrence, Andrew J and MacEwan, David J and Moon, Lawrence D F and Wonnacott, Sue and Weston, Arthur H and McGrath, John C},
-	month = jul,
-	year = {2015},
-	pages = {3461--3471},
-	}
-
-@article{collins_policy_2014,
-	title = {Policy: {NIH} plans to enhance reproducibility},
-	volume = {505},
-	issn = {0028-0836, 1476-4687},
-	shorttitle = {Policy},
-	url = {https://www.nature.com/articles/505612a},
-	doi = {10.1038/505612a},
-	language = {en},
-	number = {7485},
-	urldate = {2022-11-13},
-	journal = {Nature},
-	author = {Collins, Francis S. and Tabak, Lawrence A.},
-	month = jan,
-	year = {2014},
-	pages = {612--613},
-	}
-
-@article{freedman_impact_2015,
-	title = {The {Impact} of {Preclinical} {Irreproducibility} on {Drug} {Development}},
-	volume = {97},
-	issn = {00099236},
-	url = {https://onlinelibrary.wiley.com/doi/10.1002/cpt.9},
-	doi = {10.1002/cpt.9},
-	language = {en},
-	number = {1},
-	urldate = {2022-11-13},
-	journal = {Clinical Pharmacology \& Therapeutics},
-	author = {Freedman, Lp and Gibson, Mc},
-	month = jan,
-	year = {2015},
-	pages = {16--18},
-}
-
-@article{george_raising_2015,
-	title = {Raising the {Bar} for {Reproducible} {Science} at the {U}.{S}. {Environmental} {Protection} {Agency} {Office} of {Research} and {Development}},
-	volume = {145},
-	issn = {1096-6080, 1096-0929},
-	url = {https://academic.oup.com/toxsci/article-lookup/doi/10.1093/toxsci/kfv020},
-	doi = {10.1093/toxsci/kfv020},
-	language = {en},
-	number = {1},
-	urldate = {2022-11-13},
-	journal = {Toxicological Sciences},
-	author = {George, Barbara Jane and Sobus, Jon R. and Phelps, Lara P. and Rashleigh, Brenda and Simmons, Jane Ellen and Hines, Ronald N. and {the Community of Practice for Statistics Guidance Documents Working Groups}},
-	month = may,
-	year = {2015},
-	pages = {16--22},
-	}
-
-@article{PercieduSertNathalie2020RarE,
-author = {Percie du Sert, Nathalie and Ahluwalia, Amrita and Alam, Sabina and Avey, Marc T. and Baker, Monya and Browne, William J. and Clark, Alejandra and Cuthill, Innes C. and Dirnagl, Ulrich and Emerson, Michael and Garner, Paul and Holgate, Stephen T. and Howells, David W. and Hurst, Viki and Karp, Natasha A. and Lazic, Stanley E. and Lidster, Katie and MacCallum, Catriona J. and Macleod, Malcolm and Pearl, Esther J. and Petersen, Ole H. and Rawle, Frances and Reynolds, Penny and Rooney, Kieron and Sena, Emily S. and Silberberg, Shai D. and Steckler, Thomas and Würbel, Hanno},
-title = {Reporting animal research: Explanation and elaboration for the ARRIVE guidelines 2.0},
-journal = {PLoS biology},
-volume = {18},
-pages = {e3000411--e3000411},
-number = {7},
-year = {2020},
-}
-
-@techreport{FIPS180-4,
-   author = {NIST},
-   title = {Secure Hash Standard (SHS)},
-   institution = {U.S. Department of Commerce},
-   address= {Gaithersburg, MD.},
-   number = {Federal Information Processing Standards Publications (FIPS PUBS) 180-4},
-   DOI = {10.6028/nist.fips.180-4},
-   year = {2015},
-}
-
-
-@INPROCEEDINGS{Moore99,
-  AUTHOR =       {R. Moore and J. Lopes},
-  TITLE =        {Paper templates},
-  BOOKTITLE =    {International Conference on Template Production (TEMPLATE)},
-  YEAR =         "1999",
-  publisher =    "SCITEPRESS",
-}
-
-@BOOK{Siraj,
-  AUTHOR =       {Siraj Raval},
-  TITLE =        "Decentralized Applications",
-  PUBLISHER =    "O'Reilly Media, Inc.",
-  YEAR =         "2016",
-  edition =      "1st",
-}
-
-%EO - Atualizar a referência
-@BOOK{DanielGoranArnd,
-  AUTHOR =       {Daniel Hellwig, Goran Karlic, Arnd Huchzermeier},
-  TITLE =        {Build Your Own Blockchain},
-  PUBLISHER =    {Springer Nature B.V.},
-  YEAR =         {2020},
-  edition =      {1st},
-}
-
-
-@misc{Szabo-1994,
-    title       =   {Smart Contracts},
-    author      =   {Nick Szabo},
-    note        =   {Last accessed on 28 Jan 2021},
-    url = {https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html},
-    year        =   {1994},
-    month       =   {January}
-}
-
-@misc{Benet,
-    title       =   {{IPFS - Content Addressed, Versioned, P2P File System (DRAFT 3)}},
-    author      =   {Juan Benet},
-    note        =   {Last accessed on 30 Nov 2022},
-    url = {https://docs.ipfs.tech/concepts/further-reading/academic-papers/#ipfs-content-addressed-versioned-p2p-file-system},
-    year        =   {2022},
-    month       =   {November}
+  author    = {Mark D. Wilkinson and Michel Dumontier and IJsbrand Jan Aalbersberg and Gabrielle Appleton and Myles Axton and others},
+  title     = {The FAIR Guiding Principles for Scientific Data Management and Stewardship},
+  journal   = {Scientific Data},
+  volume    = {3},
+  pages     = {160018},
+  year      = {2016},
+  doi       = {10.1038/sdata.2016.18}
 }

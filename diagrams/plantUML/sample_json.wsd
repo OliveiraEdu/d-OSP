@@ -1,0 +1,30 @@
+@startjson
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "foaf": "http://xmlns.com/foaf/0.1/"
+    },
+    "@graph": [
+        {
+            "@type": "foaf:Person",
+            "foaf:name": "Zealous Ptolemy",
+            "foaf:mbox": "zealous_ptolemy@email.com",
+            "foaf:organization": {
+                "@type": "foaf:Organization",
+                "foaf:name": "Ashkelon Academic College"
+            },
+            "schema:identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "ORCID",
+                "value": "6153-7096-0437-X"
+            },
+            "foaf:holdsAccount": {
+                "schema:identifier": "zealous_ptolemy@test",
+                "schema:roleName": "reviewer",
+                "schema:publicKey": "ca4c00c0a43bbd2caf070ab780886906ebb70e2c3d975972ccab4e15c01f33bd"
+            },
+            "schema:linked_project": "02226@test"
+        }
+    ]
+}
+@endjson

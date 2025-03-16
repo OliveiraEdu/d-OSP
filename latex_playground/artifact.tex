@@ -80,7 +80,15 @@ The extended services enhance the platform's features by improving file and meta
 
 \subsection{System Components and Interactions in the Open Science Platform}
 
-The Open Science Platform consists of multiple interconnected components, each serving a distinct role in ensuring secure, verifiable, and reproducible research data management. The primary components include Jupyter Server, the blockchain Hyperledger Iroha v1 and the InterPlanetary File System (IPFS). Each of these elements are encapsulated within a Docker container to provide modularity, ease of deployment and reproducibility. The implementation level architecture is presented in figure~\ref{fig:c4_component_diagram}.
+The Open Science Platform consists of multiple interconnected components, each serving a distinct role in ensuring secure, verifiable, and reproducible research data management. The primary components include Jupyter Server, the blockchain Hyperledger Iroha v1 and the InterPlanetary File System (IPFS). Each of these elements are encapsulated within a Docker container to provide modularity, ease of deployment and reproducibility. The implementation level architecture is presented in figure~\ref{fig:c4_component_diagram}, the network topology is depicted in figure~\ref{fig:docker_ntw_topology}
+
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.98\textwidth, keepaspectratio]{network_topology.eps}
+      \caption{Docker network topology}
+      \label{fig:docker_ntw_topology}
+\end{figure}
 
 \subsubsection{Jupyter Server}
 The Jupyter Server acts as the primary interface for users interacting with the platform. This component provides a Python kernel for the execution environment that integrates the Iroha v1 Library, the IPFS HTTPS client, Apache Tika for metadata handling, and the Woosh Indexer and Search system. It enables users to:
@@ -339,7 +347,7 @@ By reusing the \texttt{account} entity, the Open Science Platform ER model ensur
 
 \subsection{The role of metadata and ontologies in the Open Science Platform}
 
-Metadata plays a crucial role in both the \texttt{Account} and \texttt{Project} classes within the Open Science platform. It is used to capture and represent essential information about the user and the research project, providing context and structure to their respective data. This metadata is stored as a  JSON object, following established semantic web standards and leveraging ontologies to enhance data interoperability and accessibility.
+Metadata plays a crucial role in both the \texttt{Account} and \texttt{Project} classes within the Open Science platform. It is used to capture and represent essential information about the user and the research project, providing context and structure to their respective data. This metadata is stored as a  JSON object \cite{rfc8259}, following established semantic web standards and leveraging ontologies to enhance data interoperability and accessibility.
 
 
 \subsection{Selected Ontologies}
@@ -403,7 +411,7 @@ The user metadata is structured using two primary ontologies: Friend of a Friend
 
 The FOAF ontology is used to describe personal and organizational attributes of users within the platform. It provides well-defined properties such as \texttt{foaf:name} for the user’s full name, \texttt{foaf:mbox} for email addresses, and \texttt{foaf:organization} for institutional affiliations. By leveraging FOAF, the platform ensures standardized representation of user identities and their associations, facilitating integration with other systems that utilize FOAF-based user profiles.
 
-Schema.org complements FOAF by enriching the user metadata with structured properties that enhance discoverability and machine readability. The \texttt{schema:identifier} property, for instance, is used to store unique user identifiers such as ORCID, ensuring compatibility with global researcher identification systems. Additionally, \texttt{schema:roleName} captures the user’s role within the platform (e.g., reviewer, publisher), while \texttt{schema:publicKey} stores cryptographic keys associated with the user’s account. The \texttt{schema:linked\_project} property establishes connections between users and their associated research projects, enabling efficient metadata retrieval and knowledge graph construction as exhibited in Figure~\ref{jsonld:user}, the JSON-LD structure represents the project metadata in the Open Science platform.
+Schema.org complements FOAF by enriching the user metadata with structured properties that enhance discoverability and machine readability. The \texttt{schema:identifier} property, for instance, is used to store unique user identifiers such as ORCID, ensuring compatibility with global researcher identification systems. Additionally, \texttt{schema:roleName} captures the user’s role within the platform (e.g., reviewer, publisher), while \texttt{schema:publicKey} stores cryptographic keys associated with the user’s account. The \texttt{schema:linked\_project} property establishes connections between users and their associated research projects, enabling efficient metadata retrieval and knowledge graph construction as exhibited in Figures~\ref{jsonld:user} and ~\ref{fig:user_metadata}, the JSON-LD structure represents the project metadata in the Open Science platform.
 
 
 
@@ -444,6 +452,16 @@ Schema.org complements FOAF by enriching the user metadata with structured prope
 \end{figure}
 
 
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.98\textwidth, keepaspectratio]{user_metadata.eps}
+      \caption{User metadata}
+      \label{fig:user_metadata}
+\end{figure}
+
+
+
+
 
 By combining FOAF and Schema.org, the Open Science platform ensures that user metadata is both human-readable and machine-actionable, promoting seamless integration with external research infrastructures and fostering an interoperable ecosystem for Open Science.
 
@@ -471,7 +489,7 @@ The metadata for the \texttt{Project} entity provides essential details about th
       \caption{Project Metadata Attributes}
 \end{table}
 
-The following JSON structure describes the metadata for a \texttt{Project} in the Open Science platform as shown in Figure~\ref{jsonld:project}.
+The following JSON structure describes the metadata for a \texttt{Project} in the Open Science platform as shown in Figures~\ref{jsonld:project} and ~\ref{fig:project_metadata}.
 
 
 \begin{figure}[h]
@@ -522,6 +540,15 @@ The following JSON structure describes the metadata for a \texttt{Project} in th
 \end{figure}
 
 
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.98\textwidth, keepaspectratio]{project_metadata.eps}
+      \caption{Project metadata}
+      \label{fig:project_metadata}
+\end{figure}
+
+
+
 This metadata not only captures the essential details of the project but also ensures that these details are linked to the user's profile, making it easier to track the relationship between users and their associated research efforts.
 
 
@@ -551,7 +578,7 @@ In the Open Science platform, metadata for users, projects, and files are stored
 
 The representation of a user's account on the blockchain contains the standard Iroha v1 attributes for the account entity, such as the unique account identifier, domain information, and quorum for consensus. Additionally, the \texttt{json\_data} attribute references both the project to which the user is linked and the user's metadata CID (Content Identifier) stored on IPFS. This blockchain-based approach ensures that the user’s information remains immutable and traceable, which is critical for maintaining the integrity of research data.
 
-The JSON structure describes the account details for a user in the Open Science platform as shown in Figure~\ref{fig:user_blockchain_representation}.
+Figures~\ref{fig:user_blockchain_representation} and ~\ref{fig:user_bct_rep}presents the JSON structure for account details for a user in the Iroha v1 blockchain.
 
 \begin{figure}[h]
       \centering
@@ -572,11 +599,22 @@ The JSON structure describes the account details for a user in the Open Science 
     \end{verbatim}
 \end{figure}
 
+
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.98\textwidth, keepaspectratio]{user_bct_representation.eps}
+      \caption{User blockchain representation}
+      \label{fig:user_bct_rep}
+\end{figure}
+
+
+
 \subsection{Project Account}
 
 The project account representation similarly uses a blockchain-based structure to store project-related metadata. Each project is identified by a unique account ID, along with the project’s domain and quorum. The project metadata is linked to the user and includes important information about files associated with the project, including their CID references on IPFS. This ensures that the project data is linked to the user’s account and that all files and metadata related to the project are securely stored on the blockchain for provenance tracking.
 
-The JSON structure describes the account details for a user in the Open Science platform as shown in Figure~\ref{fig:project_blockchain_representation}.
+The JSON structure describes the account details for a user in the Open Science platform as shown in Figures~\ref{fig:project_blockchain_representation} and ~\ref{fig:project_bct_rep}.
 
 
 \begin{figure}[h]
@@ -600,6 +638,14 @@ The JSON structure describes the account details for a user in the Open Science 
         }
     }
     \end{verbatim}
+\end{figure}
+
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.98\textwidth, keepaspectratio]{project_bct_representation.eps}
+      \caption{Project blockchain representation}
+      \label{fig:project_bct_rep}
 \end{figure}
 
 

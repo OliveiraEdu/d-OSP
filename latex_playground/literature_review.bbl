@@ -1,17 +1,24 @@
 \begin{thebibliography}{10}
 
-\bibitem{bayer_improving_1993}
-Dave Bayer, Stuart Haber, and W.~Scott Stornetta.
-\newblock Improving the {Efficiency} and {Reliability} of {Digital}
-  {Time}-{Stamping}.
-\newblock In Renato Capocelli, Alfredo De~Santis, and Ugo Vaccaro, editors,
-  {\em Sequences {II}}, pages 329--334, New York, NY, 1993. Springer New York.
+\bibitem{benzinga2020pos}
+From peercoin and nxt to algorand - a history of proof of stake.
+\newblock Online article, 2020.
 
-\bibitem{Benet}
+\bibitem{attanasi2020hybrid}
+Alessio~Maria Attanasi and Maria~Grazia Pazienza.
+\newblock Hybrid blockchains: Survey and classification.
+\newblock {\em Information}, 11(4):222, 2020.
+
+\bibitem{bayer1993improving}
+Dave Bayer, Stuart Haber, and W.~Scott Stornetta.
+\newblock Improving the efficiency and reliability of digital time-stamping.
+\newblock {\em Sequences II: Methods in Communication, Security, and Computer
+  Science}, pages 329--334, 1993.
+
+\bibitem{benet2014ipfs}
 Juan Benet.
-\newblock {IPFS - Content Addressed, Versioned, P2P File System (DRAFT 3)},
-  November 2022.
-\newblock Last accessed on 30 Nov 2022.
+\newblock Ipfs - content addressed, versioned, p2p file system.
+\newblock White paper, 2014.
 
 \bibitem{bonneau2015sok}
 Joseph Bonneau, Andrew Miller, Jeremy Clark, Arvind Narayanan, Joshua~A. Kroll,
@@ -21,11 +28,22 @@ Joseph Bonneau, Andrew Miller, Jeremy Clark, Arvind Narayanan, Joshua~A. Kroll,
 \newblock {\em Proceedings - IEEE Symposium on Security and Privacy}, pages
   104--121, 2015.
 
+\bibitem{cachin2016architecture}
+Christian Cachin.
+\newblock Architecture of the hyperledger blockchain fabric.
+\newblock In {\em Workshop on Distributed Cryptocurrencies and Consensus
+  Ledgers (DCCL)}, 2016.
+
 \bibitem{castro1999practical}
 Miguel Castro and Barbara Liskov.
 \newblock Practical byzantine fault tolerance.
 \newblock In {\em Proceedings of the Third Symposium on Operating Systems
   Design and Implementation (OSDI)}, pages 173--186, 1999.
+
+\bibitem{coulouris2011distributed}
+George Coulouris, Jean Dollimore, Tim Kindberg, and Jonathon Blair.
+\newblock {\em Distributed Systems: Concepts and Design}.
+\newblock Addison-Wesley, 2011.
 
 \bibitem{buterin2020ghost}
 Vitalik~Buterin et~al.
@@ -35,18 +53,23 @@ Vitalik~Buterin et~al.
 \bibitem{haber_how_1991}
 Stuart Haber and W.~Scott Stornetta.
 \newblock How to time-stamp a digital document.
-\newblock {\em J. Cryptology}, 3(2):99--111, January 1991.
+\newblock {\em Journal of Cryptology}, 3(2):99--111, 1991.
 
-\bibitem{kiayias2017ouroboros}
+\bibitem{katz2020introduction}
+Jonathan Katz and Yehuda Lindell.
+\newblock {\em Introduction to Modern Cryptography}.
+\newblock Chapman and Hall/CRC, 3rd edition, 2020.
+
+\bibitem{kiayias2020ouroboros}
 Aggelos Kiayias, Alexander Russell, Bernardo David, and Roman Oliynykov.
-\newblock Ouroboros: A provably secure proof-of-stake blockchain protocol.
-\newblock In {\em Proceedings of the 37th Annual International Cryptology
-  Conference (CRYPTO)}, pages 357--388. Springer, 2017.
+\newblock Ouroboros: The underlying science behind cardano’s proof-of-stake
+  blockchain.
+\newblock {\em Cryptology ePrint Archive}, 2020:352, 2020.
 
 \bibitem{king2012ppcoin}
 Sunny King and Scott Nadal.
 \newblock Ppcoin: Peer-to-peer crypto-currency with proof-of-stake.
-\newblock 2012.
+\newblock White paper, 2012.
 
 \bibitem{lamport1982byzantine}
 Leslie Lamport, Robert Shostak, and Marshall Pease.
@@ -56,19 +79,20 @@ Leslie Lamport, Robert Shostak, and Marshall Pease.
 
 \bibitem{goos_digital_1988}
 Ralph~C. Merkle.
-\newblock A {Digital} {Signature} {Based} on a {Conventional} {Encryption}
-  {Function}.
-\newblock In G.~Goos, J.~Hartmanis, D.~Barstow, W.~Brauer, P.~Brinch~Hansen,
-  D.~Gries, D.~Luckham, C.~Moler, A.~Pnueli, G.~Seegmüller, J.~Stoer,
-  N.~Wirth, and Carl Pomerance, editors, {\em Advances in {Cryptology} —
-  {CRYPTO} ’87}, volume 293, pages 369--378. Springer Berlin Heidelberg,
-  Berlin, Heidelberg, 1988.
-\newblock Series Title: Lecture Notes in Computer Science.
+\newblock A digital signature based on a conventional encryption function.
+\newblock In {\em Advances in Cryptology — CRYPTO '87}, volume 293, pages
+  369--378. Springer Berlin Heidelberg, Berlin, Heidelberg, 1988.
+
+\bibitem{muratov_yac_2018}
+Fedor Muratov, Andrei Lebedev, Nikolai Iushkevich, Bulat Nasrulin, and Makoto
+  Takemiya.
+\newblock {YAC}: {BFT} {Consensus} {Algorithm} for {Blockchain}, September
+  2018.
+\newblock arXiv:1809.00554 [cs].
 
 \bibitem{nakamoto2008bitcoin}
 Satoshi Nakamoto.
-\newblock Bitcoin: A peer-to-peer electronic cash system.
-\newblock 2008.
+\newblock Bitcoin: A peer-to-peer electronic cash system, 2008.
 
 \bibitem{narayanan2016bitcoin}
 Arvind Narayanan, Joseph Bonneau, Edward Felten, Andrew Miller, and Steven
@@ -77,9 +101,14 @@ Arvind Narayanan, Joseph Bonneau, Edward Felten, Andrew Miller, and Steven
   Introduction}.
 \newblock Princeton University Press, 2016.
 
-\bibitem{yac2018bft}
-Makoto Takemiya and Kenta Tanaka.
-\newblock Yac: Bft consensus algorithm for blockchain.
-\newblock {\em arXiv preprint arXiv:1809.00554}, 2018.
+\bibitem{roughgarden2016twentyone}
+Tim Roughgarden.
+\newblock {\em Twenty-One Lectures on Algorithmic Game Theory}.
+\newblock Cambridge University Press, 2016.
+
+\bibitem{decentralizedstorage2021}
+M.~Sookhak, H.~Talebian, and M.~W. Storer.
+\newblock Decentralized storage systems: A survey.
+\newblock {\em ACM Computing Surveys}, 54(6):1--36, 2021.
 
 \end{thebibliography}

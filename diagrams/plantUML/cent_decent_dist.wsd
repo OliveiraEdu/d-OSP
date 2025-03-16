@@ -1,82 +1,77 @@
 @startuml
-skinparam linetype ortho
-skinparam node {
-  BackgroundColor White
-  BorderColor Black
-}
+'skinparam linetype ortho ' Removing ortho lines
 
 title Centralized, Decentralized, and Distributed Systems
 
 ' Centralized System
 rectangle "Centralized" {
-    node CentralServer as CS {
-        CS : Central Authority
-    }
-    node Client1 as C1
-    node Client2 as C2
-    node Client3 as C3
-    node Client4 as C4
-    node Client5 as C5
+  circle (60) as CS  ' Central Server - larger circle
+  circle (20) as C1
+  circle (20) as C2
+  circle (20) as C3
+  circle (20) as C4
+  circle (20) as C5
+  circle (20) as C6
+  circle (20) as C7
+  circle (20) as C8
+  circle (20) as C9
+  circle (20) as C10
 
-    CS -down-> C1
-    CS -down-> C2
-    CS -down-> C3
-    CS -right-> C4
-    CS -right-> C5
+  CS -- C1
+  CS -- C2
+  CS -- C3
+  CS -- C4
+  CS -- C5
+  CS -- C6
+  CS -- C7
+  CS -- C8
+  CS -- C9
+  CS -- C10
 }
 
 ' Decentralized System
 rectangle "Decentralized" {
-    node Node1 as N1 {
-        N1 : Node 1 (Leader)
-    }
-    node Node2 as N2 {
-        N2 : Node 2 (Leader)
-    }
-    node Node3 as N3 {
-        N3 : Node 3 (Leader)
-    }
-    
-    node SubNode11 as SN11
-    node SubNode12 as SN12
-    node SubNode21 as SN21
-    node SubNode22 as SN22
-    node SubNode31 as SN31
-    
-    N1 -down-> SN11
-    N1 -down-> SN12
-    
-    N2 -down-> SN21
-    N2 -down-> SN22
-    
-    N3 -down-> SN31
-    
-    N1 -right-> N2 : Peer-to-peer connection
-    N2 -right-> N3 : Peer-to-peer connection
+  circle (40) as CN1  ' Core Node - medium circle
+  circle (40) as CN2
+  circle (40) as CN3
+
+  circle (20) as CN11
+  circle (20) as CN12
+  circle (20) as CN21
+  circle (20) as CN22
+  circle (20) as CN31
+  circle (20) as CN32
+
+  CN1 -- CN11
+  CN1 -- CN12
+  CN2 -- CN21
+  CN2 -- CN22
+  CN3 -- CN31
+  CN3 -- CN32
+
+  CN1 -- CN2
+  CN2 -- CN3
+  CN3 -- CN1
 }
 
 ' Distributed System
 rectangle "Distributed" {
-    node DistributedNode1 as DN1 {
-        DN1 : Node 1 
-    }
-    
-    node DistributedNode2 as DN2 {
-        DN2 : Node 2 
-    }
-    
-    node DistributedNode3 as DN3 {
-        DN3 : Node 3 
-    }
-    
-    node DistributedNode4 as DN4 {
-        DN4 : Node 4 
-    }
-    
-    DN1 -- DN2 : Connection
-    DN1 -- DN3 : Connection
-    
-    DN2 -- DN3 : Connection
-    
+  circle (30) as DN1  ' Distributed Node - smaller than central, but uniform
+  circle (30) as DN2
+  circle (30) as DN3
+  circle (30) as DN4
+  circle (30) as DN5
+  circle (30) as DN6
+  circle (30) as DN7
+
+  DN1 -- DN2
+  DN1 -- DN3
+  DN2 -- DN3
+  DN2 -- DN4
+  DN3 -- DN5
+  DN3 -- DN6
+  DN4 -- DN7
+  DN5 -- DN7
+  DN6 -- DN7
 }
 @enduml

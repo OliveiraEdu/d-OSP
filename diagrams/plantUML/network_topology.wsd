@@ -1,0 +1,15 @@
+@startuml
+skinparam monochrome true
+
+title Docker Network Topology
+nwdiag {
+  network iroha {
+      address = "172.18.x.x/16"
+
+      iroha [address = "172.18.0.1"];
+      postgres [address = "172.18.0.2", shape = database];
+      IPFS [address = "172.18.0.3", shape = folder];
+      Jupyter [address = "172.18.0.4"];
+  }
+}
+@enduml
