@@ -1,8 +1,10 @@
 \begin{thebibliography}{10}
 
-\bibitem{benzinga2020pos}
-From peercoin and nxt to algorand - a history of proof of stake.
-\newblock Online article, 2020.
+\bibitem{alharby2017blockchain}
+Maher Alharby and Aad van Moorsel.
+\newblock Blockchain-based smart contracts: A systematic mapping study.
+\newblock {\em Computer Science \& Information Technology}, pages 125--140,
+  2017.
 
 \bibitem{attanasi2020hybrid}
 Alessio~Maria Attanasi and Maria~Grazia Pazienza.
@@ -56,6 +58,11 @@ George Coulouris, Jean Dollimore, Tim Kindberg, and Jonathon Blair.
 \newblock {\em Distributed Systems: Concepts and Design}.
 \newblock Addison-Wesley, 2011.
 
+\bibitem{benzinga2020pos}
+Osher Deri.
+\newblock From peercoin and nxt to algorand - a history of proof of stake.
+\newblock misc article, 2020.
+
 \bibitem{buterin2020ghost}
 Vitalik~Buterin et~al.
 \newblock Combining ghost and casper.
@@ -66,6 +73,21 @@ C.F. Fan, Y.~Chen, R.~Chen, H.~Zhou, and L.~Chen.
 \newblock Analysis of elliptic curve cryptography for blockchain.
 \newblock {\em Future Generation Computer Systems}, 89:735--743, 2018.
 
+\bibitem{hyperledger2018fabric}
+Hyperledger Foundation.
+\newblock Hyperledger fabric now supports ethereum, 2018.
+\newblock Accessed: 2025-03-17.
+
+\bibitem{hyperledger2019burrow}
+Hyperledger Foundation.
+\newblock Burrow - the boring blockchain, 2019.
+\newblock Accessed: 2025-03-17.
+
+\bibitem{hyperledger2020iroha}
+Hyperledger Foundation.
+\newblock Iroha special instructions dsl, 2020.
+\newblock Accessed: 2025-03-17.
+
 \bibitem{haber_how_1991}
 Stuart Haber and W.~Scott Stornetta.
 \newblock How to time-stamp a digital document.
@@ -75,6 +97,11 @@ Stuart Haber and W.~Scott Stornetta.
 D.~Hankerson, A.J. Menezes, and S.A. Vanstone.
 \newblock {\em Guide to elliptic curve cryptography}.
 \newblock Springer Science \& Business Media, 2006.
+
+\bibitem{hyperledger_iroha}
+{Hyperledger Foundation}.
+\newblock {\em Hyperledger Iroha Documentation}, 2025.
+\newblock Accessed: 2025-03-17.
 
 \bibitem{johnson2001elliptic}
 D.~Johnson, A.~Menezes, and S.~Vanstone.
@@ -135,6 +162,11 @@ V.S. Miller.
 \newblock Use of elliptic curves in cryptography.
 \newblock {\em Advances in cryptology—CRYPTO’85}, pages 417--426, 1986.
 
+\bibitem{monax2020burrow}
+Monax.
+\newblock Hyperledger burrow, 2020.
+\newblock Accessed: 2025-03-17.
+
 \bibitem{muratov_yac_2018}
 Fedor Muratov, Andrei Lebedev, Nikolai Iushkevich, Bulat Nasrulin, and Makoto
   Takemiya.
@@ -152,6 +184,12 @@ A.~Narayanan, J.~Bonneau, E.~Felten, A.~Miller, and S.~Goldfeder.
   introduction}.
 \newblock Princeton University Press, 2016.
 
+\bibitem{pilehchiha2022improving}
+Sina Pilehchiha.
+\newblock Improving reproducibility in smart contract research.
+\newblock Master's thesis, Concordia University, 2022.
+\newblock Accessed: 2025-03-17.
+
 \bibitem{rivest1978method}
 R.L. Rivest, A.~Shamir, and L.~Adleman.
 \newblock A method for obtaining digital signatures and public-key
@@ -163,15 +201,31 @@ Tim Roughgarden.
 \newblock {\em Twenty-One Lectures on Algorithmic Game Theory}.
 \newblock Cambridge University Press, 2016.
 
+\bibitem{simplilearn2022smart}
+Simplilearn.
+\newblock What is a smart contract in blockchain and how does it work?, 2022.
+\newblock Accessed: 2025-03-17.
+
 \bibitem{decentralizedstorage2021}
 M.~Sookhak, H.~Talebian, and M.~W. Storer.
 \newblock Decentralized storage systems: A survey.
 \newblock {\em ACM Computing Surveys}, 54(6):1--36, 2021.
 
+\bibitem{szabo1996smart}
+Nick Szabo.
+\newblock Smart contracts: Building blocks for digital markets.
+\newblock {\em EXTROPY: The Journal of Transhumanist Thought}, 16, 1996.
+
+\bibitem{szabo1997formalizing}
+Nick Szabo.
+\newblock Formalizing and securing relationships on public networks.
+\newblock {\em First Monday}, 2(9), 1997.
+
 \bibitem{wood2014ethereum}
-G.~Wood.
+Gavin Wood.
 \newblock Ethereum: A secure decentralised generalised transaction ledger.
-\newblock 2014.
+\newblock Technical Report Yellow Paper, Ethereum Foundation, 2014.
+\newblock Accessed: 2025-03-17.
 
 \bibitem{wu2018blockchain}
 Y.~Wu, X.~Zheng, J.~Ren, K.~Zhang, and Y.~Shen.

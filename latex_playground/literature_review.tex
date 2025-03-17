@@ -55,7 +55,6 @@ Building on these foundational cryptographic concepts, Stuart Haber and W. Scott
 The inherent properties of blockchain—decentralization, immutability, transparency, and security—make it particularly well-suited for addressing challenges in scientific reproducibility. By maintaining an auditable and tamper-proof history of research data and workflows, blockchain ensures long-term verifiability and integrity. This application leverages the foundational principles established by early cryptographic and distributed systems research, demonstrating how blockchain can extend beyond financial transactions to improve scientific research reproducibility.
 
 
-
 \subsection{Public and Private Blockchains}
 
 Blockchains can be classified based on their accessibility and governance models, primarily into public and private blockchains.
@@ -119,12 +118,12 @@ The YAC (Yet Another Consensus) algorithm ensures Byzantine Fault Tolerance (BFT
 \subsubsection{Fault Tolerance}
 The network must satisfy:
 \[
-  n \geq 3f + 1
+    n \geq 3f + 1
 \]
 Where:
 \begin{itemize}
-  \item \( n \): Total number of nodes in the network.
-  \item \( f \): Maximum number of Byzantine (malicious or faulty) nodes tolerated.
+    \item \( n \): Total number of nodes in the network.
+    \item \( f \): Maximum number of Byzantine (malicious or faulty) nodes tolerated.
 \end{itemize}
 
 This ensures that the network can tolerate up to \( f \) Byzantine nodes while still achieving consensus.
@@ -132,21 +131,22 @@ This ensures that the network can tolerate up to \( f \) Byzantine nodes while s
 \subsubsection{Supermajority Agreement}
 For a block to be finalized, a supermajority of nodes must agree on its hash:
 \[
-  v > \frac{2n}{3}
+    v > \frac{2n}{3}
 \]
 Where:
 \begin{itemize}
-  \item \( v \): Number of votes for the block hash.
-  \item \( n \): Total number of nodes.
+    \item \( v \): Number of votes for the block hash.
+    \item \( n \): Total number of nodes.
 \end{itemize}
 
 This condition guarantees both safety and liveness in consensus.
 
-\susubsection{Voting Process}
+\subsubsection{Voting Process}
+
 The voting process involves two phases:
 \begin{enumerate}
-  \item \textbf{Proposal Phase}: A leader node proposes a block hash.
-  \item \textbf{Voting Phase}: Nodes vote on the proposed hash, and votes are collected until the supermajority condition is met.
+    \item \textbf{Proposal Phase}: A leader node proposes a block hash.
+    \item \textbf{Voting Phase}: Nodes vote on the proposed hash, and votes are collected until the supermajority condition is met.
 \end{enumerate}
 
 \subsubsection{Finality}
@@ -165,11 +165,12 @@ This mechanism ensures that only the rightful owner of an asset can authorize it
 Several cryptographic ciphers and standards are widely used in blockchain implementations to provide strong security guarantees:
 
 \begin{itemize}
-  \item \textbf{RSA (Rivest-Shamir-Adleman):} A traditional public key cryptosystem based on the difficulty of factoring large prime numbers \cite{rivest1978method}. While RSA is widely used in general cryptographic applications, its key sizes are relatively large compared to modern alternatives, making it less practical for blockchain applications.
-  \item \textbf{Elliptic Curve Cryptography (ECC):} A more efficient asymmetric cryptography scheme that provides the same level of security as RSA but with significantly smaller key sizes \cite{miller1986use}. This efficiency makes ECC the preferred choice for blockchain applications.
-  \item \textbf{ECDSA (Elliptic Curve Digital Signature Algorithm):} A widely adopted digital signature scheme based on ECC, used in Bitcoin and Ethereum to secure transactions \cite{johnson2001elliptic}.
-  \item \textbf{EdDSA (Edwards-curve Digital Signature Algorithm):} A modern alternative to ECDSA, known for its faster signature verification and improved security properties \cite{bernstein2012high}. It is used in newer blockchain protocols like Monero.
-  \item \textbf{X25519:} A secure key exchange protocol based on Curve25519, commonly used in cryptographic operations for secure communication in blockchain applications \cite{langley2016curve25519}.
+    \item \textbf{RSA (Rivest-Shamir-Adleman):} A traditional public key cryptosystem based on the difficulty of factoring large prime numbers \cite{rivest1978method}. While RSA is widely used in general cryptographic applications, its key sizes are relatively large compared to modern alternatives, making it less practical for blockchain applications.
+    \item \textbf{Elliptic Curve Cryptography (ECC):} A more efficient asymmetric cryptography scheme that provides the same level of security as RSA but with significantly smaller key sizes \cite{miller1986use}. This efficiency makes ECC the preferred choice for blockchain applications.
+    \item \textbf{ECDSA (Elliptic Curve Digital Signature Algorithm):} A widely adopted digital signature scheme based on ECC, used in Bitcoin and Ethereum to secure transactions \cite{johnson2001elliptic}.
+    \item \textbf{EdDSA (Edwards-curve Digital Signature Algorithm):} A modern alternative to ECDSA, known for its faster signature verification and improved security properties \cite{bernstein2012high}. It is used in newer blockchain protocols like Monero.
+    \item \textbf{X25519:} A secure key exchange protocol based on Curve25519, commonly used in cryptographic operations for secure communication in blockchain applications \cite{langley2016curve25519}.
+    \item \textbf{Ed25519 with SHA-3:} Hyperledger Iroha natively employs Ed25519, a variant of EdDSA, combined with SHA-3 for enhanced security. This cryptographic combination ensures efficient key pair generation, digital signatures, and verification processes tailored to Iroha’s permissioned blockchain environment \cite{hyperledger_iroha}.
 \end{itemize}
 
 \subsubsection{Elliptic Curve Cryptography (ECC) in Blockchain}
@@ -177,12 +178,13 @@ Elliptic Curve Cryptography (ECC) is a type of public key cryptography that leve
 
 In blockchain systems, ECC is primarily used for:
 \begin{enumerate}
-  \item \textbf{Digital Signatures:} ECC enables the creation of compact and secure digital signatures, such as those used in Bitcoin (ECDSA) and newer blockchain protocols (EdDSA) \cite{johnson2001elliptic, bernstein2012high}.
-  \item \textbf{Key Pair Generation:} Blockchain wallets generate private-public key pairs using elliptic curves, ensuring that users can securely sign and verify transactions \cite{wu2018blockchain}.
-  \item \textbf{Scalability and Efficiency:} Due to its small key size and lower computational requirements, ECC allows blockchain networks to process transactions more efficiently while maintaining security \cite{fan2018analysis}.
+    \item \textbf{Digital Signatures:} ECC enables the creation of compact and secure digital signatures, such as those used in Bitcoin (ECDSA) and newer blockchain protocols (EdDSA and Ed25519) \cite{johnson2001elliptic, bernstein2012high}.
+    \item \textbf{Key Pair Generation:} Blockchain wallets generate private-public key pairs using elliptic curves, ensuring that users can securely sign and verify transactions \cite{wu2018blockchain}. For example, Hyperledger Iroha specifically utilizes Ed25519 with SHA-3 for key pair generation, providing robust security and efficiency \cite{hyperledger_iroha}.
+    \item \textbf{Scalability and Efficiency:} Due to its small key size and lower computational requirements, ECC allows blockchain networks to process transactions more efficiently while maintaining security \cite{fan2018analysis}.
 \end{enumerate}
 
-Bitcoin, for instance, uses the \textbf{secp256k1} elliptic curve for key generation and signing, which provides a 256-bit key length offering high security with lower processing overhead compared to traditional cryptographic methods \cite{brown2010standards}.
+Bitcoin, for instance, uses the \textbf{secp256k1} elliptic curve for key generation and signing, which provides a 256-bit key length offering high security with lower processing overhead compared to traditional cryptographic methods \cite{brown2010standards}. In contrast, Hyperledger Iroha leverages Ed25519 with SHA-3 to ensure a balance between performance, security, and compatibility with modern cryptographic best practices \cite{hyperledger_iroha}.
+
 
 
 \section{Introduction to Smart Contracts}
