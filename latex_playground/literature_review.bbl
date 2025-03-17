@@ -35,6 +35,17 @@ Joseph Bonneau, Andrew Miller, Jeremy Clark, Arvind Narayanan, Joshua~A. Kroll,
 \newblock {\em Proceedings - IEEE Symposium on Security and Privacy}, pages
   104--121, 2015.
 
+\bibitem{Borgman2012}
+C.~L. Borgman.
+\newblock The conundrum of sharing data.
+\newblock {\em Journal of the American Society for Information Science and
+  Technology}, 63(1):105--118, 2012.
+
+\bibitem{Boulton2015}
+G.~Boulton, L.~Allen, and M.~H. Brooks.
+\newblock Open science: A new era for the future of research.
+\newblock {\em Science}, 348(6237):29--32, 2015.
+
 \bibitem{brown2010standards}
 D.R. Brown.
 \newblock Standards for efficient cryptography (sec) 1: Elliptic curve
@@ -141,6 +152,12 @@ A.~Langley, M.~Hamburg, and M.~Naehrig.
 \newblock Curve25519: new diffie-hellman speed records.
 \newblock {\em International Association for Cryptologic Research}, 2016.
 
+\bibitem{Leonelli2016}
+S.~Leonelli.
+\newblock The practices and politics of open science.
+\newblock In {\em Springer Handbook of Science and Technology Studies}, pages
+  1--19. Springer, 2016.
+
 \bibitem{menezes1996handbook}
 Alfred~J. Menezes, Paul~C. van Oorschot, and Scott~A. Vanstone.
 \newblock {\em Handbook of Applied Cryptography}.
@@ -190,6 +207,12 @@ A.~Narayanan, J.~Bonneau, E.~Felten, A.~Miller, and S.~Goldfeder.
   introduction}.
 \newblock Princeton University Press, 2016.
 
+\bibitem{Nosek2015}
+B.~A. Nosek, M.~E. Ebersole, K.~M. DeHaven, and D.~L. Mellor.
+\newblock The preregistration revolution.
+\newblock {\em Proceedings of the National Academy of Sciences}, 112(5):1--8,
+  2015.
+
 \bibitem{nist2012fips}
 National~Institute of~Standards and Technology.
 \newblock Fips pub 180-4: Secure hash standard (shs), 2012.
@@ -200,6 +223,11 @@ Sina Pilehchiha.
 \newblock Improving reproducibility in smart contract research.
 \newblock Master's thesis, Concordia University, 2022.
 \newblock Accessed: 2025-03-17.
+
+\bibitem{Piwowar2011}
+H.~A. Piwowar.
+\newblock Who shares? who doesn't?
+\newblock {\em PLoS ONE}, 6(7):e18657, 2011.
 
 \bibitem{rivest1978method}
 R.L. Rivest, A.~Shamir, and L.~Adleman.
