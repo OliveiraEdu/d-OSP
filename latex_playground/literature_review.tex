@@ -119,12 +119,12 @@ The YAC (Yet Another Consensus) algorithm ensures Byzantine Fault Tolerance (BFT
 \subsubsection{Fault Tolerance}
 The network must satisfy:
 \[
-    n \geq 3f + 1
+  n \geq 3f + 1
 \]
 Where:
 \begin{itemize}
-    \item \( n \): Total number of nodes in the network.
-    \item \( f \): Maximum number of Byzantine (malicious or faulty) nodes tolerated.
+  \item \( n \): Total number of nodes in the network.
+  \item \( f \): Maximum number of Byzantine (malicious or faulty) nodes tolerated.
 \end{itemize}
 
 This ensures that the network can tolerate up to \( f \) Byzantine nodes while still achieving consensus.
@@ -132,12 +132,12 @@ This ensures that the network can tolerate up to \( f \) Byzantine nodes while s
 \subsubsection{Supermajority Agreement}
 For a block to be finalized, a supermajority of nodes must agree on its hash:
 \[
-    v > \frac{2n}{3}
+  v > \frac{2n}{3}
 \]
 Where:
 \begin{itemize}
-    \item \( v \): Number of votes for the block hash.
-    \item \( n \): Total number of nodes.
+  \item \( v \): Number of votes for the block hash.
+  \item \( n \): Total number of nodes.
 \end{itemize}
 
 This condition guarantees both safety and liveness in consensus.
@@ -145,8 +145,8 @@ This condition guarantees both safety and liveness in consensus.
 \susubsection{Voting Process}
 The voting process involves two phases:
 \begin{enumerate}
-    \item \textbf{Proposal Phase}: A leader node proposes a block hash.
-    \item \textbf{Voting Phase}: Nodes vote on the proposed hash, and votes are collected until the supermajority condition is met.
+  \item \textbf{Proposal Phase}: A leader node proposes a block hash.
+  \item \textbf{Voting Phase}: Nodes vote on the proposed hash, and votes are collected until the supermajority condition is met.
 \end{enumerate}
 
 \subsubsection{Finality}
@@ -165,11 +165,11 @@ This mechanism ensures that only the rightful owner of an asset can authorize it
 Several cryptographic ciphers and standards are widely used in blockchain implementations to provide strong security guarantees:
 
 \begin{itemize}
-    \item \textbf{RSA (Rivest-Shamir-Adleman):} A traditional public key cryptosystem based on the difficulty of factoring large prime numbers \cite{rivest1978method}. While RSA is widely used in general cryptographic applications, its key sizes are relatively large compared to modern alternatives, making it less practical for blockchain applications.
-    \item \textbf{Elliptic Curve Cryptography (ECC):} A more efficient asymmetric cryptography scheme that provides the same level of security as RSA but with significantly smaller key sizes \cite{miller1986use}. This efficiency makes ECC the preferred choice for blockchain applications.
-    \item \textbf{ECDSA (Elliptic Curve Digital Signature Algorithm):} A widely adopted digital signature scheme based on ECC, used in Bitcoin and Ethereum to secure transactions \cite{johnson2001elliptic}.
-    \item \textbf{EdDSA (Edwards-curve Digital Signature Algorithm):} A modern alternative to ECDSA, known for its faster signature verification and improved security properties \cite{bernstein2012high}. It is used in newer blockchain protocols like Monero.
-    \item \textbf{X25519:} A secure key exchange protocol based on Curve25519, commonly used in cryptographic operations for secure communication in blockchain applications \cite{langley2016curve25519}.
+  \item \textbf{RSA (Rivest-Shamir-Adleman):} A traditional public key cryptosystem based on the difficulty of factoring large prime numbers \cite{rivest1978method}. While RSA is widely used in general cryptographic applications, its key sizes are relatively large compared to modern alternatives, making it less practical for blockchain applications.
+  \item \textbf{Elliptic Curve Cryptography (ECC):} A more efficient asymmetric cryptography scheme that provides the same level of security as RSA but with significantly smaller key sizes \cite{miller1986use}. This efficiency makes ECC the preferred choice for blockchain applications.
+  \item \textbf{ECDSA (Elliptic Curve Digital Signature Algorithm):} A widely adopted digital signature scheme based on ECC, used in Bitcoin and Ethereum to secure transactions \cite{johnson2001elliptic}.
+  \item \textbf{EdDSA (Edwards-curve Digital Signature Algorithm):} A modern alternative to ECDSA, known for its faster signature verification and improved security properties \cite{bernstein2012high}. It is used in newer blockchain protocols like Monero.
+  \item \textbf{X25519:} A secure key exchange protocol based on Curve25519, commonly used in cryptographic operations for secure communication in blockchain applications \cite{langley2016curve25519}.
 \end{itemize}
 
 \subsubsection{Elliptic Curve Cryptography (ECC) in Blockchain}
@@ -177,12 +177,67 @@ Elliptic Curve Cryptography (ECC) is a type of public key cryptography that leve
 
 In blockchain systems, ECC is primarily used for:
 \begin{enumerate}
-    \item \textbf{Digital Signatures:} ECC enables the creation of compact and secure digital signatures, such as those used in Bitcoin (ECDSA) and newer blockchain protocols (EdDSA) \cite{johnson2001elliptic, bernstein2012high}.
-    \item \textbf{Key Pair Generation:} Blockchain wallets generate private-public key pairs using elliptic curves, ensuring that users can securely sign and verify transactions \cite{wu2018blockchain}.
-    \item \textbf{Scalability and Efficiency:} Due to its small key size and lower computational requirements, ECC allows blockchain networks to process transactions more efficiently while maintaining security \cite{fan2018analysis}.
+  \item \textbf{Digital Signatures:} ECC enables the creation of compact and secure digital signatures, such as those used in Bitcoin (ECDSA) and newer blockchain protocols (EdDSA) \cite{johnson2001elliptic, bernstein2012high}.
+  \item \textbf{Key Pair Generation:} Blockchain wallets generate private-public key pairs using elliptic curves, ensuring that users can securely sign and verify transactions \cite{wu2018blockchain}.
+  \item \textbf{Scalability and Efficiency:} Due to its small key size and lower computational requirements, ECC allows blockchain networks to process transactions more efficiently while maintaining security \cite{fan2018analysis}.
 \end{enumerate}
 
 Bitcoin, for instance, uses the \textbf{secp256k1} elliptic curve for key generation and signing, which provides a 256-bit key length offering high security with lower processing overhead compared to traditional cryptographic methods \cite{brown2010standards}.
+
+
+\section{Introduction to Smart Contracts}
+
+Smart contracts represent a fundamental technological innovation that automates and enforces agreements between parties without requiring trusted intermediaries. First conceptualized by Nick Szabo in the late 1990s, smart contracts were envisioned as self-executing contractual arrangements, where terms could be translated into code and automatically enforced by the system itself\cite{szabo1996smart}. Szabo illustrated this concept using a vending machine analogy, where the machine's mechanism guarantees the delivery of goods upon receiving the correct payment, requiring minimal trust between parties\cite{szabo1997formalizing}.
+
+\section{Technical Framework and Operation}
+
+At a technical level, smart contracts are programs that encode business logic and operate on specialized virtual machines embedded within blockchain or distributed ledger infrastructures. Their implementation follows a structured process:
+
+Business requirements are defined collaboratively between stakeholders and developers. Conditions triggering contract execution are established (e.g., payment authorization, delivery confirmation). Development teams code these conditions and responses using specialized platforms. Security testing and validation are performed before deployment. Once deployed, contracts monitor event data from trusted sources ("oracles"). Upon fulfillment of pre-defined conditions, the contract automatically executes\cite{simplilearn2022smart}.
+
+This automation eliminates the need for intermediaries while providing transparency, immutability, and trustless verification of transactions. All executions are recorded on the blockchain, creating an immutable audit trail that enhances accountability.
+
+\section{Smart Contracts in Decentralized Applications (dApps)}
+
+Smart contracts form the backbone of decentralized applications (dApps) by providing the autonomous business logic that operates independently of centralized control. In the dApp ecosystem, smart contracts enable:
+
+Trustless Interactions: Participants can engage in complex transactions without requiring mutual trust. Transparent Governance: Rules are encoded and visible to all network participants. Automated Value Exchange: Assets can be transferred automatically when conditions are met. Decentralized Decision Making: Complex multi-party agreements can be executed without centralized authorities\cite{alharby2017blockchain}.
+
+\section{Hyperledger Implementations}
+
+Within the Hyperledger ecosystem, multiple implementations of smart contract frameworks exist, each with distinct approaches and capabilities.
+
+\subsection{Hyperledger Fabric}
+
+Hyperledger Fabric has evolved to support Ethereum Virtual Machine (EVM) bytecode smart contracts, allowing contracts to be written in languages such as Solidity or Vyper. This enhancement, introduced in version 1.3, enables developers to migrate or create decentralized applications for permissioned platforms, expanding the framework's versatility\cite{hyperledger2018fabric}.
+
+\subsection{Hyperledger Burrow}
+
+Hyperledger Burrow represents a permissioned Ethereum-compatible blockchain that executes smart contract code on a permissioned virtual machine. Built on a Tendermint consensus engine, Burrow provides transaction finality and high throughput for proof-of-stake systems. Burrow serves three key functions in the Hyperledger ecosystem:
+
+A bridge to the Tendermint/Cosmos ecosystem. An Ethereum side-chain with compatibility for advanced smart contract languages. A lightweight, hackable EVM/Solidity execution library\cite{hyperledger2019burrow}.
+
+As a fully-fledged blockchain and smart contract framework, Burrow incorporates a Unix-style permissioning model directly into its EVM implementation, allowing granular control over actions such as sending tokens, creating contracts, or becoming validators\cite{monax2020burrow}.
+
+\subsection{Hyperledger Iroha}
+
+Hyperledger Iroha takes a distinctive approach to smart contracts. In Iroha v1, a limited set of commands was provided without Turing-complete computation capabilities. However, Iroha v2 introduces Iroha Special Instructions (ISI) to enable Turing-complete computation while maintaining ease of use for common tasks.
+
+Unlike Ethereum's model of deploying contracts that users interact with, Iroha employs a data model of domains, accounts, and assets that change through various interactions. ISI functions more like database triggers than deployed smart contracts, with event triggers placed on transactions that match specific parameters\cite{hyperledger2020iroha}.
+
+\section{Smart Contracts for Scientific Research Reproducibility}
+
+The application of smart contracts extends beyond financial transactions to scientific research, where they can significantly enhance reproducibility. By encoding experimental protocols, data collection methodologies, and analysis procedures as smart contracts, researchers can create immutable records of their methods, ensuring that others can reproduce their work precisely\cite{pilehchiha2022improving}.
+
+Smart contracts can automate:
+
+Data provenance tracking. Experimental parameter recording. Statistical analysis execution. Publication of results with verification.
+
+This application addresses the reproducibility crisis in science by providing transparent, tamper-proof records of research methodologies and results, allowing independent verification and validation.
+
+\section{Conclusion}
+
+Smart contracts represent a paradigm shift in how agreements are codified, executed, and verified in decentralized systems. From Szabo's initial conceptualization to current implementations across various blockchain platforms, smart contracts continue to evolve in sophistication and application scope. The various implementations within the Hyperledger ecosystem demonstrate the versatility of this technology, while emerging applications in scientific research highlight its potential beyond financial use cases. As the technology matures, smart contracts will likely become an increasingly integral component of trusted digital interactions across numerous domains.
 
 
 \subsection*{Conclusion}
