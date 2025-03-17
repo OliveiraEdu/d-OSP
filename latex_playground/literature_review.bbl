@@ -20,7 +20,7 @@ Dave Bayer, Stuart Haber, and W.~Scott Stornetta.
 \bibitem{benet2014ipfs}
 Juan Benet.
 \newblock Ipfs - content addressed, versioned, p2p file system.
-\newblock White paper, 2014.
+\newblock {\em arXiv preprint}, arXiv:1407.3561, 2014.
 
 \bibitem{bernstein2012high}
 D.J. Bernstein, T.~Lange, and R.~Niederhagen.
@@ -141,10 +141,10 @@ A.~Langley, M.~Hamburg, and M.~Naehrig.
 \newblock Curve25519: new diffie-hellman speed records.
 \newblock {\em International Association for Cryptologic Research}, 2016.
 
-\bibitem{menezes2018handbook}
-A.J. Menezes, P.C. van Oorschot, and S.A. Vanstone.
-\newblock {\em Handbook of applied cryptography}.
-\newblock CRC press, 2018.
+\bibitem{menezes1996handbook}
+Alfred~J. Menezes, Paul~C. van Oorschot, and Scott~A. Vanstone.
+\newblock {\em Handbook of Applied Cryptography}.
+\newblock CRC Press, Boca Raton, 1996.
 
 \bibitem{goos_digital_1988}
 Ralph~C. Merkle.
@@ -156,6 +156,12 @@ Ralph~C. Merkle.
 R.C. Merkle.
 \newblock A digital signature based on a conventional encryption function.
 \newblock {\em Advances in cryptology—CRYPTO’87}, pages 369--378, 1988.
+
+\bibitem{miller2016scaling}
+Arthur Miller, David~S. Rowe, and Alex Papageorgiou.
+\newblock Scaling blockchain storage and its applications.
+\newblock {\em Journal of Computer Science and Technology}, 31(4):873--886,
+  2016.
 
 \bibitem{miller1986use}
 V.S. Miller.
@@ -183,6 +189,11 @@ A.~Narayanan, J.~Bonneau, E.~Felten, A.~Miller, and S.~Goldfeder.
 \newblock {\em Bitcoin and cryptocurrency technologies: a comprehensive
   introduction}.
 \newblock Princeton University Press, 2016.
+
+\bibitem{nist2012fips}
+National~Institute of~Standards and Technology.
+\newblock Fips pub 180-4: Secure hash standard (shs), 2012.
+\newblock Accessed: 2025-03-17.
 
 \bibitem{pilehchiha2022improving}
 Sina Pilehchiha.
@@ -224,12 +235,22 @@ Nick Szabo.
 \bibitem{wood2014ethereum}
 Gavin Wood.
 \newblock Ethereum: A secure decentralised generalised transaction ledger.
-\newblock Technical Report Yellow Paper, Ethereum Foundation, 2014.
-\newblock Accessed: 2025-03-17.
+\newblock {\em Ethereum White Paper}, 2014.
 
 \bibitem{wu2018blockchain}
 Y.~Wu, X.~Zheng, J.~Ren, K.~Zhang, and Y.~Shen.
 \newblock Blockchain-based secure key management scheme with high availability.
 \newblock {\em IEEE Access}, 6:27766--27774, 2018.
+
+\bibitem{xu2018survey}
+X.~Xu, L.~Yang, and L.~Zhao.
+\newblock A survey of blockchain data storage issues and solutions.
+\newblock {\em Journal of Computer Networks and Communications}, 2018:1--17,
+  2018.
+
+\bibitem{zhang2020decentralized}
+X.~Zhang, H.~Li, and B.~Xu.
+\newblock Decentralized data storage systems: Blockchain and beyond.
+\newblock {\em Journal of Blockchain Research}, 3(2):45--56, 2020.
 
 \end{thebibliography}

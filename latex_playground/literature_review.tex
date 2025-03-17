@@ -152,12 +152,17 @@ The voting process involves two phases:
 \subsubsection{Finality}
 Once a block achieves supermajority agreement, it is considered finalized and added to the blockchain. This ensures that all honest nodes accept the same block, preventing forks.
 
+
+\subsection{Conclusion}
+Consensus mechanisms, mining, and fault tolerance strategies are critical in ensuring blockchain security and functionality. The choice between PoW, PoS, and BFT-based approaches impacts the efficiency, decentralization, and security of blockchain networks. Furthermore, the distinction between public, private, and hybrid blockchains influences their applications, with public blockchains prioritizing trustlessness and private blockchains emphasizing control and efficiency. Understanding these foundational aspects enables the development of blockchain-based solutions tailored to the needs of Open Science and research reproducibility.
+
+
 \subsection{Public Key Cryptography in Blockchain}
 
 Public key cryptography plays a fundamental role in securing blockchain networks by enabling secure transactions, identity verification, and data integrity without requiring a centralized authority \cite{narayanan2016bitcoin}. It forms the foundation for digital signatures, key management, and encryption mechanisms that ensure trust and security in decentralized environments.
 
 \subsubsection{Role of Public Key Cryptography in Blockchain}
-Blockchain networks rely on asymmetric cryptography, also known as public key cryptography, to authenticate and authorize transactions \cite{rivest1978method}. Each participant in the network possesses a pair of cryptographic keys: a \textbf{public key}, which serves as an address that others can use to send transactions, and a \textbf{private key}, which is used to sign transactions and prove ownership. When a user initiates a transaction, they generate a \textbf{digital signature} using their private key, allowing other participants to verify the authenticity of the transaction without revealing the private key itself \cite{menezes2018handbook}.
+Blockchain networks rely on asymmetric cryptography, also known as public key cryptography, to authenticate and authorize transactions \cite{rivest1978method}. Each participant in the network possesses a pair of cryptographic keys: a \textbf{public key}, which serves as an address that others can use to send transactions, and a \textbf{private key}, which is used to sign transactions and prove ownership. When a user initiates a transaction, they generate a \textbf{digital signature} using their private key, allowing other participants to verify the authenticity of the transaction without revealing the private key itself \cite{menezes1996handbook}.
 
 This mechanism ensures that only the rightful owner of an asset can authorize its transfer, preventing fraud and unauthorized access \cite{wood2014ethereum}. Additionally, cryptographic hashing techniques complement public key cryptography by ensuring data integrity and linking transactions in an immutable ledger \cite{merkle1988digital}.
 
@@ -185,6 +190,8 @@ In blockchain systems, ECC is primarily used for:
 
 Bitcoin, for instance, uses the \textbf{secp256k1} elliptic curve for key generation and signing, which provides a 256-bit key length offering high security with lower processing overhead compared to traditional cryptographic methods \cite{brown2010standards}. In contrast, Hyperledger Iroha leverages Ed25519 with SHA-3 to ensure a balance between performance, security, and compatibility with modern cryptographic best practices \cite{hyperledger_iroha}.
 
+\subsection*{Conclusion}
+Public key cryptography is a cornerstone of blockchain security, enabling authentication, digital signatures, and secure communication. The adoption of ECC and its derivatives, such as ECDSA and EdDSA, has significantly improved the efficiency and scalability of blockchain networks, making them resilient to attacks while minimizing computational and storage costs. Future blockchain advancements may incorporate more advanced cryptographic techniques, including post-quantum cryptography, to further enhance security in decentralized systems.
 
 
 \section{Introduction to Smart Contracts}
@@ -201,9 +208,7 @@ This automation eliminates the need for intermediaries while providing transpare
 
 \section{Smart Contracts in Decentralized Applications (dApps)}
 
-Smart contracts form the backbone of decentralized applications (dApps) by providing the autonomous business logic that operates independently of centralized control. In the dApp ecosystem, smart contracts enable:
-
-Trustless Interactions: Participants can engage in complex transactions without requiring mutual trust. Transparent Governance: Rules are encoded and visible to all network participants. Automated Value Exchange: Assets can be transferred automatically when conditions are met. Decentralized Decision Making: Complex multi-party agreements can be executed without centralized authorities\cite{alharby2017blockchain}.
+Smart contracts form the backbone of decentralized applications (dApps) by providing the autonomous business logic that operates independently of centralized control. In the dApp ecosystem, smart contracts enable trustless interactions where participants engage in complex transactions without requiring mutual trust. Smart contracts also provide transparent Governance, all network participants have visibiltiy of the encoded rules. Assets can be transferred automatically when conditions are met enabling automated value exchange and  complex multi-party agreements can be executed achieving a decentralized decision making process\cite{alharby2017blockchain}.
 
 \section{Hyperledger Implementations}
 
@@ -235,19 +240,86 @@ Smart contracts can automate:
 
 Data provenance tracking. Experimental parameter recording. Statistical analysis execution. Publication of results with verification.
 
-This application addresses the reproducibility crisis in science by providing transparent, tamper-proof records of research methodologies and results, allowing independent verification and validation.
 
 \section{Conclusion}
 
 Smart contracts represent a paradigm shift in how agreements are codified, executed, and verified in decentralized systems. From Szabo's initial conceptualization to current implementations across various blockchain platforms, smart contracts continue to evolve in sophistication and application scope. The various implementations within the Hyperledger ecosystem demonstrate the versatility of this technology, while emerging applications in scientific research highlight its potential beyond financial use cases. As the technology matures, smart contracts will likely become an increasingly integral component of trusted digital interactions across numerous domains.
 
 
-\subsection*{Conclusion}
-Public key cryptography is a cornerstone of blockchain security, enabling authentication, digital signatures, and secure communication. The adoption of ECC and its derivatives, such as ECDSA and EdDSA, has significantly improved the efficiency and scalability of blockchain networks, making them resilient to attacks while minimizing computational and storage costs. Future blockchain advancements may incorporate more advanced cryptographic techniques, including post-quantum cryptography, to further enhance security in decentralized systems.
 
+\section{The InterPlanetary File System (IPFS): A Peer-to-Peer Approach to Distributed Storage}
+
+The InterPlanetary File System (IPFS) is a decentralized, peer-to-peer distributed file system designed to interconnect computing devices through a unified storage network \cite{benet2014ipfs}. By employing content-addressable storage and cryptographic hashing, IPFS enables the efficient sharing and retrieval of immutable data objects. Conceptually, it operates as a single, large-scale BitTorrent swarm exchanging objects within a Git-like repository. The system leverages a high-throughput, content-addressed block storage model with content-addressed hyperlinks, forming a generalized Merkle Directed Acyclic Graph (DAG). This architecture underpins various functionalities, including versioned file systems, blockchain data structures, and a more persistent and decentralized web. By integrating a Distributed Hash Table (DHT), an incentivized block exchange protocol, and a self-certifying namespace, IPFS eliminates single points of failure and minimizes the necessity for inter-node trust.
+
+\subsection{Background and Architectural Principles}
+
+IPFS is inspired by and synthesizes multiple established peer-to-peer technologies, including DHTs, BitTorrent, Git, and Self-Certifying Filesystems (SFS) \cite{benet2014ipfs}. While traditional web protocols such as HTTP provide an efficient means of requesting and transmitting data, they do not inherently incorporate modern file distribution strategies, resulting in limitations concerning redundancy, security, and scalability. By contrast, IPFS addresses these challenges by integrating and refining established distributed system techniques into a unified framework, ensuring efficient content retrieval and data persistence across geographically distributed nodes.
+
+\subsection{Key Architectural Components}
+
+IPFS is structured as a modular protocol stack, with distinct subsystems contributing to its overall functionality \cite{benet2014ipfs}:
+
+\begin{itemize}
+    \item \textbf{Identities:} Manages node identity generation and verification, typically employing static cryptographic puzzles derived from S/Kademlia.
+    \item \textbf{Network:} Governs peer-to-peer communication through various transport mechanisms, including WebRTC DataChannels and uTP.
+    \item \textbf{Routing:} Facilitates object discovery and peer lookup through a DHT, defaulting to a structure based on S/Kademlia and Coral.
+    \item \textbf{Exchange:} Utilizes BitSwap, a block exchange protocol that promotes efficient data replication through an incentive-driven market mechanism.
+    \item \textbf{Objects:} Implements a Merkle DAG to store immutable, content-addressed objects, forming the foundation for versioned data structures.
+    \item \textbf{Files:} Introduces a versioned file system hierarchy inspired by Git, supporting efficient data storage and retrieval.
+    \item \textbf{Naming:} Incorporates a self-certifying mutable name system, enabling dynamic reference updates for evolving datasets.
+\end{itemize}
+
+These components collectively ensure a robust and scalable approach to distributed data management, making IPFS a compelling alternative to centralized storage solutions.
+
+\subsection{Content Addressing and Data Integrity}
+
+A fundamental principle of IPFS is its reliance on content addressing, wherein data objects are identified by the cryptographic hash of their contents \cite{benet2014ipfs}. This methodology not only facilitates efficient deduplication but also guarantees data integrity, as any modification to an object results in a new, distinct hash. The Merkle DAG structure further enhances the efficiency of storage and retrieval processes, allowing for seamless handling of large datasets and enabling robust versioning capabilities. By leveraging cryptographic hashing, IPFS inherently verifies data authenticity and prevents unauthorized modifications.
+
+\subsection{Routing and Peer Discovery}
+
+IPFS employs a DHT-based routing mechanism to locate peers and retrieve specific data objects \cite{benet2014ipfs}. This approach enables highly scalable and decentralized object discovery, as network participants contribute to maintaining a distributed index of content addresses. Small data values (typically under 1KB) can be stored directly within the DHT, whereas larger datasets are distributed across multiple nodes, optimizing both redundancy and retrieval speed.
+
+\subsection{Block Exchange and Incentive Mechanisms}
+
+The BitSwap protocol governs IPFS’s block exchange mechanism, ensuring efficient data distribution and replication \cite{benet2014ipfs}. BitSwap operates as a marketplace where nodes trade blocks with one another, prioritizing the replication of rarer blocks to optimize availability. This economic model incentivizes participation and data persistence, ensuring that frequently accessed content remains accessible without relying on a centralized infrastructure.
+
+\subsection{Security and Node Authentication}
+
+Security within IPFS is underpinned by a cryptographic identity system, where nodes are identified by the hash of their public key \cite{benet2014ipfs}. This ensures that nodes can authenticate one another upon connection, exchanging public keys to verify identities. Additionally, IPFS adopts a flexible multihash format for cryptographic digests, allowing for algorithmic adaptability as cryptographic standards evolve.
+
+\subsection{Integration with the Open Science Platform}
+
+The Open Science Platform relies on principles of transparency, accessibility, and reproducibility, necessitating a decentralized and verifiable data storage framework. IPFS aligns with these objectives by offering a secure and efficient mechanism for storing and sharing research data in an immutable, content-addressed format. The use of Merkle DAGs ensures the integrity and versioning of scientific datasets, preventing data manipulation and enhancing reproducibility. Furthermore, IPFS's decentralized nature mitigates concerns associated with data loss, institutional control, and access restrictions. By integrating IPFS into the Open Science Platform, researchers can leverage a distributed, trustless system for publishing, archiving, and verifying scientific outputs, ultimately fostering an ecosystem that supports open and verifiable research practices.
+
+In the context of the Open Science Platform, IPFS serves not only as a distributed file repository but also as a crucial component in managing metadata associated with users and projects. By leveraging content addressing through cryptographic hashing, IPFS ensures that all stored files and metadata are uniquely identified and verifiable. The Content Identifier (CID) plays a fundamental role in this process, serving as a persistent reference that links stored data to blockchain records. This integration enhances data integrity and traceability, as each CID is immutably recorded on the blockchain, ensuring that files remain accessible, unaltered, and verifiable over time. Through this approach, IPFS contributes to the Open Science Platform’s core objectives by supporting transparency, reproducibility, and the secure storage of research artifacts.
 
 \subsection{Conclusion}
-Consensus mechanisms, mining, and fault tolerance strategies are critical in ensuring blockchain security and functionality. The choice between PoW, PoS, and BFT-based approaches impacts the efficiency, decentralization, and security of blockchain networks. Furthermore, the distinction between public, private, and hybrid blockchains influences their applications, with public blockchains prioritizing trustlessness and private blockchains emphasizing control and efficiency. Understanding these foundational aspects enables the development of blockchain-based solutions tailored to the needs of Open Science and research reproducibility.
+
+IPFS represents a paradigm shift in distributed storage and data sharing, offering a robust alternative to conventional centralized systems. By employing content addressing, cryptographic verification, and peer-to-peer networking, IPFS enhances data integrity, security, and availability. Its modular architecture, inspired by proven peer-to-peer technologies, positions it as a versatile solution for numerous applications, including blockchain, versioned file systems, and decentralized web infrastructure. Within the context of the Open Science Platform, IPFS provides a foundational layer for ensuring research transparency and reproducibility, reinforcing the principles of Open Science through decentralized, verifiable, and persistent data management.
+
+\section{Mathematical Foundations of IPFS}
+
+\subsection{Cryptographic Hashing Functions}
+
+The security and functionality of IPFS rely heavily on cryptographic hashing. Specifically, IPFS typically employs the SHA-256 algorithm \cite{menezes1996handbook}, which generates a fixed-size (256-bit) output from variable-sized input data. The mathematical properties of cryptographic hash functions that make them suitable for IPFS include:
+
+\begin{itemize}
+    \item Determinism: The same input always produces the same output hash.
+    \item Pre-image resistance: Given a hash value $h$, it is computationally infeasible to find any input $x$ such that $\text{hash}(x) = h$.
+    \item Second pre-image resistance: Given an input $x_1$, it is computationally infeasible to find a different input $x_2$ such that $\text{hash}(x_1) = \text{hash}(x_2)$.
+    \item Collision resistance: It is computationally infeasible to find any two different inputs $x_1$ and $x_2$ such that $\text{hash}(x_1) = \text{hash}(x_2)$ \cite{nist2012fips}.
+\end{itemize}
+
+\section{IPFS and Blockchain Complementarity}
+
+Blockchains excel at providing distributed consensus and immutable transaction records but face significant challenges when storing large volumes of data. Knowledge files vary in size and type, and storing them directly on a blockchain would cause data volume to surge, creating unsustainable storage pressure \cite{miller2016scaling, xu2018survey}. This issue arises because blockchains are not designed to handle the large and diverse datasets typically associated with decentralized applications.
+
+
+\subsection{Addressing Blockchain Storage Limitations}
+
+
+IPFS addresses this limitation by providing a complementary distributed storage layer. Only content hashes (CIDs) need to be stored on the blockchain, rather than the full content itself. This approach dramatically reduces blockchain storage requirements while maintaining cryptographic links to the original content \cite{benet2014ipfs, wood2014ethereum}. By using content addressing, IPFS ensures data integrity while alleviating the storage burden on the blockchain \cite{zhang2020decentralized}.
+
 
 
 \bibliographystyle{plain}
