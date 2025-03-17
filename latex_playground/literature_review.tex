@@ -56,6 +56,23 @@ The inherent properties of blockchain—decentralization, immutability, transpar
 
 
 
+\subsection{Public and Private Blockchains}
+
+Blockchains can be classified based on their accessibility and governance models, primarily into public and private blockchains.
+
+\subsubsection{Public Blockchains}
+Public blockchains, such as Bitcoin and Ethereum, are open to anyone, allowing unrestricted participation in the network. These blockchains prioritize decentralization and security at the expense of scalability. Consensus mechanisms in public blockchains typically rely on PoW or PoS, where participants must follow established protocols to validate transactions \cite{buterin2020ghost}. Public blockchains offer transparency, as all transactions are recorded on a publicly accessible ledger, making them suitable for applications requiring trustless environments.
+
+\subsubsection{Private and Permissioned Blockchains}
+
+Private blockchains restrict participation to authorized entities, making them suitable for enterprise applications. Hyperledger Fabric and Hyperledger Iroha are examples of permissioned blockchain frameworks designed for regulated environments where identity verification and compliance are critical \cite{cachin2016architecture}. Private blockchains provide improved scalability and efficiency since they do not require energy-intensive consensus mechanisms like PoW. However, they trade off decentralization, as a governing authority typically oversees the network.
+
+
+\subsubsection{Hybrid Blockchain Models}
+
+Hybrid blockchain models combine aspects of both public and private blockchains. These architectures allow organizations to maintain a private ledger while interacting with public networks for verification and transparency purposes. Such approaches are particularly useful in industries where both privacy and auditability are required, such as supply chain management and financial services \cite{attanasi2020hybrid}. By integrating permissioned chains with public networks, hybrid models balance the need for data confidentiality with the benefits of public verification.
+
+
 \subsection{Consensus Mechanisms in Blockchain}
 
 Consensus mechanisms are fundamental to blockchain networks, ensuring agreement among distributed nodes without requiring centralized authority. These mechanisms validate transactions and maintain the integrity of the ledger, preventing issues such as double-spending and malicious attacks.
@@ -78,28 +95,28 @@ Byzantine Fault Tolerance (BFT) is a property of distributed systems that allows
 
 Hyperledger Iroha incorporates a specialized BFT consensus mechanism called YAC (Yet Another Consensus), which is optimized for voting-based block validation and low-latency operations. This integration ensures that Iroha can achieve consensus efficiently while maintaining the robustness expected of BFT systems.
 
-\subsubsection{YAC Consensus and Byzantine Fault Tolerance}
-The YAC (Yet Another Consensus) algorithm ensures Byzantine Fault Tolerance (BFT) \cite{muratov_yac_2018} by employing a voting-based mechanism to achieve consensus in permissioned blockchain networks. Here’s how YAC achieves BFT:
+\subsection{YAC Consensus and Byzantine Fault Tolerance}
+The YAC (Yet Another Consensus) algorithm ensures Byzantine Fault Tolerance (BFT) \cite{muratov_yac_2018} by employing a voting-based mechanism to achieve consensus in permissioned blockchain networks. YAC achieves BFT through these steps:
 
-\subsection*{1. Voting for Block Hash}
+\subsubsection{Voting for Block Hash}
 Validators in the network vote on the hash of the proposed block rather than its entire content. This reduces communication overhead while ensuring consistency among honest nodes.
 
-\subsection*{2. Fault Tolerance}
+\subsubsection{Fault Tolerance}
 YAC tolerates Byzantine faults by requiring a supermajority (e.g., 2/3 of validators) to agree on the block hash. This guarantees that even if some nodes act maliciously or fail, the system can still reach consensus.
 
-\subsection*{3. Finality}
+\subsubsection{Finality}
 Once a supermajority is reached, the block is considered finalized, and all honest nodes accept it as part of the blockchain. This prevents forks and ensures the integrity of the ledger.
 
-\subsection*{4. Permissioned Design}
+\subsubsection{Permissioned Design}
 YAC is specifically designed for permissioned blockchains, where validators are pre-approved entities. This controlled environment enhances security and reduces the likelihood of large-scale malicious attacks.
 
 YAC’s lightweight design and focus on efficient communication make it suitable for enterprise-grade applications, such as Hyperledger Iroha, where high performance and reliability are critical.
 
-\section*{Consensus Formulae for YAC}
+\subsection{Consensus Algorithm for YAC}
 
-The YAC (Yet Another Consensus) algorithm ensures Byzantine Fault Tolerance (BFT) by implementing a voting-based process. The key formulae are as follows:
+The YAC (Yet Another Consensus) algorithm ensures Byzantine Fault Tolerance (BFT) through a voting-based process, as follows:
 
-\subsection*{1. Fault Tolerance}
+\subsubsection{Fault Tolerance}
 The network must satisfy:
 \[
     n \geq 3f + 1
@@ -112,7 +129,7 @@ Where:
 
 This ensures that the network can tolerate up to \( f \) Byzantine nodes while still achieving consensus.
 
-\subsection*{2. Supermajority Agreement}
+\subsubsection{Supermajority Agreement}
 For a block to be finalized, a supermajority of nodes must agree on its hash:
 \[
     v > \frac{2n}{3}
@@ -125,72 +142,55 @@ Where:
 
 This condition guarantees both safety and liveness in consensus.
 
-\subsection*{3. Voting Process}
+\susubsection{Voting Process}
 The voting process involves two phases:
 \begin{enumerate}
     \item \textbf{Proposal Phase}: A leader node proposes a block hash.
     \item \textbf{Voting Phase}: Nodes vote on the proposed hash, and votes are collected until the supermajority condition is met.
 \end{enumerate}
 
-\subsection*{4. Finality}
+\subsubsection{Finality}
 Once a block achieves supermajority agreement, it is considered finalized and added to the blockchain. This ensures that all honest nodes accept the same block, preventing forks.
 
+\subsection{Public Key Cryptography in Blockchain}
 
-\subsection{Public and Private Blockchains}
+Public key cryptography plays a fundamental role in securing blockchain networks by enabling secure transactions, identity verification, and data integrity without requiring a centralized authority \cite{narayanan2016bitcoin}. It forms the foundation for digital signatures, key management, and encryption mechanisms that ensure trust and security in decentralized environments.
 
-Blockchains can be classified based on their accessibility and governance models, primarily into public and private blockchains.
+\subsubsection{Role of Public Key Cryptography in Blockchain}
+Blockchain networks rely on asymmetric cryptography, also known as public key cryptography, to authenticate and authorize transactions \cite{rivest1978method}. Each participant in the network possesses a pair of cryptographic keys: a \textbf{public key}, which serves as an address that others can use to send transactions, and a \textbf{private key}, which is used to sign transactions and prove ownership. When a user initiates a transaction, they generate a \textbf{digital signature} using their private key, allowing other participants to verify the authenticity of the transaction without revealing the private key itself \cite{menezes2018handbook}.
 
-\subsubsection{Public Blockchains}
-Public blockchains, such as Bitcoin and Ethereum, are open to anyone, allowing unrestricted participation in the network. These blockchains prioritize decentralization and security at the expense of scalability. Consensus mechanisms in public blockchains typically rely on PoW or PoS, where participants must follow established protocols to validate transactions \cite{buterin2020ghost}. Public blockchains offer transparency, as all transactions are recorded on a publicly accessible ledger, making them suitable for applications requiring trustless environments.
+This mechanism ensures that only the rightful owner of an asset can authorize its transfer, preventing fraud and unauthorized access \cite{wood2014ethereum}. Additionally, cryptographic hashing techniques complement public key cryptography by ensuring data integrity and linking transactions in an immutable ledger \cite{merkle1988digital}.
 
-\subsubsection{Private and Permissioned Blockchains}
-
-Private blockchains restrict participation to authorized entities, making them suitable for enterprise applications. Hyperledger Fabric and Hyperledger Iroha are examples of permissioned blockchain frameworks designed for regulated environments where identity verification and compliance are critical \cite{cachin2016architecture}. Private blockchains provide improved scalability and efficiency since they do not require energy-intensive consensus mechanisms like PoW. However, they trade off decentralization, as a governing authority typically oversees the network.
-
-
-\subsection{Hybrid Blockchain Models}
-
-Hybrid blockchain models combine aspects of both public and private blockchains. These architectures allow organizations to maintain a private ledger while interacting with public networks for verification and transparency purposes. Such approaches are particularly useful in industries where both privacy and auditability are required, such as supply chain management and financial services \cite{attanasi2020hybrid}. By integrating permissioned chains with public networks, hybrid models balance the need for data confidentiality with the benefits of public verification.
-
-
-\section*{Public Key Cryptography in Blockchain}
-
-Public key cryptography plays a fundamental role in securing blockchain networks by enabling secure transactions, identity verification, and data integrity without requiring a centralized authority. It forms the foundation for digital signatures, key management, and encryption mechanisms that ensure trust and security in decentralized environments.
-
-\subsection*{Role of Public Key Cryptography in Blockchain}
-Blockchain networks rely on asymmetric cryptography, also known as public key cryptography, to authenticate and authorize transactions. Each participant in the network possesses a pair of cryptographic keys: a \textbf{public key}, which serves as an address that others can use to send transactions, and a \textbf{private key}, which is used to sign transactions and prove ownership. When a user initiates a transaction, they generate a \textbf{digital signature} using their private key, allowing other participants to verify the authenticity of the transaction without revealing the private key itself.
-
-This mechanism ensures that only the rightful owner of an asset can authorize its transfer, preventing fraud and unauthorized access. Additionally, cryptographic hashing techniques complement public key cryptography by ensuring data integrity and linking transactions in an immutable ledger.
-
-\subsection*{Commonly Used Cryptographic Ciphers and Standards}
+\subsubsection{Commonly Used Cryptographic Ciphers and Standards}
 Several cryptographic ciphers and standards are widely used in blockchain implementations to provide strong security guarantees:
 
 \begin{itemize}
-    \item \textbf{RSA (Rivest-Shamir-Adleman):} A traditional public key cryptosystem based on the difficulty of factoring large prime numbers. While RSA is widely used in general cryptographic applications, its key sizes are relatively large compared to modern alternatives, making it less practical for blockchain applications.
-    \item \textbf{Elliptic Curve Cryptography (ECC):} A more efficient asymmetric cryptography scheme that provides the same level of security as RSA but with significantly smaller key sizes. This efficiency makes ECC the preferred choice for blockchain applications.
-    \item \textbf{ECDSA (Elliptic Curve Digital Signature Algorithm):} A widely adopted digital signature scheme based on ECC, used in Bitcoin and Ethereum to secure transactions.
-    \item \textbf{EdDSA (Edwards-curve Digital Signature Algorithm):} A modern alternative to ECDSA, known for its faster signature verification and improved security properties. It is used in newer blockchain protocols like Monero.
-    \item \textbf{X25519:} A secure key exchange protocol based on Curve25519, commonly used in cryptographic operations for secure communication in blockchain applications.
+    \item \textbf{RSA (Rivest-Shamir-Adleman):} A traditional public key cryptosystem based on the difficulty of factoring large prime numbers \cite{rivest1978method}. While RSA is widely used in general cryptographic applications, its key sizes are relatively large compared to modern alternatives, making it less practical for blockchain applications.
+    \item \textbf{Elliptic Curve Cryptography (ECC):} A more efficient asymmetric cryptography scheme that provides the same level of security as RSA but with significantly smaller key sizes \cite{miller1986use}. This efficiency makes ECC the preferred choice for blockchain applications.
+    \item \textbf{ECDSA (Elliptic Curve Digital Signature Algorithm):} A widely adopted digital signature scheme based on ECC, used in Bitcoin and Ethereum to secure transactions \cite{johnson2001elliptic}.
+    \item \textbf{EdDSA (Edwards-curve Digital Signature Algorithm):} A modern alternative to ECDSA, known for its faster signature verification and improved security properties \cite{bernstein2012high}. It is used in newer blockchain protocols like Monero.
+    \item \textbf{X25519:} A secure key exchange protocol based on Curve25519, commonly used in cryptographic operations for secure communication in blockchain applications \cite{langley2016curve25519}.
 \end{itemize}
 
-\subsection*{Elliptic Curve Cryptography (ECC) in Blockchain}
-Elliptic Curve Cryptography (ECC) is a type of public key cryptography that leverages the mathematical properties of elliptic curves over finite fields to provide strong security with smaller key sizes. The security of ECC is based on the \textbf{Elliptic Curve Discrete Logarithm Problem (ECDLP)}, which is computationally hard to solve.
+\subsubsection{Elliptic Curve Cryptography (ECC) in Blockchain}
+Elliptic Curve Cryptography (ECC) is a type of public key cryptography that leverages the mathematical properties of elliptic curves over finite fields to provide strong security with smaller key sizes \cite{koblitz1987elliptic}. The security of ECC is based on the \textbf{Elliptic Curve Discrete Logarithm Problem (ECDLP)}, which is computationally hard to solve \cite{hankerson2006guide}.
 
 In blockchain systems, ECC is primarily used for:
 \begin{enumerate}
-    \item \textbf{Digital Signatures:} ECC enables the creation of compact and secure digital signatures, such as those used in Bitcoin (ECDSA) and newer blockchain protocols (EdDSA).
-    \item \textbf{Key Pair Generation:} Blockchain wallets generate private-public key pairs using elliptic curves, ensuring that users can securely sign and verify transactions.
-    \item \textbf{Scalability and Efficiency:} Due to its small key size and lower computational requirements, ECC allows blockchain networks to process transactions more efficiently while maintaining security.
+    \item \textbf{Digital Signatures:} ECC enables the creation of compact and secure digital signatures, such as those used in Bitcoin (ECDSA) and newer blockchain protocols (EdDSA) \cite{johnson2001elliptic, bernstein2012high}.
+    \item \textbf{Key Pair Generation:} Blockchain wallets generate private-public key pairs using elliptic curves, ensuring that users can securely sign and verify transactions \cite{wu2018blockchain}.
+    \item \textbf{Scalability and Efficiency:} Due to its small key size and lower computational requirements, ECC allows blockchain networks to process transactions more efficiently while maintaining security \cite{fan2018analysis}.
 \end{enumerate}
 
-Bitcoin, for instance, uses the \textbf{secp256k1} elliptic curve for key generation and signing, which provides a 256-bit key length offering high security with lower processing overhead compared to traditional cryptographic methods.
+Bitcoin, for instance, uses the \textbf{secp256k1} elliptic curve for key generation and signing, which provides a 256-bit key length offering high security with lower processing overhead compared to traditional cryptographic methods \cite{brown2010standards}.
 
-\subsection{Conclusion}
-Consensus mechanisms, mining, and fault tolerance strategies are critical in ensuring blockchain security and functionality. The choice between PoW, PoS, and BFT-based approaches impacts the efficiency, decentralization, and security of blockchain networks. Furthermore, the distinction between public, private, and hybrid blockchains influences their applications, with public blockchains prioritizing trustlessness and private blockchains emphasizing control and efficiency. Understanding these foundational aspects enables the development of blockchain-based solutions tailored to the needs of Open Science and research reproducibility.
 
 \subsection*{Conclusion}
 Public key cryptography is a cornerstone of blockchain security, enabling authentication, digital signatures, and secure communication. The adoption of ECC and its derivatives, such as ECDSA and EdDSA, has significantly improved the efficiency and scalability of blockchain networks, making them resilient to attacks while minimizing computational and storage costs. Future blockchain advancements may incorporate more advanced cryptographic techniques, including post-quantum cryptography, to further enhance security in decentralized systems.
 
+
+\subsection{Conclusion}
+Consensus mechanisms, mining, and fault tolerance strategies are critical in ensuring blockchain security and functionality. The choice between PoW, PoS, and BFT-based approaches impacts the efficiency, decentralization, and security of blockchain networks. Furthermore, the distinction between public, private, and hybrid blockchains influences their applications, with public blockchains prioritizing trustlessness and private blockchains emphasizing control and efficiency. Understanding these foundational aspects enables the development of blockchain-based solutions tailored to the needs of Open Science and research reproducibility.
 
 
 \bibliographystyle{plain}

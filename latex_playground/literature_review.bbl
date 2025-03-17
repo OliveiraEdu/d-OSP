@@ -20,6 +20,11 @@ Juan Benet.
 \newblock Ipfs - content addressed, versioned, p2p file system.
 \newblock White paper, 2014.
 
+\bibitem{bernstein2012high}
+D.J. Bernstein, T.~Lange, and R.~Niederhagen.
+\newblock High-speed high-security signatures.
+\newblock {\em Journal of cryptographic engineering}, 2(2):77--89, 2012.
+
 \bibitem{bonneau2015sok}
 Joseph Bonneau, Andrew Miller, Jeremy Clark, Arvind Narayanan, Joshua~A. Kroll,
   and Edward~W. Felten.
@@ -27,6 +32,12 @@ Joseph Bonneau, Andrew Miller, Jeremy Clark, Arvind Narayanan, Joshua~A. Kroll,
   cryptocurrencies.
 \newblock {\em Proceedings - IEEE Symposium on Security and Privacy}, pages
   104--121, 2015.
+
+\bibitem{brown2010standards}
+D.R. Brown.
+\newblock Standards for efficient cryptography (sec) 1: Elliptic curve
+  cryptography.
+\newblock Technical report, Certicom Research, 2010.
 
 \bibitem{cachin2016architecture}
 Christian Cachin.
@@ -50,10 +61,26 @@ Vitalik~Buterin et~al.
 \newblock Combining ghost and casper.
 \newblock {\em arXiv preprint arXiv:2003.03052}, 2020.
 
+\bibitem{fan2018analysis}
+C.F. Fan, Y.~Chen, R.~Chen, H.~Zhou, and L.~Chen.
+\newblock Analysis of elliptic curve cryptography for blockchain.
+\newblock {\em Future Generation Computer Systems}, 89:735--743, 2018.
+
 \bibitem{haber_how_1991}
 Stuart Haber and W.~Scott Stornetta.
 \newblock How to time-stamp a digital document.
 \newblock {\em Journal of Cryptology}, 3(2):99--111, 1991.
+
+\bibitem{hankerson2006guide}
+D.~Hankerson, A.J. Menezes, and S.A. Vanstone.
+\newblock {\em Guide to elliptic curve cryptography}.
+\newblock Springer Science \& Business Media, 2006.
+
+\bibitem{johnson2001elliptic}
+D.~Johnson, A.~Menezes, and S.~Vanstone.
+\newblock The elliptic curve digital signature algorithm (ecdsa).
+\newblock {\em International Journal of Information Security}, 1(1):36--63,
+  2001.
 
 \bibitem{katz2020introduction}
 Jonathan Katz and Yehuda Lindell.
@@ -71,17 +98,42 @@ Sunny King and Scott Nadal.
 \newblock Ppcoin: Peer-to-peer crypto-currency with proof-of-stake.
 \newblock White paper, 2012.
 
+\bibitem{koblitz1987elliptic}
+N.~Koblitz.
+\newblock Elliptic curve cryptosystems.
+\newblock {\em Mathematics of computation}, 48(177):203--209, 1987.
+
 \bibitem{lamport1982byzantine}
 Leslie Lamport, Robert Shostak, and Marshall Pease.
 \newblock The byzantine generals problem.
 \newblock {\em ACM Transactions on Programming Languages and Systems},
   4(3):382--401, 1982.
 
+\bibitem{langley2016curve25519}
+A.~Langley, M.~Hamburg, and M.~Naehrig.
+\newblock Curve25519: new diffie-hellman speed records.
+\newblock {\em International Association for Cryptologic Research}, 2016.
+
+\bibitem{menezes2018handbook}
+A.J. Menezes, P.C. van Oorschot, and S.A. Vanstone.
+\newblock {\em Handbook of applied cryptography}.
+\newblock CRC press, 2018.
+
 \bibitem{goos_digital_1988}
 Ralph~C. Merkle.
 \newblock A digital signature based on a conventional encryption function.
 \newblock In {\em Advances in Cryptology — CRYPTO '87}, volume 293, pages
   369--378. Springer Berlin Heidelberg, Berlin, Heidelberg, 1988.
+
+\bibitem{merkle1988digital}
+R.C. Merkle.
+\newblock A digital signature based on a conventional encryption function.
+\newblock {\em Advances in cryptology—CRYPTO’87}, pages 369--378, 1988.
+
+\bibitem{miller1986use}
+V.S. Miller.
+\newblock Use of elliptic curves in cryptography.
+\newblock {\em Advances in cryptology—CRYPTO’85}, pages 417--426, 1986.
 
 \bibitem{muratov_yac_2018}
 Fedor Muratov, Andrei Lebedev, Nikolai Iushkevich, Bulat Nasrulin, and Makoto
@@ -95,11 +147,16 @@ Satoshi Nakamoto.
 \newblock Bitcoin: A peer-to-peer electronic cash system, 2008.
 
 \bibitem{narayanan2016bitcoin}
-Arvind Narayanan, Joseph Bonneau, Edward Felten, Andrew Miller, and Steven
-  Goldfeder.
-\newblock {\em Bitcoin and Cryptocurrency Technologies: A Comprehensive
-  Introduction}.
+A.~Narayanan, J.~Bonneau, E.~Felten, A.~Miller, and S.~Goldfeder.
+\newblock {\em Bitcoin and cryptocurrency technologies: a comprehensive
+  introduction}.
 \newblock Princeton University Press, 2016.
+
+\bibitem{rivest1978method}
+R.L. Rivest, A.~Shamir, and L.~Adleman.
+\newblock A method for obtaining digital signatures and public-key
+  cryptosystems.
+\newblock {\em Communications of the ACM}, 21(2):120--126, 1978.
 
 \bibitem{roughgarden2016twentyone}
 Tim Roughgarden.
@@ -110,5 +167,15 @@ Tim Roughgarden.
 M.~Sookhak, H.~Talebian, and M.~W. Storer.
 \newblock Decentralized storage systems: A survey.
 \newblock {\em ACM Computing Surveys}, 54(6):1--36, 2021.
+
+\bibitem{wood2014ethereum}
+G.~Wood.
+\newblock Ethereum: A secure decentralised generalised transaction ledger.
+\newblock 2014.
+
+\bibitem{wu2018blockchain}
+Y.~Wu, X.~Zheng, J.~Ren, K.~Zhang, and Y.~Shen.
+\newblock Blockchain-based secure key management scheme with high availability.
+\newblock {\em IEEE Access}, 6:27766--27774, 2018.
 
 \end{thebibliography}
