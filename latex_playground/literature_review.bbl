@@ -22,6 +22,10 @@ Juan Benet.
 \newblock Ipfs - content addressed, versioned, p2p file system.
 \newblock {\em arXiv preprint}, arXiv:1407.3561, 2014.
 
+\bibitem{ipfs2015}
+Juan Benet.
+\newblock Ipfs - the interplanetary file system, 2015.
+
 \bibitem{bernstein2012high}
 D.J. Bernstein, T.~Lange, and R.~Niederhagen.
 \newblock High-speed high-security signatures.
@@ -52,11 +56,21 @@ D.R. Brown.
   cryptography.
 \newblock Technical report, Certicom Research, 2010.
 
+\bibitem{budiu2007designing}
+Mihai Budiu and Brian~J. Schwartz.
+\newblock {\em Designing Distributed Systems: A Service-Oriented Approach}.
+\newblock Prentice Hall, 2007.
+
 \bibitem{cachin2016architecture}
 Christian Cachin.
 \newblock Architecture of the hyperledger blockchain fabric.
 \newblock In {\em Workshop on Distributed Cryptocurrencies and Consensus
   Ledgers (DCCL)}, 2016.
+
+\bibitem{cachin2016blockchains}
+Christian Cachin.
+\newblock Blockchains: The magic of cryptographic protocols.
+\newblock {\em IEEE Security \& Privacy}, 14(2):56--62, 2016.
 
 \bibitem{castro1999practical}
 Miguel Castro and Barbara Liskov.
@@ -163,6 +177,12 @@ Alfred~J. Menezes, Paul~C. van Oorschot, and Scott~A. Vanstone.
 \newblock {\em Handbook of Applied Cryptography}.
 \newblock CRC Press, Boca Raton, 1996.
 
+\bibitem{merkle1989hash}
+Ralph Merkle.
+\newblock A certified digital signature.
+\newblock {\em Proceedings of the 2nd ACM Conference on Computer and
+  Communications Security}, pages 24--34, 1989.
+
 \bibitem{goos_digital_1988}
 Ralph~C. Merkle.
 \newblock A digital signature based on a conventional encryption function.
@@ -200,6 +220,11 @@ Fedor Muratov, Andrei Lebedev, Nikolai Iushkevich, Bulat Nasrulin, and Makoto
 \bibitem{nakamoto2008bitcoin}
 Satoshi Nakamoto.
 \newblock Bitcoin: A peer-to-peer electronic cash system, 2008.
+
+\bibitem{bitcoin2008whitepaper}
+Satoshi Nakamoto.
+\newblock Bitcoin: A peer-to-peer electronic cash system.
+\newblock {\em White Paper}, 2008.
 
 \bibitem{narayanan2016bitcoin}
 A.~Narayanan, J.~Bonneau, E.~Felten, A.~Miller, and S.~Goldfeder.
@@ -259,6 +284,12 @@ Nick Szabo.
 Nick Szabo.
 \newblock Formalizing and securing relationships on public networks.
 \newblock {\em First Monday}, 2(9), 1997.
+
+\bibitem{tapscott2016blockchain}
+Don Tapscott and Alex Tapscott.
+\newblock {\em Blockchain Revolution: How the Technology Behind Bitcoin and
+  Other Cryptocurrencies is Changing the World}.
+\newblock Penguin Random House, 2016.
 
 \bibitem{wood2014ethereum}
 Gavin Wood.
