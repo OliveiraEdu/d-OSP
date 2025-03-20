@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex literature_review"] 1742305375 "literature_review.aux" "literature_review.bbl" "literature_review" 1742305375
+["bibtex literature_review"] 1742429273 "literature_review.aux" "literature_review.bbl" "literature_review" 1742429274
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "Bibliography.bib" 1742305374 19282 1d6ce7b2548fc8bfe999f0a4c9ba86a8 ""
-  "literature_review.aux" 1742257899 15975 8e1113628a750005e40367ad21c32445 "pdflatex"
+  "Bibliography.bib" 1742429271 20126 d5af0feeaf0d5e33f7436070b17cd3ec ""
+  "literature_review.aux" 1742429274 15921 dd22f9eb93df3f88c9af3971e8de18ba "pdflatex"
   (generated)
   "literature_review.bbl"
   "literature_review.blg"
-["pdflatex"] 1742257898 "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/literature_review.tex" "literature_review.pdf" "literature_review" 1742305375
+["pdflatex"] 1742429273 "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/literature_review.tex" "literature_review.pdf" "literature_review" 1742429274
   "/etc/texmf/web2c/texmf.cnf" 1701553138 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/literature_review.tex" 1742257895 56783 39588fa348375f20dd9caa746a349135 ""
+  "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/literature_review.tex" 1742429271 56792 412d22754cc97bc06395178e2d0f164c ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -98,10 +98,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1701553183 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1710494692 2800392 5302ca1083901a3fb21e189f575b5416 ""
-  "literature_review.aux" 1742257899 15975 8e1113628a750005e40367ad21c32445 "pdflatex"
-  "literature_review.bbl" 1742305375 10801 80dfef3ecfadaa00690728ff915f7406 "bibtex literature_review"
-  "literature_review.out" 1742257899 15882 b9bdccccfe1c5c10e4e2d1c4d9156e60 "pdflatex"
-  "literature_review.tex" 1742257895 56783 39588fa348375f20dd9caa746a349135 ""
+  "literature_review.aux" 1742429274 15921 dd22f9eb93df3f88c9af3971e8de18ba "pdflatex"
+  "literature_review.bbl" 1742429273 10642 165f845a0433130d78bbab117fc139a2 "bibtex literature_review"
+  "literature_review.out" 1742429274 15882 b9bdccccfe1c5c10e4e2d1c4d9156e60 "pdflatex"
+  "literature_review.tex" 1742429271 56792 412d22754cc97bc06395178e2d0f164c ""
   (generated)
   "literature_review.aux"
   "literature_review.log"

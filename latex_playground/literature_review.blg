@@ -3,44 +3,46 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: literature_review.aux
 The style file: plain.bst
 Database file #1: Bibliography.bib
-You've used 58 entries,
+Warning--I didn't find a database entry for "bitcoin2008whitepaper"
+You've used 57 entries,
             2118 wiz_defined-function locations,
-            800 strings with 11592 characters,
-and the built_in function-call counts, 17233 in all, are:
-= -- 1682
-> -- 761
+            800 strings with 11627 characters,
+and the built_in function-call counts, 16996 in all, are:
+= -- 1658
+> -- 743
 < -- 10
-+ -- 314
-- -- 246
-* -- 1053
-:= -- 2900
-add.period$ -- 175
-call.type$ -- 58
-change.case$ -- 290
++ -- 307
+- -- 240
+* -- 1042
+:= -- 2853
+add.period$ -- 172
+call.type$ -- 57
+change.case$ -- 284
 chr.to.int$ -- 0
-cite$ -- 58
-duplicate$ -- 676
-empty$ -- 1404
-format.name$ -- 246
-if$ -- 3631
+cite$ -- 57
+duplicate$ -- 666
+empty$ -- 1392
+format.name$ -- 240
+if$ -- 3586
 int.to.chr$ -- 0
-int.to.str$ -- 58
-missing$ -- 52
-newline$ -- 292
-num.names$ -- 116
-pop$ -- 344
+int.to.str$ -- 57
+missing$ -- 51
+newline$ -- 287
+num.names$ -- 114
+pop$ -- 338
 preamble$ -- 1
-purify$ -- 239
+purify$ -- 234
 quote$ -- 0
-skip$ -- 507
+skip$ -- 500
 stack$ -- 0
-substring$ -- 912
-swap$ -- 135
+substring$ -- 918
+swap$ -- 134
 text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 216
+type$ -- 212
 warning$ -- 0
-while$ -- 168
-width$ -- 60
-write$ -- 619
+while$ -- 165
+width$ -- 59
+write$ -- 609
+(There was 1 warning)
