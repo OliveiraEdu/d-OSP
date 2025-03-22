@@ -9,7 +9,7 @@
 \usepackage{hyperref}
 \usepackage{amsmath}
 
-\title{Dissertation}
+\title{Theoretical Referential}
 \author{Eduardo Oliveira}
 \date{\today}
 
@@ -30,7 +30,27 @@ Similarly, the InterPlanetary File System (IPFS) leverages distributed system pr
 
 Both blockchain and IPFS exemplify the synergy between decentralization and distributed computing. Blockchain secures and verifies data integrity, while IPFS ensures scalable, redundant storage, collectively forming the foundation for decentralized applications, provenance tracking, and secure data sharing.
 
-\subsection{Blockchain and IPFS, a sinergy for data integrity}
+\subsection{Blockchain and IPFS: Complementary Technologies for Decentralized Data Management}
+
+Blockchain technology and the InterPlanetary File System (IPFS) represent complementary solutions in decentralized systems. Blockchain serves as a distributed ledger that ensures immutability, transparency, and security through cryptographic hashing and consensus mechanisms, excelling at maintaining an auditable record of transactions and verifying data integrity \cite{nakamoto2008bitcoin}. In contrast, IPFS is a peer-to-peer distributed file system that addresses data storage challenges by organizing and retrieving content based on its hash rather than its location, enhancing resilience and efficiency by enabling distributed data hosting across a network of nodes \cite{benet2014ipfs}.
+
+\subsection{Limitations of Blockchain and IPFS}
+
+Despite their individual advantages, both technologies face inherent limitations when used independently. Blockchain's ability to store data is constrained by scalability issues since every node must replicate all on-chain information \cite{steichen2018}. Transaction fees, particularly on public blockchains, can further exacerbate these storage constraints \cite{easley_mining_2019}. Conversely, IPFS provides a scalable, cost-effective alternative for decentralized storage  \cite{benet2014ipfs} but lacks built-in guarantees for long-term data persistence. Additionally, while IPFS efficiently distributes content, it does not inherently ensure data immutability or provide robust access control mechanisms \cite{steichen2018}.
+
+\subsection{Integration of IPFS and Blockchain}
+
+Integrating IPFS with blockchain addresses these limitations by leveraging their respective strengths. Instead of storing entire datasets on-chain, only the IPFS hash (Content Identifier, CID) is recorded on the blockchain \cite{steichen2018}. This method significantly reduces on-chain storage costs while preserving the ability to verify data integrity. For example, research data can be stored on IPFS, with their immutable CIDs recorded on the blockchain to ensure provenance.
+
+While IPFS is highly effective as a distributed storage and content addresser, it does not inherently prevent data modification\cite{benet2014ipfs}. Although a CID uniquely identifies a file, altering the content generates a new CID without linking it to prior versions. Blockchain resolves this by providing an immutable and timestamped record of the original CID, ensuring tamper-proof verification \cite{nakamoto2008bitcoin}. By anchoring the CID on the immutable blockchain, the integrity and authenticity of the file can be verified at any point in the future. Even the slightest modification on a file results in a new CID, enabling immediate detection of data alteration.
+
+Blockchain can also be applied for metadata management in conjunction with IPFS. While IPFS stores the actual file content, the blockchain records associated metadata such as ownership details, timestamps, and descriptions. This metadata provides a secure and auditable context for the data stored on IPFS, ensuring that its provenance and integrity can be verified. For example, in a scientific research management system, details such as the author, date of data collection, and experimental parameters can be stored on the blockchain, while the actual research datasets, raw experimental results, or supplementary materials are stored on IPFS, with their CIDs linked to the blockchain record.
+
+Ultimately, while blockchain and IPFS each address different aspects of decentralized data management, their integration overcomes their individual shortcomings. Blockchain provides a secure, immutable, and auditable reference system, while IPFS offers scalable, efficient, and decentralized storage \cite{nakamoto2008bitcoin, benet2014ipfs}. By combining these technologies, decentralized applications can achieve both data integrity and storage efficiency, enabling more practical and robust implementations across various domains.
+
+
+
+\subsection{Blockchain and IPFS: A Synergistic Approach to Data Integrity}
 
 Blockchain technology and the InterPlanetary File System (IPFS) represent complementary solutions in decentralized systems. Blockchain serves as a distributed ledger that ensures immutability, transparency, and security through cryptographic hashing and consensus mechanisms. It excels at maintaining an auditable record of transactions and verifying data integrity. In contrast, IPFS is a peer-to-peer distributed file system that addresses data storage challenges by organizing and retrieving content based on its hash rather than its location. This approach enhances resilience and efficiency by enabling distributed data hosting across a network of nodes.
 
@@ -83,7 +103,7 @@ Public blockchains, such as Bitcoin and Ethereum, are open to anyone, allowing u
 
 \subsubsection{Private and Permissioned Blockchains}
 
-Private blockchains restrict participation to authorized entities, making them suitable for enterprise applications. Hyperledger Fabric and Hyperledger Iroha are examples of permissioned blockchain frameworks designed for regulated environments where identity verification and compliance are critical \cite{cachin2016architecture}. Private blockchains provide improved scalability and efficiency since they do not require energy-intensive consensus mechanisms like PoW. However, they trade off decentralization, as a governing authority typically oversees the network.
+Private blockchains restrict participation to authorized entities, making them suitable for enterprise applications. Hyperledger Fabric and Hyperledger Iroha are examples of permissioned blockchain frameworks designed for regulated environments where identity verification and compliance are critical \cite{cachin2016architecture}. Private blockchains provide improved scalability and efficiency since they do not require energy-intensive consensus mechanisms like PoW. However, they trade off decentralization, as a governing authority typically oversees the network  \cite{vukolic2017}.
 
 
 \subsubsection{Hybrid Blockchain Models}

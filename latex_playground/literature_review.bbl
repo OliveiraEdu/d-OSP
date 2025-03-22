@@ -88,6 +88,11 @@ Osher Deri.
 \newblock From peercoin and nxt to algorand - a history of proof of stake.
 \newblock misc article, 2020.
 
+\bibitem{easley_mining_2019}
+David Easley, Maureen O'Hara, and Soumya Basu.
+\newblock From mining to markets: {The} evolution of bitcoin transaction fees.
+\newblock {\em Journal of Financial Economics}, 134:91--109, 2019.
+
 \bibitem{buterin2020ghost}
 Vitalik~Buterin et~al.
 \newblock Combining ghost and casper.
@@ -270,6 +275,14 @@ Simplilearn.
 \newblock What is a smart contract in blockchain and how does it work?, 2022.
 \newblock Accessed: 2025-03-17.
 
+\bibitem{steichen2018}
+Mathis Steichen, Beltran Fiz, Robert Norvill, Wazen Shbair, and Radu State.
+\newblock Blockchain-based, decentralized access control for ipfs.
+\newblock In {\em 2018 IEEE International Conference on Internet of Things
+  (iThings) and IEEE Green Computing and Communications (GreenCom) and IEEE
+  Cyber, Physical and Social Computing (CPSCom) and IEEE Smart Data
+  (SmartData)}, pages 1499--1506, 2018.
+
 \bibitem{szabo1996smart}
 Nick Szabo.
 \newblock Smart contracts: Building blocks for digital markets.
@@ -285,6 +298,13 @@ Don Tapscott and Alex Tapscott.
 \newblock {\em Blockchain Revolution: How the Technology Behind Bitcoin and
   Other Cryptocurrencies is Changing the World}.
 \newblock Penguin Random House, 2016.
+
+\bibitem{vukolic2017}
+Marko Vukoli\'{c}.
+\newblock Rethinking permissioned blockchains.
+\newblock In {\em Proceedings of the ACM Workshop on Blockchain,
+  Cryptocurrencies and Contracts}, BCC '17, page 3–7, New York, NY, USA,
+  2017. Association for Computing Machinery.
 
 \bibitem{wood2014ethereum}
 Gavin Wood.
