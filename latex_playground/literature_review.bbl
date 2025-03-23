@@ -84,20 +84,10 @@ George Coulouris, Jean Dollimore, Tim Kindberg, and Jonathon Blair.
 \newblock {\em Distributed Systems: Concepts and Design}.
 \newblock Addison-Wesley, 2011.
 
-\bibitem{benzinga2020pos}
-Osher Deri.
-\newblock From peercoin and nxt to algorand - a history of proof of stake.
-\newblock misc article, 2020.
-
 \bibitem{easley_mining_2019}
 David Easley, Maureen O'Hara, and Soumya Basu.
 \newblock From mining to markets: {The} evolution of bitcoin transaction fees.
 \newblock {\em Journal of Financial Economics}, 134:91--109, 2019.
-
-\bibitem{buterin2020ghost}
-Vitalik~Buterin et~al.
-\newblock Combining ghost and casper.
-\newblock {\em arXiv preprint arXiv:2003.03052}, 2020.
 
 \bibitem{fan2018analysis}
 C.F. Fan, Y.~Chen, R.~Chen, H.~Zhou, and L.~Chen.
@@ -145,16 +135,15 @@ Jonathan Katz and Yehuda Lindell.
 \newblock {\em Introduction to Modern Cryptography}.
 \newblock Chapman and Hall/CRC, 3rd edition, 2020.
 
-\bibitem{kiayias2020ouroboros}
+\bibitem{kiayias2017}
 Aggelos Kiayias, Alexander Russell, Bernardo David, and Roman Oliynykov.
-\newblock Ouroboros: The underlying science behind cardano’s proof-of-stake
-  blockchain.
-\newblock {\em Cryptology ePrint Archive}, 2020:352, 2020.
-
-\bibitem{king2012ppcoin}
-Sunny King and Scott Nadal.
-\newblock Ppcoin: Peer-to-peer crypto-currency with proof-of-stake.
-\newblock White paper, 2012.
+\newblock Ouroboros: A provably secure proof-of-stake blockchain protocol.
+\newblock In J~Katz and H~Shacham, editors, {\em ADVANCES IN CRYPTOLOGY -
+  CRYPTO 2017, PT I}, volume 10401 of {\em Lecture Notes in Computer Science},
+  pages 357--388. Int Assoc Cryptol Res; NSF; Fujitsu; Western Digital;
+  Mozilla, 2017.
+\newblock 37th Annual International Cryptology Conference (Crypto), Univ Calif,
+  Santa Barbara, CA, AUG 20-24, 2017.
 
 \bibitem{koblitz1987elliptic}
 N.~Koblitz.

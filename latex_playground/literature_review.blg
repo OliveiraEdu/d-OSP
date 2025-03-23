@@ -4,45 +4,45 @@ The top-level auxiliary file: literature_review.aux
 The style file: plain.bst
 Database file #1: Bibliography.bib
 Warning--I didn't find a database entry for "bitcoin2008whitepaper"
-You've used 61 entries,
+You've used 58 entries,
             2118 wiz_defined-function locations,
-            823 strings with 12592 characters,
-and the built_in function-call counts, 18721 in all, are:
-= -- 1833
-> -- 829
-< -- 12
-+ -- 342
-- -- 270
-* -- 1164
-:= -- 3122
-add.period$ -- 185
-call.type$ -- 61
-change.case$ -- 311
+            815 strings with 12508 characters,
+and the built_in function-call counts, 18310 in all, are:
+= -- 1796
+> -- 810
+< -- 14
++ -- 333
+- -- 264
+* -- 1158
+:= -- 3033
+add.period$ -- 178
+call.type$ -- 58
+change.case$ -- 298
 chr.to.int$ -- 0
-cite$ -- 61
-duplicate$ -- 737
-empty$ -- 1515
-format.name$ -- 270
-if$ -- 3961
+cite$ -- 58
+duplicate$ -- 726
+empty$ -- 1475
+format.name$ -- 264
+if$ -- 3887
 int.to.chr$ -- 0
-int.to.str$ -- 61
-missing$ -- 55
-newline$ -- 307
-num.names$ -- 122
-pop$ -- 364
+int.to.str$ -- 58
+missing$ -- 54
+newline$ -- 293
+num.names$ -- 118
+pop$ -- 346
 preamble$ -- 1
-purify$ -- 257
+purify$ -- 247
 quote$ -- 0
-skip$ -- 558
+skip$ -- 548
 stack$ -- 0
-substring$ -- 1023
-swap$ -- 161
-text.length$ -- 12
+substring$ -- 1027
+swap$ -- 170
+text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 228
+type$ -- 216
 warning$ -- 0
-while$ -- 179
-width$ -- 63
-write$ -- 657
+while$ -- 175
+width$ -- 60
+write$ -- 631
 (There was 1 warning)

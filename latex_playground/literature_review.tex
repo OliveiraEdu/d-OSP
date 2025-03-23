@@ -99,7 +99,7 @@ Proof of Work (PoW) was first implemented in Bitcoin \cite{nakamoto2008bitcoin} 
 
 \subsubsection{Proof of Stake (PoS)}
 
-Proof of Stake (PoS) is a consensus mechanism designed to address the scalability and energy inefficiencies of Proof of Work (PoW). The first practical application appeared in 2012 with PPCoin (later Peercoin) \cite{king2012ppcoin}. While Peercoin pioneered PoS, it adopted a hybrid PoW/PoS model to bootstrap initial security, where PoW mined the first blocks, and PoS secured subsequent ones. The first pure PoS implementation arrived in 2013 with NXT Blackcoin \cite{benzinga2020pos}, which eliminated mining entirely and relied solely on staking. These projects demonstrated that decentralized consensus could be achieved without energy-intensive computations, setting the stage for modern PoS systems like Ethereum 2.0 \cite{buterin2020ghost}and Cardano \cite{kiayias2020ouroboros}.
+Proof of Stake (PoS) is a consensus mechanism designed to improve blockchain scalability and energy efficiency by replacing computationally intensive mining with a staking-based validation process. In PoS systems, network participants, known as validators, are selected to propose and validate new blocks based on the amount of cryptocurrency they hold and commit as collateral. This approach reduces the reliance on energy-intensive computations while maintaining security and decentralization. Unlike Proof of Work (PoW), where miners compete to solve cryptographic puzzles, PoS incentivizes honest participation through economic penalties and rewards, ensuring network integrity. Modern PoS implementations incorporate additional enhancements, such as adaptive staking models and slashing mechanisms, to further optimize security, efficiency, and decentralization \cite{kiayias2017}.
 
 
 \subsubsection{Mining and Block Validation}
@@ -109,7 +109,7 @@ Mining is the process by which transactions are validated and added to a blockch
 
 Byzantine Fault Tolerance (BFT) is a property of distributed systems that allows them to function correctly even if some nodes act maliciously or fail \cite{lamport1982byzantine}. Traditional consensus mechanisms, such as Practical Byzantine Fault Tolerance (PBFT) \cite{castro1999practical}, require \(2f+1\) honest nodes out of \(3f+1\) total nodes to tolerate \(f\) Byzantine faults. PBFT-based systems provide high efficiency and finality but require a known set of validators, making them more suitable for permissioned blockchains like Hyperledger Iroha.
 
-Hyperledger Iroha incorporates a specialized BFT consensus mechanism called YAC (Yet Another Consensus), which is optimized for voting-based block validation and low-latency operations. This integration ensures that Iroha can achieve consensus efficiently while maintaining the robustness expected of BFT systems.
+Hyperledger Iroha incorporates a specialized BFT consensus mechanism called YAC (Yet Another Consensus)\cite{muratov_yac_2018}, which is optimized for voting-based block validation and low-latency operations. This integration ensures that Iroha can achieve consensus efficiently while maintaining the robustness expected of BFT systems.
 
 \subsection{YAC Consensus and Byzantine Fault Tolerance}
 The YAC (Yet Another Consensus) algorithm ensures Byzantine Fault Tolerance (BFT) \cite{muratov_yac_2018} by employing a voting-based mechanism to achieve consensus in permissioned blockchain networks. YAC achieves BFT through these steps:
@@ -133,6 +133,7 @@ YAC’s lightweight design and focus on efficient communication make it suitable
 The YAC (Yet Another Consensus) algorithm ensures Byzantine Fault Tolerance (BFT) through a voting-based process, as follows:
 
 \subsubsection{Fault Tolerance}
+
 The network must satisfy:
 \[
     n \geq 3f + 1
