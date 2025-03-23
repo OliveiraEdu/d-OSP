@@ -6,10 +6,11 @@ Maher Alharby and Aad van Moorsel.
 \newblock {\em Computer Science \& Information Technology}, pages 125--140,
   2017.
 
-\bibitem{attanasi2020hybrid}
-Alessio~Maria Attanasi and Maria~Grazia Pazienza.
-\newblock Hybrid blockchains: Survey and classification.
-\newblock {\em Information}, 11(4):222, 2020.
+\bibitem{ahmed20222}
+Ahmed Alkhateeb, Cagatay Catal, Gorkem Kar, and Alok Mishra.
+\newblock Hybrid blockchain platforms for the internet of things (iot): A
+  systematic literature review.
+\newblock {\em Sensors}, 22(4), 2022.
 
 \bibitem{bayer1993improving}
 Dave Bayer, Stuart Haber, and W.~Scott Stornetta.
@@ -235,7 +236,7 @@ Satoshi Nakamoto.
 A.~Narayanan, J.~Bonneau, E.~Felten, A.~Miller, and S.~Goldfeder.
 \newblock {\em Bitcoin and cryptocurrency technologies: a comprehensive
   introduction}.
-\newblock Princeton University Press, 2016.
+\newblock Princeton university press, Princeton (N.J.), 2016.
 
 \bibitem{Nosek2015}
 B.~A. Nosek, M.~E. Ebersole, K.~M. DeHaven, and D.~L. Mellor.
@@ -269,6 +270,12 @@ R.L. Rivest, A.~Shamir, and L.~Adleman.
 Tim Roughgarden.
 \newblock {\em Twenty-One Lectures on Algorithmic Game Theory}.
 \newblock Cambridge University Press, 2016.
+
+\bibitem{sedlmeir_energy_2020}
+Johannes Sedlmeir, Hans~Ulrich Buhl, Gilbert Fridgen, and Robert Keller.
+\newblock The {Energy} {Consumption} of {Blockchain} {Technology}: {Beyond}
+  {Myth}.
+\newblock {\em Bus Inf Syst Eng}, 62(6):599--608, December 2020.
 
 \bibitem{simplilearn2022smart}
 Simplilearn.
