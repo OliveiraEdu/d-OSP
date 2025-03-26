@@ -34,7 +34,9 @@ This project uses [Python IPFS HTTP Client](https://github.com/ipfs-shipyard/py-
 ---
 ## 1.3 Requirements
 
-1.3.1 Docker images:
+1.3.1 A host running Docker engine.
+
+1.3.2 Docker images:
 
 - new_jupyter_lab (see `OpenScience/docker/Dockerfile`)
 

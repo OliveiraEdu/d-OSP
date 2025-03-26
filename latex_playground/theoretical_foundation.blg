@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: theoretical_foundation.aux
+The style file: plain.bst
+Database file #1: Bibliography.bib
+Warning--I didn't find a database entry for "bitcoin2008whitepaper"
+You've used 58 entries,
+            2118 wiz_defined-function locations,
+            815 strings with 12518 characters,
+and the built_in function-call counts, 18310 in all, are:
+= -- 1796
+> -- 810
+< -- 14
++ -- 333
+- -- 264
+* -- 1158
+:= -- 3033
+add.period$ -- 178
+call.type$ -- 58
+change.case$ -- 298
+chr.to.int$ -- 0
+cite$ -- 58
+duplicate$ -- 726
+empty$ -- 1475
+format.name$ -- 264
+if$ -- 3887
+int.to.chr$ -- 0
+int.to.str$ -- 58
+missing$ -- 54
+newline$ -- 293
+num.names$ -- 118
+pop$ -- 346
+preamble$ -- 1
+purify$ -- 247
+quote$ -- 0
+skip$ -- 548
+stack$ -- 0
+substring$ -- 1027
+swap$ -- 170
+text.length$ -- 14
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 216
+warning$ -- 0
+while$ -- 175
+width$ -- 60
+write$ -- 631
+(There was 1 warning)

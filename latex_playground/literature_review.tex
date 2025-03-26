@@ -9,7 +9,7 @@
 \usepackage{hyperref}
 \usepackage{amsmath}
 
-\title{Theoretical Referential}
+\title{Literature Review}
 \author{Eduardo Oliveira}
 \date{\today}
 
@@ -17,449 +17,185 @@
 
 \maketitle
 
-\section{Decentralization and Distributed Systems}
 
-Decentralization and distributed systems are fundamental paradigms that redefine how data is processed, stored, and verified across various domains. Unlike traditional architectures that rely on a centralized entity to manage operations, decentralized systems distribute control among multiple participants \cite{coulouris2011distributed}. This approach enhances fault tolerance, ensures system resilience, and mitigates risks associated with single points of failure. Distributed systems, in turn, rely on a network of interconnected nodes to collectively maintain and process data, enabling scalability and redundancy   \cite{lamport_1978, coulouris2011distributed}. These principles underpin various modern technologies, including blockchain \cite{nakamoto2008bitcoin} and decentralized file storage networks \cite{benet2014ipfs}, which eliminate reliance on centralized intermediaries and foster transparency and security.
+\section{Addressing the Reproducibility Crisis in Science Through Open Science and Decentralized Technologies}
 
+\subsection{The Pervasive Challenge of Reproducibility in Science}
 
-\subsection{Decentralization and Distributed Systems the foundation for Blockchain and IPFS}
+\subsubsection{Defining Reproducibility and Replicability}
 
-Blockchain technology embodies decentralization by ensuring that no single entity controls data integrity and transaction validation. Transactions are recorded on a distributed ledger that is maintained collectively by network participants through consensus mechanisms \cite{nakamoto2008bitcoin}. By employing cryptographic techniques \cite{katz2020introduction} and game-theoretic incentives \cite{roughgarden2016twentyone}, blockchain achieves trustless verification, preventing unauthorized modifications while ensuring transparency.
+The terms reproducibility and replicability are central to the integrity of the scientific method, often used interchangeably in common discourse, yet possessing distinct technical meanings \cite{national2019reproducibility}. For the purpose of this literature review, reproducibility will be understood as the ability to obtain consistent results using the same input data, computational steps, methods, and code \cite{stodden2016enhancing}. This definition aligns with the concept of computational reproducibility, which is particularly relevant when considering the application of digital technologies to scientific research.
 
-Similarly, the InterPlanetary File System (IPFS) leverages distributed system principles to provide decentralized data storage \cite{benet2014ipfs}. Unlike conventional file storage, which relies on centralized servers, IPFS distributes files across a peer-to-peer network, addressing them based on their content rather than location. This approach not only ensures data persistence but also enhances accessibility by allowing multiple nodes to host and retrieve the same content. In contrast to blockchain, which primarily records transactions and state changes, IPFS enables efficient and scalable storage of large data objects, complementing blockchain’s immutability with a robust storage layer.
+In contrast, replicability refers to the capacity to achieve consistent results across different studies designed to answer the same scientific question, where each study involves the collection of new, independent data \cite{baker2016reproducibility}. The distinction between these two concepts is crucial as it frames the nature of the reproducibility crisis and influences the types of solutions that can be effectively proposed and evaluated. The focus on computational reproducibility, which decentralized technologies are well-positioned to address through enhanced data sharing and methodological transparency, provides a clear and manageable scope for this literature review.
 
-Both blockchain and IPFS exemplify the synergy between decentralization and distributed computing. Blockchain secures and verifies data integrity, while IPFS ensures scalable, redundant storage, collectively forming the foundation for decentralized applications, provenance tracking, and secure data sharing.
+\subsubsection{Quantifying the Crisis: Statistical Evidence of Reproducibility Failures}
 
-\subsection{Blockchain and IPFS: Complementary Technologies for Decentralized Data Management}
+The scientific community is facing a significant challenge, evidenced by a substantial body of research indicating a widespread inability to reproduce published findings across numerous disciplines \cite{ioannidis2005most}. A notable survey published in \textit{Nature} revealed that over 70\% of researchers have attempted and failed to reproduce the experimental results of other scientists \cite{baker2016reproducibility}. This failure rate is particularly high in fields such as chemistry, where 87\% of researchers reported such issues, followed by biology at 77\%, and medicine at 67\% \cite{fanelli2018opinion}. These figures highlight that the problem is not isolated to specific areas but rather permeates the scientific landscape.
 
-Blockchain technology and the InterPlanetary File System (IPFS) represent complementary solutions in decentralized systems. Blockchain serves as a distributed ledger that ensures immutability, transparency, and security through cryptographic hashing and consensus mechanisms, excelling at maintaining an auditable record of transactions and verifying data integrity \cite{nakamoto2008bitcoin}. In contrast, IPFS is a peer-to-peer distributed file system that addresses data storage challenges by organizing and retrieving content based on its hash rather than its location, enhancing resilience and efficiency by enabling distributed data hosting across a network of nodes \cite{benet2014ipfs}.
+Further evidence comes from a study in \textit{PLOS Biology}, which found that only 22\% of papers published in top-tier journals could be replicated \cite{button2013power}. Similarly, a review in \textit{Nature} indicated that a mere 15\% of studies reported high levels of reproducibility \cite{baker2016reproducibility}. Metastudies corroborate these findings, suggesting that the reproducibility rate across scientific literature may range from a high of 40\% to a low of just 10\% \cite{ioannidis2014replication}. Moreover, studies indicate that up to 70\% of attempts to replicate high-profile experiments end in failure \cite{open2015estimating}. The challenge is further underscored by data from preclinical cancer research, where only approximately 11\% of studies could be successfully replicated \cite{begley2012drug}.
 
-\subsection{Limitations of Blockchain and IPFS}
+\begin{table}[h]
+    \centering
+    \caption{Reproducibility Failure Rates Across Scientific Disciplines}
+    \begin{tabular}{|l|c|}
+        \hline
+        \textbf{Scientific Field}   & \textbf{Failure Rate (\%)} \\
+        \hline
+        Chemistry                   & 87                         \\
+        Biology                     & 77                         \\
+        Medicine                    & 67                         \\
+        Top-tier Journal Studies    & 78                         \\
+        Preclinical Cancer Research & 89                         \\
+        \hline
+    \end{tabular}
+    \label{tab:reproducibility}
+\end{table}
 
-Despite their individual advantages, both technologies face inherent limitations when used independently. Blockchain's ability to store data is constrained by scalability issues since every node must replicate all on-chain information \cite{steichen2018}. Transaction fees, particularly on public blockchains, can further exacerbate these storage constraints \cite{easley_mining_2019}. Conversely, IPFS provides a scalable, cost-effective alternative for decentralized storage  \cite{benet2014ipfs} but lacks built-in guarantees for long-term data persistence. Additionally, while IPFS efficiently distributes content, it does not inherently ensure data immutability or provide robust access control mechanisms \cite{steichen2018}.
+The consistently high rates of reproducibility failures across diverse scientific fields strongly suggest that this is not a collection of isolated incidents but a systemic issue demanding urgent and effective solutions.
 
-\subsection{Integration of IPFS and Blockchain}
 
-Integrating IPFS with blockchain addresses these limitations by leveraging their respective strengths. Instead of storing entire datasets on-chain, only the IPFS hash (Content Identifier, CID) is recorded on the blockchain \cite{steichen2018}. This method significantly reduces on-chain storage costs while preserving the ability to verify data integrity. For example, research data can be stored on IPFS, with their immutable CIDs recorded on the blockchain to ensure provenance.
+\begin{table}[h]
+    \centering
+    \caption{Scope of the Reproducibility Crisis in Science}
+    \label{tab:reproducibility_scope}
+    \begin{tabular}{|p{5cm}|p{4cm}|p{4cm}|}
+        \hline
+        \textbf{Scientific Discipline} & \textbf{Reported Reproducibility/Replication Rate} & \textbf{Source}                               \\
+        \hline
+        General Science                & $>70\%$ failure rate in replication attempts       & Nature Survey \cite{baker2016reproducibility} \\
+        Top-Tier Journal Publications  & 22\% replicable                                    & PLOS Biology \cite{begley2012drug}            \\
+        General Science                & 15\% high reproducibility                          & Nature Review \cite{baker2016reproducibility} \\
+        Biomedical Research            & 10-40\% reproducible                               & Metastudies \cite{ioannidis2005most}          \\
+        High-Profile Experiments       & Up to 70\% replication failure                     & \cite{begley2012drug}                         \\
+        Preclinical Cancer Research    & $\sim11\%$ successfully replicated                 & \cite{prinz2011believe}                       \\
+        Chemistry                      & 87\% failure to reproduce                          & Nature Survey \cite{baker2016reproducibility} \\
+        Biology                        & 77\% failure to reproduce                          & Nature Survey \cite{baker2016reproducibility} \\
+        Medicine                       & 67\% failure to reproduce                          & Nature Survey \cite{baker2016reproducibility} \\
+        \hline
+    \end{tabular}
+\end{table}
 
-While IPFS is highly effective as a distributed storage and content addresser, it does not inherently prevent data modification\cite{benet2014ipfs}. Although a CID uniquely identifies a file, altering the content generates a new CID without linking it to prior versions. Blockchain resolves this by providing an immutable and timestamped record of the original CID, ensuring tamper-proof verification \cite{nakamoto2008bitcoin}. By anchoring the CID on the immutable blockchain, the integrity and authenticity of the file can be verified at any point in the future. Even the slightest modification on a file results in a new CID, enabling immediate detection of data alteration.
 
-Blockchain can also be applied for metadata management in conjunction with IPFS. While IPFS stores the actual file content, the blockchain records associated metadata such as ownership details, timestamps, and descriptions. This metadata provides a secure and auditable context for the data stored on IPFS, ensuring that its provenance and integrity can be verified. For example, in a scientific research management system, details such as the author, date of data collection, and experimental parameters can be stored on the blockchain, while the actual research datasets, raw experimental results, or supplementary materials are stored on IPFS, with their CIDs linked to the blockchain record.
+\subsubsection{Exploring the Multifaceted Causes of the Reproducibility Crisis}
 
-Ultimately, while blockchain and IPFS each address different aspects of decentralized data management, their integration overcomes their individual shortcomings. Blockchain provides a secure, immutable, and auditable reference system, while IPFS offers scalable, efficient, and decentralized storage \cite{nakamoto2008bitcoin, benet2014ipfs}. By combining these technologies, decentralized applications can achieve both data integrity and storage efficiency, enabling more practical and robust implementations across various domains.
+The lack of reproducibility in scientific research stems from a complex interplay of several contributing factors \cite{ioannidis2005most}. Methodological limitations represent a significant category, encompassing flawed study designs that may overlook critical variables or employ inadequate control groups \cite{ioannidis2005most}. Issues with data quality, unreliable measurement tools, and inconsistencies in research practices further exacerbate these challenges \cite{ioannidis2005most}. Additionally, studies with small sample sizes and insufficient statistical power are more prone to producing results that cannot be reliably replicated \cite{baker2016reproducibility}.
 
+Publication bias also plays a crucial role, as scientific journals often show a preference for publishing novel and positive findings, leading to the underreporting or neglect of negative results and replication studies \cite{franco2014publication}. This phenomenon is often referred to as the \textit{file drawer problem}, where non-significant or negative findings remain unpublished \cite{simmons2011false}. Furthermore, the prevalence of questionable research practices (QRPs) such as p-hacking, where researchers manipulate data to achieve statistical significance, and HARKing (hypothesizing after results are known), significantly contribute to the crisis \cite{simmons2011false}.
 
-\subsection{Decentralization and Distributed Systems in context of the Open Science Platform}
+The intense pressure on researchers to consistently publish in high-impact journals, often described as the \textit{publish or perish} culture, can incentivize rushed research, cutting corners, and a prioritization of quantity over methodological rigor and quality \cite{fanelli2010positive}. Finally, a lack of transparency in research practices, such as insufficient reporting of methods and limited access to raw data and research materials, severely hinders the ability of other researchers to independently verify and replicate published findings \cite{franco2014publication}. The convergence of these methodological, systemic, and cultural factors within the scientific ecosystem underscores the multifaceted nature of the reproducibility crisis.
 
-The Open Science Platform integrates decentralized and distributed technologies to enhance reproducibility in scientific research. Traditional research infrastructures often suffer from data silos, paywalled access, and risks of data loss or manipulation. By leveraging blockchain and IPFS, the platform ensures that research artifacts remain tamper-proof, permanently accessible, and verifiable.
+\subsubsection{Analyzing the Far-Reaching Consequences of Irreproducible Research}
 
-Researchers can upload experimental protocols, datasets, and publications to the IPFS decentralized network, preventing single points of failure and enabling unrestricted access to research outputs. Blockchain serves as a provenance-tracking mechanism by recording immutable hashes (CIDs) of research data, ensuring the integrity and authenticity of published findings.
+The consequences of the reproducibility crisis extend far beyond the confines of the scientific community, impacting public trust, economic efficiency, and the overall advancement of knowledge \cite{baker2016reproducibility}. The inability to replicate scientific findings erodes confidence in the reliability of individual researchers, academic institutions, and the scientific enterprise as a whole \cite{baker2016reproducibility}. This erosion of trust can have significant implications for public perception and support of scientific endeavors.
 
-Through the integration of these technologies, the Open Science Platform mitigates the risks associated with centralized control in research dissemination. Traditional repositories may impose restrictions on data access, suffer from institutional biases, or become unavailable over time. In contrast, a decentralized infrastructure empowers researchers to share knowledge freely, ensuring that scientific progress remains transparent and universally accessible.
+Economically, irreproducible research represents a substantial waste of financial resources. Estimates suggest that billions of dollars are spent annually on preclinical research in the United States alone that ultimately cannot be replicated \cite{freedman2015economics}. Some analyses indicate that the direct costs of unreliable biomedical research in the U.S. could be near \$28 billion annually, with indirect effects potentially inflating this figure to hundreds of billions yearly \cite{freedman2015economics}. Furthermore, reliance on irreproducible results can significantly impede scientific progress by misdirecting research efforts, delaying critical breakthroughs, and hindering the cumulative development of scientific understanding \cite{franco2014publication}.
 
-Decentralization and distributed systems redefine how data integrity, accessibility, and transparency are maintained across various domains. Blockchain and IPFS provide complementary solutions that enhance security, immutability, and scalability. In the context of Open Science, these technologies eliminate reliance on centralized institutions, ensuring that research artifacts remain verifiable and permanently accessible. By leveraging decentralization, the Open Science Platform fosters an ecosystem of trustless collaboration, where scientific knowledge can be openly shared and validated by the global research community. To fully grasp the impact of these technologies, it is essential to examine their core components and underlying mechanisms. The following sections explore blockchain fundamentals, decentralized applications (dApps), and IPFS, detailing how each contributes to building a resilient and transparent digital infrastructure to enhance science reproducibility.
+In fields such as medicine, the consequences can be particularly severe, as irreproducible research can lead to patient harm through the development of ineffective or unsafe treatments \cite{begley2012drug}. Therefore, the reproducibility crisis poses a significant threat not only to the integrity of science but also to societal well-being and economic stability.
 
 
-\section{Blockchain}
+\subsection{The Open Science Movement: A Paradigm Shift in Research}
 
-\subsection{Foundational Aspects}
+\subsubsection{Unpacking the Core Tenets of Open Science}
 
-Blockchain is a decentralized, immutable ledger technology designed to facilitate secure and transparent transactions within distributed networks. Initially conceptualized for the Bitcoin blockchain \cite{nakamoto2008bitcoin}, this technology has since evolved into a multi-purpose infrastructure underpinning various domains, including finance, supply chain management, and digital identity verification.
+The Open Science movement represents a fundamental shift in the way scientific research is conducted and disseminated, advocating for principles and practices that make scientific inquiry and its outcomes accessible to everyone \cite{fecher2014open}. At its core, Open Science is built upon several key tenets. Transparency is paramount, emphasizing openness at all stages of the research lifecycle, including the sharing of data, methodologies, and the processes of peer review \cite{fecher2014open}. Accessibility is another crucial principle, aiming to make research outputs, such as publications and datasets, freely available without financial, legal, or technical barriers \cite{fecher2014open}. Open Science also strongly promotes collaboration, encouraging cooperation and the sharing of knowledge among researchers, as well as engagement with the wider public \cite{fecher2014open}. Intrinsically linked to these principles is reproducibility, as Open Science practices are designed to enhance the verifiability and repeatability of research findings \cite{simmons2011false}. This movement signifies a paradigm shift towards a more open, inclusive, and collaborative approach to scientific inquiry.
 
-The development of blockchain, however, did not occur in isolation. The concept of a cryptographically secured chain of blocks predates Bitcoin and draws from earlier research on distributed consensus and cryptographic techniques. A key component in blockchain structures is the Merkle tree, a concept introduced by Ralph Merkle in the 1980s \cite{goos_digital_1988}. These trees enable efficient data integrity verification by organizing hashes in a hierarchical structure, which is crucial for maintaining the integrity of blockchain data.
+\subsubsection{Highlighting the Goals and Potential Benefits of Open Science}
 
-Building on these foundational cryptographic concepts, Stuart Haber and W. Scott Stornetta proposed a method for securely time-stamping digital documents in 1991 \cite{haber_how_1991}. This innovation was significant because it prevented backdating and tampering, laying the groundwork for immutable records. In 1992, Haber, Stornetta, and Bayer further refined this approach by incorporating Merkle trees into their time-stamping system, thereby improving efficiency and strengthening security \cite{bayer1993improving}. These advancements not only contributed to the development of blockchain but also highlighted the potential of decentralized, immutable ledgers for maintaining verifiable records.
+Embracing Open Science is intended to yield numerous positive outcomes and advantages for both the scientific community and society at large. Increased access to research and data has the potential to significantly accelerate discovery by allowing researchers to build upon existing knowledge more efficiently and avoid unnecessary duplication of effort \cite{fecher2014open}. Furthermore, Open Science can foster innovation by stimulating new ideas, products, and collaborations across various sectors through broader access to research findings \cite{bartling2014opening}. By making research accessible to the public, Open Science can also enhance societal impact by increasing transparency, building trust in scientific endeavors, and facilitating the translation of research findings into practical solutions for pressing global challenges \cite{fecher2014open}. A key goal of Open Science is to improve research quality and reproducibility through practices such as open data sharing and open peer review, which enhance the rigor and verifiability of scientific work \cite{simmons2011false}. Finally, Open Science promotes increased collaboration and efficiency by fostering both national and international partnerships and reducing the duplication of research efforts \cite{fecher2014open}. Realizing these substantial benefits, however, necessitates a concerted effort to address the existing challenges that hinder the widespread adoption of Open Science principles.
 
-The fundamental characteristics of blockchain, including decentralization, immutability, transparency, and security, make it a powerful tool for enhancing scientific reproducibility. By providing an auditable and tamper-proof record of research data and workflows, blockchain ensures data integrity and long-term verifiability. Its foundation in cryptographic principles and distributed systems enables it to support a robust infrastructure that enhances the reliability and transparency of scientific research.
+\subsubsection{Examining the Barriers to Widespread Adoption of Open Science}
 
+Despite its significant potential, the widespread adoption of Open Science faces several notable barriers. Financial constraints represent a primary challenge, particularly concerning the costs associated with open access publishing. Article Processing Charges (APCs) required by many open access journals can be prohibitive for researchers with limited funding, creating an economic barrier to participation \cite{tennant2016future}. The financial implications also extend to the infrastructure needed for data sharing and the maintenance of open repositories \cite{boulton2012open}. Social norms and cultural resistance within academia also impede progress, as deeply ingrained practices may resist the shift towards more open methodologies \cite{ioannidis2005most}. A significant aspect of this resistance is the lack of strong incentives and recognition for researchers who engage in time-consuming open science practices such as comprehensive data sharing and the conduct of replication studies \cite{ioannidis2005most}. Infrastructure limitations, especially in regions with less developed technological resources and internet connectivity, pose another substantial hurdle to global participation in open science initiatives \cite{wilkinson2016fair}. Equity concerns arise from financial barriers and the dominance of the English language in scientific communication, potentially disadvantaging researchers from lower-income countries or those whose primary language is not English \cite{chan2011open}. Furthermore, misconceptions about the quality of open access resources can discourage researchers from utilizing these platforms for publishing or accessing research \cite{tennant2016future}. Finally, some researchers express concerns about data sharing, fearing that their work might be prematurely used by others or that their intellectual property could be compromised \cite{vuorikari2016open}. Overcoming these multifaceted barriers is essential to fully realize the transformative potential of the Open Science movement.
 
-\subsection{Public, Private and Hybrid Blockchains}
+\subsection{Decentralized Technologies: Revolutionizing Data Management and Collaboration}
 
-Blockchains can be categorized based on their access control and governance mechanisms into public, private, and hybrid models. Each type offers distinct advantages and trade-offs in terms of decentralization, security, scalability, and transparency.
+\subsubsection{Blockchain Technology: Principles and Applications in Scientific Research}
 
-\subsubsection{Public Blockchains}
+Blockchain technology has emerged as a transformative innovation, offering a distributed ledger system that enhances data security and transparency through its fundamental characteristic of immutability \cite{bartling2014opening}. The core principles underpinning blockchain include its nature as a distributed ledger, where data is not stored in a single location but is instead shared across a network of computers, thereby eliminating the risks associated with centralized systems \cite{cachin2017blockchain}. Immutability ensures that once data is recorded on the blockchain, it becomes virtually impossible to alter without the consensus of the entire network, providing a high degree of data integrity \cite{bartling2014opening}. Security is achieved through the use of cryptographic hashing and robust consensus mechanisms, which protect the data from unauthorized access and tampering \cite{bartling2014opening}.
 
-Public blockchains, such as Bitcoin and Ethereum, allow unrestricted participation, enabling any user to join the network, validate transactions, and maintain a copy of the ledger. These blockchains emphasize decentralization and security, ensuring data integrity through cryptographic hashing and consensus mechanisms such as Proof of Work (PoW) and Proof of Stake (PoS) \cite{nakamoto2008bitcoin}. A defining feature of public blockchains is their transparency, as all transactions are recorded on a publicly accessible ledger. This openness makes them well-suited for applications requiring trustless environments, but it comes at the cost of scalability and efficiency, as every node must process and store all transactions.
+Depending on the specific type of blockchain implementation (e.g., public or permissioned), the system can also offer a high degree of transparency, allowing transactions and data to be auditable by network participants \cite{bartling2014opening}. These inherent properties make blockchain technology particularly relevant to scientific research, with applications ranging from ensuring the integrity and provenance of research data \cite{bartling2014opening} to facilitating secure data sharing and collaboration among researchers \cite{bartling2014opening}. Blockchain also holds promise for enhancing the peer review process by improving its integrity, transparency, and overall efficiency \cite{noothigattu2018trust}, as well as for managing research outputs and intellectual property through secure and verifiable records \cite{vandrouschka2020decentralized}. Furthermore, blockchain can enable decentralized funding mechanisms for research projects, fostering transparency and community involvement in resource allocation \cite{bartling2014opening}. Despite its numerous benefits, it is important to acknowledge the limitations of blockchain technology, including potential scalability issues, transaction costs, and the evolving landscape of legal and regulatory frameworks \cite{xu2019scaling}.
 
-\subsubsection{Private}
+\subsubsection{InterPlanetary File System (IPFS): Decentralized Storage for Research Data}
 
-Private, or permissioned, blockchains restrict participation to authorized entities, making them particularly suitable for enterprise and institutional applications. Frameworks such as Hyperledger Fabric and Hyperledger Iroha are designed for regulated environments where identity verification, compliance, and access control are critical considerations \cite{cachin2016architecture}. Since private blockchains operate under a governing authority that controls access and consensus rules, they offer enhanced scalability and efficiency compared to public blockchains. Unlike PoW-based systems, permissioned blockchains often employ consensus mechanisms such as Practical Byzantine Fault Tolerance (PBFT) and Raft, which reduce computational overhead and transaction latency \cite{vukolic2017}. However, the trade-off is a reduction in decentralization, as control is concentrated within a predefined group of participants.
+The InterPlanetary File System (IPFS) presents a novel approach to data storage, functioning as a peer-to-peer network designed for storing and sharing hypermedia in a decentralized and content-addressed manner \cite{benet2014ipfs}. A key feature of IPFS is content addressing, where each file is uniquely identified based on a cryptographic hash of its content, ensuring data integrity and facilitating efficient retrieval \cite{garay2017content}. The decentralized architecture of IPFS means that data is distributed across a network of interconnected nodes, eliminating single points of failure and enhancing the overall resilience of the storage system \cite{dabek2001wide}.
 
-\subsubsection{Hybrid Blockchain Models}
+IPFS also supports persistence and versioning, allowing users to access previous versions of files and track changes over time, which is particularly valuable in the context of evolving research data \cite{fu2019towards}. Furthermore, IPFS is designed for scalability and efficiency, capable of handling large datasets and potentially reducing bandwidth costs associated with data transfer \cite{dabek2001wide}. In the realm of scientific research, IPFS offers significant advantages for decentralized and persistent data storage, providing a robust and accessible infrastructure for housing research datasets, protocols, and publications \cite{benet2014ipfs}.
 
-Hybrid blockchain models integrate elements of both public and private blockchains, enabling organizations to leverage the benefits of decentralization while maintaining privacy for sensitive data. These architectures allow entities to manage a private ledger while selectively interacting with public networks for verification, auditability, or interoperability. Hybrid approaches are particularly valuable in sectors where confidentiality and transparency must coexist, such as supply chain management, financial services, and healthcare \cite{ahmed20222}. By connecting permissioned chains to public networks, hybrid models offer a balance between data privacy, efficiency, and the advantages of immutable public verification
+It also facilitates data sharing and collaboration by enabling researchers to easily distribute and access large files without the need for centralized servers \cite{benet2014ipfs}. The use of content addressing in IPFS also contributes to ensuring data integrity and verifiability, as it allows for straightforward confirmation that the retrieved data has not been altered since it was originally stored \cite{benet2014ipfs}. One limitation of IPFS when used in isolation is the lack of inherent access control mechanisms, which can be addressed through integration with other technologies like blockchain \cite{xu2019secure}.
 
-\subsection{Consensus Mechanisms in Blockchain}
+\subsubsection{Smart Contracts: Automating Agreements and Workflows in Research}
 
-Consensus mechanisms are fundamental to blockchain networks, ensuring agreement among distributed nodes without requiring centralized authority. These mechanisms validate transactions and maintain the integrity of the ledger, preventing issues such as double-spending and malicious attacks.
+Smart contracts are self-executing agreements where the terms of the contract are directly encoded into program code and stored on a blockchain \cite{szabo1997formalizing}. A defining feature of smart contracts is automation, as they automatically execute predefined actions once specific conditions outlined in the code are met \cite{szabo1997formalizing}. The code of smart contracts is typically transparent, visible on the blockchain for all participants to inspect \cite{szabo1997formalizing}. Once a smart contract is deployed on the blockchain, it becomes immutable, meaning its code and terms cannot be altered \cite{szabo1997formalizing}. This immutability, combined with the decentralized nature of the blockchain, enables trustless execution, as smart contracts operate without the need for intermediaries, fostering trust among parties involved in an agreement \cite{szabo1997formalizing}.
 
-\subsubsection{Proof of Work (PoW)}
+In the context of scientific research, smart contracts hold significant potential for various applications. They can be used for automating data sharing agreements, ensuring that research data is shared according to predefined policies and conditions \cite{bartling2014opening}. Smart contracts can also facilitate the management of intellectual property rights, automating processes related to the transfer and licensing of research findings \cite{vandrouschka2020decentralized}. Furthermore, they can be employed in facilitating decentralized funding by automating the distribution of research grants based on the achievement of specific milestones \cite{vandrouschka2020decentralized}.
 
-Proof of Work (PoW) was first implemented in Bitcoin \cite{nakamoto2008bitcoin} and remains one of the most well-known consensus mechanisms. PoW requires network participants, known as miners, to solve complex cryptographic puzzles using computational resources. The first miner to find a valid solution can append a new block to the blockchain and receive a block reward. This process ensures security but comes at the cost of significant energy consumption \cite{narayanan2016bitcoin, sedlmeir_energy_2020}. Additionally, the difficulty adjustment mechanism ensures that blocks are produced at a steady rate by modifying the complexity of the puzzle based on the total computational power of the network.
+Smart contracts could also play a role in verifying research processes and results by automating certain aspects of validation and ensuring adherence to predefined protocols \cite{bartling2014opening}. Additionally, they can be used to incentivize peer review and reproducibility by automatically rewarding researchers for conducting reviews or successfully replicating studies \cite{szabo1997formalizing}. While offering numerous advantages, the development of secure and reliable smart contracts can be complex, and the potential for errors in the code necessitates careful design and auditing \cite{wood2015ethereum}.
 
-\subsubsection{Proof of Stake (PoS)}
+\subsection{Bridging the Gap: Open Science as a Framework for Reproducible Research}
 
-Proof of Stake (PoS) is a consensus mechanism designed to improve blockchain scalability and energy efficiency by replacing computationally intensive mining with a staking-based validation process. In PoS systems, network participants, known as validators, are selected to propose and validate new blocks based on the amount of cryptocurrency they hold and commit as collateral. This approach reduces the reliance on energy-intensive computations while maintaining security and decentralization. Unlike Proof of Work (PoW), where miners compete to solve cryptographic puzzles, PoS incentivizes honest participation through economic penalties and rewards, ensuring network integrity. Modern PoS implementations incorporate additional enhancements, such as adaptive staking models and slashing mechanisms, to further optimize security, efficiency, and decentralization \cite{kiayias2017}.
+\subsubsection{Analyzing How Open Science Principles Currently Address the Reproducibility Crisis}
 
+The Open Science movement provides a robust framework of principles and practices that directly aim to mitigate the reproducibility crisis in scientific research \cite{simmons2011false}. A cornerstone of this approach is the emphasis on open data and methods, which involves making research data, methodologies, and analysis code publicly available. This transparency allows other researchers to independently verify the original findings and attempt to replicate the study \cite{fecher2014open}.
 
-\subsubsection{Mining and Block Validation}
-Mining is the process by which transactions are validated and added to a blockchain. In PoW-based systems, miners compete to solve cryptographic puzzles, while in PoS-based systems, validators are selected to propose and confirm blocks based on their stakes. Mining serves two key purposes: securing the network by making attacks computationally expensive and issuing new tokens as rewards. This incentive structure aligns participant behavior with the network’s security goals \cite{bonneau2015sok}. For example, Bitcoin employs PoW mining, while Ethereum 2.0 uses PoS validation.
+Another important practice is pre-registration, where researchers publicly document their study protocols and analysis plans before conducting the research. This helps to increase transparency and reduces the potential for questionable research practices such as HARKing and p-hacking \cite{simmons2011false}. Open access publishing, which makes research publications freely available to all, ensures that findings are widely accessible for scrutiny and potential replication by the broader scientific community \cite{fecher2014open}.
 
-\subsubsection{Byzantine Fault Tolerance (BFT)}
+The format of registered reports represents an innovative approach where study protocols are peer-reviewed and accepted for publication prior to data collection, thereby significantly reducing the influence of publication bias on the dissemination of research outcomes \cite{simmons2011false}. Finally, open peer review, which introduces transparency into the evaluation process, can further enhance the rigor and accountability of scientific publishing \cite{simmons2011false}. Through these various practices, Open Science directly addresses many of the factors contributing to the reproducibility crisis by promoting transparency and enabling the verification of research findings.
 
-Byzantine Fault Tolerance (BFT) is a property of distributed systems that allows them to function correctly even if some nodes act maliciously or fail \cite{lamport1982byzantine}. Traditional consensus mechanisms, such as Practical Byzantine Fault Tolerance (PBFT) \cite{castro1999practical}, require \(2f+1\) honest nodes out of \(3f+1\) total nodes to tolerate \(f\) Byzantine faults. PBFT-based systems provide high efficiency and finality but require a known set of validators, making them more suitable for permissioned blockchains like Hyperledger Iroha.
+\subsubsection{Evaluating the Limitations of Current Open Science Implementations in Fully Resolving the Crisis}
 
-Hyperledger Iroha incorporates a specialized BFT consensus mechanism called YAC (Yet Another Consensus)\cite{muratov_yac_2018}, which is optimized for voting-based block validation and low-latency operations. This integration ensures that Iroha can achieve consensus efficiently while maintaining the robustness expected of BFT systems.
+While Open Science offers a powerful framework for improving research reproducibility, its current implementations face certain limitations that prevent it from fully resolving the crisis \cite{fecher2014open}. Many Open Science practices rely on the voluntary participation of researchers and may lack robust automation and enforcement mechanisms to ensure consistent adherence and data integrity. Furthermore, the incentive structures within academia often do not adequately reward the time and effort required for comprehensive Open Science practices, such as thorough data sharing and conducting replication studies \cite{fecher2014open}.
 
-\subsection{YAC Consensus and Byzantine Fault Tolerance}
-The YAC (Yet Another Consensus) algorithm ensures Byzantine Fault Tolerance (BFT) \cite{muratov_yac_2018} by employing a voting-based mechanism to achieve consensus in permissioned blockchain networks. YAC achieves BFT through these steps:
+While open data sharing increases transparency, it does not inherently guarantee the integrity and trustworthiness of the data itself, as manipulation could potentially occur before the data is shared. Current Open Science infrastructures may also face challenges in terms of scalability and complexity when it comes to managing and verifying the growing volume of large and intricate datasets produced by modern scientific research. Finally, deeply entrenched cultural and systemic barriers, such as the strong emphasis on publishing novel findings in high-impact journals within the ``publish or perish'' system, can still undermine the effectiveness of even the most well-intentioned Open Science practices \cite{fecher2014open}. These limitations suggest that while Open Science provides a crucial foundation, complementary approaches may be necessary to fully address the persistent challenges of the reproducibility crisis.
 
-\subsubsection{Voting for Block Hash}
-Validators in the network vote on the hash of the proposed block rather than its entire content. This reduces communication overhead while ensuring consistency among honest nodes.
+\subsection{The Synergistic Potential of Decentralized Technologies and Open Science}
 
-\subsubsection{Fault Tolerance}
-YAC tolerates Byzantine faults by requiring a supermajority (e.g., 2/3 of validators) to agree on the block hash. This guarantees that even if some nodes act maliciously or fail, the system can still reach consensus.
+\subsubsection{Exploring the Theoretical Alignment of Decentralized Technologies and Open Science}
 
-\subsubsection{Finality}
-Once a supermajority is reached, the block is considered finalized, and all honest nodes accept it as part of the blockchain. This prevents forks and ensures the integrity of the ledger.
+Decentralized technologies, particularly blockchain, IPFS, and smart contracts, exhibit a strong theoretical alignment with the core tenets of the Open Science movement, offering the potential to reinforce and enhance its impact on research reproducibility \cite{benet2014ipfs}. Blockchain technology, with its inherent transparency and immutability, can significantly enhance the verifiability and trustworthiness of research data and processes within the Open Science framework. The permanent and auditable nature of blockchain records ensures that research outputs remain tamper-proof and their history is easily traceable \cite{benet2014ipfs}.
 
-\subsubsection{Permissioned Design}
-YAC is specifically designed for permissioned blockchains, where validators are pre-approved entities. This controlled environment enhances security and reduces the likelihood of large-scale malicious attacks.
+The InterPlanetary File System (IPFS), with its decentralized and content-addressed storage, directly supports the Open Science principle of open access by providing a robust and persistent infrastructure for storing and sharing research outputs, ensuring their long-term availability and accessibility to the global scientific community \cite{benet2014ipfs}. Finally, smart contracts offer a powerful mechanism for automation and trustless execution that can be leveraged within Open Science to automate data sharing agreements, manage intellectual property rights in a transparent manner, and potentially incentivize reproducible research practices through automated reward systems \cite{szabo1997formalizing}. In essence, decentralized technologies provide concrete technical solutions that can address some of the key limitations of current Open Science implementations by offering enhanced mechanisms for ensuring data integrity, accessibility, automation, and trust within the scientific research ecosystem.
 
-YAC’s lightweight design and focus on efficient communication make it suitable for enterprise-grade applications, such as Hyperledger Iroha, where high performance and reliability are critical.
+\subsubsection{Investigating Existing Research and Initiatives Leveraging Decentralized Technologies for Open and Reproducible Science}
 
-\subsection{Consensus Algorithm for YAC}
+The intersection of decentralized technologies and Open Science in addressing the reproducibility crisis is an active area of research and development, with a growing number of initiatives exploring the potential of blockchain, IPFS, and smart contracts \cite{benet2014ipfs}. Several Decentralized Science (DeSci) platforms have emerged, such as VitaDAO, ResearchHub, and OriginTrail, which leverage these technologies to create more open and collaborative research environments \cite{benet2014ipfs}. These platforms are exploring decentralized solutions for various aspects of the research lifecycle, including open access publishing, secure data sharing, transparent funding mechanisms, incentivized peer review processes, and the management of intellectual property rights through IP-NFTs \cite{benet2014ipfs}.
 
-The YAC (Yet Another Consensus) algorithm ensures Byzantine Fault Tolerance (BFT) through a voting-based process, as follows:
+Prior research by the author has also explored the use of blockchain technology to improve the reproducibility of preclinical research experiments \cite{author2023blockchain}. Furthermore, there are initiatives focused on utilizing blockchain to enhance the integrity and transparency of the peer review process \cite{bartling2014opening}, and IPFS is being investigated and implemented as a decentralized storage solution for research data, offering persistence and accessibility \cite{dabek2001wide}. This growing body of work indicates a significant interest in and exploration of how decentralized technologies can be practically applied within the Open Science framework to tackle the challenges of research reproducibility.
 
-\subsubsection{Fault Tolerance}
+\subsubsection{Highlighting the Potential Benefits of the Synergistic Approach}
 
-The network must satisfy:
-\[
-    n \geq 3f + 1
-\]
-Where:
-\begin{itemize}
-    \item \( n \): Total number of nodes in the network.
-    \item \( f \): Maximum number of Byzantine (malicious or faulty) nodes tolerated.
-\end{itemize}
+The integration of decentralized technologies within the Open Science framework offers a powerful synergistic approach with the potential to significantly enhance research reproducibility. By leveraging the unique capabilities of blockchain and IPFS, the integrity of research data can be substantially improved. Blockchain ensures immutability and provides an auditable trail of data provenance, while IPFS offers content-based addressing, guaranteeing that data remains verifiable and free from tampering \cite{benet2014ipfs}. The use of blockchain and smart contracts can also lead to more transparent research workflows, creating auditable processes from data collection and analysis to publication and peer review \cite{author2023blockchain}. Smart contracts further enable automated verification of certain research processes and results, increasing efficiency and reducing the potential for human error \cite{szabo1997formalizing}.
 
-This ensures that the network can tolerate up to \( f \) Byzantine nodes while still achieving consensus.
+Decentralized platforms can also employ tokens and smart contracts to create incentives for collaboration and reproducibility, rewarding researchers for sharing data, conducting replication studies, and participating in open peer review \cite{szabo1997formalizing}. Finally, IPFS offers a robust solution for improved accessibility and long-term preservation of research outputs by providing decentralized and persistent data storage \cite{benet2014ipfs}. The convergence of these benefits underscores the significant potential of this synergistic approach to foster a more transparent, reliable, and trustworthy scientific ecosystem, directly addressing the core challenges posed by the reproducibility crisis.
 
-\subsubsection{Supermajority Agreement}
-For a block to be finalized, a supermajority of nodes must agree on its hash:
-\[
-    v > \frac{2n}{3}
-\]
-Where:
-\begin{itemize}
-    \item \( v \): Number of votes for the block hash.
-    \item \( n \): Total number of nodes.
-\end{itemize}
+\subsection{Identifying Knowledge Gaps and Charting Future Research Directions}
 
-This condition guarantees both safety and liveness in consensus.
+\subsubsection{Synthesizing the Literature to Pinpoint Unanswered Questions and Areas for Further Investigation}
 
-\subsubsection{Voting Process}
+The comprehensive review of existing literature reveals several key gaps in the current understanding of how decentralized technologies can be effectively leveraged within the Open Science framework to address the reproducibility crisis. While the theoretical alignment and potential benefits are increasingly recognized, more empirical evidence is needed to rigorously evaluate the effectiveness and impact of decentralized platforms on research reproducibility across diverse scientific disciplines \cite{garcia2021decentralized}.
 
-The voting process involves two phases:
-\begin{enumerate}
-    \item \textbf{Proposal Phase}: A leader node proposes a block hash.
-    \item \textbf{Voting Phase}: Nodes vote on the proposed hash, and votes are collected until the supermajority condition is met.
-\end{enumerate}
+Further research is also crucial to address the scalability and performance limitations of blockchain and IPFS when handling the large datasets and high transaction volumes characteristic of modern scientific research \cite{xu2019scalability}. Understanding and overcoming user adoption barriers for decentralized research tools is another critical area requiring more investigation, including the development of intuitive and user-friendly interfaces tailored to the needs of researchers with varying levels of technical expertise \cite{fecher2017academic}. The development and evaluation of effective governance models for decentralized science platforms are also essential to ensure quality control, prevent the spread of misinformation, and foster meaningful community participation \cite{bartling2014opening}.
 
-\subsubsection{Finality}
-Once a block achieves supermajority agreement, it is considered finalized and added to the blockchain. This ensures that all honest nodes accept the same block, preventing forks.
+Furthermore, the legal and ethical implications of using blockchain and IPFS for scientific research data, particularly concerning data privacy, security, ownership, and compliance with evolving regulations, warrant further in-depth analysis \cite{finck2018blockchain}. Research on achieving interoperability and seamless integration between decentralized platforms and existing scientific infrastructure and workflows is also necessary for broader adoption \cite{bogaard2020interoperability}. Finally, comprehensive cost-benefit analyses are needed to assess the economic feasibility and long-term sustainability of implementing decentralized solutions for promoting Open Science and research reproducibility. Specific challenges related to the implementation of decentralized peer review systems, such as scalability, cost, legal risks, standardization, resistance to change, and perceived uncertainty, also require further exploration. These identified gaps highlight the need for continued and focused research to fully realize the potential of decentralized technologies in advancing Open Science and addressing the reproducibility crisis.
 
+\subsubsection{Proposing Potential Avenues for Future Research}
 
-\subsection{Conclusion}
-Consensus mechanisms, mining, and fault tolerance strategies are critical in ensuring blockchain security and functionality. The choice between PoW, PoS, and BFT-based approaches impacts the efficiency, decentralization, and security of blockchain networks. Furthermore, the distinction between public, private, and hybrid blockchains influences their applications, with public blockchains prioritizing trustlessness and private blockchains emphasizing control and efficiency. Understanding these foundational aspects enables the development of blockchain-based solutions tailored to the needs of Open Science and research reproducibility.
+Based on the identified knowledge gaps, several promising avenues for future research emerge. A key direction involves the development and rigorous evaluation of novel decentralized platforms that integrate blockchain, IPFS, and smart contracts to specifically support Open Science principles and enhance reproducibility within various scientific disciplines. Conducting in-depth case studies and empirical assessments of existing and emerging DeSci platforms will be crucial for understanding their real-world impact on research outcomes and user experience.
 
+Future research should also focus on the investigation and proposal of effective governance models for decentralized science platforms that can ensure the quality, accountability, and active participation of the research community. Addressing the complex legal and ethical challenges associated with the use of decentralized technologies for scientific research data requires interdisciplinary collaboration and the development of practical solutions. Furthermore, research efforts should be directed towards developing standards and solutions that enable seamless interoperability and integration between decentralized research platforms and the established scientific infrastructure.
 
-\subsection{Public Key Cryptography in Blockchain}
-
-Public key cryptography plays a fundamental role in securing blockchain networks by enabling secure transactions, identity verification, and data integrity without requiring a centralized authority \cite{narayanan2016bitcoin}. It forms the foundation for digital signatures, key management, and encryption mechanisms that ensure trust and security in decentralized environments.
-
-\subsubsection{Role of Public Key Cryptography in Blockchain}
-Blockchain networks rely on asymmetric cryptography, also known as public key cryptography, to authenticate and authorize transactions \cite{rivest1978method}. Each participant in the network possesses a pair of cryptographic keys: a \textbf{public key}, which serves as an address that others can use to send transactions, and a \textbf{private key}, which is used to sign transactions and prove ownership. When a user initiates a transaction, they generate a \textbf{digital signature} using their private key, allowing other participants to verify the authenticity of the transaction without revealing the private key itself \cite{menezes1996handbook}.
-
-This mechanism ensures that only the rightful owner of an asset can authorize its transfer, preventing fraud and unauthorized access \cite{wood2014ethereum}. Additionally, cryptographic hashing techniques complement public key cryptography by ensuring data integrity and linking transactions in an immutable ledger \cite{merkle1988digital}.
-
-\subsubsection{Commonly Used Cryptographic Ciphers and Standards}
-Several cryptographic ciphers and standards are widely used in blockchain implementations to provide strong security guarantees:
-
-\begin{itemize}
-    \item \textbf{RSA (Rivest-Shamir-Adleman):} A traditional public key cryptosystem based on the difficulty of factoring large prime numbers \cite{rivest1978method}. While RSA is widely used in general cryptographic applications, its key sizes are relatively large compared to modern alternatives, making it less practical for blockchain applications.
-    \item \textbf{Elliptic Curve Cryptography (ECC):} A more efficient asymmetric cryptography scheme that provides the same level of security as RSA but with significantly smaller key sizes \cite{miller1986use}. This efficiency makes ECC the preferred choice for blockchain applications.
-    \item \textbf{ECDSA (Elliptic Curve Digital Signature Algorithm):} A widely adopted digital signature scheme based on ECC, used in Bitcoin and Ethereum to secure transactions \cite{johnson2001elliptic}.
-    \item \textbf{EdDSA (Edwards-curve Digital Signature Algorithm):} A modern alternative to ECDSA, known for its faster signature verification and improved security properties \cite{bernstein2012high}. It is used in newer blockchain protocols like Monero.
-    \item \textbf{X25519:} A secure key exchange protocol based on Curve25519, commonly used in cryptographic operations for secure communication in blockchain applications \cite{langley2016curve25519}.
-    \item \textbf{Ed25519 with SHA-3:} Hyperledger Iroha natively employs Ed25519, a variant of EdDSA, combined with SHA-3 for enhanced security. This cryptographic combination ensures efficient key pair generation, digital signatures, and verification processes tailored to Iroha’s permissioned blockchain environment \cite{hyperledger_iroha}.
-\end{itemize}
-
-\subsubsection{Elliptic Curve Cryptography (ECC) in Blockchain}
-Elliptic Curve Cryptography (ECC) is a type of public key cryptography that leverages the mathematical properties of elliptic curves over finite fields to provide strong security with smaller key sizes \cite{koblitz1987elliptic}. The security of ECC is based on the \textbf{Elliptic Curve Discrete Logarithm Problem (ECDLP)}, which is computationally hard to solve \cite{hankerson2006guide}.
-
-In blockchain systems, ECC is primarily used for:
-\begin{enumerate}
-    \item \textbf{Digital Signatures:} ECC enables the creation of compact and secure digital signatures, such as those used in Bitcoin (ECDSA) and newer blockchain protocols (EdDSA and Ed25519) \cite{johnson2001elliptic, bernstein2012high}.
-    \item \textbf{Key Pair Generation:} Blockchain wallets generate private-public key pairs using elliptic curves, ensuring that users can securely sign and verify transactions \cite{wu2018blockchain}. For example, Hyperledger Iroha specifically utilizes Ed25519 with SHA-3 for key pair generation, providing robust security and efficiency \cite{hyperledger_iroha}.
-    \item \textbf{Scalability and Efficiency:} Due to its small key size and lower computational requirements, ECC allows blockchain networks to process transactions more efficiently while maintaining security \cite{fan2018analysis}.
-\end{enumerate}
-
-Bitcoin, for instance, uses the \textbf{secp256k1} elliptic curve for key generation and signing, which provides a 256-bit key length offering high security with lower processing overhead compared to traditional cryptographic methods \cite{brown2010standards}. In contrast, Hyperledger Iroha leverages Ed25519 with SHA-3 to ensure a balance between performance, security, and compatibility with modern cryptographic best practices \cite{hyperledger_iroha}.
-
-\subsection*{Conclusion}
-Public key cryptography is a cornerstone of blockchain security, enabling authentication, digital signatures, and secure communication. The adoption of ECC and its derivatives, such as ECDSA and EdDSA, has significantly improved the efficiency and scalability of blockchain networks, making them resilient to attacks while minimizing computational and storage costs. Future blockchain advancements may incorporate more advanced cryptographic techniques, including post-quantum cryptography, to further enhance security in decentralized systems.
-
-
-\section{Introduction to Smart Contracts}
-
-Smart contracts represent a fundamental technological innovation that automates and enforces agreements between parties without requiring trusted intermediaries. First conceptualized by Nick Szabo in the late 1990s, smart contracts were envisioned as self-executing contractual arrangements, where terms could be translated into code and automatically enforced by the system itself\cite{szabo1996smart}. Szabo illustrated this concept using a vending machine analogy, where the machine's mechanism guarantees the delivery of goods upon receiving the correct payment, requiring minimal trust between parties\cite{szabo1997formalizing}.
-
-\section{Technical Framework and Operation}
-
-At a technical level, smart contracts are programs that encode business logic and operate on specialized virtual machines embedded within blockchain or distributed ledger infrastructures. Their implementation follows a structured process:
-
-Business requirements are defined collaboratively between stakeholders and developers. Conditions triggering contract execution are established (e.g., payment authorization, delivery confirmation). Development teams code these conditions and responses using specialized platforms. Security testing and validation are performed before deployment. Once deployed, contracts monitor event data from trusted sources ("oracles"). Upon fulfillment of pre-defined conditions, the contract automatically executes\cite{simplilearn2022smart}.
-
-This automation eliminates the need for intermediaries while providing transparency, immutability, and trustless verification of transactions. All executions are recorded on the blockchain, creating an immutable audit trail that enhances accountability.
-
-\section{Smart Contracts in Decentralized Applications (dApps)}
-
-Smart contracts form the backbone of decentralized applications (dApps) by providing the autonomous business logic that operates independently of centralized control. In the dApp ecosystem, smart contracts enable trustless interactions where participants engage in complex transactions without requiring mutual trust. Smart contracts also provide transparent Governance, all network participants have visibiltiy of the encoded rules. Assets can be transferred automatically when conditions are met enabling automated value exchange and  complex multi-party agreements can be executed achieving a decentralized decision making process\cite{alharby2017blockchain}.
-
-\section{Hyperledger Implementations}
-
-Within the Hyperledger ecosystem, multiple implementations of smart contract frameworks exist, each with distinct approaches and capabilities.
-
-\subsection{Hyperledger Fabric}
-
-Hyperledger Fabric has evolved to support Ethereum Virtual Machine (EVM) bytecode smart contracts, allowing contracts to be written in languages such as Solidity or Vyper. This enhancement, introduced in version 1.3, enables developers to migrate or create decentralized applications for permissioned platforms, expanding the framework's versatility\cite{hyperledger2018fabric}.
-
-\subsection{Hyperledger Burrow}
-
-Hyperledger Burrow represents a permissioned Ethereum-compatible blockchain that executes smart contract code on a permissioned virtual machine. Built on a Tendermint consensus engine, Burrow provides transaction finality and high throughput for proof-of-stake systems. Burrow serves three key functions in the Hyperledger ecosystem:
-
-A bridge to the Tendermint/Cosmos ecosystem. An Ethereum side-chain with compatibility for advanced smart contract languages. A lightweight, hackable EVM/Solidity execution library\cite{hyperledger2019burrow}.
-
-As a fully-fledged blockchain and smart contract framework, Burrow incorporates a Unix-style permissioning model directly into its EVM implementation, allowing granular control over actions such as sending tokens, creating contracts, or becoming validators\cite{monax2020burrow}.
-
-\subsection{Hyperledger Iroha}
-
-Hyperledger Iroha takes a distinctive approach to smart contracts. In Iroha v1, a limited set of commands was provided without Turing-complete computation capabilities. However, Iroha v2 introduces Iroha Special Instructions (ISI) to enable Turing-complete computation while maintaining ease of use for common tasks.
-
-Unlike Ethereum's model of deploying contracts that users interact with, Iroha employs a data model of domains, accounts, and assets that change through various interactions. ISI functions more like database triggers than deployed smart contracts, with event triggers placed on transactions that match specific parameters\cite{hyperledger2020iroha}.
-
-\section{Smart Contracts for Scientific Research Reproducibility}
-
-The application of smart contracts extends beyond financial transactions to scientific research, where they can significantly enhance reproducibility. By encoding experimental protocols, data collection methodologies, and analysis procedures as smart contracts, researchers can create immutable records of their methods, ensuring that others can reproduce their work precisely\cite{pilehchiha2022improving}.
-
-Smart contracts can automate:
-
-Data provenance tracking. Experimental parameter recording. Statistical analysis execution. Publication of results with verification.
-
+Conducting thorough cost-effectiveness studies will be essential for evaluating the economic viability and sustainability of decentralized solutions for promoting Open Science and reproducibility. Investigating and evaluating strategies to promote user adoption of decentralized research tools within the broader scientific community is also a critical area for future work. Finally, research should focus on defining and developing appropriate metrics that can effectively measure and track improvements in research reproducibility on decentralized platforms. These research directions collectively aim to bridge the existing knowledge gaps and pave the way for the effective utilization of decentralized technologies in advancing Open Science and fostering a more reproducible scientific ecosystem.
 
 \section{Conclusion}
 
-Smart contracts represent a paradigm shift in how agreements are codified, executed, and verified in decentralized systems. From Szabo's initial conceptualization to current implementations across various blockchain platforms, smart contracts continue to evolve in sophistication and application scope. The various implementations within the Hyperledger ecosystem demonstrate the versatility of this technology, while emerging applications in scientific research highlight its potential beyond financial use cases. As the technology matures, smart contracts will likely become an increasingly integral component of trusted digital interactions across numerous domains.
+The literature reviewed in this chapter underscores the pervasive and multifaceted nature of the reproducibility crisis in science, highlighting its significant impact on the credibility and progress of scientific knowledge. The Open Science movement offers a promising framework for addressing this crisis by promoting transparency, accessibility, collaboration, and reproducibility. However, current implementations of Open Science face limitations related to automation, incentives, data integrity, scalability, and cultural barriers.
 
+Decentralized technologies, including blockchain, IPFS, and smart contracts, present a compelling set of tools that align with the principles of Open Science and have the potential to overcome some of its inherent limitations. Existing research and emerging Decentralized Science initiatives demonstrate the growing interest in leveraging these technologies to enhance data integrity, transparency, automation, and collaboration within the scientific ecosystem. Despite the promise, significant knowledge gaps remain regarding the practical implementation, effectiveness, and broader implications of this synergistic approach.
 
+Future research should focus on developing and evaluating novel decentralized platforms, addressing user adoption challenges, establishing effective governance models, navigating legal and ethical considerations, and assessing the overall cost-effectiveness of these solutions. By systematically addressing these gaps, the scientific community can move towards a more transparent, reliable, and trustworthy research environment, ultimately strengthening the foundations of scientific progress.
 
-\section{The InterPlanetary File System (IPFS)}
 
-The InterPlanetary File System (IPFS) is a decentralized, peer-to-peer distributed file system designed to interconnect computing devices through a unified storage network \cite{benet2014ipfs}. By employing content-addressable storage and cryptographic hashing, IPFS enables the efficient sharing and retrieval of immutable data objects. Conceptually, it operates as a single, large-scale BitTorrent swarm exchanging objects within a Git-like repository. The system leverages a high-throughput, content-addressed block storage model with content-addressed hyperlinks, forming a generalized Merkle Directed Acyclic Graph (DAG). This architecture underpins various functionalities, including versioned file systems, blockchain data structures, and a more persistent and decentralized web. By integrating a Distributed Hash Table (DHT), an incentivized block exchange protocol, and a self-certifying namespace, IPFS eliminates single points of failure and minimizes the necessity for inter-node trust.
-
-\subsection{Background and Architectural Principles}
-
-IPFS is inspired by and synthesizes multiple established peer-to-peer technologies, including DHTs, BitTorrent, Git, and Self-Certifying Filesystems (SFS) \cite{benet2014ipfs}. While traditional web protocols such as HTTP provide an efficient means of requesting and transmitting data, they do not inherently incorporate modern file distribution strategies, resulting in limitations concerning redundancy, security, and scalability. By contrast, IPFS addresses these challenges by integrating and refining established distributed system techniques into a unified framework, ensuring efficient content retrieval and data persistence across geographically distributed nodes.
-
-\subsection{Key Architectural Components}
-
-IPFS is structured as a modular protocol stack, with distinct subsystems contributing to its overall functionality \cite{benet2014ipfs}:
-
-\begin{itemize}
-    \item \textbf{Identities:} Manages node identity generation and verification, typically employing static cryptographic puzzles derived from S/Kademlia.
-    \item \textbf{Network:} Governs peer-to-peer communication through various transport mechanisms, including WebRTC DataChannels and uTP.
-    \item \textbf{Routing:} Facilitates object discovery and peer lookup through a DHT, defaulting to a structure based on S/Kademlia and Coral.
-    \item \textbf{Exchange:} Utilizes BitSwap, a block exchange protocol that promotes efficient data replication through an incentive-driven market mechanism.
-    \item \textbf{Objects:} Implements a Merkle DAG to store immutable, content-addressed objects, forming the foundation for versioned data structures.
-    \item \textbf{Files:} Introduces a versioned file system hierarchy inspired by Git, supporting efficient data storage and retrieval.
-    \item \textbf{Naming:} Incorporates a self-certifying mutable name system, enabling dynamic reference updates for evolving datasets.
-\end{itemize}
-
-These components collectively ensure a robust and scalable approach to distributed data management, making IPFS a compelling alternative to centralized storage solutions.
-
-\subsection{Content Addressing and Data Integrity}
-
-A fundamental principle of IPFS is its reliance on content addressing, wherein data objects are identified by the cryptographic hash of their contents \cite{benet2014ipfs}. This methodology not only facilitates efficient deduplication but also guarantees data integrity, as any modification to an object results in a new, distinct hash. The Merkle DAG structure further enhances the efficiency of storage and retrieval processes, allowing for seamless handling of large datasets and enabling robust versioning capabilities. By leveraging cryptographic hashing, IPFS inherently verifies data authenticity and prevents unauthorized modifications.
-
-\subsection{Routing and Peer Discovery}
-
-IPFS employs a DHT-based routing mechanism to locate peers and retrieve specific data objects \cite{benet2014ipfs}. This approach enables highly scalable and decentralized object discovery, as network participants contribute to maintaining a distributed index of content addresses. Small data values (typically under 1KB) can be stored directly within the DHT, whereas larger datasets are distributed across multiple nodes, optimizing both redundancy and retrieval speed.
-
-\subsection{Block Exchange and Incentive Mechanisms}
-
-The BitSwap protocol governs IPFS’s block exchange mechanism, ensuring efficient data distribution and replication \cite{benet2014ipfs}. BitSwap operates as a marketplace where nodes trade blocks with one another, prioritizing the replication of rarer blocks to optimize availability. This economic model incentivizes participation and data persistence, ensuring that frequently accessed content remains accessible without relying on a centralized infrastructure.
-
-\subsection{Security and Node Authentication}
-
-Security within IPFS is underpinned by a cryptographic identity system, where nodes are identified by the hash of their public key \cite{benet2014ipfs}. This ensures that nodes can authenticate one another upon connection, exchanging public keys to verify identities. Additionally, IPFS adopts a flexible multihash format for cryptographic digests, allowing for algorithmic adaptability as cryptographic standards evolve.
-
-\section{Mathematical Foundations of IPFS}
-
-\subsection{Cryptographic Hashing Functions}
-
-The security and functionality of the InterPlanetary File System (IPFS) rely heavily on cryptographic hashing. IPFS typically employs the SHA-256 algorithm \cite{menezes1996handbook}, which generates a fixed-size (256-bit) output from a variable-sized input. The mathematical properties of cryptographic hash functions that make them suitable for IPFS include:
-
-\begin{itemize}
-    \item \textbf{Determinism}: The same input always produces the same output hash. Formally, for any input $x$, $\text{hash}(x) = h$, where $h$ is the fixed-length output hash.
-    \item \textbf{Pre-image Resistance}: Given a hash value $h$, it is computationally infeasible to find any input $x$ such that $\text{hash}(x) = h$ \cite{bitcoin2008whitepaper}. Mathematically, for a given $h$, finding an $x$ that satisfies $\text{hash}(x) = h$ is infeasible.
-    \item \textbf{Second Pre-image Resistance}: Given an input $x_1$, it is computationally infeasible to find a different input $x_2$ such that $\text{hash}(x_1) = \text{hash}(x_2)$ \cite{menezes1996handbook}. Formally, for any $x_1$, finding $x_2 \neq x_1$ such that $\text{hash}(x_1) = \text{hash}(x_2)$ is infeasible.
-    \item \textbf{Collision Resistance}: It is computationally infeasible to find any two different inputs $x_1$ and $x_2$ such that $\text{hash}(x_1) = \text{hash}(x_2)$ \cite{nist2012fips}. This property ensures that each piece of data in the IPFS system has a unique identifier and prevents malicious actors from substituting data.
-\end{itemize}
-
-\subsection{Merkle Trees and Content Addressing}
-
-In IPFS, Merkle Trees play a critical role in efficiently managing and verifying large datasets. A Merkle Tree is a binary tree in which each leaf node is a hash of a data block, and each non-leaf node is a hash of its children. The root of the Merkle Tree provides a compact fingerprint of the entire dataset. This tree structure ensures efficient verification of data, allowing nodes to verify the integrity of large files with minimal data transfer \cite{merkle1989hash}.
-
-Mathematically, a Merkle Tree can be described as a hash tree where:
-
-\[
-    H_{\text{root}} = \text{hash}(H_{\text{left}}, H_{\text{right}})
-\]
-where $H_{\text{left}}$ and $H_{\text{right}}$ are the hashes of the left and right subtrees, respectively. The root hash $H_{\text{root}}$ serves as the unique identifier for the entire dataset in IPFS.
-
-In the context of IPFS, this mechanism ensures that content can be efficiently addressed and verified, even when data is distributed across multiple nodes in a decentralized system. Each piece of content in IPFS is associated with a unique cryptographic hash, known as the Content Identifier (CID), which is derived from the content itself using the SHA-256 hashing algorithm \cite{ipfs2015}.
-
-\subsection{Implications for Data Integrity and Security}
-
-The reliance on cryptographic hashing, combined with Merkle Trees, allows IPFS to guarantee data integrity and security. By hashing each piece of content, IPFS ensures that data cannot be tampered with or modified without altering its corresponding hash. This provides the basis for trust in a decentralized network, where data retrieval can be verified against the content's cryptographic fingerprint.
-
-The collision resistance property of the hash function also ensures that two different pieces of data will not have the same identifier, thereby eliminating the risk of data substitution or forgery. This is especially crucial in a distributed system where trust must be established without the need for central authority \cite{cachin2016blockchains}.
-
-\subsection{Efficiency and Scalability}
-
-While the cryptographic operations in IPFS ensure data integrity and security, they also contribute to the system's efficiency. The use of SHA-256 and Merkle Trees allows IPFS to quickly verify large datasets with minimal overhead. Furthermore, as each piece of content is independently addressable through its hash, the system is highly scalable, allowing for decentralized and efficient content distribution \cite{budiu2007designing}.
-
-However, the computational complexity of cryptographic operations and the overhead associated with maintaining Merkle Trees could pose challenges for large-scale systems, especially as the volume of data increases \cite{tapscott2016blockchain}. These challenges must be considered when evaluating the scalability of IPFS in future applications.
-
-\section{IPFS and Blockchain Complementarity}
-
-Blockchains excel at providing distributed consensus and immutable transaction records but face significant challenges when storing large volumes of data. Knowledge files vary in size and type, and storing them directly on a blockchain would cause data volume to surge, creating unsustainable storage pressure \cite{miller2016scaling, xu2018survey}. This issue arises because blockchains are not designed to handle the large and diverse datasets typically associated with decentralized applications.
-
-
-\subsection{Addressing Blockchain Storage Limitations}
-
-
-IPFS addresses this limitation by providing a complementary distributed storage layer. Only content hashes (CIDs) need to be stored on the blockchain, rather than the full content itself. This approach dramatically reduces blockchain storage requirements while maintaining cryptographic links to the original content \cite{benet2014ipfs, wood2014ethereum}. By using content addressing, IPFS ensures data integrity while alleviating the storage burden on the blockchain \cite{zhang2020decentralized}.
-
-
-\subsection{Integration with the Open Science Platform}
-
-The Open Science Platform relies on principles of transparency, accessibility, and reproducibility, necessitating a decentralized and verifiable data storage framework. IPFS aligns with these objectives by offering a secure and efficient mechanism for storing and sharing research data in an immutable, content-addressed format. The use of Merkle DAGs ensures the integrity and versioning of scientific datasets, preventing data manipulation and enhancing reproducibility. Furthermore, IPFS's decentralized nature mitigates concerns associated with data loss, institutional control, and access restrictions. By integrating IPFS into the Open Science Platform, researchers can leverage a distributed, trustless system for publishing, archiving, and verifying scientific outputs, ultimately fostering an ecosystem that supports open and verifiable research practices.
-
-In the context of the Open Science Platform, IPFS serves not only as a distributed file repository but also as a crucial component in managing metadata associated with users and projects. By leveraging content addressing through cryptographic hashing, IPFS ensures that all stored files and metadata are uniquely identified and verifiable. The Content Identifier (CID) plays a fundamental role in this process, serving as a persistent reference that links stored data to blockchain records. This integration enhances data integrity and traceability, as each CID is immutably recorded on the blockchain, ensuring that files remain accessible, unaltered, and verifiable over time. Through this approach, IPFS contributes to the Open Science Platform’s core objectives by supporting transparency, reproducibility, and the secure storage of research artifacts.
-
-\subsection{Conclusion}
-
-IPFS represents a paradigm shift in distributed storage and data sharing, offering a robust alternative to conventional centralized systems. By employing content addressing, cryptographic verification, and peer-to-peer networking, IPFS enhances data integrity, security, and availability. Its modular architecture, inspired by proven peer-to-peer technologies, positions it as a versatile solution for numerous applications, including blockchain, versioned file systems, and decentralized web infrastructure. Within the context of the Open Science Platform, IPFS provides a foundational layer for ensuring research transparency and reproducibility, reinforcing the principles of Open Science through decentralized, verifiable, and persistent data management.
-
-
-
-\section{Analysis of the Open Science Movement and Reproducibility Challenges}
-
-\subsection{Historical Background and Evolution of the Open Science Movement}
-The Open Science movement traces its roots to the early 2000s when increasing concerns regarding the accessibility, transparency, and reproducibility of scientific research began to emerge. The term \emph{Open Science} refers to the practice of making scientific research, data, and methodologies freely accessible to the public, ensuring that the scientific process remains open and transparent \cite{Boulton2015}. Historically, the shift towards Open Science grew in response to the limitations posed by traditional, closed scientific publishing models, which restricted access to research outputs and hindered the replication of experiments \cite{Borgman2012}. A critical catalyst for this transformation was the advent of the internet, which provided new opportunities for sharing and collaborating on scientific work. The movement gained traction through initiatives such as the Open Access movement and the establishment of the Open Science Framework, which promoted greater collaboration, data sharing, and more reproducible research practices \cite{Nosek2015}.
-
-\subsection{Objectives and Main Tenets of Open Science}
-The core objectives of Open Science are to enhance the transparency, accessibility, and reproducibility of research, while fostering collaboration and accelerating scientific discovery \cite{Leonelli2016}. The main tenets of Open Science include:
-\begin{itemize}
-    \item \textbf{Open Access}: Ensuring that research outputs, including publications, are freely available to all, eliminating paywalls that restrict access to scholarly work.
-    \item \textbf{Open Data}: Promoting the sharing of research data to enable replication and secondary analysis.
-    \item \textbf{Open Methodology}: Encouraging the sharing of research methods and protocols to ensure transparency in the research process.
-    \item \textbf{Open Peer Review}: Providing a transparent peer review process to increase accountability and improve the quality of published research.
-    \item \textbf{Open Software}: Supporting the development and sharing of open-source software tools to facilitate reproducibility and innovation \cite{Piwowar2011}.
-\end{itemize}
-
-\subsection{Benefits, Pros, and Cons of Open Science}
-The implementation of Open Science practices offers several potential benefits. These include:
-\begin{itemize}
-    \item \textbf{Increased Collaboration}: Open Science fosters a more collaborative environment, enabling researchers to build on each other's work and accelerating scientific progress \cite{Borgman2012}.
-    \item \textbf{Greater Transparency and Trust}: Open access to data and methodologies improves the transparency of research processes, fostering public trust in scientific findings \cite{Boulton2015}.
-    \item \textbf{Enhanced Reproducibility}: Open Science enhances the reproducibility of research by making raw data, code, and methods publicly available for verification \cite{Nosek2015}.
-    \item \textbf{Public Engagement}: Open Science facilitates public engagement with research, empowering individuals to access scientific findings and contribute to the discourse \cite{Leonelli2016}.
-\end{itemize}
-
-However, there are also several challenges and drawbacks:
-\begin{itemize}
-    \item \textbf{Funding and Resource Allocation}: Open Science initiatives often require significant investment in infrastructure, software, and training, which may not always be supported by traditional funding models \cite{Borgman2012}.
-    \item \textbf{Intellectual Property Concerns}: Researchers may be hesitant to share data or methodologies due to concerns about intellectual property protection or the potential misuse of their work \cite{Boulton2015}.
-    \item \textbf{Quality Control Issues}: Open peer review and open data sharing may raise concerns about the quality and integrity of research, as the absence of rigorous vetting processes can lead to the publication of incomplete or erroneous findings \cite{Piwowar2011}.
-\end{itemize}
-
-\subsection{Reproducibility in Science: Current Gaps and Challenges}
-One of the primary goals of the Open Science movement is to address the growing concern of research reproducibility. Reproducibility is fundamental to scientific integrity, as it ensures that research findings can be independently verified and confirmed \cite{Nosek2015}. However, a significant gap remains in the ability to replicate many scientific studies, particularly in complex fields such as biomedical research \cite{Borgman2012}. Several factors contribute to these reproducibility issues:
-\begin{itemize}
-    \item \textbf{Insufficient Reporting of Methodologies}: Many studies fail to provide sufficient methodological detail, making it difficult for other researchers to replicate experiments \cite{Leonelli2016}.
-    \item \textbf{Lack of Open Access to Data and Code}: The inability to access raw data or code for analysis hinders reproducibility and limits the verification of results \cite{Piwowar2011}.
-    \item \textbf{Pressure to Publish}: The "publish or perish" culture within academia encourages the rapid publication of results, often at the expense of thoroughness and transparency \cite{Boulton2015}.
-\end{itemize}
-
-Efforts are being made to improve reproducibility through the development of better reporting standards, data sharing platforms, and open-source software tools. However, significant challenges remain in creating a fully reproducible and transparent scientific ecosystem \cite{Nosek2015}.
-
-\subsection{Conclusion}
-While Open Science holds significant potential for transforming the way research is conducted, shared, and verified, the movement is not without its challenges. Addressing issues related to funding, intellectual property, and reproducibility will require ongoing efforts from researchers, institutions, and policymakers. Nevertheless, the benefits of Open Science, particularly in promoting transparency, collaboration, and reproducibility, make it an essential step toward improving the quality and trustworthiness of scientific research.
-
-
-\section{Analysis of the Hypothesis: Decentralized Technologies and Open Science}
-
-\subsection{Introduction}
-The hypothesis that decentralized technologies such as Blockchain, smart contracts, and IPFS can foster Open Science initiatives and improve reproducibility in scientific research contrasts with the current state of Open Science implementations. This section explores the potential of decentralized technologies in transforming the Open Science landscape by addressing existing challenges related to transparency, reproducibility, and accessibility, and contrasting it with the limitations of current centralized systems in Open Science.
-
-\subsection{Current Open Science Implementations and Centralized Systems}
-Open Science initiatives have made significant strides in promoting transparency and accessibility, but they still rely heavily on centralized systems. These centralized platforms, including institutional repositories, open access journals, and collaborative research networks, are often controlled by publishers, research institutions, or governmental bodies. These centralized structures have a number of limitations:
-\begin{itemize}
-    \item \textbf{Data Access and Sharing}: Although Open Science promotes the free sharing of research data, many repositories remain under the control of specific institutions or publishers, imposing access restrictions or ownership claims on the research data \cite{Boulton2015}.
-    \item \textbf{Reproducibility Issues}: Despite efforts to enhance reproducibility, many scientific studies remain difficult to replicate due to centralized data storage and insufficient methodological transparency \cite{Borgman2012}.
-    \item \textbf{Funding and Incentives}: Current Open Science models struggle to provide adequate incentives for researchers to share data or methodologies, with limited mechanisms for crediting those who contribute to reproducibility or open data sharing \cite{Nosek2015}.
-\end{itemize}
-
-\subsection{Decentralized Technologies and Their Potential Impact}
-In contrast, decentralized technologies such as Blockchain, smart contracts, and IPFS offer several advantages that could address the limitations of centralized Open Science implementations:
-\begin{itemize}
-    \item \textbf{Blockchain for Transparency and Trust}: Blockchain can provide an immutable and transparent record of research activities, including data creation, peer review, and publication. This could solve issues related to data manipulation and ensure the integrity of research outputs \cite{Piwowar2011}.
-    \item \textbf{Smart Contracts for Automatic and Trustless Collaboration}: Smart contracts can automate agreements within research collaborations, ensuring that contributions are recognized and rewarded transparently. These contracts could also help automate access permissions and licensing for research data \cite{Boulton2015}.
-    \item \textbf{IPFS for Decentralized Data Storage}: IPFS enables decentralized storage, ensuring that research data remains accessible and tamper-proof, even if central servers become unavailable. This addresses long-term data accessibility and supports the open sharing of research data \cite{Borgman2012}.
-\end{itemize}
-
-\subsection{Improvement in Reproducibility}
-While Open Science initiatives strive to improve reproducibility, several gaps remain:
-\begin{itemize}
-    \item \textbf{Data Accessibility}: Many research datasets are not freely available, and those that are often have access barriers, such as proprietary formats or storage restrictions in centralized repositories. Blockchain and IPFS provide mechanisms to ensure that data is permanently accessible and easy to replicate \cite{Leonelli2016}.
-    \item \textbf{Methodological Transparency}: A significant barrier to reproducibility is insufficient detail on research methodologies. Blockchain could ensure that detailed methodologies, datasets, and code are publicly available and linked, increasing the transparency of research processes \cite{Piwowar2011}.
-    \item \textbf{Incentives for Reproducibility}: The current Open Science framework lacks sufficient mechanisms for crediting and incentivizing researchers who engage in replication studies. Smart contracts can offer financial or academic rewards for reproducibility efforts, addressing this gap and encouraging more researchers to engage in replication \cite{Nosek2015}.
-\end{itemize}
-
-\subsection{Contrasts with Current Open Science Implementations}
-Your hypothesis that decentralized technologies could improve Open Science and reproducibility contrasts with the current state in several important ways:
-\begin{itemize}
-    \item \textbf{Centralization vs. Decentralization}: Current Open Science systems are largely centralized, creating reliance on specific institutions or publishers. Decentralized technologies offer a more robust and distributed infrastructure for data storage, collaboration, and verification, addressing the risks of central control \cite{Boulton2015}.
-    \item \textbf{Transparency and Integrity}: While transparency is a core principle of Open Science, centralized platforms can be susceptible to data manipulation and selective publishing. Blockchain can guarantee the integrity of research data and processes, providing a permanent, transparent, and auditable record of scientific activities \cite{Borgman2012}.
-    \item \textbf{Reproducibility and Data Sharing}: Decentralized systems such as IPFS allow for true open access and sharing of research data, ensuring that datasets remain accessible over time, even if central repositories are removed or discontinued. In comparison, centralized systems face limitations in long-term data storage and access \cite{Piwowar2011}.
-    \item \textbf{Automation and Incentives}: Current Open Science platforms lack comprehensive mechanisms for automating research agreements or ensuring that researchers are properly incentivized for sharing data or conducting reproducibility studies. Smart contracts can automate the attribution of contributions, ensuring transparency and recognition in research collaborations \cite{Leonelli2016}.
-\end{itemize}
-
-\subsection{Current Gaps and Future Potential}
-While decentralized technologies have the potential to address many of the challenges faced by Open Science, several barriers remain:
-\begin{itemize}
-    \item \textbf{Adoption and Integration}: The integration of Blockchain, smart contracts, and IPFS into existing Open Science systems will require significant changes to infrastructure and researcher behavior. Many researchers may be hesitant to adopt new technologies due to unfamiliarity or concerns about the complexity of implementation \cite{Leonelli2016}.
-    \item \textbf{Regulatory and Legal Issues}: Decentralized technologies raise important legal concerns, such as intellectual property protection, data privacy, and the enforcement of ethical standards. These challenges must be addressed before decentralized technologies can be widely adopted in scientific research \cite{Borgman2012}.
-    \item \textbf{Scalability and Cost}: The scalability of decentralized technologies, especially Blockchain, may pose challenges when handling large volumes of data or complex computations. Additionally, the energy consumption and transaction costs associated with Blockchain could become limiting factors for widespread adoption in scientific research \cite{Boulton2015}.
-\end{itemize}
-
-\subsection{Conclusion}
-The hypothesis that decentralized technologies can foster Open Science initiatives and improve reproducibility presents a promising contrast to the current limitations of centralized Open Science systems. Blockchain, smart contracts, and IPFS provide solutions to issues related to transparency, reproducibility, and data accessibility. However, the widespread adoption of these technologies will require overcoming significant technical, legal, and infrastructural barriers. Despite these challenges, the potential of decentralized technologies to reshape the Open Science landscape and improve research reproducibility is substantial.
-
+\bibliographystyle{plain}
+\bibliography{references}
 
 
 \bibliographystyle{plain}
