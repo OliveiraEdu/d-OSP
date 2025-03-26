@@ -5,7 +5,7 @@
 This artifact demonstrates the creation and management of user accounts, project accounts, and linked accounts using IPFS and Iroha.
 
 
-This is the repository for the project Open Science, on its final form the project will deliver a sample DApp based on:
+This is the repository for the project Open Science, on its final form the project will deliver a sample dApp based on:
 
 - Hyperledger Iroha 1
 - Hyperledger Burrow
@@ -184,13 +184,24 @@ For iroha and IPFS, go to the Jupyter, check and edit `config.json` according to
 
 ## 3 Test the Platform
 
-|Step|Description|Outcome|
-|---|-----------|----|
-|0| Deploy Contracts| Deploy contracts for account creation and details settings.
-|1|[User Account Creation](http://s:10000/lab/tree/1%20-%20Artifact%20-%20User%20Account%20Creation.ipynb)| Creates an user account|
-|2|[Project Account Creation](http://s:10000/lab/tree/2%20-%20Artifact%20-%20Project%20Account%20Creation.ipynb)| Creates a project account|
-|3|[Cross Linking User and Project accounts](http://s:10000/lab/tree/3%20-%20Artifact%20-%20Project%20%20Cross%20Link%20Account%20and%20Project%20Account.ipynb)| Sets a bi-directional link between an user account and a project account|
-|4|[Querying linked accounts](http://s:10000/lab/tree/Artifact%20-%20Querying%20Linked%20Account%20and%20Project%20accounts.ipynb)| Querying Linked Account and Project accounts|
+#### Before the first run:
+
+1 - Go to the logs directory and delete all JSON files.
+
+2 - Go to the Notebook `5 - Artifact - Indexing and Searching.ipynb`  Step 3, uncomment, execute and 
+leave it commented again. This will create the Woosh index and make it available for the next runs.
+
+#### Use the following notebooks in sequence to run the tests on the platform.
+
+|Execute this notebook|Get this outcome|
+|---|-----------|
+|`1 - Artifact - Contract Deployment.ipynb`| Deploy Contracts for account creation and details settings.
+|`2 - Artifact - User Account Creation.ipynb`| Create a random unique user account and set synthetic attributes.
+|`3 - Artifact - Project Account Creation.ipynb`| Create a random  unique project account and set synthetic attributes.
+|`4 -  Artifact - Cross Link Account and Project Account.ipynb`| Sets the details of the user and project accounts on bi-directional link between them.
+|`5 - Artifact -  Indexing and Searching.ipynb`| Build the metadata extractor, index and search engine. Uploads files, extracts and indexes metadata. Search, validates and downloads files. 
+|`6 -  Provenance.ipynb`| Execute this to record the provenance of the current transactions over time.
+|`7 - Iroha 1 Blockchain Tools.ipynb`| Execute this to get realtime output from the Iroha 1 server about blocks and transactions.
 
 ### 4 Summary
 
