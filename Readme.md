@@ -66,7 +66,7 @@ git checkout 0d22d117863560c5330299bea592360fd8252941
 
 ```
 
-2.1.1 Editing the `genesis.block` file
+2.2 Editing the `genesis.block` file
 
 Genesis Block
 
@@ -119,16 +119,14 @@ How to run a specific genesis-block, to add/change permissions for the admin
 ---
 
 
-2.2 Create local directories at your docker host:
+2.3 Create local directories at your docker host:
 
 ```bash
 mkdir ~/ipfs_repo ~/ipfs_repo/staging ~/ipfs_repo/data
 ```
 
 
-2.1 Jupyter Notebooks
-
-2.1.1 Clone the OpenScience repository
+2.4 Clone the OpenScience repository
 
 ```bash
 cd ~/
@@ -136,36 +134,36 @@ cd ~/
 git clone http://github.com/OliveiraEdu/OpenScience
 ```
 
-2.1.2 Building the docker image
+2.5 Building the docker image
 
 ```bash
 cd ~/OpenScience/docker
 docker build --no-cache -t new_jupyter_lab .
 ```
 
-2.1.3 Runnning the docker container
+2.6 Runnning the docker container
 ```bash
 docker run -it -p 10000:8888 --network=iroha-network new_jupyter_lab
 ```
 
-2.2 IPFS Node
+2.7 IPFS Node
 
 ```bash
 docker run -d --name ipfs_node -v ~/ipfs_repo/staging:/export -v ~/ipfs_repo/data:/data/ipfs -p 4001:4001 -p 8080:8080 -p 5001:5001 --network iroha-network ipfs/go-ipfs:v0.4.23
 ```
 
-2.3 Postgress
+2.8 Postgress
 ```bash
 docker run --name some-postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 --network=iroha-network -d postgres:9.5 -c 'max_prepared_transactions=100'
 ```
 
-2.4 Iroha Network
+2.9 Iroha Network
 
 ```bash
 docker run --name iroha -d -p 50051:50051 -p 7001:7001 -v $(pwd)/iroha/example:/opt/iroha_data -v blockstore:/tmp/block_store --network=iroha-network --restart always -e KEY='node0' hyperledger/iroha-burrow:pr-3960
 ```
 
-2.4 - IP Address and related connections parameters
+2.10 - IP Address and related connections parameters
 
 For iroha and IPFS, go to the Jupyter, check and edit `config.json` according to the networking settings for your environment.
 
@@ -205,11 +203,7 @@ leave it commented again. This will create the Woosh index and make it available
 
 ### 4 Summary
 
-This artifact demonstrates the creation and management of user accounts, project accounts, and linked accounts using IPFS and Iroha. The sequence diagram shows the steps involved in creating and linking these accounts. See notebook 7.
-
-[1]: http://s:10000/lab/tree/1%20-%20Artifact%20-%20User%20Account%20Creation.ipynb
-[2]: http://s:10000/lab/tree/2%20-%20Artifact%20-%20Project%20Account%20Creation.ipynb
-[3]: http://s:10000/lab/tree/3%20-%20Artifact%20-%20Project%20%20Cross%20Link%20Account%20and%20Project%20Account.ipynb
+This artifact demonstrates the creation and management of user accounts, project accounts, and linked accounts using IPFS and Iroha. 
 
 
 ## 5 Caveats and Workarounds
