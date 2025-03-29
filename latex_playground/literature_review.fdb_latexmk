@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex literature_review"] 1743008508 "literature_review.aux" "literature_review.bbl" "literature_review" 1743008510
+["bibtex literature_review"] 1743082017 "literature_review.aux" "literature_review.bbl" "literature_review" 1743082017
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "Bibliography.bib" 1742762835 27874 a0fd3381bde0ff3f3acc190064963449 ""
+  "Bibliography.bib" 1743082017 34772 3fdf976fe9d9a8fad474a9db917f339e ""
   "literature_review.aux" 1743008509 14479 1ce282abe072383ecd7dbbd446f38685 "pdflatex"
   "references.bib" 0 -1 0 ""
   (generated)
   "literature_review.bbl"
   "literature_review.blg"
-["pdflatex"] 1743008508 "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/literature_review.tex" "literature_review.pdf" "literature_review" 1743008510
+["pdflatex"] 1743008508 "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/literature_review.tex" "literature_review.pdf" "literature_review" 1743082017
   "/etc/texmf/web2c/texmf.cnf" 1701553138 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/literature_review.tex" 1743008506 37464 1ae2a9f8dfe649d85d04058fc2706923 ""
+  "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/literature_review.tex" 1743081116 37464 1ae2a9f8dfe649d85d04058fc2706923 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -101,7 +101,7 @@
   "literature_review.aux" 1743008509 14479 1ce282abe072383ecd7dbbd446f38685 "pdflatex"
   "literature_review.bbl" 1742762934 11719 d1ece76c2fbf6817043cb5d320af074c "bibtex literature_review"
   "literature_review.out" 1743008509 10683 f913e1323727faa6d33643585f2b569a "pdflatex"
-  "literature_review.tex" 1743008506 37464 1ae2a9f8dfe649d85d04058fc2706923 ""
+  "literature_review.tex" 1743081116 37464 1ae2a9f8dfe649d85d04058fc2706923 ""
   (generated)
   "literature_review.aux"
   "literature_review.log"
