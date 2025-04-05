@@ -45,6 +45,12 @@ John P.~A. Ioannidis.
 \newblock Why most published research findings are false.
 \newblock {\em PLoS Medicine}, 2(8):e124, 2005.
 
+\bibitem{laakso_anatomy_2012}
+Mikael Laakso and Bo-Christer Björk.
+\newblock Anatomy of open access publishing: a study of longitudinal
+  development and internal structure.
+\newblock {\em BMC Med}, 10(1):124, December 2012.
+
 \bibitem{munafo_manifesto_2017}
 Marcus~R. Munafò, Brian~A. Nosek, Dorothy V.~M. Bishop, Katherine~S. Button,
   Christopher~D. Chambers, Nathalie Percie~du Sert, Uri Simonsohn, Eric~Jan
@@ -67,7 +73,8 @@ Sheeba Samuel and Birgitta König-Ries.
 \bibitem{thibault_open_2023}
 Robert~T. Thibault, Olavo~B. Amaral, Felipe Argolo, Anita~E. Bandrowski,
   Alexandra~R Davidson, and Natascha~I. Drude.
-\newblock Open 2.0: Towards a truly collaborative research ecosystem.
+\newblock Open {Science} 2.0: {Towards} a truly collaborative research
+  ecosystem.
 \newblock {\em PLoS Biol}, 21(10):e3002362, October 2023.
 
 \end{thebibliography}
