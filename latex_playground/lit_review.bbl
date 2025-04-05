@@ -11,6 +11,13 @@ Marc~N. Branch.
   {Frequently} in {Behavior}-{Analysis} {Research} {Help}?
 \newblock {\em Perspect Behav Sci}, 42(1):77--89, March 2019.
 
+\bibitem{burgelman_open_2019}
+Jean-Claude Burgelman, Corina Pascu, Katarzyna Szkuta, Rene Von~Schomberg,
+  Athanasios Karalopoulos, Konstantinos Repanas, and Michel Schouppe.
+\newblock Open {Science}, {Open} {Data}, and {Open} {Scholarship}: {European}
+  {Policies} to {Make} {Science} {Fit} for the {Twenty}-{First} {Century}.
+\newblock {\em Front. Big Data}, 2:43, December 2019.
+
 \bibitem{collins_policy_2014}
 Francis~S. Collins and Lawrence~A. Tabak.
 \newblock Policy: {NIH} plans to enhance reproducibility.
@@ -76,5 +83,10 @@ Robert~T. Thibault, Olavo~B. Amaral, Felipe Argolo, Anita~E. Bandrowski,
 \newblock Open {Science} 2.0: {Towards} a truly collaborative research
   ecosystem.
 \newblock {\em PLoS Biol}, 21(10):e3002362, October 2023.
+
+\bibitem{van_dijk_open_2021}
+Wilhelmina Van~Dijk, Christopher Schatschneider, and Sara~A. Hart.
+\newblock Open {Science} in {Education} {Sciences}.
+\newblock {\em J Learn Disabil}, 54(2):139--152, March 2021.
 
 \end{thebibliography}
