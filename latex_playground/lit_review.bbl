@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{baker2016reproducibility}
 Monya Baker.
@@ -57,5 +57,11 @@ Edo~D. Pellizzari, Kathleen~N. Lohr, Alan~R. Blatecky, and Darryl~R. Creel.
 \newblock Reproducibility: {A} {Primer} on {Semantics} and {Implications} for
   {Research}.
 \newblock {\em RTI Press}, 2017.
+
+\bibitem{samuel_understanding_2021}
+Sheeba Samuel and Birgitta König-Ries.
+\newblock Understanding experiments and research practices for reproducibility:
+  an exploratory study.
+\newblock {\em PeerJ}, 9:e11140, April 2021.
 
 \end{thebibliography}
