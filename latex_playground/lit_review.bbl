@@ -11,6 +11,11 @@ Marc~N. Branch.
   {Frequently} in {Behavior}-{Analysis} {Research} {Help}?
 \newblock {\em Perspect Behav Sci}, 42(1):77--89, March 2019.
 
+\bibitem{collins_policy_2014}
+Francis~S. Collins and Lawrence~A. Tabak.
+\newblock Policy: {NIH} plans to enhance reproducibility.
+\newblock {\em Nature}, 505(7485):612--613, January 2014.
+
 \bibitem{committee_2019}
 {Committee on Reproducibility and Replicability in Science}, {Board on
   Behavioral, Cognitive, and Sensory Sciences}, {Committee on National
@@ -23,6 +28,29 @@ Marc~N. Branch.
   Academies of Sciences, Engineering, and Medicine}.
 \newblock {\em Reproducibility and {Replicability} in {Science}}.
 \newblock National Academies Press, Washington, D.C., September 2019.
+
+\bibitem{david_robert_grimes_modelling_2018}
+{David Robert Grimes}, David~Robert Grimes, {Chris T. Bauch}, Chris~T. Bauch,
+  {John P. A. Ioannidis}, and John P.~A. Ioannidis.
+\newblock Modelling science trustworthiness under publish or perish pressure.
+\newblock {\em Royal Society Open Science}, 5(1):171511--171511, January 2018.
+
+\bibitem{freedman2015economics}
+Leonard~P. Freedman, Iain~M. Cockburn, and Timothy~S. Simcoe.
+\newblock The economics of reproducibility in preclinical research.
+\newblock {\em PLoS Biology}, 13(6):e1002165, 2015.
+
+\bibitem{ioannidis2005most}
+John P.~A. Ioannidis.
+\newblock Why most published research findings are false.
+\newblock {\em PLoS Medicine}, 2(8):e124, 2005.
+
+\bibitem{munafo_manifesto_2017}
+Marcus~R. Munafò, Brian~A. Nosek, Dorothy V.~M. Bishop, Katherine~S. Button,
+  Christopher~D. Chambers, Nathalie Percie~du Sert, Uri Simonsohn, Eric~Jan
+  Wagenmakers, Jennifer Ware, and John P.~A. Ioannidis.
+\newblock A manifesto for reproducible science.
+\newblock {\em Nature Human Behaviour}, 2017.
 
 \bibitem{pellizzari_reproducibility_2017}
 Edo~D. Pellizzari, Kathleen~N. Lohr, Alan~R. Blatecky, and Darryl~R. Creel.
