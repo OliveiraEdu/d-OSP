@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex lit_review"] 1743940671 "lit_review.aux" "lit_review.bbl" "lit_review" 1743940673
+["bibtex lit_review"] 1743941129 "lit_review.aux" "lit_review.bbl" "lit_review" 1743941255
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   "Bibliography.bib" 1743889798 45569 19ec8f30040bb79bce9461c02a0f0db0 ""
-  "lit_review.aux" 1743940672 4795 ac0ca5a1ddd2b969ee9b9096a562ad8c "pdflatex"
+  "lit_review.aux" 1743941255 5064 6db5c9a207b7d4ab63629d31e0c888a2 "pdflatex"
   (generated)
   "lit_review.bbl"
   "lit_review.blg"
-["pdflatex"] 1743940671 "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/lit_review.tex" "lit_review.pdf" "lit_review" 1743940673
+["pdflatex"] 1743941254 "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/lit_review.tex" "lit_review.pdf" "lit_review" 1743941255
   "/etc/texmf/web2c/texmf.cnf" 1701553138 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/lit_review.tex" 1743940670 41999 8391ca773ae253acfa0f410446f62719 ""
+  "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/lit_review.tex" 1743941253 43363 453068b16381230f9ea7a6592b709736 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -167,11 +167,11 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1701553183 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1710494692 2800392 5302ca1083901a3fb21e189f575b5416 ""
-  "lit_review.aux" 1743940672 4795 ac0ca5a1ddd2b969ee9b9096a562ad8c "pdflatex"
-  "lit_review.bbl" 1743940671 3867 366c35e4587b594a63f1d24a928f1149 "bibtex lit_review"
-  "lit_review.out" 1743940672 4930 302ccab2a446b76879cf6a8681ac09aa "pdflatex"
-  "lit_review.tdo" 1743940672 58 2b4d6e21f88e29cd3ba1ed906859dd71 "pdflatex"
-  "lit_review.tex" 1743940670 41999 8391ca773ae253acfa0f410446f62719 ""
+  "lit_review.aux" 1743941255 5064 6db5c9a207b7d4ab63629d31e0c888a2 "pdflatex"
+  "lit_review.bbl" 1743941129 3867 366c35e4587b594a63f1d24a928f1149 "bibtex lit_review"
+  "lit_review.out" 1743941255 4930 302ccab2a446b76879cf6a8681ac09aa "pdflatex"
+  "lit_review.tdo" 1743941255 58 2b4d6e21f88e29cd3ba1ed906859dd71 "pdflatex"
+  "lit_review.tex" 1743941253 43363 453068b16381230f9ea7a6592b709736 ""
   (generated)
   "lit_review.aux"
   "lit_review.log"
