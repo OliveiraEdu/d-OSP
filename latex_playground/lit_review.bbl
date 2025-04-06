@@ -4,10 +4,21 @@
 {LEARN} {Toolkit} of {Best} {Practice} for {Research} {Data} {Management}.
 \newblock Technical report, LEARN, April 2017.
 
+\bibitem{codata_2024}
+Data for {Development} and the role of {CODATA} of the {International}
+  {Science} {Council} ({ISC}).
+\newblock {\em ALIS}, 71(04), 2024.
+
 \bibitem{baker2016reproducibility}
 Monya Baker.
 \newblock 1,500 scientists lift the lid on reproducibility.
 \newblock {\em Nature}, 533(7604):452--454, 2016.
+
+\bibitem{berman_research_2020}
+Francine Berman and Merce Crosas.
+\newblock The {Research} {Data} {Alliance}: {Benefits} and {Challenges} of
+  {Building} a {Community} {Organization}.
+\newblock {\em Harvard Data Science Review}, January 2020.
 
 \bibitem{branch_reproducibility_2019}
 Marc~N. Branch.
@@ -21,6 +32,17 @@ Jean-Claude Burgelman, Corina Pascu, Katarzyna Szkuta, Rene Von~Schomberg,
 \newblock Open {Science}, {Open} {Data}, and {Open} {Scholarship}: {European}
   {Policies} to {Make} {Science} {Fit} for the {Twenty}-{First} {Century}.
 \newblock {\em Front. Big Data}, 2:43, December 2019.
+
+\bibitem{calatrava_survey_2023}
+Amanda Calatrava, Hernán Asorey, Jan Astalos, Alberto Azevedo, Francesco
+  Benincasa, Ignacio Blanquer, Martin Bobak, Francisco Brasileiro, Laia Codó,
+  Laura Del~Cano, Borja Esteban, Meritxell Ferret, Josef Handl, Tobias
+  Kerzenmacher, Valentin Kozlov, Aleš Křenek, Ricardo Martins, Manuel
+  Pavesio, Antonio~Juan Rubio-Montero, and Juan Sánchez-Ferrero.
+\newblock A survey of the {European} {Open} {Science} {Cloud} services for
+  expanding the capacity and capabilities of multidisciplinary scientific
+  applications.
+\newblock {\em Computer Science Review}, 49:100571, August 2023.
 
 \bibitem{collins_policy_2014}
 Francis~S. Collins and Lawrence~A. Tabak.
@@ -56,6 +78,15 @@ John P.~A. Ioannidis.
 \newblock Why most published research findings are false.
 \newblock {\em PLoS Medicine}, 2(8):e124, 2005.
 
+\bibitem{mentzel_ready_2018}
+C.~Mentzel, S.~Allard, J.~Chodacki, J.~Heber, E.~Key, E.~Olson, PhD Schultes,
+  E., C.~Mentzel, S.~Allard, J.~Chodacki, J.~Heber, E.~Key, E.~Olson, PhD
+  Schultes, E., C.~Mentzel, and PhD Schultes, E.
+\newblock Ready, {Set}, {GO} {FAIR}.
+\newblock 2018:IN22A--01, December 2018.
+\newblock Conference Name: AGU Fall Meeting Abstracts ADS Bibcode:
+  2018AGUFMIN22A..01M.
+
 \bibitem{munafo_manifesto_2017}
 Marcus~R. Munafò, Brian~A. Nosek, Dorothy V.~M. Bishop, Katherine~S. Button,
   Christopher~D. Chambers, Nathalie Percie~du Sert, Uri Simonsohn, Eric~Jan
@@ -68,6 +99,12 @@ Edo~D. Pellizzari, Kathleen~N. Lohr, Alan~R. Blatecky, and Darryl~R. Creel.
 \newblock Reproducibility: {A} {Primer} on {Semantics} and {Implications} for
   {Research}.
 \newblock {\em RTI Press}, 2017.
+
+\bibitem{rettberg_openaire_2012}
+Najla Rettberg and Birgit Schmidt.
+\newblock {OpenAIRE} - {Building} a collaborative {Open} {Access}
+  infrastructure for {European} researchers.
+\newblock {\em LIBER}, 22(3):160--175, November 2012.
 
 \bibitem{samuel_understanding_2021}
 Sheeba Samuel and Birgitta König-Ries.
@@ -86,5 +123,23 @@ Robert~T. Thibault, Olavo~B. Amaral, Felipe Argolo, Anita~E. Bandrowski,
 Wilhelmina Van~Dijk, Christopher Schatschneider, and Sara~A. Hart.
 \newblock Open {Science} in {Education} {Sciences}.
 \newblock {\em J Learn Disabil}, 54(2):139--152, March 2021.
+
+\bibitem{wilkinson_fair_2016}
+Mark~D. Wilkinson, Michel Dumontier, IJsbrand~Jan Aalbersberg, Gabrielle
+  Appleton, Myles Axton, Arie Baak, Niklas Blomberg, Jan-Willem Boiten,
+  Luiz~Bonino Da~Silva~Santos, Philip~E. Bourne, Jildau Bouwman, Anthony~J.
+  Brookes, Tim Clark, Mercè Crosas, Ingrid Dillo, Olivier Dumon, Scott
+  Edmunds, Chris~T. Evelo, Richard Finkers, Alejandra Gonzalez-Beltran,
+  Alasdair~J.G. Gray, Paul Groth, Carole Goble, Jeffrey~S. Grethe, Jaap
+  Heringa, Peter~A.C ’T~Hoen, Rob Hooft, Tobias Kuhn, Ruben Kok, Joost Kok,
+  Scott~J. Lusher, Maryann~E. Martone, Albert Mons, Abel~L. Packer, Bengt
+  Persson, Philippe Rocca-Serra, Marco Roos, Rene Van~Schaik, Susanna-Assunta
+  Sansone, Erik Schultes, Thierry Sengstag, Ted Slater, George Strawn,
+  Morris~A. Swertz, Mark Thompson, Johan Van Der~Lei, Erik Van~Mulligen, Jan
+  Velterop, Andra Waagmeester, Peter Wittenburg, Katherine Wolstencroft, Jun
+  Zhao, and Barend Mons.
+\newblock The {FAIR} {Guiding} {Principles} for scientific data management and
+  stewardship.
+\newblock {\em Sci Data}, 3(1):160018, March 2016.
 
 \end{thebibliography}
