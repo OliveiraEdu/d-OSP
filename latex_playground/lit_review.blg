@@ -10,43 +10,43 @@ Warning--empty author in codata_2024
 Warning--empty journal in mentzel_ready_2018
 You've used 20 entries,
             2118 wiz_defined-function locations,
-            618 strings with 9988 characters,
-and the built_in function-call counts, 9470 in all, are:
-= -- 814
-> -- 813
-< -- 0
-+ -- 330
-- -- 304
-* -- 920
-:= -- 1693
-add.period$ -- 59
+            620 strings with 9626 characters,
+and the built_in function-call counts, 9032 in all, are:
+= -- 798
+> -- 717
+< -- 1
++ -- 291
+- -- 266
+* -- 848
+:= -- 1591
+add.period$ -- 60
 call.type$ -- 20
-change.case$ -- 212
+change.case$ -- 193
 chr.to.int$ -- 0
 cite$ -- 25
-duplicate$ -- 214
-empty$ -- 479
-format.name$ -- 304
-if$ -- 1772
+duplicate$ -- 226
+empty$ -- 493
+format.name$ -- 266
+if$ -- 1722
 int.to.chr$ -- 0
 int.to.str$ -- 20
 missing$ -- 20
 newline$ -- 102
 num.names$ -- 36
-pop$ -- 187
+pop$ -- 172
 preamble$ -- 1
-purify$ -- 192
+purify$ -- 173
 quote$ -- 0
-skip$ -- 141
+skip$ -- 152
 stack$ -- 0
-substring$ -- 416
-swap$ -- 18
-text.length$ -- 0
+substring$ -- 429
+swap$ -- 27
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 78
 warning$ -- 5
-while$ -- 57
+while$ -- 59
 width$ -- 22
-write$ -- 216
+write$ -- 218
 (There were 5 warnings)
