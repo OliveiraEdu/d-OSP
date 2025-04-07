@@ -8,45 +8,45 @@ Warning--to sort, need author or key in codata_2024
 Warning--empty author in learn_2017
 Warning--empty author in codata_2024
 Warning--empty journal in mentzel_ready_2018
-You've used 20 entries,
+You've used 21 entries,
             2118 wiz_defined-function locations,
-            620 strings with 9626 characters,
-and the built_in function-call counts, 9032 in all, are:
-= -- 798
-> -- 717
+            626 strings with 9839 characters,
+and the built_in function-call counts, 9333 in all, are:
+= -- 830
+> -- 724
 < -- 1
-+ -- 291
-- -- 266
-* -- 848
-:= -- 1591
-add.period$ -- 60
-call.type$ -- 20
-change.case$ -- 193
++ -- 295
+- -- 268
+* -- 872
+:= -- 1640
+add.period$ -- 63
+call.type$ -- 21
+change.case$ -- 197
 chr.to.int$ -- 0
-cite$ -- 25
-duplicate$ -- 226
-empty$ -- 493
-format.name$ -- 266
-if$ -- 1722
+cite$ -- 26
+duplicate$ -- 237
+empty$ -- 520
+format.name$ -- 268
+if$ -- 1783
 int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 20
-newline$ -- 102
-num.names$ -- 36
-pop$ -- 172
+int.to.str$ -- 21
+missing$ -- 21
+newline$ -- 107
+num.names$ -- 38
+pop$ -- 174
 preamble$ -- 1
-purify$ -- 173
+purify$ -- 176
 quote$ -- 0
-skip$ -- 152
+skip$ -- 159
 stack$ -- 0
-substring$ -- 429
-swap$ -- 27
+substring$ -- 460
+swap$ -- 28
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 78
+type$ -- 82
 warning$ -- 5
-while$ -- 59
-width$ -- 22
-write$ -- 218
+while$ -- 63
+width$ -- 23
+write$ -- 229
 (There were 5 warnings)
