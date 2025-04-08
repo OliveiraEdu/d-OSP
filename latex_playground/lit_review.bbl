@@ -1,14 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{learn_2017}
-{LEARN} {Toolkit} of {Best} {Practice} for {Research} {Data} {Management}.
-\newblock Technical report, LEARN, April 2017.
-
-\bibitem{codata_2024}
-Data for {Development} and the role of {CODATA} of the {International}
-  {Science} {Council} ({ISC}).
-\newblock {\em ALIS}, 71(04), 2024.
-
 \bibitem{baker2016reproducibility}
 Monya Baker.
 \newblock 1,500 scientists lift the lid on reproducibility.
@@ -77,6 +68,13 @@ Alexandros Gazis, Giorgos Anagnostakis, Stavros Kourmpetis, and Eleftheria
   {Manuscript} {Submission}.
 \newblock {\em Wseas Transactions On Business And Economics}, 2022.
 
+\bibitem{henning_go_2019}
+Patricia~Corrêa Henning, Claudio José~Silva Ribeiro, Luiz Olavo~Bonino
+  Da~Silva~Santos, and Paula~Xavier Dos~Santos.
+\newblock {GO} {FAIR} e os princípios {FAIR}: o que representam para a
+  expansão dos dados de pesquisa no âmbito da {Ciência} {Aberta}.
+\newblock {\em EQ}, pages 389--412, April 2019.
+
 \bibitem{holmen_blockchain_2018}
 Mads Holmen.
 \newblock Blockchain and scholarly publishing could be best friends.
@@ -105,6 +103,12 @@ Bonnie Lawlor.
   publishing.
 \newblock {\em ISU}, 38(3):111--130, October 2018.
 
+\bibitem{learn_2017}
+Leaders Activating Research~Networks (LEARN).
+\newblock {LEARN} {Toolkit} of {Best} {Practice} for {Research} {Data}
+  {Management}.
+\newblock Technical report, LEARN, April 2017.
+
 \bibitem{lee_unblocking_2023}
 James Lee, Mario Moroso, and Tim~K. Mackey.
 \newblock Unblocking recognition: {A} token system for acknowledging academic
@@ -116,15 +120,6 @@ Stephan Leible, Steffen Schlager, Moritz Schubotz, and Béla Gipp.
 \newblock A {Review} on {Blockchain} {Technology} and {Blockchain} {Projects}
   {Fostering} {Open} {Science}.
 \newblock {\em Frontiers in blockchain}, 2019.
-
-\bibitem{mentzel_ready_2018}
-C.~Mentzel, S.~Allard, J.~Chodacki, J.~Heber, E.~Key, E.~Olson, PhD Schultes,
-  E., C.~Mentzel, S.~Allard, J.~Chodacki, J.~Heber, E.~Key, E.~Olson, PhD
-  Schultes, E., C.~Mentzel, and PhD Schultes, E.
-\newblock Ready, {Set}, {GO} {FAIR}.
-\newblock 2018:IN22A--01, December 2018.
-\newblock Conference Name: AGU Fall Meeting Abstracts ADS Bibcode:
-  2018AGUFMIN22A..01M.
 
 \bibitem{nelson_2023}
 Heather Moulaison-Sandy.
@@ -163,6 +158,13 @@ Sheeba Samuel and Birgitta König-Ries.
 \newblock Understanding experiments and research practices for reproducibility:
   an exploratory study.
 \newblock {\em PeerJ}, 9:e11140, April 2021.
+
+\bibitem{codata_2024}
+Daisy Selematsela, Usha Mujoomunshi, and Gitanjali Yadav.
+\newblock Data for development and the role of codata of the international
+  science council (isc).
+\newblock {\em ANNALS OF LIBRARY AND INFORMATION STUDIES}, 71(4):506--511, DEC
+  2024.
 
 \bibitem{thibault_open_2023}
 Robert~T. Thibault, Olavo~B. Amaral, Felipe Argolo, Anita~E. Bandrowski,
