@@ -70,10 +70,52 @@ Leonard~P. Freedman, Iain~M. Cockburn, and Timothy~S. Simcoe.
 \newblock The economics of reproducibility in preclinical research.
 \newblock {\em PLoS Biology}, 13(6):e1002165, 2015.
 
+\bibitem{gazis_blockchain_2022}
+Alexandros Gazis, Giorgos Anagnostakis, Stavros Kourmpetis, and Eleftheria
+  Katsiri.
+\newblock A {Blockchain} {Cloud} {Computing} {Middleware} for {Academic}
+  {Manuscript} {Submission}.
+\newblock {\em Wseas Transactions On Business And Economics}, 2022.
+
+\bibitem{holmen_blockchain_2018}
+Mads Holmen.
+\newblock Blockchain and scholarly publishing could be best friends.
+\newblock {\em ISU}, 38(3):131--140, October 2018.
+
 \bibitem{ioannidis2005most}
 John P.~A. Ioannidis.
 \newblock Why most published research findings are false.
 \newblock {\em PLoS Medicine}, 2(8):e124, 2005.
+
+\bibitem{kochalko_making_2019}
+David Kochalko.
+\newblock Making the unconventional conventional: {How} blockchain contributes
+  to reshaping scholarly communications.
+\newblock {\em ISU}, 39(3):199--204, December 2019.
+
+\bibitem{kosmarski_blockchain_2020}
+Artyom Kosmarski.
+\newblock Blockchain {Adoption} in {Academia}: {Promises} and {Challenges}.
+\newblock {\em Journal of Open Innovation: Technology, Market, and Complexity},
+  2020.
+
+\bibitem{lawlor_overview_2018}
+Bonnie Lawlor.
+\newblock An overview of the {NFAIS} conference: {Blockchain} for scholarly
+  publishing.
+\newblock {\em ISU}, 38(3):111--130, October 2018.
+
+\bibitem{lee_unblocking_2023}
+James Lee, Mario Moroso, and Tim~K. Mackey.
+\newblock Unblocking recognition: {A} token system for acknowledging academic
+  contribution.
+\newblock {\em Frontiers in blockchain}, 2023.
+
+\bibitem{leible_review_2019}
+Stephan Leible, Steffen Schlager, Moritz Schubotz, and Béla Gipp.
+\newblock A {Review} on {Blockchain} {Technology} and {Blockchain} {Projects}
+  {Fostering} {Open} {Science}.
+\newblock {\em Frontiers in blockchain}, 2019.
 
 \bibitem{mentzel_ready_2018}
 C.~Mentzel, S.~Allard, J.~Chodacki, J.~Heber, E.~Key, E.~Olson, PhD Schultes,
@@ -103,6 +145,13 @@ Edo~D. Pellizzari, Kathleen~N. Lohr, Alan~R. Blatecky, and Darryl~R. Creel.
   {Research}.
 \newblock {\em RTI Press}, 2017.
 
+\bibitem{putnings_non-fungible_2022}
+Markus Putnings.
+\newblock Non-{Fungible} {Token} ({NFT}) in the {Academic} and {Open} {Access}
+  {Publishing} {Environment}: {Considerations} {Towards} {Science}-{Friendly}
+  {Scenarios}.
+\newblock {\em Journal of Electronic Publishing}, 2022.
+
 \bibitem{rettberg_openaire_2012}
 Najla Rettberg and Birgit Schmidt.
 \newblock {OpenAIRE} - {Building} a collaborative {Open} {Access}
@@ -122,10 +171,21 @@ Robert~T. Thibault, Olavo~B. Amaral, Felipe Argolo, Anita~E. Bandrowski,
   ecosystem.
 \newblock {\em PLoS Biol}, 21(10):e3002362, October 2023.
 
+\bibitem{trovo_ants-review_2021}
+Bianca Trovò and Nazzareno Massari.
+\newblock Ants-{Review}: {A} {Privacy}-{Oriented} {Protocol} for {Incentivized}
+  {Open} {Peer} {Reviews} on {Ethereum}.
+\newblock {\em Lecture Notes in Computer Science}, 2021.
+
 \bibitem{van_dijk_open_2021}
 Wilhelmina Van~Dijk, Christopher Schatschneider, and Sara~A. Hart.
 \newblock Open {Science} in {Education} {Sciences}.
 \newblock {\em J Learn Disabil}, 54(2):139--152, March 2021.
+
+\bibitem{van_rossum_blockchain_2018}
+Joris Van~Rossum.
+\newblock The blockchain and its potential for science and academic publishing.
+\newblock {\em ISU}, 38(1-2):95--98, October 2018.
 
 \bibitem{wilkinson_fair_2016}
 Mark~D. Wilkinson, Michel Dumontier, IJsbrand~Jan Aalbersberg, Gabrielle
@@ -144,5 +204,12 @@ Mark~D. Wilkinson, Michel Dumontier, IJsbrand~Jan Aalbersberg, Gabrielle
 \newblock The {FAIR} {Guiding} {Principles} for scientific data management and
   stewardship.
 \newblock {\em Sci Data}, 3(1):160018, March 2016.
+
+\bibitem{zhou_open-pub_2021}
+Yan Zhou, Zhiguo Wan, and Zhangshuang Guan.
+\newblock Open-pub: A transparent yet privacy-preserving academic publication
+  system based on blockchain.
+\newblock In {\em 2021 International Conference on Computer Communications and
+  Networks (ICCCN)}, pages 1--11, 2021.
 
 \end{thebibliography}
