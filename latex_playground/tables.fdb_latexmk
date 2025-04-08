@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex tables"] 1744086197 "tables.aux" "tables.bbl" "tables" 1744086199
+["bibtex tables"] 1744088309 "tables.aux" "tables.bbl" "tables" 1744088309
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "Bibliography.bib" 1744084824 62602 0187974c285be9e9b46a0490a7814c35 ""
-  "tables.aux" 1744086198 925 a675a8b519c0fca7c5e1d659abaed223 "pdflatex"
+  "Bibliography.bib" 1744088309 64197 202f8381127c6a102b29001db319c75a ""
+  "tables.aux" 1744087257 1686 d771ec768981c15098548ff84f22907d "pdflatex"
   (generated)
   "tables.bbl"
   "tables.blg"
-["pdflatex"] 1744086197 "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/tables.tex" "tables.pdf" "tables" 1744086199
+["pdflatex"] 1744087256 "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/tables.tex" "tables.pdf" "tables" 1744088309
   "/etc/texmf/web2c/texmf.cnf" 1701553138 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/tables.tex" 1744086195 17106 c9322d4e6f91d2657c07400b1b456ae5 ""
+  "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/tables.tex" 1744087253 18982 af0f906cc62f332893d41e8a40b71a7e ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -165,11 +165,11 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1701553183 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1710494692 2800392 5302ca1083901a3fb21e189f575b5416 ""
-  "tables.aux" 1744086198 925 a675a8b519c0fca7c5e1d659abaed223 "pdflatex"
-  "tables.bbl" 1744086197 49 0eba253fc001332e731e8aba3f23127b "bibtex tables"
-  "tables.out" 1744086198 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "tables.tdo" 1744086198 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "tables.tex" 1744086195 17106 c9322d4e6f91d2657c07400b1b456ae5 ""
+  "tables.aux" 1744087257 1686 d771ec768981c15098548ff84f22907d "pdflatex"
+  "tables.bbl" 1744088309 49 0eba253fc001332e731e8aba3f23127b "bibtex tables"
+  "tables.out" 1744087257 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "tables.tdo" 1744087257 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "tables.tex" 1744087253 18982 af0f906cc62f332893d41e8a40b71a7e ""
   (generated)
   "tables.aux"
   "tables.log"
