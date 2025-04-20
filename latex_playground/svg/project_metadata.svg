@@ -1,0 +1,1257 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   contentStyleType="text/css"
+   data-diagram-type="JSON"
+   height="297mm"
+   preserveAspectRatio="none"
+   version="1.1"
+   viewBox="0 0 1587.4016 1122.5197"
+   width="420mm"
+   zoomAndPan="magnify"
+   id="svg1374"
+   sodipodi:docname="project_metadata.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1376"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:snap-to-guides="true"
+     inkscape:snap-others="false"
+     inkscape:snap-nodes="false"
+     inkscape:zoom="0.41986485"
+     inkscape:cx="1032.4751"
+     inkscape:cy="316.7686"
+     inkscape:window-width="1920"
+     inkscape:window-height="1031"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1374"
+     units="mm"
+     inkscape:document-units="mm" />
+  <defs
+     id="defs1088">
+    <marker
+       style="overflow:visible"
+       id="marker5880"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path5878" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker5741"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path5739" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path5387" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lend"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path5390" />
+    </marker>
+  </defs>
+  <g
+     id="g8681"
+     transform="translate(-927.80435,761.12786)">
+    <rect
+       fill="#f1f1f1"
+       height="40.5938"
+       rx="5"
+       ry="5"
+       style="stroke:#f1f1f1;stroke-width:1.5"
+       width="107.1445"
+       x="1004.1077"
+       y="-180.43431"
+       id="rect1090" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="73.7939"
+       x="15"
+       y="70.995102"
+       id="text1092"
+       transform="translate(994.10775,-236.43431)">@context</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="13.3506"
+       x="98.7939"
+       y="70.995102"
+       id="text1094"
+       transform="translate(994.10775,-236.43431)">   </text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1087.9016"
+       x2="1087.9016"
+       y1="-180.43431"
+       y2="-160.13741"
+       id="line1096" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1004.1077"
+       x2="1111.2522"
+       y1="-160.13741"
+       y2="-160.13741"
+       id="line1098" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="60.361301"
+       x="15"
+       y="91.292"
+       id="text1100"
+       transform="translate(994.10775,-236.43431)">@graph</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="13.3506"
+       x="98.7939"
+       y="91.292"
+       id="text1102"
+       transform="translate(994.10775,-236.43431)">   </text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1087.9016"
+       x2="1087.9016"
+       y1="-160.13741"
+       y2="-139.8405"
+       id="line1104" />
+    <rect
+       fill="none"
+       height="40.5938"
+       rx="5"
+       ry="5"
+       style="stroke:#000000;stroke-width:1.5"
+       width="107.1445"
+       x="1004.1077"
+       y="-180.43431"
+       id="rect1106" />
+    <rect
+       fill="#f1f1f1"
+       height="40.5938"
+       rx="5"
+       ry="5"
+       style="stroke:#f1f1f1;stroke-width:1.5"
+       width="249.6055"
+       x="1216.3593"
+       y="-191.64636"
+       id="rect1108" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="60.128899"
+       x="159"
+       y="46.995098"
+       id="text1110"
+       transform="translate(1062.3592,-223.64636)">schema</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="129.95799"
+       x="229.12891"
+       y="46.995098"
+       id="text1112"
+       transform="translate(1062.3592,-223.64636)">http://schema.org/</text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1286.4883"
+       x2="1286.4883"
+       y1="-191.64636"
+       y2="-171.34946"
+       id="line1114" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1216.3593"
+       x2="1465.9648"
+       y1="-171.34946"
+       y2="-171.34946"
+       id="line1116" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="18.320299"
+       x="159"
+       y="67.292"
+       id="text1118"
+       transform="translate(1062.3592,-223.64636)">dc</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="169.47659"
+       x="229.12891"
+       y="67.292"
+       id="text1120"
+       transform="translate(1062.3592,-223.64636)">http://purl.org/dc/terms/</text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1286.4883"
+       x2="1286.4883"
+       y1="-171.34946"
+       y2="-151.05255"
+       id="line1122" />
+    <rect
+       fill="none"
+       height="40.5938"
+       rx="5"
+       ry="5"
+       style="stroke:#000000;stroke-width:1.5"
+       width="249.6055"
+       x="1216.3593"
+       y="-191.64636"
+       id="rect1124" />
+    <rect
+       fill="#f1f1f1"
+       height="121.7813"
+       rx="5"
+       ry="5"
+       style="stroke:#f1f1f1;stroke-width:1.5"
+       width="741.06842"
+       x="1217.6008"
+       y="-131.51115"
+       id="rect1132" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="49.334999"
+       x="446"
+       y="55.495098"
+       id="text1134"
+       transform="translate(776.60086,-172.01115)">@type</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="173.01759"
+       x="624.66309"
+       y="55.495098"
+       id="text1136"
+       transform="translate(776.60086,-172.01115)">schema:ResearchProject</text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1396.2639"
+       x2="1396.2639"
+       y1="-131.51115"
+       y2="-111.21426"
+       id="line1138" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1217.6008"
+       x2="1958.6692"
+       y1="-111.21426"
+       y2="-111.21426"
+       id="line1140" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="138.78999"
+       x="446"
+       y="75.792"
+       id="text1142"
+       transform="translate(776.60086,-172.01115)">schema:identifier</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="85.421898"
+       x="624.66309"
+       y="75.792"
+       id="text1144"
+       transform="translate(776.60086,-172.01115)">02226@test</text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1396.2639"
+       x2="1396.2639"
+       y1="-111.21426"
+       y2="-90.917351"
+       id="line1146" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1217.6008"
+       x2="1958.6692"
+       y1="-90.917351"
+       y2="-90.917351"
+       id="line1148" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="143.1035"
+       x="446"
+       y="96.088898"
+       id="text1150"
+       transform="translate(776.60086,-172.01115)">schema:publicKey</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="552.40527"
+       x="624.66309"
+       y="96.088898"
+       id="text1152"
+       transform="translate(776.60086,-172.01115)">1c6b8d00c8382c93eb0dd3eeb24a20bfece56a28326bbaebb647cadaf4750520</text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1396.2639"
+       x2="1396.2639"
+       y1="-90.917351"
+       y2="-70.620552"
+       id="line1154" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1217.6008"
+       x2="1958.6692"
+       y1="-70.620552"
+       y2="-70.620552"
+       id="line1156" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="154.6768"
+       x="446"
+       y="116.3857"
+       id="text1158"
+       transform="translate(792.60086,-172.01115)">schema:description</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="13.3506"
+       x="624.66309"
+       y="116.3857"
+       id="text1160"
+       transform="translate(776.60086,-172.01115)">   </text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1396.2639"
+       x2="1396.2639"
+       y1="-70.620552"
+       y2="-50.323654"
+       id="line1162" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1217.6008"
+       x2="1958.6692"
+       y1="-50.323654"
+       y2="-50.323654"
+       id="line1164" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="168.6631"
+       x="446"
+       y="136.6826"
+       id="text1166"
+       transform="translate(776.60086,-172.01115)">schema:metadataCID</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="427.0137"
+       x="624.66309"
+       y="136.6826"
+       id="text1168"
+       transform="translate(776.60086,-172.01115)">Qmay4cDaxUaZaHoJKqzN69XkiX8wMx17aG4VMmwmkLcL1a</text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1396.2639"
+       x2="1396.2639"
+       y1="-50.323654"
+       y2="-30.026751"
+       id="line1170" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1217.6008"
+       x2="1958.6692"
+       y1="-30.026751"
+       y2="-30.026751"
+       id="line1172" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="155.81841"
+       x="446"
+       y="156.97951"
+       id="text1174"
+       transform="translate(776.60086,-172.01115)">schema:linked_user</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="158.416"
+       x="624.66309"
+       y="156.97951"
+       id="text1176"
+       transform="translate(776.60086,-172.01115)">zealous_ptolemy@test</text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1396.2639"
+       x2="1396.2639"
+       y1="-30.026751"
+       y2="-9.7298594"
+       id="line1178" />
+    <rect
+       fill="none"
+       height="121.7813"
+       rx="5"
+       ry="5"
+       style="stroke:#000000;stroke-width:1.5"
+       width="741.06842"
+       x="1217.6008"
+       y="-131.51115"
+       id="rect1180" />
+    <rect
+       fill="#f1f1f1"
+       height="182.67191"
+       rx="5"
+       ry="5"
+       style="stroke:#f1f1f1;stroke-width:1.5"
+       width="755.66309"
+       x="1219"
+       y="20"
+       id="rect1182" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="73.7939"
+       x="1224"
+       y="34.995098"
+       id="text1184">@context</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="13.3506"
+       x="1375.4697"
+       y="34.995098"
+       id="text1186">   </text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1370.4697"
+       x2="1370.4697"
+       y1="20"
+       y2="40.296902"
+       id="line1188" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1219"
+       x2="1974.6631"
+       y1="40.296902"
+       y2="40.296902"
+       id="line1190" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="49.334999"
+       x="1224"
+       y="55.292"
+       id="text1192">@type</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="173.01759"
+       x="1375.4697"
+       y="55.292"
+       id="text1194">schema:ResearchProject</text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1370.4697"
+       x2="1370.4697"
+       y1="40.296902"
+       y2="60.5938"
+       id="line1196" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1219"
+       x2="1974.6631"
+       y1="60.5938"
+       y2="60.5938"
+       id="line1198" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="109.2246"
+       x="1224"
+       y="75.588898"
+       id="text1200">schema:name</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="495.87891"
+       x="1375.4697"
+       y="75.588898"
+       id="text1202">Assessing the Benefits of precision agriculture for global supply chains</text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1370.4697"
+       x2="1370.4697"
+       y1="60.5938"
+       y2="80.890602"
+       id="line1204" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1219"
+       x2="1974.6631"
+       y1="80.890602"
+       y2="80.890602"
+       id="line1206" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="89.755898"
+       x="1224"
+       y="95.885696"
+       id="text1208">dc:abstract</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="594.19342"
+       x="1375.4697"
+       y="95.885696"
+       id="text1210">This research focuses on the benefits and challenges posed by precision agriculture.</text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1370.4697"
+       x2="1370.4697"
+       y1="80.890602"
+       y2="101.1875"
+       id="line1212" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1219"
+       x2="1974.6631"
+       y1="101.1875"
+       y2="101.1875"
+       id="line1214" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="141.4697"
+       x="1224"
+       y="116.1826"
+       id="text1216">schema:keywords</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="13.3506"
+       x="1375.4697"
+       y="116.1826"
+       id="text1218">   </text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1370.4697"
+       x2="1370.4697"
+       y1="101.1875"
+       y2="121.4844"
+       id="line1220" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1219"
+       x2="1974.6631"
+       y1="121.4844"
+       y2="121.4844"
+       id="line1222" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="141.0527"
+       x="1224"
+       y="136.47951"
+       id="text1224">schema:startDate</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="81.361298"
+       x="1375.4697"
+       y="136.47951"
+       id="text1226">2023-12-18</text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1370.4697"
+       x2="1370.4697"
+       y1="121.4844"
+       y2="141.7813"
+       id="line1228" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1219"
+       x2="1974.6631"
+       y1="141.7813"
+       y2="141.7813"
+       id="line1230" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="132.4668"
+       x="1224"
+       y="156.7764"
+       id="text1232">schema:endDate</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="81.361298"
+       x="1375.4697"
+       y="156.7764"
+       id="text1234">2027-01-02</text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1370.4697"
+       x2="1370.4697"
+       y1="141.7813"
+       y2="162.07809"
+       id="line1236" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1219"
+       x2="1974.6631"
+       y1="162.07809"
+       y2="162.07809"
+       id="line1238" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="126.5605"
+       x="1224"
+       y="177.0732"
+       id="text1240">schema:funding</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="13.3506"
+       x="1375.4697"
+       y="177.0732"
+       id="text1242">   </text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1370.4697"
+       x2="1370.4697"
+       y1="162.07809"
+       y2="182.375"
+       id="line1244" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1219"
+       x2="1974.6631"
+       y1="182.375"
+       y2="182.375"
+       id="line1246" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="128.9668"
+       x="1224"
+       y="197.3701"
+       id="text1248">schema:location</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="13.3506"
+       x="1375.4697"
+       y="197.3701"
+       id="text1250">   </text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1370.4697"
+       x2="1370.4697"
+       y1="182.375"
+       y2="202.67191"
+       id="line1252" />
+    <rect
+       fill="none"
+       height="182.67191"
+       rx="5"
+       ry="5"
+       style="stroke:#000000;stroke-width:1.5"
+       width="755.66309"
+       x="1219"
+       y="20"
+       id="rect1254" />
+    <rect
+       fill="#f1f1f1"
+       height="40.5938"
+       rx="5"
+       ry="5"
+       style="stroke:#f1f1f1;stroke-width:1.5"
+       width="249.6055"
+       x="2050"
+       y="10"
+       id="rect1256" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="60.128899"
+       x="2055"
+       y="24.9951"
+       id="text1258">schema</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="129.95799"
+       x="2125.1289"
+       y="24.9951"
+       id="text1260">http://schema.org/</text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="2120.1289"
+       x2="2120.1289"
+       y1="10"
+       y2="30.2969"
+       id="line1262" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="2050"
+       x2="2299.6055"
+       y1="30.2969"
+       y2="30.2969"
+       id="line1264" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="18.320299"
+       x="2055"
+       y="45.292"
+       id="text1266">dc</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="169.47659"
+       x="2125.1289"
+       y="45.292"
+       id="text1268">http://purl.org/dc/terms/</text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="2120.1289"
+       x2="2120.1289"
+       y1="30.2969"
+       y2="50.5938"
+       id="line1270" />
+    <rect
+       fill="none"
+       height="40.5938"
+       rx="5"
+       ry="5"
+       style="stroke:#000000;stroke-width:1.5"
+       width="249.6055"
+       x="2050"
+       y="10"
+       id="rect1272" />
+    <rect
+       fill="#f1f1f1"
+       height="60.890598"
+       rx="5"
+       ry="5"
+       style="stroke:#f1f1f1;stroke-width:1.5"
+       width="154.2178"
+       x="2098"
+       y="73"
+       id="rect1274" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="144.2178"
+       x="2103"
+       y="87.995102"
+       id="text1276">precision agriculture</text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="2098"
+       x2="2252.2178"
+       y1="93.296898"
+       y2="93.296898"
+       id="line1278" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="142.9189"
+       x="2103"
+       y="108.292"
+       id="text1280">global supply chains</text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="2098"
+       x2="2252.2178"
+       y1="113.5938"
+       y2="113.5938"
+       id="line1282" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="133.4648"
+       x="2103"
+       y="128.5889"
+       id="text1284">disease prevention</text>
+    <rect
+       fill="none"
+       height="60.890598"
+       rx="5"
+       ry="5"
+       style="stroke:#000000;stroke-width:1.5"
+       width="154.2178"
+       x="2098"
+       y="73"
+       id="rect1286" />
+    <rect
+       fill="#f1f1f1"
+       height="40.5938"
+       rx="5"
+       ry="5"
+       style="stroke:#f1f1f1;stroke-width:1.5"
+       width="278.3848"
+       x="2036"
+       y="152"
+       id="rect1288" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="49.334999"
+       x="2041"
+       y="166.9951"
+       id="text1290">@type</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="149.1602"
+       x="2160.2246"
+       y="166.9951"
+       id="text1292">schema:Organization</text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="2155.2246"
+       x2="2155.2246"
+       y1="152"
+       y2="172.29691"
+       id="line1294" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="2036"
+       x2="2314.3848"
+       y1="172.29691"
+       y2="172.29691"
+       id="line1296" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="109.2246"
+       x="2041"
+       y="187.29201"
+       id="text1298">schema:name</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="136.3564"
+       x="2160.2246"
+       y="187.29201"
+       id="text1300">World Wildlife Fund</text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="2155.2246"
+       x2="2155.2246"
+       y1="172.29691"
+       y2="192.5938"
+       id="line1302" />
+    <rect
+       fill="none"
+       height="40.5938"
+       rx="5"
+       ry="5"
+       style="stroke:#000000;stroke-width:1.5"
+       width="278.3848"
+       x="2036"
+       y="152"
+       id="rect1304" />
+    <rect
+       fill="#f1f1f1"
+       height="40.5938"
+       rx="5"
+       ry="5"
+       style="stroke:#f1f1f1;stroke-width:1.5"
+       width="326.31839"
+       x="2012"
+       y="211"
+       id="rect1306" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="49.334999"
+       x="2017"
+       y="225.9951"
+       id="text1308">@type</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="96.632797"
+       x="2136.2246"
+       y="225.9951"
+       id="text1310">schema:Place</text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="2131.2246"
+       x2="2131.2246"
+       y1="211"
+       y2="231.29691"
+       id="line1312" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="2012"
+       x2="2338.3184"
+       y1="231.29691"
+       y2="231.29691"
+       id="line1314" />
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="109.2246"
+       x="2017"
+       y="246.29201"
+       id="text1316">schema:name</text>
+    <text
+       fill="#000000"
+       font-family="sans-serif"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="197.0938"
+       x="2136.2246"
+       y="246.29201"
+       id="text1318">Los Angeles, California, USA</text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="2131.2246"
+       x2="2131.2246"
+       y1="231.29691"
+       y2="251.5938"
+       id="line1320" />
+    <rect
+       fill="none"
+       height="40.5938"
+       rx="5"
+       ry="5"
+       style="stroke:#000000;stroke-width:1.5"
+       width="326.31839"
+       x="2012"
+       y="211"
+       id="rect1322" />
+    <circle
+       cx="1099.1078"
+       cy="-169.93431"
+       fill="#000000"
+       style="stroke:#000000;stroke-width:1"
+       id="ellipse1328"
+       r="3" />
+    <path
+       d="m 1963,30.5 h 13 c 21.5958,0 44.5133,0 66.8113,0"
+       fill="none"
+       style="stroke:#000000;stroke-width:1;stroke-dasharray:3, 3"
+       id="path1330" />
+    <path
+       d="m 2042.8113,33.5141 2.2606,-3.0141 -2.2606,-3.0141 7.5353,3.0141 -7.5353,3.0141"
+       fill="#000000"
+       style="stroke:#000000;stroke-width:1"
+       id="path1332" />
+    <circle
+       cx="1963"
+       cy="30.5"
+       fill="#000000"
+       style="stroke:#000000;stroke-width:1"
+       id="ellipse1334"
+       r="3" />
+    <path
+       d="m 1963,111.5 h 13 c 37.5157,0 78.9874,-1.4443 114.2804,-3.1055"
+       fill="none"
+       style="stroke:#000000;stroke-width:1;stroke-dasharray:3, 3"
+       id="path1336" />
+    <path
+       d="m 2090.4324,111.5534 2.2171,-3.273 -2.5212,-3.0448 8.0493,2.7788 -7.7452,3.539"
+       fill="#000000"
+       style="stroke:#000000;stroke-width:1"
+       id="path1338" />
+    <circle
+       cx="1963"
+       cy="111.5"
+       fill="#000000"
+       style="stroke:#000000;stroke-width:1"
+       id="ellipse1340"
+       r="3" />
+    <path
+       d="m 1963,172.5 h 13 c 17.1124,0 35.0547,0 52.861,0"
+       fill="none"
+       style="stroke:#000000;stroke-width:1;stroke-dasharray:3, 3"
+       id="path1342" />
+    <path
+       d="m 2028.861,175.5481 2.2861,-3.0481 -2.2861,-3.0481 7.6202,3.0481 -7.6202,3.0481"
+       fill="#000000"
+       style="stroke:#000000;stroke-width:1"
+       id="path1344" />
+    <circle
+       cx="1963"
+       cy="172.5"
+       fill="#000000"
+       style="stroke:#000000;stroke-width:1"
+       id="ellipse1346"
+       r="3" />
+    <path
+       d="m 1963,192.5 h 13 c 16.6058,0 19.8082,6.315 36,10 10.5572,2.4027 21.5377,4.7278 32.5865,6.9459"
+       fill="none"
+       style="stroke:#000000;stroke-width:1;stroke-dasharray:3, 3"
+       id="path1348" />
+    <path
+       d="m 2043.9792,212.5082 2.904,-2.6068 -1.6894,-3.5178 7.0485,4.5805 -8.2631,1.5441"
+       fill="#000000"
+       style="stroke:#000000;stroke-width:1"
+       id="path1350" />
+    <circle
+       cx="1963"
+       cy="192.5"
+       fill="#000000"
+       style="stroke:#000000;stroke-width:1"
+       id="ellipse1352"
+       r="3" />
+    <circle
+       cx="1227.8621"
+       cy="-59.603367"
+       fill="#000000"
+       style="stroke:#000000;stroke-width:1"
+       id="ellipse1358"
+       r="3" />
+    <g
+       id="g5753"
+       transform="translate(283.20143,-204.73584)">
+      <rect
+         fill="#f1f1f1"
+         height="20.2969"
+         rx="5"
+         ry="5"
+         style="stroke:#f1f1f1;stroke-width:1.5"
+         width="23.350599"
+         x="853.67566"
+         y="125.78613"
+         id="rect1126" />
+      <text
+         fill="#000000"
+         font-family="sans-serif"
+         font-size="14px"
+         lengthAdjust="spacing"
+         textLength="13.3506"
+         x="272.5"
+         y="106.3467"
+         id="text1128"
+         transform="translate(586.17568,34.434515)">   </text>
+      <rect
+         fill="none"
+         height="20.2969"
+         rx="5"
+         ry="5"
+         style="stroke:#000000;stroke-width:1.5"
+         width="23.350599"
+         x="853.67566"
+         y="125.78613"
+         id="rect1130" />
+      <circle
+         cx="864.27106"
+         cy="135.93452"
+         fill="#000000"
+         style="stroke:#000000;stroke-width:1"
+         id="ellipse1364"
+         r="3" />
+    </g>
+    <circle
+       cx="1099.1078"
+       cy="-149.93431"
+       fill="#000000"
+       style="stroke:#000000;stroke-width:1"
+       id="ellipse1370"
+       r="3" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 3;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker5741)"
+       d="m 1102.1073,-169.98782 110.7377,-1.97547"
+       id="path5210"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#ellipse1328" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 3;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="m 1159.8711,-69.859524 h 55.5392"
+       id="path5990"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 2063.0948,-832.38749 h 1.5606 v 0.001"
+       id="path6687"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0" />
+    <path
+       style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.11308;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.33922, 3.33922;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 1099.3101,-148.23323 47.8013,79.245758"
+       id="path6810"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>

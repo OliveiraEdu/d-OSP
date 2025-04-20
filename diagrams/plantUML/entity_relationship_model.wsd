@@ -1,6 +1,6 @@
 @startuml entity_relationship_model
 
-title Open Science Platform Entity-relationship model
+' title Open Science Platform Entity-relationship model
 skinparam monochrome true
 
 top to bottom direction

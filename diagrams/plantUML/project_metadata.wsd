@@ -16,7 +16,7 @@
                 },
                 "@type": "schema:ResearchProject",
                 "schema:name": "Assessing the Benefits of precision agriculture for global supply chains",
-                "dc:abstract": "This research focuses on the benefits and challenges posed by precision agriculture for global supply chains, with an emphasis on its potential for disease prevention.",
+                "dc:abstract": "This research focuses on the benefits and challenges posed by precision agriculture.",
                 "schema:keywords": [
                     "precision agriculture",
                     "global supply chains",

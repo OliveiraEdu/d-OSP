@@ -25,7 +25,7 @@ entity "Open Science Platform - Project Entity" as project {
   + country: string
   + linked_user: string
 }
-
+' 
 user  ||--o{ project : is linked to 
 
 

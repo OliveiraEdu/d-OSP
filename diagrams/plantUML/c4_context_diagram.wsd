@@ -6,7 +6,7 @@ skinparam monochrome true
 
 LAYOUT_WITH_LEGEND()
 
-title System Context Diagram for Open Science Platform
+' title System Context Diagram for Open Science Platform
 
 Person(user, "Researcher", "A researcher who enrolls and interacts with the platform to upload and manage research artifacts.")
 

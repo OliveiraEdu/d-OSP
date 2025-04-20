@@ -5,7 +5,7 @@ skinparam monochrome true
 
 LAYOUT_WITH_LEGEND()
 
-title Component Diagram for Open Science Platform
+' title Component Diagram for Open Science Platform
 
 Person(user, "User", "Interacts with the system via Jupyter Notebook")
 

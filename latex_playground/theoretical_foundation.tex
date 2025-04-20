@@ -313,7 +313,7 @@ The security and functionality of the InterPlanetary File System (IPFS) rely hea
 
 \begin{itemize}
     \item \textbf{Determinism}: The same input always produces the same output hash. Formally, for any input $x$, $\text{hash}(x) = h$, where $h$ is the fixed-length output hash.
-    \item \textbf{Pre-image Resistance}: Given a hash value $h$, it is computationally infeasible to find any input $x$ such that $\text{hash}(x) = h$ \cite{bitcoin2008whitepaper}. Mathematically, for a given $h$, finding an $x$ that satisfies $\text{hash}(x) = h$ is infeasible.
+    \item \textbf{Pre-image Resistance}: Given a hash value $h$, it is computationally infeasible to find any input $x$ such that $\text{hash}(x) = h$ \cite{nakamoto2008bitcoin}. Mathematically, for a given $h$, finding an $x$ that satisfies $\text{hash}(x) = h$ is infeasible.
     \item \textbf{Second Pre-image Resistance}: Given an input $x_1$, it is computationally infeasible to find a different input $x_2$ such that $\text{hash}(x_1) = \text{hash}(x_2)$ \cite{menezes1996handbook}. Formally, for any $x_1$, finding $x_2 \neq x_1$ such that $\text{hash}(x_1) = \text{hash}(x_2)$ is infeasible.
     \item \textbf{Collision Resistance}: It is computationally infeasible to find any two different inputs $x_1$ and $x_2$ such that $\text{hash}(x_1) = \text{hash}(x_2)$ \cite{nist2012fips}. This property ensures that each piece of data in the IPFS system has a unique identifier and prevents malicious actors from substituting data.
 \end{itemize}
@@ -458,9 +458,9 @@ While decentralized technologies have the potential to address many of the chall
 \end{itemize}
 
 \subsection{Conclusion}
-The hypothesis that decentralized technologies can foster Open Science initiatives and improve reproducibility presents a promising contrast to the current limitations of centralized Open Science systems. Blockchain, smart contracts, and IPFS provide solutions to issues related to transparency, reproducibility, and data accessibility. However, the widespread adoption of these technologies will require overcoming significant technical, legal, and infrastructural barriers. Despite these challenges, the potential of decentralized technologies to reshape the Open Science landscape and improve research reproducibility is substantial.
+The hypothesis that decentralized technologies can foster Open Science initiatives and improve reproducibility presents a promising contrast to the current limitations of centralized Open Science systems. 
 
-
+Blockchain, smart contracts, and IPFS provide solutions to issues related to transparency, reproducibility, and data accessibility. However, the widespread adoption of these technologies will require overcoming significant technical, legal, and infrastructural barriers. Despite these challenges, the potential of decentralized technologies to reshape the Open Science landscape and improve research reproducibility is substantial.
 
 \bibliographystyle{plain}
 \bibliography{Bibliography.bib}

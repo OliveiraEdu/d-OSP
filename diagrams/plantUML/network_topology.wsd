@@ -1,7 +1,7 @@
 @startuml
 skinparam monochrome true
 
-title Docker Network Topology
+' title Docker Network Topology
 nwdiag {
   network iroha {
       address = "172.18.x.x/16"

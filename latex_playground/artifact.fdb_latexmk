@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1742143810 "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/artifact.tex" "artifact.pdf" "artifact" 1742143812
+["pdflatex"] 1744376889 "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/artifact.tex" "artifact.pdf" "artifact" 1744376890
   "/etc/texmf/web2c/texmf.cnf" 1701553138 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/artifact.tex" 1742143810 49352 b8aa79f7a005134ab607de4bd66e8986 ""
+  "/home/eduardo/Documents/repo/Git/OpenScience/latex_playground/artifact.tex" 1744376888 49326 72ffd630b4d80357810096c059dede69 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -53,8 +53,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1701553183 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1710494692 2800392 5302ca1083901a3fb21e189f575b5416 ""
-  "artifact.aux" 1742143812 10002 79cb5ad6ee9431d66af74134cd91e3f2 "pdflatex"
-  "artifact.tex" 1742143810 49352 b8aa79f7a005134ab607de4bd66e8986 ""
+  "artifact.aux" 1744376890 10002 79cb5ad6ee9431d66af74134cd91e3f2 "pdflatex"
+  "artifact.tex" 1744376888 49326 72ffd630b4d80357810096c059dede69 ""
   "fig//c4_component_diagram.eps" 1741444501 139185 8ead8f53d124c0118db796479a0b8d2a ""
   "fig//c4_container_diagram.eps" 1741608588 227525 62154b52ef550faac61bd6a8480ade6b ""
   "fig//c4_context_diagram.eps" 1741300963 173704 da65c8770f47daaa7506dfe9dd5756f6 ""
@@ -68,7 +68,7 @@
   "fig//metadata_workflow_sequence.eps" 1741553199 58873 33a74b9415e523c5caccaa322777da8d ""
   "fig//network_topology.eps" 1742141367 29292 66bd3a2093902864cd405e60ebd12a7c ""
   "fig//project_bct_representation.eps" 1742139173 134015 ee6c24c247c5977f2c741ca192ab6fbd ""
-  "fig//project_metadata.eps" 1742142324 134015 ee6c24c247c5977f2c741ca192ab6fbd ""
+  "fig//project_metadata_2.eps" 1744326891 89373 a9063518aa55c618a577d177102bb20d ""
   "fig//provenance_timeline.eps" 1741568796 54507 70d498505b1f002ea06f6e0ab2a8d773 ""
   "fig//user_bct_representation.eps" 1742143683 86596 965111a134a0bcdfe6288f455de5347b ""
   "fig//user_metadata.eps" 1742142037 86596 965111a134a0bcdfe6288f455de5347b ""

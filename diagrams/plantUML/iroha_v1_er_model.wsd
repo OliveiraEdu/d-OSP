@@ -1,5 +1,5 @@
 @startuml
-title Hyperledger Iroha v1 Entity-relationship model(subset)
+' title Hyperledger Iroha v1 Entity-relationship model(subset)
 skinparam monochrome true
 
 entity "account" {

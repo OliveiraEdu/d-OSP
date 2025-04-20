@@ -1,6 +1,6 @@
 @startuml
 
-title Metadata Handling Workflow in the Open Science Platform
+' title Metadata Handling Workflow in the Open Science Platform
 skinparam monochrome true
 
 participant "Platform" as P

@@ -2,7 +2,7 @@
 
 skinparam monochrome true
 
-title Open Science Platform - Search and Validation
+' title Open Science Platform - Search and Validation
 
 participant User as "User"
 participant Platform as "Platform"

@@ -2,7 +2,7 @@
 
 skinparam monochrome true
 
-title Transaction logging and provenance query
+' title Transaction logging and provenance query
 
 == Transaction ==
 

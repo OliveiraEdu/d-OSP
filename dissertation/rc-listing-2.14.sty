@@ -1,0 +1,559 @@
+% rc-listing.sty alpha v2.14
+%
+% Copyright (c) 2000-2012 Rafael Corchuelo (corchu@us.es)
+%
+% This class provides new commands for typesetting exercises and answers
+%
+% This class IS NOT re-distributable.  Only members of the TDG are allowed to
+% use it.  If you happen to have this file, please, use it at your own risk.
+% No support is available.  Don't send me e-mail asking me about RC-LisTinG.
+% A day, RC-LisTing will be made available to LaTeX users, but that day still
+% has to come!
+
+% alpha v0.0 2004/09/01
+%
+% New features
+%   - Redefine \listingfont to get your favourite listing font.
+%   - Use \inline{text} to typeset a piece of text using the listing font.
+%   - Use \begin{listing}[pattern] text \end{listing} to typeset a listing.
+%     See the documentation of RC-BooK to get a picture of what this
+%     environment brings to you.
+
+% alpha v0.1 2006/04/11
+%
+% Fixed bugs, I mean... features
+%   - \label didn't work well in a listing environment inside a float.
+
+% alpha v0.2 2006/14/04
+%
+% New features
+%   - Use environment interface to typeset the description of the members of an
+%     interface.  For instance
+%
+%     \begin{interface}
+%     \item int Count: Number of records in this table.
+%     \item int Count(object obj): Number of times \inline{obj} is in this table
+%     \end{interface}
+%
+%     Within the interface environment, \item is redefined as follows:
+%
+%     \item member : description
+%
+%     The member is typeset as if you had written \inline{member}, and the
+%     description is typeset normally.
+%
+% Fixed bugs, I mean... features
+%   - \url, \path and \inline do now share the same font, which may be changed by
+%     redefining \listingfont.
+%   - \inline{<T>} didn't work work well since TeX complained about > not
+%     being right there.  The workaround was to use \inline{<T>{}}, instead,
+%     but the bug is now fixed.
+%   - \tab didn't work well after \newline.
+%   - The listing environment is now properly indented inside list environments.
+%   - Hanging lines in a listing environment do now hang properly
+%   - A listing inside a table or a figure does not produce extra space before
+%     or after the listing.
+%   - \inline didn't work well when moved to a table of contents.  For instance
+%
+%     \section{{\inline{foo}, \inline{bar} and \inline{baz}}
+%
+%     produced the following entry in the table of contents
+%
+%     foo, barand baz...................................................123
+
+% alpha v0.3 2007/08/31
+%
+% Fixed bugs, I mean... features
+%   - The spacing before and after listing has been improved.
+%   - I forgot to require ifthen.sty
+%   - Interline spacing is correct now.
+
+% alpha v0.4 2008/01/31
+%
+% New features
+%   - There's a new environment to typeset typical field cards.
+%
+%     \begin{interface}
+%     \item Field1: Description1
+%     \item Field2: Description2
+%     ...
+%     \end{interface}
+%
+%   - There's a new command to redefine listing catcodes more easily:
+%
+%     \deflistingcatcodes{escapechar}{mathchar}
+%                        {leftbracket}{rightbracket}
+%                        {inlinecode}
+%
+%     By default, listing catcodes are configured by using
+%
+%     \deflistingcatcodes{\\}{\$}{\{}{\}}{\|}
+%
+%     Note that if you redefine the escape char, it affects how inline code
+%     must be terminated.  For instance, if you issue:
+%
+%     \deflistingcatcodes{\!}{\$}{\¿}{\?}{\|}
+%
+%     inline code must then be finished by issuing the command !|, e.g.,
+%     \|x := $1 + \sin \alpha$ !textbf¿Standard coefficient?!|.  (Note that
+%     catcodes are restored within the mathematical environment.)
+%
+%  !!!!!!!!!!^^^^^ ESTO SE PUEDE ARREGLAR HACIENDO EL \ UN CARACTER ACTIVO
+%  Y QUE CON UN FUTURELET MIRE LO QUE VIENE DETRAS.  USAR LA MISMA TÉCNICA
+%  QUE EN ABBREV.STY
+%
+%   - The \inline command is provided, but it is deprecated.  Used \|text\| to
+%     typeset inline code instead.  The \| environment typesets the text inside
+%     verbatim, but it can scape to math mode, for instance by using $ or the
+%     math scape you've defined with \listingcatcodes.  For instance:
+%                                                    2
+%     \|x := sin($\mbox{y}^2$)\|   --->    x := sin(x )
+
+% alpha v0.5 2012/04/31
+%
+% Fixed bugs, I mean... features
+%   - The listing environment added a little extra space before and after.
+%     This has been removed
+
+% alpha v2.14 2012/08/31
+%
+% New features
+%   - \code is now an alias for \inline
+%   - The long, long awaited but missing \ensuretext command is now available in
+%     RC-LisTinG!  You can use it to ensure that something is typeset in text
+%     mode. This is similar to \ensuremath for math mode.
+%
+% Fixed bugs, I mean... features
+%
+%   - The support for multiple co-existing versions of RC-BooK has been improved.
+%   - \inline now works well inside maths.
+
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+
+\ProvidesPackage{rc-listing-2.14}
+   [2012/08/31 alpha v2.14 Copyright (C) 2004-2012 The Distributed Group]
+
+\RequirePackage{verbatim}
+\RequirePackage{xspace}
+\RequirePackage{ifthen}
+
+%\typeout{rc-listing.sty alpha v0.4 Copyright (C) 2004-2008 The Distributed Group}
+
+% \RCLisTinG
+
+\newcommand{\RCLisTinG}%
+{%
+    R%
+    \kern-.1667em\raise.25ex\hbox{C}%
+    \kern-.25em\raise.25ex\hbox{--}%
+    L%
+    \kern-.0em\raise.5ex\hbox{i}%
+    \kern-.1em\lower.2ex\hbox{s}%
+    \kern-.1em\lower.4ex\hbox{T}%
+    \kern-.0em\lower.2ex\hbox{i}%
+    \kern-.0em\lower.1ex\hbox{n}%
+    \kern-.2em\raise.5ex\hbox{G}%
+    \xspace%
+}
+
+% Save the label command so that it works well in floating listings
+
+\let\listing@savelabel\relax
+\let\listing@originallabel\label
+
+% Counters, ifs, and the like
+
+\newif\if@listing
+\def\@listingtrue{\let\if@listing\iftrue}
+\def\@listingfalse{\let\if@listing\iffalse}
+\@listingfalse
+
+\newcounter{listing@lineno}
+\newcounter{listing@begin@lineno}
+
+\newsavebox{\listing@Number@Box}
+\newlength{\listing@Number@Width}
+
+\newsavebox{\listing@Brakets@Box}
+\newlength{\listing@Brakets@Width}
+
+% Some useful routines to change catcodes quickly
+
+\def\dospecials{%
+  \do\ \do\\\do\{\do\}\do\$\do\&%
+  \do\#\do\^\do\_\do\%\do\~%
+  \do\>\do\<\do\-%
+}
+
+\def\makeescape#1{\catcode`#1=0\relax}
+\def\makeactive#1{\catcode`#1=13\relax}
+\def\makeother#1{\catcode`#1=12\relax}
+
+\def\makemathother%
+{%
+    \makeother\^%
+    \makeother\_%
+    \makeother\#%
+    \everymath={\protect\catcode`\#=6 \protect\catcode`\^=7 \protect\catcode`\_=8}%
+}
+
+\def\uncatcodespecials{%
+    \def\do##1{\catcode`##1=12}%
+    \dospecials%
+}
+
+\gdef\predefinedcats%
+{%
+        \catcode`\^^I=\active \catcode`\ =\active%
+        \catcode`\\=0 \catcode`\{=1 \catcode`\}=2%
+        \catcode`\$=3 \catcode`\&=4 \catcode`\^^M=5%
+        \catcode`\#=6 \catcode`\^=7 \catcode`\_=8%
+        \catcode`\%=14 \catcode`\\=0%
+        \relax% DON'T REMOVE THIS LINE
+}
+
+% \ensuretext{text}.  From amstesxt.sty
+
+\DeclareRobustCommand{\ensuretext}{%
+  \ifmmode\expandafter\ensuretext@\else\expandafter\mbox\fi}
+\let\nfss@text\ensuretext
+\def\ensuretext@#1{{\mathchoice
+  {\ensuretextdef@\displaystyle\f@size{#1}}%
+  {\ensuretextdef@\textstyle\f@size{\firstchoice@false #1}}%
+  {\ensuretextdef@\textstyle\sf@size{\firstchoice@false #1}}%
+  {\ensuretextdef@\textstyle\ssf@size{\firstchoice@false #1}}%
+  \check@mathfonts
+  }%
+}
+\def\ensuretextdef@#1#2#3{\hbox{{%
+                    \everymath{#1}%
+                    \let\f@size#2\selectfont
+                    #3}}}
+\newif\iffirstchoice@
+\firstchoice@true
+\def\stepcounter#1{%
+  \iffirstchoice@
+     \addtocounter{#1}\@ne
+     \begingroup \let\@elt\@stpelt \csname cl@#1\endcsname \endgroup
+  \fi
+}
+\def\addtocounter#1#2{%
+  \iffirstchoice@
+  \@ifundefined {c@#1}{\@nocounterr {#1}}%
+    {\global \advance \csname c@#1\endcsname #2\relax}%
+  \fi}
+\let\m@gobble\@empty
+\expandafter\let\csname m@gobble4\endcsname\@gobblefour
+\long\expandafter\def\csname m@gobble6\endcsname#1#2#3#4#5#6{}
+\toks@{%
+  \csname m@gobble\iffirstchoice@\else 4\fi\endcsname
+  \protect}
+\edef\GenericInfo{\the\toks@
+  \expandafter\noexpand\csname GenericInfo \endcsname}
+\edef\GenericWarning{\the\toks@
+  \expandafter\noexpand\csname GenericWarning \endcsname}
+\toks@{%
+  \csname m@gobble\iffirstchoice@\else 6\fi\endcsname
+  \protect}
+\edef\GenericError{\the\toks@
+  \expandafter\noexpand\csname GenericError \endcsname}
+\begingroup \catcode`\"=12
+\gdef\mathhexbox#1#2#3{\ensuretext{$\m@th\mathchar"#1#2#3$}}
+\endgroup
+
+% \inline{text}
+
+% \listingfont \string#1\egroup haría que todo lo que se pone dentro fuera verbatim
+
+%\newcommand{\inline}[1]{{\bgroup\listingfont #1\egroup}}
+%\def\code#1{\ifmmode\mbox{\listingfont\small#1}\else{\listingfont\small#1}\fi}
+
+%\def\ensuretext#1{\mbox{#1}}
+\def\inline#1{\ifmmode\expandafter\ensuretext\fi{\listingfont{}#1}}
+\let\code=\inline
+
+\newif\if@RCLST@inlinecode
+\def\@RCLST@inlinecodetrue{\let\if@RCLST@inlinecode\iftrue}
+\def\@RCLST@inlinecodefalse{\let\if@RCLST@inlinecode\iffalse}
+\@RCLST@inlinecodefalse
+
+\newif\if@RCLST@mathmode
+\def\@RCLST@mathmodetrue{\let\if@RCLST@mathmode\iftrue}
+\def\@RCLST@mathmodefalse{\let\if@RCLST@mathmode\iffalse}
+\@RCLST@mathmodefalse
+
+\def\definlinecode#1{%
+    \gdef#1{%
+        \if@RCLST@inlinecode%
+                \if@RCLST@mathmode%
+                    \egroup
+                \fi%
+            \egroup%
+            \@RCLST@inlinecodefalse%
+        \else%
+            \@RCLST@inlinecodetrue%
+            \bgroup%
+                \uncatcodespecials%
+                \listingcatcodes%
+                %\obeylines%
+                \obeyspaces%
+                \everymath={\predefinedcats\catcode`\ =10\relax}%
+                \ifmmode%
+                    \@RCLST@mathmodetrue%
+                    \mbox\bgroup%
+                \else%
+                    \@RCLST@mathmodefalse%
+                \fi%
+                \listingfont%
+        \fi%
+    }%
+}
+
+%\catcode`|=\active
+
+%\begingroup
+%    \catcode`¿= 1  \catcode`?=2    \catcode`!=0
+%    \catcode`\{=12 \catcode`\}=12  \catcode`\\=12
+%    !gdef!|¿%
+%        !if@RCLST@inlinecode%
+%                !if@RCLST@mathmode%
+%                    !egroup
+%                !fi%
+%            !egroup%
+%            !@RCLST@inlinecodefalse%
+%        !else%
+%            !@RCLST@inlinecodetrue%
+%            !bgroup%
+%                !uncatcodespecials%
+%                !listingcatcodes%
+%                %!obeylines%
+%                !obeyspaces%
+%                !everymath=¿!predefinedcats!catcode`! =10!relax?%
+%                !ifmmode%
+%                    !@RCLST@mathmodetrue%
+%                    !mbox!bgroup%
+%                !else%
+%                    !@RCLST@mathmodefalse%
+%                !fi%
+%                !listingfont%
+%        !fi%
+%    ?
+%!endgroup
+%
+
+% \tab[n] inserts n tabulators. n=1 by default
+
+\newcommand{\tab}[1][1]{
+    \mbox{}\hskip #1em\relax%
+}
+
+% \listingfont
+
+\newcommand{\listingfont}{\usefont{T1}{cmtt}{m}{n}}
+%\let\listingfont=\ttfamily
+
+% \begin{listing}[pattern] text \end{listing}
+
+\def\listing@pattern{}%
+
+{\obeyspaces\global\let =\ }
+
+% \begingroup
+%     \makeactive\<%
+%     \gdef\escape{%
+%         \begingroup%
+%             \makeactive\<%
+%             \def<##1>{##1\endgroup}%
+%             \normalfont\normalsize%
+%             \predefinedcats%
+% %            \catcode`\^^I=\active \catcode`\ =\active%
+% %            \catcode`\\=0 \catcode`\{=1 \catcode`\}=2%
+% %            \catcode`\$=3 \catcode`\&=4 \catcode`\^^M=5%
+% %            \catcode`\#=6 \catcode`\^=7 \catcode`\_=8%
+% %            \catcode`\%=14 \catcode`\\=0%
+%     }
+% \endgroup
+
+\def\listing@check@error#1{%
+    \ifthenelse{\equal{#1}{listing}}%
+    {%
+      \endlisting\endgroup%
+    }%
+    {%
+%        \ifthenelse{\equal{#1}{program}}%  NOT NECESSARY
+%        {%
+%          \endprogram\endgroup%
+%        }%
+        {%
+            \errhelp{Simply write `listing' instead of `#1'}
+            \errmessage{\noexpand\begin\noexpand{listing\noexpand} on
+            input line \arabic{listing@begin@lineno} ended by
+            \noexpand\end\noexpand{#1\noexpand}}%
+        }%
+    }%
+}
+
+\begingroup
+    \catcode `|=0   \catcode `[= 1  \catcode`]=2
+    \catcode `\{=12 \catcode `\}=12 \catcode`\\=12
+    |gdef|@xendlisting{#1}[%
+      |listing@check@error[#1]%
+    ]%
+|endgroup
+
+%\def\listingcatcodes%
+%{%
+%    \makeescape\\%
+%    \catcode`\$=3%
+%    \catcode`\{=1%
+%    \catcode`\}=2%
+%}
+
+\def\deflistingcatcodes#1#2#3#4#5{%
+    \gdef\listingcatcodes{%
+        \catcode`#1=0%
+        \catcode`#2=3%
+        \catcode`#3=1%
+        \catcode`#4=2%
+    }%
+    \definlinecode#5%
+}
+
+\@onlypreamble\deflistingcatcodes
+
+\deflistingcatcodes{\\}{\$}{\{}{\}}{\|}
+
+\def\makenumberbox#1#2{%
+    \ifthenelse{\equal{#1}{[]}\or\equal{\listing@pattern}{}}%
+    {%
+        \savebox{\listing@Number@Box}{\mbox{}}%
+    }{%
+        \savebox{\listing@Number@Box}{\listingfont\listing@pattern:\hskip 3pt}%
+        \settowidth{\listing@Number@Width}{\usebox{\listing@Number@Box}}%
+        \advance \listing@Number@Width -\listing@Brakets@Width%
+        \savebox{\listing@Number@Box}{\makebox[\listing@Number@Width][r]{\listingfont#2:\hskip 3pt}}%
+    }%
+    \noindent\usebox{\listing@Number@Box}%
+}
+
+\newdimen\rc@hanginglinewidth%
+\newdimen\rc@hangingleftmargin%
+
+\def\listing#1 % PRESERVE THIS SPACE!!!
+{%
+    % Try to use \@ifnextchar[
+    \if@listing%
+        \errmessage{The listing in line \arabic{listing@begin@lineno}~%
+                    must be closed before you begin a new listing}%
+    \fi%
+    \@listingtrue%
+    \ifhmode%
+        \par%
+    \fi%
+    %\addvspace{\abovedisplayskip}%
+    \def\listing@curr@leftmargin{\leftmargin}%
+    \def\listing@curr@rightmargin{\rightmargin}%
+    \begingroup%
+        \let\listing@savelabel\label%
+        \let\label\listing@originallabel%
+        \setcounter{listing@begin@lineno}{\the\inputlineno}
+        \savebox{\listing@Brakets@Box}{\listingfont{[]}}%
+        \settowidth{\listing@Brakets@Width}{\usebox{\listing@Brakets@Box}}%
+        \let\oldpar\par%
+        %\def\par{\ensuremath{\mathstrut}\parskip=0pt\endgraf}%
+        \def\par{\ifnum\prevgraf=1\mbox{}\fi\hbox to 0pt{}\oldpar}%
+        \setcounter{listing@lineno}{0}%
+        \def\listing@pattern{#1}%
+        \everypar={%
+            \refstepcounter{listing@lineno}% stepcounter produces 1.1, 1.2, ...
+            \makenumberbox{\listing@pattern}{\arabic{listing@lineno}}%
+            \rc@hanginglinewidth=\linewidth%
+            \rc@hangingleftmargin=\@totalleftmargin%
+            \setbox0=\hbox{\makenumberbox{\listing@pattern}{\listing@pattern}}%
+            \advance\rc@hangingleftmargin by \wd0%
+            \advance\rc@hanginglinewidth by -\wd0%
+            \parshape 2 \@totalleftmargin\linewidth\rc@hangingleftmargin\rc@hanginglinewidth%
+            \parskip=1.5pt%
+        }%
+        %\def\end{\@xendlisting}%  NECESARIO SI QUIERO UN VERBATIM, VERBATIM
+        \uncatcodespecials%
+        \listingcatcodes%
+        \everymath={\predefinedcats\catcode`\ =10\relax}%
+        \everydisplay={\predefinedcats\catcode`\ =10\relax}%
+        \raggedright%
+        \obeylines%
+        \obeyspaces%
+        \parindent=0pt%
+        %\baselineskip=0.7\baselineskip%
+        \baselineskip=0.9\baselineskip%
+        \listingfont%
+        \endgraf%
+        %\trivlist\item[]\relax%
+}%
+
+\def\endlisting
+{%
+        %\endtrivlist%
+        \let\label\listing@savelabel%
+    \endgroup%
+    \setcounter{listing@begin@lineno}{0}%
+    %\vskip\belowdisplayskip%
+    %\unskip%
+    %\par%\addvspace{\belowdisplayskip}%
+    \@listingfalse%
+}%
+
+% interface
+
+\def\interface{%
+    \list
+        {$\triangleright$}
+        {%
+            %\leftmargin=\defaultparindent%
+            %\advance\leftmargin by \labelwidth%
+            %\rightmargin\leftmargin%
+            %\topsep=0pt%
+            %\itemindent=-12pt%
+            \def\makelabel##1{\hss\llap{##1}}%
+        }%
+        \let\saveitem=\item%
+        \def\item##1:{\saveitem \inline{##1}:}%
+}
+
+\def\endinterface{\endlist}
+
+% fieldcard
+
+
+%    \list%
+%        {}%
+%        {%
+%            %\labelwidth\z@%
+%            \setlength\leftmargin{0pt}%
+%            \setlength\parindent{0pt}%
+%            \setlength\parsep{\smallskipamount}%
+%            \setlength\itemsep{\smallskipamount}%
+%        }%
+%        \let\saveitem=\item%
+%        \long\def\item##1:{\saveitem{\parbox[t]{#1}{\hfill\bfseries ##1:}}}%
+
+\newenvironment{fieldcard}[1][5em]{%
+    \list%
+        {}%
+        {%
+            \leftmargin=#1%
+            \labelwidth\z@%
+            \itemindent-\leftmargin%
+            \setlength\parsep{0pt}% \smallskipamount
+            \setlength\itemsep{0pt}% \smallskipamount
+            \def\makelabel##1{\parbox[t]{#1}{\hspace\labelsep\hfill\bfseries ##1:}}%
+        }
+        \let\saveitem=\item%
+        \def\item##1:{\saveitem[##1]}%
+}{%
+    \endlist%
+}
+
+\endinput
+
+% EOF rc-listing.sty
