@@ -7,7 +7,7 @@ skinparam monochrome true
 
 LAYOUT_WITH_LEGEND()
 
-title Container diagram for Open Science Platform
+' title Container diagram for Open Science Platform
 
 Person(researcher, "Researcher", "A researcher who enrolls and interacts with the platform to upload and manage research artifacts.")
 

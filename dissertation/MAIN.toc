@@ -1,0 +1,99 @@
+\babel@toc {portuguese}{}\relax 
+\contentsline {chapter}{Acronynms Index}{\hyperref@ref {chapter:-998}{iii}}
+\contentsline {chapter}{Symbols Index}{\hyperref@ref {chapter:-997}{v}}
+\contentsline {chapter}{Dedication}{\hyperref@ref {chapter:-996}{vii}}
+\contentsline {chapter}{Acknowledgements}{\hyperref@ref {chapter:-995}{ix}}
+\contentsline {chapter}{Resumo}{\hyperref@ref {chapter:-994}{xi}}
+\babel@toc {portuguese}{}\relax 
+\babel@toc {portuguese}{}\relax 
+\contentsline {chapter}{Abstract}{\hyperref@ref {chapter:-993}{xiii}}
+\contentsline {chapter}{\numberline {1}Introduction}{\hyperref@ref {chapter:1}{1}}
+\contentsline {section}{\numberline {1.1}Research Context}{\hyperref@ref {section:1.1}{3}}
+\contentsline {section}{\numberline {1.2}Motivation}{\hyperref@ref {section:1.2}{4}}
+\contentsline {section}{\numberline {1.3}Goals}{\hyperref@ref {section:1.3}{5}}
+\contentsline {subsection}{\numberline {1.3.1}General Goals}{\hyperref@ref {subsection:1.3.1}{6}}
+\contentsline {subsection}{\numberline {1.3.2}Specific Goals}{\hyperref@ref {subsection:1.3.2}{6}}
+\contentsline {section}{\numberline {1.4}Methodology}{\hyperref@ref {section:1.4}{7}}
+\contentsline {section}{\numberline {1.5}Summary of Contributions}{\hyperref@ref {section:1.5}{7}}
+\contentsline {section}{\numberline {1.6}Document Structure}{\hyperref@ref {section:1.6}{8}}
+\contentsline {section}{\numberline {1.7}Conclusion}{\hyperref@ref {section:1.7}{10}}
+\contentsline {chapter}{\numberline {2}Theoretical Foundations}{\hyperref@ref {chapter:2}{13}}
+\contentsline {section}{\numberline {2.1}Decentralization and Distributed Systems}{\hyperref@ref {section:2.1}{13}}
+\contentsline {subsection}{\numberline {2.1.1}Decentralization and Distributed Systems the foundation for Blockchain and IPFS}{\hyperref@ref {subsection:2.1.1}{13}}
+\contentsline {subsection}{\numberline {2.1.2}Blockchain and IPFS: Complementary Technologies for Decentralized Data Management}{\hyperref@ref {subsection:2.1.2}{14}}
+\contentsline {subsection}{\numberline {2.1.3}Limitations of Blockchain and IPFS}{\hyperref@ref {subsection:2.1.3}{14}}
+\contentsline {subsection}{\numberline {2.1.4}Integration of IPFS and Blockchain}{\hyperref@ref {subsection:2.1.4}{14}}
+\contentsline {subsection}{\numberline {2.1.5}Decentralization and Distributed Systems in context of the Open Science Platform}{\hyperref@ref {subsection:2.1.5}{15}}
+\contentsline {section}{\numberline {2.2}Blockchain}{\hyperref@ref {section:2.2}{16}}
+\contentsline {subsection}{\numberline {2.2.1}Foundational Aspects}{\hyperref@ref {subsection:2.2.1}{16}}
+\contentsline {subsection}{\numberline {2.2.2}Public, Private and Hybrid Blockchains}{\hyperref@ref {subsection:2.2.2}{17}}
+\contentsline {subsubsection}{\numberline {2.2.2.1}Public Blockchains}{\hyperref@ref {subsubsection:2.2.2.1}{17}}
+\contentsline {subsubsection}{\numberline {2.2.2.2}Private}{\hyperref@ref {subsubsection:2.2.2.2}{18}}
+\contentsline {subsubsection}{\numberline {2.2.2.3}Hybrid Blockchain Models}{\hyperref@ref {subsubsection:2.2.2.3}{18}}
+\contentsline {subsection}{\numberline {2.2.3}Consensus Mechanisms in Blockchain}{\hyperref@ref {subsection:2.2.3}{18}}
+\contentsline {subsubsection}{\numberline {2.2.3.1}Proof of Work (PoW)}{\hyperref@ref {subsubsection:2.2.3.1}{19}}
+\contentsline {subsubsection}{\numberline {2.2.3.2}Proof of Stake (PoS)}{\hyperref@ref {subsubsection:2.2.3.2}{19}}
+\contentsline {subsubsection}{\numberline {2.2.3.3}Mining and Block Validation}{\hyperref@ref {subsubsection:2.2.3.3}{19}}
+\contentsline {subsubsection}{\numberline {2.2.3.4}Byzantine Fault Tolerance (BFT)}{\hyperref@ref {subsubsection:2.2.3.4}{19}}
+\contentsline {subsection}{\numberline {2.2.4}YAC Consensus and Byzantine Fault Tolerance}{\hyperref@ref {subsection:2.2.4}{20}}
+\contentsline {subsubsection}{\numberline {2.2.4.1}Voting for Block Hash}{\hyperref@ref {subsubsection:2.2.4.1}{20}}
+\contentsline {subsubsection}{\numberline {2.2.4.2}Fault Tolerance}{\hyperref@ref {subsubsection:2.2.4.2}{20}}
+\contentsline {subsubsection}{\numberline {2.2.4.3}Finality}{\hyperref@ref {subsubsection:2.2.4.3}{20}}
+\contentsline {subsubsection}{\numberline {2.2.4.4}Permissioned Design}{\hyperref@ref {subsubsection:2.2.4.4}{20}}
+\contentsline {subsection}{\numberline {2.2.5}Consensus Algorithm for YAC}{\hyperref@ref {subsection:2.2.5}{21}}
+\contentsline {subsubsection}{\numberline {2.2.5.1}Fault Tolerance}{\hyperref@ref {subsubsection:2.2.5.1}{21}}
+\contentsline {subsubsection}{\numberline {2.2.5.2}Supermajority Agreement}{\hyperref@ref {subsubsection:2.2.5.2}{21}}
+\contentsline {subsubsection}{\numberline {2.2.5.3}Voting Process}{\hyperref@ref {subsubsection:2.2.5.3}{21}}
+\contentsline {subsubsection}{\numberline {2.2.5.4}Finality}{\hyperref@ref {subsubsection:2.2.5.4}{22}}
+\contentsline {subsection}{\numberline {2.2.6}Conclusion}{\hyperref@ref {subsection:2.2.6}{22}}
+\contentsline {subsection}{\numberline {2.2.7}Public Key Cryptography in Blockchain}{\hyperref@ref {subsection:2.2.7}{22}}
+\contentsline {subsubsection}{\numberline {2.2.7.1}Role of Public Key Cryptography in Blockchain}{\hyperref@ref {subsubsection:2.2.7.1}{22}}
+\contentsline {subsubsection}{\numberline {2.2.7.2}Commonly Used Cryptographic Ciphers and Standards}{\hyperref@ref {subsubsection:2.2.7.2}{23}}
+\contentsline {subsubsection}{\numberline {2.2.7.3}Elliptic Curve Cryptography (ECC) in Blockchain}{\hyperref@ref {subsubsection:2.2.7.3}{23}}
+\contentsline {section}{\numberline {2.3}Introduction to Smart Contracts}{\hyperref@ref {section:2.3}{24}}
+\contentsline {section}{\numberline {2.4}Technical Framework and Operation}{\hyperref@ref {section:2.4}{25}}
+\contentsline {section}{\numberline {2.5}Smart Contracts in Decentralized Applications (dApps)}{\hyperref@ref {section:2.5}{25}}
+\contentsline {section}{\numberline {2.6}Hyperledger Implementations}{\hyperref@ref {section:2.6}{25}}
+\contentsline {subsection}{\numberline {2.6.1}Hyperledger Fabric}{\hyperref@ref {subsection:2.6.1}{26}}
+\contentsline {subsection}{\numberline {2.6.2}Hyperledger Burrow}{\hyperref@ref {subsection:2.6.2}{26}}
+\contentsline {subsection}{\numberline {2.6.3}Hyperledger Iroha}{\hyperref@ref {subsection:2.6.3}{26}}
+\contentsline {section}{\numberline {2.7}Smart Contracts for Scientific Research Reproducibility}{\hyperref@ref {section:2.7}{27}}
+\contentsline {section}{\numberline {2.8}Conclusion}{\hyperref@ref {section:2.8}{27}}
+\contentsline {section}{\numberline {2.9}The InterPlanetary File System (IPFS)}{\hyperref@ref {section:2.9}{27}}
+\contentsline {subsection}{\numberline {2.9.1}Background and Architectural Principles}{\hyperref@ref {subsection:2.9.1}{28}}
+\contentsline {subsection}{\numberline {2.9.2}Key Architectural Components}{\hyperref@ref {subsection:2.9.2}{28}}
+\contentsline {subsection}{\numberline {2.9.3}Content Addressing and Data Integrity}{\hyperref@ref {subsection:2.9.3}{29}}
+\contentsline {subsection}{\numberline {2.9.4}Routing and Peer Discovery}{\hyperref@ref {subsection:2.9.4}{29}}
+\contentsline {subsection}{\numberline {2.9.5}Block Exchange and Incentive Mechanisms}{\hyperref@ref {subsection:2.9.5}{29}}
+\contentsline {subsection}{\numberline {2.9.6}Security and Node Authentication}{\hyperref@ref {subsection:2.9.6}{30}}
+\contentsline {section}{\numberline {2.10}Mathematical Foundations of IPFS}{\hyperref@ref {section:2.10}{30}}
+\contentsline {subsection}{\numberline {2.10.1}Cryptographic Hashing Functions}{\hyperref@ref {subsection:2.10.1}{30}}
+\contentsline {subsection}{\numberline {2.10.2}Merkle Trees and Content Addressing}{\hyperref@ref {subsection:2.10.2}{31}}
+\contentsline {subsection}{\numberline {2.10.3}Implications for Data Integrity and Security}{\hyperref@ref {subsection:2.10.3}{31}}
+\contentsline {subsection}{\numberline {2.10.4}Efficiency and Scalability}{\hyperref@ref {subsection:2.10.4}{32}}
+\contentsline {section}{\numberline {2.11}IPFS and Blockchain Complementarity}{\hyperref@ref {section:2.11}{32}}
+\contentsline {subsection}{\numberline {2.11.1}Addressing Blockchain Storage Limitations}{\hyperref@ref {subsection:2.11.1}{32}}
+\contentsline {subsection}{\numberline {2.11.2}Integration with the Open Science Platform}{\hyperref@ref {subsection:2.11.2}{32}}
+\contentsline {subsection}{\numberline {2.11.3}Conclusion}{\hyperref@ref {subsection:2.11.3}{33}}
+\contentsline {section}{\numberline {2.12}Analysis of the Open Science Movement and Reproducibility Challenges}{\hyperref@ref {section:2.12}{34}}
+\contentsline {subsection}{\numberline {2.12.1}Historical Background and Evolution of the Open Science Movement}{\hyperref@ref {subsection:2.12.1}{34}}
+\contentsline {subsection}{\numberline {2.12.2}Objectives and Main Tenets of Open Science}{\hyperref@ref {subsection:2.12.2}{34}}
+\contentsline {subsection}{\numberline {2.12.3}Benefits, Pros, and Cons of Open Science}{\hyperref@ref {subsection:2.12.3}{35}}
+\contentsline {subsection}{\numberline {2.12.4}Reproducibility in Science: Current Gaps and Challenges}{\hyperref@ref {subsection:2.12.4}{36}}
+\contentsline {subsection}{\numberline {2.12.5}Conclusion}{\hyperref@ref {subsection:2.12.5}{36}}
+\contentsline {chapter}{\numberline {3}Literature Review}{\hyperref@ref {chapter:3}{37}}
+\contentsline {section}{\numberline {3.1}Enhancing Reproducibility in Scientific Research Through Open Science and Decentralized Technologies}{\hyperref@ref {section:3.1}{37}}
+\contentsline {subsection}{\numberline {3.1.1}The Imperative of Reproducibility in Scientific Research Science}{\hyperref@ref {subsection:3.1.1}{37}}
+\contentsline {subsection}{\numberline {3.1.2}Challenges to Scientific Integrity}{\hyperref@ref {subsection:3.1.2}{38}}
+\contentsline {subsection}{\numberline {3.1.3}A Paradigm Shift Towards Transparency and Collaboration}{\hyperref@ref {subsection:3.1.3}{39}}
+\contentsline {subsection}{\numberline {3.1.4}Open Science Principles as Solutions to the Reproducibility Crisis}{\hyperref@ref {subsection:3.1.4}{39}}
+\contentsline {subsection}{\numberline {3.1.5}Current Initiatives and Standards for Enhancing Research Reproducibility}{\hyperref@ref {subsection:3.1.5}{42}}
+\contentsline {subsection}{\numberline {3.1.6}Key Initiatives in Open Science and Research Data Management}{\hyperref@ref {subsection:3.1.6}{42}}
+\contentsline {subsection}{\numberline {3.1.7}Key Initiatives in Research Data Management and Open Science}{\hyperref@ref {subsection:3.1.7}{42}}
+\contentsline {subsection}{\numberline {3.1.8}Leveraging European Research Data (LEARN)}{\hyperref@ref {subsection:3.1.8}{42}}
+\contentsline {subsection}{\numberline {3.1.9}FAIR Guding Principles}{\hyperref@ref {subsection:3.1.9}{42}}
+\contentsline {subsection}{\numberline {3.1.10}GO FAIR}{\hyperref@ref {subsection:3.1.10}{43}}
+\contentsline {subsection}{\numberline {3.1.11}Research Data Alliance (RDA)}{\hyperref@ref {subsection:3.1.11}{43}}
+\contentsline {subsection}{\numberline {3.1.12}Committee on Data of the International Science Council(CODATA)}{\hyperref@ref {subsection:3.1.12}{44}}
+\contentsline {subsection}{\numberline {3.1.13}Open Access Infrastructure for Research in Europe (OpenAIRE)}{\hyperref@ref {subsection:3.1.13}{44}}
+\contentsline {subsection}{\numberline {3.1.14}DataCite}{\hyperref@ref {subsection:3.1.14}{44}}

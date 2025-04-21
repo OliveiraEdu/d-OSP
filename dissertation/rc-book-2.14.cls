@@ -3233,7 +3233,7 @@
 
     %   QUALIFICAÇÃO
         
-    The committee in charge of evaluating the dissertation entitled ``\@title : \@subtitle'', presented by \@author \: in the qualification exam for the degree of #1 in #2, hereby provides recommendations and requires adjustments so that the final exam can be done within \bottomrule{4cm} months.
+    The committee in charge of evaluating the dissertation entitled ``\@title : \@subtitle'', presented by \@author \: in the final exam for the degree of #1 in #2, hereby provides recommendations and requires adjustments so that the final version has to be presented within \bottomrule{4cm} days.
 
     % A comissão responsável pela avaliação da tese intitulada ``Análise de Técnicas de Inteligência Artificial para Modelos Preditivos de Risco de Contágio de COVID-19 utilizando Dados de Perfil Socioeconômico e de Adesão ao Distanciamento Social'', apresentada por Maira Simoni Brigo Bonfada no exame de qualificação para o grau de #1 em #2, vem por meio deste emitir recomendações e solicitar ajustes para que o exame final possa ser realizado no prazo de \bottomrule{4cm} meses.
     
