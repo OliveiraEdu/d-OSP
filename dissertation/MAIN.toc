@@ -1,0 +1,91 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{Acronynms Index}{\hyperref@ref {chapter:-998}{iii}}
+\contentsline {chapter}{Acknowledgements}{\hyperref@ref {chapter:-997}{v}}
+\contentsline {chapter}{Abstract}{\hyperref@ref {chapter:-996}{vii}}
+\contentsline {chapter}{Resumo}{\hyperref@ref {chapter:-995}{ix}}
+\contentsline {chapter}{Resumen}{\hyperref@ref {chapter:-994}{xi}}
+\contentsline {chapter}{\numberline {1}Introduction}{\hyperref@ref {chapter:1}{1}}
+\contentsline {section}{\numberline {1.1}Research Context}{\hyperref@ref {section:1.1}{2}}
+\contentsline {section}{\numberline {1.2}Motivation}{\hyperref@ref {section:1.2}{5}}
+\contentsline {section}{\numberline {1.3}Objectives}{\hyperref@ref {section:1.3}{6}}
+\contentsline {section}{\numberline {1.4}Methodology}{\hyperref@ref {section:1.4}{7}}
+\contentsline {section}{\numberline {1.5}Research Hypothesis and Rationale}{\hyperref@ref {section:1.5}{7}}
+\contentsline {section}{\numberline {1.6}Summary of Contributions}{\hyperref@ref {section:1.6}{8}}
+\contentsline {section}{\numberline {1.7}Dissertation Structure}{\hyperref@ref {section:1.7}{9}}
+\contentsline {chapter}{\numberline {2}Background}{\hyperref@ref {chapter:2}{11}}
+\contentsline {section}{\numberline {2.1}Decentralization and Distributed Systems}{\hyperref@ref {section:2.1}{12}}
+\contentsline {subsection}{\numberline {2.1.1}The Building Blocks for Decentralization}{\hyperref@ref {subsection:2.1.1}{12}}
+\contentsline {subsection}{\numberline {2.1.2}Decentralized Data Management}{\hyperref@ref {subsection:2.1.2}{13}}
+\contentsline {section}{\numberline {2.2}Blockchain}{\hyperref@ref {section:2.2}{13}}
+\contentsline {subsection}{\numberline {2.2.1}Merkle Trees}{\hyperref@ref {subsection:2.2.1}{13}}
+\contentsline {subsection}{\numberline {2.2.2}Secure Time Stamping}{\hyperref@ref {subsection:2.2.2}{14}}
+\contentsline {subsection}{\numberline {2.2.3}Public, Private and Hybrid Blockchains}{\hyperref@ref {subsection:2.2.3}{14}}
+\contentsline {subsection}{\numberline {2.2.4}Mining and Block Validation}{\hyperref@ref {subsection:2.2.4}{15}}
+\contentsline {subsection}{\numberline {2.2.5}Consensus Mechanisms}{\hyperref@ref {subsection:2.2.5}{15}}
+\contentsline {subsection}{\numberline {2.2.6}Byzantine Fault Tolerance}{\hyperref@ref {subsection:2.2.6}{16}}
+\contentsline {subsection}{\numberline {2.2.7}Cryptography in Blockchain}{\hyperref@ref {subsection:2.2.7}{18}}
+\contentsline {section}{\numberline {2.3}Smart Contracts}{\hyperref@ref {section:2.3}{20}}
+\contentsline {subsection}{\numberline {2.3.1}Operations}{\hyperref@ref {subsection:2.3.1}{20}}
+\contentsline {subsection}{\numberline {2.3.2}Decentralized Applications}{\hyperref@ref {subsection:2.3.2}{21}}
+\contentsline {subsection}{\numberline {2.3.3}Smart Contracts for Reproducibility}{\hyperref@ref {subsection:2.3.3}{21}}
+\contentsline {subsection}{\numberline {2.3.4}Hyperledger Implementations}{\hyperref@ref {subsection:2.3.4}{22}}
+\contentsline {section}{\numberline {2.4}The InterPlanetary File System}{\hyperref@ref {section:2.4}{23}}
+\contentsline {subsection}{\numberline {2.4.1}Background and Architectural Principles}{\hyperref@ref {subsection:2.4.1}{24}}
+\contentsline {subsection}{\numberline {2.4.2}Key Architectural Components}{\hyperref@ref {subsection:2.4.2}{24}}
+\contentsline {subsection}{\numberline {2.4.3}Content Addressing and Data Integrity}{\hyperref@ref {subsection:2.4.3}{25}}
+\contentsline {subsection}{\numberline {2.4.4}Routing and Peer Discovery}{\hyperref@ref {subsection:2.4.4}{25}}
+\contentsline {subsection}{\numberline {2.4.5}Block Exchange and Incentive Mechanisms}{\hyperref@ref {subsection:2.4.5}{25}}
+\contentsline {subsection}{\numberline {2.4.6}Security and Node Authentication}{\hyperref@ref {subsection:2.4.6}{25}}
+\contentsline {subsection}{\numberline {2.4.7}Mathematical Foundations}{\hyperref@ref {subsection:2.4.7}{26}}
+\contentsline {section}{\numberline {2.5}Immutable Records and Scalable Storage}{\hyperref@ref {section:2.5}{28}}
+\contentsline {subsection}{\numberline {2.5.1}Limitations of Ledger and Storage Systems}{\hyperref@ref {subsection:2.5.1}{28}}
+\contentsline {subsection}{\numberline {2.5.2}Integrating Ledger with Distributed Storage}{\hyperref@ref {subsection:2.5.2}{29}}
+\contentsline {section}{\numberline {2.6}Open Science and Reproducibility}{\hyperref@ref {section:2.6}{29}}
+\contentsline {subsection}{\numberline {2.6.1}Benefits, Pros, and Cons of Open Science}{\hyperref@ref {subsection:2.6.1}{31}}
+\contentsline {chapter}{\numberline {3}Literature and Area Review}{\hyperref@ref {chapter:3}{33}}
+\contentsline {section}{\numberline {3.1}Reproducibility Crisis in Science Reserach}{\hyperref@ref {section:3.1}{34}}
+\contentsline {subsection}{\numberline {3.1.1}Challenges to Scientific Integrity}{\hyperref@ref {subsection:3.1.1}{34}}
+\contentsline {subsection}{\numberline {3.1.2}A Paradigm Shift}{\hyperref@ref {subsection:3.1.2}{35}}
+\contentsline {section}{\numberline {3.2}Challenges in Scientific Reproducibility}{\hyperref@ref {section:3.2}{36}}
+\contentsline {section}{\numberline {3.3}Key Initiatives}{\hyperref@ref {section:3.3}{36}}
+\contentsline {section}{\numberline {3.4}Related Work}{\hyperref@ref {section:3.4}{39}}
+\contentsline {section}{\numberline {3.5}Summary}{\hyperref@ref {section:3.5}{43}}
+\contentsline {chapter}{\numberline {4}Proposed Decentralized Model}{\hyperref@ref {chapter:4}{45}}
+\contentsline {section}{\numberline {4.1}The Decentralized Open Science Platform}{\hyperref@ref {section:4.1}{46}}
+\contentsline {subsection}{\numberline {4.1.1}Distributed Trust Architecture}{\hyperref@ref {subsection:4.1.1}{47}}
+\contentsline {section}{\numberline {4.2}Technology Stack}{\hyperref@ref {section:4.2}{47}}
+\contentsline {subsection}{\numberline {4.2.1}Core Services}{\hyperref@ref {subsection:4.2.1}{48}}
+\contentsline {subsection}{\numberline {4.2.2}Extended Services}{\hyperref@ref {subsection:4.2.2}{48}}
+\contentsline {subsection}{\numberline {4.2.3}User Interface, integration and execution}{\hyperref@ref {subsection:4.2.3}{48}}
+\contentsline {subsection}{\numberline {4.2.4}System Components and Interactions}{\hyperref@ref {subsection:4.2.4}{49}}
+\contentsline {subsubsection}{\numberline {4.2.4.1}Jupyter Server}{\hyperref@ref {subsubsection:4.2.4.1}{49}}
+\contentsline {subsubsection}{\numberline {4.2.4.2}Blockchain}{\hyperref@ref {subsubsection:4.2.4.2}{49}}
+\contentsline {subsubsection}{\numberline {4.2.4.3}Storage}{\hyperref@ref {subsubsection:4.2.4.3}{50}}
+\contentsline {subsubsection}{\numberline {4.2.4.4}Relational Database (PostgreSQL)}{\hyperref@ref {subsubsection:4.2.4.4}{50}}
+\contentsline {subsubsection}{\numberline {4.2.4.5}Component Interactions}{\hyperref@ref {subsubsection:4.2.4.5}{50}}
+\contentsline {section}{\numberline {4.3}Operations}{\hyperref@ref {section:4.3}{51}}
+\contentsline {subsection}{\numberline {4.3.1}User Enrollment and Project Registration}{\hyperref@ref {subsection:4.3.1}{51}}
+\contentsline {subsection}{\numberline {4.3.2}Scientific Data Management}{\hyperref@ref {subsection:4.3.2}{52}}
+\contentsline {section}{\numberline {4.4}Proposed Data Model}{\hyperref@ref {section:4.4}{53}}
+\contentsline {subsection}{\numberline {4.4.1}User Entity}{\hyperref@ref {subsection:4.4.1}{53}}
+\contentsline {subsection}{\numberline {4.4.2}Project Entity}{\hyperref@ref {subsection:4.4.2}{53}}
+\contentsline {subsection}{\numberline {4.4.3}Linked Entities}{\hyperref@ref {subsection:4.4.3}{54}}
+\contentsline {section}{\numberline {4.5}Hyperledger Iroha Data Model }{\hyperref@ref {section:4.5}{54}}
+\contentsline {subsection}{\numberline {4.5.1}Account Entity}{\hyperref@ref {subsection:4.5.1}{54}}
+\contentsline {subsection}{\numberline {4.5.2}Domain Entity}{\hyperref@ref {subsection:4.5.2}{55}}
+\contentsline {section}{\numberline {4.6}Relationship Between Models}{\hyperref@ref {section:4.6}{55}}
+\contentsline {section}{\numberline {4.7}Metadata and Ontologies}{\hyperref@ref {section:4.7}{56}}
+\contentsline {subsection}{\numberline {4.7.1}Ontologies}{\hyperref@ref {subsection:4.7.1}{56}}
+\contentsline {section}{\numberline {4.8}Storing User and Project Attributes}{\hyperref@ref {section:4.8}{56}}
+\contentsline {subsection}{\numberline {4.8.1}User Metadata}{\hyperref@ref {subsection:4.8.1}{57}}
+\contentsline {subsection}{\numberline {4.8.2}Metadata representation}{\hyperref@ref {subsection:4.8.2}{57}}
+\contentsline {subsection}{\numberline {4.8.3}The User Metadata}{\hyperref@ref {subsection:4.8.3}{58}}
+\contentsline {subsection}{\numberline {4.8.4}The Project Metadata}{\hyperref@ref {subsection:4.8.4}{59}}
+\contentsline {subsection}{\numberline {4.8.5}Metadata Workflow}{\hyperref@ref {subsection:4.8.5}{60}}
+\contentsline {subsection}{\numberline {4.8.6}Blockchain Representation}{\hyperref@ref {subsection:4.8.6}{61}}
+\contentsline {subsection}{\numberline {4.8.7}User Account}{\hyperref@ref {subsection:4.8.7}{61}}
+\contentsline {subsection}{\numberline {4.8.8}Project Account}{\hyperref@ref {subsection:4.8.8}{61}}
+\contentsline {section}{\numberline {4.9}Provenance}{\hyperref@ref {section:4.9}{65}}
+\contentsline {section}{\numberline {4.10}Summary}{\hyperref@ref {section:4.10}{66}}
+\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{\hyperref@ref {chapter:5}{71}}
+\contentsline {chapter}{Bibliography}{\hyperref@ref {chapter:A}{75}}
