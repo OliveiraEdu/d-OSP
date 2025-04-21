@@ -65,8 +65,7 @@ A.~Alkhateeb, C.~Catal, G.~Kar\bibcommaand\xspace \bibandname\ A.~Mishra.
 
 \bibitem[Baker(2016)]{baker2016reproducibility}
 M.~Baker.
-\newblock
-  \textsl{\hyperlink{https://journals.plos.org/plosbiology/article?id=10.1371%2Fjournal.pbio.1002165}{1,500
+\newblock \textsl{\hyperlink{http://dx.doi.org/10.1038/533452a}{1,500
   scientists lift the lid on reproducibility}}.
 \newblock \textsl{Nature}, 533\penalty0 (7604):\penalty0 452--454, 2016.
 \newblock \begin{RCNBurldoi} {DOI}: \doi{10.1038/533452a}. \end{RCNBurldoi}
