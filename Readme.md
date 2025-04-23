@@ -1,9 +1,9 @@
-# d-OSP: Open Science Platform
+# d-OSP: Decentralized Open Science Platform
 
 
 # 1 This Repository
 
-This is the repository for the project Open Science, on its final form the project will deliver a sample dApp running on Jupyter Notebooks based on:
+This is the repository for my Master's dissertation project, it delivers a sample dApp running on Jupyter Notebooks based on:
 
 - Hyperledger Iroha 1
 - Hyperledger Burrow
