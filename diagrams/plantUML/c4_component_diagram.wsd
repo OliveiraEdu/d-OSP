@@ -3,17 +3,17 @@
 skinparam monochrome true
 
 
-LAYOUT_WITH_LEGEND()
+' LAYOUT_WITH_LEGEND()
 
 ' title Component Diagram for Open Science Platform
 
 Person(user, "User", "Interacts with the system via Jupyter Notebook")
 
 Boundary(docker_env, "Docker Containers",  $type="Component") {
-    Component(jupyter, "Jupyter Server", "Python, Iroha v1 Library, IPFS Client, Apache Tika, Woosh", "User front-end and processing environment")
-    Component(iroha, "Blockchain", "Iroha v1 Hyperledger Iroha", "Distributed ledger for transaction management")
+    Component(jupyter, "Jupyter Server", "Python, Iroha v1 Library, IPFS Client, Apache Tika, Woosh", "Front-end and processing kernel")
+    Component(iroha, "Blockchain", "Iroha v1 Hyperledger Iroha", "Distributed ledger")
     ComponentDb(db, "Relational Database", "PostgreSQL", "Stores blockchain data for Iroha v1")
-    Component(ipfs, "Storage", "InterPlanetary File System", "Decentralized storage and file retrieval")
+    Component(ipfs, "Storage", "InterPlanetary File System", "Decentralized storage for file and metadata retrieval")
 }
 
 Rel(user, jupyter, "Uses", "Jupyter Notebook UI")

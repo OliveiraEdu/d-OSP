@@ -1,24 +1,27 @@
-# 1- Open Science Platform
-
-## 1.1 Introduction
-
-This artifact demonstrates the creation and management of user accounts, project accounts, and linked accounts using IPFS and Iroha.
+# d-OSP: Open Science Platform
 
 
-This is the repository for the project Open Science, on its final form the project will deliver a sample dApp based on:
+# 1 This Repository
+
+This is the repository for the project Open Science, on its final form the project will deliver a sample dApp running on Jupyter Notebooks based on:
 
 - Hyperledger Iroha 1
 - Hyperledger Burrow
 - Smart contracts
 - IPFS
 
----
+
+## 1.1 Introduction
+
+This artifact demonstrates the creation and management of user accounts, project accounts, and linked accounts using IPFS and Iroha.
+d-OSP is a infrastructure that integrates blockchain, IPFS, and smart contracts to improve research reproducibility. By leveraging immutable records and decentralized storage, the platform ensures transparent and verifiable research data management. Additionally, extended services are incorporated to facilitate file indexing, metadata extraction, and search functionality. The proposed platform aligns with Open Science principles by providing verifiable and persistently traceable access to research data. 
+
 
 ## 1.2 Components
 
 ### 1.2.1 Iroha 1 Python SDK
 
-This notebook uses [Iroha 1 Python Library ](https://pypi.org/project/iroha/)
+This notebook uses the [Iroha 1 Python Library ](https://pypi.org/project/iroha/)
 
 
 ### 1.2.2 Smart Contracts
@@ -31,7 +34,6 @@ The integration of smart contracts into Iroha 1 is executed by Hyperledger Burro
 This project uses [Python IPFS HTTP Client](https://github.com/ipfs-shipyard/py-ipfs-http-client)
 
 
----
 ## 1.3 Requirements
 
 1.3.1 A host running Docker engine.
@@ -46,8 +48,9 @@ This project uses [Python IPFS HTTP Client](https://github.com/ipfs-shipyard/py-
 
 * All containers must be attached to the iroha network.
 
+---
 
-## 2  Setup
+## 2  Setup Instructions
 
 
 2.1  Clone the Iroha 1 repo:
@@ -118,8 +121,6 @@ How to run a specific genesis-block, to add/change permissions for the admin
                        
 ```
 
----
-
 
 2.3 Create local directories at your docker host:
 
@@ -136,7 +137,7 @@ cd ~/
 git clone http://github.com/OliveiraEdu/OpenScience
 ```
 
-2.5 Building the docker image
+2.5 Building the docker imngage
 
 ```bash
 cd ~/OpenScience/docker
@@ -182,7 +183,7 @@ For iroha and IPFS, go to the Jupyter, check and edit `config.json` according to
 
 ----
 
-## 3 Test the Platform
+## 3 Testing the Platform
 
 #### Before the first run:
 

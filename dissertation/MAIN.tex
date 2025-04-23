@@ -47,6 +47,28 @@
 % \usepackage{booktabs}
 % ------------------------------------------
 
+%-------------------------------------------  
+% Added by Eduardo for HTML listing support 
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstdefinestyle{htmlStyle}{
+  language=HTML,
+  basicstyle=\ttfamily\small,
+  numbers=left,
+  numberstyle=\tiny,
+  stepnumber=1,
+  numbersep=5pt,
+  backgroundcolor=\color{gray!10},
+  showstringspaces=false,
+  breaklines=true,
+  frame=single,
+  captionpos=b
+}
+% ------------------------------------------
+
+
 
 %hifen
 \hyphenpenalty=2000
@@ -89,6 +111,13 @@
 \input{Cover}
 
 \makefront
+
+% %====================================================================
+% \chapter{Listings Index}
+% \label{listings_index}
+% %====================================================================
+
+%  \lstlistoflistings
 
 %====================================================================
 \chapter{Acronynms Index}
@@ -137,7 +166,7 @@
 %====================================================================
 
 \drop
-I would like to acknowledge the important contributions of my advisor, Dr. Rafael Z. Frantz, whose guidance, encouragement, and steady mentorship were fundamental throughout this research. I am equally grateful to my co-advisor, Dr. Thiago Heck, for his thoughtful insights and persistent questioning, which helped sharpen the focus and depth of this work. I also extend my sincere thanks to Dr. Carlos Molina for his generous guidance and for continuously challenging my thinking in ways that significantly enriched this study.
+I would like to acknowledge the important contributions of my advisor, Dr. Rafael Z. Frantz, whose guidance, encouragement, and steady mentorship were fundamental throughout this research. I am equally grateful to my co-advisor, Dr. Thiago Heck, for his thoughtful insights and persistent questioning, which helped sharpen the focus and depth of this work. I also extend my sincere thanks to Dr. Carlos Molina Jiménez for his generous guidance and for continuously challenging my thinking in ways that significantly enriched this study.
 
 %====================================================================
 \chapter{Abstract}
@@ -161,7 +190,7 @@ I would like to acknowledge the important contributions of my advisor, Dr. Rafae
     O primeiro princípio é que você não deve enganar a si mesmo \\ e você é a pessoa mais fácil de enganar.
 \end{quotation}
 
-\drop A comunidade científica enfrenta um desafio crítico: a elevada taxa de falhas na reprodução de pesquisas, que compromete a validade e a confiabilidade dos resultados científicos. Embora as causas da irreprodutibilidade sejam diversas, questões relacionadas ao acesso, transparência e integridade dos dados desempenham um papel especialmente relevante. A ausência de mecanismos eficazes para sustentar a reprodutibilidade contribui para a redução da precisão, o aumento dos custos de pesquisa e a perda de confiança no progresso científico. Para enfrentar esse desafio, propomos uma Plataforma Descentralizada de Ciência Aberta que emprega tecnologias descentralizadas, como blockchain, contratos inteligentes e o InterPlanetary File System, com o objetivo de fortalecer a adoção dos princípios da Ciência Aberta. Este estudo investiga como essas tecnologias podem melhorar o compartilhamento de dados e apoiar a reprodutibilidade em diferentes áreas científicas. Por meio do desenvolvimento de um artefato, avaliamos tanto os benefícios quanto os desafios técnicos da integração dessas tecnologias, buscando promover um ecossistema científico mais transparente, confiável e robusto. Os resultados desta pesquisa oferecem subsídios sobre como infraestruturas descentralizadas podem contribuir para mitigar as lacunas de reprodutibilidade e reforçar a integridade da investigação científica..
+\drop A comunidade científica enfrenta um desafio crítico: a elevada taxa de falhas na reprodução de pesquisas, que compromete a validade e a confiabilidade dos resultados científicos. Embora as causas da irreprodutibilidade sejam diversas, questões relacionadas ao acesso, transparência e integridade dos dados desempenham um papel especialmente relevante. A ausência de mecanismos eficazes para sustentar a reprodutibilidade contribui para a redução da precisão, o aumento dos custos de pesquisa e a perda de confiança no progresso científico. Para enfrentar esse desafio, propomos uma Plataforma Descentralizada de Ciência Aberta que emprega tecnologias descentralizadas, como blockchain, contratos inteligentes e o InterPlanetary File System, com o objetivo de fortalecer a adoção dos princípios da Ciência Aberta. Este estudo investiga como essas tecnologias podem melhorar o compartilhamento de dados e apoiar a reprodutibilidade em diferentes áreas científicas. Por meio do desenvolvimento de um artefato, avaliamos tanto os benefícios quanto os desafios técnicos da integração dessas tecnologias, buscando promover um ecossistema científico mais transparente, confiável e robusto. Os resultados desta pesquisa oferecem subsídios sobre como infraestruturas descentralizadas podem contribuir para mitigar as lacunas de reprodutibilidade e reforçar a integridade da investigação científica.
 
 
 %====================================================================
@@ -189,10 +218,7 @@ I would like to acknowledge the important contributions of my advisor, Dr. Rafae
 \end{quotation}
 
 
-\drop The purpose of this chapter is to introduce the context, motivation, and scope of the research presented in this dissertation. It outlines the reproducibility challenges faced in contemporary scientific practice and frames the relevance of decentralized technologies in addressing these issues. By situating the problem within the broader movement of Open Science, this chapter defines the research objectives and presents the foundational concepts that guide the development of the proposed solution. Provide a clear understanding of the problem domain, the research questions addressed, and the overall structure of the work.
-
-
-The chapter begins by establishing the research context in Section~\ref{chp:intro:sec:context}. Section~\ref{chp:intro:sec:motivation} presents the motivation behind the study, followed by the main and specific objectives outlined in Section~\ref{chp:intro:sec:objectives}. The methodological approach adopted is described in Section~\ref{chp:intro:sec:methodology}. Section~\ref{chp:intro:sec:res_hyp} introduces the research hypothesis along with its rationale, while Section~\ref{chp:intro:sec:contributions} summarizes the key contributions. Finally, the structure of the dissertation is presented in Section~\ref{chp:intro:sec:structure}, providing an overview of the subsequent chapters.
+\drop The purpose of this chapter is to introduce the context, motivation, and scope of the research presented in this dissertation. It outlines the reproducibility challenges faced in contemporary scientific practice and frames the relevance of decentralized technologies in addressing these issues. By situating the problem within the broader movement of Open Science, this chapter defines the research objectives and presents the foundational concepts that guide the development of the proposed solution. Provide a clear understanding of the problem domain, the research questions addressed, and the overall structure of the work. The chapter begins by establishing the research context in Section~\ref{chp:intro:sec:context}. Section~\ref{chp:intro:sec:motivation} presents the motivation behind the study, followed by the main and specific objectives outlined in Section~\ref{chp:intro:sec:objectives}. The methodological approach adopted is described in Section~\ref{chp:intro:sec:methodology}. Section~\ref{chp:intro:sec:res_hyp} introduces the research hypothesis along with its rationale, while Section~\ref{chp:intro:sec:contributions} summarizes the key contributions. Finally, the structure of the dissertation is presented in Section~\ref{chp:intro:sec:structure}, providing an overview of the subsequent chapters.
 
 
 
@@ -203,7 +229,6 @@ The chapter begins by establishing the research context in Section~\ref{chp:intr
 \section{Research Context}
 \label{chp:intro:sec:context}
 %-------------------------------------------------------------
-
 
 The reproducibility crisis in science arises when researchers fail to replicate the results of a study, even when using the same methods and materials. This issue is prevalent across scientific disciplines where replication is essential for validating findings, advancing knowledge, and maintaining public trust in research.
 
@@ -228,7 +253,6 @@ The need for transparency and openness in scientific research has led to the dev
 Despite the substantial contributions of Open Science, the current systems and tools supporting these practices remain fragmented and often lack the scalability and consistency required for widespread adoption. As such, significant challenges in ensuring reproducibility persist, particularly when dealing with large, complex datasets, proprietary information  or sensitive research materials.
 
 Given these challenges, the integration of decentralized technologies such as blockchain \cite{nakamoto2012bitcoin}, IPFS \cite{Benet} and smart contracts \cite{Szabo-1994}presents a potential solution to address the limitations of current Open Science frameworks. Blockchain technology offers a robust mechanism for ensuring the immutability and integrity of records, making it easier to track data provenance and verify results over time. IPFS provides a scalable, decentralized infrastructure for storing large datasets, ensuring they remain accessible and tamper-proof. Smart contracts, meanwhile, automate the verification and validation process, making it more efficient and secure. Together, these technologies enable a more transparent and accessible research ecosystem that enhances the reproducibility of scientific findings across various domains.
-a.
 
 %-------------------------------------------------------------
 \section{Motivation}
@@ -253,18 +277,19 @@ By leveraging these decentralized technologies, this research aims to establish 
 
 We present the objectives that have directed our research in the context of Open Science and the reproducibility of scientific research, which resulted in the contributions of this dissertation. This work explores the potential of distributed technologies—specifically blockchain, IPFS, and smart contracts—to improve research transparency, data integrity, and reproducibility.
 
-\textbf{Main objective}
+\subsection{Main objective}
 
 \begin{citeverbatim}
 
-    Develop a platform that integrates blockchain, IPFS, and smart contracts to enhance the reproducibility, availability, and verifiability of scientific research data in alignment with Open Science principles.
+Develop a platform that integrates blockchain, IPFS, and smart contracts to enhance the reproducibility in alignment with Open Science principles.
 
 \end{citeverbatim}
 
-\textbf{Specific objectives}
+\subsection{Specific objectives}
+
 \begin{itemize}
     \item Analyze the limitations of current research data management practices with respect to provenance and reproducibility;
-
+    
     \item Investigate the extent to which blockchain and decentralized storage can support immutable, persistent, and verifiable research data;
 
     \item Design an architecture that integrates blockchain, IPFS, and smart contracts to enable transparent storage, access control, and provenance recording;
@@ -299,26 +324,25 @@ The DSR methodology guiding this work incorporates three essential principles. T
 %-------------------------------------------------------------
 
 
-The central hypothesis of this research is that combination of these decentralized technologies: blockchain, smart contracts, and the InterPlanetary File System (IPFS), can improve reproducibility in scientific research. This hypothesis is grounded in the premise that many of the reproducibility challenges in contemporary science experiments stem from data management issues: lack of transparency in experimental protocols and study designs, restricted access to primary data, insufficient metadata, and the absence of reliable provenance tracking mechanisms.
+The central hypothesis of this research is that combination of these decentralized technologies: blockchain, smart contracts, and the InterPlanetary File System (IPFS), can improve reproducibility in scientific research. This hypothesis is grounded in the premise that many of the reproducibility challenges in contemporary science experiments stem from data management issues: lack of transparency in experimental protocols and study designs, restricted access to primary data, insufficient metadata, and the absence of reliable provenance tracking mechanisms. 
 
 To evaluate this hypothesis, a functional artifact will be developed and implemented, integrating blockchain, IPFS, and smart contracts within the d-OSP. The platform will support the registration, sharing, validation and provenance of research assets, such as datasets, code, and protocols and reports. The evaluation will proceed in two phases. First, a functional assessment will determine whether the system supports the reproducibility-oriented capabilities it claims to provide. Second, a scenario-based evaluation will examine how the artifact performs when used to register and verify simulated scientific workflows. These scenarios will reflect common reproducibility failure points and will be used to observe whether the system can mitigate or eliminate them.
 
-Through this dual evaluation strategy, the research will demonstrate whether decentralized infrastructure can operationalize key principles of reproducible science, and to what extent such technologies can be practically implemented to support Open Science goals. Should the system succeed in these evaluations, the hypothesis will be considered supported.
+Through this dual evaluation strategy, the research will demonstrate whether decentralized infrastructure can operationalize key principles of reproducible science, and to what extent such technologies can be practically implemented to support Open Science goals. Should the system succeed in these evaluations, the hypothesis will be considered supported. 
 
 %-------------------------------------------------------------
 \section{Summary of Contributions}
 \label{chp:intro:sec:contributions}
 %-------------------------------------------------------------
 
-In this section, we outline the principal contributions of this dissertation and situate them in relation to our earlier published research.
+In this section, we outline the principal contributions of this dissertation and situate them in relation to our earlier published research. 
 
-\textbf{Key Contributions of This Research}
-
-First, we present a decentralized application that supports the transparent sharing and verification of scientific data and methods. By integrating blockchain for immutable logging, IPFS for distributed storage, and smart contracts for automated governance, we facilitate the secure and auditable dissemination of research outputs. This technological configuration strengthens reproducibility by making both data and metadata from experimental procedures verifiable and tamper-resistant.
-
-Second, we demonstrate the artifact's value through a structured validation process. By employing iterative cycles of design, implementation, and evaluation within a DSR framework, we explore how decentralized technologies can reduce variability in research outcomes. We test the artifact through simulated use cases that highlight its capacity to mitigate reproducibility issues in data-intensive domains.
-
-Third, we build upon our earlier research, specifically the peer-reviewed publication \textit{On the Use of Blockchain Technology to Improve the Reproducibility of Preclinical Research Experiments}~\cite{oliveira2023blockchain}, presented at the 25th International Conference on Enterprise Information Systems. That foundational work examined blockchain’s potential for improving scientific transparency. In this dissertation, we extend those insights by incorporating complementary technologies and refining their orchestration within Open Science infrastructures.
+\begin{itemize}
+    \item A decentralized infrastructure that supports the transparent sharing and verification of scientific data is presented. By integrating blockchain for immutable logging, IPFS for distributed storage, and smart contracts for automated governance, we facilitate the secure and auditable dissemination of research outputs. This technological configuration strengthens reproducibility by making both data and metadata from experimental procedures verifiable and tamper-resistant.
+    \item The artifact's value is demonstrated through a structured validation process. By employing iterative cycles of design, implementation, and evaluation within a DSR framework, we explore how decentralized technologies can reduce variability in research outcomes. We test the artifact through simulated use cases that highlight its capacity to mitigate reproducibility issues in data-intensive domains.
+    \item Build upon our earlier research, specifically the peer-reviewed publication \textit{On the Use of Blockchain Technology to Improve the Reproducibility of Preclinical Research Experiments}~\cite{oliveira2023blockchain}, presented at the 25th International Conference on Enterprise Information Systems. That foundational work examined blockchain’s potential for improving scientific transparency. In this dissertation, we extend those insights by incorporating complementary technologies and refining their orchestration within Open Science infrastructures.
+ 
+\end{itemize}
 
 Taken together, our contributions advance the discourse on Open Science by providing a potential solution to current limitations in research data sharing. We demonstrate how decentralized architectures can uphold the principles of transparency, accountability, and accessibility offering a practical response to the ongoing reproducibility crisis in scientific research.
 
@@ -336,7 +360,7 @@ This section provides an overview of the organization of this dissertation and t
     \item \textbf{Chapter 2: Background} – Presents the technical and conceptual foundations that support the research. It examines core concepts including decentralized and distributed systems, blockchain technologies, cryptography, smart contracts, IPFS, and the Open Science movement.
 
     \item \textbf{Chapter 3: Literature and Research Area Review} – Synthesizes relevant scholarly work, situating the research within ongoing debates and developments. It reviews previous initiatives that leveraged decentralized technologies to enhance reproducibility and establishes the conceptual grounding for the proposed model.
-          .
+.
     \item \textbf{Chapter 4: Proposed Decentralized Model} – Introduces the principal technical contribution of the dissertation: the d-OSP, a decentralized infrastructure represented as an artifact designed to improve reproducibility in scientific research. It outlines the platform’s architecture, data model, implementation details, and the rationale behind key design decisions. The chapter also presents an empirical evaluation of the platform’s performance and functionality.
 
     \item \textbf{Chapter 5: Conclusions} – Summarizes the key findings of the research and reflects on their broader implications. It revisits the hypotheses in light of the presented evidence and discusses potential avenues for future research.
@@ -354,7 +378,7 @@ This section provides an overview of the organization of this dissertation and t
     Quis custodiet ipsos custodes?  Who will guard the guards themselves?
 \end{quotation}
 
-\drop To support the development of the proposed Decentralized Open Science Platform, this chapter presents the technical and conceptual foundations underpinning the research.
+\drop To support the development of the proposed Decentralized Open Science Platform, this chapter presents the technical and conceptual foundations underpinning the research. 
 Section~\ref{chp:background:sec:dec_dist} examines decentralized and distributed systems, Section~\ref{chp:background:sec:bct} introduces the main concepts of blockchain technologies, and Section~\ref{chp:background:sec:smart_cont} defines and contextualizes smart contracts. The InterPlanetary File System is discussed in Section~\ref{chp:background:sec:ipfs}, while the synergies between blockchain and IPFS are explored in Section~\ref{chp:background:sec:ipfs_bct_comp}. Lastly, the Open Science movement is examined in Section~\ref{chp:background:sec:os_rep}. Together, these elements form the foundational framework upon which the platform’s architecture and governance mechanisms are built.
 
 
@@ -403,9 +427,9 @@ Blockchains can be categorized based on their access control and governance mech
 \begin{itemize}
 
     \item \textbf{Public Blockchains:} Allow unrestricted participation, enabling any user to join the network, validate transactions, and maintain a copy of the ledger. These blockchains emphasize decentralization and security, ensuring data integrity through cryptographic hashing and consensus mechanisms such as Proof of Work (PoW) and Proof of Stake (PoS) \cite{nakamoto2008bitcoin}. Prominent examples include \textit{Bitcoin} and \textit{Ethereum}, which are designed to function in open, trustless environments. A defining feature of public blockchains is their transparency, as all transactions are recorded on a publicly accessible ledger. This openness makes them well-suited for scenarios requiring verifiability and censorship resistance, though it typically incurs trade-offs in scalability and performance, as each node must process and store all transactions.
-
+    
     \item \textbf{Private or Permissioned Blockchains:} Restrict participation to authorized entities, making them particularly suitable for enterprise and institutional applications. Frameworks such as Hyperledger Fabric and Hyperledger Iroha are designed for regulated environments where identity verification, compliance, and access control are critical considerations \cite{cachin2016architecture}. Since private blockchains operate under a governing authority that controls access and consensus rules, they offer enhanced scalability and efficiency compared to public blockchains. Unlike PoW-based systems, permissioned blockchains often employ consensus mechanisms such as Practical Byzantine Fault Tolerance (PBFT) and Raft, which reduce computational overhead and transaction latency \cite{vukolic2017}. However, the trade-off is a reduction in decentralization, as control is concentrated within a predefined group of participants.
-
+    
     \item \textbf{Hybrid Blockchains:} Integrate elements of both public and private blockchains, enabling organizations to leverage the benefits of decentralization while maintaining privacy for sensitive data. These architectures allow entities to manage a private ledger while selectively interacting with public networks for verification, auditability, or interoperability. Hybrid approaches are particularly valuable in sectors where confidentiality and transparency must coexist, such as supply chain management, financial services, and healthcare \cite{ahmed20222}. By connecting permissioned chains to public networks, hybrid models offer a balance between data privacy, operational efficiency, and the advantages of immutable public verification.
 
 \end{itemize}
@@ -689,7 +713,7 @@ Moreover, blockchains can be employed to manage metadata in conjunction with IPF
 
 To understand the proposed d-OSP, this chapter discusses fundamental concepts and synthesizes relevant scholarly work, situating the research within ongoing debates and developments. It reviews prior initiatives that have leveraged decentralized technologies to address the reproducibility crisis in scientific research, highlighting both their contributions and limitations. Through this analysis, the chapter establishes the conceptual grounding for the proposed model, identifying the key theoretical and technological foundations that inform the design and implementation of the d-OSP.
 
-The core objectives of Open Science are to enhance the transparency, accessibility, and reproducibility of research, while fostering collaboration and accelerating scientific discovery \cite{Leonelli2016}.
+The core objectives of Open Science are to enhance the transparency, accessibility, and reproducibility of research, while fostering collaboration and accelerating scientific discovery \cite{Leonelli2016}. 
 
 The reproducibility crisis in scientific research has prompted widespread interest in Open Science as a corrective framework. The Center for Open Science articulates five foundational principles—Open Data, Open Materials, Open Access, Preregistration, and Open Analysis—each contributing to the transparency, verifiability, and reliability of research outcomes. This section presents each principle in turn, emphasizing its significance for reproducibility.
 
@@ -729,6 +753,12 @@ However, there are also several challenges and drawbacks:
     \item \textbf{Quality Control Issues}: Open peer review and open data sharing may raise concerns about the quality and integrity of research, as the absence of rigorous vetting processes can lead to the publication of incomplete or erroneous findings \cite{Piwowar2011}.
 \end{itemize}
 
+
+\section{Summary}
+
+This chapter established the foundational concepts necessary for the development of the Decentralized Open Science Platform. It began by distinguishing key characteristics of decentralized and distributed systems, followed by an introduction to blockchain technologies and their relevance to data integrity and transparency. Smart contracts were then examined as programmable and enforceable agreements embedded within blockchain infrastructures. The chapter also addressed the InterPlanetary File System as a peer-to-peer storage solution and analyzed its complementary relationship with blockchain. Finally, the principles of the Open Science movement were explored, highlighting its emphasis on transparency, accessibility, and reproducibility in scientific research. Collectively, these topics provide the conceptual and technical groundwork for the design and implementation of the platform presented in the following chapters.
+
+
 %====================================================================
 \chapter{Literature and Area Review}
 \label{chp:review}
@@ -749,9 +779,9 @@ However, there are also several challenges and drawbacks:
 \label{chp:review:sec:rep_crisis}
 %====================================================================
 
-Science, as a systematic and empirical endeavor, fundamentally depends on the ability of researchers to verify and extend the findings of others. Central to this process is the concept of reproducibility, which encompasses both the capacity to obtain consistent results using the same data and methods, and the ability to reach comparable outcomes when similar studies are conducted with new data under the same experimental design \cite{pellizzari_reproducibility_2017, committee_2019}.
+Science, as a systematic and empirical endeavor, fundamentally depends on the ability of researchers to verify and extend the findings of others. Central to this process is the concept of reproducibility, which encompasses both the capacity to obtain consistent results using the same data and methods, and the ability to reach comparable outcomes when similar studies are conducted with new data under the same experimental design \cite{pellizzari_reproducibility_2017, committee_2019}. 
 
-Concerns about the difficulty of reproducing published research findings have gained prominence across a wide range of disciplines. This phenomenon—commonly termed the "reproducibility crisis"—has cast doubt on the reliability of scientific outputs and eroded confidence in the research enterprise \cite{baker2016reproducibility}. Alarmingly, studies suggest that as many as 50\% of published experiments may fail to replicate, pointing to a systemic issue that extends beyond isolated methodological flaws or instances of misconduct \cite{branch_reproducibility_2019}.
+Concerns about the difficulty of reproducing published research findings have gained prominence across a wide range of disciplines. This phenomenon—commonly termed the "reproducibility crisis"—has cast doubt on the reliability of scientific outputs and eroded confidence in the research enterprise \cite{baker2016reproducibility}. Alarmingly, studies suggest that as many as 50\% of published experiments may fail to replicate, pointing to a systemic issue that extends beyond isolated methodological flaws or instances of misconduct \cite{branch_reproducibility_2019}. 
 
 In the life sciences, the financial implications of irreproducible research are substantial. It is estimated that over \$28 billion is lost annually in the United States due to studies that do not meet reproducibility standards \cite{freedman2015economics}. These findings underscore the urgency of adopting systemic reforms aimed at improving transparency, methodological rigor, and long-term accessibility to scientific materials and data.
 
@@ -799,7 +829,7 @@ The growing emphasis on transparency, reproducibility, and collaboration in scie
 
 The LEARN Toolkit (Leveraging European Research Data) was developed to assist research institutions in implementing effective Research Data Management (RDM) policies and practices. Grounded in the recommendations of the LERU (League of European Research Universities) Roadmap for Research Data, the Toolkit offers guidance on institutional policy development, advocacy, training, infrastructure, and best practices. It emphasizes the strategic role of data management planning and encourages institutions to embed RDM into the research lifecycle. By providing a series of model policies, case studies, and checklists, LEARN promotes a culture of data stewardship aligned with the principles of FAIR data (Findable, Accessible, Interoperable, and Reusable), contributing to the broader objectives of Open Science \cite{learn_2017}.
 
-\textbf{FAIR Guiding Principles}
+\textbf{FAIR Guiding Principles} 
 
 Represents a cornerstone of responsible data stewardship in the context of Open Science. These principles aim to improve the infrastructure supporting the reuse of scholarly data. By encouraging data producers to make their outputs Findable, Accessible, Interoperable, and Reusable, FAIR fosters machine-readability, long-term preservation, and seamless data integration across platforms and disciplines. Although not inherently open, FAIR complements Open Science by providing the technical and semantic standards necessary for data sharing and reuse. Adoption of FAIR principles by research funders, repositories, and institutions has significantly influenced data policies across scientific communities and reinforced efforts toward more transparent and collaborative research practices \cite{wilkinson_fair_2016}.
 
@@ -869,7 +899,9 @@ Finally, \cite{lee_unblocking_2023} critiques the limitations of current academi
 \label{chp:review:sec:review:summary}
 %-------------------------------------------------------------
 
-The body of research reviewed in this section demonstrates that blockchain technology holds significant promise as a foundational enabler for both transforming scholarly publishing and advancing the broader objectives of Open Science, particularly in relation to long-standing concerns about reproducibility. The studies surveyed present diverse applications of blockchain—from enhancing the transparency and accountability of peer review to enabling new models of contributor recognition and securing the management of digital research assets. These innovations align closely with Open Science principles such as openness, accessibility, interoperability, and traceability across the research lifecycle. Beyond publishing, blockchain introduces mechanisms to reinforce research integrity by ensuring data provenance, version control, and tamper-evident audit trails—each crucial for reproducibility in scientific inquiry. However, realizing these benefits at scale requires overcoming key challenges, including technological immaturity, governance complexity, lack of interoperability with existing systems, and limited user acceptance across heterogeneous research communities. Looking ahead, the meaningful integration of blockchain into scholarly communication will depend on interdisciplinary collaboration and the development of user-centric solutions tailored to concrete research needs. A pragmatic and critical stance—one that acknowledges both the potential and limitations of blockchain—will be essential to cultivating a more transparent, trustworthy, and inclusive research ecosystem.
+This chapter surveyed the evolving landscape of reproducibility and Open Science to contextualize the proposed Decentralized Open Science Platform (d-OSP). It introduced the reproducibility crisis and identified systemic and methodological factors that contribute to irreproducible research. Persistent challenges, such as fragmented incentives, insufficient infrastructure, and lack of standardisation, were examined to highlight barriers to reform. A review of key initiatives showcased institutional and technical efforts aimed at promoting transparency and data stewardship. The chapter also explored how decentralized technologies, particularly blockchain, are being employed to support traceability, accountability, and openness in research workflows. Together, these insights establish the foundation for the d-OSP by demonstrating both the urgency of reproducibility issues and the potential for decentralized approaches to contribute meaningful solutions.
+
+
 
 %====================================================================
 \chapter{Proposed Decentralized Model}
@@ -1306,10 +1338,10 @@ The user metadata is structured using two primary ontologies: Friend of a Friend
 
 The FOAF ontology is used to describe personal and organizational attributes of users within the platform. It provides well-defined properties such as \texttt{foaf:name} for the user’s full name, \texttt{foaf:mbox} for email addresses, and \texttt{foaf:organization} for institutional affiliations. By leveraging FOAF, the platform ensures standardized representation of user identities and their associations, facilitating integration with other systems that utilize FOAF-based user profiles.
 
-Schema.org complements FOAF by enriching the user metadata with structured properties that enhance discoverability and machine readability. The \texttt{schema:identifier} property, for instance, is used to store unique user identifiers such as ORCID, ensuring compatibility with global researcher identification systems. Additionally, \texttt{schema:roleName} captures the user’s role within the platform (e.g., reviewer, publisher), while \texttt{schema:publicKey} stores cryptographic keys associated with the user’s account. The \texttt{schema:linked\_project} property establishes connections between users and their associated research projects, enabling efficient metadata retrieval and knowledge graph construction as exhibited in Figures~\ref{jsonld:user}, the JSON-LD structure represents the project metadata in the d-OSP.
+Schema.org complements FOAF by enriching the user metadata with structured properties that enhance discoverability and machine readability. The \texttt{schema:identifier} property, for instance, is used to store unique user identifiers such as ORCID, ensuring compatibility with global researcher identification systems. Additionally, \texttt{schema:roleName} captures the user’s role within the platform (e.g., reviewer, publisher), while \texttt{schema:publicKey} stores cryptographic keys associated with the user’s account. The \texttt{schema:linked\_project} property establishes connections between users and their associated research projects, enabling efficient metadata retrieval and knowledge graph construction as exhibited in Figure~\ref{jsonld:user}, the JSON-LD structure represents the project metadata in the d-OSP.
 
 \begin{listing}
-    \begin{minted}[linenos=false,
+\begin{minted}[linenos=false,
                xleftmargin=21pt,
                tabsize=4,
                breaklines=true,
@@ -1344,10 +1376,9 @@ Schema.org complements FOAF by enriching the user metadata with structured prope
   }
   
 \end{minted}
-    \caption{User Metadata}
-    \label{jsonld:user}
+\caption{User Metadata}
+\label{jsonld:user}
 \end{listing}
-
 
 By combining FOAF and Schema.org, the d-OSP ensures that user metadata is both human-readable and machine-actionable, promoting seamless integration with external research infrastructures and fostering an interoperable ecosystem for Open Science.
 
@@ -1375,11 +1406,11 @@ The metadata for the \texttt{Project} entity provides essential details about th
     \caption{Project Metadata Attributes}
 \end{table}
 
-The following JSON structure describes the metadata for a \texttt{Project} in the d-OSP as shown in Figures~\ref{jsonld:project}.
+The following JSON structure describes the metadata for a \texttt{Project} in the d-OSP as shown in Figure~\ref{jsonld:project}.
 
 
 \begin{listing}
-    \begin{minted}[linenos=false,
+\begin{minted}[linenos=false,
                xleftmargin=21pt,
                tabsize=4,
                breaklines=true,
@@ -1425,10 +1456,9 @@ The following JSON structure describes the metadata for a \texttt{Project} in th
   }
   
 \end{minted}
-    \caption{Project Metadata}
-    \label{jsonld:project}
+\caption{Project Metadata}
+\label{jsonld:project}
 \end{listing}
-
 
 
 This metadata not only captures the essential details of the project but also ensures that these details are linked to the user's profile, making it easier to track the relationship between users and their associated research efforts.
@@ -1460,13 +1490,13 @@ In the d-OSP, metadata for users, projects, and files are stored on the blockcha
 
 The representation of a user's account on the blockchain contains the standard Iroha v1 attributes for the account entity, such as the unique account identifier, domain information, and quorum for consensus. Additionally, the \texttt{json\_data} attribute references both the project to which the user is linked and the user's metadata CID (Content Identifier) stored on IPFS. This blockchain-based approach ensures that the user’s information remains immutable and traceable, which is critical for maintaining the integrity of research data.
 
-Figures~\ref{fig:user_blockchain_representation} presents the JSON structure for account details for a user in the Iroha v1 blockchain.
+Figure~\ref{fig:user_blockchain_representation} presents the JSON structure for account details for a user in the Iroha v1 blockchain.
 
 
 \begin{listing}
-    \begin{minted}[linenos=false,
-               xleftmargin=21pt,
-               tabsize=4,
+\begin{minted}[linenos=false,
+               xleftmargin=0pt,
+               tabsize=1,
                breaklines=true,
                breakanywhere=true]{json}
         {
@@ -1482,8 +1512,8 @@ Figures~\ref{fig:user_blockchain_representation} presents the JSON structure for
     }
   
 \end{minted}
-    \caption{Blockchain Representation of User Account}
-    \label{fig:user_blockchain_representation}
+\caption{Blockchain Representation of User Account}
+\label{fig:user_blockchain_representation}
 \end{listing}
 
 
@@ -1492,11 +1522,11 @@ Figures~\ref{fig:user_blockchain_representation} presents the JSON structure for
 
 The project account representation similarly uses a blockchain-based structure to store project-related metadata. Each project is identified by a unique account ID, along with the project’s domain and quorum. The project metadata is linked to the user and includes important information about files associated with the project, including their CID references on IPFS. This ensures that the project data is linked to the user’s account and that all files and metadata related to the project are securely stored on the blockchain for provenance tracking.
 
-The JSON structure describes the account details for a project in the Iroha v1 blockchain as shown in Figures~\ref{fig:project_blockchain_representation}.
+The JSON structure describes the account details for a project in the Iroha v1 blockchain as shown in Figure~\ref{fig:project_blockchain_representation}.
 
 
 \begin{listing}
-    \begin{minted}[linenos=false,
+\begin{minted}[linenos=false,
                xleftmargin=21pt,
                tabsize=4,
                breaklines=true,
@@ -1518,13 +1548,13 @@ The JSON structure describes the account details for a project in the Iroha v1 b
     }
   
 \end{minted}
-    \caption{Blockchain Representation of Project Account}
-    \label{fig:project_blockchain_representation}
+\caption{Blockchain Representation of Project Account}
+\label{fig:project_blockchain_representation}
 \end{listing}
 
 
 
-\subsection*{File Representation}
+\subsection{File Representation}
 
 Within the project account, each file associated with the project is represented by a CID pair. The first CID refers to the file stored on IPFS, while the second CID references the metadata associated with that file. This structure ensures that the file's content and its metadata are both stored and tracked independently, but are still linked to the blockchain for integrity and provenance.
 
@@ -1560,11 +1590,7 @@ Together, these two approaches, transaction logging through Iroha v1’s blockch
 \label{chp:proposed_model:sec:summary}
 %====================================================================
 
-This chapter presents the d-OSP that provides a comprehensive and robust proposition for enhancing the reproducibility and transparency of scientific research. It leverages a modern technology stack comprising the Iroha v1 blockchain, InterPlanetary File System (IPFS), Jupyter Notebooks, Apache Tika, and Woosh. This stack ensures secure and efficient management of data and across the platform. The Iroha v1 blockchain, integrated with smart contracts and the Ethereum EVM compatible Hyperledger Burrow, guarantees the immutability and trustworthiness of all recorded actions, while IPFS enables decentralized storage of research data, ensuring scalability and resilience. Jupyter Notebooks serve as the primary front-end interface, providing an interactive environment for users to engage with research data. Apache Tika facilitates the extraction and processing of metadata from various document types, while Woosh powers advanced search and indexing functionalities, improving data discoverability and retrieval.
-
-Platform operations are streamlined and well-defined. User enrollment and project registration are handled seamlessly through the Iroha v1 blockchain, where both users and projects are registered as accounts. This facilitates the management of roles, permissions, and interactions within the platform, ensuring efficient tracking. Research data management is integrated with the platform's metadata extraction system, allowing for the efficient storage and retrieval of research data that are consistently linked to their respective provenance, reinforcing the auditability of scientific outputs. Additionally, the search and validation functionalities provide users with tools to find, and explore research data.
-
-The data model, represented through an Entity-Relationship (ER) model, underpins the platform's data structure, offering a flexible and comprehensive approach to managing users, projects, metadata, and research data. The role of metadata in the platform is crucial, as it is structured using well-established ontologies, including FOAF, Schema.org, and Dublin Core. These ontologies standardize the metadata representation, enabling interoperability and ensuring that all data is both machine-readable and discoverable. The integration of blockchain technology ensures that all metadata is transparently recorded, with the blockchain acting as a secure ledger for all metadata transactions, ensuring data integrity and facilitating trust in the platform. Provenance tracking is an essential aspect of the d-OSP, allowing for the tracing of data and results back to their origin, providing transparency, accountability, and enhancing the reproducibility of research.
+The d-OSP integrates a cohesive technology stack to promote reproducibility and transparency in research. The Iroha v1 blockchain manages user and project accounts, while smart contracts executed via Hyperledger Burrow automate operations and enforce trust. IPFS provides decentralized, persistent storage for research data. Jupyter Notebooks serve as the primary user interface, supporting interactive workflows. Apache Tika extracts metadata from diverse formats, and Woosh enables advanced search and indexing. Users and projects are registered as blockchain accounts, supporting secure role management and traceability. Metadata is structured using FOAF, Schema.org, and Dublin Core ontologies to ensure standardization and interoperability. An ER model defines the platform’s data structure, while all metadata transactions are transparently recorded on-chain. This enables robust provenance tracking and reinforces the integrity of scientific outputs.
 
 %====================================================================
 \chapter{Conclusions and Future Work}
@@ -1581,8 +1607,6 @@ The data model, represented through an Entity-Relationship (ER) model, underpins
 
 This dissertation has demonstrated how such an integration can support a more trustworthy and verifiable scientific ecosystem, grounded in the principles of Open Science. The decentralized Open Science Platform (d-OSP) presented here exemplifies this potential, offering a technically grounded and ontologically structured response to reproducibility challenges. Although barriers remain—ranging from legal and infrastructural to usability and interoperability—the progress outlined in this work opens promising pathways forward. As this research draws to a close, the next phase will focus on advancing the platform's capabilities, ensuring broader adoption, and deepening its alignment with the evolving Open Science landscape. In doing so, this work aims to contribute meaningfully to reshaping the foundations of scientific practice in the digital age.
 
-\newpage
-
 This work has introduced a decentralized Open Science Platform (d-OSP) designed to address persistent challenges in scientific reproducibility and open research collaboration. By building on the integrated use of blockchain, IPFS, and smart contracts, the platform offers a cohesive technological foundation to support more transparent, verifiable, and collaborative research practices.
 
 Reproducibility crises in science have often stemmed from a lack of traceable provenance, inaccessible data, opaque methodologies, and unreliable long-term availability of research artifacts. Centralized infrastructures tend to reinforce these issues by restricting control, limiting visibility, and introducing single points of failure. In contrast, decentralized technologies offer architectural characteristics that directly counter these systemic weaknesses.
@@ -1593,7 +1617,7 @@ IPFS complements this by enabling content-addressed and distributed storage, mak
 
 Together, these technologies do not merely offer individual improvements, but form an integrated and synergistic approach to fulfilling the core propositions of open science: transparency, accessibility, verifiability, and collaboration. By enabling trustless interactions, distributed storage, and automated protocol enforcement, the d-OSP positions itself as a natural technical response to the reproducibility problem.
 
-Looking ahead, the platform presents ample opportunities for continued development and refinement. Future work will focus on expanding artifact management capabilities, enhancing metadata extraction and search functionalities through deeper integration with knowledge graphs, and enabling support for complex, multi-source research data workflows. Research into domain-specific ontologies for scientific data will play a key role, alongside efforts to decentralize the deployment of the metadata parser and search engine. To foster a more engaged and collaborative research community, blockchain-based incentive mechanisms will be introduced to reward valuable contributions such as data sharing, result verification, and metadata enrichment. Further priorities include improving the overall user experience and implementing smart contract support for domain-specific logic, both of which are critical for the platform’s broader adoption and long-term impact.
+Looking ahead, the platform presents ample opportunities for continued development and refinement. Future work will focus on expanding artifact management capabilities, enhancing metadata extraction and search functionalities through deeper integration with knowledge graphs, and enabling support for complex, multi-source research data workflows. Research into domain-specific ontologies for scientific data will play a key role, alongside efforts to decentralize the deployment of the metadata parser and search engine. To foster a more engaged and collaborative research community, blockchain-based incentive mechanisms will be introduced to reward valuable contributions such as data sharing, result verification, and metadata enrichment. Other priorities include improving the overall user experience and implementing smart contract support for domain-specific logic, both of which are critical to the broader adoption and long-term impact of the platform.
 
 In summary, the integration of decentralized technologies into scientific infrastructure is not an arbitrary technical upgrade, but a strategically aligned response to deeply rooted problems in reproducibility and openness. The d-OSP lays the groundwork for a future in which scientific knowledge is not only more accessible, but inherently more trustworthy and resilient.
 

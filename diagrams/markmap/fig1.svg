@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="mindmap" class="markmap mindmap"><style>.markmap {
+  --markmap-max-width: 9999px;
+  --markmap-a-color: #0097e6;
+  --markmap-a-hover-color: #00a8ff;
+  --markmap-code-bg: #f0f0f0;
+  --markmap-code-color: #555;
+  --markmap-highlight-bg: #ffeaa7;
+  --markmap-table-border: 1px solid currentColor;
+  --markmap-font: 300 16px/20px sans-serif;
+  --markmap-circle-open-bg: #fff;
+  --markmap-text-color: #333;
+  --markmap-highlight-node-bg: #ff02;
+
+  font: var(--markmap-font);
+  color: var(--markmap-text-color);
+}
+
+  .markmap-link {
+    fill: none;
+  }
+
+  .markmap-node &gt; circle {
+      cursor: pointer;
+    }
+
+  .markmap-foreign {
+    display: inline-block;
+  }
+
+  .markmap-foreign p {
+      margin: 0;
+    }
+
+  .markmap-foreign a {
+      color: var(--markmap-a-color);
+    }
+
+  .markmap-foreign a:hover {
+        color: var(--markmap-a-hover-color);
+      }
+
+  .markmap-foreign code {
+      padding: 0.25em;
+      font-size: calc(1em - 2px);
+      color: var(--markmap-code-color);
+      background-color: var(--markmap-code-bg);
+      border-radius: 2px;
+    }
+
+  .markmap-foreign pre {
+      margin: 0;
+    }
+
+  .markmap-foreign pre &gt; code {
+        display: block;
+      }
+
+  .markmap-foreign del {
+      text-decoration: line-through;
+    }
+
+  .markmap-foreign em {
+      font-style: italic;
+    }
+
+  .markmap-foreign strong {
+      font-weight: bold;
+    }
+
+  .markmap-foreign mark {
+      background: var(--markmap-highlight-bg);
+    }
+
+  .markmap-foreign table,
+    .markmap-foreign th,
+    .markmap-foreign td {
+      border-collapse: collapse;
+      border: var(--markmap-table-border);
+    }
+
+  .markmap-foreign img {
+      display: inline-block;
+    }
+
+  .markmap-foreign svg {
+      fill: currentColor;
+    }
+
+  .markmap-foreign &gt; div {
+      width: var(--markmap-max-width);
+      text-align: left;
+    }
+
+  .markmap-foreign &gt; div &gt; div {
+        display: inline-block;
+      }
+
+  .markmap-highlight rect {
+    fill: var(--markmap-highlight-node-bg);
+  }
+
+.markmap-dark .markmap {
+  --markmap-code-bg: #1a1b26;
+  --markmap-code-color: #ddd;
+  --markmap-circle-open-bg: #444;
+  --markmap-text-color: #eee;
+}
+</style><g transform="translate(20.97500000000008,483.66911185237205) scale(0.9950686641697876)"><path class="markmap-link" data-depth="3" data-path="1.2.3" d="M307,-86.391C347,-86.391,347,-126.141,387,-126.141" stroke-width="1.375" stroke="rgb(44, 160, 44)"/><path class="markmap-link" data-depth="3" data-path="1.2.4" d="M307,-86.391C347,-86.391,347,-99.766,387,-99.766" stroke-width="1.375" stroke="rgb(214, 39, 40)"/><path class="markmap-link" data-depth="3" data-path="1.2.5" d="M307,-86.391C347,-86.391,347,-73.391,387,-73.391" stroke-width="1.375" stroke="rgb(148, 103, 189)"/><path class="markmap-link" data-depth="3" data-path="1.2.6" d="M307,-86.391C347,-86.391,347,-47.016,387,-47.016" stroke-width="1.375" stroke="rgb(140, 86, 75)"/><path class="markmap-link" data-depth="3" data-path="1.7.8" d="M314,24.109C354,24.109,354,-15.641,394,-15.641" stroke-width="1.375" stroke="rgb(127, 127, 127)"/><path class="markmap-link" data-depth="3" data-path="1.7.9" d="M314,24.109C354,24.109,354,10.734,394,10.734" stroke-width="1.375" stroke="rgb(188, 189, 34)"/><path class="markmap-link" data-depth="3" data-path="1.7.10" d="M314,24.109C354,24.109,354,37.109,394,37.109" stroke-width="1.375" stroke="rgb(23, 190, 207)"/><path class="markmap-link" data-depth="3" data-path="1.7.11" d="M314,24.109C354,24.109,354,63.484,394,63.484" stroke-width="1.375" stroke="rgb(31, 119, 180)"/><path class="markmap-link" data-depth="4" data-path="1.12.13.14" d="M516,107.953C556,107.953,556,94.766,596,94.766" stroke-width="1.1875" stroke="rgb(214, 39, 40)"/><path class="markmap-link" data-depth="4" data-path="1.12.13.15" d="M516,107.953C556,107.953,556,120.953,596,120.953" stroke-width="1.1875" stroke="rgb(148, 103, 189)"/><path class="markmap-link" data-depth="3" data-path="1.12.13" d="M319,108.141C359,108.141,359,107.953,399,107.953" stroke-width="1.375" stroke="rgb(44, 160, 44)"/><path class="markmap-link" data-depth="2" data-path="1.2" d="M165,11.25C205,11.25,205,-86.391,245,-86.391" stroke-width="1.75" stroke="rgb(255, 127, 14)"/><path class="markmap-link" data-depth="2" data-path="1.7" d="M165,11.25C205,11.25,205,24.109,245,24.109" stroke-width="1.75" stroke="rgb(227, 119, 194)"/><path class="markmap-link" data-depth="2" data-path="1.12" d="M165,11.25C205,11.25,205,108.141,245,108.141" stroke-width="1.75" stroke="rgb(255, 127, 14)"/><g class="markmap-highlight"/><g data-depth="3" data-path="1.2.3" class="markmap-node" transform="translate(387, -146.828125)"><line stroke="#2ca02c" stroke-width="1.375" x1="-1" x2="187" y1="20.6875" y2="20.6875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="169" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Affect budget and funds</div></div></foreignObject></g><g data-depth="3" data-path="1.2.4" class="markmap-node" transform="translate(387, -120.453125)"><line stroke="#d62728" stroke-width="1.375" x1="-1" x2="230" y1="20.6875" y2="20.6875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="212" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Delays Science Advancement</div></div></foreignObject></g><g data-depth="3" data-path="1.2.5" class="markmap-node" transform="translate(387, -94.078125)"><line stroke="#9467bd" stroke-width="1.375" x1="-1" x2="233" y1="20.6875" y2="20.6875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="215" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Reduce confidence in Science</div></div></foreignObject></g><g data-depth="3" data-path="1.2.6" class="markmap-node" transform="translate(387, -67.703125)"><line stroke="#8c564b" stroke-width="1.375" x1="-1" x2="416" y1="20.6875" y2="20.6875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="398" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Impacts clinical trials, new treatments and drug releases</div></div></foreignObject></g><g data-depth="2" data-path="1.2" class="markmap-node" transform="translate(245, -107.265625)"><line stroke="#ff7f0e" stroke-width="1.75" x1="-1" x2="64" y1="20.875" y2="20.875"/><circle stroke-width="1.5" r="6" stroke="#ff7f0e" fill="var(--markmap-circle-open-bg)" cx="62" cy="20.875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="46" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Issues</div></div></foreignObject></g><g data-depth="3" data-path="1.7.8" class="markmap-node" transform="translate(394, -36.328125)"><line stroke="#7f7f7f" stroke-width="1.375" x1="-1" x2="172" y1="20.6875" y2="20.6875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="154" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Flawed study designs</div></div></foreignObject></g><g data-depth="3" data-path="1.7.9" class="markmap-node" transform="translate(394, -9.953125)"><line stroke="#bcbd22" stroke-width="1.375" x1="-1" x2="152" y1="20.6875" y2="20.6875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="134" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Data quality issues</div></div></foreignObject></g><g data-depth="3" data-path="1.7.10" class="markmap-node" transform="translate(394, 16.421875)"><line stroke="#17becf" stroke-width="1.375" x1="-1" x2="231" y1="20.6875" y2="20.6875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="213" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Unreliable measurement tools</div></div></foreignObject></g><g data-depth="3" data-path="1.7.11" class="markmap-node" transform="translate(394, 42.796875)"><line stroke="#1f77b4" stroke-width="1.375" x1="-1" x2="239" y1="20.6875" y2="20.6875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="221" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Inconsistent research practices</div></div></foreignObject></g><g data-depth="2" data-path="1.7" class="markmap-node" transform="translate(245, 3.234375)"><line stroke="#e377c2" stroke-width="1.75" x1="-1" x2="71" y1="20.875" y2="20.875"/><circle stroke-width="1.5" r="6" stroke="#e377c2" fill="var(--markmap-circle-open-bg)" cx="69" cy="20.875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="53" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Factors</div></div></foreignObject></g><g data-depth="4" data-path="1.12.13.14" class="markmap-node" transform="translate(596, 74.171875)"><line stroke="#d62728" stroke-width="1.1875" x1="-1" x2="87" y1="20.59375" y2="20.59375"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="69" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Principles</div></div></foreignObject></g><g data-depth="4" data-path="1.12.13.15" class="markmap-node" transform="translate(596, 100.359375)"><line stroke="#9467bd" stroke-width="1.1875" x1="-1" x2="175" y1="20.59375" y2="20.59375"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="157" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Infrastructure - d-OSP</div></div></foreignObject></g><g data-depth="3" data-path="1.12.13" class="markmap-node" transform="translate(399, 87.265625)"><line stroke="#2ca02c" stroke-width="1.375" x1="-1" x2="119" y1="20.6875" y2="20.6875"/><circle stroke-width="1.5" r="6" stroke="#2ca02c" fill="var(--markmap-circle-open-bg)" cx="117" cy="20.6875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="101" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Open Science</div></div></foreignObject></g><g data-depth="2" data-path="1.12" class="markmap-node" transform="translate(245, 87.265625)"><line stroke="#ff7f0e" stroke-width="1.75" x1="-1" x2="76" y1="20.875" y2="20.875"/><circle stroke-width="1.5" r="6" stroke="#ff7f0e" fill="var(--markmap-circle-open-bg)" cx="74" cy="20.875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="58" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Solution</div></div></foreignObject></g><g data-depth="1" data-path="1" class="markmap-node" transform="translate(0, -10)"><line stroke="#1f77b4" stroke-width="2.5" x1="-1" x2="167" y1="21.25" y2="21.25"/><circle stroke-width="1.5" r="6" stroke="#1f77b4" fill="var(--markmap-circle-open-bg)" cx="165" cy="21.25"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="149" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Reproducibility Crisis</div></div></foreignObject></g></g></svg>

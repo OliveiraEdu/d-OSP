@@ -5,29 +5,29 @@
 
 skinparam monochrome true
 
-LAYOUT_WITH_LEGEND()
+' LAYOUT_WITH_LEGEND()
 
 ' title Container diagram for Open Science Platform
 
-Person(researcher, "Researcher", "A researcher who enrolls and interacts with the platform to upload and manage research artifacts.")
+Person(researcher, "Researcher", "Enrolls and interacts with the platform.")
 
 System_Boundary(core_services, "User Interface, integration and execution") {
-    Container(jupyter_notebooks, "Jupyter Notebooks", "Python, Jupyter", "Provides the front-end interface for users to interact with the platform and manage research artifacts.")
-    Container(iroha_python_lib, "Iroha v1 Python Library", "Python", "Handles communication with the Hyperledger Iroha blockchain.")
-    Container(ipfs_https_client, "IPFS HTTPS Client", "Python", "Handles communication with the IPFS network to store and retrieve research artifacts.")
+    Container(jupyter_notebooks, "Jupyter Notebooks", "Python, Jupyter", "Front-end for users to interactions with the d-OSP.")
+    Container(iroha_python_lib, "Iroha v1 Python Library", "Python", "Communicates with the Iroha blockchain.")
+    Container(ipfs_https_client, "IPFS HTTPS Client", "Python", "Communicates with the IPFS network.")
     
 }
 
 System_Boundary(extended_services, "Extended Services") {
-    Container(metadata_extraction, "Metadata Extraction", "Apache Tika, Python", "Extracts metadata from uploaded research artifacts.")
-    Container(search_system, "Search System", "Whoosh, Python", "Provides keyword-based search functionality for stored artifacts.")
+    Container(metadata_extraction, "Metadata Extraction", "Apache Tika, Python", "Extracts metadata from research files.")
+    Container(search_system, "Search System", "Whoosh, Python", "keyword-based search.")
 }
 
 System_Boundary(decentralized_services, "Core Services"){
-    Container(blockchain, "Hyperledger Iroha", "A decentralized ledger that ensures the integrity and traceability of user data, projects, and research artifacts.")
-    Container(ipfs, "IPFS Network", "A decentralized file storage network used to store research artifacts and metadata.")
-    Container(smart_contracts, "Smart Contracts", "Solidity (EVM)", "Smart contracts tightly integrated with Hyperledger Burrow, providing Ethereum EVM compatible functionalities for managing projects and artifacts.")
-    Container(burrow, "Hyperledger Burrow", "Provides EVM compatible run time")
+    Container(blockchain, "Iroha", "Distributed ledger.")
+    Container(ipfs, "IPFS Network", "Storage network for research files and metadata.")
+    Container(smart_contracts, "Smart Contracts", "Solidity", "Smart contracts integrated with Hyperledger Burrow, manages user, projects metadata.")
+    Container(burrow, "Hyperledger Burrow", "EVM compatible run time")
 }
 
 Rel(researcher, jupyter_notebooks, "Uses", "HTTPS")
@@ -39,4 +39,5 @@ Rel(ipfs_https_client, ipfs, "Upload and download files and JSON objects")
 Rel(jupyter_notebooks, metadata_extraction, "Extract Metadata")
 Rel(jupyter_notebooks, search_system, "Index and Search")
 Rel(burrow, blockchain, "Execute transactions and queries")
+
 @enduml
