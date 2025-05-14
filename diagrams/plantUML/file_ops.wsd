@@ -1,0 +1,20 @@
+@startuml
+skinparam monochrome true
+actor Researcher
+participant "IPFS" as IPFS
+participant "Metadata Extractor" as ME
+participant "Blockchain (Iroha)" as BC
+participant "Search System" as Search
+
+Researcher -> IPFS : Upload file
+IPFS -> Researcher : Return CID
+Researcher -> ME : Send file for metadata extraction
+ME -> ME : Extract metadata
+ME -> BC : Submit CID + metadata
+BC -> ME : Confirm transaction
+ME -> Search : Index metadata
+Researcher -> Search : Search for data
+Search -> Researcher : Return metadata + CID
+Researcher -> IPFS : Retrieve file using CID
+IPFS -> Researcher : Return file
+@enduml

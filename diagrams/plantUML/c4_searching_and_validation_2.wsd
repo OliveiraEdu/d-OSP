@@ -1,0 +1,28 @@
+@startuml
+
+' title Open Science Platform - Search and Validation
+skinparam monochrome true
+
+actor Researcher as R
+participant Platform as "Platform"
+participant Search as "Search Engine"
+participant Indexer as "Indexer"
+participant IPFS as "IPFS"
+participant Blockchain as "Blockchain"
+
+== Search Phase ==
+R -> Platform: Search for keyword
+Platform -> Indexer: Lookup keyword
+Indexer --> Platform: Return search results
+
+== Metadata Validation Phase ==
+Platform -> Blockchain: Fetch project account details
+Blockchain --> Platform: Return account metadata
+Platform -> Platform: Validate file metadata
+
+== File Retrieval Phase ==
+Platform -> IPFS: Request file using CID
+IPFS --> Platform: Return file
+Platform -> R: Deliver file to researcher
+
+@enduml

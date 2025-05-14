@@ -1,0 +1,39 @@
+@startuml
+skinparam monochrome true
+actor "Researcher A" as RA
+actor "Researcher B" as RB
+participant "IPFS" as IPFS
+participant "Metadata Extractor" as ME
+participant "Blockchain (Iroha)" as BC
+participant "Search System" as Search
+
+== Researcher A uploads original file ==
+RA -> IPFS : Upload source file
+IPFS -> RA : Return Source CID
+RA -> ME : Send source file for metadata extraction
+ME -> ME : Extract metadata
+ME -> BC : Submit Source CID + metadata
+BC -> ME : Confirm transaction
+ME -> Search : Index metadata
+
+== Researcher B searches and retrieves ==
+RB -> Search : Search for data
+Search -> RB : Return metadata + Source CID
+RB -> IPFS : Retrieve source file using CID
+IPFS -> RB : Return source file
+
+== Researcher B uploads derived file ==
+RB -> IPFS : Upload derived file
+IPFS -> RB : Return Derived CID
+RB -> ME : Send derived file for metadata extraction
+ME -> ME : Extract metadata
+ME -> BC : Submit Derived CID + metadata
+note right of ME
+  Provenance triple:
+  prov:wasDerivedFrom = Source CID
+  dct:creator = RB
+  dct:created = timestamp
+end note
+BC -> ME : Confirm transaction
+ME -> Search : Index metadata with provenance
+@enduml

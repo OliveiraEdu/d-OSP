@@ -1,6 +1,6 @@
 @startuml
 
-title Open Science Platform – Researcher Enrollment and Project Registration
+' title Open Science Platform – Researcher Enrollment and Project Registration
 skinparam monochrome true
 
 actor Researcher as R

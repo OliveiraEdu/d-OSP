@@ -1,0 +1,36 @@
+@startuml
+' title Basic Metadata Handling Workflow in the Open Science Platform
+
+skinparam monochrome true
+skinparam participantPadding 20
+skinparam arrowThickness 1
+skinparam shadowing false
+
+actor "Researcher" as R
+participant "Platform" as P
+participant "Metadata Formatter" as MF
+participant "IPFS" as IPFS
+participant "Blockchain (Iroha)" as BC
+participant "Search Indexer" as SI
+
+== Metadata Generation ==
+R -> P: Submit metadata (User, Project, or File)
+P -> MF: Forward metadata
+MF -> MF: Format as JSON-LD
+
+== Metadata Storage ==
+MF -> IPFS: Store JSON-LD object
+IPFS -> MF: Return CID
+
+== Blockchain Anchoring ==
+MF -> BC: Write CID to account details
+BC -> MF: Confirm transaction
+
+== Search Indexing ==
+MF -> SI: Index metadata and CID
+
+== Provenance Availability ==
+SI -> P: Make metadata discoverable
+P -> R: Confirm submission and indexing
+
+@enduml

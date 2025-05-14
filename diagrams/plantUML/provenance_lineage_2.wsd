@@ -1,0 +1,39 @@
+@startuml
+skinparam monochrome true
+actor "Researcher A" as RA
+actor "Researcher B" as RB
+participant "IPFS" as IPFS
+participant "Metadata Extractor" as ME
+participant "Blockchain (Iroha)" as BC
+participant "Search System" as Search
+
+== Researcher A uploads original file ==
+RA -> IPFS : Upload source file
+IPFS -> RA : Return Source CID (QmSource)
+RA -> ME : Send source file for metadata extraction
+ME -> ME : Extract metadata (JSON-LD)
+ME -> BC : Submit QmSource + metadata
+BC -> ME : Confirm transaction
+ME -> Search : Index metadata
+
+== Researcher B searches and retrieves ==
+RB -> Search : Search for data
+Search -> RB : Return metadata + QmSource
+RB -> IPFS : Retrieve source file using QmSource
+IPFS -> RB : Return source file
+
+== Researcher B uploads derived file ==
+RB -> IPFS : Upload derived file
+IPFS -> RB : Return Derived CID (QmDerived)
+RB -> ME : Send derived file for metadata extraction
+ME -> ME : Extract metadata (JSON-LD)
+ME -> BC : Submit QmDerived + metadata
+note right of ME
+  System-enforced provenance:
+  <urn:cid:QmDerived> prov:wasDerivedFrom <urn:cid:QmSource>
+  <urn:cid:QmDerived> dct:creator <urn:user:RB>
+  <urn:cid:QmDerived> dct:created "2025-05-04T12:00:00Z"
+end note
+BC -> ME : Confirm transaction
+ME -> Search : Index metadata with provenance
+@enduml
