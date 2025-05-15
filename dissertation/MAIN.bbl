@@ -17,7 +17,7 @@
      \fi
 \egroup
 
-\begin{thebibliography}{106}
+\begin{thebibliography}{104}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[Alharby \noexpand\bibandname\xspace van Moorsel(2017)Alharby
@@ -215,21 +215,6 @@ M.~Budiu \bibandname\ B.~J. Schwartz.
 \newblock \textsl{Designing distributed systems: A service-oriented approach}.
 \newblock Prentice Hall, 2007.
 \newblock
-\newblock
-\par
-
-\bibitem[Burgelman \bibetalname\xspace(2019)Burgelman, Pascu, Szkuta,
-  Von~Schomberg, Karalopoulos, Repanas\bibcommaand\  \bibandname\
-  Schouppe]{burgelman_open_2019}
-J.-C. Burgelman, C.~Pascu, K.~Szkuta, R.~Von~Schomberg, A.~Karalopoulos,
-  K.~Repanas\bibcommaand\xspace \bibandname\ M.~Schouppe.
-\newblock
-  \textsl{\hyperlink{https://www.frontiersin.org/article/10.3389/fdata.2019.00043/full}{Open
-  {Science}, {Open} {Data}, and {Open} {Scholarship}: {European} {Policies} to
-  {Make} {Science} {Fit} for the {Twenty}-{First} {Century}}}.
-\newblock \textsl{Front. Big Data}, 2:\penalty0 43, \bibdecname\xspace 2019.
-\newblock \begin{RCNBurldoi} {DOI}: \doi{10.3389/fdata.2019.00043}.
-  \end{RCNBurldoi}
 \newblock
 \par
 
@@ -1277,37 +1262,6 @@ B.~Trovò \bibandname\ N.~Massari.
 \newblock \begin{RCNBurldoi} {DOI}:
   \doi{https://doi.org/10.1007/978-3-030-71593-9_2}. \end{RCNBurldoi}
 \newblock
-\par
-
-\bibitem[Van~Dijk \bibetalname\xspace(2021)Van~Dijk,
-  Schatschneider\bibcommaand\  \bibandname\ Hart]{van_dijk_open_2021}
-W.~Van~Dijk, C.~Schatschneider\bibcommaand\xspace \bibandname\ S.~A. Hart.
-\newblock
-  \textsl{\hyperlink{https://journals.sagepub.com/doi/10.1177/0022219420945267}{Open
-  {Science} in {Education} {Sciences}}}.
-\newblock \textsl{J Learn Disabil}, 54\penalty0 (2):\penalty0 139--152,
-  \bibmarname\xspace 2021.
-\newblock \begin{RCNBurldoi} {DOI}: \doi{10.1177/0022219420945267}.
-  \end{RCNBurldoi}
-\newblock \begin{RCNBabstract} The Open Science movement has gained
-  considerable traction in the last decade. The Open Science movement tries to
-  increase trust in research results and open the access to all elements of a
-  research project to the public. Central to these goals, Open Science has
-  promoted five critical tenets: Open Data, Open Analysis, Open Materials,
-  Preregistration, and Open Access. All Open Science elements can be thought of
-  as extensions to the traditional way of achieving openness in science, which
-  has been scientific publication of research outcomes in journals or books.
-  Open Science in education sciences, however, has the potential to be much
-  more than a safeguard against questionable research. Open Science in
-  education science provides opportunities to (a) increase the transparency and
-  therefore replicability of research and (b) develop and answer research
-  questions about individuals with learning disabilities and learning
-  difficulties that were previously impossible to answer due to complexities in
-  data analysis methods. We will provide overviews of the main tenets of Open
-  Science (i.e., Open Data, Open Analysis, Open Materials, Preregistration, and
-  Open Access), show how they are in line with grant funding agencies’
-  expectations for rigorous research processes, and present resources on best
-  practices for each of the tenets. \end{RCNBabstract}
 \par
 
 \bibitem[Van~Rossum(2018)]{van_rossum_blockchain_2018}

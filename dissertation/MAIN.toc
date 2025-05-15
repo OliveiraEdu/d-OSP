@@ -8,6 +8,8 @@
 \contentsline {section}{\numberline {1.1}Research Context}{\hyperref@ref {section:1.1}{2}}
 \contentsline {section}{\numberline {1.2}Motivation}{\hyperref@ref {section:1.2}{5}}
 \contentsline {section}{\numberline {1.3}Objectives}{\hyperref@ref {section:1.3}{6}}
+\contentsline {subsection}{\numberline {1.3.1}Main objective}{\hyperref@ref {subsection:1.3.1}{6}}
+\contentsline {subsection}{\numberline {1.3.2}Specific objectives}{\hyperref@ref {subsection:1.3.2}{6}}
 \contentsline {section}{\numberline {1.4}Methodology}{\hyperref@ref {section:1.4}{7}}
 \contentsline {section}{\numberline {1.5}Research Hypothesis and Rationale}{\hyperref@ref {section:1.5}{7}}
 \contentsline {section}{\numberline {1.6}Summary of Contributions}{\hyperref@ref {section:1.6}{8}}
@@ -42,6 +44,7 @@
 \contentsline {subsection}{\numberline {2.5.2}Integrating Ledger with Distributed Storage}{\hyperref@ref {subsection:2.5.2}{29}}
 \contentsline {section}{\numberline {2.6}Open Science and Reproducibility}{\hyperref@ref {section:2.6}{29}}
 \contentsline {subsection}{\numberline {2.6.1}Benefits, Pros, and Cons of Open Science}{\hyperref@ref {subsection:2.6.1}{31}}
+\contentsline {section}{\numberline {2.7}Summary}{\hyperref@ref {section:2.7}{32}}
 \contentsline {chapter}{\numberline {3}Literature and Area Review}{\hyperref@ref {chapter:3}{33}}
 \contentsline {section}{\numberline {3.1}Reproducibility Crisis in Science Reserach}{\hyperref@ref {section:3.1}{34}}
 \contentsline {subsection}{\numberline {3.1.1}Challenges to Scientific Integrity}{\hyperref@ref {subsection:3.1.1}{34}}
@@ -81,11 +84,15 @@
 \contentsline {subsection}{\numberline {4.8.2}Metadata representation}{\hyperref@ref {subsection:4.8.2}{57}}
 \contentsline {subsection}{\numberline {4.8.3}The User Metadata}{\hyperref@ref {subsection:4.8.3}{58}}
 \contentsline {subsection}{\numberline {4.8.4}The Project Metadata}{\hyperref@ref {subsection:4.8.4}{59}}
-\contentsline {subsection}{\numberline {4.8.5}Metadata Workflow}{\hyperref@ref {subsection:4.8.5}{60}}
-\contentsline {subsection}{\numberline {4.8.6}Blockchain Representation}{\hyperref@ref {subsection:4.8.6}{61}}
-\contentsline {subsection}{\numberline {4.8.7}User Account}{\hyperref@ref {subsection:4.8.7}{61}}
-\contentsline {subsection}{\numberline {4.8.8}Project Account}{\hyperref@ref {subsection:4.8.8}{61}}
-\contentsline {section}{\numberline {4.9}Provenance}{\hyperref@ref {section:4.9}{65}}
-\contentsline {section}{\numberline {4.10}Summary}{\hyperref@ref {section:4.10}{66}}
-\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{\hyperref@ref {chapter:5}{71}}
-\contentsline {chapter}{Bibliography}{\hyperref@ref {chapter:A}{75}}
+\contentsline {subsection}{\numberline {4.8.5}Basic Metadata Workflow}{\hyperref@ref {subsection:4.8.5}{60}}
+\contentsline {subsection}{\numberline {4.8.6}Extended Metadata Workflow}{\hyperref@ref {subsection:4.8.6}{61}}
+\contentsline {subsubsection}{\numberline {4.8.6.1}Original Artifact Workflow (Researcher A)}{\hyperref@ref {subsubsection:4.8.6.1}{61}}
+\contentsline {subsubsection}{\numberline {4.8.6.2}Derived Artifact Workflow (Researcher B)}{\hyperref@ref {subsubsection:4.8.6.2}{61}}
+\contentsline {subsection}{\numberline {4.8.7}Blockchain Representation}{\hyperref@ref {subsection:4.8.7}{62}}
+\contentsline {subsection}{\numberline {4.8.8}User Account}{\hyperref@ref {subsection:4.8.8}{62}}
+\contentsline {subsection}{\numberline {4.8.9}Project Account}{\hyperref@ref {subsection:4.8.9}{62}}
+\contentsline {subsection}{\numberline {4.8.10}File Representation}{\hyperref@ref {subsection:4.8.10}{66}}
+\contentsline {section}{\numberline {4.9}Provenance}{\hyperref@ref {section:4.9}{67}}
+\contentsline {section}{\numberline {4.10}Summary}{\hyperref@ref {section:4.10}{70}}
+\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{\hyperref@ref {chapter:5}{73}}
+\contentsline {chapter}{Bibliography}{\hyperref@ref {chapter:A}{77}}
