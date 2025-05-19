@@ -1613,8 +1613,6 @@ INPUT ./fig/logo-unijui-eps-converted-to.pdf
 INPUT ./fig/logo-unijui.eps
 INPUT ./fig/logo-unijui-eps-converted-to.pdf
 INPUT ./fig/logo-unijui-eps-converted-to.pdf
-INPUT ./fig/logo-unijui-eps-converted-to.pdf
-INPUT ./fig/logo-unijui-eps-converted-to.pdf
 OUTPUT MAIN.pdf
 INPUT ./fig/logo-unijui-eps-converted-to.pdf
 INPUT ./fig/logo-ppgmmc.eps
@@ -1627,8 +1625,6 @@ INPUT ./fig/logo-ppgmmc.eps
 INPUT ./fig/logo-ppgmmc-eps-converted-to.pdf
 INPUT ./fig/logo-ppgmmc-eps-converted-to.pdf
 INPUT ./fig/logo-ppgmmc-eps-converted-to.pdf
-INPUT ./fig/logo-ppgmmc-eps-converted-to.pdf
-INPUT ./fig/logo-ppgmmc-eps-converted-to.pdf
 INPUT ./fig/logo-gca.eps
 INPUT ./fig/logo-gca.eps
 INPUT ./fig/logo-gca.eps
@@ -1636,8 +1632,6 @@ INPUT ./fig/logo-gca.eps
 INPUT ./fig/logo-gca-eps-converted-to.pdf
 INPUT ./fig/logo-gca-eps-converted-to.pdf
 INPUT ./fig/logo-gca.eps
-INPUT ./fig/logo-gca-eps-converted-to.pdf
-INPUT ./fig/logo-gca-eps-converted-to.pdf
 INPUT ./fig/logo-gca-eps-converted-to.pdf
 INPUT ./fig/logo-gca-eps-converted-to.pdf
 INPUT ./fig/logo-gca-eps-converted-to.pdf
@@ -1648,8 +1642,6 @@ INPUT ./fig/logo-gpef.eps
 INPUT ./fig/logo-gpef-eps-converted-to.pdf
 INPUT ./fig/logo-gpef-eps-converted-to.pdf
 INPUT ./fig/logo-gpef.eps
-INPUT ./fig/logo-gpef-eps-converted-to.pdf
-INPUT ./fig/logo-gpef-eps-converted-to.pdf
 INPUT ./fig/logo-gpef-eps-converted-to.pdf
 INPUT ./fig/logo-gpef-eps-converted-to.pdf
 INPUT ./fig/logo-gpef-eps-converted-to.pdf
@@ -1796,8 +1788,6 @@ INPUT ./fig/network_topology.eps
 INPUT ./fig/network_topology-eps-converted-to.pdf
 INPUT ./fig/network_topology-eps-converted-to.pdf
 INPUT ./fig/network_topology-eps-converted-to.pdf
-INPUT ./fig/network_topology-eps-converted-to.pdf
-INPUT ./fig/network_topology-eps-converted-to.pdf
 INPUT ./fig/c4_platform_operations_1_2.eps
 INPUT ./fig/c4_platform_operations_1_2.eps
 INPUT fig/c4_platform_operations_1_2.eps
@@ -1806,8 +1796,6 @@ INPUT ./fig/c4_platform_operations_1_2.eps
 INPUT ./fig/c4_platform_operations_1_2-eps-converted-to.pdf
 INPUT ./fig/c4_platform_operations_1_2-eps-converted-to.pdf
 INPUT ./fig/c4_platform_operations_1_2.eps
-INPUT ./fig/c4_platform_operations_1_2-eps-converted-to.pdf
-INPUT ./fig/c4_platform_operations_1_2-eps-converted-to.pdf
 INPUT ./fig/c4_platform_operations_1_2-eps-converted-to.pdf
 INPUT ./fig/c4_platform_operations_1_2-eps-converted-to.pdf
 INPUT ./fig/c4_platform_operations_1_2-eps-converted-to.pdf
@@ -1822,8 +1810,6 @@ INPUT ./fig/c4_platform_operations_3.eps
 INPUT ./fig/c4_platform_operations_3-eps-converted-to.pdf
 INPUT ./fig/c4_platform_operations_3-eps-converted-to.pdf
 INPUT ./fig/c4_platform_operations_3-eps-converted-to.pdf
-INPUT ./fig/c4_platform_operations_3-eps-converted-to.pdf
-INPUT ./fig/c4_platform_operations_3-eps-converted-to.pdf
 INPUT ./fig/c4_searching_and_validation_2.eps
 INPUT ./fig/c4_searching_and_validation_2.eps
 INPUT fig/c4_searching_and_validation_2.eps
@@ -1832,8 +1818,6 @@ INPUT ./fig/c4_searching_and_validation_2.eps
 INPUT ./fig/c4_searching_and_validation_2-eps-converted-to.pdf
 INPUT ./fig/c4_searching_and_validation_2-eps-converted-to.pdf
 INPUT ./fig/c4_searching_and_validation_2.eps
-INPUT ./fig/c4_searching_and_validation_2-eps-converted-to.pdf
-INPUT ./fig/c4_searching_and_validation_2-eps-converted-to.pdf
 INPUT ./fig/c4_searching_and_validation_2-eps-converted-to.pdf
 INPUT ./fig/c4_searching_and_validation_2-eps-converted-to.pdf
 INPUT ./fig/c4_searching_and_validation_2-eps-converted-to.pdf
@@ -1921,8 +1905,6 @@ INPUT ./fig/metadata_workflow_sequence_2.eps
 INPUT ./fig/metadata_workflow_sequence_2-eps-converted-to.pdf
 INPUT ./fig/metadata_workflow_sequence_2-eps-converted-to.pdf
 INPUT ./fig/metadata_workflow_sequence_2-eps-converted-to.pdf
-INPUT ./fig/metadata_workflow_sequence_2-eps-converted-to.pdf
-INPUT ./fig/metadata_workflow_sequence_2-eps-converted-to.pdf
 INPUT ./fig/provenance_lineage_2.eps
 INPUT ./fig/provenance_lineage_2.eps
 INPUT fig/provenance_lineage_2.eps
@@ -1931,8 +1913,6 @@ INPUT ./fig/provenance_lineage_2.eps
 INPUT ./fig/provenance_lineage_2-eps-converted-to.pdf
 INPUT ./fig/provenance_lineage_2-eps-converted-to.pdf
 INPUT ./fig/provenance_lineage_2.eps
-INPUT ./fig/provenance_lineage_2-eps-converted-to.pdf
-INPUT ./fig/provenance_lineage_2-eps-converted-to.pdf
 INPUT ./fig/provenance_lineage_2-eps-converted-to.pdf
 INPUT ./fig/provenance_lineage_2-eps-converted-to.pdf
 INPUT ./fig/provenance_lineage_2-eps-converted-to.pdf

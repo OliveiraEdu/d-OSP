@@ -1,0 +1,37 @@
+@startuml
+' title Extended Metadata Workflow in d-OSP
+skinparam monochrome true
+
+actor "Researcher A" as A
+actor "Researcher B" as B
+participant "d-OSP Platform" as Platform
+participant "IPFS" as IPFS
+participant "Blockchain" as Blockchain
+
+== Original Artifact Upload ==
+A -> Platform : Upload original artifact + metadata (JSON-LD)
+Platform -> IPFS : Submit metadata, receive CID\ntied to artifact
+IPFS --> Platform : Return CID for artifact
+Platform -> Blockchain : Anchor CID + metadata hash\non blockchain account
+Blockchain --> Platform : Confirm transaction
+Platform -> A : Confirm upload success
+
+== Derived Artifact Upload ==
+B -> Platform : Download original artifact\nvia CID reference
+B -> B : Modify artifact (create derivative)
+B -> Platform : Upload derived artifact + metadata
+Platform -> IPFS : Submit derived metadata\nreceive new CID
+IPFS --> Platform : Return derived artifact CID
+Platform -> Blockchain : Anchor derived CID + \nprov:wasDerivedFrom (original CID) + metadata hash
+Blockchain --> Platform : Confirm transaction
+Platform -> B : Confirm upload success
+
+' ' == Provenance Linkage ==
+' note right of Platform
+'   Metadata includes:
+'   - schema:contributor (ORCID)
+'   - schema:dateCreated
+'   - prov:wasDerivedFrom
+' end note
+
+@enduml

@@ -11,7 +11,7 @@
   (generated)
   "MAIN.ilg"
   "MAIN.ind"
-["pdflatex"] 1747217132 "/home/eduardo/Documents/repo/Git/OpenScience/dissertation/MAIN.tex" "MAIN.pdf" "MAIN" 1747217132
+["pdflatex"] 1747307223 "/home/eduardo/Documents/repo/Git/OpenScience/dissertation/MAIN.tex" "MAIN.pdf" "MAIN" 1747307223
   "/dev/null" 1746739798 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/etc/texmf/web2c/texmf.cnf" 1701553138 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/eduardo/Documents/repo/Git/OpenScience/dissertation/MAIN.tex" 1747226108 172476 98659056d62228d3c4dc2bf60a648f2a ""
@@ -287,8 +287,8 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1701553183 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1710494692 2800392 5302ca1083901a3fb21e189f575b5416 ""
   "Cover.tex" 1747226108 2897 08863ee34fb55610620f00c0cbc05fd9 ""
-  "MAIN.aux" 1747217132 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "MAIN.bbl" 1747217116 63266 894d1872abbbf695c695d961e2e7d089 "bibtex MAIN"
+  "MAIN.aux" 1747307223 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "MAIN.bbl" 1747307204 63266 894d1872abbbf695c695d961e2e7d089 "bibtex MAIN"
   "MAIN.ind" 0 -1 0 "makeindex MAIN.idx"
   "MAIN.pyg" 0 -1 0 "pdflatex"
   "MAIN.tex" 1747226108 172476 98659056d62228d3c4dc2bf60a648f2a ""
