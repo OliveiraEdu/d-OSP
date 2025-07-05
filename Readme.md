@@ -59,7 +59,7 @@ This project uses [Python IPFS HTTP Client](https://github.com/ipfs-shipyard/py-
 
 cd ~/
 
-git clone https://github.com/iroha
+git clone https://github.com/hyperledger-iroha/iroha
 
 cd iroha
 
