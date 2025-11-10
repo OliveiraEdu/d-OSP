@@ -1,0 +1,32 @@
+@startuml
+!theme crayon
+
+title IPFS: Alice and Bob's File Sharing
+
+actor Alice
+actor Bob
+
+rectangle "IPFS Network" {
+  node "Alice's IPFS Node" as alice_node
+  node "Bob's IPFS Node" as bob_node
+  database "IPFS Content Addressable Storage" as ipfs_storage
+
+  Alice -- alice_node :  Uses IPFS Client
+  alice_node -- ipfs_storage : Stores Data (Content)
+  alice_node -- ipfs_storage : Retrieves Data (Content)
+
+  Bob -- bob_node :  Uses IPFS Client
+  bob_node -- ipfs_storage : Stores Data (Content)
+  bob_node -- ipfs_storage : Retrieves Data (Content)
+
+  alice_node -- bob_node : Shares CID (Content Identifier)
+  bob_node -- alice_node : Receives CID
+}
+
+note left of alice_node : Alice creates a file\nAdds it to her IPFS node\nNode calculates Content Hash\n(CID)
+
+note right of bob_node : Bob requests file from Alice\nBob uses CID to retrieve file\nfrom IPFS network
+note bottom of ipfs_storage : Data is distributed\nacross many nodes\n(Content Addressable\nStorage)
+
+
+@enduml

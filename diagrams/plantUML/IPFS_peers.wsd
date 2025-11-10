@@ -1,0 +1,51 @@
+@startuml
+' !theme crayon
+
+title IPFS
+
+actor Alice
+' actor Bob
+
+rectangle "IPFS Network" as IPFS_Network {
+'   node "Alice's Node" as alice_node
+'   node "Bob's IPFS Node" as bob_node
+
+
+
+
+    node "Node 1" as node1
+    ' node "Node 1.5" as node1_5
+    node "Node 2" as node2
+    node "Node 3" as node3
+    node "Node N" as nodeN
+
+  Alice -- node1 :  Uses IPFS Client
+'   alice_node --> "Peer-to-Peer Storage Network" : Stores Data (Content)
+'   alice_node <-- "Peer-to-Peer Storage Network" : Retrieves Data (Content)
+
+node1 -- node2
+node1 -- node3
+node1 -- nodeN
+node2 -- node3
+node2 -- nodeN
+node3 -- nodeN
+
+
+'   Bob -- bob_node :  Uses IPFS Client
+'   bob_node -- "Peer-to-Peer Storage Network" : Stores Data (Content)
+'   bob_node -- "Peer-to-Peer Storage Network" : Retrieves Data (Content)
+
+'   alice_node -- bob_node : Shares CID (Content Identifier)
+'   bob_node -- alice_node : Receives CID
+}
+
+note left of Alice : Alice creates a file\nAdds it to her IPFS node\nNode calculates Content Hash\n(CID)
+note left of node1 : Peer-to-Peer Storage Network \nStores Data (Content)
+
+' note right of bob_node : Bob requests file from Alice\nBob uses CID to retrieve file\nfrom IPFS network
+' note right of bob_node .. "Peer-to-Peer Storage Network" : Stores Data (Content)
+
+' note bottom of "Peer-to-Peer Storage Network" : Data is distributed\nacross many nodes\n(Content Addressable\nStorage)\nNodes cooperate to provide data
+' note bottom of "Peer-to-Peer Storage Network" .. "Peer-to-Peer Storage Network" :
+
+@enduml

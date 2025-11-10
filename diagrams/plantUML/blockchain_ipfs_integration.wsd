@@ -1,0 +1,25 @@
+@startuml
+' !theme crayon
+
+title IPFS & Blockchain Integration
+
+rectangle "File" as file
+rectangle "IPFS" as ipfs
+rectangle "Blockchain" as blockchain
+
+actor Alice
+
+Alice --> file : Provides File
+file --> ipfs : Sends File for Storage
+ipfs --> ipfs : Generates Content Identifier (CID)
+ipfs --> file : Returns CID (Content Identifier)
+
+ipfs --> blockchain : Stores CID as metadata in the Blockchain
+
+rectangle "Hash Generation" {
+  note left: "Contains:"
+  note left: "  - Content Identifier (CID)"
+  note left: "  - SHA256 Digest"
+}
+
+@enduml

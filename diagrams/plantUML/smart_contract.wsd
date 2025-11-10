@@ -1,0 +1,37 @@
+@startuml
+' !theme crayon
+
+title Smart Contracts on Blockchain - High Level
+
+rectangle "Business Requirements" as requirements
+
+rectangle "Smart Contract Code" as code
+rectangle "Blockchain Virtual Machine" as vm
+rectangle "Decentralized Application (dApp)" as dApp
+
+actor Bob
+
+requirements --> code : Defines Logic
+code --> vm : Executes Contract
+vm --> dApp : Provides Functionality
+
+dApp --> Bob : Interacts with Application
+
+note right of vm : "Autonomous,\nTrustless Operations"
+
+note top of dApp : "Supports Asset Transfers,\nServices, & Collaboration\nWithout Centralized Control"
+
+rectangle "Lifecycle" {
+    rectangle "Coding" as coding
+    rectangle "Testing" as testing
+    rectangle "Deployment" as deployment
+
+    requirements --> coding
+    coding --> testing
+    testing --> deployment
+}
+
+note top : "Self-Executing Agreements\nEliminating Intermediaries"
+note bottom : "Transparent, Immutable,\n& Auditable"
+
+@enduml
