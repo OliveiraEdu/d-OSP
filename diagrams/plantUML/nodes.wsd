@@ -1,0 +1,25 @@
+@startuml
+' !theme crayon
+
+title Centralized vs. Decentralized Networks
+
+rectangle "Centralized Network" as centralized
+rectangle "Decentralized Network" as decentralized
+
+' Centralized Network details
+centralized -- "Server"
+note top of centralized : "Single Point of Failure"
+note bottom of centralized : "Controlled by a Single Authority"
+
+' Decentralized Network details
+decentralized -- "Node 1"
+decentralized -- "Node 2"
+decentralized -- "Node 3"
+note top of decentralized : "No Single Point of Failure"
+note bottom of decentralized : "Distributed Control"
+
+' Connecting the Networks for comparison
+note left: "Traditional Architecture"
+note right: "Modern Approach"
+
+@endum

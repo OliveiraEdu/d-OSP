@@ -1,0 +1,26 @@
+@startuml
+' !theme crayon
+
+title Decentralized and Distributed Systems
+
+rectangle "Centralized System" as centralized
+rectangle "Decentralized System" as decentralized
+rectangle "Distributed System" as distributed
+
+note top of centralized : "Single Point of Failure,\nCentralized Control"
+
+rectangle "Network of Nodes" as nodes
+nodes -- distributed : Supports
+distributed -- decentralized : Enables
+
+note right of decentralized : "Enhanced Fault Tolerance,\nIncreased Resilience"
+note right of distributed : "Scalability & Redundancy"
+
+centralized -- distributed : Traditional Architecture
+distributed -- decentralized : Evolution
+
+actor User
+
+User -- decentralized : Interacts With
+
+@enduml
