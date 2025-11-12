@@ -1,6 +1,14 @@
 @startuml
 
+
+' https://plantuml.com/sequence-diagram
+
 skinparam monochrome true
+' skinparam style strictuml
+
+hide footbox
+
+autonumber
 
 ' title Transaction logging and provenance query
 
