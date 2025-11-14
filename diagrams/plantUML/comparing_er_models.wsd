@@ -19,8 +19,8 @@ entity "Open Science Platform - Project Entity" as project {
   + name: string
   + abstract: string
   + keywords: list<string>
-  + startDate: date
-  + endDate: date
+  + start_date: date
+  + end_date: date
   + city: string
   + country: string
   + linked_user: string
