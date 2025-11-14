@@ -6,6 +6,8 @@ skinparam participantPadding 20
 skinparam arrowThickness 1
 skinparam shadowing false
 
+hide footbox
+
 actor "Researcher" as R
 participant "Platform" as P
 participant "Metadata Formatter" as MF

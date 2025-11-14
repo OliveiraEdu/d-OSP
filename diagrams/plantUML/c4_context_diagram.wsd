@@ -8,32 +8,30 @@ skinparam monochrome true
 
 ' title System Context Diagram for Open Science Platform
 
-Person(user, "Researcher", "Enrolls and interacts with the platform.")
+Person(user, "Researcher", "Enrolls and interacts with the platform")
 
-System(open_science_platform, "d-OSP", "A decentralized infrastructure for research data management.")
+System(open_science_platform, "d-OSP", "A decentralized infrastructure for research data management")
 
 System_Boundary(open_science_boundary, "Core Services") {
-    System_Ext(blockchain, "Blockchain", "distributed ledger for users, projects and research metadata")
-    System_Ext(smart_contract, "Smart Contract", "Enforces business rules and automates transactions on the blockchain.")
+    System_Ext(blockchain, "Blockchain", "distributed ledger for users and research projects metadata")
+    System_Ext(smart_contract, "Smart Contract", "Enforces business rules and automates transactions on the blockchain")
     
-    System_Ext(ipfs, "Distributed File System", "Storage for research data and metadata.")
+    System_Ext(ipfs, "Distributed File System", "Storage for research data and metadata")
 
 }
-
 
 System_Boundary(metadata_boundary, "Extended Services") {
-    System_Ext(metadata_extraction, "Metadata Extraction", "Extracts and structures metadata from research files.")
-    System_Ext(search_system, "Search System", "A search engine used to index and search for research files by keywords.")
+    System_Ext(metadata_extraction, "Metadata Extractor", "Extracts and structures metadata from research files")
+    System_Ext(search_system, "Search Engine", "Index and search for research files by keywords")
 }
-
 
 Rel(user, open_science_platform, "Registers and interacts with")
 Rel(open_science_platform, smart_contract, "Trusted code execution")
-Rel(open_science_platform, blockchain, "User and project data storage")
+Rel(open_science_platform, blockchain, "User and project metadata hash")
 Rel(open_science_platform, ipfs, "Stores and retrieves research files")
-Rel(open_science_platform, metadata_extraction, "Extracts metadata from iles")
+Rel(open_science_platform, metadata_extraction, "Extracts metadata from files")
 Rel(open_science_platform, search_system, "Indexes and searches research files")
 
-SHOW_FLOATING_LEGEND()
-Lay_Distance(LEGEND(), blockchain, 1)
+' SHOW_FLOATING_LEGEND()
+' Lay_Distance(LEGEND(), blockchain, 1)
 @enduml

@@ -3,6 +3,8 @@
 ' title Open Science Platform - Search and Validation
 skinparam monochrome true
 
+hide footbox
+
 actor Researcher as R
 participant Platform as "Platform"
 participant Search as "Search Engine"

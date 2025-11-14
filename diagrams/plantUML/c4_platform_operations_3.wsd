@@ -3,6 +3,8 @@
 ' title Open Science Platform - File Operations
 skinparam monochrome true
 
+hide footbox
+
 actor Researcher as R
 participant Platform as "Platform"
 participant Parser as "Metadata Parser"

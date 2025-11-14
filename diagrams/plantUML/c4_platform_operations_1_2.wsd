@@ -3,6 +3,8 @@
 ' title Open Science Platform – Researcher Enrollment and Project Registration
 skinparam monochrome true
 
+hide footbox
+
 actor Researcher as R
 participant Platform as "Platform"
 participant Blockchain as "Blockchain"

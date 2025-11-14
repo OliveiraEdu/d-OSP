@@ -40,4 +40,7 @@ Rel(jupyter_notebooks, metadata_extraction, "Extract Metadata")
 Rel(jupyter_notebooks, search_system, "Index and Search")
 Rel(burrow, blockchain, "Execute transactions and queries")
 
+' SHOW_FLOATING_LEGEND()
+' Lay_Distance(LEGEND(), blockchain, 1)
+
 @enduml

@@ -1,6 +1,7 @@
 @startuml
 ' title Extended Metadata Workflow in d-OSP
 skinparam monochrome true
+hide footbox
 
 actor "Researcher A" as A
 actor "Researcher B" as B
