@@ -1,41 +1,24 @@
-# Use an official Python image as the base
-FROM python:3.9-slim
+# Use the same base image as your Jupyter notebook container
+FROM new_jupyter_lab
 
-# Add packages
-RUN apt-get update && apt-get install -y adduser git nano default-jre
+# Set a working directory inside the container
+WORKDIR /app
 
-# Create a new user
-RUN useradd -m -s /bin/bash user1
+# Copy the requirements file (if you have one)
+# COPY requirements.txt .
 
-# Set the default user to use when running commands
-USER user1
+# Install Flask and other dependencies
+# RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir flask flask-cors gunicorn
 
-# Set the working directory to the user home directory
-WORKDIR /home/user1
+# Copy your Flask API code
+# COPY your_flask_api_directory .  # Replace with the directory containing your flask app.py
+COPY . .
 
-# Clone your GitHub repository
-# RUN git clone https://github.com/OliveiraEdu/OpenScience
-RUN git clone https://github.com/OliveiraEdu/OpenScience.git
+# Expose the port your Flask app will listen on (default 5000)
+EXPOSE 5000 8888
 
-# Change into the repository directory
-WORKDIR /home/user1/OpenScience
+# Set the command to run the Flask app
+# CMD ["python", "app.py"]  # Replace app.py with your main Flask file
 
-
-# Set the default command to start JupyterLab
-ENV PATH=$PATH:/home/user1/.local/lib/python3.9/site-packages
-ENV PATH=$PATH:/home/user1/.local/bin
-
-# Install packages from requirements.txt in the repository
-RUN pip install -r requirements.txt
-# RUN pip install jupyterlab
-
-CMD ["jupyter", "lab", "--ip=0.0.0.0"]
-
-# Copy the public key out of the container (during RUN command)
-RUN echo "Generating SSH key..." && \
-    ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa && \
-    cat ~/.ssh/id_rsa.pub > id_rsa_pub
-
-# Run the git setup script
-RUN chmod +x git_setup.sh
-RUN ./git_setup.sh
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "hello:app"]
