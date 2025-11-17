@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from iroha_helper import *
+# from iroha_helper import *
 
 
 DOMAIN = "test"

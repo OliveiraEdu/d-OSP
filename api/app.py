@@ -1,6 +1,6 @@
 # my_api_project/app.py
 from flask import Flask, jsonify
-from api.users import users_bp  # Import the users Blueprint
+from users import users_bp  # Import the users Blueprint
 
 app = Flask(__name__)
 
